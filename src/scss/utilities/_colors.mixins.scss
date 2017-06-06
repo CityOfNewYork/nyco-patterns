@@ -1,0 +1,74 @@
+//
+// Mixins
+//
+
+// Dependencies
+// @import ...;
+
+// Mixins
+@mixin background-color($colors) {
+
+  @each $c in $colors {
+
+    $namespace: nth($c, 1);
+    $color: nth($c, 2);
+    $text: nth($c, 3);
+    $hyperlink: nth($c, 4);
+
+    .bg-#{$namespace} {
+      color: $text;
+      background-color: $color
+    }
+
+    .bg-#{$namespace}:not(.bg-a-inherit) a:not(.inherit):not(.btn) {
+      color: $hyperlink
+    }
+
+    .bg-#{$namespace}:not(.bg-a-inherit)  a:hover:not(.inherit):not(.btn) {
+      color: $hyperlink
+    }
+
+    .btn.bg-#{$namespace}:focus,
+    .btn.bg-#{$namespace}:active,
+    html:not(.touchevents) .btn.bg-#{$namespace}:hover {
+      color: $text;
+      background-color: darken($color, $delta-psuedo);
+    }
+
+  }
+
+}
+
+@mixin color($colors) {
+
+  @each $c in $colors {
+
+    $namespace: nth($c, 1);
+    $color: nth($c, 2);
+    $text: nth($c, 3);
+    $hyperlink: nth($c, 4);
+
+    .c-#{$namespace} {
+      color: $color !important
+    }
+
+    .b-#{$namespace} {
+      border-color: $color
+    }
+
+    .fill-#{$namespace} {
+      fill: $color
+    }
+
+    .path-#{$namespace} {
+      path: $color
+    }
+
+    // .filter-#{$namespace}::before {
+    //   background: $color;
+    // }
+
+  }
+
+}
+

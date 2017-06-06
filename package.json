@@ -1,0 +1,32 @@
+{
+  "config": {
+    "style_src": "src/scss/site.scss",
+    "style_bundle": "bundle/styles/site.concat.css",
+    "style_dist": "dist/styles/site.min.css"
+  },
+  "name": "oeo-patterns",
+  "version": "0.0.1",
+  "description": "Agency patterns for the Mayor's Office for Economic Opportunity",
+  "main": "",
+  "scripts": {
+    "test": "",
+    "styles-watch": "nodemon --ext scss --watch src/styles -x 'npm run styles'",
+    "styles-postcss": "cssnano --sourcemap < $npm_package_config_style_bundle > $npm_package_config_style_dist",
+    "styles": "node-sass --sourceMapEmbed true --include-path node_modules $npm_package_config_style_src $npm_package_config_style_bundle && npm run styles-postcss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CityOfNewYork/oeo-patterns.git"
+  },
+  "author": "Mayor's Office for Economic Opportunity",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/CityOfNewYork/oeo-patterns/issues"
+  },
+  "homepage": "https://github.com/CityOfNewYork/oeo-patterns#readme",
+  "devDependencies": {
+    "cssnano-cli": "^1.0.5",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0"
+  }
+}

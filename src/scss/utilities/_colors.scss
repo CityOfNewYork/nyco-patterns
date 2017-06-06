@@ -1,0 +1,22 @@
+/**
+ * Colors
+ */
+
+// Dependencies
+@import 'colors.vars';
+@import 'colors.mixins';
+
+// Declarations
+
+// Secondary Background Colors
+@include background-color($secondary);
+
+// Primary Background Colors
+@include background-color($primary);
+
+// Secondary Colors
+@include color($secondary);
+
+// Primary Colors
+@include color($primary);
+

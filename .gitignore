@@ -1,0 +1,10 @@
+# osx noise
+.DS_Store
+profile
+
+# svn
+.svn
+
+# npm
+node_modules
+npm-debug.log
