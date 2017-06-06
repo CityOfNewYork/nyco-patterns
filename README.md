@@ -37,7 +37,8 @@ Be sure to add `node_modules` to the include paths of your build tool.
 @charset 'utf-8';
 
 @import 'oeo-patterns/src/scss/utilities/colors';
-@import 'oeo-patterns/src/scss/utilities/transitions';```
+@import 'oeo-patterns/src/scss/utilities/transitions';
+```
 
 As an example, this library uses `cssnano-cli`, `node-sass`, and `nodemon` to watch
 changes, bundle, and create distributions.
