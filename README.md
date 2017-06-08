@@ -2,9 +2,6 @@
 This library maintains common agency patterns and may be used in internal or
 external projects.
 
-## Agency Colors
-
-
 ## Usage
 Include this repository as a dependency in your `package.json` file.
 
@@ -58,3 +55,12 @@ changes, bundle, and create distributions.
     "styles": "node-sass --sourceMapEmbed true --include-path node_modules $npm_package_config_style_src $npm_package_config_style_bundle && npm run styles-postcss"
   },
 ```
+
+## Demos
+Clone or download the library and `cd` into the directory. Run `npm install` then
+use `npm run start` to run the demonstration site.
+
+## Making Changes
+Use `npm run styles-watch` to bundle and distribute the css files to see changes.
+
+
