@@ -1,0 +1,50 @@
+/**
+ * Text
+ */
+
+// Dependencies
+// @import ...;
+
+// Declarations
+.t-center {
+  text-align: center !important;
+}
+
+.t-left {
+  text-align: left !important;
+}
+
+.t-right {
+  text-align: right !important;
+}
+
+.t-uppercase {
+  text-transform: uppercase !important;
+}
+
+.t-none {
+  text-transform: none !important;
+}
+
+// @each $breakpoint, $b in $breakpoints {
+
+//   @media only screen and (max-width: $b) {
+
+//     $variant: '\\@' + $breakpoint;
+
+
+//     .t-center#{$variant} {
+//       text-align: center
+//     }
+
+//     .t-left#{$variant} {
+//       text-align: left
+//     }
+
+//     .t-right#{$variant} {
+//       text-align: right
+//     }
+
+//   }
+
+// }

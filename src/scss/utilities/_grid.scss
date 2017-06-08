@@ -1,0 +1,20 @@
+/**
+ * Grid
+ */
+
+// Dependencies
+@import 'grid.vars';
+
+// Declarations
+.p-0 {
+  padding: 0 !important
+}
+
+.m-0 {
+  margin: 0 !important
+}
+
+.wrap {
+  padding-left: $grid-base * 2;
+  padding-right: $grid-base * 2;
+}

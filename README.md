@@ -2,6 +2,9 @@
 This library maintains common agency patterns and may be used in internal or
 external projects.
 
+## Agency Colors
+
+
 ## Usage
 Include this repository as a dependency in your `package.json` file.
 
@@ -21,7 +24,7 @@ You can copy the distribution file `dist/styles/site.min.css` into your project
 and link to it in the head of the document.
 
 ```
-<link rel="stylesheet" src="dist/styles/site.min.css">
+<link rel="stylesheet" href="dist/styles/site.min.css">
 ```
 
 #### Build

@@ -1,5 +1,9 @@
 @charset 'utf-8';
 
+// if @font-face is used it needs to be first imported first.
+@import 'utilities/fonts';
+@import 'utilities/base';
+
 /*************************
  * External Dependencies
  *************************/
@@ -17,7 +21,8 @@
 // textfields, select boxes, grouped navigation, dropdowns, etc. They may include
 // utilities within them. Not all components are required for each application.
 // Component namespaces are prefixed with 'c-'.
-// @import ...;
+@import 'c-tables';
+@import 'c-asides';
 
 /*************************
  * Objects
@@ -36,5 +41,9 @@
 // scaffolding like typography or grid systems. Uitilities will have their own
 // namespace prefixes based on their attributes.
 @import 'utilities/colors';
+@import 'utilities/grid';
+@import 'utilities/display';
+@import 'utilities/text';
+@import 'utilities/dimensions';
 @import 'utilities/transitions';
 

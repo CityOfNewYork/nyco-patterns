@@ -1,0 +1,89 @@
+/**
+ * Table Component
+ */
+
+// Dependencies
+@import 'utilities/grid.vars';
+@import 'utilities/fonts.mixins';
+
+// Declarations
+.c-table {
+
+  font-size: em($grid-base * 2);
+  line-height: em($grid-base * 2);
+  border-collapse: collapse;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    td {
+      border: none
+    }
+  }
+
+  th, td {
+    border-right: 1px solid;
+    border-color: inherit;
+    padding: $grid-base*2;
+  }
+
+  th:last-of-type, td:last-of-type {
+    border-right: none
+  }
+
+}
+
+.c-table-small {
+
+  font-size: em($grid-base * 1.5);
+  line-height: em($grid-base * 1.8);
+
+  th, td {
+    padding: $grid-base*1.5;
+  }
+
+}
+
+.c-table-td-right {
+
+  td {
+    text-align: right;
+  }
+
+}
+
+.c-table-th-last-right {
+
+  th:last-child {
+    text-align: right;
+  }
+
+}
+
+.c-table-td-last-right {
+
+  td:last-child {
+    text-align: right;
+  }
+
+}
+
+@for $alignment-index from 1 through $grid-columns {
+
+  .c-table-th-#{$alignment-index}-right {
+
+    th:nth-child(#{$alignment-index}) {
+      text-align: right;
+    }
+
+  }
+
+  .c-table-td-#{$alignment-index}-right {
+
+    td:nth-child(#{$alignment-index}) {
+      text-align: right;
+    }
+
+  }
+
+}

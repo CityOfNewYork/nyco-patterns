@@ -8,11 +8,17 @@
 
 // Declarations
 
+// Base Background Colors
+@include background-color($base);
+
 // Secondary Background Colors
 @include background-color($secondary);
 
 // Primary Background Colors
 @include background-color($primary);
+
+// Base Colors
+@include color($base);
 
 // Secondary Colors
 @include color($secondary);
@@ -20,3 +26,6 @@
 // Primary Colors
 @include color($primary);
 
+.b-transparent {
+  border-color: transparent
+}

@@ -1,0 +1,19 @@
+doctype html
+html lang='en'
+  head
+
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+
+    link rel='stylesheet' href='dist/styles/site.min.css'
+
+body
+
+  div class='d-flex'
+    div class='f-1 bg-primary-red'
+      | &nbsp;
+    div class='f-2 bg-primary-blue'
+      | &nbsp;
+    / div class='f-1 bg-primary-navy'
+    /   | &nbsp;

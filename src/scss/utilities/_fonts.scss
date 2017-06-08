@@ -1,0 +1,26 @@
+/**
+ * Fonts
+ */
+
+// Dependencies
+@import 'fonts.vars';
+@import 'fonts.mixins';
+
+// Declarations
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: $font-base;
+  line-height: 22px
+}
+
+p {
+  margin-top: 0;
+}
+
+.f-smooth {
+  @include font-smooth
+}
+
+.f-aliased {
+  @include font-aliased
+}

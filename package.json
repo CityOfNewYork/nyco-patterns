@@ -7,10 +7,11 @@
   "name": "oeo-patterns",
   "version": "0.0.1",
   "description": "Agency patterns for the Mayor's Office for Economic Opportunity",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "",
-    "styles-watch": "nodemon --ext scss --watch src/styles -x 'npm run styles'",
+    "start": "node index.js",
+    "styles-watch": "nodemon --ext scss --watch src/scss -x 'npm run styles'",
     "styles-postcss": "cssnano --sourcemap < $npm_package_config_style_bundle > $npm_package_config_style_dist",
     "styles": "node-sass --sourceMapEmbed true --include-path node_modules $npm_package_config_style_src $npm_package_config_style_bundle && npm run styles-postcss"
   },
@@ -28,5 +29,9 @@
     "cssnano-cli": "^1.0.5",
     "node-sass": "^4.5.0",
     "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "slm": "^1.0.0"
   }
 }

@@ -62,3 +62,6 @@ $secondary: ('secondary-grey', $secondary-grey, $primary-navy, $secondary-orange
             ('secondary-orange', $secondary-orange, $primary-navy, $secondary-white),
             ('secondary-pink', $secondary-pink, $primary-navy, $primary-red);
 
+$base: ('base-white', $base-white, $base-black, $secondary-orange),
+       ('base-black', $base-black, $base-white, $secondary-orange);
+
