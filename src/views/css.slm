@@ -8,7 +8,7 @@ html lang='en'
 
     link rel='stylesheet' href='dist/styles/site.min.css'
 
-    title CSS Components
+    title CSS Components | NYC Opportunity Patterns
 
 body
 
@@ -27,11 +27,11 @@ body
         h2 Tables
         p src/scss/_c-tables.scss
 
-        table class='c-table c-table-td-9-right c-table-td-last-right b-primary-blue'
+        table class='c-table c-table-td-right b-primary-blue'
           = partial('partials/c-table-content')
 
         h3 Small Table
-        table class='c-table c-table-small c-table-td-9-right c-table-td-last-right b-primary-blue'
+        table class='c-table c-table-small c-table-td-right b-primary-blue'
           = partial('partials/c-table-content')
 
       section class='wrap'

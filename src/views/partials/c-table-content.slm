@@ -1,126 +1,106 @@
 tbody class='b-transparent'
       tr class='f-smooth bg-primary-blue b-base-white'
         th style='width: 100px' Percentile
-        / th 2008
-        / th 2010
-        / th 2011
-        / th 2012
-        / th 2013
+        th 2008
+        th 2010
+        th 2011
+        th 2012
+        th 2013
         th 2014
         th 2015
-        th class='p-0'
-          table
-            tr class='b-base-white'
-              th 2008–2015
-              th 2014–2015
+        th 2008–2015
+        th 2014–2015
       tr
         td 20
-        / td 13,736
-        / td 10,131
-        / td 10,423
-        / td 10,333
-        / td 11,063
+        td 13,736
+        td 10,131
+        td 10,423
+        td 10,333
+        td 11,063
         td 11,734
         td 12,870
+        td -6.3%
+        td 9.7%
         td class='p-0'
           table
             tr
-              td -6.3%
-              td 9.7%
+
       tr class='bg-secondary-white'
         td 25
-        / td 20,605
-        / td 17,034
-        / td 16,614
-        / td 16,701
-        / td 17,458
+        td 20,605
+        td 17,034
+        td 16,614
+        td 16,701
+        td 17,458
         td 18,252
         td 19,024
-        td class='p-0'
-          table
-            tr
-              td -7.7%
-              td 4.2%
+        td -7.7%
+        td 4.2%
       tr
         td 30
-        / td 28,051
-        / td 22,972
-        / td 22,546
-        / td 22,904
-        / td 23,558
+        td 28,051
+        td 22,972
+        td 22,546
+        td 22,904
+        td 23,558
         td 23,963
         td 25,325
-        td class='p-0'
-          table
-            tr
-              td -9.7%
-              td 5.7%
+        td -9.7%
+        td 5.7%
       tr class='bg-secondary-white'
         td 35
-        / td 35,137
-        / td 29,492
-        / td 28,501
-        / td 29,226
-        / td 29,870
+        td 35,137
+        td 29,492
+        td 28,501
+        td 29,226
+        td 29,870
         td 30,494
         td 31,497
-        td class='p-0'
-          table
-            tr
-              td -10.4%
-              td 3.3%
+        td -10.4%
+        td 3.3%
       tr
         td 40
-        / td 42,210
-        / td 35,950
-        / td 34,181
-        / td 34,934
-        / td 35,943
+        td 42,210
+        td 35,950
+        td 34,181
+        td 34,934
+        td 35,943
         td 36,487
         td 38,305
-        td class='p-0'
-          table
-            tr
-              td -9.3%
-              td 5.0%
+        td -9.3%
+        td 5.0%
       tr class='bg-secondary-white'
         td 45
-        / td 49,371
-        / td 42,586
-        / td 41,531
-        / td 41,693
-        / td 43,237
+        td 49,371
+        td 42,586
+        td 41,531
+        td 41,693
+        td 43,237
         td 43,694
         td 45,661
-        td class='p-0'
-          table
-            tr
-              td -7.5%
-              td 4.5%
+        td -7.5%
+        td 4.5%
       tr
         td 50
-        / td 56,604
-        / td 49,297
-        / td 48,436
-        / td 48,838
-        / td 50,629
+        td 56,604
+        td 49,297
+        td 48,436
+        td 48,838
+        td 50,629
         td 51,842
         td 53,758
-        td class='p-0'
-          table
-            tr
-              td -5.0%
-              td 3.7%
+        td -5.0%
+        td 3.7%
       tr class='bg-primary-blue'
         td &nbsp;
-        / td &nbsp;
-        / td &nbsp;
-        / td &nbsp;
-        / td &nbsp;
-        / td &nbsp;
         td &nbsp;
         td &nbsp;
-        td class='bg-base-white p-0'
+        td &nbsp;
+        td &nbsp;
+        td &nbsp;
+        td &nbsp;
+        td &nbsp;
+        td class='bg-base-white p-0' colspan='2'
           table
             tbody class='b-transparent'
               tr class='t-center bg-secondary-white'
@@ -131,17 +111,14 @@ tbody class='b-transparent'
               tr class='t-center bg-secondary-white'
                 th colspan='2' Percentage Point Change
       tr
-        td % Families with No Earnings
-        / td 21.2
-        / td 22.4
-        / td 22.3
-        / td 22.2
-        / td 21.9
+        td class='t-left' % Families with No Earnings
+        td 21.2
+        td 22.4
+        td 22.3
+        td 22.2
+        td 21.9
         td 22.0
         td 21.4
-        td class='bg-base-white p-0'
-          table
-            tr
-              td 0.2
-              td
-                | (0.7)
+        td 0.2
+        td
+          | (0.7)

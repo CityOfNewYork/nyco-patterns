@@ -31,7 +31,7 @@
 // Components and utilities within them. Examples include headers, footers, modals,
 // sliders, and charts. Not all Objects are required for each application and some
 // will require their own Objects. Object namespaces are prefixed with 'o-'.
-// @import ...;
+@import 'o-charts';
 
 /************************
 * Utilities
@@ -45,5 +45,6 @@
 @import 'utilities/display';
 @import 'utilities/text';
 @import 'utilities/dimensions';
+@import 'utilities/svg';
 @import 'utilities/transitions';
 

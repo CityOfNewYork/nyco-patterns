@@ -8,22 +8,27 @@ html lang='en'
 
     link rel='stylesheet' href='dist/styles/site.min.css'
 
-    title NYC Opportunity Patterns
+    title Chart Object | NYC Opportunity Patterns
 
 body
 
     header class='d-flex jc-end ai-stretch'
 
       div class='f-10'
-        h1 class='wrap'
-          | Agency patterns for the Mayor&apos;s Office for Economic Opportunity
+        h1 class='wrap' Chart Object
 
       div class='f-2 o--1'
 
     main class='d-flex jc-end ai-stretch'
 
       div class='f-10'
-        nav class='wrap'
-          a href='css' CSS Components
+
+        section class='wrap'
+          div id='chart'
 
       div class='f-2 o--1'
+
+script src='node_modules/d3/build/d3.min.js'
+script src='node_modules/d3-selection-multi/build/d3-selection-multi.min.js'
+/ script src='node_modules/d3-axis/build/d3-axis.min.js'
+script src='src/js/o-charts.js'

@@ -27,6 +27,8 @@
   "homepage": "https://github.com/CityOfNewYork/oeo-patterns#readme",
   "devDependencies": {
     "cssnano-cli": "^1.0.5",
+    "d3": "^4.9.1",
+    "d3-selection-multi": "^1.0.1",
     "node-sass": "^4.5.0",
     "nodemon": "^1.11.0"
   },
