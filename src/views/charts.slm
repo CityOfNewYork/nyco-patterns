@@ -31,4 +31,53 @@ body
 script src='node_modules/d3/build/d3.min.js'
 script src='node_modules/d3-selection-multi/build/d3-selection-multi.min.js'
 / script src='node_modules/d3-axis/build/d3-axis.min.js'
+script src='src/js/o-charts.constants.js'
 script src='src/js/o-charts.js'
+
+javascript:
+
+  var data = [
+    {
+      'label': 'Federal',
+      'color': 'primary-red',
+      'data': [
+        ['2005', 20.3], ['2006', 20.0], ['2007', 19.8], ['2008', 19.0], ['2009', 19.4], ['2010', 20.6], ['2011', 20.8], ['2012', 20.7], ['2013', 20.7], ['2014', 20.6], ['2015', 19.9]
+      ]
+    },
+    {
+      'label': 'NYC',
+      'color': 'primary-blue',
+      'data': [
+        ['2005', 18.3], ['2006', 17.9], ['2007', 16.7], ['2008', 16.8], ['2009', 17.4], ['2010', 18.8], ['2011', 19.2], ['2012', 20.0], ['2013', 19.9], ['2014', 19.1], ['2015', 18.4]
+      ]
+    }
+  ];
+
+  var settings = {
+    'selector': '#chart',
+    'margin': [8, 8, 42, 56],
+    'padding': [8, 0, 8, 8],
+    'height': 404,
+    'labels': {
+      'axis':{
+        'x': 'Year',
+        'y': 'Percent of Population'
+      }
+    },
+    'formats': {
+      'time': '%Y'
+    },
+    'domains' : {
+      'x0': '',
+      'x1': '',
+      'y0': '',
+      'y1': ''
+    },
+    'colors': {
+      'background': 'base-white',
+      'axis': 'base-black',
+      'labels': 'base-black'
+    }
+  };
+
+  init(settings, data);

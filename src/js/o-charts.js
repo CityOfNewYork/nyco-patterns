@@ -1,103 +1,36 @@
 
 
-var data = [
-  {
-    'label': 'Federal',
-    'color': 'primary-red',
-    'data': [
-      ['2005', 20.3], ['2006', 20.0], ['2007', 19.8], ['2008', 19.0], ['2009', 19.4], ['2010', 20.6], ['2011', 20.8], ['2012', 20.7], ['2013', 20.7], ['2014', 20.6], ['2015', 19.9]
-    ]
-  },
-  {
-    'label': 'NYC',
-    'color': 'primary-blue',
-    'data': [
-      ['2005', 18.3], ['2006', 17.9], ['2007', 16.7], ['2008', 16.8], ['2009', 17.4], ['2010', 18.8], ['2011', 19.2], ['2012', 20.0], ['2013', 19.9], ['2014', 19.1], ['2015', 18.4]
-    ]
-  }
-];
-
-var settings = {
-  'selector': '#chart',
-  'margin': [8, 8, 42, 56],
-  'padding': [8, 0, 8, 8],
-  'height': 404,
-  'labels': {
-    'axis':{
-      'x': 'Year',
-      'y': 'Percent of Population'
-    }
-  },
-  'formats': {
-    'time': '%Y'
-  },
-  'domains' : {
-    'x0': '',
-    'x1': '',
-    'y0': '',
-    'y1': ''
-  },
-  'colors': {
-    'background': 'base-white',
-    'axis': 'base-black',
-    'labels': 'base-black'
-  }
-};
-
-var CONS = {
-  'NS': 'http://www.w3.org/2000/svg',
-  'CLASS': ['o-chart'],
-  'STYLE': [
-    'font-size: 13px',
-    'font-family: Helvetica Neue, Helvetica, Arial ,sans-serif',
-    'font-weight: 400',
-    'max-width: 100%'
-  ],
-  'DOTS_RADIUS': 4,
-  'LEGEND_MARGIN_TOP': 56,
-  'LEGEND_MARGIN_BOTTOM': 10
-};
-
-var util = {
-  'translate': translate,
-  'slug': slug,
-  'timeParse': d3.timeParse(settings.formats.time)
-};
-
-function translate(x, y) {
-
-  return 'translate(' + x + ',' + y + ')';
-
-}
-
-function slug(Text, space) {
-
-  return Text.toLowerCase().replace(/[^\w ]+/g,' ').replace(/ +/g, space);
-
-}
-
 var ctrl = {
-  'chart': {
-    'element': d3.select(settings.selector)
-  },
-  'data': data,
-  'settings': settings,
+  'chart': {},
   'svg': svg,
   'define': define,
   'domains': domains,
   'plots': plots,
   'axis': axis,
-  'respond': respond
+  'respond': respond,
+  'translate': translate,
+  'slug': slug,
 };
 
-init(ctrl.settings, ctrl.chart, ctrl.data);
+function translate(x, y) {
+  return 'translate(' + x + ',' + y + ')';
+}
 
-function init(settings, chart, data) {
+function slug(Text, space) {
+  return Text.toLowerCase().replace(/[^\w ]+/g,' ').replace(/ +/g, space);
+}
+
+function init(settings, data) {
+
+  ctrl.data = data;
+  ctrl.settings = settings;
+  ctrl.chart.element = d3.select(ctrl.settings.selector);
+  ctrl.timeParse = d3.timeParse(ctrl.settings.formats.time);
 
   render({
-    'settings': settings,
-    'chart': chart,
-    'data': data,
+    'settings': ctrl.settings,
+    'chart': ctrl.chart,
+    'data': ctrl.data,
     'namespace': 'create'
   })
 
@@ -158,7 +91,7 @@ function svg(settings, chart) {
   function create() {
 
     chart.svg = chart.element.append('svg').attrs({
-      'xmlns': CONS.NS
+      'xmlns': CONSTANTS.NAMESPACE
     });
 
     chart.bg = chart.svg.append('rect').attrs({
@@ -180,8 +113,8 @@ function svg(settings, chart) {
     settings.width = chart.element.property('clientWidth');
 
     chart.svg.attrs({
-      'class': CONS.CLASS.join(' '),
-      'style': CONS.STYLE.join(';'),
+      'class': CONSTANTS.CLASS.join(' '),
+      'style': CONSTANTS.STYLE.join(';'),
       'width': settings.width,
       'height': settings.height
     });
@@ -192,7 +125,7 @@ function svg(settings, chart) {
     });
 
     chart.g.attrs({
-      'transform': util.translate(settings.margin[3], settings.margin[0])
+      'transform': ctrl.translate(settings.margin[3], settings.margin[0])
     });
 
     return chart;
@@ -217,6 +150,8 @@ function svg(settings, chart) {
 
 function define(settings, data) {
 
+  // this used tp be a promise chain, I'm not sure of it's importance to be so anymore
+  // - devowhippit
   settings = defineLayout(settings);
   settings = defineScales(settings);
   settings = defineAxis(settings);
@@ -269,7 +204,7 @@ function definePlots(settings) {
   settings.plots = {};
   settings.plots.line = d3.line()
     .x(function(d) {
-      return settings.scales.x( util.timeParse(d[0]) );
+      return settings.scales.x( ctrl.timeParse(d[0]) );
     })
     .y(function(d) {
       return settings.scales.y(d[1]);
@@ -297,8 +232,8 @@ function domains(settings, data) {
     })
   }
 
-  var x0 = util.timeParse(min(data, 0));
-  var x1 = util.timeParse(max(data, 0));
+  var x0 = ctrl.timeParse(min(data, 0));
+  var x1 = ctrl.timeParse(max(data, 0));
 
   var y0 = min(data, 1);
   var y1 = max(data, 1);
@@ -323,16 +258,16 @@ function plots(settings, chart, data) {
     var c = {
       'plot': [
         'o-chart__plot',
-        'o-chart__plot--' + util.slug(name, '-'),
-        'o-chart__plot--' + util.slug(id, '-')
+        'o-chart__plot--' + ctrl.slug(name, '-'),
+        'o-chart__plot--' + ctrl.slug(id, '-')
       ],
       'line': [
         'o-chart__line',
-        'stroke-' + util.slug(id, '-')
+        'stroke-' + ctrl.slug(id, '-')
       ],
       'dots': [
         'o-chart__dot',
-        'fill-' + util.slug(id, '-'),
+        'fill-' + ctrl.slug(id, '-'),
         'stroke-' + settings.colors.background
       ]
     };
@@ -370,7 +305,7 @@ function plots(settings, chart, data) {
       .attrs({
         'cx': settings.plots.line.x(),
         'cy': settings.plots.line.y(),
-        'r': CONS.DOTS_RADIUS
+        'r': CONSTANTS.DOTS_RADIUS
       }).attr('class', function(d) {
           var d = d3.select(this.parentNode).data()[0];
           return th.classes('dots', '', d.color);
@@ -488,7 +423,7 @@ function axis(settings, chart) {
   function update() {
 
     chart.axis.x.call(settings.axis.x)
-      .attr('transform', util.translate(0, settings.innerHeight))
+      .attr('transform', ctrl.translate(0, settings.innerHeight))
 
     chart.axis.y.call(settings.axis.y);
 
@@ -509,14 +444,14 @@ function axis(settings, chart) {
       var xt = d3.select(this).select('text');
       var x = settings.left + (settings.innerWidth / 2);
       var y = settings.height - xt.node().getBBox().height
-      return util.translate(x, y);
+      return ctrl.translate(x, y);
     })
 
     // position the y axis label
     chart.g.select('.o-chart__label--y').attr('transform', function() {
       var x = 0 - settings.margin[3] + (d3.select(this).node().getBBox().height);
       var y = settings.innerHeight / 2;
-      return [util.translate(x, y), 'rotate('+ -90 +')'].join(' ');
+      return [ctrl.translate(x, y), 'rotate('+ -90 +')'].join(' ');
     });
 
     return chart;
