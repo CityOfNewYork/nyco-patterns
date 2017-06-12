@@ -337,7 +337,7 @@ function axis(settings, chart) {
   th.modify = modify;
   th.classes = classes;
 
-  function classes(KEY, name, id) {
+  function classes(KEY) {
 
     var c = {
       'axis_top': [
