@@ -1,4 +1,6 @@
-
+import * as d3 from 'd3';
+import 'd3-selection-multi';
+import {CONSTANTS as CONSTANTS} from 'o-charts.constants';
 
 var ctrl = {
   'chart': {},
@@ -11,6 +13,9 @@ var ctrl = {
   'translate': translate,
   'slug': slug,
 };
+
+// make public
+window.oChartInit = init;
 
 function translate(x, y) {
   return 'translate(' + x + ',' + y + ')';
@@ -232,14 +237,22 @@ function domains(settings, data) {
     })
   }
 
+  var bars = data.filter(x => x.type === 'bar').length;
+
   var x0 = ctrl.timeParse(min(data, 0));
   var x1 = ctrl.timeParse(max(data, 0));
+
+  // if there are bars it's nice to give each side extra space
+  if (bars > 0) {
+    x0 = d3.timeMonth.offset(x0, -1);
+    x1 = d3.timeMonth.offset(x1, 1);
+  }
 
   var y0 = min(data, 1);
   var y1 = max(data, 1);
 
-  settings.scales.x.domain([x0, x1]);
-  settings.scales.y.domain([y0, y1]);
+  settings.scales.x.domain([x0, x1]).nice();
+  settings.scales.y.domain([y0, y1]).nice();
 
   return settings;
 
@@ -247,15 +260,17 @@ function domains(settings, data) {
 
 function plots(settings, chart, data) {
 
-  var th = this;
+  let th = this;
 
   th.create = create;
+  th.line = line;
+  th.bar = bar;
   th.update = update;
   th.classes = classes;
 
   function classes(KEY, name, id) {
 
-    var c = {
+    let c = {
       'plot': [
         'o-chart__plot',
         'o-chart__plot--' + ctrl.slug(name, '-'),
@@ -269,6 +284,10 @@ function plots(settings, chart, data) {
         'o-chart__dot',
         'fill-' + ctrl.slug(id, '-'),
         'stroke-' + settings.colors.background
+      ],
+      'bar': [
+        'o-chart__bar',
+        'fill-' + ctrl.slug(id, '-'),
       ]
     };
 
@@ -278,29 +297,35 @@ function plots(settings, chart, data) {
 
   function create() {
 
-    // create containers
+    // remove old containers
     chart.g.selectAll('.o-chart__plot').remove();
 
+    // add plot containers
     chart.plots = chart.g.selectAll('.o-chart__plot')
         .data(data)
       .enter().append('g')
       .attr('class', function() {
-        var d = d3.select(this).data()[0];
+        let d = d3.select(this).data()[0];
         return th.classes('plot', d.label, d.label);
       });
 
-    chart.plots.append('path')
-      .attr('class', function(d) {
-        return th.classes('line', '', d.color);
-      })
-      .attr('d', function(d) {
-        return settings.plots.line(d.data)
-      });
+    // run each plot through it's own rendering function based on type
+    chart.plots.each(function(d) {
+      th[d.type](d3.select(this));
+    });
 
-    chart.plots.selectAll('.o-chart__dot')
-      .data(function(d) {
-        return d.data;
-      })
+    return chart;
+
+  }
+
+  function line(plot) {
+
+    plot.append('path')
+      .attr('class', (d) => th.classes('line', '', d.color))
+      .attr('d', (d) => settings.plots.line(d.data));
+
+    plot.selectAll('.o-chart__dot')
+        .data((d) => d.data)
       .enter().append('circle')
       .attrs({
         'cx': settings.plots.line.x(),
@@ -311,7 +336,30 @@ function plots(settings, chart, data) {
           return th.classes('dots', '', d.color);
       });
 
-    return chart;
+  }
+
+  function bar(plot) {
+
+    let bars = data.filter(x => x.type === 'bar'); // get just the bar plots
+    let p = plot.data()[0]; // get the plot's data/configuration
+    let max = Math.max(0, p.data.length); // I think the max be the max length of the largest plot?
+    let width = ((settings.right / max) * CONSTANTS.BAR_GAP ) / bars.length; // calculate the width
+    let classes = th.classes('bar', '', p.color); // set the color
+    let order = (bars.map((d) => d.label).indexOf(p.label)) + 1; // get order of this plot
+    let offset = (width * order) - ((width * bars.length) / 2); // calculate the offset
+
+    plot.selectAll('.o-chart__bar')
+        .data((d) => p.data)
+      .enter().append('rect')
+      .attrs({
+        'class': classes,
+        'width': width,
+        'x': (d) => settings.scales.x(ctrl.timeParse(d[0])) - offset,
+        'y': (d) => settings.scales.y(Math.max(0, d[1])),
+        'height': (d) => Math.abs(
+          Math.min(settings.scales.y(0), settings.bottom) - settings.scales.y(d[1])
+        ),
+      });
 
   }
 
