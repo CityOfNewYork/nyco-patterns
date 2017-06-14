@@ -24,7 +24,18 @@ body
       div class='f-10'
 
         section class='wrap'
-          div id='chart'
+
+          h2 U.S. Official and NYCgov Poverty Rates 2005–2015
+          div id='chartPovertyRates'
+
+          h2 U.S. Official and NYCgov Thresholds, Income, and Poverty Rates, 2015
+          div id='chartThresholdsIncomes'
+
+          h2 Employment/Population Ratios 2008, 2010–2015
+          div id='chartEmploymentPopulationRatios'
+
+          h2 Marginal Effects, Selected Sources of Income on the NYCgov Poverty Rate, 2015
+          div id='chartMarginalEffects'
 
       div class='f-2 o--1'
 
@@ -32,36 +43,76 @@ script src='bundle/scripts/o-charts.js'
 
 javascript:
 
-  var data = [
+  var dataPovertyRates = [
     {
-      'label': 'Federal',
+      'label': 'NYCgov',
       'color': 'primary-red',
-      'type': 'bar',
+      'type': 'line',
       'data': [
-        ['2005', 20.3], ['2006', 20.0], ['2007', 19.8], ['2008', 19.0], ['2009', 19.4], ['2010', 20.6], ['2011', 20.8], ['2012', 20.7], ['2013', 20.7], ['2014', 20.6], ['2015', 19.9]
+        ['2005', 20.3], ['2006', 20.0], ['2007', 19.8], ['2008', 19.0], ['2009', 19.4],
+        ['2010', 20.6], ['2011', 20.8], ['2012', 20.7], ['2013', 20.7], ['2014', 20.6],
+        ['2015', 19.9]
       ]
     },
     {
-      'label': 'NYC',
+      'label': 'U.S. Official',
+      'color': 'primary-blue',
+      'type': 'line',
+      'data': [
+        ['2005', 18.3], ['2006', 17.9], ['2007', 16.7], ['2008', 16.8], ['2009', 17.4],
+        ['2010', 18.8], ['2011', 19.2], ['2012', 20.0], ['2013', 19.9], ['2014', 19.1],
+        ['2015', 18.4]
+      ]
+    }
+  ];
+
+  var dataThresholdsIncomes = [
+    {
+      'label': 'NYCgov',
       'color': 'primary-blue',
       'type': 'bar',
       'data': [
-        ['2005', 18.3], ['2006', 17.9], ['2007', 16.7], ['2008', 16.8], ['2009', 17.4], ['2010', 18.8], ['2011', 19.2], ['2012', 20.0], ['2013', 19.9], ['2014', 19.1], ['2015', 18.4]
+        ['Thresholds', 31756], ['Incomes', 31813]
       ]
     },
     {
-      'label': 'Something Else',
-      'color': 'primary-navy',
+      'label': 'U.S. Official',
+      'color': 'primary-red',
       'type': 'bar',
       'data': [
-        ['2005', 18.3], ['2006', 17.9], ['2007', 16.7], ['2008', 16.8], ['2009', 17.4], ['2010', 18.8], ['2011', 19.2], ['2012', 20.0], ['2013', 19.9], ['2014', 19.1], ['2015', 18.4]
+        ['Thresholds', 24036], ['Incomes', 25128]
+      ]
+    }
+  ];
+
+  var dataEmploymentPopulationRatios = [
+    {
+      'label': 'NYCgov',
+      'color': 'primary-blue',
+      'type': 'bar',
+      'data': [
+        ['2008', 70.8], ['2010', 66.4], ['2011', 67.0], ['2012', 68.0], ['2013', 68.4],
+        ['2014', 69.4], ['2015', 70.7]
+      ]
+    }
+  ];
+
+  var dataMarginalEffects = [
+    {
+      'label': 'NYCgov',
+      'color': 'primary-blue',
+      'type': 'bar',
+      'data': [
+        ['Housing Adjustment', -5.8], ['Social Security', -5.0], ['Other Cash Transfers', -3.3],
+        ['Income Taxes', -3.9], ['SNAP', -3.2], ['School Meals', -0.7], ['WIC', -0.2],
+        ['HEAP', 0.0], ['Childcare', 0.3], ['Payroll Taxes', 2.0], ['Commuting', 2.2],
+        ['Medical Expenses', 2.8]
       ]
     }
   ];
 
   var settings = {
-    'selector': '#chart',
-    'margin': [8, 8, 42, 56],
+    'margin': [8, 8, 42, 68],
     'padding': [8, 0, 0, 8],
     'height': 404,
     'labels': {
@@ -86,5 +137,46 @@ javascript:
     }
   };
 
-  window.oChartInit(settings, data);
+  settings.selector = '#chartPovertyRates';
+  settings.labels = {
+    'axis':{
+      'x': 'Year',
+      'y': 'Percent of Population'
+    }
+  }
+
+  window.oChartInit(settings, dataPovertyRates);
+
+
+  settings.selector = '#chartThresholdsIncomes';
+  settings.labels = {
+    'axis':{
+      'x': '',
+      'y': 'Dollars'
+    }
+  }
+
+  window.oChartInit(settings, dataThresholdsIncomes);
+
+
+  settings.selector = '#chartEmploymentPopulationRatios';
+  settings.labels = {
+    'axis':{
+      'x': 'Year',
+      'y': 'Percent of 18 through 64-year-olds'
+    }
+  }
+
+  window.oChartInit(settings, dataEmploymentPopulationRatios);
+
+
+  settings.selector = '#chartMarginalEffects';
+  settings.labels = {
+    'axis':{
+      'x': 'Transfers',
+      'y': 'Percent'
+    }
+  }
+
+  window.oChartInit(settings, dataMarginalEffects);
 
