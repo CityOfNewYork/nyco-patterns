@@ -12,32 +12,32 @@ html lang='en'
 
 body
 
-    header class='d-flex jc-end ai-stretch'
+    header class='jc-end ai-stretch'
 
-      div class='f-10'
-        h1 class='wrap' Chart Object
+      / div class='f-10'
+      h1 class='wrap' Chart Object
 
-      div class='f-2 o--1'
+      / div class='f-2 o--1'
 
-    main class='d-flex jc-end ai-stretch'
+    main class='jc-end ai-stretch'
 
-      div class='f-10'
+      / div class='f-10'
 
-        section class='wrap'
+      section class='wrap'
 
-          h2 U.S. Official and NYCgov Poverty Rates 2005–2015
-          div id='chartPovertyRates'
+        h2 U.S. Official and NYCgov Poverty Rates 2005–2015
+        div id='chartPovertyRates'
 
-          h2 U.S. Official and NYCgov Thresholds, Income, and Poverty Rates, 2015
-          div id='chartThresholdsIncomes'
+        h2 U.S. Official and NYCgov Thresholds, Income, and Poverty Rates, 2015
+        div id='chartThresholdsIncomes'
 
-          h2 Employment/Population Ratios 2008, 2010–2015
-          div id='chartEmploymentPopulationRatios'
+        h2 Employment/Population Ratios 2008, 2010–2015
+        div id='chartEmploymentPopulationRatios'
 
-          h2 Marginal Effects, Selected Sources of Income on the NYCgov Poverty Rate, 2015
-          div id='chartMarginalEffects'
+        h2 Marginal Effects, Selected Sources of Income on the NYCgov Poverty Rate, 2015
+        div id='chartMarginalEffects'
 
-      div class='f-2 o--1'
+      / div class='f-2 o--1'
 
 script src='bundle/scripts/o-charts.js'
 
