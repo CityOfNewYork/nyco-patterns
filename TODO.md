@@ -34,4 +34,4 @@ Other chart features from previous libary that chould be cherry picked in the fu
 - [ ] Exporting chart as SVG or PNG
 - [ ] Clickable plots for creating focus on specific data
 
-![Chart Screenshot](/img/screenshot-localhost-8080 2017-06-14 10-48-25.png)
+![Chart Screenshot](/img/screenshot-localhost-80802017-06-1410-48-25.png)
