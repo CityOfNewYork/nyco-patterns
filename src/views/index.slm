@@ -8,12 +8,26 @@ html lang='en'
 
     link rel='stylesheet' href='dist/styles/site.min.css'
 
+    title NYC Opportunity Patterns
+
 body
 
-  div class='d-flex'
-    div class='f-1 bg-primary-red'
-      | &nbsp;
-    div class='f-2 bg-primary-blue'
-      | &nbsp;
-    / div class='f-1 bg-primary-navy'
-    /   | &nbsp;
+    header class='d-flex jc-end ai-stretch'
+
+      div class='f-10'
+        h1 class='wrap'
+          | Agency patterns for the Mayor&apos;s Office for Economic Opportunity
+
+      div class='f-2 o--1'
+      div class='f-2'
+
+    main class='d-flex jc-end ai-stretch'
+
+      div class='f-10'
+        nav class='wrap'
+          a href='components' Components
+          br
+          a href='charts' Chart Object
+
+      div class='f-2 o--1'
+      div class='f-2'

@@ -1,0 +1,29 @@
+/**
+ * Chart Object
+ */
+
+// Dependencies
+// @import ...;
+
+// Declarations
+.o-chart__axis {
+  shape-rendering: crispEdges
+}
+
+.o-chart__line {
+  stroke-width: 1px;
+  stroke-linejoin: round;
+  stroke-linecap: square
+}
+
+.o-chart__dot {
+  stroke-width: 2px
+}
+
+.o-chart__axis-gap--x {
+  stroke-linecap: square
+}
+
+.o-chart__label text {
+  font-size: 13px
+}
