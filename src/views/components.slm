@@ -15,9 +15,10 @@ body
   header class='d-flex jc-end ai-stretch'
 
     div class='f-10'
-      h1 class='wrap' CSS Components
+      h1 class='wrap' Components
 
     div class='f-2 o--1 bg-secondary-white'
+    div class='f-2'
 
   main class='d-flex jc-end ai-stretch'
 
@@ -25,7 +26,8 @@ body
 
       section class='wrap'
         h2 Tables
-        p src/scss/_c-tables.scss
+        p
+          code src/scss/_c-tables.scss
 
         table class='c-table c-table-td-right b-primary-blue'
           = partial('partials/c-table-content')
@@ -36,7 +38,8 @@ body
 
       section class='wrap'
         h3 Asides
-        p src/scss/_c-asides.scss
+        p
+          code src/scss/_c-asides.scss
 
         aside class='c-aside'
           header class='c-aside_header bg-primary-blue f-smooth'
@@ -58,3 +61,4 @@ body
               |  United States.
 
     div class='f-2 o--1 bg-secondary-white'
+    div class='f-2'
