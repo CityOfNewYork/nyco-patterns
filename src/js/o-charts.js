@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 import 'd3-selection-multi';
-import {CONSTANTS as CONSTANTS} from 'o-charts.constants';
+import {CONSTANTS as CONSTANTS} from './o-charts.constants';
 
 var ctrl = {
   'chart': {},

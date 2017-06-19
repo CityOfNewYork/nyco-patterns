@@ -41,7 +41,7 @@ body
       div class='f-2 o--1 bg-secondary-white'
       div class='f-2'
 
-script src='bundle/scripts/o-charts.js'
+script src='bundle/scripts/bundle.js'
 
 javascript:
 
