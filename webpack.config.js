@@ -8,7 +8,7 @@ module.exports = [
    */
   {
     entry: {
-      'o-charts': './src/js/o-charts.js',
+      'o-charts.demo': './src/js/o-charts.demo.js',
     },
     resolve: {
        modules: [
