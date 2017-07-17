@@ -15,8 +15,6 @@ const engine = 'slm';
  */
 function fnGet(request, resolve) {
 
-  console.dir(request);
-
   resolve.render(request.params[0]);
 
 }
@@ -25,7 +23,7 @@ function fnListenCallback() {
 
   let p = app.get('port');
 
-  console.log(`Example app listening on port ${p}!`);
+  console.log(`NYCO Patterns listening on port ${p}!`);
 
 }
 

@@ -4,7 +4,7 @@
     "style_bundle": "bundle/styles/site.concat.css",
     "style_dist": "dist/styles/site.min.css"
   },
-  "name": "oeo-patterns",
+  "name": "nyco-patterns",
   "version": "0.0.1",
   "description": "Agency patterns for the Mayor's Office for Economic Opportunity",
   "main": "index.js",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CityOfNewYork/oeo-patterns.git"
+    "url": "git+https://github.com/CityOfNewYork/nyco-patterns.git"
   },
   "author": "Mayor's Office for Economic Opportunity",
   "license": "GPL-3.0+",
   "bugs": {
-    "url": "https://github.com/CityOfNewYork/oeo-patterns/issues"
+    "url": "https://github.com/CityOfNewYork/nyco-patterns/issues"
   },
-  "homepage": "https://github.com/CityOfNewYork/oeo-patterns#readme",
+  "homepage": "https://github.com/CityOfNewYork/nyco-patterns#readme",
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.0.0",
