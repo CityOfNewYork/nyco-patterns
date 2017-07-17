@@ -12,11 +12,12 @@ html lang='en'
 
 body
 
-    header class='d-flex jc-end ai-stretch'
+    header class='d-flex jc-end ai-stretch bg-primary-blue f-smooth'
 
       div class='f-10'
-        h1 class='wrap'
-          | Agency patterns for the Mayor&apos;s Office for Economic Opportunity
+        div class='wrap'
+          div class='m-3 p-3'
+            h1 Agency patterns for the Mayor&apos;s Office for Economic Opportunity
 
       div class='f-2 o--1'
       div class='f-2'
@@ -24,10 +25,11 @@ body
     main class='d-flex jc-end ai-stretch'
 
       div class='f-10'
-        nav class='wrap'
-          a href='components' Components
-          br
-          a href='charts' Chart Object
+        div class='wrap'
+          div class='m-3 p-3'
+            nav class='c-nav-inline-block'
+              a class='c-primary-blue' href='components' Components
+              a class='c-primary-blue' href='charts' Chart Object
 
       div class='f-2 o--1'
       div class='f-2'

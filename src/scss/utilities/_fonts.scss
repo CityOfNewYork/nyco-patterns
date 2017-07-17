@@ -5,9 +5,11 @@
 // Dependencies
 @import 'fonts.vars';
 @import 'fonts.mixins';
+@import 'colors.vars';
 
 // Declarations
 body {
+  color: $base-black;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: $font-base;
   line-height: 22px
@@ -15,6 +17,44 @@ body {
 
 p {
   margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1, h2 {
+  line-height: 40px;
+}
+
+h1 {
+  font-size: 38.5px;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+  line-height: normal;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
 }
 
 .f-smooth {
