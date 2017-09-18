@@ -1,26 +1,14 @@
+= partial('partials/head.mixin.slm')
+= partial('partials/o-header.mixin.slm')
+
 doctype html
 html lang='en'
-  head
 
-    meta charset='utf-8'
-    meta http-equiv='X-UA-Compatible' content='IE=edge'
-    meta name='viewport' content='width=device-width, initial-scale=1'
-
-    link rel='stylesheet' href='dist/styles/site.min.css'
-
-    title CSS Components | NYC Opportunity Patterns
+  = mixin('head', 'CSS Components | NYC Opportunity Patterns')
 
 body
 
-  header class='d-flex jc-end ai-stretch bg-primary-blue f-smooth'
-
-    div class='f-10'
-      div class='wrap'
-        div class='m-3 p-3'
-          h1 Components
-
-    div class='f-2 o--1'
-    div class='f-2'
+  = mixin('o-header', 'Components')
 
   main class='d-flex jc-end ai-stretch'
 

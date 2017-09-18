@@ -1,0 +1,10 @@
+= mixin('o-header', 'title = Section Title')
+  header class='d-flex jc-end ai-stretch bg-primary-blue f-smooth'
+
+    div class='f-10'
+      div class='wrap'
+        div class='m-vertical-3 p-vertical-3'
+          h1= this.title
+
+    div class='f-2 o--1'
+    div class='f-2'

@@ -1,0 +1,47 @@
+//
+// Vars
+//
+
+// Dependencies
+@import 'vars';
+
+// Creates a flattened map of colors with the name as key and color as value
+$colors: ();
+@each $color in map-get($vars, 'colors') {
+  $name: map-get($color, 'name');
+  $hex: map-get($color, 'hex');
+  $colors: map-merge($colors, ($name: $hex));
+}
+
+// Tints
+$delta-tints: (30%, 50%, 70%);
+
+// Hover and Focus Delta
+$delta-psuedo: 15%;
+
+// Shades
+// $shades: (..., ..., ...);
+
+// Appearance
+// This is where the color assignments are managed. This object can be fed into
+// the main color mixin for batch setting color utility classes.
+// (namespace, color, text, hyperlinks)
+//
+// namespace    string - the name of the color attribute reference. Colors
+//                       automatically generate
+// color        hex code - the main hex color assignment to the namespace.
+// text         hex code - the color assignment to text on top of the color.
+// hyperlinks   hex code - the color assignment to hyperlinked text on top of
+//                         the color.
+$primary: ('primary-navy', 'primary-navy', 'secondary-white', 'secondary-orange'),
+          ('primary-blue', 'primary-blue', 'secondary-white', 'secondary-orange'),
+          ('primary-red',  'primary-red',  'secondary-white', 'secondary-orange');
+
+$secondary: ('secondary-grey',   'secondary-grey',  'primary-navy',  'secondary-orange'),
+            ('secondary-white',  'secondary-white',  'primary-navy', 'secondary-orange'),
+            ('secondary-orange', 'secondary-orange', 'primary-navy', 'secondary-white'),
+            ('secondary-pink',   'secondary-pink',   'primary-navy', 'primary-red');
+
+$base: ('base-white', 'base-white', 'base-black', 'secondary-orange'),
+       ('base-black', 'base-black', 'base-white', 'secondary-orange');
+

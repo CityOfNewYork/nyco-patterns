@@ -3,17 +3,17 @@
 //
 
 // Dependencies
-// @import ...;
+@import 'colors.vars';
 
 // Mixins
-@mixin background-color($colors) {
+@mixin background-color($colors, $set) {
 
-  @each $c in $colors {
+  @each $setting in $set {
 
-    $namespace: nth($c, 1);
-    $color: nth($c, 2);
-    $text: nth($c, 3);
-    $hyperlink: nth($c, 4);
+    $namespace: nth($setting, 1);
+    $color: map-get($colors, nth($setting, 2));
+    $text: map-get($colors, nth($setting, 3));
+    $hyperlink: map-get($colors, nth($setting, 4));
 
     .bg-#{$namespace} {
       color: $text;
@@ -39,14 +39,14 @@
 
 }
 
-@mixin color($colors) {
+@mixin color($colors, $set) {
 
-  @each $c in $colors {
+  @each $setting in $set {
 
-    $namespace: nth($c, 1);
-    $color: nth($c, 2);
-    $text: nth($c, 3);
-    $hyperlink: nth($c, 4);
+    $namespace: nth($setting, 1);
+    $color: map-get($colors, nth($setting, 2));
+    $text: map-get($colors, nth($setting, 3));
+    $hyperlink: map-get($colors, nth($setting, 4));
 
     .c-#{$namespace} {
       color: $color !important
