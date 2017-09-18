@@ -4,8 +4,13 @@
 
 // Dependencies
 @import 'grid.vars';
+@import 'grid.mixins';
 
 // Declarations
+@include gutters($grid-base, 'm', 'margin', $grid-multiplier); // Make margin gutters
+
+@include gutters($grid-base, 'p', 'padding', $grid-multiplier); // Make padding gutters
+
 .p-0 {
   padding: 0 !important
 }
