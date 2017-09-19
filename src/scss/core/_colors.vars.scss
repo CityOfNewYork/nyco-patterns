@@ -14,7 +14,7 @@ $colors: ();
 }
 
 // Tints
-$delta-tints: (30%, 50%, 70%);
+$delta-tints: map-get($vars, 'tints');
 
 // Hover and Focus Delta
 $delta-psuedo: 15%;
@@ -33,15 +33,63 @@ $delta-psuedo: 15%;
 // text         hex code - the color assignment to text on top of the color.
 // hyperlinks   hex code - the color assignment to hyperlinked text on top of
 //                         the color.
-$primary: ('primary-navy', 'primary-navy', 'secondary-white', 'secondary-orange'),
-          ('primary-blue', 'primary-blue', 'secondary-white', 'secondary-orange'),
-          ('primary-red',  'primary-red',  'secondary-white', 'secondary-orange');
+$primary:
+  (
+    namespace: 'primary-navy',
+    color: 'primary-navy',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-blue',
+    color: 'primary-blue',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-red',
+    color: 'primary-red',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  );
 
-$secondary: ('secondary-grey',   'secondary-grey',  'primary-navy',  'secondary-orange'),
-            ('secondary-white',  'secondary-white',  'primary-navy', 'secondary-orange'),
-            ('secondary-orange', 'secondary-orange', 'primary-navy', 'secondary-white'),
-            ('secondary-pink',   'secondary-pink',   'primary-navy', 'primary-red');
+$secondary:
+  (
+    namespace: 'secondary-grey',
+    color: 'secondary-grey',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'secondary-white',
+    color: 'secondary-white',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'secondary-orange',
+    color: 'secondary-orange',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-white'
+  ),
+  (
+    namespace: 'secondary-pink',
+    color: 'secondary-pink',
+    text: 'primary-navy',
+    hyperlinks: 'primary-red'
+  );
 
-$base: ('base-white', 'base-white', 'base-black', 'secondary-orange'),
-       ('base-black', 'base-black', 'base-white', 'secondary-orange');
+$base:
+  (
+    namespace: 'base-white',
+    color: 'base-white',
+    text: 'base-black',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'base-black',
+    color: 'base-black',
+    text: 'base-white',
+    hyperlinks: 'secondary-orange'
+  );
 

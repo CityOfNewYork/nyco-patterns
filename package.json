@@ -12,7 +12,7 @@
     "test": "",
     "start": "node index.js",
     "styles-vars": "json-sass -i src/data/vars.json -o src/scss/core/_vars.scss -p '$vars:'",
-    "styles-watch": "nodemon --ext scss --watch src/scss -x 'npm run styles'",
+    "styles-watch": "nodemon --ext scss --watch src/scss --ignore _vars.scss -x 'npm run styles'",
     "styles-postcss": "cssnano --sourcemap < $npm_package_config_style_bundle > $npm_package_config_style_dist",
     "styles": "npm run styles-vars && node-sass --sourceMapEmbed true --include-path node_modules $npm_package_config_style_src $npm_package_config_style_bundle && npm run styles-postcss",
     "scripts-watch": "nodemon --ext js --watch src/js -x 'npm run scripts'",

@@ -10,10 +10,10 @@
 
   @each $setting in $set {
 
-    $namespace: nth($setting, 1);
-    $color: map-get($colors, nth($setting, 2));
-    $text: map-get($colors, nth($setting, 3));
-    $hyperlink: map-get($colors, nth($setting, 4));
+    $namespace: map-get($setting, namespace);
+    $color: map-get($colors, map-get($setting, color));
+    $text: map-get($colors, map-get($setting, text));
+    $hyperlink: map-get($colors, map-get($setting, hyperlink));
 
     .bg-#{$namespace} {
       color: $text;
@@ -43,10 +43,10 @@
 
   @each $setting in $set {
 
-    $namespace: nth($setting, 1);
-    $color: map-get($colors, nth($setting, 2));
-    $text: map-get($colors, nth($setting, 3));
-    $hyperlink: map-get($colors, nth($setting, 4));
+    $namespace: map-get($setting, namespace);
+    $color: map-get($colors, map-get($setting, color));
+    $text: map-get($colors, map-get($setting, text));
+    $hyperlink: map-get($colors, map-get($setting, hyperlink));
 
     .c-#{$namespace} {
       color: $color !important
@@ -69,6 +69,38 @@
     // }
 
   }
+
+}
+
+@function tints-and-shades($set, $trans) {
+
+  $return: ();
+  $newsetting: $set;
+
+  @each $transformation in $trans {
+
+    $namespace: '-' + map-get($transformation, namespace);
+
+    @for $i from 1 through length($set) {
+      $setting: nth($set, $i);
+
+      $name: map-get($setting, namespace) + $namespace;
+      $s: map-merge($setting, (namespace: $name));
+
+      $return: append($return, $s);
+
+      @debug $i;
+      @debug $name;
+      @debug $s;
+      @debug $return;
+
+      // Todo need to transform the color
+
+    }
+
+  }
+
+  @return $return
 
 }
 

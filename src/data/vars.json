@@ -1,12 +1,12 @@
 {
   "colors": [
     {
-      "name": "base-white",
-      "hex": "#FFFFFF"
-    },
-    {
       "name": "base-black",
       "hex": "#333333"
+    },
+    {
+      "name": "base-white",
+      "hex": "#FFFFFF"
     },
     {
       "name": "primary-navy",
@@ -35,6 +35,20 @@
     {
       "name": "secondary-pink",
       "hex": "#EBBCD8"
+    }
+  ],
+  "tints": [
+    {
+      "namespace": "30t",
+      "transformation": "30%"
+    },
+    {
+      "namespace": "50t",
+      "transformation": "50%"
+    },
+    {
+      "namespace": "70t",
+      "transformation": "70%"
     }
   ]
 }

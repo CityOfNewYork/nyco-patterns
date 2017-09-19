@@ -15,10 +15,14 @@ body
     div class='f-10'
       div class='wrap'
         div class='m-vertical-3 p-vertical-3'
-          - for i in this.vars.colors
-            - name = this.vars.colors[i].name
-            - hex = this.vars.colors[i].hex
-            p class="c-${name}" = hex
+          div class='f-smooth'
+            - for i in this.vars.colors
+              - name = this.vars.colors[i].name
+              - hex = this.vars.colors[i].hex
+              div class="f-1 m-bottom-3 b b-${name}"
+                div class="bg-${name} p-3"
+                code class="p" .${name}
+                div class="p" = hex
 
     div class='f-2 o--1'
     div class='f-2'
