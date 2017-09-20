@@ -11,8 +11,6 @@
 // Base Background Colors
 @include background-color($colors, $base);
 
-@include background-color($colors, tints-and-shades($base, $delta-tints));
-
 // Secondary Background Colors
 @include background-color($colors, $secondary);
 

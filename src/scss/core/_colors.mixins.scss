@@ -72,35 +72,3 @@
 
 }
 
-@function tints-and-shades($set, $trans) {
-
-  $return: ();
-  $newsetting: $set;
-
-  @each $transformation in $trans {
-
-    $namespace: '-' + map-get($transformation, namespace);
-
-    @for $i from 1 through length($set) {
-      $setting: nth($set, $i);
-
-      $name: map-get($setting, namespace) + $namespace;
-      $s: map-merge($setting, (namespace: $name));
-
-      $return: append($return, $s);
-
-      @debug $i;
-      @debug $name;
-      @debug $s;
-      @debug $return;
-
-      // Todo need to transform the color
-
-    }
-
-  }
-
-  @return $return
-
-}
-

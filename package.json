@@ -16,6 +16,7 @@
     "styles-postcss": "cssnano --sourcemap < $npm_package_config_style_bundle > $npm_package_config_style_dist",
     "styles": "npm run styles-vars && node-sass --sourceMapEmbed true --include-path node_modules $npm_package_config_style_src $npm_package_config_style_bundle && npm run styles-postcss",
     "scripts-watch": "nodemon --ext js --watch src/js -x 'npm run scripts'",
+    "views-watch": "nodemon --ext slm --watch src/views -x 'npm run build'",
     "rollup-build": "rollup -c",
     "rollup-dev": "rollup -c -w",
     "build": "gulp build"
