@@ -1,3 +1,5 @@
+# Charts Module
+
 Chart Features
 - [x] Reusable line and bar charts
 - [x] Plot types can be combined
@@ -17,12 +19,12 @@ Chart Features
 - [ ] Stacked bar charts
 
 Module Features
-- [ ] Responsive features don't work because the window event is overridden by the
+- [x] Responsive features don't work because the window event is overridden by the
 last chart created. Would like to convert the code base to an ES6 module to help
 prevent issues like this.
 - [ ] Need to explore breaking up the larger code base as individual modules so
 the library doesn't become too unruly.
-- [ ] Currently, the bundling and distribution is set up with Webpack, but I would
+- [x] Currently, the bundling and distribution is set up with Webpack, but I would
 like to change to Rollup because it seems better suited for writing modern libaries.
 If we were creating a single page web app, Webpack would probably be the way to go.
 
