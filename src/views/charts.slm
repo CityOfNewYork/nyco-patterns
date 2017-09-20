@@ -31,5 +31,5 @@ body
     div class='f-2 o--1'
     div class='f-2'
 
-script src='bundle/scripts/o-charts.demo.js'
+script src='${this.assets}bundle/scripts/o-charts.demo.js'
 
