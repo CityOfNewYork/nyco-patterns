@@ -8,12 +8,12 @@ Include this repository as a dependency in your `package.json` file.
 ```
   "devDependencies": {
     ...
-    "oeo-patterns": "git+https://github.com/CityOfNewYork/oeo-patterns.git"
+    "nyco-patterns": "git+https://github.com/CityOfNewYork/nyco-patterns.git"
     ...
   }
 ```
 
-Run `npm install oeo-patterns` to install it.
+Run `npm install nyco-patterns` to install it.
 
 ### Styles
 #### Embed
@@ -25,7 +25,7 @@ and link to it in the head of the document.
 ```
 
 #### Build
-You can also inlcude the src `oeo-patterns/src/scss/site.scss` in whichever build
+You can also inlcude the src `nyco-patterns/src/scss/site.scss` in whichever build
 tool you prefer.
 
 #### Recommended
@@ -36,8 +36,8 @@ Be sure to add `node_modules` to the include paths of your build tool.
 ```
 @charset 'utf-8';
 
-@import 'oeo-patterns/src/scss/utilities/colors';
-@import 'oeo-patterns/src/scss/utilities/transitions';
+@import 'nyco-patterns/src/scss/utilities/colors';
+@import 'nyco-patterns/src/scss/utilities/transitions';
 ```
 
 As an example, this library uses `cssnano-cli`, `node-sass`, and `nodemon` to watch
@@ -59,6 +59,11 @@ changes, bundle, and create distributions.
 ## Demos
 Clone or download the library and `cd` into the directory. Run `npm install` then
 use `npm run start` to run the demonstration site.
+
+Here is a collection of screenshots [to reference the current demo](wip).
+
+## Inpiration
+Another collection of screens for inspiration can be found on this [Invision Project](https://invis.io/8KC78S1AE).
 
 ## Making Changes
 Use `npm run styles-watch` to bundle and distribute the css files to see changes.

@@ -3,8 +3,8 @@
  */
 
 // Dependencies
-@import 'grid.vars';
-@import 'grid.mixins';
+@import '../core/grid.vars';
+@import '../core/grid.mixins';
 
 // Declarations
 @include gutters($grid-base, 'm', 'margin', $grid-multiplier); // Make margin gutters

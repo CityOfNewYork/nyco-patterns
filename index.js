@@ -15,7 +15,9 @@ const engine = 'slm';
  */
 function fnGet(request, resolve) {
 
-  resolve.render(request.params[0]);
+  let vars = require( path.join(__dirname, 'src/data/vars.json') );
+
+  resolve.render(request.params[0], {'vars': vars});
 
 }
 

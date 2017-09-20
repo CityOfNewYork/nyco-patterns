@@ -1,0 +1,95 @@
+//
+// Vars
+//
+
+// Dependencies
+@import 'vars';
+
+// Creates a flattened map of colors with the name as key and color as value
+$colors: ();
+@each $color in map-get($vars, 'colors') {
+  $name: map-get($color, 'name');
+  $hex: map-get($color, 'hex');
+  $colors: map-merge($colors, ($name: $hex));
+}
+
+// Tints
+$delta-tints: map-get($vars, 'tints');
+
+// Hover and Focus Delta
+$delta-psuedo: 15%;
+
+// Shades
+// $shades: (..., ..., ...);
+
+// Appearance
+// This is where the color assignments are managed. This object can be fed into
+// the main color mixin for batch setting color utility classes.
+// (namespace, color, text, hyperlinks)
+//
+// namespace    string - the name of the color attribute reference. Colors
+//                       automatically generate
+// color        hex code - the main hex color assignment to the namespace.
+// text         hex code - the color assignment to text on top of the color.
+// hyperlinks   hex code - the color assignment to hyperlinked text on top of
+//                         the color.
+$primary:
+  (
+    namespace: 'primary-navy',
+    color: 'primary-navy',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-blue',
+    color: 'primary-blue',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-red',
+    color: 'primary-red',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  );
+
+$secondary:
+  (
+    namespace: 'secondary-grey',
+    color: 'secondary-grey',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'secondary-white',
+    color: 'secondary-white',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'secondary-orange',
+    color: 'secondary-orange',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-white'
+  ),
+  (
+    namespace: 'secondary-pink',
+    color: 'secondary-pink',
+    text: 'primary-navy',
+    hyperlinks: 'primary-red'
+  );
+
+$base:
+  (
+    namespace: 'base-white',
+    color: 'base-white',
+    text: 'base-black',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'base-black',
+    color: 'base-black',
+    text: 'base-white',
+    hyperlinks: 'secondary-orange'
+  );
+

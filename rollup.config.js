@@ -4,12 +4,13 @@ import babel from 'rollup-plugin-babel';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
+  moduleName: 'oCharts',
   entry: './src/js/o-charts.js',
   format: 'iife',
   plugins: [
     resolve(),
     babel({
-      exclude: 'node_modules/**' 
+      exclude: 'node_modules/**'
     }),
     uglify()
   ],

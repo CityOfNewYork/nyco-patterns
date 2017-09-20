@@ -3,28 +3,30 @@
  */
 
 // Dependencies
-@import 'colors.vars';
-@import 'colors.mixins';
+@import '../core/colors.vars';
+@import '../core/colors.mixins';
 
 // Declarations
 
 // Base Background Colors
-@include background-color($base);
+@include background-color($colors, $base);
+
+@include background-color($colors, tints-and-shades($base, $delta-tints));
 
 // Secondary Background Colors
-@include background-color($secondary);
+@include background-color($colors, $secondary);
 
 // Primary Background Colors
-@include background-color($primary);
+@include background-color($colors, $primary);
 
 // Base Colors
-@include color($base);
+@include color($colors, $base);
 
 // Secondary Colors
-@include color($secondary);
+@include color($colors, $secondary);
 
 // Primary Colors
-@include color($primary);
+@include color($colors, $primary);
 
 .b-transparent {
   border-color: transparent
