@@ -41,14 +41,68 @@ $primary:
     hyperlinks: 'secondary-orange'
   ),
   (
+    namespace: 'primary-navy-70t',
+    color: 'primary-navy-70t',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-navy-50t',
+    color: 'primary-navy-50t',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-navy-30t',
+    color: 'primary-navy-30t',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
     namespace: 'primary-blue',
     color: 'primary-blue',
     text: 'secondary-white',
     hyperlinks: 'secondary-orange'
   ),
   (
+    namespace: 'primary-blue-70t',
+    color: 'primary-blue-70t',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-blue-50t',
+    color: 'primary-blue-50t',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-blue-30t',
+    color: 'primary-blue-30t',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
     namespace: 'primary-red',
     color: 'primary-red',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-red-70t',
+    color: 'primary-red-70t',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-red-50t',
+    color: 'primary-red-50t',
+    text: 'secondary-white',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'primary-red-30t',
+    color: 'primary-red-30t',
     text: 'secondary-white',
     hyperlinks: 'secondary-orange'
   );
@@ -61,8 +115,44 @@ $secondary:
     hyperlinks: 'secondary-orange'
   ),
   (
+    namespace: 'secondary-grey-70t',
+    color: 'secondary-grey-70t',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'secondary-grey-50t',
+    color: 'secondary-grey-50t',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'secondary-grey-30t',
+    color: 'secondary-grey-30t',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
     namespace: 'secondary-white',
     color: 'secondary-white',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'secondary-white-70t',
+    color: 'secondary-white-70t',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'secondary-white-50t',
+    color: 'secondary-white-50t',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-orange'
+  ),
+  (
+    namespace: 'secondary-white-30t',
+    color: 'secondary-white-30t',
     text: 'primary-navy',
     hyperlinks: 'secondary-orange'
   ),
@@ -73,8 +163,44 @@ $secondary:
     hyperlinks: 'secondary-white'
   ),
   (
+    namespace: 'secondary-orange-70t',
+    color: 'secondary-orange-70t',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-white'
+  ),
+  (
+    namespace: 'secondary-orange-50t',
+    color: 'secondary-orange-50t',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-white'
+  ),
+  (
+    namespace: 'secondary-orange-30t',
+    color: 'secondary-orange-30t',
+    text: 'primary-navy',
+    hyperlinks: 'secondary-white'
+  ),
+  (
     namespace: 'secondary-pink',
     color: 'secondary-pink',
+    text: 'primary-navy',
+    hyperlinks: 'primary-red'
+  ),
+  (
+    namespace: 'secondary-pink-70t',
+    color: 'secondary-pink-70t',
+    text: 'primary-navy',
+    hyperlinks: 'primary-red'
+  ),
+  (
+    namespace: 'secondary-pink-50t',
+    color: 'secondary-pink-50t',
+    text: 'primary-navy',
+    hyperlinks: 'primary-red'
+  ),
+  (
+    namespace: 'secondary-pink-30t',
+    color: 'secondary-pink-30t',
     text: 'primary-navy',
     hyperlinks: 'primary-red'
   );

@@ -57,15 +57,19 @@ changes, bundle, and create distributions.
 ```
 
 ## Demos
+View the [GH Pages Site ](https://cityofnewyork.github.io/nyco-patterns/) for a demonstration.
+
+### Optionally
 Clone or download the library and `cd` into the directory. Run `npm install` then
 use `npm run start` to run the demonstration site.
 
-Here is a collection of screenshots [to reference the current demo](wip).
-
-## Inpiration
+## Inspiration
 Another collection of screens for inspiration can be found on this [Invision Project](https://invis.io/8KC78S1AE).
 
 ## Making Changes
 Use `npm run styles-watch` to bundle and distribute the css files to see changes.
+
+## To Do
+This library is currently a work in progress. View the current list of [to dos](TODO.md).
 
 

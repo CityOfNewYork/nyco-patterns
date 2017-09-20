@@ -9,32 +9,85 @@ $vars:(
     name: primary-navy,
     hex: #2F334F
   ), (
+    name: primary-navy-70t,
+    hex: #6E7085
+  ), (
+    name: primary-navy-50t,
+    hex: #9698A7
+  ), (
+    name: primary-navy-30t,
+    hex: #C0C2CA
+  ), (
     name: primary-blue,
     hex: #3155A6
+  ), (
+    name: primary-blue-70t,
+    hex: #6C88C1
+  ), (
+    name: primary-blue-50t,
+    hex: #96ABD2
+  ), (
+    name: primary-blue-30t,
+    hex: #C0CCE3
   ), (
     name: primary-red,
     hex: #F2695D
   ), (
+    name: primary-red-70t,
+    hex: #F6958D
+  ), (
+    name: primary-red-50t,
+    hex: #F8B2AD
+  ), (
+    name: primary-red-30t,
+    hex: #FBD1CE
+  ), (
     name: secondary-grey,
     hex: #ACAEB9
+  ), (
+    name: secondary-grey-70t,
+    hex: #C4C6CD
+  ), (
+    name: secondary-grey-50t,
+    hex: #D5D6DC
+  ), (
+    name: secondary-grey-30t,
+    hex: #E8E7E9
   ), (
     name: secondary-white,
     hex: #F3F3F3
   ), (
+    name: secondary-white-70t,
+    hex: #F6F6F6
+  ), (
+    name: secondary-white-50t,
+    hex: #F9F9FA
+  ), (
+    name: secondary-white-30t,
+    hex: #FBFCFC
+  ), (
     name: secondary-orange,
     hex: #F9A137
   ), (
+    name: secondary-orange-70t,
+    hex: #FFA133
+  ), (
+    name: secondary-orange-50t,
+    hex: #FED09A
+  ), (
+    name: secondary-orange-30t,
+    hex: #FFE3C2
+  ), (
     name: secondary-pink,
     hex: #EBBCD8
-  )),
-  tints: ((
-    namespace: 30t,
-    transformation: 30%
   ), (
-    namespace: 50t,
-    transformation: 50%
+    name: secondary-pink-70t,
+    hex: #F2D0E3
   ), (
-    namespace: 70t,
-    transformation: 70%
+    name: secondary-pink-50t,
+    hex: #F7DDEB
+  ), (
+    name: secondary-pink-30t,
+    hex: #FDEBF3
   ))
 );
