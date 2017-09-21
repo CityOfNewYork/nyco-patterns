@@ -1,5 +1,12 @@
 = partial('partials/head.mixin.slm')
+= partial('partials/nav.mixin.slm')
 = partial('partials/o-header.mixin.slm')
+
+- h1 = 'b-bottom p-bottom b-secondary-grey'
+- h2 = 'c-primary-blue-70t'
+- sections = 'wrap m-bottom-3 p-bottom-3'
+- subsections = 'm-bottom-3'
+- examples = 'c-example b-secondary-grey'
 
 doctype html
 html lang='en'
@@ -10,15 +17,8 @@ body
 
   = mixin('o-header', 'Agency patterns for the Mayor\'s Office for Economic Opportunity')
 
-  main class='d-flex jc-end ai-stretch'
+  main class='jc-end ai-stretch'
 
-    div class='f-10'
-      div class='wrap'
-        div class='m-vertical-3 p-vertical-3'
-          nav class='c-nav-inline-block'
-            a class='c-primary-blue' href='${this.root}colors' Colors
-            a class='c-primary-blue' href='${this.root}components' Components
-            a class='c-primary-blue' href='${this.root}charts' Chart Object
-
-    div class='f-2 o--1'
-    div class='f-2'
+    div class='wrap'
+      / - indexpath = this.root
+      = mixin('nav', this.root);

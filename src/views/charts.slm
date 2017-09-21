@@ -1,5 +1,12 @@
 = partial('partials/head.mixin.slm')
+= partial('partials/nav.mixin.slm')
 = partial('partials/o-header.mixin.slm')
+
+- h1 = 'b-bottom p-bottom b-secondary-grey'
+- h2 = 'c-primary-blue-70t'
+- sections = 'wrap m-bottom-3 p-bottom-3'
+- subsections = 'm-bottom-3'
+- examples = 'c-example b-secondary-grey'
 
 doctype html
 html lang='en'
@@ -10,26 +17,32 @@ body
 
   = mixin('o-header', 'Chart Object')
 
-  main class='d-flex jc-end ai-stretch'
+  main class='jc-end ai-stretch'
 
-    div class='f-10 m-vertical-3 p-vertical-3'
+    div class='wrap'
+      = mixin('nav', '');
 
-      section class='wrap'
+    section class='wrap'
 
-        h2 U.S. Official and NYCgov Poverty Rates 2005–2015
-        div id='chartPovertyRates'
+      div class='${subsections}'
+        div class='${examples}'
+          h2 U.S. Official and NYCgov Poverty Rates 2005–2015
+          div id='chartPovertyRates'
 
-        / h2 U.S. Official and NYCgov Thresholds, Income, and Poverty Rates, 2015
-        / div id='chartThresholdsIncomes'
+      / div class='${subsections}'
+        / div class='${examples}'
+        /   h2 U.S. Official and NYCgov Thresholds, Income, and Poverty Rates, 2015
+        /   div id='chartThresholdsIncomes'
 
-        h2 Employment/Population Ratios 2008, 2010–2015
-        div id='chartEmploymentPopulationRatios'
+      div class='${subsections}'
+        div class='${examples}'
+          h2 Employment/Population Ratios 2008, 2010–2015
+          div id='chartEmploymentPopulationRatios'
 
-        / h2 Marginal Effects, Selected Sources of Income on the NYCgov Poverty Rate, 2015
-        / div id='chartMarginalEffects'
-
-    div class='f-2 o--1'
-    div class='f-2'
+      / div class='${subsections}'
+      / div class='${examples}'
+      /   h2 Marginal Effects, Selected Sources of Income on the NYCgov Poverty Rate, 2015
+      /   div id='chartMarginalEffects'
 
 script src='${this.assets}bundle/scripts/o-charts.demo.js'
 
