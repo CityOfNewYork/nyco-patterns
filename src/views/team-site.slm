@@ -1,0 +1,176 @@
+= partial('partials/head.mixin.slm')
+= partial('partials/nav.mixin.slm')
+= partial('partials/o-header.mixin.slm')
+- h1 = 'b-bottom p-bottom b-secondary-grey'
+- h2 = 'c-primary-blue-70t'
+- sections = 'wrap m-bottom-3 p-bottom-3'
+- subsections = 'm-bottom-3'
+- examples = 'c-example b-secondary-grey'
+
+doctype html
+html lang='en'
+
+  = mixin('head', 'Team Site | NYC Opportunity Patterns')
+  link href='dist/styles/team-site.min.css' rel='stylesheet'
+
+body
+
+  = mixin('o-header', 'Team Site')
+
+  main class='jc-end ai-stretch'
+
+    div class='wrap'
+      = mixin('nav');
+
+    section class='${sections}'
+      p
+        | This page imports the global team site stylesheet found on the nyc.gov. The stylesheet uses a partial import of&nbsp;
+        a href='http://getbootstrap.com/2.3.2' Bootstrap 2.3.
+
+    section class='${sections}'
+      header class='${subsections}'
+        h1 class='${h1}' Typography
+
+      div class='${subsections}'
+        h2 class="${h2}" Base Font Styles
+        pre
+          - fonts = this.vars.fonts
+          = fonts.fontSize
+          div font-family: ${this.vars.fonts['font-family']};
+          div font-size: ${this.vars.fonts['font-size']};
+          div line-height: ${this.vars.fonts['line-height']};
+
+      div class='${subsections}'
+        h2 class="${h2}" Headings
+        div class='${examples}'
+          h1 Heading 1
+          h2 Heading 2
+          h3 Heading 3
+          h4 Heading 4
+          h5 Heading 5
+          h6 Heading 6
+
+      div class='${subsections}'
+        h2 class="${h2}" Paragraphs
+        div class='${examples}'
+          p Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+          p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
+          p Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+
+      div class='${subsections}'
+        h2 class="${h2}" Lead
+        div class='${examples}'
+          p class='lead' Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+
+    section class='${sections}'
+      header class='m-bottom-3'
+        h1 class='${h1}' Buttons
+      h2 class="${h2}" Default Button
+      div class='${examples}'
+        a class='btn' Button
+
+    section class='${sections}'
+      header class='${subsections}'
+        h1 class='${h1}' Forms
+      h2 class="${h2}" Default Styles
+      div class='${examples}'
+        h2 Contact Us
+        p
+          span class='required'
+            | *
+            b
+              | Indicates required fields
+
+        form id='opportunitycontactform' class='control-form'
+          div class='row'
+            div class='container'
+              div class='span12 control-group'
+                label class='control-label'
+                  | Name:
+                  span class='required'
+                    | *
+                  div class='validationMessage' aria-live='polite' style='display: none' aria-hidden='true'
+                  input type='text' name='Name' value=''
+          div class='row'
+            div class='container'
+              div class='span12 control-group'
+                label class='control-label'
+                  | Organization:
+                  input type='text' name='Organization' value=''
+          div class='row'
+            div class='container'
+              div class='span12 control-group'
+                label class='control-label'
+                  | Email Address (e.g., test@example.com):
+                  span class='required' *
+                  input type='text' name='Email' value=''
+          div class='row'
+            div class='container'
+              div class='span12 control-group'
+                label class='control-label'
+                  | Message:
+                  span class='required'
+                    | *
+                  textarea name='Message'
+          div class='row'
+            div class='container'
+              div class='form-actions'
+                button type='button' class='btn btn-form-submit'
+                  | Submit
+
+    section class='${sections}'
+      header class='${subsections}'
+        h1 class='${h1}' Grid
+
+      h2 class="${h2}" Live Grid Example
+
+      - row = 'p-bottom-3'
+      - col = 'p-horizontal-2 p-vertical t-center bg-secondary-grey-30t'
+
+      div class='${examples}'
+
+        div class='row ${row}'
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+          div class='span1'
+            div class='${col}' 1
+
+        div class='row ${row}'
+          div class='span2'
+            div class='${col}' 2
+          div class='span3'
+            div class='${col}' 3
+          div class='span3'
+            div class='${col}' 3
+          div class='span4'
+            div class='${col}' 4
+
+        div class='row ${row}'
+          div class='span6'
+            div class='${col}' 6
+          div class='span6'
+            div class='${col}' 6
+
+        div class='row'
+          div class='span12'
+            div class='${col}' 12
