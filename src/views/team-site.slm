@@ -11,7 +11,7 @@ doctype html
 html lang='en'
 
   = mixin('head', 'Team Site | NYC Opportunity Patterns')
-  link href='dist/styles/team-site.min.css' rel='stylesheet'
+  link href='${this.assets}dist/styles/team-site.min.css' rel='stylesheet'
 
 body
 
