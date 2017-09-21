@@ -1,0 +1,14 @@
+/**
+ * Examples
+ */
+
+// Dependencies
+@import 'core/colors.vars';
+@import 'core/grid.vars';
+
+// Declarations
+.c-example {
+  border: 1px solid;
+  border-color: map-get($colors, 'secondary-grey');
+  padding: ($grid-base * 3) ($grid-base * 4);
+}

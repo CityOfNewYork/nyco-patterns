@@ -1,0 +1,8 @@
+= mixin('nav')
+  div class='m-vertical-3 p-vertical-3'
+    nav class='c-nav-inline-block'
+      a class='c-primary-blue' href='${this.root}.' Home
+      a class='c-primary-blue' href='${this.root}colors' Colors
+      a class='c-primary-blue' href='${this.root}components' Components
+      a class='c-primary-blue' href='${this.root}charts' Chart Object
+      a class='c-primary-blue' href='${this.root}team-site' Team Site

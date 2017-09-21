@@ -2,4 +2,10 @@
 // Variables
 //
 
-$font-base: 16px;
+// Dependencies
+@import 'vars';
+
+$vars: map-get($vars, 'fonts');
+
+$font-base: map-get($vars, font-size);
+$line-height-base: map-get($vars, line-height);

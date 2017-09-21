@@ -1,4 +1,5 @@
 = partial('partials/head.mixin.slm')
+= partial('partials/nav.mixin.slm')
 = partial('partials/o-header.mixin.slm')
 
 doctype html
@@ -10,45 +11,50 @@ body
 
   = mixin('o-header', 'Components')
 
-  main class='d-flex jc-end ai-stretch'
+  main class='jc-end ai-stretch'
 
-    div class='f-10 m-vertical-3 p-vertical-3'
+    div class='wrap'
+      = mixin('nav');
 
-      section class='wrap'
+    section class='wrap'
+      header class='${subsections}'
         h2 Tables
+
+      div class='${subsections}'
         p
           code src/scss/_c-tables.scss
 
-        table class='c-table c-table-td-right b-primary-blue'
-          = partial('partials/c-table-content')
+        div class='${examples}'
+          table class='c-table c-table-td-right b-primary-blue'
+            = partial('partials/c-table-content')
 
+      div class='${subsections}'
         h3 Small Table
-        table class='c-table c-table-small c-table-td-right b-primary-blue'
-          = partial('partials/c-table-content')
+        div class='${examples}'
+          table class='c-table c-table-small c-table-td-right b-primary-blue'
+            = partial('partials/c-table-content')
 
-      section class='wrap'
+      div class='${subsections}'
         h3 Asides
         p
           code src/scss/_c-asides.scss
 
-        aside class='c-aside'
-          header class='c-aside_header bg-primary-blue f-smooth'
-            h1 Poverty Thresholds
-          div class='c-aside_body bg-secondary-white'
-            p
-              b U.S. Official:
-              |  The U.S. official threshold was developed in the early
-              |  1960s and was based on the cost of a minimum diet at that time. It is
-              |  updated each year by the change in consumer prices. It is uniform
-              |  across the United States.
-            p
-              b NYCgov:
-              |  The NYCgov poverty threshold is a New York City-specific
-              |  threshold derived from the U.S.-wide threshold developed for the Federal
-              |  Supplemental Poverty Measure. The NYCgov threshold is based on
-              |  what families spend on basic necessities: food, clothing, shelter, and
-              |  utilities. It is adjusted to reflect the variation in housing costs across the
-              |  United States.
-
-    div class='f-2 o--1'
-    div class='f-2'
+        div class='${examples}'
+          aside class='c-aside'
+            header class='c-aside_header bg-primary-blue f-smooth'
+              h1 Poverty Thresholds
+            div class='c-aside_body bg-secondary-white'
+              p
+                b U.S. Official:
+                |  The U.S. official threshold was developed in the early
+                |  1960s and was based on the cost of a minimum diet at that time. It is
+                |  updated each year by the change in consumer prices. It is uniform
+                |  across the United States.
+              p
+                b NYCgov:
+                |  The NYCgov poverty threshold is a New York City-specific
+                |  threshold derived from the U.S.-wide threshold developed for the Federal
+                |  Supplemental Poverty Measure. The NYCgov threshold is based on
+                |  what families spend on basic necessities: food, clothing, shelter, and
+                |  utilities. It is adjusted to reflect the variation in housing costs across the
+                |  United States.

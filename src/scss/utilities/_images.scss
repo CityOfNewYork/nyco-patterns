@@ -1,0 +1,12 @@
+/**
+ * Images
+ */
+
+// Dependencies
+// @import ...;
+
+// Declarations
+.image-optimize {
+  image-rendering: -webkit-optimize-contrast; // Chrome
+  image-rendering: optimizequality; // FF
+}
