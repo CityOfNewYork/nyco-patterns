@@ -1,6 +1,7 @@
 = partial('partials/head.mixin.slm')
 = partial('partials/nav.mixin.slm')
 = partial('partials/o-header.mixin.slm')
+
 - h1 = 'b-bottom p-bottom b-secondary-grey'
 - h2 = 'c-primary-blue-70t'
 - sections = 'wrap m-bottom-3 p-bottom-3'
@@ -20,7 +21,7 @@ body
   main class='jc-end ai-stretch'
 
     div class='wrap'
-      = mixin('nav');
+      = mixin('nav', '');
 
     section class='${sections}'
       p

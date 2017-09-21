@@ -2,6 +2,12 @@
 = partial('partials/nav.mixin.slm')
 = partial('partials/o-header.mixin.slm')
 
+- h1 = 'b-bottom p-bottom b-secondary-grey'
+- h2 = 'c-primary-blue-70t'
+- sections = 'wrap m-bottom-3 p-bottom-3'
+- subsections = 'm-bottom-3'
+- examples = 'c-example b-secondary-grey'
+
 doctype html
 html lang='en'
 
@@ -14,7 +20,7 @@ body
   main class='jc-end ai-stretch'
 
     div class='wrap'
-      = mixin('nav');
+      = mixin('nav', '');
 
     section class='wrap'
       header class='${subsections}'
