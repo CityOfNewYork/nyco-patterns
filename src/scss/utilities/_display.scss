@@ -18,6 +18,10 @@
   display: inline-block
 }
 
+.d-table {
+  display: table
+}
+
 // Create flexbox grow for the grid system
 @for $flex-column-index from 1 through $grid-columns {
 
@@ -31,6 +35,14 @@
   order: -1
 }
 
+.fd-column {
+  flex-direction: column
+}
+
+.fg-1 {
+  flex-grow: 1
+}
+
 .jc-start {
   justify-content: flex-start
 }
@@ -41,6 +53,14 @@
 
 .jc-center {
   justify-content: center
+}
+
+.jc-space-between {
+  justify-content: space-between
+}
+
+.ac-space-between {
+  align-content: space-between
 }
 
 .ai-start {
@@ -61,4 +81,8 @@
 
 .ai-baseline {
   align-items: baseline
+}
+
+.bp-justify {
+  box-pack: justify
 }
