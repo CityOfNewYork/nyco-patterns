@@ -4,8 +4,10 @@
 
 // Dependencies
 @import '../core/grid.vars';
+@import 'display.mixins';
 
 // Declarations
+// Display
 .d-flex {
   display: flex
 }
@@ -22,7 +24,7 @@
   display: table
 }
 
-// Create flexbox grow for the grid system
+// Flexbox
 @for $flex-column-index from 1 through $grid-columns {
 
   .f-#{$flex-column-index} {
@@ -33,6 +35,18 @@
 
 .o--1 {
   order: -1
+}
+
+.o-1 {
+  order: 1
+}
+
+.o-2 {
+  order: 2
+}
+
+.o-3 {
+  order: 3
 }
 
 .fd-column {
@@ -85,4 +99,34 @@
 
 .bp-justify {
   box-pack: justify
+}
+
+// Box shadow
+.up {
+  @include up();
+}
+
+.inset {
+  @include inset();
+}
+
+// Overflow
+.o-hidden {
+  overflow: hidden
+}
+
+.o-scroll {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.o-ellipsis,
+.o-ellipsis-children * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
 }

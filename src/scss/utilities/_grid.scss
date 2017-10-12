@@ -19,6 +19,11 @@
   margin: 0 !important
 }
 
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .wrap {
   $padding: $grid-base * 2;
   max-width: ($wrap-width - ($padding*2));
