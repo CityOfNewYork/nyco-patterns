@@ -12,6 +12,7 @@
     "test": "",
     "serve": "nodemon serve.js --ext slm --watch src",
     "build": "node build.js",
+    "publish": "node publish.js",
     "build-watch": "nodemon --ext slm --watch src/views -x 'npm run build'",
     "styles-vars": "json-sass -i src/data/vars.json -o src/scss/core/_vars.scss -p '$vars:'",
     "styles-watch": "nodemon --ext scss --watch src/scss --ignore _vars.scss -x 'npm run styles'",
