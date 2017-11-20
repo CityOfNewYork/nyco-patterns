@@ -20,7 +20,7 @@ body
   main class='jc-end ai-stretch'
 
     div class='wrap'
-      = mixin('nav', '');
+      = mixin('nav');
 
     section class='wrap'
       header class='${subsections}'

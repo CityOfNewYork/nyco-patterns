@@ -12,7 +12,8 @@ doctype html
 html lang='en'
 
   = mixin('head', 'Team Site | NYC Opportunity Patterns')
-  link href='${this.assets}dist/styles/team-site.min.css' rel='stylesheet'
+
+  link href='styles/team-site.min.css' rel='stylesheet'
 
 body
 
@@ -21,7 +22,7 @@ body
   main class='jc-end ai-stretch'
 
     div class='wrap'
-      = mixin('nav', '');
+      = mixin('nav');
 
     section class='${sections}'
       p

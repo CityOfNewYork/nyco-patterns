@@ -1,4 +1,13 @@
+# Organization
+
+- [x] bundle/.. The bundled style and script files
+- [x] dist/.. The distributed (minified) style and script files. Built html files for static site.
+- [x] src/.. The source for style, script and view templates
+- [x] serve.js Server for running the view templates
+- [x] build.js Build task for view templates
+
 # Charts Module
+The charts module is on hold and may not be included in future projects.
 
 Chart Features
 - [x] Reusable line and bar charts
@@ -35,5 +44,3 @@ Other chart features from previous libary that chould be cherry picked in the fu
 - [ ] Optional left or right y axis
 - [ ] Exporting chart as SVG or PNG
 - [ ] Clickable plots for creating focus on specific data
-
-![Chart Screenshot](/img/screenshot-localhost-80802017-06-1410-53-53.png)
