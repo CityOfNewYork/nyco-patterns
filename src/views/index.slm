@@ -20,5 +20,4 @@ body
   main class='jc-end ai-stretch'
 
     div class='wrap'
-      / - indexpath = this.root
-      = mixin('nav', this.root);
+      = mixin('nav');

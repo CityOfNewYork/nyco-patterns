@@ -1,12 +1,14 @@
+'use strict';
+
 import * as d3 from 'd3';
 import 'd3-selection-multi';
 import {CONSTANTS as CONSTANTS} from './o-charts.constants';
 
-export class oCharts {
+class oCharts {
 
   constructor(settings, data) {
 
-    this.chart = {}
+    this.chart = {};
     this.data = data;
     this.settings = settings;
     this.chart.element = d3.select(this.settings.selector);
@@ -31,7 +33,6 @@ export class oCharts {
       'namespace': 'create'
     })
 
-    // window.addEventListener('resize', this.respond);
     window.addEventListener('resize', () => {
         this.render({
         'settings': this.settings,
@@ -58,7 +59,7 @@ export class oCharts {
 
   }
 
-    // Create SVG
+  // Create SVG
   svg(settings, chart) {
 
     let _this = this;
@@ -566,3 +567,5 @@ export class oCharts {
   // Legend
 
 }
+
+export default oCharts;
