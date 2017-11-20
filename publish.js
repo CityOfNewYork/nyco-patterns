@@ -3,6 +3,7 @@
  */
 
 const GHPAGES = require('gh-pages');
+const PATH = require('path');
 const DIST = PATH.join(__dirname, 'dist/');
 
 
@@ -10,7 +11,7 @@ const DIST = PATH.join(__dirname, 'dist/');
  * Functions
  */
 
-fnCallback(err) {
+function fnCallback(err) {
 
   if (err) return console.log(err);
 
@@ -22,4 +23,4 @@ fnCallback(err) {
  * Init
  */
 
-ghpages.publish(DIST, fnCallback);
+GHPAGES.publish(DIST, fnCallback);
