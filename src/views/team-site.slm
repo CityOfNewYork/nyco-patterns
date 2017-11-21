@@ -15,7 +15,7 @@ html lang='en'
 
   link href='styles/team-site.min.css' rel='stylesheet'
 
-body
+body style='visibility: hidden;' onload='load()'
 
   = mixin('o-header', 'Team Site')
 

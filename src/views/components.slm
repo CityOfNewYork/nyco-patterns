@@ -13,7 +13,7 @@ html lang='en'
 
   = mixin('head', 'CSS Components | NYC Opportunity Patterns')
 
-body
+body style='visibility: hidden;' onload='load()'
 
   = mixin('o-header', 'Components')
 
@@ -32,13 +32,13 @@ body
 
         div class='${examples}'
           table class='c-table c-table-td-right b-primary-blue'
-            = partial('partials/c-table-content')
+            = partial('partials/table-content')
 
       div class='${subsections}'
         h3 Small Table
         div class='${examples}'
           table class='c-table c-table-small c-table-td-right b-primary-blue'
-            = partial('partials/c-table-content')
+            = partial('partials/table-content')
 
       div class='${subsections}'
         h3 Asides

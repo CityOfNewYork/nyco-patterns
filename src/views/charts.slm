@@ -13,7 +13,7 @@ html lang='en'
 
   = mixin('head', 'Chart Object | NYC Opportunity Patterns')
 
-body
+body style='visibility: hidden;' onload='load()'
 
   = mixin('o-header', 'Chart Object')
 

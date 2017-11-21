@@ -13,7 +13,7 @@ html lang='en'
 
   = mixin('head', 'NYC Opportunity Patterns')
 
-body
+body style='visibility: hidden;' onload='load()'
 
   = mixin('o-header', 'Agency patterns for the Mayor\'s Office for Economic Opportunity')
 
