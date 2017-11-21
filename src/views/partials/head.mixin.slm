@@ -9,9 +9,8 @@
     title= this.title
 
     noscript
-
-    style
-      = 'body { visibility: visible !important; }'
+      style
+        = 'body { visibility: visible !important; }'
 
     javascript:
       function load() { document.body.style.visibility = 'visible' };

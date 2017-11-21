@@ -1,38 +1,38 @@
-= partial('partials/head.mixin.slm')
-= partial('partials/nav.mixin.slm')
-= partial('partials/o-header.mixin.slm')
+/ Layout
+= extend('layouts/default')
 
 - h1 = 'b-bottom p-bottom b-secondary-grey'
 - h2 = 'c-primary-blue-70t'
-- sections = 'wrap m-bottom-3 p-bottom-3'
+- sections = 'm-bottom-3 p-bottom-3'
 - subsections = 'm-bottom-3'
 - examples = 'c-example b-secondary-grey'
 
-doctype html
-html lang='en'
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
 
+/ Content blocks
+= content('head')
   = mixin('head', 'Chart Object | NYC Opportunity Patterns')
 
-body style='visibility: hidden;' onload='load()'
+= content('title')
+  = mixin('header', 'Chart Object')
 
-  = mixin('o-header', 'Chart Object')
+= content('body')
+  = mixin('nav')
 
-  main class='jc-end ai-stretch'
+  section class='${sections}'
 
-    div class='wrap'
-      = mixin('nav');
+    div class='${subsections}'
+      div class='${examples} p-relative'
+        h2 U.S. Official and NYCgov Poverty Rates 2005–2015
+        div#chartPovertyRates
 
-    section class='wrap'
-
-      div class='${subsections}'
-        div class='${examples}'
-          h2 U.S. Official and NYCgov Poverty Rates 2005–2015
-          div id='chartPovertyRates'
-
-      div class='${subsections}'
-        div class='${examples}'
-          h2 Employment/Population Ratios 2008, 2010–2015
-          div id='chartEmploymentPopulationRatios'
+    div class='${subsections}'
+      div class='${examples} p-relative'
+        h2 Employment/Population Ratios 2008, 2010–2015
+        div#chartEmploymentPopulationRatios
 
   script src='scripts/nyco.dist.js'
 

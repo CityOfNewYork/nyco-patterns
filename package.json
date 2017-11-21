@@ -3,7 +3,8 @@
     "port": "8080",
     "style_src": "src/scss/site.scss",
     "style_bundle": "bundle/styles/site.concat.css",
-    "style_dist": "dist/styles/site.min.css"
+    "style_dist": "dist/styles/site.min.css",
+    "vars": "src/vars.json"
   },
   "name": "nyco-patterns",
   "version": "0.0.3",
@@ -11,13 +12,13 @@
   "main": "index.js",
   "scripts": {
     "test": "",
-    "start": "PORT=$npm_package_config_port concurrently 'npm run styles-watch' 'npm run scripts-watch' 'npm run build-watch' 'npm run serve' 'npm run sync'",
+    "start": "PORT=$npm_package_config_port VARS=$npm_package_config_vars concurrently 'npm run styles-watch' 'npm run scripts-watch' 'npm run build-watch' 'npm run serve' 'npm run sync'",
     "serve": "node serve.js --ext slm --watch src",
     "sync": "browser-sync start --files 'src' --no-open --no-ui --reload-delay 1000 --proxy \"http://localhost:$npm_package_config_port\"",
     "build": "node build.js",
     "publish": "node publish.js",
     "build-watch": "nodemon --ext slm --watch src/views -x 'npm run build'",
-    "styles-vars": "json-sass -i src/data/vars.json -o src/scss/core/_vars.scss -p '$vars:'",
+    "styles-vars": "json-sass -i $npm_package_config_vars -o src/scss/core/_vars.scss -p '$vars:'",
     "styles-watch": "nodemon --ext scss --watch src/scss --ignore _vars.scss -x 'npm run styles'",
     "styles-postcss": "cssnano --sourcemap < $npm_package_config_style_bundle > $npm_package_config_style_dist",
     "styles": "npm run styles-vars && node-sass --sourceMapEmbed true --include-path node_modules $npm_package_config_style_src $npm_package_config_style_bundle && npm run styles-postcss",

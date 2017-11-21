@@ -8,7 +8,7 @@ const FS = require('fs');
 const VIEWS = PATH.join(__dirname, 'src/views/');
 const DIST = PATH.join(__dirname, 'dist/');
 const LOCALS = {
-  'vars': require(PATH.join(__dirname, 'src/data/vars.json'))
+  'vars': require(PATH.join(__dirname, process.env.VARS))
 };
 
 
