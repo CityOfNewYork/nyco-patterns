@@ -12,6 +12,10 @@ Include this repository as a dependency in your `package.json` file.
     ...
   }
 ```
+You will need to be provisioned with access to your Github account, either
+through credential storage in Keychain Access or a `.netrc` file. If you have
+ever entered your password or added a token for Github access, and you can see
+this repository, you should be able to add it.
 
 Run `npm install nyco-patterns` to install it.
 
