@@ -17,6 +17,17 @@ through credential storage in Keychain Access or a `.netrc` file. If you have
 ever entered your password or added a token for Github access, and you can see
 this repository, you should be able to add it.
 
+If you would like to use the `.netrc` method, add a file with the information
+below
+```
+machine github.com
+  login <github username>
+  password <github personal access token>
+```
+
+To create a personal access token, navigate to your Github Developer settings
+and generate a new token.
+
 Run `npm install nyco-patterns` to install it.
 
 ### Styles
