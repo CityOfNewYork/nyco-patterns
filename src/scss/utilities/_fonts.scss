@@ -13,3 +13,19 @@
 .f-aliased {
   @include font-aliased
 }
+
+.ff-system {
+  @include font-system
+}
+
+.fw-normal {
+  font-weight: normal
+}
+
+.fw-bold {
+  font-weight: bold
+}
+
+.fs-italic {
+  font-style: italic
+}

@@ -1,49 +1,49 @@
-= partial('partials/head.mixin.slm')
-= partial('partials/nav.mixin.slm')
-= partial('partials/o-header.mixin.slm')
+/ Layout
+= extend('layouts/default')
 
 - h1 = 'b-bottom p-bottom b-secondary-grey'
 - h2 = 'c-primary-blue-70t'
-- sections = 'wrap m-bottom-3 p-bottom-3'
+- sections = 'm-bottom-3 p-bottom-3'
 - subsections = 'm-bottom-3'
 - examples = 'c-example b-secondary-grey'
 
-doctype html
-html lang='en'
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
 
+/ Content blocks
+= content('head')
   = mixin('head', 'Colors | NYC Opportunity Patterns')
 
-body
+= content('title')
+  = mixin('header', 'Colors')
 
-  = mixin('o-header', 'Colors')
+= content('body')
+  = mixin('nav')
 
-  main class='jc-end ai-stretch'
+  section class='${sections}'
+    h2 class="${h2}" Utility Usage
+    p
+      | Backrounds&nbsp;
+      code .bg-primary-blue
+    p
+      | Color&nbsp;
+      code .c-primary-blue
+    p
+      | Borders&nbsp;
+      code .b-primary-blue
 
-    div class='wrap'
-      = mixin('nav');
-
-    section class='${sections}'
-      h2 class="${h2}" Utility Usage
-      p
-        | Backrounds&nbsp;
-        code .bg-primary-blue
-      p
-        | Color&nbsp;
-        code .c-primary-blue
-      p
-        | Borders&nbsp;
-        code .b-primary-blue
-
-    section class='${sections}'
-      h2 class="${h2}" Swatches
-      div class='f-smooth'
-        - for i in this.vars.colors
-          - name = this.vars.colors[i].name
-          - hex = this.vars.colors[i].hex
-          div class='m-bottom-3 d-inline-block' style='width: 33.33%'
-            div class='p'
-              div class='b b-${name}'
-                div class='bg-${name} p-3'
-                div class='p-3'
-                  code class='m-bottom' ${name}
-                  div = hex
+  section class='${sections}'
+    h2 class="${h2}" Swatches
+    div class='f-smooth'
+      - for i in this.vars.colors
+        - name = this.vars.colors[i].name
+        - hex = this.vars.colors[i].hex
+        div class='m-bottom-3 d-inline-block' style='width: 33.33%'
+          div class='p'
+            div class='b b-${name}'
+              div class='bg-${name} p-3'
+              div class='p-3'
+                code class='m-bottom' ${name}
+                div = hex

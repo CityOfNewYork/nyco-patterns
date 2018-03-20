@@ -87,7 +87,8 @@ class oCharts {
     function create() {
 
       chart.svg = chart.element.append('svg').attrs({
-        'xmlns': CONSTANTS.NAMESPACE
+        'xmlns': CONSTANTS.NAMESPACE,
+        'width': 0
       });
 
       chart.bg = chart.svg.append('rect').attrs({

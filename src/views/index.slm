@@ -1,23 +1,17 @@
+/ Layout
+= extend('layouts/default')
+
+/ Partials
 = partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
 = partial('partials/nav.mixin.slm')
-= partial('partials/o-header.mixin.slm')
 
-- h1 = 'b-bottom p-bottom b-secondary-grey'
-- h2 = 'c-primary-blue-70t'
-- sections = 'wrap m-bottom-3 p-bottom-3'
-- subsections = 'm-bottom-3'
-- examples = 'c-example b-secondary-grey'
-
-doctype html
-html lang='en'
-
+/ Content blocks
+= content('head')
   = mixin('head', 'NYC Opportunity Patterns')
 
-body
+= content('title')
+  = mixin('header', 'Agency patterns for the Mayor\'s Office for Economic Opportunity')
 
-  = mixin('o-header', 'Agency patterns for the Mayor\'s Office for Economic Opportunity')
-
-  main class='jc-end ai-stretch'
-
-    div class='wrap'
-      = mixin('nav');
+= content('body')
+  = mixin('nav')

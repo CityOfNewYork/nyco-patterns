@@ -5,12 +5,12 @@
 const EXPRESS = require('express');
 const APP = EXPRESS();
 const PATH = require('path');
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 const STATIC = PATH.join(__dirname, 'dist');
 const VIEWS = PATH.join(__dirname, 'src/views');
 const ENGINE = 'slm';
 const LOCALS = {
-  'vars': require(PATH.join(__dirname, 'src/data/vars.json'))
+  'vars': require(PATH.join(__dirname, process.env.VARS))
 };
 
 

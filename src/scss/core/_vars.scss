@@ -1,6 +1,7 @@
 $vars:(
   fonts: (
     font-family: ('Helvetica Neue', Helvetica, Arial, sans-serif),
+    font-system: (-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif),
     font-size: 16px,
     line-height: 20px
   ),
@@ -94,5 +95,11 @@ $vars:(
   ), (
     name: secondary-pink-30t,
     hex: #FDEBF3
-  ))
+  )),
+  media: (
+    screen-desktop: 960,
+    screen-tablet: 768,
+    screen-mobile: 480,
+    screen-sm-mobile: 400
+  )
 );
