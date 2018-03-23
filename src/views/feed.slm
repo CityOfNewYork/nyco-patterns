@@ -60,7 +60,7 @@
         p
           div class='code-block'
             pre
-              div = '<div id="feed"></div>'
+              div = '<div id="feed" style="color: lightsteelblue"></div><!-- The "color: lightsteelblue"" sets the border-color property for individual posts. You could also try setting "font-size: 85%" if you would like a widget for a smaller side column -->'
               div = '<script type="text/javascript">'
               div = '  new Feed({'
               div = '    selector: "#feed", // required, the container for the feed'
@@ -71,7 +71,7 @@
               div = '</script>'
 
         p
-          | <code>new Feed({});</code> creates a feed, accepting a configuration object as a parameter. The object should contain the configuration you would like for the feed. Note: the <code>selector</code> and <code>feed</code> parameters are required to display a feed. <code>.init();</code> is a function that executes initialization of the feed and displays it. Below is a list of the rest of the default configuration options.
+          | <code>new Feed({});</code> creates a feed, accepting a configuration object as a parameter. The object should contain the configuration you would like for the feed. Note: the <code>selector</code> and <code>feed</code> parameters are required to display a feed. <code>.init();</code> is a function that executes initialization of the feed and displays it. Below is a list of the rest of the default configuration options. See the <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a> for more details on their feeds.
 
         h2#configuration
           a href='#configuration' Configuration
@@ -82,8 +82,8 @@
         p
           div class='code-block'
             pre
-                div = 'avatarImageRatio: ["50", "50"], // Image source attribute Width and Height'
-                div = 'postImageRatio: ["auto", "200px"], // CSS width and max-height properties'
+                div = 'avatarImageRatio: ["50", "50"], // Image source attribute width and height for the account avatar'
+                div = 'postImageRatio: ["auto", "200px"], // CSS width and max-height properties for the post image'
                 div = 'postExcerptLength: 120, // This is the length of the excerpt'
                 div = 'postExcerptTrail: "…", // This is the trailing ellipsis for excerpts'
                 div = 'postCtaText: "Click here to read the full article", // This is the text for each post call to action'
@@ -109,7 +109,7 @@
                 div = '  date: "" // The publication date of each card'
                 div = '},'
                 div = 'template: Feed.templates.medium, // The template of the feed, the script comes with a template for Medium feeds only'
-                div = 'log: false // Logs data to the console. You will want this turned off in most cases.'
+                div = 'log: false // Logs data to the console. You will want this turned off in most cases but it allows you to see what data is being passed to the template'
 
         h2#templates
           a href='#templates' Templates
@@ -125,14 +125,12 @@
         p
           div class='code-block'
             pre
-              div = '<script type="text/javascript">'
-              div = '  var MyTemplate = "<div>...template content...</div>"'
-              div = '  new Feed({'
-              div = '    selector: "#feed", // required'
-              div = '    feed: "https://medium.com/feed/@nycopportunity/", // required'
-              div = '    template: MyTemplate'
-              div = '  }).init();'
-              div = '</script>'
+              div = 'var MyTemplate = "<div>...template content...</div>"'
+              div = 'new Feed({'
+              div = '  selector: "#feed", // required'
+              div = '  feed: "https://medium.com/feed/@nycopportunity/", // required'
+              div = '  template: MyTemplate'
+              div = '}).init();'
 
         p
           | Templates are passed the <code>config</code> object and whatever the response of the feed is. In Medium's case, they pass the <code>feed</code> parameter and posts within the <code>items</code> parameter in the response from their RSS feed.

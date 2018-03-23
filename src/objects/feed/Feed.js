@@ -170,8 +170,8 @@ Feed.templates = {
  * @type {Object}
  */
 Feed.default = {
-  avatarImageRatio: ['50', '50'], // Image source attribute Width and Height
-  postImageRatio: ['auto', '200px'], // CSS width and max-height properties
+  avatarImageRatio: ['50', '50'], // Image source attribute width and height for the account avatar
+  postImageRatio: ['auto', '200px'], // CSS width and max-height properties for the post image
   postExcerptLength: 120, // This is the length of the excerpt
   postExcerptTrail: '…', // This is the trailing ellipsis for excerpts
   postCtaText: 'Click here to read the full article', // This is the text for each post's call to action
@@ -197,7 +197,7 @@ Feed.default = {
     date: '' // The publication date of each card
   },
   template: Feed.templates.medium, // The template of the feed, the script comes with a template for Medium feeds only
-  log: false // Logs data to the console. You will want this turned off in most cases.
+  log: false // Logs data to the console. You will want this turned off in most cases but it allows you to see what data is being passed to the template
 };
 
 export default Feed;
