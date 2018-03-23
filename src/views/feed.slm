@@ -55,7 +55,7 @@
               div = '<link rel="stylesheet" src="dist/styles/feed.css">'
 
         p
-          | The location of the script and stylesheet where they are placed in your directory structure. Then, add the container, configuration, and initialization script on the page:
+          | The location of the script and stylesheet depends where they are placed in your directory structure. Then, add the container, configuration, and initialization script on the page:
 
         p
           div class='code-block'
