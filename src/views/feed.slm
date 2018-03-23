@@ -133,7 +133,7 @@
               div = '}).init();'
 
         p
-          | Templates are passed the <code>config</code> object and whatever the response of the feed is. In Medium's case, they pass the <code>feed</code> parameter and posts within the <code>items</code> parameter in the response from their RSS feed. To see the data that gets passed to the template to use in your template, set the <code>log</code> configuration parameter to <code>true</code>.
+          | Templates are passed the <code>config</code> object and whatever the response of the feed is. In Medium's case, they pass the <code>feed</code> parameter and posts within the <code>items</code> parameter in the response from their RSS feed. To see the data that gets passed to the template to use in your template, set the <code>log</code> configuration parameter to <code>true</code>. Open up the console to see the data for this particular feed demonstration.
 
         h2#rss-to-json
           a href='#rss-to-json' RSS to JSON
