@@ -1,0 +1,66 @@
+@charset 'utf-8';
+
+// if @font-face is used it needs to be first imported first.
+// @import 'elements/fonts/fonts';
+
+/************
+ * Normalize
+ ************/
+
+// This injects Tailwind's base styles, which is a combination of
+// Normalize.css and some additional base styles.
+// https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+
+@tailwind preflight;
+
+/*************
+ * Components
+ *************/
+
+// Components are elements that require isolated styling. Examples include buttons,
+// textfields, select boxes, grouped navigation, dropdowns, etc. They may include
+// utilities within them. Not all components are required for each application.
+// Component namespaces are prefixed with 'c-'.
+
+// @import 'components/.../...';
+// components - end
+
+
+/**********
+ * Objects
+ **********/
+
+// Objects are elements with more robust styling requirements. They may include
+// Components and utilities within them. Examples include headers, footers, modals,
+// sliders, and charts. Not all Objects are required for each application and some
+// will require their own Objects. Object namespaces are prefixed with 'o-'.
+
+// @import 'objects/.../...';
+@import 'objects/feed/feed';
+// objects - end
+
+
+/**********
+* Elements
+***********/
+
+// Elements include universal styles, atomic patterns, and css systems. Examples
+// include classes that assign color, modify the display of elements, or set up
+// scaffolding like typography or grid systems. Uitilities will have their own
+// namespace prefixes based on their attributes.
+
+@import 'elements/code/code';
+@import 'elements/links/links';
+@import 'elements/layouts/layouts';
+@import 'elements/icons/icons';
+// elements - end
+
+
+/***********
+* Utilities
+************/
+
+// This injects all of Tailwind's utility classes, generated based on your
+// config file. View docs for usage; https://tailwindcss.com/docs/
+
+@tailwind utilities;

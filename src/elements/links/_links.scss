@@ -1,0 +1,26 @@
+/**
+ * Links
+ */
+
+// Dependencies
+@import 'config/variables';
+
+// Declarations
+.links-invert a,
+.links-invert .btn-link {
+  color: map-get(map-get($variables, 'colors'), 'base-white');
+
+  &:link {
+    color: map-get(map-get($variables, 'colors'), 'base-white');
+  }
+
+  &:visited {
+    color: map-get(map-get($variables, 'colors'), 'primary-blue-70t');
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: map-get(map-get($variables, 'colors'), 'primary-blue-30t');
+  }
+}

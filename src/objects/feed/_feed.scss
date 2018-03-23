@@ -1,0 +1,63 @@
+/**
+ * Medium Widget
+ */
+
+// Dependencies
+@import 'config/variables';
+
+
+// Declarations
+.o-feed__header {
+  display: flex;
+  align-items: center;
+  padding-bottom: map-get(map-get($variables, 'padding'), 2);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: inherit;
+}
+
+.o-feed__avatar {
+  display: inline-block;
+  border-radius: 1000px;
+  overflow: hidden;
+  margin-right: map-get(map-get($variables, 'margin'), 1);
+}
+
+.c-feed-item {
+  margin-top: map-get(map-get($variables, 'margin'), 4);
+  padding-bottom: map-get(map-get($variables, 'padding'), 4);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: inherit;
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.c-feed-item__title {
+  font-size: inherit
+}
+
+.c-feed-item__thumbnail {
+  text-align: center;
+  margin-top: map-get(map-get($variables, 'margin'), 3);
+}
+
+.c-feed-item__excerpt {
+  font-size: inherit;
+  margin-top: map-get(map-get($variables, 'margin'), 3);
+}
+
+.c-feed-item__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.o-feed__url,
+.c-feed-item__excerpt,
+.c-feed-item__link,
+.c-feed-item__cta,
+.c-feed-item__date {
+  color: initial;
+}

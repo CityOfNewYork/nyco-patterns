@@ -1,16 +1,6 @@
-= partial('navsub.mixin.slm')
+= partial('links.slm')
 
 = mixin('footer')
-  footer class='d-flex jc-end ai-stretch bg-secondary-white f-smooth'
-
-    div class='f-12'
-      div class='wrap wrap--full'
-        div class='d-flex mh-33vh ai-center'
-          div
-            p
-              | Maintained by&nbsp;
-              a href='https://github.com/orgs/CityOfNewYork/teams/nyc-opportunity' NYC Opportunity
-            = mixin('navsub')
-
-    div class='f-1 o--1'
-    div class='f-1'
+  p
+    | Maintained by&nbsp;
+    a href='${link_github_team}' NYC Opportunity

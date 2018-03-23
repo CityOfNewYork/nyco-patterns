@@ -1,8 +1,14 @@
 = mixin('nav')
-  div class='m-vertical-3 p-vertical-3'
-    nav class='c-nav-inline-block'
-      a class='c-primary-blue' href='index' Home
-      a class='c-primary-blue' href='colors' Colors
-      a class='c-primary-blue' href='components' Components
-      a class='c-primary-blue' href='charts' Chart Object
-      a class='c-primary-blue' href='team-site' Team Site
+  nav class='pb-2'
+    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t pr-2 screen-tablet:p-2' href='index' Home
+    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='${link_source}' Source
+
+  nav class='pb-2'
+    span class='screen-tablet:block pb-1' Elements:
+    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='colors' Colors
+    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='icons' Icons
+    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='links' Links
+
+  nav
+    span class='screen-tablet:block pb-1' Objects:
+    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='feed' Feed

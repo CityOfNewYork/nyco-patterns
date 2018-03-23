@@ -1,0 +1,164 @@
+/ Layout
+= extend('layouts/default')
+
+/ Styles
+= partial('partials/styles.slm')
+
+/ Links
+= partial('partials/links.slm')
+
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
+
+/ Component
+= partial('../objects/feed/feed.slm')
+
+/ Content blocks
+= content('head')
+  = mixin('head', 'Medium Widget')
+
+= content('header')
+  = mixin('header')
+
+
+= content('content')
+
+  h1 class='${class_demo_headers}' Feed
+
+  section class='${class_demo}'
+
+    div class='${class_demo_col1}'
+      div class='${class_demo_cola}'
+
+        h2#usage
+          a href='#usage' Usage
+
+        p
+          | The <b>Feed Object</b> can take any feed and display is as a widget anywhere on a page. Currently, it's configured to work with Medium feeds and will display 10 posts at a time (Medium feeds won't display more than 10 posts).
+
+        p
+          | To use the feed, include the following script in your page:
+
+        p
+          div class='code-block'
+            pre
+              div = '<script type="text/javascript" src="dist/scripts/modules/Feed.js">'
+
+        p
+          | Optionally, but recommended, include the base styling for the feed:
+
+        p
+          div class='code-block'
+            pre
+              div = '<link rel="stylesheet" src="dist/styles/feed.css">'
+
+        p
+          | The location of the script and stylesheet where they are placed in your directory structure. Then, add the container, configuration, and initialization script on the page:
+
+        p
+          div class='code-block'
+            pre
+              div = '<div id="feed"></div>'
+              div = '<script type="text/javascript">'
+              div = '  new Feed({'
+              div = '    selector: "#feed", // required, the container for the feed'
+              div = '    feed: "https://medium.com/feed/@nycopportunity/", // required'
+              div = '    postCtaText: "Read the full article on Medium",'
+              div = '    log: true'
+              div = '  }).init();'
+              div = '</script>'
+
+        p
+          | <code>new Feed({});</code> creates a feed, accepting a configuration object as a parameter. The object should contain the configuration you would like for the feed. Note: the <code>selector</code> and <code>feed</code> parameters are required to display a feed. <code>.init();</code> is a function that executes initialization of the feed and displays it. Below is a list of the rest of the default configuration options.
+
+        h2#configuration
+          a href='#configuration' Configuration
+
+        p
+          | To change an option, add the desired variable to the configuration object above. Keep in mind they should be the same type (string or number) as they are listed below.
+
+        p
+          div class='code-block'
+            pre
+                div = 'avatarImageRatio: ["50", "50"], // Image source attribute Width and Height'
+                div = 'postImageRatio: ["auto", "200px"], // CSS width and max-height properties'
+                div = 'postExcerptLength: 120, // This is the length of the excerpt'
+                div = 'postExcerptTrail: "…", // This is the trailing ellipsis for excerpts'
+                div = 'postCtaText: "Click here to read the full article", // This is the text for each post call to action'
+                div = '// @url https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString'
+                div = 'postDateLocal: "en-US", // This is a parameter used by Date.toLocaleDateString(), see the link above for configuration details'
+                div = 'postDateFormat: { // This is a parameter used by Date.toLocaleDateString(), see the link above for configuration details'
+                div = '  year: "numeric",'
+                div = '  month: "long",'
+                div = '  day: "numeric"'
+                div = '},'
+                div = 'postDateTitle: "Published Date", // This is the title set to the published date element to provide context on mouseover'
+                div = 'classes: { // These are CSS classes that can be added to each element'
+                div = '  wrapper: "", // The wrapper for the whole widget'
+                div = '  header: "", // The widget header'
+                div = '  url: "", // The widget url'
+                div = '  card: "", // The repeating class for the widget"s cards'
+                div = '  title: "", // The title of each card'
+                div = '  link: "", // The link of each card'
+                div = '  thumbnail: "", // The thumbnail image of each card'
+                div = '  excerpt: "", // The excerpt of each card'
+                div = '  cardFooter: "", // The footer of each card with the cta and date'
+                div = '  cta: "", // The final call to action of each card'
+                div = '  date: "" // The publication date of each card'
+                div = '},'
+                div = 'template: Feed.templates.medium, // The template of the feed, the script comes with a template for Medium feeds only'
+                div = 'log: false // Logs data to the console. You will want this turned off in most cases.'
+
+        h2#templates
+          a href='#templates' Templates
+
+        p
+          | The feed comes shipped with a ready-to-use LoDash template for Medium feeds.
+
+        = mixin('feed', true, false)
+
+        p
+          | This template can be overwritten with the <code>template</code> configuration parameter. You can copy the template above to get started creating your own template and see the <a href="https://lodash.com/docs/4.17.5#template">LoDash documentation for templates</a>. Here's an example of passing your own template to the configuration:
+
+        p
+          div class='code-block'
+            pre
+              div = '<script type="text/javascript">'
+              div = '  var MyTemplate = "<div>...template content...</div>"'
+              div = '  new Feed({'
+              div = '    selector: "#feed", // required'
+              div = '    feed: "https://medium.com/feed/@nycopportunity/", // required'
+              div = '    template: MyTemplate'
+              div = '  }).init();'
+              div = '</script>'
+
+        p
+          | Templates are passed the <code>config</code> object and whatever the response of the feed is. In Medium's case, they pass the <code>feed</code> parameter and posts within the <code>items</code> parameter in the response from their RSS feed.
+
+        h2#rss-to-json
+          a href='#rss-to-json' RSS to JSON
+
+        p
+          | The <b>Feed Object</b> uses an API from <a href="https://rss2json.com">https://rss2json.com</a> to convert desired RSS feed into a consumable JSON object. See the <a href="https://rss2json.com">RSS 2 JSON Online Converter</a> documentation for details.
+
+    div class='${class_demo_col2}'
+      div class='${class_demo_colb}'
+
+        h2#demonstration
+          a href='#demonstration' Demonstration
+
+        div class='border-8 p-4 border-secondary-white'
+          = mixin('feed', false)
+
+
+= content('script')
+  script src='scripts/modules/Feed.js'
+  javascript:
+    new Feed({
+      selector: '#feed',
+      feed: 'https://medium.com/feed/@nycopportunity/',
+      postCtaText: 'Read the full article on Medium',
+      log: true
+    }).init();

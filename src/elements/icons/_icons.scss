@@ -1,0 +1,40 @@
+/**
+ * Icons
+ */
+
+// Dependencies
+@import 'scss/functions/str-replace';
+
+// Declarations
+[class*='icon-'] {
+  overflow: visible !important;
+}
+
+[class*='bg-icon-'] {
+  display: inline-block;
+}
+
+@each $key, $var in map-get($variables, 'icons') {
+
+  $path: $key;
+
+  @if map-get($variables, 'iconVariants') {
+    @each $str in map-get($variables, 'iconVariants') {
+      $path: str-replace($path, $str);
+    }
+  }
+
+  .bg-#{$key} {
+    width: nth($var, 1);
+    height: nth($var, 2);
+    background-image: url('../svg/#{$path}.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .#{$key} {
+    width: nth($var, 1);
+    height: nth($var, 2);
+  }
+
+}

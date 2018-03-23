@@ -1,0 +1,25 @@
+/**
+ * Layouts
+ */
+
+// Dependencies
+@import 'config/variables';
+
+// Declaration
+.layout {
+
+  $min-width: map-get(map-get($variables, 'screens'), 'screen-tablet');
+
+  @media (min-width: '#{$min-width}px') {
+
+    > *:first-child {
+      width: 16rem
+    }
+
+    > *:first-child + * {
+      width: calc(100% - 16rem)
+    }
+
+  }
+
+}

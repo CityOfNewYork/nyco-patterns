@@ -1,0 +1,70 @@
+/ Layout
+= extend('layouts/default')
+
+/ Styles
+= partial('partials/styles.slm')
+
+/ Links
+= partial('partials/links.slm')
+
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
+
+/ Elements
+= partial('../elements/links/links.slm')
+
+/ Content blocks
+= content('head')
+  = mixin('head', 'Links')
+
+= content('header')
+  = mixin('header')
+
+= content('content')
+
+  - text = 'Click here to learn more about tax relief for parents'
+
+  h1 class='${class_demo_headers}' Links
+
+  section class='${class_demo}'
+
+    div class='${class_demo_col1}'
+      div class='${class_demo_cola}'
+
+        h2#default-styling
+          a href="#default-styling" Default Styling
+
+        p
+          | Links inherit the default styling of
+          a< href='${link_blueprint_nyc_brand}'
+            | The City's Style Guide
+          | .
+
+    div class='${class_demo_col2}'
+      div class='${class_demo_colb}'
+
+        h2#demonstration
+          a href='#demonstration' Demonstration
+
+        = mixin('links', true, text)
+
+  section class='${class_demo}'
+
+    div class='${class_demo_col1}'
+      div class='${class_demo_cola}'
+
+        h2#links-inverted
+          a href="#links-inverted" Links Inverted
+
+        p They can be inverted with this stylesheet by using the <code>links-invert</code> class.
+
+    div class='${class_demo_col2}'
+      div class='${class_demo_colb}'
+
+        h2#demonstration
+          a href='#demonstration' Demonstration
+
+        = mixin('links-inverted', true, text)
+

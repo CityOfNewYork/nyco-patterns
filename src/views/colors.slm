@@ -1,11 +1,11 @@
 / Layout
 = extend('layouts/default')
 
-- h1 = 'b-bottom p-bottom b-secondary-grey'
-- h2 = 'c-primary-blue-70t'
-- sections = 'm-bottom-3 p-bottom-3'
-- subsections = 'm-bottom-3'
-- examples = 'c-example b-secondary-grey'
+/ Styles
+= partial('partials/styles.slm')
+
+/ Links
+= partial('partials/links.slm')
 
 / Partials
 = partial('partials/head.mixin.slm')
@@ -14,36 +14,46 @@
 
 / Content blocks
 = content('head')
-  = mixin('head', 'Colors | NYC Opportunity Patterns')
+  = mixin('head', 'Colors')
 
-= content('title')
-  = mixin('header', 'Colors')
+= content('header')
+  = mixin('header')
 
-= content('body')
-  = mixin('nav')
+= content('content')
 
-  section class='${sections}'
-    h2 class="${h2}" Utility Usage
-    p
-      | Backrounds&nbsp;
-      code .bg-primary-blue
-    p
-      | Color&nbsp;
-      code .c-primary-blue
-    p
-      | Borders&nbsp;
-      code .b-primary-blue
+  h1 class='${class_demo_headers}' Colors
 
-  section class='${sections}'
-    h2 class="${h2}" Swatches
-    div class='f-smooth'
-      - for i in this.vars.colors
-        - name = this.vars.colors[i].name
-        - hex = this.vars.colors[i].hex
-        div class='m-bottom-3 d-inline-block' style='width: 33.33%'
-          div class='p'
-            div class='b b-${name}'
-              div class='bg-${name} p-3'
-              div class='p-3'
-                code class='m-bottom' ${name}
-                div = hex
+  section class='${class_demo}'
+
+    div class='${class_demo_col1}'
+      div class='${class_demo_cola}'
+        h2#utility-classes
+          a href="#utility-classes" Utility Classes
+
+        p You can use every color as a utility class for static and hover states. These are the prefixes that are available;
+        p
+          code class='code' = 'bg-<color>'
+          = '   =   Background color'
+        p
+          code class='code' = 'text-<color>'
+          = '   =   Text color'
+        p
+          code class='code' = 'border-<color>'
+          = '   =   Border color'
+        p
+          | Refer to
+          a<> href='${link_tailwind_docs}' Tailwind CSS docs
+          | for full details on using color utilities and <code>hover:</code> states.
+
+    div class='${class_demo_col2}'
+      div class='${class_demo_colb}'
+
+        h2#demonstration
+          a href='#demonstration' Demonstration
+
+        - for key in this.vars.colors
+          div class='inline-block p-1 w-full mb-3'
+            code class='code' = '<prefix>-' + key
+            div class='${class_swatch}'
+              div class='bg-${key} ${class_swatch__block}'
+              div class='${class_swatch__label}' = this.vars.colors[key]

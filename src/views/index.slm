@@ -1,6 +1,12 @@
 / Layout
 = extend('layouts/default')
 
+/ Styles
+= partial('partials/styles.slm')
+
+/ Links
+= partial('partials/links.slm')
+
 / Partials
 = partial('partials/head.mixin.slm')
 = partial('partials/header.mixin.slm')
@@ -8,10 +14,30 @@
 
 / Content blocks
 = content('head')
-  = mixin('head', 'NYC Opportunity Patterns')
+  = mixin('head', 'Pattern Library')
 
-= content('title')
-  = mixin('header', 'Agency patterns for the Mayor\'s Office for Economic Opportunity')
+= content('header')
+  = mixin('header')
 
-= content('body')
-  = mixin('nav')
+= content('content')
+
+  h1 class='${class_demo_headers}' Home
+
+  section class='${class_demo}'
+
+    div class='${class_demo_col1}'
+      div class='${class_demo_cola}'
+
+        p
+          | The NYC Opportunity Patterns seen on
+          a<> href='${link_nyc_gov}' NYC.gov
+          | utilize a partial integration of
+          a< href='${link_bootstrap}' Bootstrap 2.3.2
+          | . This library extends that stylesheet with the
+          a< href='${link_tailwind_docs}' Tailwind CSS Utility framework
+          | . See the
+          a<> href='${link_blueprint_nyc_brand}'
+            | NYC Digital Blueprint's documentation
+          | of The City's Style Guide for more details and resources.
+
+
