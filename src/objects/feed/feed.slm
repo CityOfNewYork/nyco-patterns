@@ -1,6 +1,6 @@
 
 
-= mixin('feed', 'code = false', 'demo = false')
+= mixin('feed', 'code = false', 'demo = false', 'script = false')
   - if this.code
     div class='${class_demo_class_containers}'
       div class='code-block'
@@ -52,3 +52,13 @@
 
   - if this.demo
     #feed style='color: lightsteelblue'
+
+  - if this.script
+    script src='scripts/modules/Feed.js'
+    javascript:
+      new Feed({
+        selector: '#feed',
+        feed: 'https://medium.com/feed/@nycopportunity/',
+        postCtaText: 'Read the full article on Medium',
+        log: true
+      }).init();

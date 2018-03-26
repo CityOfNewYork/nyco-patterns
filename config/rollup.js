@@ -57,7 +57,7 @@ const Main = {
 // Create packages for our other modules
 for (let i = 0; i < modules.length; i++) {
   modules[i] = {
-    input: `${modules[i].path.toLowerCase()}/${modules[i].name}.js`,
+    input: `${modules[i].path}/${modules[i].name}.js`,
     output: {
       name: modules[i].name,
       file: `./dist/scripts/modules/${modules[i].name}.js`,

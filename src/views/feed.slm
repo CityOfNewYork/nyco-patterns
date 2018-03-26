@@ -150,13 +150,5 @@
         div class='border-8 p-4 border-secondary-white'
           = mixin('feed', false)
 
-
 = content('script')
-  script src='scripts/modules/Feed.js'
-  javascript:
-    new Feed({
-      selector: '#feed',
-      feed: 'https://medium.com/feed/@nycopportunity/',
-      postCtaText: 'Read the full article on Medium',
-      log: true
-    }).init();
+  = mixin('feed', false, false, true)

@@ -6,6 +6,12 @@
 @import 'config/variables';
 
 // Declarations
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  margin: 0
+}
+
 code, pre {
   display: inline-block;
 }

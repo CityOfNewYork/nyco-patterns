@@ -3,15 +3,18 @@
 // if @font-face is used it needs to be first imported first.
 // @import 'elements/fonts/fonts';
 
-/************
- * Normalize
- ************/
+// /************
+//  * Normalize
+//  ************/
 
 // This injects Tailwind's base styles, which is a combination of
 // Normalize.css and some additional base styles.
 // https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+// This is not included because it would interfere with nyc.gov styles. Anything
+// needed from the preflight to make Tailwind.css utilites work can be included
+// in the Base elements.
 
-@tailwind preflight;
+// @tailwind preflight;
 
 /*************
  * Components
@@ -49,6 +52,7 @@
 // scaffolding like typography or grid systems. Uitilities will have their own
 // namespace prefixes based on their attributes.
 
+@import 'elements/base/base';
 @import 'elements/code/code';
 @import 'elements/links/links';
 @import 'elements/layouts/layouts';
