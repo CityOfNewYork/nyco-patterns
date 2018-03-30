@@ -1,0 +1,69 @@
+/ Layout
+= extend('layouts/default')
+
+/ Styles
+= partial('partials/styles.slm')
+
+/ Links
+= partial('partials/links.slm')
+
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
+
+/ Component
+= partial('../objects/feed/feed.slm')
+
+/ Content blocks
+= content('head')
+  = mixin('head', 'Medium Widget')
+
+= content('header')
+  = mixin('header')
+
+= content('content')
+
+  h1 class='${class_demo_headers}' Customize your feed
+
+  section class='${class_demo}'
+
+    div class='${class_demo_col1}'
+      div class='${class_demo_cola}'
+
+        h2#usage
+          a href='#usage' How-to
+
+        form#controls class='control-form m-0'
+
+          p
+            | Edit the variables below then click render to display an updated feed with your own configuration. For details on all of the configuration parameters and advanced documentation <a href='feed'>refer to the Feed component documentation here</a>.
+
+          div v-for='item, name in config'
+            div v-if='typeof item == "string"' class='control-group'
+              label class='control-label'
+                code class='code mb-1'
+                  = '{{ name }} '
+                  span class='code__comment' = 'type: {{ typeof item }}'
+                input type='text' v-bind:name='name' v-model='config[name]'
+            div v-else-if='Array.isArray(item)'
+              div v-for='i, index in item' class='control-group'
+                label class='control-label'
+                  code class='code mb-1'
+                    = '{{ name }} '
+                    span class='code__comment' = 'index: {{ index }}, type: {{ typeof i }}'
+                  input type='text' v-bind:name='name + index' v-model='config[name][index]'
+
+          button class='btn btn-form-submit' v-on:click='render' Render
+
+    div class='${class_demo_col2}'
+      div class='${class_demo_colb}'
+
+        h2#demonstration
+          a href='#demonstration' Demonstration
+
+        div class='border-8 p-4 border-secondary-white'
+          = mixin('feed-demo')
+
+= content('script')
+  = mixin('feed-script')

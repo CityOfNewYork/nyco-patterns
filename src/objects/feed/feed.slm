@@ -1,64 +1,213 @@
 
 
-= mixin('feed', 'code = false', 'demo = false', 'script = false')
-  - if this.code
-    div class='${class_demo_class_containers}'
-      div class='code-block'
-        pre
-          div = '<section class="o-feed <%- config.classes.wrapper %>">'
-          div = '  <header class="o-feed__header <%- config.classes.header %>">'
-          div = '    <div class="o-feed__avatar <%- config.classes.avatar %>">'
-          div = '      <img src="<%- feed.image %>"'
-          div = '           width="<%- config.avatarImageRatio[0] %>"'
-          div = '           height="<%- config.avatarImageRatio[1] %>">'
-          div = '    </div>'
-          div = '    <a class="o-feed__url <%- config.classes.avatar %>"'
-          div = '       href="<%- feed.url %>" target="_blank" rel="noopener nofollow">'
-          div = '      <%- feed.title %>'
-          div = '    </a>'
-          div = '  </header>'
-          div = '  <% _each(items, function(post) { %>'
-          div = '    <div class="c-feed-item <%- config.classes.card %>">'
-          div = '      <h4 class="c-feed-item__title <%- config.classes.title %>">'
-          div = '        <a class="c-feed-item__link <%- config.classes.link %>"'
-          div = '           href="<%- post.guid %>"'
-          div = '           target="_blank"'
-          div = '           rel="noopener nofollow">'
-          div = '          <%- post.title %>'
-          div = '        </a>'
-          div = '      </h4>'
-          div = '      <div class="c-feed-item__thumbnail <%- config.classes.thumbnail %>">'
-          div = '        <img style="width: <%- config.postImageRatio[0] %>;max-height: <%- config.postImageRatio[1] %>;"'
-          div = '             src="<%- post.thumbnail %>">'
-          div = '      </div>'
-          div = '      <p class="c-feed-item__excerpt <%- config.classes.excerpt %>">'
-          div = '        <%- post.excerpt %><%- config.postExcerptTrail %>'
-          div = '      </p>'
-          div = '      <div class="c-feed-item__footer <%- config.classes.cardFooter %>">'
-          div = '        <a class="c-feed-item__cta <%- config.classes.cta %>"'
-          div = '           href="<%- post.guid %>"'
-          div = '           target="_blank"'
-          div = '           rel="noopener nofollow">'
-          div = '          <%- config.postCtaText %>'
-          div = '        </a>'
-          div = '        <span class="c-feed-item__date <%- config.classes.date %>"'
-          div = '              title="<%- config.postDateTitle %>">'
-          div = '          <%- post.date %>'
-          div = '        </span>'
-          div = '      </div>'
-          div = '    </div>'
-          div = '  <% }); %>'
-          div = '</section>'
+= mixin('feed-configuration')
+  div class='${class_demo_class_containers}'
+    div class='code-block'
+      pre
+        div
+          = "type: 'medium', "
+          span class='code__comment' = "// The feed type. Currently, only Medium feeds are supported"
+        div
+          = "avatarImageRatio: ['50', '50'], "
+          span class='code__comment' = "// Image source attribute width and height for the account avatar"
+        div
+          = "postImageRatio: ['auto', '200px'], "
+          span class='code__comment' = "// CSS width and max-height properties for the post image"
+        div
+          = "postExcerptLength: 120, "
+          span class='code__comment' = "// This is the length of the excerpt"
+        div
+          = "postExcerptTrail: '…', "
+          span class='code__comment' = "// This is the trailing ellipsis for excerpts"
+        div
+          = "postCtaText: 'Click here to read the full article', "
+          span class='code__comment' = "// The date formatting uses Date.toLocaleDateString(). See the @url below for for documentation on formating the date. The options below are passed as Date.toLocaleDateString(postDateLocal, postDateFormat)."
+        div
+          span class='code__comment' = "// formating the date. The options below are passed as Date.toLocaleDateString(postDateLocal, postDateFormat)."
+        div
+          span class='code__comment' = "// @url https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString"
+        div
+          = "postDateLocal: 'en-US', "
+          span class='code__comment' = "// This is a parameter used by Date.toLocaleDateString(), see the link above for configuration details"
+        div
+          = "postDateFormat: { "
+          span class='code__comment' = "// This is a parameter used by Date.toLocaleDateString(), see the link above for configuration details"
+        div
+          = "  year: 'numeric',"
+        div
+          = "  month: 'long',"
+        div
+          = "  day: 'numeric'"
+        div
+          = "},"
+        div
+          = "postDateTitle: 'Published Date', "
+          span class='code__comment' = "// This is the title set to the published date element to provide context on mouseover"
+        div
+          = "classes: { "
+          span class='code__comment' = "// These are CSS classes that can be added to each element"
+        div
+          = "  wrapper: '', "
+          span class='code__comment' = "// The wrapper for the whole widget"
+        div
+          = "  header: '', "
+          span class='code__comment' = "// The widget header"
+        div
+          = "  url: '', "
+          span class='code__comment' = "// The widget url"
+        div
+          = "  card: '', "
+          span class='code__comment' = "// The repeating class for the widget's cards"
+        div
+          = "  title: '', "
+          span class='code__comment' = "// The title of each card"
+        div
+          = "  link: '', "
+          span class='code__comment' = "// The link of each card"
+        div
+          = "  thumbnail: '', "
+          span class='code__comment' = "// The thumbnail image of each card"
+        div
+          = "  excerpt: '', "
+          span class='code__comment' = "// The excerpt of each card"
+        div
+          = "  cardFooter: '', "
+          span class='code__comment' = "// The footer of each card with the cta and date"
+        div
+          = "  cta: '', "
+          span class='code__comment' = "// The final call to action of each card"
+        div
+          = "  date: '' "
+          span class='code__comment' = "// The publication date of each card"
+        div
+          = "},"
+        div
+          = "templates: { "
+          span class='code__comment' = "// The template of the feed, the script comes with a template for Medium feeds only."
+        div
+          = "  opener: Feed.templates.medium.opener, "
+          span class='code__comment' = "// The opening template tag or wrapper of the entire feed."
+        div
+          = "  header: Feed.templates.medium.header, "
+          span class='code__comment' = "// The header template that sits at the top of the posts."
+        div
+          = "  posts: Feed.templates.medium.posts, "
+          span class='code__comment' = "// The posts loop including the posts template."
+        div
+          = "  closer: Feed.templates.medium.closer "
+          span class='code__comment' = "// The closing template tag or wrapper of the entire feed."
+        div
+          = "},"
+        div
+          = "log: false "
+          span class='code__comment' = "// Logs data to the console. You will want this turned off in most cases but it allows you to see what data is being passed to the template"
 
-  - if this.demo
-    #feed style='color: lightsteelblue'
+= mixin('feed-template')
+  div class='${class_demo_class_containers}'
+    code class='code' templates.opener
 
-  - if this.script
-    script src='scripts/modules/Feed.js'
-    javascript:
-      new Feed({
-        selector: '#feed',
-        feed: 'https://medium.com/feed/@nycopportunity/',
-        postCtaText: 'Read the full article on Medium',
-        log: true
-      }).init();
+  div class='${class_demo_class_containers}'
+    div class='code-block'
+      pre
+        div class='code__comment' = '// The opening template tag or wrapper of the entire feed.'
+        div = '<section class="o-feed <%- settings.classes.wrapper %>">'
+
+  div class='${class_demo_class_containers}'
+    code class='code' templates.header
+
+  div class='${class_demo_class_containers}'
+    div class='code-block'
+      pre
+        div class='code__comment' = '// The header template that sits at the top of the posts.'
+        div = '<header class="o-feed__header <%- settings.classes.header %>">'
+        div = '  <div class="o-feed__avatar <%- settings.classes.avatar %>">'
+        div = '    <img src="<%- feed.image %>" '
+        div = '         width="<%- settings.avatarImageRatio[0] %>" '
+        div = '         height="<%- settings.avatarImageRatio[1] %>">'
+        div = '  </div>'
+        div = '  <a class="o-feed__url <%- settings.classes.avatar %>"'
+        div = '     href="<%- feed.url %>" target="_blank" rel="noopener noreferrer nofollow">'
+        div = '    <%- feed.title %>'
+        div = '  </a>'
+        div = '</header>'
+
+  div class='${class_demo_class_containers}'
+    code class='code' templates.posts
+
+  div class='${class_demo_class_containers}'
+    div class='code-block'
+      pre
+        div class='code__comment' = '// The posts loop including the posts template.'
+        div = '<% _each(items, function(post) { %>'
+        div = '  <div class="c-feed-item <%- settings.classes.card %>">'
+        div = '    <h4 class="c-feed-item__title <%- settings.classes.title %>">'
+        div = '      <a class="c-feed-item__link <%- settings.classes.link %>"'
+        div = '         href="<%- post.guid %>"'
+        div = '         target="_blank"'
+        div = '         rel="noopener noreferrer nofollow">'
+        div = '        <%- post.title %>'
+        div = '      </a>'
+        div = '    </h4>'
+        div = '    <div class="c-feed-item__thumbnail <%- settings.classes.thumbnail %>">'
+        div = '      <img style="width: <%- settings.postImageRatio[0] %>;max-height: <%- settings.postImageRatio[1] %>;" '
+        div = '           src="<%- post.thumbnail %>">'
+        div = '    </div>'
+        div = '    <p class="c-feed-item__excerpt <%- settings.classes.excerpt %>">'
+        div = '      <%- post.excerpt %><%- settings.postExcerptTrail %>'
+        div = '    </p>'
+        div = '    <div class="c-feed-item__footer <%- settings.classes.cardFooter %>">'
+        div = '      <a class="c-feed-item__cta <%- settings.classes.cta %>" '
+        div = '         href="<%- post.guid %>" '
+        div = '         target="_blank"'
+        div = '         rel="noopener noreferrer nofollow">'
+        div = '        <%- settings.postCtaText %>'
+        div = '      </a>'
+        div = '      <span class="c-feed-item__date <%- settings.classes.date %>" '
+        div = '            title="<%- settings.postDateTitle %>">'
+        div = '        <%- post.date %>'
+        div = '      </span>'
+        div = '    </div>'
+        div = '  </div>'
+        div = '<% }); %>'
+
+  div class='${class_demo_class_containers}'
+    code class='code' templates.closer
+
+  div class='${class_demo_class_containers}'
+    div class='code-block'
+      pre
+        div class='code__comment' = '// The closing template tag or wrapper of the entire feed.'
+        div = '</section>'
+
+= mixin('feed-demo')
+  #feed style='color: lightsteelblue'
+
+= mixin('feed-script')
+  script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js'
+  script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise,Object.assign&gated=gated"
+  script src='scripts/modules/Feed.js'
+  javascript:
+    var config = {
+      selector: '#feed',
+      feed: [
+        'https://medium.com/feed/nyc-opportunity/',
+        'https://civicservicedesign.com/feed/'
+      ],
+      log: true
+    };
+
+    var feed = new Feed(config).init();
+
+    new Vue({
+      el: '#controls',
+      data: {
+        config: feed.default
+      },
+      methods: {
+        render: function(event) {
+          event.preventDefault();
+          new Feed(Object.assign(config, this.config)).init();
+        }
+      }
+    })
+

@@ -59,3 +59,7 @@ p code {
     padding: 16px 16px;
   }
 }
+
+.code__comment {
+  color: map-get(map-get($variables, 'colors'), 'primary-navy-30t');
+}
