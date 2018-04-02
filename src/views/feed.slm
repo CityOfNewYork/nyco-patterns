@@ -49,7 +49,7 @@
               div
                 = '<script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated"> '
                 span class='code__comment' = '<!-- The feed component uses Promises so this polyfill is needed for IE support -->'
-              div = '<script type="text/javascript" src="https://cityofnewyork.github.io/nyco-patterns/scripts/modules/Feed.js">'
+              div = '<script type="text/javascript" src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js">'
 
         / The stylesheet hasn't been exported individually yet
         /p

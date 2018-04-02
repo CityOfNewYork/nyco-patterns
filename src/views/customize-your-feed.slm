@@ -31,36 +31,63 @@
     div class='${class_demo_col1}'
       div class='${class_demo_cola}'
 
-        h2#usage
-          a href='#usage' How-to
+        h2#how-to
+          a href='#how-to' How-to
 
-        form#controls class='control-form m-0'
+        form#js-controls class='control-form m-0'
 
           p
-            | Edit the variables below then click render to display an updated feed with your own configuration. For details on all of the configuration parameters and advanced documentation <a href='feed'>refer to the Feed component documentation here</a>.
+            | Edit the variables below then click render to display an updated feed with your own configuration. For details on all of the configuration parameters and advanced documentation <a href='feed#configuration'>refer to the Feed component documentation here</a>.
 
-          div v-for='item, name in config'
-            div v-if='typeof item == "string"' class='control-group'
-              label class='control-label'
-                code class='code mb-1'
-                  = '{{ name }} '
-                  span class='code__comment' = 'type: {{ typeof item }}'
-                input type='text' v-bind:name='name' v-model='config[name]'
-            div v-else-if='Array.isArray(item)'
-              div v-for='i, index in item' class='control-group'
-                label class='control-label'
-                  code class='code mb-1'
-                    = '{{ name }} '
-                    span class='code__comment' = 'index: {{ index }}, type: {{ typeof i }}'
-                  input type='text' v-bind:name='name + index' v-model='config[name][index]'
+          button class='btn btn-form-submit mb-4' v-on:click='render' Render
+
+          h3#variables
+            a href='#variables' Variables
+
+          fieldset v-for='item, name in config'
+
+            / if the setting is a string or number
+            div v-if='typeof item == "string" || !isNaN(item)' class='pr-2 pb-2'
+              div class='control-group flex items-center'
+                code class='code mr-2'
+                  = '{{ name }}'
+                label class='control-label' style='margin: 0 !important'
+                  input type='text' v-bind:name='name' v-model='config[name]'
+
+            / If the setting is an array
+            div v-else-if='Array.isArray(item)' class='pb-2'
+              code class='code mb-1'
+                = '{{ name }}'
+              div class='flex'
+                div v-for='i, index in item' class='flex-1 control-group pr-2 pb-1 flex items-center'
+                  code class='code mr-2'
+                    = 'item{{ index }} '
+                  label class='control-label' style='margin: 0 !important'
+                    input type='text' v-bind:name='name + index' v-model='config[name][index]'
+
+            / If the setting is an object
+            div v-else-if='typeof item === "object"' class='pb-1 pr-2'
+              div v-for='value, key in item' class='pb-1'
+                div class='control-group flex items-center'
+                  code class='code mr-2'
+                    = '{{ name }}.{{ key }}'
+                  label class='control-label' style='margin: 0 !important'
+                    input type='text' v-bind:name='name + value' v-model='config[name][key]'
 
           button class='btn btn-form-submit' v-on:click='render' Render
 
     div class='${class_demo_col2}'
       div class='${class_demo_colb}'
 
-        h2#demonstration
-          a href='#demonstration' Demonstration
+        h2#your-feed
+          a href='#your-feed' Your Feed
+
+        form class='control-form mb-2'
+          p
+            | Copy and paste the following code into your page to embed your customized feed.
+
+          textarea#js-embed
+            = '{{ embed }}'
 
         div class='border-8 p-4 border-secondary-white'
           = mixin('feed-demo')

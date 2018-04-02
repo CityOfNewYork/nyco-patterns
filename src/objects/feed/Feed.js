@@ -9,7 +9,6 @@ import _merge from 'lodash-es/merge';
 import _values from 'lodash-es/values';
 import _orderBy from 'lodash-es/orderBy';
 import _uniqBy from 'lodash-es/uniqBy';
-// import Promise from 'promise-polyfill/src/';
 
 /**
  *
@@ -143,50 +142,52 @@ Feed.templates = {
   medium: {
     opener:
       '<section class="o-feed <%- settings.classes.wrapper %>">',
-    header:
-      '<header class="o-feed__header <%- settings.classes.header %>">\
-        <div class="o-feed__avatar <%- settings.classes.avatar %>">\
-          <img src="<%- feed.image %>" \
-               width="<%- settings.avatarImageRatio[0] %>" \
-               height="<%- settings.avatarImageRatio[1] %>">\
-        </div>\
-        <a class="o-feed__url <%- settings.classes.avatar %>"\
-           href="<%- feed.url %>" target="_blank" rel="noopener noreferrer nofollow">\
-          <%- feed.title %>\
-        </a>\
-      </header>',
-    posts:
-      '<% _each(items, function(post) { %>\
-        <div class="c-feed-item <%- settings.classes.card %>">\
-          <h4 class="c-feed-item__title <%- settings.classes.title %>">\
-            <a class="c-feed-item__link <%- settings.classes.link %>"\
-               href="<%- post.guid %>"\
-               target="_blank"\
-               rel="noopener noreferrer nofollow">\
-              <%- post.title %>\
-            </a>\
-          </h4>\
-          <div class="c-feed-item__thumbnail <%- settings.classes.thumbnail %>">\
-            <img style="width: <%- settings.postImageRatio[0] %>;max-height: <%- settings.postImageRatio[1] %>;" \
-                 src="<%- post.thumbnail %>">\
-          </div>\
-          <p class="c-feed-item__excerpt <%- settings.classes.excerpt %>">\
-            <%- post.excerpt %><%- settings.postExcerptTrail %>\
-          </p>\
-          <div class="c-feed-item__footer <%- settings.classes.cardFooter %>">\
-            <a class="c-feed-item__cta <%- settings.classes.cta %>" \
-               href="<%- post.guid %>" \
-               target="_blank" \
-               rel="noopener noreferrer nofollow">\
-              <%- settings.postCtaText %>\
-            </a>\
-            <span class="c-feed-item__date <%- settings.classes.date %>" \
-                  title="<%- settings.postDateTitle %>">\
-              <%- post.date %>\
-            </span>\
-          </div>\
-        </div>\
-      <% }); %>',
+    header: [
+      '<header class="o-feed__header <%- settings.classes.header %>">',
+        '<div class="o-feed__avatar <%- settings.classes.avatar %>">',
+          '<img src="<%- feed.image %>" ',
+               'width="<%- settings.avatarImageRatio[0] %>" ',
+               'height="<%- settings.avatarImageRatio[1] %>">',
+        '</div>',
+        '<a class="o-feed__url <%- settings.classes.avatar %>"',
+           'href="<%- feed.url %>" target="_blank" rel="noopener noreferrer nofollow">',
+          '<%- feed.title %>',
+        '</a>',
+      '</header>'
+    ].join(''),
+    posts: [
+      '<% _each(items, function(post) { %>',
+        '<div class="c-feed-item <%- settings.classes.feedItem %>">',
+          '<h4 class="c-feed-item__title <%- settings.classes.title %>">',
+            '<a class="c-feed-item__link <%- settings.classes.link %>"',
+               'href="<%- post.guid %>"',
+               'target="_blank"',
+               'rel="noopener noreferrer nofollow">',
+              '<%- post.title %>',
+            '</a>',
+          '</h4>',
+          '<span class="c-feed-item__date <%- settings.classes.date %>" ',
+                'title="<%- settings.postDateTitle %>">',
+            '<%- post.date %>',
+          '</span>',
+          '<div class="c-feed-item__thumbnail <%- settings.classes.thumbnail %>">',
+            '<img style="width: <%- settings.postImageRatio[0] %>;max-height: <%- settings.postImageRatio[1] %>;" ',
+                 'src="<%- post.thumbnail %>">',
+          '</div>',
+          '<p class="c-feed-item__excerpt <%- settings.classes.excerpt %>">',
+            '<%- post.excerpt %><%- settings.postExcerptTrail %>',
+          '</p>',
+          '<div class="c-feed-item__footer <%- settings.classes.itemFooter %>">',
+            '<a class="c-feed-item__cta <%- settings.classes.cta %>" ',
+               'href="<%- post.guid %>" ',
+               'target="_blank" ',
+               'rel="noopener noreferrer nofollow">',
+              '<%- settings.postCtaText %>',
+            '</a>',
+          '</div>',
+        '</div>',
+      '<% }); %>'
+    ].join(''),
     closer:
       '</section>'
   }
@@ -267,41 +268,41 @@ Feed.merge = {
  * @type {Object}
  */
 Feed.default = {
-  type: 'medium', // The feed type. Currently, only Medium feeds are supported
-  avatarImageRatio: ['50', '50'], // Image source attribute width and height for the account avatar
-  postImageRatio: ['auto', '200px'], // CSS width and max-height properties for the post image
-  postExcerptLength: 120, // This is the length of the excerpt
-  postExcerptTrail: '…', // This is the trailing ellipsis for excerpts
-  postCtaText: 'Click here to read the full article', // This is the text for each post's call to action
-  // The date formatting uses Date.toLocaleDateString(). See the @url below for for documentation on formating the date. The options below are passed as Date.toLocaleDateString(postDateLocal, postDateFormat).
-  // @url https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-  postDateLocal: 'en-US', // This is a parameter used by Date.toLocaleDateString(), see the link above for configuration details
-  postDateFormat: { // This is a parameter used by Date.toLocaleDateString(), see the link above for configuration details
+  feed: '',
+  selector: '#js-feed',
+  type: 'medium',
+  avatarImageRatio: ['50', '50'],
+  postImageRatio: ['auto', '200px'],
+  postExcerptLength: 120,
+  postExcerptTrail: '…',
+  postCtaText: 'Read the full post',
+  postDateLocal: 'en-US',
+  postDateFormat: {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   },
-  postDateTitle: 'Published Date', // This is the title set to the published date element to provide context on mouseover
-  classes: { // These are CSS classes that can be added to each element
-    wrapper: '', // The wrapper for the whole widget
-    header: '', // The widget header
-    url: '', // The widget url
-    card: '', // The repeating class for the widget's cards
-    title: '', // The title of each card
-    link: '', // The link of each card
-    thumbnail: '', // The thumbnail image of each card
-    excerpt: '', // The excerpt of each card
-    cardFooter: '', // The footer of each card with the cta and date
-    cta: '', // The final call to action of each card
-    date: '' // The publication date of each card
+  postDateTitle: 'Published Date',
+  classes: {
+    wrapper: '',
+    header: '',
+    url: '',
+    feedItem: '',
+    title: '',
+    link: '',
+    thumbnail: '',
+    excerpt: '',
+    itemFooter: '',
+    cta: '',
+    date: ''
   },
-  templates: { // The template of the feed, the script comes with a template for Medium feeds only.
-    opener: Feed.templates.medium.opener, // The opening template tag or wrapper of the entire feed.
-    header: Feed.templates.medium.header, // The header template that sits at the top of the posts.
-    posts: Feed.templates.medium.posts, // The posts loop including the posts template.
-    closer: Feed.templates.medium.closer // The closing template tag or wrapper of the entire feed.
+  templates: {
+    opener: Feed.templates.medium.opener,
+    header: Feed.templates.medium.header,
+    posts: Feed.templates.medium.posts,
+    closer: Feed.templates.medium.closer
   },
-  log: false // Logs data to the console. You will want this turned off in most cases but it allows you to see what data is being passed to the template
+  log: false
 };
 
 export default Feed;

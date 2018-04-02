@@ -2,105 +2,25 @@
 
 = mixin('feed-configuration')
   div class='${class_demo_class_containers}'
-    div class='code-block'
-      pre
-        div
-          = "type: 'medium', "
-          span class='code__comment' = "// The feed type. Currently, only Medium feeds are supported"
-        div
-          = "avatarImageRatio: ['50', '50'], "
-          span class='code__comment' = "// Image source attribute width and height for the account avatar"
-        div
-          = "postImageRatio: ['auto', '200px'], "
-          span class='code__comment' = "// CSS width and max-height properties for the post image"
-        div
-          = "postExcerptLength: 120, "
-          span class='code__comment' = "// This is the length of the excerpt"
-        div
-          = "postExcerptTrail: '…', "
-          span class='code__comment' = "// This is the trailing ellipsis for excerpts"
-        div
-          = "postCtaText: 'Click here to read the full article', "
-          span class='code__comment' = "// The date formatting uses Date.toLocaleDateString(). See the @url below for for documentation on formating the date. The options below are passed as Date.toLocaleDateString(postDateLocal, postDateFormat)."
-        div
-          span class='code__comment' = "// formating the date. The options below are passed as Date.toLocaleDateString(postDateLocal, postDateFormat)."
-        div
-          span class='code__comment' = "// @url https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString"
-        div
-          = "postDateLocal: 'en-US', "
-          span class='code__comment' = "// This is a parameter used by Date.toLocaleDateString(), see the link above for configuration details"
-        div
-          = "postDateFormat: { "
-          span class='code__comment' = "// This is a parameter used by Date.toLocaleDateString(), see the link above for configuration details"
-        div
-          = "  year: 'numeric',"
-        div
-          = "  month: 'long',"
-        div
-          = "  day: 'numeric'"
-        div
-          = "},"
-        div
-          = "postDateTitle: 'Published Date', "
-          span class='code__comment' = "// This is the title set to the published date element to provide context on mouseover"
-        div
-          = "classes: { "
-          span class='code__comment' = "// These are CSS classes that can be added to each element"
-        div
-          = "  wrapper: '', "
-          span class='code__comment' = "// The wrapper for the whole widget"
-        div
-          = "  header: '', "
-          span class='code__comment' = "// The widget header"
-        div
-          = "  url: '', "
-          span class='code__comment' = "// The widget url"
-        div
-          = "  card: '', "
-          span class='code__comment' = "// The repeating class for the widget's cards"
-        div
-          = "  title: '', "
-          span class='code__comment' = "// The title of each card"
-        div
-          = "  link: '', "
-          span class='code__comment' = "// The link of each card"
-        div
-          = "  thumbnail: '', "
-          span class='code__comment' = "// The thumbnail image of each card"
-        div
-          = "  excerpt: '', "
-          span class='code__comment' = "// The excerpt of each card"
-        div
-          = "  cardFooter: '', "
-          span class='code__comment' = "// The footer of each card with the cta and date"
-        div
-          = "  cta: '', "
-          span class='code__comment' = "// The final call to action of each card"
-        div
-          = "  date: '' "
-          span class='code__comment' = "// The publication date of each card"
-        div
-          = "},"
-        div
-          = "templates: { "
-          span class='code__comment' = "// The template of the feed, the script comes with a template for Medium feeds only."
-        div
-          = "  opener: Feed.templates.medium.opener, "
-          span class='code__comment' = "// The opening template tag or wrapper of the entire feed."
-        div
-          = "  header: Feed.templates.medium.header, "
-          span class='code__comment' = "// The header template that sits at the top of the posts."
-        div
-          = "  posts: Feed.templates.medium.posts, "
-          span class='code__comment' = "// The posts loop including the posts template."
-        div
-          = "  closer: Feed.templates.medium.closer "
-          span class='code__comment' = "// The closing template tag or wrapper of the entire feed."
-        div
-          = "},"
-        div
-          = "log: false "
-          span class='code__comment' = "// Logs data to the console. You will want this turned off in most cases but it allows you to see what data is being passed to the template"
+    div#js-configuration
+      div v-for='item, name in config'
+        div v-if='' class='mb-2'
+          div class='code-block mb-1'
+            pre
+              div
+                = '{{ name }}'
+              div class='code__comment'
+                = 'type: {{ typeof item }}'
+              div v-if='item != ""' class='code__comment'
+                = 'default: {{ item }}'
+          ul v-if='typeof item === "object" && typeof docs[name] !== "string"'
+            li v-for='value, key in item'
+              p
+                code class='mr-1' = '{{ key }}'
+                = '{{ docs[name][key] }}'
+          p v-if='typeof docs[name] === "string"'
+            = '{{ docs[name] }}'
+
 
 = mixin('feed-template')
   div class='${class_demo_class_containers}'
@@ -179,35 +99,97 @@
         div class='code__comment' = '// The closing template tag or wrapper of the entire feed.'
         div = '</section>'
 
+
 = mixin('feed-demo')
-  #feed style='color: lightsteelblue'
+  #js-feed style='color: lightsteelblue'
+
 
 = mixin('feed-script')
   script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js'
-  script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise,Object.assign&gated=gated"
-  script src='scripts/modules/Feed.js'
+  script src='https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&gated=gated'
+  script src='scripts/modules/FeedDocs.js'
   javascript:
+
+    var source = {
+      polyfill: 'https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated',
+      module: 'scripts/modules/Feed.js',
+      cdn: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js'
+    };
+
+    // Configuration for the page feed
     var config = {
-      selector: '#feed',
+      selector: '#js-feed',
       feed: [
         'https://medium.com/feed/nyc-opportunity/',
         'https://civicservicedesign.com/feed/'
-      ],
-      log: true
+      ]
     };
 
-    var feed = new Feed(config).init();
+    // Adds a select listener to the entire element.
+    function selectEmbed() {
+      this.select();
+    }
 
-    new Vue({
-      el: '#controls',
-      data: {
-        config: feed.default
-      },
-      methods: {
-        render: function(event) {
-          event.preventDefault();
-          new Feed(Object.assign(config, this.config)).init();
-        }
+    // Fill the embed textarea with the initial script, replacing the config
+    // template string with our configuration.
+    function createEmbed(config, source) {
+      var clipboard = '<script type="text/javascript">(function(config){var ss={pf:"' + source.polyfill + '",nf:"' + source.cdn + '"};for(k in ss){var s=ss[k];ss[k]=document.createElement("script");ss[k].setAttribute("src",s);document.head.appendChild(ss[k]);};ss.nf.onload=function(){var f=new Feed(config).init();}})({{config}});<\/script>';
+      var embed = document.getElementById('js-embed');
+      if (embed) {
+        embed.addEventListener('focus', selectEmbed);
+        embed.addEventListener('click', selectEmbed);
+        embed.value = clipboard.replace('{{config}}', JSON.stringify(config));
+        window.location.hash = 'your-feed';
+        embed.focus();
       }
-    })
+    } createEmbed(config, source);
 
+    // Self initiating function for the Feed script. This should mostly mirror
+    // the clipboard string in the createEmbed function above.
+    (function(config, source, createEmbed) {
+      var ss = {
+        pf: source.polyfill,
+        nf: source.module
+      };
+      for (k in ss) {
+        var s = ss[k];
+        ss[k] = document.createElement('script');
+        ss[k].setAttribute('src', s);
+        document.head.appendChild(ss[k]);
+      };
+      ss.nf.onload = function() {
+        var f = new Feed(config).init();
+
+        // Everything below this is not needed for the embed
+        var d = new FeedDocs();
+
+        if (document.getElementById('js-configuration')) {
+          new Vue({
+            el: '#js-configuration',
+            data: {
+              config: f.default,
+              docs: d.default
+            },
+          });
+        }
+
+        if (document.getElementById('js-controls')) {
+          new Vue({
+            el: '#js-controls',
+            data: {
+              config: Object.assign(f.default, config),
+              docs: d.default
+            },
+            methods: {
+              render: function(event) {
+                event.preventDefault();
+                new Feed(Object.assign(config, this.config)).init();
+                createEmbed(this.config, source);
+              }
+            }
+          });
+        }
+        // end
+
+      };
+    })(config, source, createEmbed);

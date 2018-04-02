@@ -20,6 +20,10 @@ const modules = [
   {
     name: 'Feed',
     path: './src/objects/feed'
+  },
+  {
+    name: 'FeedDocs',
+    path: './src/objects/feed'
   }
 ];
 

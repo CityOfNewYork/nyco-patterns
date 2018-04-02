@@ -48,12 +48,6 @@
   margin-top: map-get(map-get($variables, 'margin'), 3);
 }
 
-.c-feed-item__footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .o-feed__url,
 .c-feed-item__excerpt,
 .c-feed-item__link,
