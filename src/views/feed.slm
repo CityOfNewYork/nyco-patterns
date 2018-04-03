@@ -31,14 +31,17 @@
     div class='${class_demo_col1}'
       div class='${class_demo_cola}'
 
-        h2#usage
-          a href='#usage' Usage
-
-        p class='bg-secondary-orange-30t p-2 border border-secondary-orange-70t'
-          | You can more easily <a href='customize-your-feed'>customize your feed here</a>.
+        h2#about
+          a href='#about' About
 
         p
           | The <b>Feed Object</b> can take any feed and display is as a widget anywhere on a page. Currently, it's configured to work with Medium feeds. You can add combine multiple feed urls to display as many posts from different user profiles, publications, or tagged pages in publications. Refer to the <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a> on available feeds.
+
+        h2#usage
+          a href='#usage' Usage
+
+        p
+          | You can use <a href='customize-your-feed'>this form to customize your own feed</a> or you can follow the steps below.
 
         p
           | To use the feed, include the following scripts in your page:
@@ -47,9 +50,9 @@
           div class='code-block'
             pre
               div
-                = '<script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated"> '
+                = '<script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated" type="text/javascript"> '
                 span class='code__comment' = '<!-- The feed component uses Promises so this polyfill is needed for IE support -->'
-              div = '<script type="text/javascript" src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js">'
+              div = '<script src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js" type="text/javascript">'
 
         / The stylesheet hasn't been exported individually yet
         /p
@@ -67,20 +70,18 @@
           div class='code-block'
             pre
               div
-                = '<div id="feed" style="color: lightsteelblue"></div>'
+                = '<div id="js-feed" style="color: lightsteelblue"></div>'
                 span class='code__comment' = '<!-- The "color: lightsteelblue"" sets the border-color property for individual posts. You could also try setting "font-size: 85%" if you would like a widget for a smaller side column -->'
               div
                 = '<script type="text/javascript">'
               div
                 = '  new Feed({'
               div
-                = '    selector: "#feed", '
-                span class='code__comment' = '// required, the container for the feed'
+                = '    selector: "#js-feed", '
+                span class='code__comment' = '// The DOM element selctor for the feed. Defaults to #js-feed'
               div
                 = '    feed: "https://medium.com/feed/@nycopportunity/", '
-                span class='code__comment' = '// required'
-              div
-                = '    log: true'
+                span class='code__comment' = '// Required. The feed you want to display. May be an array of multiple feeds'
               div
                 = '  }).init();'
               div
@@ -111,7 +112,12 @@
         p
           div class='code-block'
             pre
-              div = 'var MyTemplate = "<div>...template content...</div>"'
+              div = 'var MyTemplate = {'
+              div = '  opener: "<div>...template content...</div>"'
+              div = '  header: "<div>...template content...</div>"'
+              div = '  posts: "<div>...template content...</div>"'
+              div = '  closer: "<div>...template content...</div>"'
+              div = '};'
               div = 'new Feed({'
               div
                 = '  selector: "#feed", '

@@ -34,7 +34,7 @@
         h2#how-to
           a href='#how-to' How-to
 
-        form#js-controls class='control-form m-0'
+        form#js-controls class='control-form m-0' method='get'
 
           p
             | Edit the variables below then click render to display an updated feed with your own configuration. For details on all of the configuration parameters and advanced documentation <a href='feed#configuration'>refer to the Feed component documentation here</a>.
@@ -52,27 +52,27 @@
                 code class='code mr-2'
                   = '{{ name }}'
                 label class='control-label' style='margin: 0 !important'
-                  input type='text' v-bind:name='name' v-model='config[name]'
+                  input type='text' v-bind:name='name' v-bind:id='name' v-model='config[name]'
 
             / If the setting is an array
             div v-else-if='Array.isArray(item)' class='pb-2'
-              code class='code mb-1'
-                = '{{ name }}'
+              /code class='code mb-1'
+              /  = '{{ name }}'
               div class='flex'
-                div v-for='i, index in item' class='flex-1 control-group pr-2 pb-1 flex items-center'
+                div v-for='i, index in item' class='flex-1 control-group pr-2 flex items-center'
                   code class='code mr-2'
-                    = 'item{{ index }} '
+                    = '{{ name }}[{{ index }}]'
                   label class='control-label' style='margin: 0 !important'
-                    input type='text' v-bind:name='name + index' v-model='config[name][index]'
+                    input type='text' v-bind:name='name + index' v-bind:id='name + index' v-model='config[name][index]'
 
             / If the setting is an object
-            div v-else-if='typeof item === "object"' class='pb-1 pr-2'
-              div v-for='value, key in item' class='pb-1'
+            div v-else-if='typeof item === "object"' class='pr-2'
+              div v-for='value, key in item' class='pb-2'
                 div class='control-group flex items-center'
                   code class='code mr-2'
                     = '{{ name }}.{{ key }}'
                   label class='control-label' style='margin: 0 !important'
-                    input type='text' v-bind:name='name + value' v-model='config[name][key]'
+                    input type='text' v-bind:name='name + value' v-bind:id='name + value' v-model='config[name][key]'
 
           button class='btn btn-form-submit' v-on:click='render' Render
 

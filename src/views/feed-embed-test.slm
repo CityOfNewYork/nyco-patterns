@@ -1,0 +1,43 @@
+/ Layout
+= extend('layouts/default')
+
+/ Styles
+= partial('partials/styles.slm')
+
+/ Links
+= partial('partials/links.slm')
+
+/ Partials
+= partial('partials/head.mixin.slm')
+= partial('partials/header.mixin.slm')
+= partial('partials/nav.mixin.slm')
+
+/ Component
+= partial('../objects/feed/feed.slm')
+
+/ Content blocks
+= content('head')
+  = mixin('head', 'Medium Widget')
+
+= content('header')
+  = mixin('header')
+
+= content('content')
+
+  h1 class='${class_demo_headers}' Feed Embed Test
+
+  section class='${class_demo}'
+
+    div class='${class_demo_col1}'
+      div class='${class_demo_cola}'
+
+        h2#how-to
+          a href='#how-to' How-to
+
+        div#js-feed
+
+    div class='${class_demo_col2}'
+      div class='${class_demo_colb}'
+
+= content('script')
+  | <script type='text/javascript'>(function(config){var ss={"polyfill":"https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated","module":"https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js"};for(k in ss){var s=ss[k];ss[k]=document.createElement('script');ss[k].setAttribute('src',s);document.head.appendChild(ss[k]);};ss.module.onload=function(){var f=new Feed(config).init();}})({"title":"News from NYC Opportunity","profileImg":"https://cdn-images-1.medium.com/fit/c/100/100/1*CqAMY6M5PeJ5nBOc8MKcvA.png","selector":"#js-feed","feed":["https://medium.com/feed/nyc-opportunity/","https://civicservicedesign.com/feed/"]});</script>

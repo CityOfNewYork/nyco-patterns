@@ -17,7 +17,7 @@
     "port": "8000",
     "postcss": "./config/",
     "rollup": "./config/rollup.js",
-    "style_bundle": "site.concat.scss",
+    "style_bundle": "site.concat.css",
     "style_bundle_dir": "./bundle/styles/",
     "style_dist": "dist/styles/site.min.css",
     "svg_src": "./src/svg",
