@@ -124,8 +124,8 @@
 
     var production = {
       polyfill: 'https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated',
-      module: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js',
-      styles: 'objects/feed/feed.css'
+      module: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.1/dist/objects/feed/Feed.js',
+      styles: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.1/dist/objects/feed/feed.css'
     };
 
     var demonstration = {

@@ -52,16 +52,15 @@
               div
                 = '<script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated" type="text/javascript"> '
                 span class='code__comment' = '<!-- The feed component uses Promises so this polyfill is needed for IE support -->'
-              div = '<script src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js" type="text/javascript">'
+              div = '<script src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.1/dist/objects/feed/Feed.js" type="text/javascript">'
 
-        / The stylesheet hasn't been exported individually yet
-        /p
-        /  | Optionally, but recommended, include the base styling for the feed:
+        p
+          | Optionally, but recommended, include the base styling for the feed:
 
-        /p
-        /  div class='code-block'
-        /    pre
-        /      div = '<link rel="stylesheet" src="https://cityofnewyork.github.io/nyco-patterns/styles/feed.css">'
+        p
+          div class='code-block'
+            pre
+              div = '<link src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.1/dist/objects/feed/feed.css" rel="stylesheet" type="text/css" media="screen">'
 
         p
           | Then, add a container with the feed's id and the execution script with configuration parameters.
@@ -70,8 +69,7 @@
           div class='code-block'
             pre
               div
-                = '<div id="js-feed" style="color: lightsteelblue"></div>'
-                span class='code__comment' = '<!-- The "color: lightsteelblue"" sets the border-color property for individual posts. You could also try setting "font-size: 85%" if you would like a widget for a smaller side column -->'
+                = '<div id="js-feed"></div>'
               div
                 = '<script type="text/javascript">'
               div
