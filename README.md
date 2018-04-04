@@ -1,4 +1,4 @@
-# NYC Opportunity components and stylesheet extension for NYC.gov.
+# NYC Opportunity components and stylesheet extension for NYC.gov
 
 This library maintains common agency patterns for NYC Opportunity. View the [demonstration site here for documentation](https://cityofnewyork.github.io/nyco-patterns/).
 
