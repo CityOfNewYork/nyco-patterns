@@ -140,8 +140,12 @@ Feed.rssToJson = 'https://api.rss2json.com/v1/api.json';
  */
 Feed.templates = {
   medium: {
-    opener:
-      '<section class="o-feed <%- settings.classes.wrapper %>">',
+    opener: [
+      '<section class="o-feed <%- settings.classes.wrapper %>" style="',
+        '<% if (settings.fontSize) { %>font-size: <%- settings.fontSize %>;<% } %>',
+        '<% if (settings.color) { %>color: <%- settings.color %>;<% } %>',
+      '">'
+    ].join(''),
     header: [
       '<header class="o-feed__header <%- settings.classes.header %>">',
         '<div class="o-feed__avatar <%- settings.classes.avatar %>">',
@@ -282,6 +286,8 @@ Feed.default = {
   type: 'medium',
   title: '',
   profileImg: '',
+  fontSize: '',
+  color: 'lightsteelblue',
   ratioProfile: ['50', '50'],
   ratioPostImg: ['auto', '200px'],
   postExcerptLength: 120,

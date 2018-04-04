@@ -16,6 +16,8 @@ FeedDocs.default = {
   type: 'The feed type. Currently, only Medium feeds are supported so this shouldn\'t change.',
   title: 'The title of the feed that appears in the header. By default this uses the feed\'s title. However, if using displaying multiple fields this should be set. Otherwise, it will use the last feed title that was loaded.',
   profileImg: 'The url to the profile image. By default this uses the feed\'s profile image. However, if using displaying multiple fields this should be set.  Otherwise, it will use the last feed image that was loaded.',
+  fontSize: 'Set this to a smaller percentage (say, 85%) to make the feed appear more compact in smaller columns',
+  color: 'Set the color of the borders in the feed. All of the colors in the feed will inherit the style of the page except for the borders between cards. This may be any standard CSS color variable.',
   ratioProfile: 'Image source attribute width and height for the account avatar.',
   ratioPostImg: 'CSS width and max-height properties for the post image.',
   postExcerptLength: 'This is the length of the excerpt.',

@@ -30,7 +30,10 @@
     div class='code-block'
       pre
         div class='code__comment' = '// The opening template tag or wrapper of the entire feed.'
-        div = '<section class="o-feed <%- settings.classes.wrapper %>">'
+        div = '<section class="o-feed <%- settings.classes.wrapper %>" style="'
+        div = '  <% if (settings.fontSize) { %>font-size: <%- settings.fontSize %>;<% } %>'
+        div = '  <% if (settings.color) { %>color: <%- settings.color %>;<% } %>'
+        div = '">'
 
   div class='${class_demo_class_containers}'
     code class='code' templates.header
@@ -110,25 +113,25 @@
 
 
 = mixin('feed-demo')
-  #js-feed style='color: lightsteelblue'
+  #js-feed
 
 
 = mixin('feed-script')
   script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js'
   script src='https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&gated=gated'
-  script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=' crossorigin='anonymous'
-  script src='https://unpkg.com/vue-router@3.0.1/dist/vue-router.js'
-  script src='scripts/modules/FeedDocs.js'
+  script src='objects/feed/FeedDocs.js'
   javascript:
 
     var production = {
       polyfill: 'https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated',
-      module: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js'
+      module: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js',
+      styles: 'objects/feed/feed.css'
     };
 
     var demonstration = {
       polyfill: production.polyfill,
-      module: 'scripts/modules/Feed.js'
+      module: 'objects/feed/Feed.js',
+      styles: 'objects/feed/feed.css'
     };
 
     // Configuration for the page feed
@@ -152,41 +155,55 @@
     /**
      * Creates a self executing embeddable script using a custom configration
      * and source. Mirrors the self executing function below.
-     * @param  {object} config The configuration that will be passed to the function script
-     * @param  {object} source A dictionary of scripts to load, requires the cdn source of this script
+     * @param  {object}  config The configuration that will be passed to the function script
+     * @param  {object}  source A dictionary of scripts to load, requires the cdn source of this script
+     * @param  {boolean} focus  Wether or not to focus on the text field
      */
-    function createEmbed(config, source) {
+    function createEmbed(config, source, focus) {
+      focus = (typeof focus === 'undefined') ? false : focus;
       var clipboard = [
         "<script type='text/javascript'>",
         "(function(config){",
           "var ss={{ source }};",
           "for(k in ss){",
             "var s=ss[k];",
-            "ss[k]=document.createElement('script');",
-            "ss[k].setAttribute('src',s);",
+            "if (k === 'styles') {",
+              "ss[k] = document.createElement('link');",
+              "ss[k].setAttribute('rel', 'stylesheet');",
+              "ss[k].setAttribute('type', 'text/css');",
+              "ss[k].setAttribute('media', 'screen');",
+              "ss[k].setAttribute('href', s);",
+            "} else {",
+              "ss[k] = document.createElement('script');",
+              "ss[k].setAttribute('type', 'text/javascript');",
+              "ss[k].setAttribute('src', s);",
+            "}",
             "document.head.appendChild(ss[k]);",
           "};",
           "ss.module.onload=function(){",
-            "var f=new Feed(config).init();",
+            "new Feed(config).init();",
           "}",
         "})({{ config }});",
         "<\/script>"
-      ].join('');
+      ];
+      if (config.selector.indexOf('#') >= 0) {
+        clipboard.unshift(
+          "<div id='" + config.selector.replace('#','') + "'></div>"
+        );
+      }
       var embed = document.getElementById('js-embed');
       if (embed) {
         embed.addEventListener('focus', selectEmbed);
         embed.addEventListener('click', selectEmbed);
-        embed.value = clipboard
+        embed.value = clipboard.join('')
           .replace('{{ config }}', JSON.stringify(config))
           .replace('{{ source }}', JSON.stringify(source));
-        window.location.hash = 'your-feed';
-        embed.focus();
+        if (focus) {
+          window.location.hash = 'your-feed';
+          embed.focus();
+        }
       }
     } createEmbed(config, production);
-
-    //function createShare(config) {
-    //  window.location.search = $.param(config);
-    //} //createShare(config);
 
     // Self initiating function for the Feed script. This should mostly mirror
     // the clipboard string in the createEmbed function above.
@@ -194,8 +211,17 @@
       var ss = demonstration;
       for (k in ss) {
         var s = ss[k];
-        ss[k] = document.createElement('script');
-        ss[k].setAttribute('src', s);
+        if (k === 'styles') {
+          ss[k] = document.createElement('link');
+          ss[k].setAttribute('rel', 'stylesheet');
+          ss[k].setAttribute('type', 'text/css');
+          ss[k].setAttribute('media', 'screen');
+          ss[k].setAttribute('href', s);
+        } else {
+          ss[k] = document.createElement('script');
+          ss[k].setAttribute('type', 'text/javascript');
+          ss[k].setAttribute('src', s);
+        }
         document.head.appendChild(ss[k]);
       };
       ss.module.onload = function() {
@@ -225,8 +251,7 @@
               render: function(event) {
                 event.preventDefault();
                 new Feed(Object.assign(config, this.config)).init();
-                // createShare(this.config);
-                createEmbed(this.config, production);
+                createEmbed(this.config, production, true);
               }
             }
           });

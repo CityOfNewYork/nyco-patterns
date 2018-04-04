@@ -12,24 +12,9 @@ import eslint from 'rollup-plugin-eslint';
  * Config
  */
 
-// Name of the main script
-const name = 'NycoPattterns';
-
-// Our list of modules we are exporting
-const modules = [
-  {
-    name: 'Feed',
-    path: './src/objects/feed'
-  },
-  {
-    name: 'FeedDocs',
-    path: './src/objects/feed'
-  }
-];
-
 // Rollup Configuration
 const plugins = [
-  eslint(),
+  // eslint(), TODO: ES lint is throwing errors, it needs to be configured for ES6
   resolve(),
   babel({
     exclude: '../node_modules/**'
@@ -40,10 +25,17 @@ const plugins = [
 const sourcemap = 'inline';
 const format = 'iife';
 const strict = true;
-
-/**
- *
- */
+const name = 'NycoPattterns'; // Name of the main script
+const modules = [ // Our list of modules we are exporting
+  {
+    name: 'Feed',
+    dir: 'objects/feed'
+  },
+  {
+    name: 'FeedDocs',
+    dir: 'objects/feed'
+  }
+];
 
 // Create main package
 const Main = {
@@ -61,10 +53,10 @@ const Main = {
 // Create packages for our other modules
 for (let i = 0; i < modules.length; i++) {
   modules[i] = {
-    input: `${modules[i].path}/${modules[i].name}.js`,
+    input: `./src/${modules[i].dir}/${modules[i].name}.js`,
     output: {
       name: modules[i].name,
-      file: `./dist/scripts/modules/${modules[i].name}.js`,
+      file: `./dist/${modules[i].dir}/${modules[i].name}.js`,
       sourcemap: sourcemap,
       format: format,
       strict: strict

@@ -34,10 +34,7 @@
         h2#how-to
           a href='#how-to' How-to
 
-        div#js-feed
+        | <div id='js-feed'></div><script type='text/javascript'>(function(config){var ss={"polyfill":"https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated","module":"https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js","styles":"objects/feed/feed.css"};for(k in ss){var s=ss[k];if (k === 'styles') {ss[k] = document.createElement('link');ss[k].setAttribute('rel', 'stylesheet');ss[k].setAttribute('type', 'text/css');ss[k].setAttribute('media', 'screen');ss[k].setAttribute('href', s);} else {ss[k] = document.createElement('script');ss[k].setAttribute('type', 'text/javascript');ss[k].setAttribute('src', s);}document.head.appendChild(ss[k]);};ss.module.onload=function(){new Feed(config).init();}})({"title":"News from NYC Opportunity","profileImg":"https://cdn-images-1.medium.com/fit/c/100/100/1*CqAMY6M5PeJ5nBOc8MKcvA.png","selector":"#js-feed","feed":["https://medium.com/feed/nyc-opportunity/","https://civicservicedesign.com/feed/"]});</script>
 
     div class='${class_demo_col2}'
       div class='${class_demo_colb}'
-
-= content('script')
-  | <script type='text/javascript'>(function(config){var ss={"polyfill":"https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated","module":"https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/61bbe2a8/dist/scripts/modules/Feed.js"};for(k in ss){var s=ss[k];ss[k]=document.createElement('script');ss[k].setAttribute('src',s);document.head.appendChild(ss[k]);};ss.module.onload=function(){var f=new Feed(config).init();}})({"title":"News from NYC Opportunity","profileImg":"https://cdn-images-1.medium.com/fit/c/100/100/1*CqAMY6M5PeJ5nBOc8MKcvA.png","selector":"#js-feed","feed":["https://medium.com/feed/nyc-opportunity/","https://civicservicedesign.com/feed/"]});</script>
