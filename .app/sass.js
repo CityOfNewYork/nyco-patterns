@@ -3,9 +3,9 @@
  */
 
 const Sass = require('node-sass');
-const modules = require('../config/sass');
 const Path = require('path');
 const Fs = require('fs');
+const modules = require('../config/modules');
 
 /**
  * Init
@@ -27,5 +27,4 @@ modules.forEach(function(module) {
       });
     }
   });
-
 });

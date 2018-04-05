@@ -2,7 +2,12 @@
  * Config
  */
 
+const package = require('../package.json');
+
 const variables = {
+  version: package.version,
+  vTailwindcss: package.dependencies.tailwindcss.replace('^', ''),
+  vBootstrap: '2.3.2',
   fonts: {
     'system': [
       '-apple-system',

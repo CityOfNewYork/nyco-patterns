@@ -2,10 +2,9 @@
  * Config
  */
 
+const package = require('../package.json');
+
 const sass = {
-  file: './src/scss/site-default.scss',
-  outDir: process.env.npm_package_config_style_bundle_dir,
-  outFile: process.env.npm_package_config_style_bundle,
   sourceMapEmbed: true,
   precision: 2,
   includePaths: [
@@ -14,12 +13,18 @@ const sass = {
 };
 
 const modules = [
-  sass,
+  {
+    file: './src/scss/patterns-default.scss',
+    outDir: './dist/styles/',
+    outFile: 'nyco-patterns-default.css',
+    sourceMapEmbed: sass.sourceMapEmbed,
+    precision: sass.precision,
+    includePaths: sass.includePaths
+  },
   {
     file: './src/objects/feed/_feed.scss',
     outDir: './dist/objects/feed/',
     outFile: 'feed.css',
-    outputStyle: 'compressed',
     precision: sass.precision,
     includePaths: sass.includePaths
   }

@@ -1,6 +1,6 @@
 {
   "name": "nyco-patterns",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NYC.gov Agency Styles and Extension",
   "author": "The Mayor's Office for Economic Opportunity",
   "license": "GPL-3.0+",
@@ -17,9 +17,6 @@
     "port": "8000",
     "postcss": "./config/",
     "rollup": "./config/rollup.js",
-    "style_bundle": "site.concat.css",
-    "style_bundle_dir": "./bundle/styles/",
-    "style_dist": "dist/styles/site.min.css",
     "svg_src": "./src/svg",
     "svg_dist": "./dist/svg",
     "svg_partial": "./src/views/partials/icons.slm"
@@ -37,7 +34,7 @@
     "styles": "npm run styles:variables && npm run styles:sass && npm run styles:postcss",
     "styles:variables": "node .app/variables.js",
     "styles:sass": "node .app/sass.js",
-    "styles:postcss": "postcss $npm_package_config_style_bundle_dir$npm_package_config_style_bundle --config $npm_package_config_postcss -o $npm_package_config_style_dist",
+    "styles:postcss": "node .app/postcss.js",
     "styles:watch": "nodemon --ext scss --watch src --ignore _variables.scss -x 'npm run styles'",
     "svgs": "npm run svgs:optimize && npm run svgs:symbol",
     "svgs:optimize": "svgo -f $npm_package_config_svg_src -o $npm_package_config_svg_dist",
@@ -67,9 +64,7 @@
     "lodash-es": "^4.17.7",
     "node-sass": "^4.8.3",
     "nodemon": "^1.11.0",
-    "postcss-cli": "^5.0.0",
-    "postcss-sass": "^0.3.0",
-    "postcss-scss": "^1.0.4",
+    "postcss": "^6.0.21",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-eslint": "^4.0.0",
@@ -87,7 +82,7 @@
   "dependencies": {
     "lodash-es": "^4.17.7",
     "promise-polyfill": "^7.1.1",
-    "tailwindcss": "^0.5.1"
+    "tailwindcss": "^0.5.2"
   },
   "babel": {
     "plugins": [
