@@ -3,7 +3,7 @@
 = mixin('feed-configuration')
   div class='${class_demo_class_containers}'
     div#js-configuration
-      div v-for='item, name in config'
+      div v-for='item, name in config' v-bind:id='name'
         div v-if='' class='mb-2'
           div class='code-block mb-1'
             pre
@@ -14,7 +14,7 @@
               div v-if='item != ""' class='code__comment'
                 = 'default: {{ item }}'
           ul v-if='typeof item === "object" && typeof docs[name] !== "string"'
-            li v-for='value, key in item'
+            li v-for='value, key in item' v-bind:id='name + "." + key'
               p
                 code class='mr-1' = '{{ key }}'
                 = '{{ docs[name][key] }}'
@@ -124,8 +124,8 @@
 
     var production = {
       polyfill: 'https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated',
-      module: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.1/dist/objects/feed/Feed.js',
-      styles: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.1/dist/objects/feed/feed.css'
+      module: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.2/dist/objects/feed/Feed.js',
+      styles: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.2/dist/objects/feed/feed.css'
     };
 
     var demonstration = {

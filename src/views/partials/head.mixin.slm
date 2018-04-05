@@ -5,7 +5,7 @@
     meta name='viewport' content='width=device-width, initial-scale=1'
 
     <!-- NYCO PATTERNS -->
-    link rel='stylesheet' href='styles/site.min.css'
+    link rel='stylesheet' href='styles/nyco-patterns-default.css'
 
     <!-- GLOBAL STYLES -->
     link href='https://www1.nyc.gov/assets/home/css/css-min/global.css' media='screen' rel='stylesheet' type='text/css'

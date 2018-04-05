@@ -37,11 +37,14 @@
         p
           | The <b>Feed Object</b> can take any feed and display is as a widget anywhere on a page. Currently, it's configured to work with Medium feeds. You can add combine multiple feed urls to display as many posts from different user profiles, publications, or tagged pages in publications. Refer to the <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a> on available feeds.
 
-        h2#usage
-          a href='#usage' Usage
+        h2#customize-your-feed
+          a href='customize-your-feed' Customize your feed
 
         p
-          | You can use <a href='customize-your-feed'>this form to customize your own feed</a> or you can follow the steps below.
+          | You can use <a href='customize-your-feed'>this form to customize your own feed</a> or you can follow the steps below to embed it manually.
+
+        h2#usage
+          a href='#usage' Usage
 
         p
           | To use the feed, include the following scripts in your page:
@@ -95,6 +98,12 @@
           | To change an option, add the desired variable to the configuration object above. Keep in mind they should be the same type (string or number) as they are listed below.
 
         = mixin('feed-configuration')
+
+        h2#layouts
+          a href='#layouts' Layouts
+
+        p
+          | In the bundled styles for this component there are three layouts for the Feed items: 1 column (default), 2 column, and 3 column. In order to utilize the 2 or 3 column layouts, configure the <code>classes.wrapper</code> parameter to <code>o-feed--3-column</code> for 3 columns and <code>o-feed--2-column</code> for 2 columns.
 
         h2#templates
           a href='#templates' Templates

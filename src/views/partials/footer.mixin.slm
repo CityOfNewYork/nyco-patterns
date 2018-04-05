@@ -1,6 +1,5 @@
 = partial('links.slm')
 
 = mixin('footer')
-  p
-    | Maintained by&nbsp;
-    a href='${link_github_team}' NYC Opportunity
+  p class='m-0'
+    | Maintained by <a href='${link_github_team}'>@CityOfNewYork/NYCOpportunity</a> on GitHub.
