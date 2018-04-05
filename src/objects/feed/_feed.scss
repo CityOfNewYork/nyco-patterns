@@ -47,14 +47,6 @@
   margin-top: map-get(map-get($variables, 'margin'), 3);
 }
 
-.o-feed__url,
-.c-feed-item__excerpt,
-.c-feed-item__link,
-.c-feed-item__cta,
-.c-feed-item__date {
-  color: initial;
-}
-
 // Column Layouts
 [class*='o-feed--'][class*='-column'] {
   .o-feed__items {

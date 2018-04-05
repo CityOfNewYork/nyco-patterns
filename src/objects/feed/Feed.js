@@ -143,7 +143,7 @@ Feed.templates = {
     opener: [
       '<section class="o-feed <%- settings.classes.wrapper %>" style="',
         '<% if (settings.fontSize) { %>font-size: <%- settings.fontSize %>;<% } %>',
-        '<% if (settings.color) { %>color: <%- settings.color %>;<% } %>',
+        '<% if (settings.postBorderColor) { %>border-color: <%- settings.postBorderColor %>;<% } %>',
       '">'
     ].join(''),
     header: [
@@ -169,7 +169,9 @@ Feed.templates = {
       '</header>'
     ].join(''),
     posts: [
-      '<div class="o-feed__items">',
+      '<div class="o-feed__items" style="',
+        'border-color: <%- settings.postBorderColor %>;',
+      '">',
         '<% _each(items, function(post) { %>',
           '<div class="c-feed-item <%- settings.classes.feedItem %>">',
             '<h4 class="c-feed-item__title <%- settings.classes.title %>">',
@@ -239,7 +241,7 @@ Feed.process = {
       post.excerpt = excerpt;
 
       // Format the date
-      date = new Date(post.pubDate)
+      date = new Date(Date.parse(post.pubDate.replace(' ', 'T')))
         .toLocaleDateString(settings.postDateLocal, settings.postDateFormat);
 
       post.date = date;
@@ -292,8 +294,8 @@ Feed.default = {
   title: '',
   profileImg: '',
   fontSize: '',
-  color: 'lightsteelblue',
   ratioProfile: ['50', '50'],
+  postBorderColor: 'lightsteelblue',
   postImgHeight: '200px',
   postExcerptLength: 120,
   postExcerptTrail: '…',
