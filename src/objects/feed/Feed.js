@@ -16,6 +16,7 @@ import _uniqBy from 'lodash-es/uniqBy';
 class Feed {
   constructor(config) {
     this.default = Feed.default;
+    this.templates = Feed.templates;
     this.settings = _merge({}, Feed.default, config);
   }
 
@@ -145,7 +146,7 @@ Feed.templates = {
         '<% if (settings.fontSize) { %>font-size: <%- settings.fontSize %>;<% } %>',
         '<% if (settings.postBorderColor) { %>border-color: <%- settings.postBorderColor %>;<% } %>',
       '">'
-    ].join(''),
+    ],
     header: [
       '<header class="o-feed__header <%- settings.classes.header %>">',
         '<div class="o-feed__avatar <%- settings.classes.avatar %>">',
@@ -167,7 +168,7 @@ Feed.templates = {
           '<% } %>',
         '</a>',
       '</header>'
-    ].join(''),
+    ],
     posts: [
       '<div class="o-feed__items" style="',
         'border-color: <%- settings.postBorderColor %>;',
@@ -207,9 +208,10 @@ Feed.templates = {
           '</div>',
         '<% }); %>',
       '</div>'
-    ].join(''),
-    closer:
+    ],
+    closer: [
       '</section>'
+    ]
   }
 };
 
@@ -321,10 +323,10 @@ Feed.default = {
     date: ''
   },
   templates: {
-    opener: Feed.templates.medium.opener,
-    header: Feed.templates.medium.header,
-    posts: Feed.templates.medium.posts,
-    closer: Feed.templates.medium.closer
+    opener: Feed.templates.medium.opener.join(''),
+    header: Feed.templates.medium.header.join(''),
+    posts: Feed.templates.medium.posts.join(''),
+    closer: Feed.templates.medium.closer.join('')
   },
   log: false
 };

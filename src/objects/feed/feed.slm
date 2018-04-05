@@ -23,93 +23,47 @@
 
 
 = mixin('feed-template')
-  div class='${class_demo_class_containers}'
-    code class='code' templates.opener
+  div#js-templates
 
-  div class='${class_demo_class_containers}'
-    div class='code-block'
-      pre
-        div class='code__comment' = '// The opening template tag or wrapper of the entire feed.'
-        div = '<section class="o-feed <%- settings.classes.wrapper %>" style="'
-        div = '  <% if (settings.fontSize) { %>font-size: <%- settings.fontSize %>;<% } %>'
-        div = '  <% if (settings.color) { %>color: <%- settings.color %>;<% } %>'
-        div = '">'
+    div class='${class_demo_class_containers}'
+      code class='code' templates.opener
 
-  div class='${class_demo_class_containers}'
-    code class='code' templates.header
+    div class='${class_demo_class_containers}'
+      div class='code-block'
+        pre
+          div class='code__comment' = '// The opening template tag or wrapper of the entire feed.'
+          div v-for='template in templates.medium.opener'
+            = '{{ template }}'
 
-  div class='${class_demo_class_containers}'
-    div class='code-block'
-      pre
-        div class='code__comment' = '// The header template that sits at the top of the posts.'
-        div = '<header class="o-feed__header <%- settings.classes.header %>">'
-        div = '  <div class="o-feed__avatar <%- settings.classes.avatar %>">'
-        div = '    <img src="'
-        div = '          <% if (settings.profileImg !== "") { %>'
-        div = '            <%- settings.profileImg %>'
-        div = '          <% } else { %>'
-        div = '            <%- feed.profileImg %>'
-        div = '          <% } %>" '
-        div = '         width="<%- settings.ratioProfile[0] %>" '
-        div = '         height="<%- settings.ratioProfile[1] %>">'
-        div = '  </div>'
-        div = '  <a class="o-feed__url <%- settings.classes.avatar %>"'
-        div = '     href="<%- feed.url %>" target="_blank" rel="noopener noreferrer nofollow">'
-        div = '    <% if (settings.title !== "") { %>'
-        div = '      <%- settings.title %>'
-        div = '    <% } else { %>'
-        div = '      <%- feed.title %>'
-        div = '    <% } %>'
-        div = '  </a>'
-        div = '</header>'
+    div class='${class_demo_class_containers}'
+      code class='code' templates.header
 
-  div class='${class_demo_class_containers}'
-    code class='code' templates.posts
+    div class='${class_demo_class_containers}'
+      div class='code-block'
+        pre
+          div class='code__comment' = '// The header template that sits at the top of the posts.'
+          div v-for='template in templates.medium.header'
+            = '{{ template }}'
 
-  div class='${class_demo_class_containers}'
-    div class='code-block'
-      pre
-        div class='code__comment' = '// The posts loop including the posts template.'
-        div = '<% _each(items, function(post) { %>'
-        div = '  <div class="c-feed-item <%- settings.classes.feedItem %>">'
-        div = '    <h4 class="c-feed-item__title <%- settings.classes.title %>">'
-        div = '      <a class="c-feed-item__link <%- settings.classes.link %>"'
-        div = '         href="<%- post.guid %>"'
-        div = '         target="_blank"'
-        div = '         rel="noopener noreferrer nofollow">'
-        div = '        <%- post.title %>'
-        div = '      </a>'
-        div = '    </h4>'
-        div = '    <span class="c-feed-item__date <%- settings.classes.date %>" '
-        div = '          title="<%- settings.postDateTitle %>">'
-        div = '      <%- post.date %>'
-        div = '    </span>'
-        div = '    <div class="c-feed-item__thumbnail <%- settings.classes.thumbnail %>">'
-        div = '      <img style="width: <%- settings.ratioPostImg[0] %>;max-height: <%- settings.ratioPostImg[1] %>;" '
-        div = '           src="<%- post.thumbnail %>">'
-        div = '    </div>'
-        div = '    <p class="c-feed-item__excerpt <%- settings.classes.excerpt %>">'
-        div = '      <%- post.excerpt %><%- settings.postExcerptTrail %>'
-        div = '    </p>'
-        div = '    <div class="c-feed-item__footer <%- settings.classes.itemFooter %>">'
-        div = '      <a class="c-feed-item__cta <%- settings.classes.cta %>" '
-        div = '         href="<%- post.guid %>" '
-        div = '         target="_blank" '
-        div = '         rel="noopener noreferrer nofollow">'
-        div = '        <%- settings.postCtaText %>'
-        div = '      </a>'
-        div = '    </div>'
-        div = '  </div>'
-        div = '<% }); %>'
+    div class='${class_demo_class_containers}'
+      code class='code' templates.posts
 
-  div class='${class_demo_class_containers}'
-    code class='code' templates.closer
+    div class='${class_demo_class_containers}'
+      div class='code-block'
+        pre
+          div class='code__comment' = '// The posts loop including the posts template.'
+          div v-for='template in templates.medium.posts'
+            = '{{ template }}'
 
-  div class='${class_demo_class_containers}'
-    div class='code-block'
-      pre
-        div class='code__comment' = '// The closing template tag or wrapper of the entire feed.'
-        div = '</section>'
+    div class='${class_demo_class_containers}'
+      code class='code' templates.closer
+
+    div class='${class_demo_class_containers}'
+      div class='code-block'
+        pre
+          div class='code__comment' = '// The closing template tag or wrapper of the entire feed.'
+          div v-for='template in templates.medium.closer'
+            = '{{ template }}'
 
 
 = mixin('feed-demo')
@@ -120,155 +74,4 @@
   script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js'
   script src='https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&flags=gated'
   script src='objects/feed/FeedDocs.js'
-  javascript:
-
-    var production = {
-      polyfill: 'https://cdn.polyfill.io/v2/polyfill.js?features=Promise&flags=gated',
-      module: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.2/dist/objects/feed/Feed.js',
-      styles: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.2/dist/objects/feed/feed.css'
-    };
-
-    var demonstration = {
-      polyfill: production.polyfill,
-      module: 'objects/feed/Feed.js',
-      styles: 'objects/feed/feed.css'
-    };
-
-    // Configuration for the page feed
-    var config = {
-      title: 'News from NYC Opportunity',
-      profileImg: 'https://cdn-images-1.medium.com/fit/c/100/100/1*CqAMY6M5PeJ5nBOc8MKcvA.png',
-      selector: '#js-feed',
-      feed: [
-        'https://medium.com/feed/nyc-opportunity/',
-        'https://civicservicedesign.com/feed/'
-      ]
-    };
-
-    /**
-     * A self-selecting function for event listenters
-     */
-    function selectEmbed() {
-      this.select();
-    }
-
-    /**
-     * Creates a self executing embeddable script using a custom configration
-     * and source. Mirrors the self executing function below.
-     * @param  {object}  config The configuration that will be passed to the function script
-     * @param  {object}  source A dictionary of scripts to load, requires the cdn source of this script
-     * @param  {boolean} focus  Wether or not to focus on the text field
-     */
-    function createEmbed(config, source, focus) {
-      focus = (typeof focus === 'undefined') ? false : focus;
-      var clipboard = [
-        "<script type='text/javascript'>",
-        "(function(config, source, callback){",
-          "var ss=source;var c=0;",
-          "for(k in ss){",
-            "var s=ss[k];",
-            "if (k === 'styles') {",
-              "ss[k] = document.createElement('link');",
-              "ss[k].setAttribute('rel', 'stylesheet');",
-              "ss[k].setAttribute('type', 'text/css');",
-              "ss[k].setAttribute('media', 'screen');",
-              "ss[k].setAttribute('href', s);",
-            "} else {",
-              "ss[k] = document.createElement('script');",
-              "ss[k].setAttribute('type', 'text/javascript');",
-              "ss[k].setAttribute('src', s);",
-            "}",
-            "document.head.appendChild(ss[k]);",
-            "ss[k].onload=function(){",
-              "c++;if(c===Object.keys(ss).length)init();",
-            "}",
-          "}",
-          "function init(){",
-            "var f=new Feed(config).init();",
-            "if(callback)callback(f);",
-          "};",
-        "})({{ config }}, {{ source }});",
-        "<\/script>"
-      ];
-      if (config.selector.indexOf('#') >= 0) {
-        clipboard.unshift(
-          "<div id='" + config.selector.replace('#','') + "'></div>"
-        );
-      }
-      var embed = document.getElementById('js-embed');
-      if (embed) {
-        embed.addEventListener('focus', selectEmbed);
-        embed.addEventListener('click', selectEmbed);
-        embed.value = clipboard.join('')
-          .replace('{{ config }}', JSON.stringify(config))
-          .replace('{{ source }}', JSON.stringify(source));
-        if (focus) {
-          window.location.hash = 'your-feed';
-          embed.focus();
-        }
-      }
-    } createEmbed(config, production);
-
-    /**
-     * This is the initialization for the documentation functionality
-     * @param  {object} feed Our demonstration feed.
-     */
-    function init(feed) {
-      var docs = new FeedDocs();
-      // Documentation app
-      if (document.getElementById('js-configuration')) {
-        new Vue({
-          el: '#js-configuration',
-          data: {
-            config: feed.default,
-            docs: docs.default
-          },
-        });
-      }
-
-      // Custom Feed app
-      if (document.getElementById('js-controls')) {
-        new Vue({
-          el: '#js-controls',
-          data: {
-            config: Object.assign(feed.default, config),
-            docs: docs.default
-          },
-          methods: {
-            render: function(event) {
-              event.preventDefault();
-              new Feed(Object.assign(config, this.config)).init();
-              createEmbed(this.config, production, true);
-            }
-          }
-        });
-      }
-    }
-
-    // Self initiating function for the Feed script. This should mostly mirror
-    // the clipboard string in the createEmbed function above.
-    (function(config, source, callback) {
-      var ss = source; var c = 0;
-      for (k in ss) {
-        var s = ss[k];
-        if (k === 'styles') {
-          ss[k] = document.createElement('link');
-          ss[k].setAttribute('rel', 'stylesheet');
-          ss[k].setAttribute('type', 'text/css');
-          ss[k].setAttribute('media', 'screen');
-          ss[k].setAttribute('href', s);
-        } else {
-          ss[k] = document.createElement('script');
-          ss[k].setAttribute('type', 'text/javascript');
-          ss[k].setAttribute('src', s);
-        }
-        document.head.appendChild(ss[k]);
-        ss[k].onload = function() {
-          c++; if (c === Object.keys(ss).length) init();
-        }
-      };
-      function init() {
-        var f = new Feed(config).init();
-        if (callback) callback(f);
-      };
-    })(config, demonstration, init);
+  script src='scripts/feed.js'
