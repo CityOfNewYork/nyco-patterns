@@ -55,7 +55,7 @@
               div
                 = '<script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated" type="text/javascript"> '
                 span class='code__comment' = '<!-- The feed component uses Promises so this polyfill is needed for IE support -->'
-              div = '<script src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.1/dist/objects/feed/Feed.js" type="text/javascript">'
+              div = '<script src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v' + this.vars.version + '/dist/objects/feed/Feed.js" type="text/javascript">'
 
         p
           | Optionally, but recommended, include the base styling for the feed:
@@ -63,7 +63,7 @@
         p
           div class='code-block'
             pre
-              div = '<link src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.1/dist/objects/feed/feed.css" rel="stylesheet" type="text/css" media="screen">'
+              div = '<link src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v' + this.vars.version + '/dist/objects/feed/feed.css" rel="stylesheet" type="text/css" media="screen">'
 
         p
           | Then, add a container with the feed's id and the execution script with configuration parameters.
