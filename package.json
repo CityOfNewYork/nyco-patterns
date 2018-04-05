@@ -81,7 +81,7 @@
   },
   "dependencies": {
     "lodash-es": "^4.17.7",
-    "promise-polyfill": "^7.1.1",
+    "polyfill-service": "^3.25.1",
     "tailwindcss": "^0.5.2"
   },
   "babel": {

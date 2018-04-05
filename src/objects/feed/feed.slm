@@ -118,12 +118,12 @@
 
 = mixin('feed-script')
   script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js'
-  script src='https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&gated=gated'
+  script src='https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&flags=gated'
   script src='objects/feed/FeedDocs.js'
   javascript:
 
     var production = {
-      polyfill: 'https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated',
+      polyfill: 'https://cdn.polyfill.io/v2/polyfill.js?features=Promise&flags=gated',
       module: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.2/dist/objects/feed/Feed.js',
       styles: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.2/dist/objects/feed/feed.css'
     };
@@ -163,8 +163,8 @@
       focus = (typeof focus === 'undefined') ? false : focus;
       var clipboard = [
         "<script type='text/javascript'>",
-        "(function(config){",
-          "var ss={{ source }};",
+        "(function(config, source, callback){",
+          "var ss=source;var c=0;",
           "for(k in ss){",
             "var s=ss[k];",
             "if (k === 'styles') {",
@@ -179,11 +179,15 @@
               "ss[k].setAttribute('src', s);",
             "}",
             "document.head.appendChild(ss[k]);",
-          "};",
-          "ss.module.onload=function(){",
-            "new Feed(config).init();",
+            "ss[k].onload=function(){",
+              "c++;if(c===Object.keys(ss).length)init();",
+            "}",
           "}",
-        "})({{ config }});",
+          "function init(){",
+            "var f=new Feed(config).init();",
+            "if(callback)callback(f);",
+          "};",
+        "})({{ config }}, {{ source }});",
         "<\/script>"
       ];
       if (config.selector.indexOf('#') >= 0) {
@@ -205,10 +209,46 @@
       }
     } createEmbed(config, production);
 
+    /**
+     * This is the initialization for the documentation functionality
+     * @param  {object} feed Our demonstration feed.
+     */
+    function init(feed) {
+      var docs = new FeedDocs();
+      // Documentation app
+      if (document.getElementById('js-configuration')) {
+        new Vue({
+          el: '#js-configuration',
+          data: {
+            config: feed.default,
+            docs: docs.default
+          },
+        });
+      }
+
+      // Custom Feed app
+      if (document.getElementById('js-controls')) {
+        new Vue({
+          el: '#js-controls',
+          data: {
+            config: Object.assign(feed.default, config),
+            docs: docs.default
+          },
+          methods: {
+            render: function(event) {
+              event.preventDefault();
+              new Feed(Object.assign(config, this.config)).init();
+              createEmbed(this.config, production, true);
+            }
+          }
+        });
+      }
+    }
+
     // Self initiating function for the Feed script. This should mostly mirror
     // the clipboard string in the createEmbed function above.
-    (function(config, production, demonstration, createEmbed) {
-      var ss = demonstration;
+    (function(config, source, callback) {
+      var ss = source; var c = 0;
       for (k in ss) {
         var s = ss[k];
         if (k === 'styles') {
@@ -223,40 +263,12 @@
           ss[k].setAttribute('src', s);
         }
         document.head.appendChild(ss[k]);
+        ss[k].onload = function() {
+          c++; if (c === Object.keys(ss).length) init();
+        }
       };
-      ss.module.onload = function() {
+      function init() {
         var f = new Feed(config).init();
-
-        // Everything below this is not needed for the embed
-        var d = new FeedDocs();
-        // Documentation app
-        if (document.getElementById('js-configuration')) {
-          new Vue({
-            el: '#js-configuration',
-            data: {
-              config: f.default,
-              docs: d.default
-            },
-          });
-        }
-        // Custom Feed app
-        if (document.getElementById('js-controls')) {
-          new Vue({
-            el: '#js-controls',
-            data: {
-              config: Object.assign(f.default, config),
-              docs: d.default
-            },
-            methods: {
-              render: function(event) {
-                event.preventDefault();
-                new Feed(Object.assign(config, this.config)).init();
-                createEmbed(this.config, production, true);
-              }
-            }
-          });
-        }
-        // end
-
+        if (callback) callback(f);
       };
-    })(config, production, demonstration, createEmbed);
+    })(config, demonstration, init);
