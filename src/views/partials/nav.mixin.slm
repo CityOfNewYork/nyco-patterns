@@ -1,35 +1,35 @@
 = mixin('nav')
-  nav class='pb-2'
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t pr-2 screen-tablet:p-2' href='index'
+  nav class='screen-tablet:pb-2'
+    a class='${class_nav_link} pr-2' href='index'
       | Home
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='${link_source}'
+    a class='${class_nav_link}' href='${link_source}'
       | Github
-      span class='text-primary-blue-50t mx-1'
+      span class='${class_nav_link_sub}'
         = this.vars.version
 
-  nav class='pb-2'
-    span class='screen-tablet:block pb-1' Elements:
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='colors' Colors
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='icons' Icons
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='links' Links
+  nav class='screen-tablet:pb-2'
+    span class='${class_nav_link_header}' Elements:
+    a class='${class_nav_link}' href='colors' Colors
+    a class='${class_nav_link}' href='icons' Icons
+    a class='${class_nav_link}' href='links' Links
 
-  nav class='pb-2'
-    span class='screen-tablet:block pb-1' Objects:
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='feed' Feed
+  nav class='screen-tablet:pb-2'
+    span class='${class_nav_link_header}' Objects:
+    a class='${class_nav_link}' href='feed' Feed
 
   nav
     span class='screen-tablet:block pb-1' References:
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='${link_bootstrap}' target='_blank' rel='noindex nofollow'
+    a class='${class_nav_link}' href='${link_bootstrap}' target='_blank' rel='noindex nofollow'
       | Bootstrap
-      span class='text-primary-blue-50t mx-1'
+      span class='${class_nav_link_sub}'
         = this.vars.vBootstrap
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='${link_tailwind_docs}' target='_blank' rel='noindex nofollow'
+    a class='${class_nav_link}' href='${link_tailwind_docs}' target='_blank' rel='noindex nofollow'
       | Tailwind.css
-      span class='text-primary-blue-50t mx-1'
+      span class='${class_nav_link_sub}'
         = this.vars.vTailwindcss
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='${link_nyc_opportunity}' target='_blank' rel='noindex nofollow'
+    a class='${class_nav_link}' href='${link_nyc_opportunity}' target='_blank' rel='noindex nofollow'
       | NYC Opportunity
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='${link_blueprint}' target='_blank' rel='noindex nofollow'
+    a class='${class_nav_link}' href='${link_blueprint}' target='_blank' rel='noindex nofollow'
       | NYC Digital Blueprint
-    a class='screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-2' href='${link_city_style_guide}' target='_blank' rel='noindex nofollow'
+    a class='${class_nav_link}' href='${link_city_style_guide}' target='_blank' rel='noindex nofollow'
       | City Style Guide
