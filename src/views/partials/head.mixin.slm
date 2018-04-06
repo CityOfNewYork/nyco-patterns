@@ -25,6 +25,8 @@
 
     title = this.title
 
+    | <script type="text/javascript">var VERSION = "${this.vars.version}";</script>
+
     noscript
       style
         = 'body { visibility: visible !important; }'

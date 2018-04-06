@@ -82,3 +82,15 @@
     max-width: 50%;
   }
 }
+
+/**
+ * Utilities
+ */
+
+.fs-inherit {
+  font-size: inherit !important
+}
+
+.ws-unset {
+  white-space: unset !important
+}

@@ -1,9 +1,8 @@
 
-
 var production = {
   polyfill: 'https://cdn.polyfill.io/v2/polyfill.js?features=Promise&flags=gated',
-  module: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.2/dist/objects/feed/Feed.js',
-  styles: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.2/dist/objects/feed/feed.css'
+  module: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/' + VERSION + '/dist/objects/feed/Feed.js',
+  styles: 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/' + VERSION + '/dist/objects/feed/feed.css'
 };
 
 var demonstration = {
