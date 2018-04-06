@@ -1,4 +1,4 @@
-= mixin('head', 'title = Page Title')
+= mixin('head', 'title = NYCO Patterns')
   head
     meta charset='utf-8'
     meta http-equiv='X-UA-Compatible' content='IE=edge'
@@ -23,7 +23,10 @@
     link href='https://www1.nyc.gov/assets/home/css/pages/agencies/index.css' media='screen' rel='stylesheet' type='text/css'
     link href='https://www1.nyc.gov/assets/opportunity/css/agency-styles.css' media='screen' rel='stylesheet' type='text/css'
 
-    title = this.title
+    - if this.title == 'NYCO Patterns'
+      title = this.title
+    - else
+      title = this.title + ' | NYCO Patterns'
 
     | <script type="text/javascript">var VERSION = "${this.vars.version}";</script>
 

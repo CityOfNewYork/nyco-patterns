@@ -14,7 +14,7 @@
 
 / Content blocks
 = content('head')
-  = mixin('head', 'Pattern Library')
+  = mixin('head')
 
 = content('header')
   = mixin('header')
