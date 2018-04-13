@@ -15,7 +15,6 @@
   "main": "npm run start",
   "config": {
     "port": "8000",
-    "postcss": "./config/",
     "rollup": "./config/rollup.js",
     "svg_src": "./src/svg",
     "svg_dist": "./dist/svg",

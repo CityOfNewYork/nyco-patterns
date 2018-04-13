@@ -13,58 +13,54 @@ import eslint from 'rollup-plugin-eslint';
  */
 
 // Rollup Configuration
-const plugins = [
-  // eslint(), TODO: ES lint is throwing errors, it needs to be configured for ES6
-  resolve(),
-  babel({
-    exclude: '../node_modules/**'
-  }),
-  uglify()
-];
+const rollup = {
+  sourcemap: 'inline',
+  format: 'iife',
+  strict: true,
+  plugins: [
+    // eslint(), TODO: ES lint is throwing errors, it needs to be configured for ES6
+    resolve(),
+    babel({
+      exclude: '../node_modules/**'
+    }),
+    uglify()
+  ]
+};
 
-const sourcemap = 'inline';
-const format = 'iife';
-const strict = true;
-const name = 'NycoPattterns'; // Name of the main script
 const modules = [ // Our list of modules we are exporting
   {
-    name: 'Feed',
-    dir: 'objects/feed'
+    input: './src/js/main.js',
+    output: {
+      name: 'NycoPattterns',
+      file: `./dist/scripts/NycoPattterns.js`,
+      sourcemap: rollup.sourcemap,
+      format: rollup.format,
+      strict: rollup.strict
+    },
+    plugins: rollup.plugins
   },
   {
-    name: 'FeedDocs',
-    dir: 'objects/feed'
+    input: './src/objects/feed/Feed.js',
+    output: {
+      name: 'Feed',
+      file: `./dist/objects/feed/Feed.js`,
+      sourcemap: rollup.sourcemap,
+      format: rollup.format,
+      strict: rollup.strict
+    },
+    plugins: rollup.plugins
+  },
+  {
+    input: './src/objects/feed/FeedDocs.js',
+    output: {
+      name: 'FeedDocs',
+      file: `./dist/objects/feed/FeedDocs.js`,
+      sourcemap: rollup.sourcemap,
+      format: rollup.format,
+      strict: rollup.strict
+    },
+    plugins: rollup.plugins
   }
 ];
-
-// Create main package
-const Main = {
-  input: './src/js/main.js',
-  output: {
-    name: name,
-    file: `./dist/scripts/${name}.js`,
-    sourcemap: sourcemap,
-    format: format,
-    strict: strict
-  },
-  plugins: plugins
-};
-
-// Create packages for our other modules
-for (let i = 0; i < modules.length; i++) {
-  modules[i] = {
-    input: `./src/${modules[i].dir}/${modules[i].name}.js`,
-    output: {
-      name: modules[i].name,
-      file: `./dist/${modules[i].dir}/${modules[i].name}.js`,
-      sourcemap: sourcemap,
-      format: format,
-      strict: strict
-    },
-    plugins: plugins
-  }
-};
-
-modules.push(Main);
 
 export default modules;

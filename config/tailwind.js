@@ -9,7 +9,7 @@ const variables = require('./variables.js');
  * Config
  */
 
-module.exports = {
+const tailwind = {
   fonts: variables.fonts,
   fontWeights: variables.fonts,
   textSizes: variables.fonts,
@@ -53,3 +53,5 @@ module.exports = {
     separator: ':'
   }
 };
+
+module.exports = tailwind;

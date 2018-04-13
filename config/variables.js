@@ -4,6 +4,10 @@
 
 const package = require('../package.json');
 
+/**
+ * Config
+ */
+
 const variables = {
   version: package.version,
   vTailwindcss: package.dependencies.tailwindcss.replace('^', ''),

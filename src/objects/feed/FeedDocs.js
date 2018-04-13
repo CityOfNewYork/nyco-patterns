@@ -27,7 +27,7 @@ FeedDocs.default = {
   postDateFormat: 'This is a parameter used by Date.toLocaleDateString(), Refer to the documentation above for configuration details.',
   postDateTitle: 'This is the title set to the published date element to provide context on mouseover.',
   classes: {
-    wrapper: 'Adds classes to to the wrapper for the whole widget. There are two classes that are available to change the Feed items layout to 2 or 3 columns: "o-feed--column-2" or "o-feed--column-3".',
+    wrapper: 'Adds classes to to the wrapper for the whole widget. There are two classes that are available to change the Feed items layout to 2 or 3 columns: "o-feed--2-column" or "o-feed--3-column".',
     header: 'Adds classes to the widget header above the post list.',
     url: 'Adds classes to to the feeds\'s url.',
     feedItem: 'Adds classes to to the feeds\'s posts.',

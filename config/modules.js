@@ -1,8 +1,12 @@
 /**
- * Config
+ * Dependencies
  */
 
-const package = require('../package.json');
+// ...
+
+/**
+ * Config
+ */
 
 const sass = {
   sourceMapEmbed: true,
