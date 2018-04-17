@@ -49,7 +49,7 @@
 }
 
 // Column Layouts
-[class*='o-feed--'][class*='-column'] {
+[class*='o-feed-'][class*='column'] {
   .o-feed__items {
     display: flex;
     flex-wrap: wrap;
@@ -73,7 +73,7 @@
   }
 }
 
-.o-feed--3-column {
+.o-feed-3column {
   .c-feed-item,
   .o-feed__items:after {
     flex: 0 0 31%;
@@ -83,7 +83,7 @@
   }
 }
 
-.o-feed--2-column {
+.o-feed-2column {
   .c-feed-item,
   .o-feed__items:after {
     flex: 0 0 49%;

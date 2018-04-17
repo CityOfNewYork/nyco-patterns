@@ -9,9 +9,9 @@
             pre
               div
                 = '{{ name }}'
-              div class='code__comment'
+              div class='text-primary-blue'
                 = 'type: {{ typeof item }}'
-              div v-if='item != ""' class='code__comment'
+              div v-if='item != ""' class='text-primary-navy-70t'
                 = 'default: {{ item }}'
           ul v-if='typeof item === "object" && typeof docs[name] !== "string"'
             li v-for='value, key in item' v-bind:id='name + "." + key'
