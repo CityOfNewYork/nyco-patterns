@@ -27,8 +27,6 @@ var config = (hash) ? hash : {
   ]
 };
 
-console.dir(config.classes);
-
 /**
  * A self-selecting function for event listenters
  */
