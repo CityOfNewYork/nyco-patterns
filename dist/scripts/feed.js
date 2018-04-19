@@ -27,6 +27,8 @@ var config = (hash) ? hash : {
   ]
 };
 
+console.dir(config.classes);
+
 /**
  * A self-selecting function for event listenters
  */
@@ -167,6 +169,11 @@ function init(feed) {
         docs: docs.default
       },
       methods: {
+        setObjValue: function(name, key) {
+          if (this.config[name]) {
+            return this.config[name][key];
+          }
+        },
         setObj: function(name, key, value) {
           if (!this.config[name]) {
             this.config[name] = {}

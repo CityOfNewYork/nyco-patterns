@@ -80,9 +80,9 @@
                     = '{{ name }}.{{ key }}'
                     | &nbsp;
                     span class='code__comment' title='Default type'
-                      = '{{ typeof item }}'
+                      = '{{ typeof item[key] }}'
                   label class='control-label' style='margin: 0 !important'
-                    input type='text' v-bind:name='name + value' v-bind:id='name + value' v-on:change='setObj(name, key, $event.target.value)'
+                    input type='text' v-bind:name='name + value' v-bind:id='name + value' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)'
                   span class='ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1' v-bind:title='docs[name][key]'
                     | ?
                     span style='display:none' = '{{ docs[name][key] }}'
