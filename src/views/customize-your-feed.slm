@@ -106,7 +106,7 @@
           p
             | Copy the following url to share or save these customized Feed settings:
 
-          input#js-share value='${this.site.urls.production}' data-js-share-base='${this.site.urls.production}'
+          input#js-share data-js-share-base='${this.site.urls.production}'
 
         div class='border-8 p-4 border-secondary-white'
           = mixin('feed-demo')

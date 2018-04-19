@@ -105,13 +105,14 @@ function createShare(config, focus) {
   if (share) {
     share.addEventListener('focus', selectSelf);
     share.addEventListener('click', selectSelf);
-    share.value = share.dataset.jsShareBase + window.location.pathname + hash;
+    share.value = share.dataset.jsShareBase +
+      window.location.pathname.replace('/nyco-patterns', '') + hash;
     if (focus) {
       window.location.hash = 'your-feed';
       share.focus();
     }
   }
-}
+} createShare(config);
 
 /**
  * [decodeConfig description]
