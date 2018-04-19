@@ -3,23 +3,22 @@
 = mixin('feed-configuration')
   div class='${class_demo_class_containers}'
     div#js-configuration
-      div v-for='item, name in config' v-bind:id='name'
-        div v-if='' class='mb-2'
-          div class='code-block mb-1'
-            pre
-              div
-                = '{{ name }}'
-              div class='text-primary-blue'
-                = 'type: {{ typeof item }}'
-              div v-if='item != ""' class='text-primary-navy-70t'
-                = 'default: {{ item }}'
-          ul v-if='typeof item === "object" && typeof docs[name] !== "string"'
-            li v-for='value, key in item' v-bind:id='name + "." + key'
-              p
-                code class='mr-1' = '{{ key }}'
-                = '{{ docs[name][key] }}'
-          p v-if='typeof docs[name] === "string"'
-            = '{{ docs[name] }}'
+      div v-for='item, name in config' v-bind:id='name' class='mb-3'
+        div class='code-block mb-1'
+          pre
+            div
+              = '{{ name }}'
+            div class='text-primary-blue'
+              = 'type: {{ typeof item }}'
+            div v-if='item != ""' class='text-primary-navy-70t'
+              = 'default: {{ item }}'
+        ul v-if='typeof item === "object" && typeof docs[name] !== "string"'
+          li v-for='value, key in item' v-bind:id='name + "." + key'
+            p
+              code class='mr-1' = '{{ key }}'
+              = '{{ docs[name][key] }}'
+        p v-if='typeof docs[name] === "string"'
+          = '{{ docs[name] }}'
 
 
 = mixin('feed-template')
@@ -71,7 +70,8 @@
 
 
 = mixin('feed-script')
-  script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js'
+  script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js'
   script src='https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&flags=gated'
+  script src='https://cdn.rawgit.com/revolunet/843889/raw/3c459e7fdc18fb3beae9a2e4853db41e602db7a8/lzw_encoder.js'
   script src='objects/feed/FeedDocs.js'
   script src='scripts/feed.js'

@@ -28,7 +28,7 @@
     - else
       title = this.title + ' | NYCO Patterns'
 
-    | <script type="text/javascript">var VERSION = "${this.vars.version}";</script>
+    | <script type="text/javascript">var VERSION = "${this.site.versions.package}";</script>
 
     noscript
       style

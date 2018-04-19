@@ -12,7 +12,10 @@ const fs = require('fs');
 
 const views = path.join(__dirname, '../', 'src/views/');
 const dist = path.join(__dirname, '../', 'dist/');
-const locals = {vars: require('../config/variables')};
+const locals = {
+  vars: require('../config/variables'),
+  site: require('../config/site')
+};
 
 /**
  * Functions

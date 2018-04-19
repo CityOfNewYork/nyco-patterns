@@ -5,7 +5,7 @@
     a class='${class_nav_link}' href='${link_source}'
       | Github
       span class='${class_nav_link_sub}'
-        = this.vars.version
+        = this.site.versions.package
 
   nav class='screen-tablet:pb-2'
     span class='${class_nav_link_header}' Elements:
@@ -22,11 +22,11 @@
     a class='${class_nav_link}' href='${link_bootstrap}' target='_blank' rel='noindex nofollow'
       | Bootstrap
       span class='${class_nav_link_sub}'
-        = this.vars.vBootstrap
+        = this.site.versions.bootstrap
     a class='${class_nav_link}' href='${link_tailwind_docs}' target='_blank' rel='noindex nofollow'
       | Tailwind.css
       span class='${class_nav_link_sub}'
-        = this.vars.vTailwindcss
+        = this.site.versions.tailwindcss
     a class='${class_nav_link}' href='${link_nyc_opportunity}' target='_blank' rel='noindex nofollow'
       | NYC Opportunity
     a class='${class_nav_link}' href='${link_blueprint}' target='_blank' rel='noindex nofollow'

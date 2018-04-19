@@ -15,6 +15,7 @@ FeedDocs.default = {
   selector: 'The DOM element selector for your feed. The inner html of this element will be replaced with the feed.',
   type: 'The feed type. Currently, only Medium feeds are supported so this shouldn\'t change.',
   title: 'The title of the feed that appears in the header. By default this uses the feed\'s title. However, if using displaying multiple fields this should be set. Otherwise, it will use the last feed title that was loaded.',
+  titleUrl: 'The url that the title links to.',
   profileImg: 'The url to the profile image. By default this uses the feed\'s profile image. However, if using displaying multiple fields this should be set.  Otherwise, it will use the last feed image that was loaded.',
   fontSize: 'Set this to a smaller percentage (say, 85%) to make the feed appear more compact in smaller columns',
   ratioProfile: 'Image source attribute width and height for the account avatar.',

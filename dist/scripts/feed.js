@@ -11,8 +11,13 @@ var demonstration = {
   styles: 'objects/feed/feed.css'
 };
 
+var configPrefix = '#NYCO';
+
+// Get saved configuration if it is available
+var hash = decodeConfig(document.location.hash);
+
 // Configuration for the page feed
-var config = {
+var config = (hash) ? hash : {
   title: 'News from NYC Opportunity',
   profileImg: 'https://cdn-images-1.medium.com/fit/c/100/100/1*CqAMY6M5PeJ5nBOc8MKcvA.png',
   selector: '#js-feed',
@@ -25,7 +30,7 @@ var config = {
 /**
  * A self-selecting function for event listenters
  */
-function selectEmbed() {
+function selectSelf() {
   this.select();
 }
 
@@ -74,8 +79,8 @@ function createEmbed(config, source, focus) {
   }
   var embed = document.getElementById('js-embed');
   if (embed) {
-    embed.addEventListener('focus', selectEmbed);
-    embed.addEventListener('click', selectEmbed);
+    embed.addEventListener('focus', selectSelf);
+    embed.addEventListener('click', selectSelf);
     embed.value = clipboard.join('')
       .replace('{{ config }}', JSON.stringify(config))
       .replace('{{ source }}', JSON.stringify(source));
@@ -85,6 +90,46 @@ function createEmbed(config, source, focus) {
     }
   }
 } createEmbed(config, production);
+
+/**
+ * Creates a shareable url for saving the configuration
+ * @param  {object}  config The configuration that will be encoded to share
+ * @param  {boolean} focus  Wether or not to focus on the text field
+ */
+function createShare(config, focus) {
+  focus = (typeof focus === 'undefined') ? false : focus;
+  var lzw = encodeURI(lzw_encode(btoa(JSON.stringify(config))));
+  var share = document.getElementById('js-share');
+  var hash = configPrefix + lzw;
+  window.location.hash = hash;
+  if (share) {
+    share.addEventListener('focus', selectSelf);
+    share.addEventListener('click', selectSelf);
+    share.value = share.dataset.jsShareBase + window.location.pathname + hash;
+    if (focus) {
+      window.location.hash = 'your-feed';
+      share.focus();
+    }
+  }
+}
+
+/**
+ * [decodeConfig description]
+ * @param  {string]} hash The window.location.hash
+ * @return {object}       JSON Object if successfully decoded, false if not
+ */
+function decodeConfig(hash) {
+  try {
+    if (hash && hash.indexOf(configPrefix) > -1) {
+      hash = hash.replace(configPrefix, '');
+      return JSON.parse(atob(lzw_decode(decodeURI(hash))));
+    }
+    return false;
+  } catch(error) {
+    console.warn(error);
+    return false;
+  }
+}
 
 /**
  * This is the initialization for the documentation functionality
@@ -117,14 +162,22 @@ function init(feed) {
     new Vue({
       el: '#js-controls',
       data: {
-        config: Object.assign(feed.default, config),
+        config: config,
+        configDefault: feed.default,
         docs: docs.default
       },
       methods: {
+        setObj: function(name, key, value) {
+          if (!this.config[name]) {
+            this.config[name] = {}
+          }
+          this.config[name][key] = value;
+        },
         render: function(event) {
           event.preventDefault();
-          new Feed(Object.assign(config, this.config)).init();
+          new Feed(this.config).init();
           createEmbed(this.config, production, true);
+          createShare(this.config, false);
         }
       }
     });

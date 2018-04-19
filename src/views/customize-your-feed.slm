@@ -44,23 +44,33 @@
           h3#variables
             a href='#variables' Variables
 
-          fieldset v-for='item, name in config'
-
-            / if the setting is a string or number
-            div v-if='typeof item == "string" || !isNaN(item)' class='pr-2 pb-2'
-              div class='control-group flex items-center'
-                code class='code mr-2'
-                  = '{{ name }}'
-                label class='control-label' style='margin: 0 !important'
-                  input type='text' v-bind:name='name' v-bind:id='name' v-model='config[name]'
+          fieldset v-for='item, name in configDefault'
 
             / If the setting is an array
-            div v-else-if='Array.isArray(item)' class='pr-2 pb-2'
+            div v-if='Array.isArray(item)' class='pr-2 pb-2'
               div class='control-group flex items-center'
                 code class='code mr-2'
                   = '{{ name }}'
+                  | &nbsp;
+                  span class='code__comment' title='Default type'
+                    = 'array'
                 label class='control-label' style='margin: 0 !important'
                     input type='text' v-bind:name='name' v-bind:id='name' v-bind:value='config[name]' v-on:change='config[name] = $event.target.value.split(",")'
+                span class='ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1' v-bind:title='docs[name]'
+                  | ?
+
+            / if the setting is a string or number
+            div v-else-if='typeof item == "string" || !isNaN(item)' class='pr-2 pb-2'
+              div class='control-group flex items-center'
+                code class='code mr-2'
+                  = '{{ name }}'
+                  | &nbsp;
+                  span class='code__comment' title='Default type'
+                    = '{{ typeof item }}'
+                label class='control-label' style='margin: 0 !important'
+                  input type='text' v-bind:name='name' v-bind:id='name' v-model='config[name]'
+                span class='ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1' v-bind:title='docs[name]'
+                  | ?
 
             / If the setting is an object
             div v-else-if='typeof item === "object"' class='pr-2'
@@ -68,8 +78,14 @@
                 div class='control-group flex items-center'
                   code class='code mr-2'
                     = '{{ name }}.{{ key }}'
+                    | &nbsp;
+                    span class='code__comment' title='Default type'
+                      = '{{ typeof item }}'
                   label class='control-label' style='margin: 0 !important'
-                    input type='text' v-bind:name='name + value' v-bind:id='name + value' v-model='config[name][key]'
+                    input type='text' v-bind:name='name + value' v-bind:id='name + value' v-on:change='setObj(name, key, $event.target.value)'
+                  span class='ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1' v-bind:title='docs[name][key]'
+                    | ?
+                    span style='display:none' = '{{ docs[name][key] }}'
 
           button class='btn btn-form-submit' v-on:click='render' Render
 
@@ -79,12 +95,18 @@
         h2#your-feed
           a href='#your-feed' Your Feed
 
-        form class='control-form mb-2'
+        form class='control-form'
           p
-            | Copy and paste the following code into your page to embed your customized feed.
+            | Copy and paste the following code into your page to embed this customized Feed:
 
           textarea#js-embed
             = '{{ embed }}'
+
+        form class='control-form mb-4'
+          p
+            | Copy the following url to share or save these customized Feed settings:
+
+          input#js-share value='${this.site.urls.production}' data-js-share-base='${this.site.urls.production}'
 
         div class='border-8 p-4 border-secondary-white'
           = mixin('feed-demo')
