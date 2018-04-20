@@ -47,7 +47,7 @@
           fieldset v-for='item, name in configDefault'
 
             / If the setting is an array
-            div v-if='Array.isArray(item)' class='pr-2 pb-2'
+            div v-if='Array.isArray(item)' class='pb-2'
               div class='control-group flex items-center'
                 code class='code mr-2'
                   = '{{ name }}'
@@ -60,7 +60,7 @@
                   | ?
 
             / if the setting is a string or number
-            div v-else-if='typeof item == "string" || !isNaN(item)' class='pr-2 pb-2'
+            div v-else-if='typeof item == "string" || !isNaN(item)' class='pb-2'
               div class='control-group flex items-center'
                 code class='code mr-2'
                   = '{{ name }}'
@@ -73,7 +73,7 @@
                   | ?
 
             / If the setting is an object
-            div v-else-if='typeof item === "object"' class='pr-2'
+            div v-else-if='typeof item === "object"'
               div v-for='value, key in item' class='pb-2'
                 div class='control-group flex items-center'
                   code class='code mr-2'

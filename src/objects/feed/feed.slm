@@ -2,7 +2,7 @@
 
 = mixin('feed-configuration')
   div class='${class_demo_class_containers}'
-    div#js-configuration
+    div#js-configuration class='mt-2'
       div v-for='item, name in config' v-bind:id='name' class='mb-3'
         div class='code-block mb-1'
           pre

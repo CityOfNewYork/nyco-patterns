@@ -334,7 +334,8 @@ Feed.default = {
     posts: Feed.templates.medium.posts.join(''),
     closer: Feed.templates.medium.closer.join('')
   },
-  log: false
+  log: false,
+  unique: false
 };
 
 export default Feed;
