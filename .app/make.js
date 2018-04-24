@@ -5,6 +5,8 @@
 const fs = require('fs');
 const Path = require('path');
 const Readline = require('readline');
+const config = require('../config/make');
+const alerts = require('../config/alerts');
 
 /**
  * Constants
@@ -15,34 +17,15 @@ const type = `${process.argv[2]}s`;
 const pattern = process.argv[3];
 const base = '../';
 const src = 'src';
-const config = 'config';
+const configuration = 'config';
 const views = 'views';
-const templates = {
-  markup: "\n\n= mixin('{{ pattern }}', 'code = false', 'text = \"\"')\n  - if this.code\n    // code Selectors\n    // pre Markup\n\n  // Demonstration\n",
-  styles: "/**\n * {{ Pattern }}\n */\n\n// Dependencies\n// @import '...';\n\n// Declarations\n.{{ prefix }}{{ pattern }} { }\n",
-  config: "//\n// Variables\n//\n\n// Dependencies\n// @import '...';\n\n// Declarations\n",
-  views: "/ Layout\n= extend('layouts/default')\n"
-};
-const files = {
-  markup: '{{ pattern }}.slm',
-  styles: '_{{ pattern }}.scss',
-  config: '_{{ pattern }}.scss',
-  views: '{{ pattern }}.slm'
-};
-const prefixes = {
-  elements: '',
-  components: 'c-',
-  objects: 'o-'
-};
+const templates = config.templates;
+const files = config.files;
+const prefixes = config.prefixes;
 let prompt = Readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-let alerts = {
-  info: 'ℹ',
-  error: '✕',
-  success: '✓'
-}
 
 /**
  * Functions
@@ -72,10 +55,20 @@ function fnDirectory(dir, type, pattern, callback) {
  * @param  {string} pattern The name of the pattern
  * @return {boolean}        false if already exists, true if created
  */
-function fnMakeOtherFiles(dir, type, pattern, callback) {
-  let file = files[type].replace('{{ pattern }}', pattern);
+function fnMakeOtherFiles(dir, type, template, pattern, callback) {
+  let file = files[template].replace('{{ pattern }}', pattern);
   if (!fs.existsSync(`${dir}/${file}`)) {
-    fs.writeFile(`${dir}/${file}`, templates[type], err => {
+    let content = templates[template]
+      .split('{{ type }}').join(type)
+      .split('{{ prefix }}').join(prefixes[type])
+      .split('{{ pattern }}').join(pattern)
+      .split('{{ Pattern }}').join(
+        pattern
+        .split('-').join(' ')
+        .split('_').join(' ')
+        .charAt(0).toUpperCase()+pattern.slice(1)
+      );
+    fs.writeFile(`${dir}/${file}`, content, err => {
       if (err) {
         console.log(err);
         return false;
@@ -96,9 +89,15 @@ function fnFiles(dir, type, pattern, callback) {
   let filetypes = ['markup', 'styles'];
   filetypes.forEach((element, index) => {
     let style = templates[element]
-      .replace('{{ prefix }}', prefixes[type])
-      .replace('{{ pattern }}', pattern)
-      .replace('{{ Pattern }}', pattern.charAt(0).toUpperCase() + pattern.slice(1));
+      .split('{{ type }}').join(type)
+      .split('{{ prefix }}').join(prefixes[type])
+      .split('{{ pattern }}').join(pattern)
+      .split('{{ Pattern }}').join(
+        pattern
+        .split('-').join(' ')
+        .split('_').join(' ')
+        .charAt(0).toUpperCase()+pattern.slice(1)
+      );
     let file = files[element].replace('{{ pattern }}', pattern);
     fs.writeFileSync(`${dir}/${file}`, style);
     if (fs.existsSync(`${dir}/${file}`)) {
@@ -139,14 +138,14 @@ function fnMake(dir, type, pattern, callback) {
  * @param  {string} pattern The name of the pattern
  * @param  {[type]} prompt  The Readline prompt to ask if you want to creat a config
  */
-function fnPromptMake(dir, type, pattern, prompt, callback = false) {
-  prompt.question(`Would you like to create ${type} for "${pattern}?" (y/n) `, (answer) => {
+function fnPromptMake(dir, type, template, pattern, prompt, callback = false) {
+  prompt.question(`Would you like to create ${template} for "${pattern}?" (y/n) `, (answer) => {
     if (
       answer.toLowerCase() == 'yes' ||
       answer.toLowerCase() == 'ye' ||
       answer.toLowerCase() == 'y'
     ) {
-      fnMakeOtherFiles(dir, type, pattern, (success, file) => {
+      fnMakeOtherFiles(dir, type, template, pattern, (success, file) => {
         if (success) {
           console.log(`${alerts.success} ${file} was made in ${src}/${type}/.`);
         } else {
@@ -166,10 +165,10 @@ function fnPromptMake(dir, type, pattern, prompt, callback = false) {
 let dir = Path.join(__dirname, base, src, type, process.argv[3]);
 
 fnMake(dir, type, pattern, () => {
-  dir = Path.join(__dirname, base, src, config);
-  fnPromptMake(dir, config, pattern, prompt, () => {
+  dir = Path.join(__dirname, base, src, configuration);
+  fnPromptMake(dir, type, configuration, pattern, prompt, () => {
     dir = Path.join(__dirname, base, src, views);
-    fnPromptMake(dir, views, pattern, prompt, () => {
+    fnPromptMake(dir, type, views, pattern, prompt, () => {
       prompt.close();
     });
   });
