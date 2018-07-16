@@ -31,5 +31,7 @@
       | NYC Opportunity
     a class='${class_nav_link}' href='${link_blueprint}' target='_blank' rel='noindex nofollow'
       | NYC Digital Blueprint
+    a class='${class_nav_link}' href='${link_playbook}' target='_blank' rel='noindex nofollow'
+      | NYC Digital Playbook
     a class='${class_nav_link}' href='${link_city_style_guide}' target='_blank' rel='noindex nofollow'
-      | City Style Guide
+      | NYC.gov Style Guide

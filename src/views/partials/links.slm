@@ -1,4 +1,4 @@
-- link_source = 'https://github.com/CityOfNewYork/nyco-patterns/tree/v' + this.vars.version
+- link_source = 'https://github.com/CityOfNewYork/nyco-patterns/tree/v' + this.site.versions.package
 - link_github_team = 'https://github.com/orgs/CityOfNewYork/teams/nycopportunity'
 - link_nyc_opportunity = 'http://www.nyc.gov/opportunity'
 - link_bootstrap = 'http://getbootstrap.com/2.3.2'
@@ -6,3 +6,4 @@
 - link_city_style_guide = 'https://www1.nyc.gov/assets/doitt/downloads/pdf/user_experience_design_public.pdf'
 - link_blueprint = 'https://blueprint.cityofnewyork.us'
 - link_blueprint_nyc_brand = 'https://blueprint.cityofnewyork.us/design/nyc-brand/'
+- link_playbook = 'https://playbook.cityofnewyork.us/'

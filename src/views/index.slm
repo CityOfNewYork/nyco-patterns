@@ -29,6 +29,6 @@
       div class='${class_demo_cola}'
 
         p
-          | The global patterns seen on <a href='${link_nyc_opportunity}'>NYC.gov/opportunity</a> utilize a partial integration of <a href='${link_bootstrap}'>Bootstrap 2.3.2</a>. This library extends that stylesheet with custom components and the <a href='${link_tailwind_docs}'>Tailwind CSS Utility framework</a>. See the <a href='${link_blueprint_nyc_brand}'>NYC Digital Blueprint's documentation</a> of The City's Style Guide for more details and resources.
+          | The global patterns seen on <a href='${link_nyc_opportunity}'>NYC.gov/opportunity</a> utilize a partial integration of <a href='${link_bootstrap}'>Bootstrap 2.3.2</a>. This library extends the NYC.gov Style Guide with custom components and the <a href='${link_tailwind_docs}'>Tailwind CSS Utility framework</a>. See the <a href='${link_blueprint_nyc_brand}'>NYC Digital Blueprint's documentation</a> of The City's Style Guide for more details and resources.
 
 
