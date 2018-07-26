@@ -1,11 +1,13 @@
-= mixin('nav')
+= mixin('nav');
   nav class='screen-tablet:pb-2'
     a class='${class_nav_link} pr-2' href='index'
       | Home
     a class='${class_nav_link}' href='${link_source}'
-      | Github
+      | Repository
       span class='${class_nav_link_sub}'
-        = this.site.versions.package
+        = this.site.versions.package;
+    a class='${class_nav_link}' href='${link_nyc_opportunity}' target='_blank' rel='noindex nofollow'
+      | NYC Opportunity
 
   nav class='screen-tablet:pb-2'
     span class='${class_nav_link_header}' Elements:
@@ -17,8 +19,10 @@
     span class='${class_nav_link_header}' Objects:
     a class='${class_nav_link}' href='feed' Feed
 
-  nav
-    span class='screen-tablet:block pb-1' References:
+  nav class='screen-tablet:pb-2'
+    span class='screen-tablet:block pb-1' Documentation:
+    a class='${class_nav_link}' href='${link_city_style_guide}' target='_blank' rel='noindex nofollow'
+      | NYC.gov Style Guide
     a class='${class_nav_link}' href='${link_bootstrap}' target='_blank' rel='noindex nofollow'
       | Bootstrap
       span class='${class_nav_link_sub}'
@@ -26,12 +30,13 @@
     a class='${class_nav_link}' href='${link_tailwind_docs}' target='_blank' rel='noindex nofollow'
       | Tailwind.css
       span class='${class_nav_link_sub}'
-        = this.site.versions.tailwindcss
-    a class='${class_nav_link}' href='${link_nyc_opportunity}' target='_blank' rel='noindex nofollow'
-      | NYC Opportunity
-    a class='${class_nav_link}' href='${link_blueprint}' target='_blank' rel='noindex nofollow'
-      | NYC Digital Blueprint
+        = this.site.versions.tailwindcss;
+
+  nav
+    span class='screen-tablet:block pb-1' NYC Design Resources:
     a class='${class_nav_link}' href='${link_playbook}' target='_blank' rel='noindex nofollow'
       | NYC Digital Playbook
-    a class='${class_nav_link}' href='${link_city_style_guide}' target='_blank' rel='noindex nofollow'
-      | NYC.gov Style Guide
+    a class='${class_nav_link}' href='${link_blueprint}' target='_blank' rel='noindex nofollow'
+      | NYC Digital Blueprint
+
+

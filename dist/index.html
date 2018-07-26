@@ -78,7 +78,8 @@
     <aside class="bg-secondary-white py-2 px-3">
       <nav class="screen-tablet:pb-2">
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2 pr-2" href="index">Home</a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.0.8">Github<span class="text-primary-blue-50t mx-1">1.0.8</span></a>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.0.8">Repository<span class="text-primary-blue-50t mx-1">1.0.8</span></a>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="http://www.nyc.gov/opportunity" rel="noindex nofollow" target="_blank">NYC Opportunity</a>
       </nav>
       <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Elements:</span>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="colors">Colors</a>
@@ -88,27 +89,35 @@
       <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Objects:</span>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="feed">Feed</a>
       </nav>
-      <nav><span class="screen-tablet:block pb-1">References:</span>
+      <nav class="screen-tablet:pb-2"><span class="screen-tablet:block pb-1">Documentation:</span>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://www1.nyc.gov/assets/doitt/downloads/pdf/user_experience_design_public.pdf"
+          rel="noindex nofollow" target="_blank">NYC.gov Style Guide</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="http://getbootstrap.com/2.3.2" rel="noindex nofollow" target="_blank">Bootstrap<span class="text-primary-blue-50t mx-1">2.3.2</span></a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://tailwindcss.com" rel="noindex nofollow" target="_blank">Tailwind.css<span class="text-primary-blue-50t mx-1">0.5.2</span></a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="http://www.nyc.gov/opportunity" rel="noindex nofollow"
-          target="_blank">NYC Opportunity</a>
+      </nav>
+      <nav><span class="screen-tablet:block pb-1">NYC Design Resources:</span>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://playbook.cityofnewyork.us/" rel="noindex nofollow"
+          target="_blank">NYC Digital Playbook</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://blueprint.cityofnewyork.us" rel="noindex nofollow" target="_blank">NYC Digital Blueprint</a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://playbook.cityofnewyork.us/" rel="noindex nofollow" target="_blank">NYC Digital Playbook</a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://www1.nyc.gov/assets/doitt/downloads/pdf/user_experience_design_public.pdf" rel="noindex nofollow"
-          target="_blank">NYC.gov Style Guide</a>
       </nav>
     </aside>
     <article class="bg-base-white py-2 px-4 screen-desktop:px-6">
       <h1 class="m-0 p-0 mt-2">Home</h1>
       <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white border-none">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
             <p>The global patterns seen on
               <a href='http://www.nyc.gov/opportunity'>NYC.gov/opportunity</a> utilize a partial integration of
-              <a href='http://getbootstrap.com/2.3.2'>Bootstrap 2.3.2</a>. This library extends the NYC.gov Style Guide with custom components and the
+              <a href='http://getbootstrap.com/2.3.2'>Bootstrap 2.3.2</a>. This library extends the NYC.gov Style Guide with custom modules and the
               <a href='https://tailwindcss.com'>Tailwind CSS Utility framework</a>. See the
               <a href='https://blueprint.cityofnewyork.us/design/nyc-brand/'>NYC Digital Blueprint's documentation</a> of The City's Style Guide for more details and resources.</p>
+            <p>The patterns in this repository are organized as <em>Elements</em>, <em>Components</em> (coming soon), and <em>Objects</em> for styling pages with the NYC Opportunity brand. The can be dropped into any web page on linking to the global stylesheet
+              url in the head of an html page;</p>
+            <p>
+              <div class="code-block"><pre><div>&lt;link href=&quot;https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.8/dist/styles/nyco-patterns-default.css&quot;&gt;</div></pre></div>
+            </p>
+            <p>This distribution includes a custom build of the
+              <a href='https://tailwindcss.com'>Tailwind Utility CSS Framework</a>. Refer to Tailwind CSS docs for full details on utilizing the CSS uitilites to build different types of UIs.</p>
           </div>
         </div>
       </section>
