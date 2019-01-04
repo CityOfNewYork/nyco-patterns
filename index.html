@@ -5,14 +5,12 @@
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!-- NYCO PATTERNS -->
-    <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <!-- GLOBAL STYLES -->
+    <!--GLOBAL STYLES-->
     <link href="https://www1.nyc.gov/assets/home/css/css-min/global.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="https://www1.nyc.gov/assets/home/css/css-min/module.css" media="screen" rel="stylesheet" type="text/css" />
-    <!-- PRINT STYLE -->
+    <!--PRINT STYLE-->
     <link href="https://www1.nyc.gov/assets/home/css/print.css" media="print" rel="stylesheet" type="text/css" />
-    <!-- PAGE SPECIFIC STYLES -->
+    <!--PAGE SPECIFIC STYLES-->
     <link href="https://www1.nyc.gov/assets/home/css/modules/status-updates-short.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="https://www1.nyc.gov/assets/home/css/modules/status-updates-mini.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="https://www1.nyc.gov/assets/home/css/includes/header-agencies.css" media="screen" rel="stylesheet" type="text/css" />
@@ -22,9 +20,10 @@
     <link href="https://www1.nyc.gov/assets/home/css/modules/homepage-hero.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="https://www1.nyc.gov/assets/home/css/pages/agencies/index.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
-    <title>NYCO Patterns</title>
+    <!--NYCO PATTERNS-->
+    <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
     <script type="text/javascript">
-      var VERSION = "1.0.8";
+      var VERSION = '1.0.8';
     </script>
     <noscript>
       <style>
@@ -37,6 +36,16 @@
       function load() {
         document.body.style.visibility = 'visible'
       };
+
+      function toggleTheme(theme) {
+        var stylesheets = document.styleSheets;
+
+        for (var i = 0; i < stylesheets.length; i++) {
+          var ss = stylesheets[i];
+          ss.disabled = (!ss.disabled && ss.href.indexOf(theme) > -1) ? true : false;
+        }
+      }
+      toggleTheme('www1.nyc.gov');
     </script>
   </head>
 
@@ -56,7 +65,7 @@
       </symbol>
     </svg>
   </div>
-  <header class="layout screen-tablet:flex">
+  <header class="layout--sidebar screen-tablet:flex">
     <div class="flex items-center justify-center bg-primary-blue text-base-white screen-tablet:w-64 p-3 screen-tablet:p-4">
       <h1 class="m-0 p-0"><span class="hidden">The Mayor's Office<br>for Economic Opportunity</span>
         <svg aria-hidden="true" class="icon-logo text-base-white">
@@ -64,47 +73,47 @@
         </svg>
       </h1>
     </div>
-    <div class="flex-1 flex flex-col content-center justify-center bg-primary-navy text-base-white links-invert p-3 screen-tablet:p-4">
-      <h2 class="mt-0">Components and stylesheet extension for NYC.gov</h2>
+    <div class="flex-1 flex flex-col content-center justify-center color-dark-background p-3 screen-tablet:p-4 screen-desktop:px-6">
+      <h1 class="jumbo mt-0 mb-1">Patterns</h1>
       <a href="#main-content">Skip to main content</a>
     </div>
-    <div class="flex flex-col content-center justify-center bg-primary-navy text-base-white links-invert px-3 pb-3 screen-tablet:p-4">
-      <h3 class="mr-3">
+    <div class="flex flex-col content-center justify-center color-dark-background px-3 pb-3 screen-tablet:p-4">
+      <div>
         <a class="border-2 border-base-white py-1 px-2 inline rounded-lg" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.0.8">v1.0.8</a>
-      </h3>
+      </div>
     </div>
   </header>
-  <main class="layout screen-tablet:flex items-stretch m-0 p-0 min-h-screen" id="main-content">
-    <aside class="bg-secondary-white py-2 px-3">
+  <main class="layout--sidebar screen-tablet:flex items-stretch m-0 p-0 min-h-screen" id="main-content">
+    <aside class="color-mid-background py-2 px-3">
       <nav class="screen-tablet:pb-2">
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2 pr-2" href="index">Home</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.0.8">Repository<span class="text-primary-blue-50t mx-1">1.0.8</span></a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="http://www.nyc.gov/opportunity" rel="noindex nofollow" target="_blank">NYC Opportunity</a>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" data-theme="www1.nyc.gov" href="#" onclick="toggleTheme(event.target.dataset.theme)">Toggle nyc.gov Stylesheets</a>
       </nav>
       <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Elements:</span>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="colors">Colors</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="icons">Icons</a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="links">Links</a>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="layouts">Layouts</a>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="tables">Tables</a>
       </nav>
       <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Objects:</span>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="feed">Feed</a>
       </nav>
-      <nav class="screen-tablet:pb-2"><span class="screen-tablet:block pb-1">Documentation:</span>
+      <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Utilities:</span>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="type">Type</a>
+      </nav>
+      <nav class="screen-tablet:pb-2"><span class="screen-tablet:block pb-1">Dependencies:</span>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://www1.nyc.gov/assets/doitt/downloads/pdf/user_experience_design_public.pdf"
           rel="noindex nofollow" target="_blank">NYC.gov Style Guide</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="http://getbootstrap.com/2.3.2" rel="noindex nofollow" target="_blank">Bootstrap<span class="text-primary-blue-50t mx-1">2.3.2</span></a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://tailwindcss.com" rel="noindex nofollow" target="_blank">Tailwind.css<span class="text-primary-blue-50t mx-1">0.5.2</span></a>
       </nav>
-      <nav><span class="screen-tablet:block pb-1">NYC Design Resources:</span>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://playbook.cityofnewyork.us/" rel="noindex nofollow"
-          target="_blank">NYC Digital Playbook</a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://blueprint.cityofnewyork.us" rel="noindex nofollow" target="_blank">NYC Digital Blueprint</a>
-      </nav>
     </aside>
-    <article class="bg-base-white py-2 px-4 screen-desktop:px-6">
+    <article class="color-light-background py-2 px-4 screen-desktop:px-6">
       <h1 class="m-0 p-0 mt-2">Home</h1>
       <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white border-none">
+        <div class="mt-4 layout--content">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
             <p>The global patterns seen on
               <a href='http://www.nyc.gov/opportunity'>NYC.gov/opportunity</a> utilize a partial integration of
@@ -114,7 +123,7 @@
             <p>The patterns in this repository are organized as <em>Elements</em>, <em>Components</em> (coming soon), and <em>Objects</em> for styling pages with the NYC Opportunity brand. The can be dropped into any web page on linking to the global stylesheet
               url in the head of an html page;</p>
             <p>
-              <div class="code-block"><pre><div>&lt;link href=&quot;https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v1.0.8/dist/styles/nyco-patterns-default.css&quot;&gt;</div></pre></div>
+              <div class="code-block"><pre><div>&lt;link href=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.0.8/dist/styles/nyco-patterns-default.css&quot;&gt;</div></pre></div>
             </p>
             <p>This distribution includes a custom build of the
               <a href='https://tailwindcss.com'>Tailwind Utility CSS Framework</a>. Refer to Tailwind CSS docs for full details on utilizing the CSS uitilites to build different types of UIs.</p>

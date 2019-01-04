@@ -5,14 +5,12 @@
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!-- NYCO PATTERNS -->
-    <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <!-- GLOBAL STYLES -->
+    <!--GLOBAL STYLES-->
     <link href="https://www1.nyc.gov/assets/home/css/css-min/global.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="https://www1.nyc.gov/assets/home/css/css-min/module.css" media="screen" rel="stylesheet" type="text/css" />
-    <!-- PRINT STYLE -->
+    <!--PRINT STYLE-->
     <link href="https://www1.nyc.gov/assets/home/css/print.css" media="print" rel="stylesheet" type="text/css" />
-    <!-- PAGE SPECIFIC STYLES -->
+    <!--PAGE SPECIFIC STYLES-->
     <link href="https://www1.nyc.gov/assets/home/css/modules/status-updates-short.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="https://www1.nyc.gov/assets/home/css/modules/status-updates-mini.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="https://www1.nyc.gov/assets/home/css/includes/header-agencies.css" media="screen" rel="stylesheet" type="text/css" />
@@ -22,9 +20,10 @@
     <link href="https://www1.nyc.gov/assets/home/css/modules/homepage-hero.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="https://www1.nyc.gov/assets/home/css/pages/agencies/index.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
-    <title>Colors | NYCO Patterns</title>
+    <!--NYCO PATTERNS-->
+    <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
     <script type="text/javascript">
-      var VERSION = "1.0.8";
+      var VERSION = '1.0.8';
     </script>
     <noscript>
       <style>
@@ -37,6 +36,16 @@
       function load() {
         document.body.style.visibility = 'visible'
       };
+
+      function toggleTheme(theme) {
+        var stylesheets = document.styleSheets;
+
+        for (var i = 0; i < stylesheets.length; i++) {
+          var ss = stylesheets[i];
+          ss.disabled = (!ss.disabled && ss.href.indexOf(theme) > -1) ? true : false;
+        }
+      }
+      toggleTheme('www1.nyc.gov');
     </script>
   </head>
 
@@ -56,7 +65,7 @@
       </symbol>
     </svg>
   </div>
-  <header class="layout screen-tablet:flex">
+  <header class="layout--sidebar screen-tablet:flex">
     <div class="flex items-center justify-center bg-primary-blue text-base-white screen-tablet:w-64 p-3 screen-tablet:p-4">
       <h1 class="m-0 p-0"><span class="hidden">The Mayor's Office<br>for Economic Opportunity</span>
         <svg aria-hidden="true" class="icon-logo text-base-white">
@@ -64,243 +73,233 @@
         </svg>
       </h1>
     </div>
-    <div class="flex-1 flex flex-col content-center justify-center bg-primary-navy text-base-white links-invert p-3 screen-tablet:p-4">
-      <h2 class="mt-0">Components and stylesheet extension for NYC.gov</h2>
+    <div class="flex-1 flex flex-col content-center justify-center color-dark-background p-3 screen-tablet:p-4 screen-desktop:px-6">
+      <h1 class="jumbo mt-0 mb-1">Patterns</h1>
       <a href="#main-content">Skip to main content</a>
     </div>
-    <div class="flex flex-col content-center justify-center bg-primary-navy text-base-white links-invert px-3 pb-3 screen-tablet:p-4">
-      <h3 class="mr-3">
+    <div class="flex flex-col content-center justify-center color-dark-background px-3 pb-3 screen-tablet:p-4">
+      <div>
         <a class="border-2 border-base-white py-1 px-2 inline rounded-lg" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.0.8">v1.0.8</a>
-      </h3>
+      </div>
     </div>
   </header>
-  <main class="layout screen-tablet:flex items-stretch m-0 p-0 min-h-screen" id="main-content">
-    <aside class="bg-secondary-white py-2 px-3">
+  <main class="layout--sidebar screen-tablet:flex items-stretch m-0 p-0 min-h-screen" id="main-content">
+    <aside class="color-mid-background py-2 px-3">
       <nav class="screen-tablet:pb-2">
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2 pr-2" href="index">Home</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.0.8">Repository<span class="text-primary-blue-50t mx-1">1.0.8</span></a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="http://www.nyc.gov/opportunity" rel="noindex nofollow" target="_blank">NYC Opportunity</a>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" data-theme="www1.nyc.gov" href="#" onclick="toggleTheme(event.target.dataset.theme)">Toggle nyc.gov Stylesheets</a>
       </nav>
       <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Elements:</span>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="colors">Colors</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="icons">Icons</a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="links">Links</a>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="layouts">Layouts</a>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="tables">Tables</a>
       </nav>
       <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Objects:</span>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="feed">Feed</a>
       </nav>
-      <nav class="screen-tablet:pb-2"><span class="screen-tablet:block pb-1">Documentation:</span>
+      <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Utilities:</span>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="type">Type</a>
+      </nav>
+      <nav class="screen-tablet:pb-2"><span class="screen-tablet:block pb-1">Dependencies:</span>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://www1.nyc.gov/assets/doitt/downloads/pdf/user_experience_design_public.pdf"
           rel="noindex nofollow" target="_blank">NYC.gov Style Guide</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="http://getbootstrap.com/2.3.2" rel="noindex nofollow" target="_blank">Bootstrap<span class="text-primary-blue-50t mx-1">2.3.2</span></a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://tailwindcss.com" rel="noindex nofollow" target="_blank">Tailwind.css<span class="text-primary-blue-50t mx-1">0.5.2</span></a>
       </nav>
-      <nav><span class="screen-tablet:block pb-1">NYC Design Resources:</span>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://playbook.cityofnewyork.us/" rel="noindex nofollow"
-          target="_blank">NYC Digital Playbook</a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://blueprint.cityofnewyork.us" rel="noindex nofollow" target="_blank">NYC Digital Blueprint</a>
-      </nav>
     </aside>
-    <article class="bg-base-white py-2 px-4 screen-desktop:px-6">
+    <article class="color-light-background py-2 px-4 screen-desktop:px-6">
       <h1 class="m-0 p-0 mt-2">Colors</h1>
       <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 id="utility-classes">
-              <a href="#utility-classes">Utility Classes</a>
+            <h2 class="mt-0" id="color-combinations">
+              <a href="#color-combinations">Color Combinations</a>
+            </h2>
+          </div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div class="mb-2">
+              <article class="color-light-background w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small">
+                <h1 class="m-0">Headings</h1>
+                <div class="capitalize">light background Text</div>
+                <a href="#">Hyperlinks</a>
+              </article>
+              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-light-background</pre></div>
+            </div>
+            <div class="mb-2">
+              <article class="color-mid-background w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small">
+                <h1 class="m-0">Headings</h1>
+                <div class="capitalize">mid background Text</div>
+                <a href="#">Hyperlinks</a>
+              </article>
+              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-mid-background</pre></div>
+            </div>
+            <div class="mb-2">
+              <article class="color-dark-background w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small">
+                <h1 class="m-0">Headings</h1>
+                <div class="capitalize">dark background Text</div>
+                <a href="#">Hyperlinks</a>
+              </article>
+              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-dark-background</pre></div>
+            </div>
+            <div class="mb-2">
+              <article class="color-primary-button w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small">
+                <div class="capitalize">primary button Text</div>
+              </article>
+              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-primary-button</pre></div>
+            </div>
+            <div class="mb-2">
+              <article class="color-secondary-button w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small">
+                <div class="capitalize">secondary button Text</div>
+              </article>
+              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-secondary-button</pre></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="color-utilities">
+              <a href="#color-utilities">Color Utilities</a>
             </h2>
             <p>You can use every color as a utility class for static and hover states. These are the prefixes that are available;</p>
-            <p><code class="code">bg-&lt;color&gt;</code> = Background color</p>
-            <p><code class="code">text-&lt;color&gt;</code> = Text color</p>
-            <p><code class="code">border-&lt;color&gt;</code> = Border color</p>
+            <p><code class="code">bg-{ color }</code> = Background color</p>
+            <p><code class="code">text-{ color }</code> = Text color</p>
+            <p><code class="code">border-{ color }</code> = Border color</p>
             <p>Refer to
               <a href="https://tailwindcss.com">Tailwind CSS docs</a> for full details on using color utilities and <code>hover:</code> states.</p>
           </div>
         </div>
-        <div class="mt-4 max-w-full screen-desktop:max-w-1/2">
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
           <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <h2 id="demonstration">
-              <a href="#demonstration">Demonstration</a>
-            </h2>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-base-black</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-base-black p-4"></div>
-                <div class="mt-1">#000000</div>
+            <div class="layout--four-columns-gutter">
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-navy py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-base-white</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-base-white p-4"></div>
-                <div class="mt-1">#FFFFFF</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-navy-70t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy-70t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-navy</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-navy p-4"></div>
-                <div class="mt-1">#2F334F</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-navy-50t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy-50t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-navy-70t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-navy-70t p-4"></div>
-                <div class="mt-1">#6E7085</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-navy-30t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy-30t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-navy-50t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-navy-50t p-4"></div>
-                <div class="mt-1">#9698A7</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-blue py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-navy-30t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-navy-30t p-4"></div>
-                <div class="mt-1">#C0C2CA</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-blue-70t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue-70t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-blue</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-blue p-4"></div>
-                <div class="mt-1">#3155A6</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-blue-50t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue-50t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-blue-70t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-blue-70t p-4"></div>
-                <div class="mt-1">#6C88C1</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-blue-30t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue-30t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-blue-50t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-blue-50t p-4"></div>
-                <div class="mt-1">#96ABD2</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-red py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-blue-30t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-blue-30t p-4"></div>
-                <div class="mt-1">#C0CCE3</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-red-70t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red-70t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-red</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-red p-4"></div>
-                <div class="mt-1">#F2695D</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-red-50t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red-50t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-red-70t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-red-70t p-4"></div>
-                <div class="mt-1">#F6958D</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-primary-red-30t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red-30t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-red-50t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-red-50t p-4"></div>
-                <div class="mt-1">#F8B2AD</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-grey py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-primary-red-30t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-primary-red-30t p-4"></div>
-                <div class="mt-1">#FBD1CE</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-grey-70t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey-70t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-grey</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-grey p-4"></div>
-                <div class="mt-1">#ACAEB9</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-grey-50t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey-50t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-grey-70t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-grey-70t p-4"></div>
-                <div class="mt-1">#C4C6CD</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-grey-30t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey-30t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-grey-50t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-grey-50t p-4"></div>
-                <div class="mt-1">#D5D6DC</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-white py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-grey-30t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-grey-30t p-4"></div>
-                <div class="mt-1">#E8E7E9</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-white-70t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white-70t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-white</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-white p-4"></div>
-                <div class="mt-1">#F3F3F3</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-white-50t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white-50t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-white-70t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-white-70t p-4"></div>
-                <div class="mt-1">#F6F6F6</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-white-30t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white-30t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-white-50t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-white-50t p-4"></div>
-                <div class="mt-1">#F9F9FA</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-orange py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-white-30t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-white-30t p-4"></div>
-                <div class="mt-1">#FBFCFC</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-orange-70t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange-70t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-orange</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-orange p-4"></div>
-                <div class="mt-1">#F9A137</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-orange-50t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange-50t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-orange-70t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-orange-70t p-4"></div>
-                <div class="mt-1">#FFA133</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-orange-30t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange-30t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-orange-50t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-orange-50t p-4"></div>
-                <div class="mt-1">#FED09A</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-pink py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-orange-30t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-orange-30t p-4"></div>
-                <div class="mt-1">#FFE3C2</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-pink-70t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink-70t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-pink</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-pink p-4"></div>
-                <div class="mt-1">#EBBCD8</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-pink-50t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink-50t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-pink-70t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-pink-70t p-4"></div>
-                <div class="mt-1">#F2D0E3</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-secondary-pink-30t py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink-30t</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-pink-50t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-pink-50t p-4"></div>
-                <div class="mt-1">#F7DDEB</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-base-black py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">base-black</pre></div>
               </div>
-            </div>
-            <div class="inline-block p-1 w-full mb-3"><code class="code">&lt;prefix&gt;-secondary-pink-30t</code>
-              <div class="my-1 p-1 border border-secondary-grey-30t">
-                <div class="bg-secondary-pink-30t p-4"></div>
-                <div class="mt-1">#FDEBF3</div>
+              <div class="inline-block w-full mb-2">
+                <div class="bg-base-white py-4 border border-secondary-grey-30t border-b-0"></div>
+                <div class="code-block rounded-t-none border-t-0"><pre class="small">base-white</pre></div>
               </div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
             </div>
           </div>
         </div>
