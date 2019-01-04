@@ -1,0 +1,87 @@
+@import 'config/variables';
+@import 'config/fonts';
+@import 'config/type';
+@import 'config/direction';
+
+$fonts: map-get($variables, 'fonts');
+
+html, body {
+  @include type('html') {
+    font-family: map-get($fonts, 'default-sans');
+  }
+
+  @if $direction == 'rtl' {
+    direction: rtl;
+  }
+}
+
+h1, .h1 {
+  @include type('h1') {
+    margin: $type-margin;
+  };
+}
+
+h2, .h2 {
+  @include type('h2') {
+    margin: $type-margin;
+  };
+}
+
+h3, .h3 {
+  @include type('h3') {
+    margin: $type-margin;
+  };
+}
+
+h4, .h4 {
+  @include type('h4') {
+    margin: $type-margin;
+  };
+}
+
+h5, .h5 {
+  @include type('h5') {
+    margin: $type-margin;
+  };
+}
+
+h6, .h6 {
+  @include type('h6') {
+    margin: $type-margin;
+  };
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  a {
+    text-decoration: inherit
+  }
+}
+
+small, .small {
+  @include type('small');
+}
+
+blockquote, .blockquote {
+  @include type('blockquote') {
+    margin: $type-margin;
+  };
+}
+
+.jumbo {
+  @include type('jumbo') {
+    margin: $type-margin;
+  };
+}
+
+p, ul, ol {
+  margin-bottom: 1.250em;
+}
+
+@media print {
+  html { }
+}

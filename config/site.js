@@ -15,7 +15,8 @@ const site = {
     bootstrap: '2.3.2'
   },
   urls: {
-    production: 'https://cityofnewyork.github.io/nyco-patterns'
+    production: 'https://cityofnewyork.github.io/nyco-patterns',
+    cdn: 'https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v' + package.version + '/dist'
   }
 };
 

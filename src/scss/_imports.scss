@@ -1,20 +1,7 @@
 @charset 'utf-8';
 
 // if @font-face is used it needs to be first imported first.
-// @import 'elements/fonts/fonts';
-
-// /************
-//  * Normalize
-//  ************/
-
-// This injects Tailwind's base styles, which is a combination of
-// Normalize.css and some additional base styles.
-// https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
-// This is not included because it would interfere with nyc.gov styles. Anything
-// needed from the preflight to make Tailwind.css utilites work can be included
-// in the Base elements.
-
-// @tailwind preflight;
+@import 'elements/fonts/fonts';
 
 /*************
  * Components
@@ -57,6 +44,7 @@
 @import 'elements/links/links';
 @import 'elements/layouts/layouts';
 @import 'elements/icons/icons';
+@import 'elements/tables/tables';
 // elements - end
 
 
@@ -64,7 +52,10 @@
 * Utilities
 ************/
 
+@import 'utilities/fonts/fonts';
+@import 'utilities/type/type';
+@import 'utilities/colors/colors';
+
 // This injects all of Tailwind's utility classes, generated based on your
 // config file. View docs for usage; https://tailwindcss.com/docs/
-
 @tailwind utilities;

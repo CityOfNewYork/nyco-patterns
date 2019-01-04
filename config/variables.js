@@ -9,38 +9,62 @@ const package = require('../package.json');
  */
 
 const variables = {
+  cdn: '"https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v' + package.version + '/dist"',
   fonts: {
     'system': [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      'Oxygen-Sans',
-      'Ubuntu',
-      'Cantarell',
-      '"Helvetica Neue"',
-      'sans-serif'
+      '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto',
+      'Oxygen-Sans', 'Ubuntu', 'Cantarell', '"Helvetica Neue"', 'sans-serif'
     ],
-    'sans-serif': [
-      '"Helvetica Neue"',
-      'Helvetica',
-      'Arial',
-      'sans-serif'
-    ]
+    'nycgov': [
+      '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'
+    ],
+    'default-sans': [
+      '"Noto Sans"', 'sans-serif'
+    ],
+    'default-serif': [
+      '"Noto Serif"', 'serif'
+    ],
+
   },
   fontWeights: {
     'normal': 'normal',
-    'bold': 'bold'
+    'bold': 'bold',
+    'jumbo': 'normal',
+    'h1': 'bold',
+    'h2': 'normal',
+    'h3': 'normal',
+    'h4': 'bold',
+    'h5': 'bold',
+    'h6': 'bold',
+    'html': 'normal',
+    'small': 'normal',
+    'blockquote': 'normal'
   },
   textSizes: {
-    'base': '16px'
+    'jumbo': '3em',
+    'h1': '2.488em',
+    'h2': '2.074em',
+    'h3': '1.728em',
+    'h4': '1.44em',
+    'h5': '1.2em',
+    'h6': '1em',
+    'html': '1em',
+    'small': '0.833em',
+    'blockquote': '2.074em'
   },
   leading: {
-    'normal': '20px'
+    'jumbo': '1.2',
+    'h1': '1.2',
+    'h2': '1.2',
+    'h3': '1.2',
+    'h4': '1.2',
+    'h5': '1.2',
+    'h6': '1.2',
+    'html': '1.5',
+    'small': 'normal',
+    'blockquote': 'normal'
   },
   colors: {
-    'base-black': '#000000',
-    'base-white': '#FFFFFF',
     'primary-navy': '#2F334F',
     'primary-navy-70t': '#6E7085',
     'primary-navy-50t': '#9698A7',
@@ -68,7 +92,46 @@ const variables = {
     'secondary-pink': '#EBBCD8',
     'secondary-pink-70t': '#F2D0E3',
     'secondary-pink-50t': '#F7DDEB',
-    'secondary-pink-30t': '#FDEBF3'
+    'secondary-pink-30t': '#FDEBF3',
+    'base-black': '#000000',
+    'base-white': '#FFFFFF'
+  },
+  colorCombinations: {
+    'light-background': {
+      'color': 'base-black',
+      'headings': 'primary-navy',
+      'hyperlinks': 'primary-blue',
+      'visited': 'primary-blue',
+      'hover': 'primary-navy',
+      'background-color': 'base-white'
+    },
+    'mid-background': {
+      'color': 'base-black',
+      'headings': 'primary-navy',
+      'hyperlinks': 'primary-blue',
+      'visited': 'primary-blue',
+      'hover': 'primary-navy',
+      'background-color': 'secondary-white'
+    },
+    'dark-background': {
+      'color': 'base-white',
+      'font-smooth': true,
+      'headings': 'base-white',
+      'hyperlinks': 'base-white',
+      'visited': 'base-white',
+      'hover': 'base-white',
+      'background-color': 'primary-navy'
+    },
+    'primary-button': {
+      'color': 'base-white',
+      'font-smooth': true,
+      'background-color': 'primary-blue'
+    },
+    'secondary-button': {
+      'color': 'base-white',
+      'font-smooth': true,
+      'background-color': 'primary-red'
+    }
   },
   icons: {
     'icon-logo': '136px 136px'
@@ -86,6 +149,7 @@ const variables = {
     4: '4px',
     8: '8px'
   },
+  grid: '8px',
   padding: {
     0: '0',
     1: '8px',

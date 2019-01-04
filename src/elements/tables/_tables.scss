@@ -1,0 +1,39 @@
+@import 'config/variables';
+@import 'config/fonts';
+
+$colors: map-get($variables, 'colors');
+$grid: map-get($variables, 'grid');
+
+@mixin table() {
+  max-width: 100%;
+
+  thead {
+    color: map-get($colors, 'base-white');
+    @include font-smooth();
+    border-bottom: 1px solid map-get($colors, 'primary-blue');
+
+    tr {
+      background-color: map-get($colors, 'primary-blue');
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: map-get($colors, 'secondary-white');
+      }
+    }
+  }
+
+  th {
+    vertical-align: top;
+  }
+
+  th, td {
+    padding: $grid $grid*2;
+  }
+}
+
+.table table {
+  @include table;
+}

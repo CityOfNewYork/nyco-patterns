@@ -1,0 +1,14 @@
+@import 'config/variables';
+
+$sizes: map-get($variables, 'textSizes');
+$weights: map-get($variables, 'fontWeights');
+$leading: map-get($variables, 'leading');
+
+@mixin type($key: 'html') {
+  font-size: map-get($sizes, $key);
+  font-weight: map-get($weights, $key);
+  line-height: map-get($leading, $key);
+  @content;
+}
+
+$type-margin: 1.250em 0 0.64em;

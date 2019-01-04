@@ -1,5 +1,6 @@
 - link_source = 'https://github.com/CityOfNewYork/nyco-patterns/tree/v' + this.site.versions.package;
-- link_stylesheet = 'https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v' + this.site.versions.package + '/dist/styles/nyco-patterns-default.css';
+- link_stylesheet = this.site.urls.cdn + '/styles/nyco-patterns-default.css';
+
 - link_github_team = 'https://github.com/orgs/CityOfNewYork/teams/nycopportunity';
 - link_nyc_opportunity = 'http://www.nyc.gov/opportunity';
 - link_bootstrap = 'http://getbootstrap.com/2.3.2';

@@ -1,0 +1,37 @@
+@import 'config/variables';
+
+$colors: map-get($variables, 'colors');
+$statuses: map-get($variables, 'colorStatuses');
+$combinations: map-get($variables, 'colorCombinations');
+
+@mixin combination($selector, $combination, $colors, $smoothing: false) {
+  $color: map-get($combination, 'color');
+  $background: map-get($combination, 'background-color');
+  $hyperlinks: map-get($combination, 'hyperlinks');
+  $visited: map-get($combination, 'visited');
+  $hover: map-get($combination, 'hover');
+  $headings: map-get($combination, 'headings');
+
+  color: map-get($colors, $color);
+  background-color: map-get($colors, $background);
+
+  @if $smoothing {
+    @include font-smooth;
+  }
+
+  a:not(.btn) {
+    color: map-get($colors, $hyperlinks);
+
+    &:visited {
+      color: map-get($colors, $visited);
+    }
+
+    &:hover, &:active, &:focus {
+      color: map-get($colors, $hover);
+    }
+  }
+
+  h1, h4, h5, h6, .h1, .h4, .h5, .h6 {
+    color: map-get($colors, $headings);
+  }
+}

@@ -1,28 +1,28 @@
 / Layout
-= extend('layouts/default')
+= extend('layouts/default');
 
 / Styles
-= partial('partials/styles.slm')
+= partial('partials/styles.slm');
 
 / Links
-= partial('partials/links.slm')
+= partial('partials/links.slm');
 
 / Partials
-= partial('partials/head.mixin.slm')
-= partial('partials/header.mixin.slm')
-= partial('partials/nav.mixin.slm')
+= partial('partials/head.mixin.slm');
+= partial('partials/header.mixin.slm');
+= partial('partials/nav.mixin.slm');
 
 / Component
-= partial('../objects/feed/feed.slm')
+= partial('../objects/feed/feed.slm');
 
 / Content blocks
-= content('head')
-  = mixin('head', 'Feed')
+= content('head');
+  = mixin('head', 'Feed');
 
-= content('header')
-  = mixin('header')
+= content('header');
+  = mixin('header');
 
-= content('content')
+= content('content');
 
   h1 class='${class_demo_headers}' Feed
 
@@ -31,7 +31,7 @@
     div class='${class_demo_col1}'
       div class='${class_demo_cola}'
 
-        h2#about
+        h2#about class='mt-0'
           a href='#about' About
 
         p
@@ -53,9 +53,9 @@
           div class='code-block'
             pre
               div
-                = '<script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated" type="text/javascript"> '
-                span class='code__comment' = '<!-- The feed component uses Promises so this polyfill is needed for IE support -->'
-              div = '<script src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v' + this.vars.version + '/dist/objects/feed/Feed.js" type="text/javascript">'
+                = '<script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated" type="text/javascript"> ';
+                span class='code__comment' = '<!-- The feed component uses Promises so this polyfill is needed for IE support -->';
+              div = '<script src="' + this.site.urls.cdn + '/objects/feed/Feed.js" type="text/javascript">';
 
         p
           | Optionally, but recommended, include the base styling for the feed:
@@ -63,7 +63,7 @@
         p
           div class='code-block'
             pre
-              div = '<link src="https://cdn.rawgit.com/CityOfNewYork/nyco-patterns/v' + this.vars.version + '/dist/objects/feed/feed.css" rel="stylesheet" type="text/css" media="screen">'
+              div = '<link src="' + this.site.urls.cdn + '/objects/feed/feed.css" rel="stylesheet" type="text/css" media="screen">';
 
         p
           | Then, add a container with the feed's id and the execution script with configuration parameters.
@@ -72,21 +72,21 @@
           div class='code-block'
             pre
               div
-                = '<div id="js-feed"></div>'
+                = '<div id="js-feed"></div>';
               div
-                = '<script type="text/javascript">'
+                = '<script type="text/javascript">';
               div
-                = '  new Feed({'
+                = '  new Feed({';
               div
-                = '    selector: "#js-feed", '
+                = '    selector: "#js-feed", ';
                 span class='code__comment' = '// The DOM element selctor for the feed. Defaults to #js-feed'
               div
-                = '    feed: "https://medium.com/feed/@nycopportunity/", '
+                = '    feed: "https://medium.com/feed/@nycopportunity/", ';
                 span class='code__comment' = '// Required. The feed you want to display. May be an array of multiple feeds'
               div
-                = '  }).init();'
+                = '  }).init();';
               div
-                = '</script>'
+                = '</script>';
 
         p
           | <code>new Feed({});</code> creates a feed, accepting a configuration object as a parameter. The object should contain the configuration you would like for the feed. Note: the <code>selector</code> and <code>feed</code> parameters are required to display a feed. <code>.init();</code> is a function that executes initialization of the feed and displays it. Below is a list of the rest of the default configuration options. See the <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a> for more details on their feeds.
@@ -97,7 +97,7 @@
         p
           | To change an option, add the desired variable to the configuration object above. Keep in mind they should be the same type (string or number) as they are listed below.
 
-        = mixin('feed-configuration')
+        = mixin('feed-configuration');
 
         h2#layouts
           a href='#layouts' Layouts
@@ -111,7 +111,7 @@
         p
           | The feed comes shipped with ready-to-use LoDash template components for Medium feeds. Each component can be overwritten with the <code>template.component</code> configuration parameter. You can copy the templates below to get started creating your own template and refer to the <a href="https://lodash.com/docs/4.17.5#template">LoDash documentation for templates</a>.
 
-        = mixin('feed-template')
+        = mixin('feed-template');
 
         p
           | Here's an example of passing your own template to the configuration:
@@ -119,21 +119,21 @@
         p
           div class='code-block'
             pre
-              div = 'var MyTemplate = {'
-              div = '  opener: "<div>...template content...</div>"'
-              div = '  header: "<div>...template content...</div>"'
-              div = '  posts: "<div>...template content...</div>"'
-              div = '  closer: "<div>...template content...</div>"'
-              div = '};'
-              div = 'new Feed({'
+              div = 'var MyTemplate = {';
+              div = '  opener: "<div>...template content...</div>"';
+              div = '  header: "<div>...template content...</div>"';
+              div = '  posts: "<div>...template content...</div>"';
+              div = '  closer: "<div>...template content...</div>"';
+              div = '};';
+              div = 'new Feed({';
               div
-                = '  selector: "#feed", '
-                span class='code__comment' = '// required'
+                = '  selector: "#feed", ';
+                span class='code__comment' = '// required';
               div
-                = '  feed: "https://medium.com/feed/@nycopportunity/", '
-                span class='code__comment' = '// required'
-              div = '  template: MyTemplate'
-              div = '}).init();'
+                = '  feed: "https://medium.com/feed/@nycopportunity/", ';
+                span class='code__comment' = '// required';
+              div = '  template: MyTemplate';
+              div = '}).init();';
 
         p
           | Templates are passed the <code>config</code> object and whatever the response of the feed is. In Medium's case, they pass the <code>feed</code> parameter and posts within the <code>items</code> parameter in the response from their RSS feed. To see the data that gets passed to the template to use in your template, set the <code>log</code> configuration parameter to <code>true</code>. Open up the console to see the data for this particular feed demonstration.
@@ -147,11 +147,8 @@
     div class='${class_demo_col2}'
       div class='${class_demo_colb}'
 
-        h2#demonstration
-          a href='#demonstration' Demonstration
-
         div class='border-8 p-4 border-secondary-white'
-          = mixin('feed-demo')
+          = mixin('feed-demo');
 
-= content('script')
-  = mixin('feed-script')
+= content('script');
+  = mixin('feed-script');

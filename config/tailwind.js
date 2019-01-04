@@ -11,9 +11,9 @@ const variables = require('./variables.js');
 
 const tailwind = {
   fonts: variables.fonts,
-  fontWeights: variables.fonts,
-  textSizes: variables.fonts,
-  leading: variables.fonts,
+  fontWeights: variables.fontWeights,
+  textSizes: variables.textSizes,
+  leading: variables.leading,
   colors: variables.colors,
   textColors: variables.colors,
   backgroundColors: variables.colors,

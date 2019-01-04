@@ -5,13 +5,14 @@
 // Dependencies
 @import 'config/variables';
 
-// Declaration
-.layout {
+$screens: map-get($variables, 'screens');
+$grid: map-get($variables, 'grid');;
 
-  $min-width: map-get(map-get($variables, 'screens'), 'screen-tablet');
+// Declaration
+.layout--sidebar {
+  $min-width: map-get($screens, 'screen-tablet');
 
   @media (min-width: '#{$min-width}px') {
-
     > *:first-child {
       width: 16rem
     }
@@ -19,7 +20,28 @@
     > *:first-child + * {
       width: calc(100% - 16rem)
     }
+  }
+}
 
+.layout--content {
+  > *:first-child {
+    width: 600px;
+    max-width: 100%;
+  }
+}
+
+.layout--four-columns-gutter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  > * {
+    width: calc(25% - #{$grid});
+    max-width: calc(25% - #{$grid});
+    flex-basis: calc(25% - #{$grid})
   }
 
+  > * {
+    margin-bottom: $grid
+  }
 }

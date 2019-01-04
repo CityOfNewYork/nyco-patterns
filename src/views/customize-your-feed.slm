@@ -1,28 +1,28 @@
 / Layout
-= extend('layouts/default')
+= extend('layouts/default');
 
 / Styles
-= partial('partials/styles.slm')
+= partial('partials/styles.slm');
 
 / Links
-= partial('partials/links.slm')
+= partial('partials/links.slm');
 
 / Partials
-= partial('partials/head.mixin.slm')
-= partial('partials/header.mixin.slm')
-= partial('partials/nav.mixin.slm')
+= partial('partials/head.mixin.slm');
+= partial('partials/header.mixin.slm');
+= partial('partials/nav.mixin.slm');
 
 / Component
-= partial('../objects/feed/feed.slm')
+= partial('../objects/feed/feed.slm');
 
 / Content blocks
-= content('head')
-  = mixin('head', 'Customize Your Feed')
+= content('head');
+  = mixin('head', 'Customize Your Feed');
 
-= content('header')
-  = mixin('header')
+= content('header');
+  = mixin('header');
 
-= content('content')
+= content('content');
 
   h1 class='${class_demo_headers}' Customize your feed
 
@@ -31,7 +31,7 @@
     div class='${class_demo_col1}'
       div class='${class_demo_cola}'
 
-        h2#how-to
+        h2#how-to class='mt-0'
           a href='#how-to' How-to
 
         form#js-controls class='control-form m-0' method='get'
@@ -50,10 +50,10 @@
             div v-if='Array.isArray(item)' class='pb-2'
               div class='control-group flex items-center'
                 code class='code mr-2'
-                  = '{{ name }}'
+                  = '{{ name }}';
                   | &nbsp;
                   span class='code__comment' title='Default type'
-                    = 'array'
+                    = 'array';
                 label class='control-label' style='margin: 0 !important'
                     input type='text' v-bind:name='name' v-bind:id='name' v-bind:value='config[name]' v-on:change='config[name] = $event.target.value.split(",")'
                 span class='ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1' v-bind:title='docs[name]'
@@ -63,10 +63,10 @@
             div v-else-if='typeof item == "string" || !isNaN(item)' class='pb-2'
               div class='control-group flex items-center'
                 code class='code mr-2'
-                  = '{{ name }}'
+                  = '{{ name }}';
                   | &nbsp;
                   span class='code__comment' title='Default type'
-                    = '{{ typeof item }}'
+                    = '{{ typeof item }}';
                 label class='control-label' style='margin: 0 !important'
                   input type='text' v-bind:name='name' v-bind:id='name' v-model='config[name]'
                 span class='ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1' v-bind:title='docs[name]'
@@ -77,10 +77,10 @@
               div v-for='value, key in item' class='pb-2'
                 div class='control-group flex items-center'
                   code class='code mr-2'
-                    = '{{ name }}.{{ key }}'
+                    = '{{ name }}.{{ key }}';
                     | &nbsp;
                     span class='code__comment' title='Default type'
-                      = '{{ typeof item[key] }}'
+                      = '{{ typeof item[key] }}';
                   label class='control-label' style='margin: 0 !important'
                     input type='text' v-bind:name='name + value' v-bind:id='name + value' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)'
                   span class='ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1' v-bind:title='docs[name][key]'
@@ -92,7 +92,7 @@
     div class='${class_demo_col2}'
       div class='${class_demo_colb}'
 
-        h2#your-feed
+        h2#your-feed class='mt-0'
           a href='#your-feed' Your Feed
 
         form class='control-form'
@@ -100,7 +100,7 @@
             | Copy and paste the following code into your page to embed this customized Feed:
 
           textarea#js-embed
-            = '{{ embed }}'
+            = '{{ embed }}';
 
         form class='control-form mb-4'
           p
@@ -109,7 +109,7 @@
           input#js-share data-js-share-base='${this.site.urls.production}'
 
         div class='border-8 p-4 border-secondary-white'
-          = mixin('feed-demo')
+          = mixin('feed-demo');
 
-= content('script')
-  = mixin('feed-script')
+= content('script');
+  = mixin('feed-script');

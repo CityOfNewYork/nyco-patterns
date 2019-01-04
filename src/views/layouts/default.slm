@@ -1,17 +1,16 @@
-= partial('../partials/footer.mixin.slm')
-= partial('../partials/nav.mixin.slm')
+= partial('../partials/footer.mixin.slm');
+= partial('../partials/nav.mixin.slm');
 
 doctype html
 html lang='en' class='text-size-0'
 
-  = content('head')
+  = content('head');
 
 body class='bg-base-black' style='visibility: hidden;' onload='load()'
-
   div class='hidden' aria-hidden='true'
-    = partial('../partials/icons.slm')
+    = partial('../partials/icons.slm');
 
-  header class='layout screen-tablet:flex'
+  header class='layout--sidebar screen-tablet:flex'
     div class='flex items-center justify-center bg-primary-blue text-base-white screen-tablet:w-64 p-3 screen-tablet:p-4'
       h1 class='m-0 p-0'
         span class='hidden'
@@ -19,22 +18,22 @@ body class='bg-base-black' style='visibility: hidden;' onload='load()'
         svg class='icon-logo text-base-white' aria-hidden='true'
           use xlink:href='#icon-logo'
 
-    div class='flex-1 flex flex-col content-center justify-center bg-primary-navy text-base-white links-invert p-3 screen-tablet:p-4'
-      = content('header')
+    div class='flex-1 flex flex-col content-center justify-center color-dark-background p-3 screen-tablet:p-4 screen-desktop:px-6'
+      = content('header');
 
-    div class='flex flex-col content-center justify-center bg-primary-navy text-base-white links-invert px-3 pb-3 screen-tablet:p-4'
-      h3 class='mr-3'
+    div class='flex flex-col content-center justify-center color-dark-background px-3 pb-3 screen-tablet:p-4'
+      div
         a href='${link_source}' class='border-2 border-base-white py-1 px-2 inline rounded-lg'
-          = 'v' + this.site.versions.package
+          = 'v' + this.site.versions.package;
 
-  main#main-content class='layout screen-tablet:flex items-stretch m-0 p-0 min-h-screen'
-    aside class='bg-secondary-white py-2 px-3'
-      = mixin('nav')
+  main#main-content class='layout--sidebar screen-tablet:flex items-stretch m-0 p-0 min-h-screen'
+    aside class='color-mid-background py-2 px-3'
+      = mixin('nav');
 
-    article class='bg-base-white py-2 px-4 screen-desktop:px-6'
-      = content('content')
+    article class='color-light-background py-2 px-4 screen-desktop:px-6'
+      = content('content');
 
   footer class='py-6 text-center text-base-white links-invert'
-    = mixin('footer')
+    = mixin('footer');
 
-  = content('script')
+  = content('script');

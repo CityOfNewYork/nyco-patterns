@@ -20,12 +20,10 @@
   = mixin('header');
 
 = content('content');
-
   h1 class='${class_demo_headers}' Home
 
   section class='${class_demo}'
-
-    div class='${class_demo_col1} border-none'
+    div class='mt-4 layout--content'
       div class='${class_demo_cola}'
 
         p

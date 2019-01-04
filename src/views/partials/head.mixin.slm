@@ -1,18 +1,15 @@
-= mixin('head', 'title = NYCO Patterns')
+= mixin('head', 'title = NYCO Patterns');
   head
     meta charset='utf-8'
     meta http-equiv='X-UA-Compatible' content='IE=edge'
     meta name='viewport' content='width=device-width, initial-scale=1'
 
-    <!-- NYCO PATTERNS -->
-    link rel='stylesheet' href='styles/nyco-patterns-default.css'
-
-    <!-- GLOBAL STYLES -->
+    /! GLOBAL STYLES
     link href='https://www1.nyc.gov/assets/home/css/css-min/global.css' media='screen' rel='stylesheet' type='text/css'
     link href='https://www1.nyc.gov/assets/home/css/css-min/module.css' media='screen' rel='stylesheet' type='text/css'
-    <!-- PRINT STYLE -->
+    /! PRINT STYLE
     link href='https://www1.nyc.gov/assets/home/css/print.css' media='print' rel='stylesheet' type='text/css'
-    <!-- PAGE SPECIFIC STYLES -->
+    /! PAGE SPECIFIC STYLES
     link href='https://www1.nyc.gov/assets/home/css/modules/status-updates-short.css' media='screen' rel='stylesheet' type='text/css'
     link href='https://www1.nyc.gov/assets/home/css/modules/status-updates-mini.css' media='screen' rel='stylesheet' type='text/css'
     link href='https://www1.nyc.gov/assets/home/css/includes/header-agencies.css' media='screen' rel='stylesheet' type='text/css'
@@ -23,16 +20,30 @@
     link href='https://www1.nyc.gov/assets/home/css/pages/agencies/index.css' media='screen' rel='stylesheet' type='text/css'
     link href='https://www1.nyc.gov/assets/opportunity/css/agency-styles.css' media='screen' rel='stylesheet' type='text/css'
 
-    - if this.title == 'NYCO Patterns'
-      title = this.title
-    - else
-      title = this.title + ' | NYCO Patterns'
+    /! NYCO PATTERNS
+    link rel='stylesheet' href='styles/nyco-patterns-default.css'
 
-    | <script type="text/javascript">var VERSION = "${this.site.versions.package}";</script>
+    - if (this.title == 'NYCO Patterns') {
+      - title = this.title;
+    - } else {
+      - title = this.title + ' | NYCO Patterns';
+    - };
+
+    javascript:
+      var VERSION = '${this.site.versions.package}';
 
     noscript
       style
-        = 'body { visibility: visible !important; }'
+        = 'body { visibility: visible !important; }';
 
     javascript:
       function load() { document.body.style.visibility = 'visible' };
+
+      function toggleTheme(theme) {
+        var stylesheets = document.styleSheets;
+
+        for (var i = 0; i < stylesheets.length; i++) {
+          var ss = stylesheets[i];
+          ss.disabled = (!ss.disabled && ss.href.indexOf(theme) > -1) ? true : false;
+        }
+      } toggleTheme('www1.nyc.gov');
