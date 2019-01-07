@@ -1,4 +1,4 @@
-- pattern = 'Colors';
+- pattern = 'Buttons';
 
 / Layout
 = extend('layouts/default');
@@ -24,5 +24,6 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section-full', 'utilities/colors/color-combinations', 'Color Combinations');
-  = mixin('section', 'utilities/colors/color-utilities', 'Color Utilities');
+  = mixin('section', 'elements/buttons/button');
+  = mixin('section', 'elements/buttons/button--primary', 'Primary Button');
+  = mixin('section', 'elements/buttons/button--secondary', 'Secondary Button');

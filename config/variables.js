@@ -160,6 +160,8 @@ const variables = {
     6: '48px'
   },
   margin: {
+    '-2': '-16px',
+    '-1': '-8px',
     0: '0',
     1: '8px',
     2: '16px',
@@ -173,6 +175,9 @@ const variables = {
     'screen-tablet': 768,
     'screen-mobile': 480,
     'screen-sm-mobile': 400
+  },
+  buttons: {
+    'radius': '500px'
   }
 };
 

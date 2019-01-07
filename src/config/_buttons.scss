@@ -1,0 +1,23 @@
+//
+// Variables
+//
+
+// Dependencies
+$colors: map-get($variables, 'colors');
+$colorCombinations: map-get($variables, 'colorCombinations');
+
+// Declarations
+@mixin button-hover($name: 'primary-button') {
+  $combination: map-get($colorCombinations, $name);
+  $color-namespace: map-get($combination, 'color');
+  $bg-color-namespace: map-get($combination, 'background-color');
+  $color: map-get($colors, $color-namespace);
+  $bg-color: map-get($colors, $bg-color-namespace);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color;
+    background: saturate(lighten($bg-color, 5%), 5%);
+  }
+}

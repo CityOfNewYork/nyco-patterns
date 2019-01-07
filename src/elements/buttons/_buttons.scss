@@ -1,0 +1,54 @@
+/**
+ * Buttons
+ */
+
+// Dependencies
+@import 'config/variables';
+@import 'config/buttons';
+
+$buttons: map-get($variables, 'buttons');
+$grid: map-get($variables, 'grid');
+
+// Declarations
+.btn, [class*='btn--'],
+.button, [class*='button--'] {
+  color: inherit;
+  font-weight: normal;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: initial;
+
+  display: inline-block;
+  appearance: none;
+  cursor: pointer;
+  background: transparent;
+  padding: ($grid * 1.5) ($grid * 2);
+
+  border: 1.5px solid;
+  border-color: inherit;
+  border-radius: map-get($buttons, 'radius');
+  box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0);
+
+  transition: background .2s ease-in,
+              color .2s ease-in,
+              box-shadow .2s ease-in;
+
+  .icon {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, .25);
+  }
+
+  &.color-primary-button {
+    @include button-hover('primary-button');
+  }
+
+  &.color-secondary-button {
+    @include button-hover('secondary-button');
+  }
+}

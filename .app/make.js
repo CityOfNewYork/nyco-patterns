@@ -86,7 +86,7 @@ function fnMakeOtherFiles(dir, type, template, pattern, callback) {
  * @param  {string} pattern The name of the pattern
  */
 function fnFiles(dir, type, pattern, callback) {
-  let filetypes = ['markup', 'styles'];
+  let filetypes = ['markup', 'styles', 'markdown'];
   filetypes.forEach((element, index) => {
     let style = templates[element]
       .split('{{ type }}').join(type)
@@ -132,7 +132,7 @@ function fnMake(dir, type, pattern, callback) {
 }
 
 /**
- * Ask if we wan to make the configuration file.
+ * Ask if we want to make the configuration file.
  * @param  {string} dir     The directory to write
  * @param  {string} type    The pattern type: elements, components, objects
  * @param  {string} pattern The name of the pattern

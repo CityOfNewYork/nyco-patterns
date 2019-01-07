@@ -1,3 +1,3 @@
 = mixin('header');
-  h1 class='jumbo mt-0 mb-1' Patterns
+  h1 class='jumbo mt--2 mb-0' Patterns
   a href='#main-content' Skip to main content

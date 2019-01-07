@@ -6,13 +6,14 @@
       | Repository
       span class='${class_nav_link_sub}'
         = this.site.versions.package;
-    a class='${class_nav_link}' href='${link_nyc_opportunity}' target='_blank' rel='noindex nofollow'
+    a class='${class_nav_link} mb-2' href='${link_nyc_opportunity}' target='_blank' rel='noindex nofollow'
       | NYC Opportunity
-    a class='${class_nav_link}' href='#' data-theme='www1.nyc.gov' onclick='toggleTheme(event.target.dataset.theme)'
-      | Toggle nyc.gov Stylesheets
+    a class='btn' data-theme='www1.nyc.gov' onclick='toggleTheme(event.target.dataset.theme)'
+      | NYC.gov Styles
 
   nav class='screen-tablet:pb-2'
     span class='${class_nav_link_header}' Elements:
+    a class='${class_nav_link}' href='buttons' Buttons
     a class='${class_nav_link}' href='colors' Colors
     a class='${class_nav_link}' href='icons' Icons
     a class='${class_nav_link}' href='layouts' Layouts
@@ -33,7 +34,7 @@
     a class='${class_nav_link}' href='${link_bootstrap}' target='_blank' rel='noindex nofollow'
       | Bootstrap
       span class='${class_nav_link_sub}'
-        = this.site.versions.bootstrap
+        = this.site.versions.bootstrap;
     a class='${class_nav_link}' href='${link_tailwind_docs}' target='_blank' rel='noindex nofollow'
       | Tailwind.css
       span class='${class_nav_link_sub}'
