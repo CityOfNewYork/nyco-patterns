@@ -23,7 +23,7 @@
     <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
     <script type="text/javascript">
-      var VERSION = '1.1.0';
+      var VERSION = '1.1.1';
     </script>
     <noscript>
       <style>
@@ -74,12 +74,12 @@
       </h1>
     </div>
     <div class="flex-1 flex flex-col content-center justify-center color-dark-background p-3 screen-tablet:p-4 screen-desktop:px-6">
-      <h1 class="jumbo mt-0 mb-1">Patterns</h1>
+      <h1 class="jumbo mt--2 mb-0">Patterns</h1>
       <a href="#main-content">Skip to main content</a>
     </div>
     <div class="flex flex-col content-center justify-center color-dark-background px-3 pb-3 screen-tablet:p-4">
       <div>
-        <a class="border-2 border-base-white py-1 px-2 inline rounded-lg" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.1.0">v1.1.0</a>
+        <a class="btn" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.1.1">v1.1.1</a>
       </div>
     </div>
   </header>
@@ -87,11 +87,13 @@
     <aside class="color-mid-background py-2 px-3">
       <nav class="screen-tablet:pb-2">
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2 pr-2" href="index">Home</a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.1.0">Repository<span class="text-primary-blue-50t mx-1">1.1.0</span></a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="http://www.nyc.gov/opportunity" rel="noindex nofollow" target="_blank">NYC Opportunity</a>
-        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" data-theme="www1.nyc.gov" href="#" onclick="toggleTheme(event.target.dataset.theme)">Toggle nyc.gov Stylesheets</a>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.1.1">Repository<span class="text-primary-blue-50t mx-1">1.1.1</span></a>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2 mb-2" href="http://www.nyc.gov/opportunity" rel="noindex nofollow"
+          target="_blank">NYC Opportunity</a>
+        <a class="btn" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">NYC.gov Styles</a>
       </nav>
       <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Elements:</span>
+        <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="buttons">Buttons</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="colors">Colors</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="icons">Icons</a>
         <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="layouts">Layouts</a>
@@ -120,10 +122,11 @@
               <a href='http://getbootstrap.com/2.3.2'>Bootstrap 2.3.2</a>. This library extends the NYC.gov Style Guide with custom modules and the
               <a href='https://tailwindcss.com'>Tailwind CSS Utility framework</a>. See the
               <a href='https://blueprint.cityofnewyork.us/design/nyc-brand/'>NYC Digital Blueprint's documentation</a> of The City's Style Guide for more details and resources.</p>
+            <p>By default, NYC.gov stylesheets are disabled in this documentation. To see what these patterns look like with the NYC.gov stylesheets, click "NYC.gov Styles" in the main navigation.</p>
             <p>The patterns in this repository are organized as <em>Elements</em>, <em>Components</em> (coming soon), and <em>Objects</em> for styling pages with the NYC Opportunity brand. The can be dropped into any web page on linking to the global stylesheet
               url in the head of an html page;</p>
             <p>
-              <div class="code-block"><pre><div>&lt;link href=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.1.0/dist/styles/nyco-patterns-default.css&quot;&gt;</div></pre></div>
+              <div class="code-block"><pre><div>&lt;link href=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.1.1/dist/styles/nyco-patterns-default.css&quot;&gt;</div></pre></div>
             </p>
             <p>This distribution includes a custom build of the
               <a href='https://tailwindcss.com'>Tailwind Utility CSS Framework</a>. Refer to Tailwind CSS docs for full details on utilizing the CSS uitilites to build different types of UIs.</p>
