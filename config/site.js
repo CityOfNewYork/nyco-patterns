@@ -11,7 +11,7 @@ const package = require('../package.json');
 const site = {
   versions: {
     package: package.version,
-    tailwindcss: package.dependencies.tailwindcss.replace('^', ''),
+    tailwindcss: package.devDependencies.tailwindcss.replace('^', ''),
     bootstrap: '2.3.2'
   },
   urls: {
