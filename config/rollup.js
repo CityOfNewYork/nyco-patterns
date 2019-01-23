@@ -5,8 +5,8 @@
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import uglify from 'rollup-plugin-uglify';
-import replace from 'rollup-plugin-replace';
-import eslint from 'rollup-plugin-eslint';
+// import replace from 'rollup-plugin-replace';
+// import eslint from 'rollup-plugin-eslint';
 
 /**
  * Config
