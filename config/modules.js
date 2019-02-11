@@ -33,6 +33,13 @@ const modules = [
     includePaths: sass.includePaths
   },
   {
+    file: './src/scss/_tailwind.scss',
+    outDir: './dist/styles/',
+    outFile: '_tailwind.scss',
+    precision: sass.precision,
+    includePaths: sass.includePaths
+  },
+  {
     file: './src/objects/feed/_feed.scss',
     outDir: './dist/objects/feed/',
     outFile: 'feed.css',

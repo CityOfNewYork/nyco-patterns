@@ -23,25 +23,38 @@ $grid: map-get($variables, 'grid');;
   }
 }
 
-.layout--content {
-  > *:first-child {
-    width: 600px;
-    max-width: 100%;
+@mixin layouts($variant: '') {
+  .#{$variant}layout--content {
+    > *:first-child {
+      width: 600px;
+      max-width: 100%;
+    }
+  }
+
+  .#{$variant}layout--four-columns-gutter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(25% - #{$grid});
+      max-width: calc(25% - #{$grid});
+      flex-basis: calc(25% - #{$grid})
+    }
+
+    > * {
+      margin-bottom: $grid
+    }
   }
 }
 
-.layout--four-columns-gutter {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+// the layout execution
+@include layouts;
 
-  > * {
-    width: calc(25% - #{$grid});
-    max-width: calc(25% - #{$grid});
-    flex-basis: calc(25% - #{$grid})
-  }
-
-  > * {
-    margin-bottom: $grid
+// the layout breakpoint execution
+@each $screen, $s in $screens {
+  @media screen and (min-width: #{$s}px) {
+    $variant: $screen + '\\:';
+    @include layouts($variant);
   }
 }

@@ -6,6 +6,7 @@ $grid: map-get($variables, 'grid');
 
 @mixin table() {
   max-width: 100%;
+  min-width: 100%;
 
   thead {
     color: map-get($colors, 'base-white');

@@ -4,6 +4,7 @@
 
 // Dependencies
 @import 'config/variables';
+@import 'config/code';
 
 // Declarations
 pre {
@@ -37,16 +38,8 @@ code, pre {
   text-overflow: ellipsis;
 }
 
-p code {
-  color: map-get(map-get($variables, 'colors'), 'primary-blue');
-  font-size: 85%;
-  font-family: inherit;
-  letter-spacing: 0.01em;
-  background-color: map-get(map-get($variables, 'colors'), 'secondary-white');
-  border-radius: 3px;
-  padding: 0.2em 0.4em;
-  margin: 0;
-  display: inline;
+p > code {
+  @include inline-code;
 }
 
 .code-block {
