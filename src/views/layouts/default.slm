@@ -1,6 +1,3 @@
-= partial('../partials/footer.mixin.slm');
-= partial('../partials/nav.mixin.slm');
-
 doctype html
 html lang='en' class='text-size-0'
 
@@ -10,7 +7,9 @@ body class='bg-base-black' style='visibility: hidden;' onload='load()'
   div class='hidden' aria-hidden='true'
     = partial('../partials/icons.slm');
 
-  header class='layout--sidebar screen-tablet:flex'
+  / = partial('../../components/official/official.slm');
+
+  header class='screen-tablet:layout--sidebar screen-tablet:flex'
     div class='flex items-center justify-center bg-primary-blue text-base-white screen-tablet:w-64 p-3 screen-tablet:p-4'
       h1 class='m-0 p-0'
         span class='hidden'
@@ -26,14 +25,16 @@ body class='bg-base-black' style='visibility: hidden;' onload='load()'
         a href='${link_source}' class='btn'
           = 'v' + this.site.versions.package;
 
-  main#main-content class='layout--sidebar screen-tablet:flex items-stretch m-0 p-0 min-h-screen'
+  main#main-content class='screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 min-h-screen'
     aside class='color-mid-background py-2 px-3'
+      - class_nav = 'screen-tablet:pb-2';
+      - class_nav_link = 'inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2';
+      = partial('../partials/nav.mixin.slm');
       = mixin('nav');
 
     article class='color-light-background py-2 px-4 screen-desktop:px-6'
       = content('content');
 
-  footer class='py-6 text-center text-base-white links-invert'
-    = mixin('footer');
+  = partial('../../objects/footer/footer.slm');
 
   = content('script');

@@ -17,5 +17,4 @@
 
 / Styling for the main navigation
 - class_nav_link_header = 'inline-block screen-tablet:block pb-1';
-- class_nav_link = 'inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2';
 -   class_nav_link_sub = 'text-primary-blue-50t mx-1';

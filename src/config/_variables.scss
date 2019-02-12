@@ -4,7 +4,7 @@
 // and use `$set: map-get($variables, {set}); $var: map-get($set, {var})`.
 
 $variables: (
-  cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.1.5/dist",
+  cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.1.6/dist",
   fonts: (
     system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
     nycgov: ("Helvetica Neue", Helvetica, Arial, sans-serif),
@@ -119,7 +119,8 @@ $variables: (
     )
   ),
   icons: (
-    icon-logo: 136px 136px
+    icon-logo: 136px 136px,
+    icon-logo-nyc: 48px 16px
   ),
   animate: (
     ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06),
@@ -153,7 +154,8 @@ $variables: (
     5: 40px,
     6: 48px,
     -2: -16px,
-    -1: -8px
+    -1: -8px,
+    auto: auto
   ),
   screens: (
     screen-desktop: 960,

@@ -1,0 +1,8 @@
+/
+/ Official
+/
+
+section class='c-official color-mid-background text-primary-blue'
+  svg class='icon icon-logo-nyc'
+    use xlink:href='#icon-logo-nyc'
+  small class='px-1' Official website of the City of New York

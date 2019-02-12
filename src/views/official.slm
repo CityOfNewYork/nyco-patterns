@@ -1,4 +1,4 @@
-- pattern = 'Layouts';
+- pattern = 'Official';
 
 / Layout
 = extend('layouts/default');
@@ -24,7 +24,4 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section-full', 'elements/layouts/layout--wrap', 'Wrapped Layout');
-  = mixin('section-full', 'elements/layouts/layout--sidebar', 'Sidebar Layout');
-  = mixin('section-full', 'elements/layouts/layout--content', 'Content Layout');
-  = mixin('section-full', 'elements/layouts/layout--four-columns-gutter', 'Four Column Gutter Layout');
+  = mixin('section', 'components/official/official');

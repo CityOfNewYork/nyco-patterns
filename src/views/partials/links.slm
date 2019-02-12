@@ -3,6 +3,10 @@
 
 - link_github_team = 'https://github.com/orgs/CityOfNewYork/teams/nycopportunity';
 - link_nyc_opportunity = 'http://www.nyc.gov/opportunity';
+- link_medium = 'https://medium.com/@nycopportunity';
+- link_facebook = 'https://www.facebook.com/NYCOpportunity/';
+- link_twitter = 'https://twitter.com/nycopportunity';
+- link_instagram = 'https://www.instagram.com/nycopportunity/';
 - link_bootstrap = 'http://getbootstrap.com/2.3.2';
 - link_tailwind_docs = 'https://tailwindcss.com';
 - link_city_style_guide = 'https://www1.nyc.gov/assets/doitt/downloads/pdf/user_experience_design_public.pdf';

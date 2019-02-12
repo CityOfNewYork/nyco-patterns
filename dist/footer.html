@@ -116,194 +116,54 @@
       </nav>
     </aside>
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Colors</h1>
+      <h1 class="m-0 p-0 mt-2">Footer</h1>
       <section class="pb-4">
         <div class="mt-4 layout--content">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="color-combinations">
-              <a href="#color-combinations">Color Combinations</a>
+            <h2 class="mt-0" id="default-styling">
+              <a href="#default-styling">Default Styling</a>
             </h2>
           </div>
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <div class="mb-2">
-              <article class="color-light-background w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small">
-                <h1 class="m-0">Headings</h1>
-                <div class="capitalize">light background Text</div>
-                <a href="#">Hyperlinks</a>
-              </article>
-              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-light-background</pre></div>
-            </div>
-            <div class="mb-2">
-              <article class="color-mid-background w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small">
-                <h1 class="m-0">Headings</h1>
-                <div class="capitalize">mid background Text</div>
-                <a href="#">Hyperlinks</a>
-              </article>
-              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-mid-background</pre></div>
-            </div>
-            <div class="mb-2">
-              <article class="color-dark-background w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small">
-                <h1 class="m-0">Headings</h1>
-                <div class="capitalize">dark background Text</div>
-                <a href="#">Hyperlinks</a>
-              </article>
-              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-dark-background</pre></div>
-            </div>
-            <div class="mb-2">
-              <article class="color-primary-button w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small">
-                <div class="capitalize">primary button Text</div>
-              </article>
-              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-primary-button</pre></div>
-            </div>
-            <div class="mb-2">
-              <article class="color-secondary-button w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small">
-                <div class="capitalize">secondary button Text</div>
-              </article>
-              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-secondary-button</pre></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="color-utilities">
-              <a href="#color-utilities">Color Utilities</a>
-            </h2>
-            <p>You can use every color as a utility class for static and hover states. These are the prefixes that are available;</p>
-            <p><code class="code">bg-{ color }</code> = Background color</p>
-            <p><code class="code">text-{ color }</code> = Text color</p>
-            <p><code class="code">border-{ color }</code> = Border color</p>
-            <p>Refer to
-              <a href="https://tailwindcss.com">Tailwind CSS docs</a> for full details on using color utilities and <code>hover:</code> states.</p>
-          </div>
-        </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <div class="layout--four-columns-gutter">
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-navy py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy</pre></div>
+            <footer class="px-3 py-6 color-dark-background screen-tablet:layout--four-columns-gutter">
+              <nav>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2 pr-2" href="index">Home</a>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.1.6">Repository<span class="text-primary-blue-50t mx-1">1.1.6</span></a>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2 mb-2" href="http://www.nyc.gov/opportunity" rel="noindex nofollow" target="_blank">NYC Opportunity</a>
+                <a class="btn" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">NYC.gov Styles</a>
+              </nav>
+              <nav><span class="inline-block screen-tablet:block pb-1">Elements:</span>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="buttons">Buttons</a>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="colors">Colors</a>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="icons">Icons</a>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="layouts">Layouts</a>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2 screen-tablet:mb-2" href="tables">Tables</a><span class="inline-block screen-tablet:block pb-1">Objects:</span>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="feed">Feed</a>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2 screen-tablet:mb-2" href="footer">Footer</a><span class="inline-block screen-tablet:block pb-1">Utilities:</span>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2 screen-tablet:mb-2" href="type">Type</a>
+              </nav>
+              <nav><span class="screen-tablet:block pb-1">Dependencies:</span>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="https://www1.nyc.gov/assets/doitt/downloads/pdf/user_experience_design_public.pdf" rel="noindex nofollow"
+                  target="_blank">NYC.gov Style Guide</a>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="http://getbootstrap.com/2.3.2" rel="noindex nofollow" target="_blank">Bootstrap<span class="text-primary-blue-50t mx-1">2.3.2</span></a>
+                <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="https://tailwindcss.com" rel="noindex nofollow" target="_blank">Tailwind.css<span class="text-primary-blue-50t mx-1">0.7.3</span></a>
+              </nav>
+              <div class="m-0">
+                <a href="http://nyc.gov/opportunity" title="The Mayor's Office for Economic Opportunity">
+                  <svg aria-hidden="true" class="icon-logo text-base-white" style="height:72px">
+                    <use xlink:href="#icon-logo"></use>
+                  </svg>
+                </a>
+                <p>NYC Opportunity is the New York City Mayor's Office for Economic Opportunity. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
+                  <a
+                    href='https://twitter.com/nycopportunity' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
+                    <a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
+                    <a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
+                    <a href='https://github.com/orgs/CityOfNewYork/teams/nycopportunity' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
+                <small>© City of New York, 2019 All Rights Reserved.
+                  <br>NYC is a trademark and service mark of the City of New York.</small>
               </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-navy-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy-70t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-navy-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy-50t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-navy-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy-30t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-blue py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-blue-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue-70t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-blue-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue-50t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-blue-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue-30t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-red py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-red-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red-70t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-red-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red-50t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-primary-red-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red-30t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-grey py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-grey-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey-70t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-grey-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey-50t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-grey-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey-30t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-white py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-white-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white-70t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-white-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white-50t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-white-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white-30t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-orange py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-orange-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange-70t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-orange-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange-50t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-orange-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange-30t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-pink py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-pink-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink-70t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-pink-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink-50t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-pink-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink-30t</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-base-black py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">base-black</pre></div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div class="bg-base-white py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">base-white</pre></div>
-              </div>
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
-            </div>
+            </footer>
           </div>
         </div>
       </section>

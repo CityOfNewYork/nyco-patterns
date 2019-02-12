@@ -1,0 +1,28 @@
+/
+/ Footer
+/
+
+footer class='px-3 py-6 color-dark-background screen-tablet:layout--four-columns-gutter'
+
+  - class_nav = '';
+  - class_nav_link = 'inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2';
+  = partial('../../views/partials/nav.mixin.slm');
+  = mixin('nav');
+
+  div class='m-0'
+    a href='http://nyc.gov/opportunity' title='${this.site.package.author}'
+      svg class='icon-logo text-base-white' aria-hidden='true' style='height:72px'
+        use xlink:href='#icon-logo'
+
+    p
+      | NYC Opportunity is the New York City Mayor's Office for Economic Opportunity. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
+      | <a href='${link_twitter}' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
+      | <a href='${link_facebook}' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
+      | <a href='${link_medium}' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
+      | <a href='${link_github_team}' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
+
+    small
+      - let date = new Date();
+      - let year = date.getFullYear();
+      | © City of New York, ${year} All Rights Reserved.<br>
+      | NYC is a trademark and service mark of the City of New York.

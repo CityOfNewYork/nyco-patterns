@@ -134,7 +134,8 @@ const variables = {
     }
   },
   icons: {
-    'icon-logo': '136px 136px'
+    'icon-logo': '136px 136px',
+    'icon-logo-nyc': '48px 16px'
   },
   animate: {
     'ease-in-quint': 'cubic-bezier(0.755, 0.05, 0.855, 0.06)',
@@ -168,7 +169,8 @@ const variables = {
     3: '24px',
     4: '32px',
     5: '40px',
-    6: '48px'
+    6: '48px',
+    auto: 'auto'
   },
   screens: {
     'screen-desktop': 960,

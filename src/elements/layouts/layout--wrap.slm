@@ -1,0 +1,2 @@
+div class='bg-secondary-grey py-6'
+  div class='layout--wrap bg-secondary-white py-6 mx-auto text-center' Wrapped Content (Max width: 1200px)

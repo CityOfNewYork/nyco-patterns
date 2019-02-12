@@ -9,6 +9,7 @@ const package = require('../package.json');
  */
 
 const site = {
+  package: package,
   versions: {
     package: package.version,
     tailwindcss: package.devDependencies.tailwindcss.replace('^', ''),
