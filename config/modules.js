@@ -45,6 +45,20 @@ const modules = [
     outFile: 'feed.css',
     precision: sass.precision,
     includePaths: sass.includePaths
+  },
+  {
+    file: './src/objects/footer/_footer.scss',
+    outDir: './dist/objects/footer/',
+    outFile: 'footer.css',
+    precision: sass.precision,
+    includePaths: sass.includePaths
+  },
+  {
+    file: './src/objects/mailchimp/_mailchimp.scss',
+    outDir: './dist/objects/mailchimp/',
+    outFile: 'mailchimp.css',
+    precision: sass.precision,
+    includePaths: sass.includePaths
   }
 ];
 

@@ -1,0 +1,44 @@
+/**
+ * Mailchimp
+ * Styling for an external Mailchimp form
+ */
+
+// Dependencies
+// @import 'config/variables';
+
+// Declarations
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+
+body,
+label,
+.bodyContent,
+.formEmailButton {
+  font-family: 'Noto Sans';
+}
+
+.masthead, .formEmailButton {
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.formEmailButton {
+  border-radius: 500px;
+  transition: box-shadow .2s ease-in;
+}
+
+.formEmailButton:hover {
+  box-shadow: 0 2px 15px 3px rgba(0, 0, 0, .25);
+}
+
+a:link {
+  font-weight: bold;
+}
+
+.rounded6 {
+  border-radius: 0px;
+}
+
+.submit_container {
+  text-align: center;
+}
