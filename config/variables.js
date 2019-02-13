@@ -123,11 +123,13 @@ const variables = {
       'background-color': 'primary-navy'
     },
     'primary-button': {
+      'font-weight': 'bold',
       'color': 'base-white',
       'font-smooth': true,
       'background-color': 'primary-blue'
     },
     'secondary-button': {
+      'font-weight': 'bold',
       'color': 'base-white',
       'font-smooth': true,
       'background-color': 'primary-red'

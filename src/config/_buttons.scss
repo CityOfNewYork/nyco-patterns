@@ -18,6 +18,6 @@ $colorCombinations: map-get($variables, 'colorCombinations');
   &:focus,
   &:active {
     color: $color;
-    background: saturate(lighten($bg-color, 5%), 5%);
+    background: saturate(darken($bg-color, 5%), 5%);
   }
 }

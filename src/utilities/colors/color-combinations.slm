@@ -2,7 +2,7 @@
     - value = this.vars.colorCombinations[key];
 
     div class='mb-2'
-      article class='color-${key} w-full py-4 p-2 border border-secondary-grey-30t border-b-0 small'
+      article class='color-${key} w-full py-4 p-2 border border-secondary-grey-30t border-b-0'
         - if (value['headings'])
           - ;
           h1 class='m-0' Headings

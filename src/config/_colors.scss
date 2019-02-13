@@ -15,6 +15,10 @@ $combinations: map-get($variables, 'colorCombinations');
   color: map-get($colors, $color);
   background-color: map-get($colors, $background);
 
+  @if map-get($combination, 'font-weight') {
+    font-weight: map-get($combination, 'font-weight');
+  }
+
   @if $smoothing {
     @include font-smooth;
   }

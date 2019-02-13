@@ -4,7 +4,7 @@
 // and use `$set: map-get($variables, {set}); $var: map-get($set, {var})`.
 
 $variables: (
-  cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.1.8/dist",
+  cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.1.9/dist",
   fonts: (
     system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
     nycgov: ("Helvetica Neue", Helvetica, Arial, sans-serif),
@@ -108,11 +108,13 @@ $variables: (
       background-color: primary-navy
     ),
     primary-button: (
+      font-weight: bold,
       color: base-white,
       font-smooth: true,
       background-color: primary-blue
     ),
     secondary-button: (
+      font-weight: bold,
       color: base-white,
       font-smooth: true,
       background-color: primary-red
