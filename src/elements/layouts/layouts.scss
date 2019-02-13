@@ -53,7 +53,7 @@ $grid: map-get($variables, 'grid');;
 
 // the layout breakpoint execution
 @each $screen, $s in $screens {
-  @media screen and (min-width: #{$s}px) {
+  @media (min-width: #{$s}px) {
     $variant: $screen + '\\:';
     @include layouts($variant);
   }

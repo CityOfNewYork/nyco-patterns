@@ -174,8 +174,8 @@ const variables = {
   },
   screens: {
     'screen-desktop': 960,
-    'screen-tablet': 768,
     'screen-mobile': 480,
+    'screen-tablet': 768,
     'screen-sm-mobile': 400
   },
   buttons: {

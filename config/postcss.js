@@ -16,7 +16,9 @@ const postCss = {
   plugins: [
     tailwindcss('./config/tailwind.js'),
     autoprefixer('last 4 version'),
-    mqpacker(),
+    mqpacker({
+      sort: true
+    }),
     cssnano()
   ]
 };
