@@ -4,6 +4,7 @@ import Icons from '../elements/icons/Icons';
 import Feed from '../objects/feed/Feed';
 import Toggle from '../utilities/toggle/Toggle';
 import Track from '../utilities/track/Track';
+import Chart from '../objects/chart/chart';
 /** import modules here as they are written */
 
 /**
@@ -43,6 +44,11 @@ class nyco {
   track(settings) {
     return new Track();
   }
+
+  chart() {
+    return new Chart().init();
+  }
+  /** add APIs here as they are written */
 }
 
 export default nyco;

@@ -1,0 +1,6 @@
+/
+/ Chart
+/
+
+div data-js='app'
+  chart v-bind='chartData'
