@@ -1,15 +1,7 @@
 = mixin('nav');
   nav class='${class_nav}'
-    a class='${class_nav_link} pr-2' href='index'
-      | Home
-    a class='${class_nav_link}' href='${link_source}'
-      | Repository
-      span class='${class_nav_link_sub}'
-        = this.site.versions.package;
-    a class='${class_nav_link} mb-2' href='${link_nyc_opportunity}' target='_blank' rel='noindex nofollow'
-      | NYC Opportunity
-    a class='btn' data-theme='www1.nyc.gov' onclick='toggleTheme(event.target.dataset.theme)'
-      | NYC.gov Styles
+    a class='${class_nav_link} screen-tablet:mb-2' href='index'
+      | Overview
 
   nav class='${class_nav}'
     span class='${class_nav_link_header}' Elements:
@@ -19,24 +11,11 @@
     a class='${class_nav_link}' href='layouts' Layouts
     a class='${class_nav_link} screen-tablet:mb-2' href='tables' Tables
 
+  nav class='${class_nav}'
+
     span class='${class_nav_link_header}' Objects:
     a class='${class_nav_link}' href='feed' Feed
     a class='${class_nav_link} screen-tablet:mb-2' href='footer' Footer
 
     span class='${class_nav_link_header}' Utilities:
     a class='${class_nav_link} screen-tablet:mb-2' href='type' Type
-
-  nav class='${class_nav}'
-    span class='screen-tablet:block pb-1' Dependencies:
-    a class='${class_nav_link}' href='${link_city_style_guide}' target='_blank' rel='noindex nofollow'
-      | NYC.gov Style Guide
-    a class='${class_nav_link}' href='${link_bootstrap}' target='_blank' rel='noindex nofollow'
-      | Bootstrap
-      span class='${class_nav_link_sub}'
-        = this.site.versions.bootstrap;
-    a class='${class_nav_link}' href='${link_tailwind_docs}' target='_blank' rel='noindex nofollow'
-      | Tailwind.css
-      span class='${class_nav_link_sub}'
-        = this.site.versions.tailwindcss;
-
-

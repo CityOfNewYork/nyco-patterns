@@ -6,7 +6,7 @@
 @import 'config/variables';
 
 $screens: map-get($variables, 'screens');
-$grid: map-get($variables, 'grid');;
+$grid: map-get($variables, 'grid');
 
 // Declaration
 @mixin layouts($variant: '') {
@@ -26,8 +26,8 @@ $grid: map-get($variables, 'grid');;
 
   .#{$variant}layout--content {
     > *:first-child {
-      width: 600px;
-      max-width: 100%;
+      max-width: 600px;
+      width: 100%
     }
   }
 

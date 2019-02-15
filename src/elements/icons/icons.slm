@@ -1,27 +1,22 @@
 
-= mixin('icons', 'code = false', 'key')
+- for key in this.vars.icons
+
   - href = key
   - for i in this.vars.iconVariants
     - if href.indexOf(this.vars.iconVariants[i]) > 0
       - href = href.replace(this.vars.iconVariants[i], '')
 
-  - if this.code
-    div class='${class_demo_class_containers}'
-      code.code
-        = key + ' #' + href + ','
-        br
-        = 'bg-' + key
-    div class='${class_demo_class_containers}'
-      div class='code-block mb-1'
-        pre
-          div = '<svg class="' + key + ' text-base-black">'
-          div = '  <use xlink:href="#' + href + '">'
-          div = '</svg>'
-          div = ' '
-          div = '<div class="bg-' + key + '"></div>'
+  div class='flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4'
+    div class='w-full'
 
-  div class='mb-1'
-    svg class='${key} text-base-black'
-      use xlink:href='#${href}'
+      div class='text-font-size-small'
 
-  div class='bg-${key}'
+        h3 class='text-h6 capitalize mt-0 mb-2' ${key.replace(/-/g," ")}
+
+        div class='py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center' style='min-height:150px'
+          svg class='${key} icon-xlarge text-color-blue-dark'
+            use xlink:href='#${key.split("--")[0]}'
+
+        p class='mb-0 flex justify-between'
+          | xlink:href
+          code #${key}

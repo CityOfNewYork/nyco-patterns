@@ -11,11 +11,11 @@ footer class='px-3 py-6 color-dark-background screen-tablet:layout--four-columns
 
   div class='m-0'
     a href='http://nyc.gov/opportunity' title='${this.site.package.author}'
-      svg class='icon-logo text-base-white' aria-hidden='true' style='height:72px'
-        use xlink:href='#icon-logo'
+      svg class='icon-logo-secondary icon-xlarge text-base-white mb-3' aria-hidden='true' style='height: 52px !important'
+        use xlink:href='#icon-logo-secondary'
 
     p
-      | NYC Opportunity is the New York City Mayor's Office for Economic Opportunity. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
+      | NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
       | <a href='${link_twitter}' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
       | <a href='${link_facebook}' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
       | <a href='${link_medium}' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;

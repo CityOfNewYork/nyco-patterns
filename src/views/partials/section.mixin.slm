@@ -1,12 +1,13 @@
-= mixin('section', 'path', 'title = Default Styling');
+= mixin('section', 'path', 'title = false');
   - this.slug = this.title.replace(/ /g, '-').toLowerCase();
 
   section class='${class_demo}'
     div class='${class_demo_col1}'
       div class='${class_demo_cola}'
-        h2 id='${this.slug}' class='mt-0'
-          a href='#${this.slug}'
-            = this.title;
+        - if (this.title !== 'false')
+          h2 id='${this.slug}' class='mt-0'
+            a href='#${this.slug}'
+              = this.title;
 
         = partial(`../${this.path}.md`);
 

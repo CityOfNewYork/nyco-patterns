@@ -31,7 +31,7 @@
     "styles:watch": "nodemon --ext scss --watch src --ignore _variables.scss -x \"npm run styles\"",
     "svgs": "npm run svgs:optimize && npm run svgs:symbol",
     "svgs:optimize": "svgo -f ./src/svg -o ./dist/svg",
-    "svgs:symbol": "svgstore -o ./src/views/partials/icons.slm ./dist/svg/*.svg",
+    "svgs:symbol": "svgstore -o ./src/views/partials/icons.slm ./dist/svg/*.svg --inline && svgstore -o ./dist/icons.svg ./dist/svg/*.svg --inline",
     "svgs:watch": "nodemon --ext svg --watch ./src/svg -x \"npm run svgs\"",
     "make": "node .app/make.js"
   },

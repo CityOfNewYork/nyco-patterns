@@ -3,9 +3,21 @@
  */
 
 // Dependencies
+@import 'config/variables';
 @import 'scss/functions/str-replace';
 
+$screens: map-get($variables, 'screens');
+
 // Declarations
+@mixin iconSizes($variant: '') {
+  @each $key, $var in map-get($variables, 'iconSizes') {
+    .#{$variant}icon-#{$key} {
+      width: nth($var, 1) !important;
+      height: nth($var, 2) !important;
+    }
+  }
+}
+
 [class*='icon-'] {
   overflow: visible !important;
 }
@@ -15,7 +27,6 @@
 }
 
 @each $key, $var in map-get($variables, 'icons') {
-
   $path: $key;
 
   @if map-get($variables, 'iconVariants') {
@@ -37,4 +48,15 @@
     height: nth($var, 2);
   }
 
+}
+
+// the layout execution
+@include iconSizes;
+
+// the layout breakpoint execution
+@each $screen, $s in $screens {
+  @media (min-width: #{$s}px) {
+    $variant: $screen + '\\:';
+    @include iconSizes($variant);
+  }
 }

@@ -10,5 +10,5 @@
 
         = partial(`../${this.path}.md`);
 
-      div class='${class_demo_cola}'
+      div
         = partial(`../${this.path}.slm`);

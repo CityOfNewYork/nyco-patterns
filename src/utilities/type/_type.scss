@@ -79,9 +79,10 @@ blockquote, .blockquote {
 }
 
 p, ul, ol {
+  margin-top: 0px;
   margin-bottom: 1.250em;
 }
 
-@media print {
-  html { }
-}
+// @media print {
+//   html { }
+// }

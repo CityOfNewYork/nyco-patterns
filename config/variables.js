@@ -23,8 +23,7 @@ const variables = {
     ],
     'default-serif': [
       '"Noto Serif"', 'serif'
-    ],
-
+    ]
   },
   fontWeights: {
     'normal': 'normal',
@@ -136,8 +135,19 @@ const variables = {
     }
   },
   icons: {
-    'icon-logo': '136px 136px',
-    'icon-logo-nyc': '48px 16px'
+    'icon-logo-nyc': '350px 117px',
+    'icon-logo-nyco-secondary': '694px 76px',
+    'icon-logo-nyco': '692px 358px',
+    'icon-logo-primary': '693px 313px',
+    'icon-logo-secondary': '692px 121px'
+  },
+  iconSizes: {
+    'xsmall': '8px 8px',
+    'small': '16px 16px',
+    'medium': '32px 32px',
+    'large': '136px 136px',
+    'xlarge': '256px 256px',
+    'mega': '512px 512px'
   },
   animate: {
     'ease-in-quint': 'cubic-bezier(0.755, 0.05, 0.855, 0.06)',
@@ -146,33 +156,33 @@ const variables = {
     'animate-timing-function': 'cubic-bezier(0.23, 1, 0.32, 1)'
   },
   borderWidths: {
-    0: '0',
+    '0': '0',
     'default': '1px',
-    2: '2px',
-    4: '4px',
-    8: '8px'
+    '2': '2px',
+    '4': '4px',
+    '8': '8px'
   },
   grid: '8px',
   padding: {
-    0: '0',
-    1: '8px',
-    2: '16px',
-    3: '24px',
-    4: '32px',
-    5: '40px',
-    6: '48px'
+    '0': '0',
+    '1': '8px',
+    '2': '16px',
+    '3': '24px',
+    '4': '32px',
+    '5': '40px',
+    '6': '48px'
   },
   margin: {
     '-2': '-16px',
     '-1': '-8px',
-    0: '0',
-    1: '8px',
-    2: '16px',
-    3: '24px',
-    4: '32px',
-    5: '40px',
-    6: '48px',
-    auto: 'auto'
+    '0': '0',
+    '1': '8px',
+    '2': '16px',
+    '3': '24px',
+    '4': '32px',
+    '5': '40px',
+    '6': '48px',
+    'auto': 'auto'
   },
   screens: {
     'screen-desktop': 960,

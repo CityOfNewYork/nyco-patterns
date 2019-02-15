@@ -31,8 +31,19 @@ const modules = [ // Our list of modules we are exporting
   {
     input: './src/js/main.js',
     output: {
-      name: 'NycoPattterns',
-      file: `./dist/scripts/NycoPattterns.js`,
+      name: 'NycoPatterns',
+      file: `./dist/scripts/NycoPatterns.js`,
+      sourcemap: rollup.sourcemap,
+      format: rollup.format,
+      strict: rollup.strict
+    },
+    plugins: rollup.plugins
+  },
+  {
+    input: './src/elements/icons/Icons.js',
+    output: {
+      name: 'Icons',
+      file: `./dist/elements/icons/Icons.js`,
       sourcemap: rollup.sourcemap,
       format: rollup.format,
       strict: rollup.strict

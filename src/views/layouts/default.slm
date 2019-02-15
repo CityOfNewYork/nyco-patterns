@@ -4,8 +4,8 @@ html lang='en' class='text-size-0'
   = content('head');
 
 body class='bg-base-black' style='visibility: hidden;' onload='load()'
-  div class='hidden' aria-hidden='true'
-    = partial('../partials/icons.slm');
+  / div class='hidden' aria-hidden='true'
+  /   = partial('../partials/icons.slm');
 
   / = partial('../../components/official/official.slm');
 
@@ -14,8 +14,8 @@ body class='bg-base-black' style='visibility: hidden;' onload='load()'
       h1 class='m-0 p-0'
         span class='hidden'
           | The Mayor's Office<br>for Economic Opportunity
-        svg class='icon-logo text-base-white' aria-hidden='true'
-          use xlink:href='#icon-logo'
+        svg class='icon-logo-nyco icon-large text-base-white' aria-hidden='true'
+          use xlink:href='#icon-logo-nyco'
 
     div class='flex-1 flex flex-col content-center justify-center color-dark-background p-3 screen-tablet:p-4 screen-desktop:px-6'
       = content('header');
@@ -27,14 +27,23 @@ body class='bg-base-black' style='visibility: hidden;' onload='load()'
 
   main#main-content class='screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 min-h-screen'
     aside class='color-mid-background py-2 px-3'
-      - class_nav = 'screen-tablet:pb-2';
-      - class_nav_link = 'inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2';
-      = partial('../partials/nav.mixin.slm');
-      = mixin('nav');
+      div class='sticky pin-t max-h-screen overflow-y-auto'
+        div class='text-center'
+          a class='btn mt-2 mb-4' data-theme='www1.nyc.gov' onclick='toggleTheme(event.target.dataset.theme)'
+            | nyc.gov styles
+
+        - class_nav = 'screen-tablet:pb-2';
+        - class_nav_link = 'inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2';
+        = partial('../partials/nav.mixin.slm');
+        = mixin('nav');
 
     article class='color-light-background py-2 px-4 screen-desktop:px-6'
       = content('content');
 
   = partial('../../objects/footer/footer.slm');
 
+  script src='scripts/NycoPatterns.js'
+  javascript:
+    var nyco = new NycoPatterns();
+    nyco.icons();
   = content('script');
