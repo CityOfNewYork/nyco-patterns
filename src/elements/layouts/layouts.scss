@@ -4,8 +4,8 @@
 
 // Dependencies
 @import 'config/variables';
+@import 'config/screens';
 
-$screens: map-get($variables, 'screens');
 $grid: map-get($variables, 'grid');
 
 // Declaration
@@ -48,13 +48,6 @@ $grid: map-get($variables, 'grid');
   }
 }
 
-// the layout execution
-@include layouts;
-
-// the layout breakpoint execution
-@each $screen, $s in $screens {
-  @media (min-width: #{$s}px) {
-    $variant: $screen + '\\:';
-    @include layouts($variant);
-  }
+@include screens {
+  @include layouts($variant);
 }

@@ -1,0 +1,32 @@
+
+// Dependencies
+@import 'config/screens';
+
+// Declarations
+.toggle-label {
+  cursor: pointer
+}
+
+@mixin toggles($variant: '') {
+  .#{$variant}toggle {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden
+  }
+
+  .#{$variant}toggle[type='checkbox']:not(:checked) + * {
+    display: none;
+    visibility: hidden
+  }
+
+  .#{$variant}toggle-disable[type='checkbox']:not(:checked) + * {
+    display: inherit;
+    visibility: visible
+  }
+}
+
+@include screens {
+  @include toggles($variant);
+}

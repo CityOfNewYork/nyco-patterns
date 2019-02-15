@@ -4,6 +4,7 @@
 
 // Dependencies
 @import 'config/variables';
+@import 'config/screens';
 @import 'scss/functions/str-replace';
 
 $screens: map-get($variables, 'screens');
@@ -20,6 +21,7 @@ $screens: map-get($variables, 'screens');
 
 [class*='icon-'] {
   overflow: visible !important;
+  max-width: 100% !important;
 }
 
 [class*='bg-icon-'] {
@@ -50,13 +52,6 @@ $screens: map-get($variables, 'screens');
 
 }
 
-// the layout execution
-@include iconSizes;
-
-// the layout breakpoint execution
-@each $screen, $s in $screens {
-  @media (min-width: #{$s}px) {
-    $variant: $screen + '\\:';
-    @include iconSizes($variant);
-  }
+@include screens {
+  @include iconSizes($variant);
 }

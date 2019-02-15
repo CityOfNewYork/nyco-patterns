@@ -4,10 +4,15 @@
 
 footer class='px-3 py-6 color-dark-background screen-tablet:layout--four-columns-gutter'
 
+  /- class_nav = '';
+  /- class_nav_link = 'inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2';
   - class_nav = '';
-  - class_nav_link = 'inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2';
+  - class_nav_link_header = 'block p-2 border-b';
+  - class_nav_link = 'block p-2';
   = partial('../../views/partials/nav.mixin.slm');
   = mixin('nav');
+
+  div
 
   div class='m-0'
     a href='http://nyc.gov/opportunity' title='${this.site.package.author}'

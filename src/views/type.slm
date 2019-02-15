@@ -3,13 +3,9 @@
 / Layout
 = extend('layouts/default');
 
-/ Variables
 = partial('partials/styles.slm');
 = partial('partials/links.slm');
-
-/ Partials
 = partial('partials/head.mixin.slm');
-= partial('partials/header.mixin.slm');
 = partial('partials/nav.mixin.slm');
 = partial('partials/section.mixin.slm');
 
