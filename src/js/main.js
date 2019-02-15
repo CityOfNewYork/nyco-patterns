@@ -2,6 +2,7 @@
 
 import Icons from '../elements/icons/Icons';
 import Feed from '../objects/feed/Feed';
+import Chart from '../objects/chart/chart';
 /** import modules here as they are written */
 
 class nyco {
@@ -21,6 +22,10 @@ class nyco {
    */
   Feed(settings) {
     return new Feed(settings).init();
+  }
+
+  chart() {
+    return new Chart().init();
   }
   /** add APIs here as they are written */
 }
