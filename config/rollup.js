@@ -30,42 +30,69 @@ const rollup = {
 const modules = [ // Our list of modules we are exporting
   {
     input: './src/js/main.js',
-    output: {
-      name: 'NycoPatterns',
-      file: `./dist/scripts/NycoPatterns.js`,
-      sourcemap: rollup.sourcemap,
-      format: rollup.format,
-      strict: rollup.strict
-    },
+    output: [
+      {
+        name: 'NycoPatterns',
+        file: './dist/scripts/NycoPatterns.js',
+        sourcemap: rollup.sourcemap,
+        format: rollup.format,
+        strict: rollup.strict
+      },
+      {
+        name: 'NycoPatterns',
+        file: './dist/scripts/NycoPatterns.common.js',
+        sourcemap: rollup.sourcemap,
+        format: 'cjs',
+        strict: rollup.strict
+      }
+    ],
     plugins: rollup.plugins
   },
   {
     input: './src/elements/icons/Icons.js',
-    output: {
-      name: 'Icons',
-      file: `./dist/elements/icons/Icons.js`,
-      sourcemap: rollup.sourcemap,
-      format: rollup.format,
-      strict: rollup.strict
-    },
+    output: [
+      {
+        name: 'Icons',
+        file: './dist/elements/icons/Icons.js',
+        sourcemap: rollup.sourcemap,
+        format: rollup.format,
+        strict: rollup.strict
+      },
+      {
+        name: 'Icons',
+        file: './dist/elements/icons/Icons.common.js',
+        sourcemap: rollup.sourcemap,
+        format: 'cjs',
+        strict: rollup.strict
+      }
+    ],
     plugins: rollup.plugins
   },
   {
     input: './src/objects/feed/Feed.js',
-    output: {
-      name: 'Feed',
-      file: `./dist/objects/feed/Feed.js`,
-      sourcemap: rollup.sourcemap,
-      format: rollup.format,
-      strict: rollup.strict
-    },
+    output: [
+      {
+        name: 'Feed',
+        file: './dist/objects/feed/Feed.js',
+        sourcemap: rollup.sourcemap,
+        format: rollup.format,
+        strict: rollup.strict
+      },
+      {
+        name: 'Feed',
+        file: './dist/objects/feed/Feed.common.js',
+        sourcemap: rollup.sourcemap,
+        format: 'cjs',
+        strict: rollup.strict
+      }
+    ],
     plugins: rollup.plugins
   },
   {
     input: './src/objects/feed/FeedDocs.js',
     output: {
       name: 'FeedDocs',
-      file: `./dist/objects/feed/FeedDocs.js`,
+      file: './dist/objects/feed/FeedDocs.js',
       sourcemap: rollup.sourcemap,
       format: rollup.format,
       strict: rollup.strict
