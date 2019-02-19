@@ -31,6 +31,38 @@ $grid: map-get($variables, 'grid');
     }
   }
 
+  .#{$variant}layout--two-columns-gutter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(50% - #{$grid});
+      max-width: calc(50% - #{$grid});
+      flex-basis: calc(50% - #{$grid})
+    }
+
+    > * {
+      margin-bottom: $grid
+    }
+  }
+
+  .#{$variant}layout--three-columns-gutter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(33.33% - #{$grid});
+      max-width: calc(33.33% - #{$grid});
+      flex-basis: calc(33.33% - #{$grid})
+    }
+
+    > * {
+      margin-bottom: $grid
+    }
+  }
+
   .#{$variant}layout--four-columns-gutter {
     display: flex;
     justify-content: space-between;

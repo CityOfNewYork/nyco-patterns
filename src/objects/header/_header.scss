@@ -1,0 +1,123 @@
+/**
+ * Header
+ */
+
+// Dependencies
+@import 'config/variables';
+
+$screens: map-get($variables, 'screens');
+$colors: map-get($variables, 'colors');
+$grid: map-get($variables, 'grid');
+$iconSizes: map-get($variables, 'iconSizes');
+
+// Declarations
+.o-header {
+  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+    display: flex;
+  }
+}
+
+.o-header__banner-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: $grid ($grid * 4);
+
+  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+    justify-content: center;
+    padding: ($grid * 4);
+  }
+}
+
+.o-header__main-toggle {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.o-header__main-toggle,
+.o-header__main-version {
+  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.o-header__main-title {
+  margin: 0;
+  padding: 0;
+}
+
+.o-header__logo-main,
+.o-header__logo-secondary {
+  color: map-get($colors, 'base-white');
+}
+
+.o-header__logo-main {
+  width: nth(map-get($iconSizes, 'xlarge'), 1) !important;
+  height: 30px !important;
+
+  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.o-header__logo-secondary {
+  display: none;
+  visibility: hidden;
+
+  width: nth(map-get($iconSizes, 'large'), 1) !important;
+  height: 80px !important;
+
+  margin-top: ($grid * 4);
+  margin-bottom: ($grid * 4);
+
+  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+    display: inline;
+    visibility: visible;
+  }
+}
+
+.o-header__banner-secondary {
+  display: none;
+  visibility: hidden;
+
+  flex: 1 1 0%;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: ($grid * 4);
+
+  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+    display: flex;
+    visibility: visible;
+  }
+
+  @media (min-width: #{map-get($screens, 'screen-desktop')}px) {
+    justify-content: center;
+    padding-left: ($grid * 6);
+    padding-right:  ($grid * 6);
+  }
+}
+
+.o-header__secondary-title {
+  font-weight: normal;
+  margin: 0;
+  margin-top: -2px;
+}
+
+.o-header__secondary-version {
+  display: none;
+  visibility: hidden;
+
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: ($grid * 4);
+
+  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+    display: flex;
+    visibility: visible;
+  }
+}

@@ -1,10 +1,13 @@
-- pattern = 'Type';
+- pattern = 'Header';
 
 / Layout
 = extend('layouts/default');
 
+/ Variables
 = partial('partials/styles.slm');
 = partial('partials/links.slm');
+
+/ Partials
 = partial('partials/head.mixin.slm');
 = partial('partials/nav.mixin.slm');
 = partial('partials/section.mixin.slm');
@@ -20,4 +23,4 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section-full', 'utilities/type/type', 'Headings');
+  = mixin('section-full', 'objects/header/header');

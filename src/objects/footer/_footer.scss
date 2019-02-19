@@ -3,7 +3,51 @@
  */
 
 // Dependencies
-// @import 'config/variables';
+@import 'config/variables';
+
+$screens: map-get($variables, 'screens');
+$colors: map-get($variables, 'colors');
+$grid: map-get($variables, 'grid');
+$iconSizes: map-get($variables, 'iconSizes');
 
 // Declarations
-// .o-footer { }
+.o-footer {
+  padding: ($grid * 6) ($grid * 3);
+}
+
+.o-footer__nav-header {
+  display: block;
+  border-bottom: 1px solid !important;
+  padding: ($grid * 2) $grid;
+
+  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+    padding-left: ($grid * 2);
+    padding-right: ($grid * 2);
+  }
+}
+
+.o-footer__nav-link {
+  display: block;
+  padding: ($grid * 2) $grid;
+
+  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+    padding-left: ($grid * 2);
+    padding-right: ($grid * 2);
+  }
+}
+
+.o-footer__info {
+  margin-top: ($grid * 6);
+  margin-bottom: 0;
+
+  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+    margin: 0px;
+  }
+}
+
+.o-footer__logo {
+  color: map-get($colors, 'base-white');
+  width: nth(map-get($iconSizes, 'xlarge'), 1) !important;
+  height: 52px !important;
+  margin-bottom: ($grid * 3);
+}

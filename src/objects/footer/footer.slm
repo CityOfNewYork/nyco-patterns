@@ -2,21 +2,20 @@
 / Footer
 /
 
-footer class='px-3 py-6 color-dark-background screen-tablet:layout--four-columns-gutter'
+footer class='o-footer color-dark-background screen-tablet:layout--four-columns-gutter'
 
-  /- class_nav = '';
-  /- class_nav_link = 'inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2';
-  - class_nav = '';
-  - class_nav_link_header = 'block p-2 border-b';
-  - class_nav_link = 'block p-2';
-  = partial('../../views/partials/nav.mixin.slm');
-  = mixin('nav');
+  nav
+    a class='o-footer__nav-link' href='index' Overview
+    a class='o-footer__nav-link' href='${link_source}' GitHub Repository
+    a class='o-footer__nav-link' href='${link_nyc_opportunity}' title='${this.site.package.author}' NYC Opportunity
+    a class='o-footer__nav-link' href='${link_tailwind_docs}' Tailwind CSS
+    a class='o-footer__nav-link' href='${link_blueprint}' NYC Digital Blueprint
 
   div
 
-  div class='m-0'
+  div class='o-footer__info'
     a href='http://nyc.gov/opportunity' title='${this.site.package.author}'
-      svg class='icon-logo-secondary icon-xlarge text-base-white mb-3' aria-hidden='true' style='height: 52px !important'
+      svg class='icon-logo-secondary o-footer__logo text-base-white' aria-hidden='true' style='height: 52px !important'
         use xlink:href='#icon-logo-secondary'
 
     p

@@ -1,0 +1,21 @@
+/
+/ Navigation
+/
+
+aside class='o-navigation color-mid-background'
+  input id='menu' type='checkbox' class='toggle screen-tablet:toggle-disable'
+
+  div class='o-navigation__wrap'
+    div class='o-navigation__banner color-dark-background'
+      h1 class='o-navigation__banner-title' Patterns
+
+    div class='o-navigation__nav'
+      div class='text-center'
+        a class='btn mt-2 mb-2 px-5' data-theme='www1.nyc.gov' onclick='toggleTheme(event.target.dataset.theme)'
+          | nyc.gov styles
+
+      - class_nav = '';
+      - class_nav_link_header = 'o-navigation__link-header text-primary-blue-70t border-primary-blue-30t';
+      - class_nav_link = 'o-navigation__link';
+      = partial('../../views/partials/nav.mixin.slm');
+      = mixin('nav');

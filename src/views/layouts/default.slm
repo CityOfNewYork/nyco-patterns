@@ -4,47 +4,10 @@ html lang='en' class='text-size-0'
   = content('head');
 
 body class='bg-base-black' style='visibility: hidden;' onload='load()'
-  header class='screen-tablet:layout--sidebar screen-tablet:flex'
-    div class='flex items-center justify-between screen-tablet:justify-center bg-primary-blue text-base-white font-smooth screen-tablet:w-64 p-4 screen-tablet:p-3 py-1 screen-tablet:p-4'
-      label class='toggle-label font-bold screen-tablet:hidden' for='menu'
-        span class='underline' Menu
-        | &nbsp;&nbsp;&nbsp;&nbsp;
-
-      h1 class='m-0 p-0'
-        span class='hidden'
-          | The Mayor's Office<br>for Economic Opportunity
-
-        svg class='icon-logo-nyco icon-large my-4 text-base-white hidden screen-tablet:inline' aria-hidden='true' style='height: 80px !important;'
-          use xlink:href='#icon-logo-nyco'
-
-        svg aria-hidden='true' class='icon-logo-nyco icon-xlarge text-base-white screen-tablet:hidden' style='height: 30px !important;'
-          use xlink:href='#icon-logo-nyco'
-
-      div aria-hidden='true' class='font-bold screen-tablet:hidden' Patterns
-
-    div class='flex-1 flex-col content-center justify-center color-dark-background p-4 screen-desktop:px-6 hidden screen-tablet:flex'
-      h1 class='text-h2 screen-tablet:text-jumbo mt-0 screen-tablet:mt--2 mb-0' Patterns
-      a href='#main-content' Skip to main content
-
-    div class='flex-col content-center justify-center color-dark-background p-4 hidden screen-tablet:flex'
-      div
-        a href='${link_source}' class='btn'
-          = 'v' + this.site.versions.package;
+  = partial('../../objects/header/header.slm');
 
   main#main-content class='screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen'
-    aside class='color-mid-background'
-      input id='menu' type='checkbox' class='toggle screen-tablet:toggle-disable'
-      div class='py-2 px-3'
-        div class='screen-tablet:sticky screen-tablet:pin-t screen-tablet:max-h-screen screen-tablet:overflow-y-auto'
-          div class='text-center'
-            a class='btn mt-2 mb-2' data-theme='www1.nyc.gov' onclick='toggleTheme(event.target.dataset.theme)'
-              | nyc.gov styles
-
-          - class_nav = '';
-          - class_nav_link_header = 'block p-2 border-b';
-          - class_nav_link = 'block p-2';
-          = partial('../partials/nav.mixin.slm');
-          = mixin('nav');
+    = partial('../../objects/navigation/navigation.slm');
 
     article class='color-light-background py-2 px-4 screen-desktop:px-6'
       = content('content');

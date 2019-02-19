@@ -8,6 +8,7 @@
 = partial('partials/head.mixin.slm');
 = partial('partials/nav.mixin.slm');
 = partial('partials/section.mixin.slm');
+= partial('partials/section-full.mixin.slm');
 
 / Content blocks
 = content('head');
@@ -19,4 +20,4 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section', 'elements/tables/tables');
+  = mixin('section-full', 'elements/tables/tables');

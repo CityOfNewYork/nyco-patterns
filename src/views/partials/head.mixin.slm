@@ -29,6 +29,9 @@
       - title = this.title + ' | NYCO Patterns';
     - };
 
+    link rel='icon' type='image/png' sizes='32x32' href='/images/favicon/favicon-32x32.png'
+    link rel='shortcut icon' href='/images/favicon/favicon.ico'
+
     javascript:
       var VERSION = '${this.site.versions.package}';
 

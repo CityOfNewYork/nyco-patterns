@@ -40,9 +40,9 @@ const modules = [
     includePaths: sass.includePaths
   },
   {
-    file: './src/objects/feed/_feed.scss',
-    outDir: './dist/objects/feed/',
-    outFile: 'feed.css',
+    file: './src/objects/header/_header.scss',
+    outDir: './dist/objects/header/',
+    outFile: 'header.css',
     precision: sass.precision,
     includePaths: sass.includePaths
   },
@@ -50,6 +50,20 @@ const modules = [
     file: './src/objects/footer/_footer.scss',
     outDir: './dist/objects/footer/',
     outFile: 'footer.css',
+    precision: sass.precision,
+    includePaths: sass.includePaths
+  },
+  {
+    file: './src/objects/navigation/_navigation.scss',
+    outDir: './dist/objects/navigation/',
+    outFile: 'navigation.css',
+    precision: sass.precision,
+    includePaths: sass.includePaths
+  },
+  {
+    file: './src/objects/feed/_feed.scss',
+    outDir: './dist/objects/feed/',
+    outFile: 'feed.css',
     precision: sass.precision,
     includePaths: sass.includePaths
   },
