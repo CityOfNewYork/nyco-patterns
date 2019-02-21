@@ -89,6 +89,26 @@ const modules = [ // Our list of modules we are exporting
     plugins: rollup.plugins
   },
   {
+    input: './src/utilities/toggle/toggle.js',
+    output: [
+      {
+        name: 'Toggle',
+        file: './dist/utilities/toggle/toggle.js',
+        sourcemap: rollup.sourcemap,
+        format: rollup.format,
+        strict: rollup.strict
+      },
+      {
+        name: 'Toggle',
+        file: './dist/utilities/toggle/toggle.common.js',
+        sourcemap: rollup.sourcemap,
+        format: 'cjs',
+        strict: rollup.strict
+      }
+    ],
+    plugins: rollup.plugins
+  },
+  {
     input: './src/objects/feed/FeedDocs.js',
     output: {
       name: 'FeedDocs',
