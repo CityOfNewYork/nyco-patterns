@@ -1,6 +1,29 @@
 h3 The SVG Sprite
 
-p To use the inline SVGS, include the main icon sprite (<code>dist/icons.svg</code>) in your page markup.
+p To use the inline SVGS, include the main icon sprite (<code>dist/icons.svg</code>) in your page markup. NYCO Patterns uses an AJAX method to cache the sprite file while not including it in the page cache to decrease the size of each page. To import the icon through the global NYCO Patterns Patterns script use the following code:
+
+p
+  div class='code-block'
+    pre
+      = "var nyco = new NycoPatterns();\n"
+      = "nyco.icons();\n"
+
+p The script expects the icon sprite path to be named <code>icons.svg</code> and live in the root directory of the site. To overwrite this, pass a path to the method:
+
+p
+  div class='code-block'
+    pre
+      = "nyco.icons('path/to/icons.svg');\n"
+
+p The ES6, CommonJS, and IFFE modules all require global activation to be written into your main script:
+
+p
+  div class='code-block'
+    pre
+      = "import Icons from 'components/icons/Icons.common';\n"
+      = "new Icons(); // or new Icons('path/to/icons.svg');\n"
+
+p This uses the <code>fetch</code> method which will require a polyfill for IE11 (and other older browser) support. The script does not ship with a polyfill by default. See <a href='https://polyfill.io'>Polyfill.io</a> for a suitable polyfill.
 
 h3 Markup
 
@@ -39,16 +62,32 @@ p To manage the size of the icons, use the icon size utilities. The sizes are ba
 
 ul
   li
-    p <code>.icon-xsmall</code> 16px 16px
+    p <code>.icon-1</code> 8px 8px
   li
-    p <code>.icon-small</code> 24px 24px
+    p <code>.icon-2</code> 16px 16px
   li
-    p <code>.icon-medium</code> 32px 32px
+    p <code>.icon-3</code> 24px 24px
+  li
+    p <code>.icon-4</code> 32px 32px
+  li
+    p <code>.icon-5</code> 40px 40px
+  li
+    p <code>.icon-6</code> 48px 48px
+  li
+    p <code>.icon-7</code> 56px 56px
+  li
+    p <code>.icon-8</code> 64px 64px
+  li
+    p <code>.icon-9</code> 72px 72px
+  li
+    p <code>.icon-10</code> 80px 80px
+  li
+    p <code>.icon-11</code> 88px 88px
+  li
+    p <code>.icon-12</code> 96px 96px
   li
     p <code>.icon-large</code> 136px 136px
   li
-    p <code>.icon-xlarge</code> 256px 256px
-  li
-    p <code>.icon-mega</code> 512px 512px
+    p <code>.icon-xlarge</code> 256px 256p
 
 p <b>Accessibility Note</b>: If the SVG graphic doesn't serve a function, it may not be useful to screen readers. Therefore, it may be hidden using the <code>aria-hidden="true"</code> attribute.

@@ -85,8 +85,9 @@ class Toggle {
       document.querySelector(el.getAttribute('href')) : target;
 
     /** Toggle Controls */
-    target = (el.ariaControls) ?
-      document.querySelector(`#${el.ariaControls}`) : target;
+    // console.dir(el.getAttribute('aria-controls'));
+    target = (el.getAttribute('aria-controls')) ?
+      document.querySelector(`#${el.getAttribute('aria-controls')}`) : target;
 
     /** Main Functionality */
     if (!target) return this;
