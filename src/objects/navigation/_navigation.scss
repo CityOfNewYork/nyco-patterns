@@ -20,7 +20,7 @@ $grid: map-get($variables, 'grid');
 }
 
 .o-navigation__banner {
-  padding: ($grid) ($grid * 4);
+  padding: ($grid * 2) ($grid * 4);
 
   @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
     display: none;
@@ -37,12 +37,12 @@ $grid: map-get($variables, 'grid');
 .o-navigation__nav {
   flex: 1;
   padding: ($grid * 2) ($grid * 3);
+}
 
+.o-navigation__stick {
   @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
     position: sticky;
     top: 0px;
-    max-height: 100vh;
-    overflow-y: auto;
   }
 }
 

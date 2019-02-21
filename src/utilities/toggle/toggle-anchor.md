@@ -1,0 +1,1 @@
+p The anchor toggle uses an anchor in the <code>href</code> to jump to the target element.

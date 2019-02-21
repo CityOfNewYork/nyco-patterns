@@ -2,6 +2,7 @@
 
 import Icons from '../elements/icons/Icons';
 import Feed from '../objects/feed/Feed';
+import Toggle from '../utilities/toggle/toggle';
 /** import modules here as they are written */
 
 class nyco {
@@ -21,6 +22,10 @@ class nyco {
    */
   Feed(settings) {
     return new Feed(settings).init();
+  }
+
+  toggle(settings) {
+    return new Toggle().init();
   }
   /** add APIs here as they are written */
 }

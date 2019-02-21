@@ -4,7 +4,7 @@
 
 header class='o-header screen-tablet:layout--sidebar'
   div class='o-header__banner-main color-primary-button'
-    label class='o-header__main-toggle toggle-label' for='menu' Menu
+    button class='o-header__main-toggle' data-js='toggle' aria-pressed='false' aria-controls='js-navigation' Menu
 
     h1 class='o-header__main-title'
       span class='hidden' = this.site.author;

@@ -23,4 +23,8 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section', 'utilities/toggle/toggle');
+  = mixin('section', 'utilities/toggle/toggle', 'Basic Toggle');
+  = mixin('section', 'utilities/toggle/toggle-anchor', 'Anchor Toggle');
+  = mixin('section', 'utilities/toggle/toggle-fadeInUp', 'Toggle Fade In Up');
+  = mixin('section', 'utilities/toggle/toggle-overflow', 'Toggle Overflow');
+  = mixin('section', 'utilities/toggle/toggle-overflowFadeInUp', 'Toggle Overflow Fade In Up');
