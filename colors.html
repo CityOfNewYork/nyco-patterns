@@ -26,7 +26,7 @@
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
-      var VERSION = '1.2.2';
+      var VERSION = '1.3.0';
     </script>
     <noscript>
       <style>
@@ -57,7 +57,7 @@
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <header class="o-header screen-tablet:layout--sidebar">
     <div class="o-header__banner-main color-primary-button">
-      <label class="o-header__main-toggle toggle-label" for="menu">Menu</label>
+      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title"><span class="hidden"></span>
         <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco">
           <use xlink:href="#icon-logo-nyco"></use>
@@ -66,7 +66,7 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v1.2.2</div>
+      <div aria-hidden="true" class="o-header__main-version">v1.3.0</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
@@ -74,21 +74,44 @@
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.2.2">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.3.0">
           <svg aria-hidden="true" class="icon-github-mark icon-small mr-1">
             <use xlink:href="#icon-github-mark"></use>
-          </svg>1.2.2</a>
+          </svg>1.3.0</a>
       </div>
     </div>
   </header>
   <main class="screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
-    <aside class="o-navigation color-mid-background">
-      <input class="toggle screen-tablet:toggle-disable" id="menu" type="checkbox" />
-      <div class="o-navigation__wrap">
+    <aside class="o-navigation bg-primary-navy">
+      <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
+        <div class="o-navigation__nav">
+          <div class="o-navigation__stick" style="height: 911px">
+            <div class="text-center">
+              <a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
+            </div>
+            <nav>
+              <a class="o-navigation__link" href="index">Overview</a>
+            </nav>
+            <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+              <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="icons">Icons</a>
+              <a class="o-navigation__link" href="layouts">Layouts</a>
+              <a class="o-navigation__link" href="tables">Tables</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="footer">Footer</a>
+              <a class="o-navigation__link" href="feed">Feed</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="colors">Colors</a>
+              <a class="o-navigation__link" href="toggle">Toggle</a>
+              <a class="o-navigation__link" href="type">Type</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
         <div class="o-navigation__banner color-dark-background">
           <h1 class="o-navigation__banner-title">Patterns</h1>
         </div>
-        <div class="o-navigation__nav">
+        <div class="o-navigation__nav animated">
           <div class="text-center">
             <a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
           </div>
@@ -307,7 +330,7 @@
   <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.2.2">GitHub Repository</a>
+      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.3.0">GitHub Repository</a>
       <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="The Mayor's Office for Economic Opportunity">NYC Opportunity</a>
       <a class="o-footer__nav-link" href="https://tailwindcss.com">Tailwind CSS</a>
       <a class="o-footer__nav-link" href="https://blueprint.cityofnewyork.us">NYC Digital Blueprint</a>
@@ -334,5 +357,6 @@
   <script type="text/javascript">
     var nyco = new NycoPatterns();
     nyco.icons();
+    nyco.toggle();
   </script>
 </body>
