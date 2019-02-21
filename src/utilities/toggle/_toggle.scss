@@ -38,7 +38,7 @@ $animate: map-get($variables, 'animate');
     width: inherit;
     height: inherit;
     position: inherit;
-    max-height: inherit;
+    max-height: none;
   }
 
   /**
@@ -50,7 +50,7 @@ $animate: map-get($variables, 'animate');
   }
 
   .animated.active.hidden\:fadeInUp {
-    max-height: initial;
+    max-height: none;
     overflow: initial;
     animation-name: fadeInUp;
   }
@@ -85,7 +85,7 @@ $animate: map-get($variables, 'animate');
 
   .animated.active.hidden\:overflowFadeInUp {
     > .animated {
-      max-height: initial;
+      max-height: none;
       overflow: initial;
       animation-name: fadeInUp;
     }
