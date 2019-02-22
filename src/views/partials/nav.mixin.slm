@@ -16,6 +16,7 @@
     a class='${class_nav_link}' href='feed' Feed
 
     span class='${class_nav_link_header}' Utilities
+    a class='${class_nav_link}' href='animate' Animate
     a class='${class_nav_link}' href='colors' Colors
     a class='${class_nav_link}' href='toggle' Toggle
     a class='${class_nav_link}' href='type' Type

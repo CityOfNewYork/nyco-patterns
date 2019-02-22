@@ -58,36 +58,53 @@ div class='code-block'
 
 h3 Icon sizes
 
-p To manage the size of the icons, use the icon size utilities. The sizes are based on the 8px grid and include the following sizes;
+p To manage the size of the icons, use the icon size utilities. The dimensions are based on the 8px grid and include the following sizes;
 
-ul
-  li
-    p <code>.icon-1</code> 8px 8px
-  li
-    p <code>.icon-2</code> 16px 16px
-  li
-    p <code>.icon-3</code> 24px 24px
-  li
-    p <code>.icon-4</code> 32px 32px
-  li
-    p <code>.icon-5</code> 40px 40px
-  li
-    p <code>.icon-6</code> 48px 48px
-  li
-    p <code>.icon-7</code> 56px 56px
-  li
-    p <code>.icon-8</code> 64px 64px
-  li
-    p <code>.icon-9</code> 72px 72px
-  li
-    p <code>.icon-10</code> 80px 80px
-  li
-    p <code>.icon-11</code> 88px 88px
-  li
-    p <code>.icon-12</code> 96px 96px
-  li
-    p <code>.icon-large</code> 136px 136px
-  li
-    p <code>.icon-xlarge</code> 256px 256p
+p
+  .table.w-full
+    table
+      tbody
+        tr
+          td icon-1
+          td 8px 8px
+        tr
+          td icon-2
+          td 16px 16px
+        tr
+          td icon-3
+          td 24px 24px
+        tr
+          td icon-4
+          td 32px 32px
+        tr
+          td icon-5
+          td 40px 40px
+        tr
+          td icon-6
+          td 48px 48px
+        tr
+          td icon-7
+          td 56px 56px
+        tr
+          td icon-8
+          td 64px 64px
+        tr
+          td icon-9
+          td 72px 72px
+        tr
+          td icon-10
+          td 80px 80px
+        tr
+          td icon-11
+          td 88px 88px
+        tr
+          td icon-12
+          td 96px 96px
+        tr
+          td icon-large
+          td 136px 136px
+        tr
+          td icon-xlarge
+          td 256px 256px
 
 p <b>Accessibility Note</b>: If the SVG graphic doesn't serve a function, it may not be useful to screen readers. Therefore, it may be hidden using the <code>aria-hidden="true"</code> attribute.

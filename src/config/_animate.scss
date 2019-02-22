@@ -10,12 +10,3 @@
   animation-fill-mode: both;
   animation-timing-function: map-get(map-get($variables, 'animate'), 'animate-timing-function');
 }
-
-// Declarations
-body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
-  -webkit-backface-visibility: hidden;
-}
-
-.animated {
-  @include animate();
-}

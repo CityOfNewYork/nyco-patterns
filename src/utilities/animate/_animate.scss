@@ -1,0 +1,24 @@
+/**
+ * Animate
+ */
+
+// Dependencies
+@import 'config/variables';
+@import 'config/animate';
+@import 'animate.scss/vendor/assets/stylesheets/animate/fadeInUp';
+@import 'animate.scss/vendor/assets/stylesheets/animate/fadeIn';
+
+// Declarations
+body {
+  backface-visibility: hidden;
+}
+
+.animated {
+  @include animate();
+}
+
+a, input, textarea, select, path, rect, .btn, .button {
+  transition-property: opacity, background, color, border, box-shadow, outline, transform, stroke, stroke-dashoffset, fill;
+  transition-duration: 0.25s;
+  backface-visibility: hidden;
+}

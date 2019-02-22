@@ -6,7 +6,6 @@
 @import 'config/variables';
 @import 'config/animate';
 @import 'animate.scss/vendor/assets/stylesheets/animate/fadeInUp';
-@import 'animate.scss/vendor/assets/stylesheets/animate/fadeIn';
 
 $animate: map-get($variables, 'animate');
 

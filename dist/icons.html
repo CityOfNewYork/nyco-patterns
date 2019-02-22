@@ -26,7 +26,7 @@
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
-      var VERSION = '1.3.3';
+      var VERSION = '1.3.4';
     </script>
     <noscript>
       <style>
@@ -66,7 +66,7 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v1.3.3</div>
+      <div aria-hidden="true" class="o-header__main-version">v1.3.4</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
@@ -74,10 +74,10 @@
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.3.3">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.3.4">
           <svg aria-hidden="true" class="icon-github-mark icon-small mr-1">
             <use xlink:href="#icon-github-mark"></use>
-          </svg>1.3.3</a>
+          </svg>1.3.4</a>
       </div>
     </div>
   </header>
@@ -85,7 +85,7 @@
     <aside class="o-navigation bg-primary-navy">
       <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
         <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 911px">
+          <div class="o-navigation__stick" style="height: 967px">
             <div class="text-center">
               <a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
             </div>
@@ -100,6 +100,7 @@
               <a class="o-navigation__link" href="header">Header</a>
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="feed">Feed</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="animate">Animate</a>
               <a class="o-navigation__link" href="colors">Colors</a>
               <a class="o-navigation__link" href="toggle">Toggle</a>
               <a class="o-navigation__link" href="type">Type</a>
@@ -126,6 +127,7 @@
             <a class="o-navigation__link" href="header">Header</a>
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="animate">Animate</a>
             <a class="o-navigation__link" href="colors">Colors</a>
             <a class="o-navigation__link" href="toggle">Toggle</a>
             <a class="o-navigation__link" href="type">Type</a>
@@ -181,51 +183,71 @@ new Icons(); // or new Icons('path/to/icons.svg');
             <p>The third option is to use the individual SVG path as a source attribute in an image tag. Note the alt text attribute for accessibility.</p>
             <div class="code-block"><pre>&lt;img src=&quot;svgs/icon-logo-nyco.svg&quot; alt=&quot;The NYC Opportunity Logo&quot;&gt;</pre></div>
             <h3>Icon sizes</h3>
-            <p>To manage the size of the icons, use the icon size utilities. The sizes are based on the 8px grid and include the following sizes;</p>
-            <ul>
-              <li>
-                <p><code>.icon-1</code> 8px 8px</p>
-              </li>
-              <li>
-                <p><code>.icon-2</code> 16px 16px</p>
-              </li>
-              <li>
-                <p><code>.icon-3</code> 24px 24px</p>
-              </li>
-              <li>
-                <p><code>.icon-4</code> 32px 32px</p>
-              </li>
-              <li>
-                <p><code>.icon-5</code> 40px 40px</p>
-              </li>
-              <li>
-                <p><code>.icon-6</code> 48px 48px</p>
-              </li>
-              <li>
-                <p><code>.icon-7</code> 56px 56px</p>
-              </li>
-              <li>
-                <p><code>.icon-8</code> 64px 64px</p>
-              </li>
-              <li>
-                <p><code>.icon-9</code> 72px 72px</p>
-              </li>
-              <li>
-                <p><code>.icon-10</code> 80px 80px</p>
-              </li>
-              <li>
-                <p><code>.icon-11</code> 88px 88px</p>
-              </li>
-              <li>
-                <p><code>.icon-12</code> 96px 96px</p>
-              </li>
-              <li>
-                <p><code>.icon-large</code> 136px 136px</p>
-              </li>
-              <li>
-                <p><code>.icon-xlarge</code> 256px 256p</p>
-              </li>
-            </ul>
+            <p>To manage the size of the icons, use the icon size utilities. The dimensions are based on the 8px grid and include the following sizes;</p>
+            <p>
+              <div class="table w-full">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>icon-1</td>
+                      <td>8px 8px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-2</td>
+                      <td>16px 16px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-3</td>
+                      <td>24px 24px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-4</td>
+                      <td>32px 32px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-5</td>
+                      <td>40px 40px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-6</td>
+                      <td>48px 48px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-7</td>
+                      <td>56px 56px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-8</td>
+                      <td>64px 64px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-9</td>
+                      <td>72px 72px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-10</td>
+                      <td>80px 80px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-11</td>
+                      <td>88px 88px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-12</td>
+                      <td>96px 96px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-large</td>
+                      <td>136px 136px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-xlarge</td>
+                      <td>256px 256px</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </p>
             <p>
               <b>Accessibility Note</b>: If the SVG graphic doesn't serve a function, it may not be useful to screen readers. Therefore, it may be hidden using the <code>aria-hidden="true"</code> attribute.</p>
           </div>
@@ -318,7 +340,7 @@ new Icons(); // or new Icons('path/to/icons.svg');
   <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.3.3">GitHub Repository</a>
+      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.3.4">GitHub Repository</a>
       <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="The Mayor's Office for Economic Opportunity">NYC Opportunity</a>
       <a class="o-footer__nav-link" href="https://tailwindcss.com">Tailwind CSS</a>
       <a class="o-footer__nav-link" href="https://blueprint.cityofnewyork.us">NYC Digital Blueprint</a>

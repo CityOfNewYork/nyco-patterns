@@ -5,7 +5,7 @@
 aside class='o-navigation bg-primary-navy'
   div class='o-navigation__wrap color-mid-background hidden screen-tablet:flex'
     div class='o-navigation__nav'
-      div class='o-navigation__stick' style='height: 911px'
+      div class='o-navigation__stick' style='height: 967px'
         div class='text-center'
           a class='btn mt-2 mb-2 px-5' data-theme='www1.nyc.gov' onclick='toggleTheme(event.target.dataset.theme)'
             | nyc.gov styles
