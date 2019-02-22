@@ -26,7 +26,7 @@
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
-      var VERSION = '1.2.2';
+      var VERSION = '1.3.4';
     </script>
     <noscript>
       <style>
@@ -57,7 +57,7 @@
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <header class="o-header screen-tablet:layout--sidebar">
     <div class="o-header__banner-main color-primary-button">
-      <label class="o-header__main-toggle toggle-label" for="menu">Menu</label>
+      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title"><span class="hidden"></span>
         <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco">
           <use xlink:href="#icon-logo-nyco"></use>
@@ -66,7 +66,7 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v1.2.2</div>
+      <div aria-hidden="true" class="o-header__main-version">v1.3.4</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
@@ -74,21 +74,45 @@
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.2.2">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.3.4">
           <svg aria-hidden="true" class="icon-github-mark icon-small mr-1">
             <use xlink:href="#icon-github-mark"></use>
-          </svg>1.2.2</a>
+          </svg>1.3.4</a>
       </div>
     </div>
   </header>
   <main class="screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
-    <aside class="o-navigation color-mid-background">
-      <input class="toggle screen-tablet:toggle-disable" id="menu" type="checkbox" />
-      <div class="o-navigation__wrap">
+    <aside class="o-navigation bg-primary-navy">
+      <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
+        <div class="o-navigation__nav">
+          <div class="o-navigation__stick" style="height: 967px">
+            <div class="text-center">
+              <a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
+            </div>
+            <nav>
+              <a class="o-navigation__link" href="index">Overview</a>
+            </nav>
+            <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+              <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="icons">Icons</a>
+              <a class="o-navigation__link" href="layouts">Layouts</a>
+              <a class="o-navigation__link" href="tables">Tables</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="footer">Footer</a>
+              <a class="o-navigation__link" href="feed">Feed</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="animate">Animate</a>
+              <a class="o-navigation__link" href="colors">Colors</a>
+              <a class="o-navigation__link" href="toggle">Toggle</a>
+              <a class="o-navigation__link" href="type">Type</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
         <div class="o-navigation__banner color-dark-background">
           <h1 class="o-navigation__banner-title">Patterns</h1>
         </div>
-        <div class="o-navigation__nav">
+        <div class="o-navigation__nav animated">
           <div class="text-center">
             <a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
           </div>
@@ -103,6 +127,7 @@
             <a class="o-navigation__link" href="header">Header</a>
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="animate">Animate</a>
             <a class="o-navigation__link" href="colors">Colors</a>
             <a class="o-navigation__link" href="toggle">Toggle</a>
             <a class="o-navigation__link" href="type">Type</a>
@@ -119,7 +144,26 @@
               <a href="#usage">Usage</a>
             </h2>
             <h3>The SVG Sprite</h3>
-            <p>To use the inline SVGS, include the main icon sprite (<code>dist/icons.svg</code>) in your page markup.</p>
+            <p>To use the inline SVGS, include the main icon sprite (<code>dist/icons.svg</code>) in your page markup. NYCO Patterns uses an AJAX method to cache the sprite file while not including it in the page cache to decrease the size of each page.
+              To import the icon through the global NYCO Patterns Patterns script use the following code:</p>
+            <p>
+              <div class="code-block"><pre>var nyco = new NycoPatterns();
+nyco.icons();
+</pre></div>
+            </p>
+            <p>The script expects the icon sprite path to be named <code>icons.svg</code> and live in the root directory of the site. To overwrite this, pass a path to the method:</p>
+            <p>
+              <div class="code-block"><pre>nyco.icons('path/to/icons.svg');
+</pre></div>
+            </p>
+            <p>The ES6, CommonJS, and IFFE modules all require global activation to be written into your main script:</p>
+            <p>
+              <div class="code-block"><pre>import Icons from 'components/icons/Icons.common';
+new Icons(); // or new Icons('path/to/icons.svg');
+</pre></div>
+            </p>
+            <p>This uses the <code>fetch</code> method which will require a polyfill for IE11 (and other older browser) support. The script does not ship with a polyfill by default. See
+              <a href='https://polyfill.io'>Polyfill.io</a> for a suitable polyfill.</p>
             <h3>Markup</h3>
             <p>There are a few options for using icons after the sprite has been loaded on the page:</p>
             <h4>Inline SVG’s</h4>
@@ -139,27 +183,71 @@
             <p>The third option is to use the individual SVG path as a source attribute in an image tag. Note the alt text attribute for accessibility.</p>
             <div class="code-block"><pre>&lt;img src=&quot;svgs/icon-logo-nyco.svg&quot; alt=&quot;The NYC Opportunity Logo&quot;&gt;</pre></div>
             <h3>Icon sizes</h3>
-            <p>To manage the size of the icons, use the icon size utilities. The sizes are based on the 8px grid and include the following sizes;</p>
-            <ul>
-              <li>
-                <p><code>.icon-xsmall</code> 16px 16px</p>
-              </li>
-              <li>
-                <p><code>.icon-small</code> 24px 24px</p>
-              </li>
-              <li>
-                <p><code>.icon-medium</code> 32px 32px</p>
-              </li>
-              <li>
-                <p><code>.icon-large</code> 136px 136px</p>
-              </li>
-              <li>
-                <p><code>.icon-xlarge</code> 256px 256px</p>
-              </li>
-              <li>
-                <p><code>.icon-mega</code> 512px 512px</p>
-              </li>
-            </ul>
+            <p>To manage the size of the icons, use the icon size utilities. The dimensions are based on the 8px grid and include the following sizes;</p>
+            <p>
+              <div class="table w-full">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>icon-1</td>
+                      <td>8px 8px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-2</td>
+                      <td>16px 16px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-3</td>
+                      <td>24px 24px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-4</td>
+                      <td>32px 32px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-5</td>
+                      <td>40px 40px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-6</td>
+                      <td>48px 48px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-7</td>
+                      <td>56px 56px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-8</td>
+                      <td>64px 64px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-9</td>
+                      <td>72px 72px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-10</td>
+                      <td>80px 80px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-11</td>
+                      <td>88px 88px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-12</td>
+                      <td>96px 96px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-large</td>
+                      <td>136px 136px</td>
+                    </tr>
+                    <tr>
+                      <td>icon-xlarge</td>
+                      <td>256px 256px</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </p>
             <p>
               <b>Accessibility Note</b>: If the SVG graphic doesn't serve a function, it may not be useful to screen readers. Therefore, it may be hidden using the <code>aria-hidden="true"</code> attribute.</p>
           </div>
@@ -252,7 +340,7 @@
   <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.2.2">GitHub Repository</a>
+      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.3.4">GitHub Repository</a>
       <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="The Mayor's Office for Economic Opportunity">NYC Opportunity</a>
       <a class="o-footer__nav-link" href="https://tailwindcss.com">Tailwind CSS</a>
       <a class="o-footer__nav-link" href="https://blueprint.cityofnewyork.us">NYC Digital Blueprint</a>
@@ -275,9 +363,11 @@
         <br>NYC is a trademark and service mark of the City of New York.</small>
     </div>
   </footer>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch,Promise"></script>
   <script src="scripts/NycoPatterns.js"></script>
   <script type="text/javascript">
     var nyco = new NycoPatterns();
     nyco.icons();
+    nyco.toggle();
   </script>
 </body>

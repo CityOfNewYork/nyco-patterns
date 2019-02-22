@@ -1,32 +1,94 @@
+/**
+ * Toggle
+ */
 
 // Dependencies
-@import 'config/screens';
+@import 'config/variables';
+@import 'config/animate';
+@import 'animate.scss/vendor/assets/stylesheets/animate/fadeInUp';
+
+$animate: map-get($variables, 'animate');
 
 // Declarations
-.toggle-label {
-  cursor: pointer
-}
-
 @mixin toggles($variant: '') {
-  .#{$variant}toggle {
+  /**
+   * Hidden by overflow
+   */
+  .hidden\:overflow,
+  .hidden.hidden\:overflow,
+  .hidden\:overflowFadeInUp,
+  .hidden.hidden\:overflowFadeInUp {
     width: 0;
     height: 0;
-    overflow: hidden;
     position: absolute;
-    visibility: hidden
+    max-height: 0;
+    overflow: hidden;
   }
 
-  .#{$variant}toggle[type='checkbox']:not(:checked) + * {
-    display: none;
-    visibility: hidden
+  .hidden.hidden\:overflow,
+  .hidden.hidden\:overflowFadeInUp {
+    display: inherit !important; // cancel out the .hidden display:none attribute.
   }
 
-  .#{$variant}toggle-disable[type='checkbox']:not(:checked) + * {
-    display: inherit;
-    visibility: visible
+  .active.hidden\:overflow,
+  .active.hidden.hidden\:overflow,
+  .active.hidden\:overflowFadeInUp,
+  .active.hidden.hidden\:overflowFadeInUp {
+    width: inherit;
+    height: inherit;
+    position: inherit;
+    max-height: none;
+  }
+
+  /**
+   * Animated Fade In Up
+   */
+  .animated.hidden\:fadeInUp {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .animated.active.hidden\:fadeInUp {
+    max-height: none;
+    overflow: initial;
+    animation-name: fadeInUp;
+  }
+
+  /**
+   * Animated Overflow
+   */
+  .animated.hidden\:overflow,
+  .animated.hidden\:overflowFadeInUp {
+    transition-property: max-height;
+    transition-duration: 0.5s;
+    transition-timing-function: map-get($animate, 'ease-out-quint');
+  }
+
+  .animated.active.hidden\:overflow,
+  .animated.active.hidden\:overflowFadeInUp {
+    max-height: 10000px;
+    transition-duration: 4s;
+    transition-timing-function: inherit;
+  }
+
+  /**
+   * Animated Overflow and Fade In Up
+   */
+  .animated.hidden\:overflowFadeInUp {
+    > .animated {
+      max-height: 0;
+      overflow: hidden;
+      @include animate();
+    }
+  }
+
+  .animated.active.hidden\:overflowFadeInUp {
+    > .animated {
+      max-height: none;
+      overflow: initial;
+      animation-name: fadeInUp;
+    }
   }
 }
 
-@include screens {
-  @include toggles($variant);
-}
+@include toggles();

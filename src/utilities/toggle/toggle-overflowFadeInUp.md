@@ -1,0 +1,1 @@
+p This is a combination of the "overflow" and "fade in up" animations. Adding <code>hidden:overflowFadeInUp</code> will animate the max-height property of the parent element. Adding <code>animated</code> to any immediate (<code>.parent > .child</code>) children of the parent will animate the opacity property fo the child.

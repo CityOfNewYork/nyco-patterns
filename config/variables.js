@@ -143,12 +143,20 @@ const variables = {
     'icon-github-mark': '33px 33px'
   },
   iconSizes: {
-    'xsmall': '16px 16px',
-    'small': '24px 24px',
-    'medium': '32px 32px',
+    '1': '8px 8px',
+    '2': '16px 16px',
+    '3': '24px 24px',
+    '4': '32px 32px',
+    '5': '40px 40px',
+    '6': '48px 48px',
+    '7': '56px 56px',
+    '8': '64px 64px',
+    '9': '72px 72px',
+    '10': '80px 80px',
+    '11': '88px 88px',
+    '12': '96px 96px',
     'large': '136px 136px',
-    'xlarge': '256px 256px',
-    'mega': '512px 512px'
+    'xlarge': '256px 256px'
   },
   animate: {
     'ease-in-quint': 'cubic-bezier(0.755, 0.05, 0.855, 0.06)',

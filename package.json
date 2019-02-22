@@ -1,6 +1,6 @@
 {
   "name": "nyco-patterns",
-  "version": "1.2.2",
+  "version": "1.3.4",
   "description": "NYC.gov Agency Styles and Extension",
   "author": "The Mayor's Office for Economic Opportunity",
   "license": "GPL-3.0+",
@@ -23,7 +23,7 @@
     "publish": "npm run build && node .app/publish.js",
     "scripts": "rollup -c ./config/rollup.js",
     "scripts:watch": "rollup -c ./config/rollup.js -w",
-    "sync": "browser-sync start --files \"src\" --no-open --no-ui --reload-delay 2000 --proxy \"http://localhost:8000\"",
+    "sync": "browser-sync start --files \"dist\" --no-open --no-ui --proxy \"http://localhost:8000\"",
     "styles": "npm run styles:variables && npm run styles:sass && npm run styles:postcss",
     "styles:variables": "node .app/variables.js",
     "styles:sass": "node .app/sass.js",
@@ -78,6 +78,7 @@
     "vue-template-compiler": "^2.6.6"
   },
   "dependencies": {
+    "animate.scss": "0.0.6",
     "lodash-es": "^4.17.11",
     "vue": "^2.6.6"
   },

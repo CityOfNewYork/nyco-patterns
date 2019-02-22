@@ -1,0 +1,3 @@
+button data-js='toggle' class='btn mb-3' aria-pressed='false' aria-expanded='false' aria-controls='toggle-target-fade-in-up' Fade In Up
+
+div#toggle-target-fade-in-up aria-hidden='true' class='bg-secondary-white p-6 text-center hidden hidden:fadeInUp animated' Targeted toggle element
