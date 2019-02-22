@@ -1,0 +1,32 @@
+/
+/ Header
+/
+
+header class='o-header screen-tablet:layout--sidebar'
+  div class='o-header__banner-main color-primary-button'
+    label class='o-header__main-toggle toggle-label' for='menu' Menu
+
+    h1 class='o-header__main-title'
+      span class='hidden' = this.site.author;
+
+      svg aria-hidden='true' class='o-header__logo-main icon-logo-nyco'
+        use xlink:href='#icon-logo-nyco'
+
+      svg aria-hidden='true' class='o-header__logo-secondary icon-logo-nyco'
+        use xlink:href='#icon-logo-nyco'
+
+    div aria-hidden='true' class='o-header__main-version'
+      = 'v' + this.site.versions.package;
+
+  div class='o-header__banner-secondary color-dark-background'
+    h1 class='o-header__secondary-title text-jumbo' Patterns
+    a href='#main-content' Skip to main content
+
+  div class='o-header__secondary-version color-dark-background'
+    div
+      a href='${link_source}' class='btn flex items-center'
+        svg aria-hidden='true' class='icon-github-mark icon-small mr-1'
+          use xlink:href='#icon-github-mark'
+
+        = this.site.versions.package;
+

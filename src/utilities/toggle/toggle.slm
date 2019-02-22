@@ -1,0 +1,5 @@
+
+label class='btn toggle-label mb-2' for='sample-toggle' Toggle
+
+input id='sample-toggle' type='checkbox' class='toggle' aria-hidden='true'
+div class='bg-secondary-white p-6 text-center' Targeted toggle element

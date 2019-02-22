@@ -139,11 +139,12 @@ const variables = {
     'icon-logo-nyco-secondary': '694px 76px',
     'icon-logo-nyco': '692px 358px',
     'icon-logo-primary': '693px 313px',
-    'icon-logo-secondary': '692px 121px'
+    'icon-logo-secondary': '692px 121px',
+    'icon-github-mark': '33px 33px'
   },
   iconSizes: {
-    'xsmall': '8px 8px',
-    'small': '16px 16px',
+    'xsmall': '16px 16px',
+    'small': '24px 24px',
     'medium': '32px 32px',
     'large': '136px 136px',
     'xlarge': '256px 256px',

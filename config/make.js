@@ -48,7 +48,6 @@ const templates = {
       "",
       "/ Partials",
       "= partial('partials/head.mixin.slm');",
-      "= partial('partials/header.mixin.slm');",
       "= partial('partials/nav.mixin.slm');",
       "= partial('partials/section.mixin.slm');",
       "= partial('partials/section-full.mixin.slm');",

@@ -3,15 +3,12 @@
 / Layout
 = extend('layouts/default');
 
-/ Variables
 = partial('partials/styles.slm');
 = partial('partials/links.slm');
-
-/ Partials
 = partial('partials/head.mixin.slm');
-= partial('partials/header.mixin.slm');
 = partial('partials/nav.mixin.slm');
 = partial('partials/section.mixin.slm');
+= partial('partials/section-full.mixin.slm');
 
 / Content blocks
 = content('head');
@@ -23,4 +20,6 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section', 'elements/tables/tables');
+  = mixin('section-full', 'elements/tables/tables');
+  = mixin('section-full', 'elements/tables/tables--singular', 'Singular Table');
+  = mixin('section-full', 'elements/tables/tables--singular-caption', 'Singular Table with Caption');

@@ -26,7 +26,9 @@
 // will require their own Objects. Object namespaces are prefixed with 'o-'.
 
 // @import 'objects/.../...';
-// @import 'objects/feed/feed';
+@import 'objects/header/header';
+@import 'objects/footer/footer';
+@import 'objects/navigation/navigation';
 // objects - end
 
 
@@ -56,4 +58,5 @@
 @import 'utilities/fonts/fonts';
 @import 'utilities/type/type';
 @import 'utilities/colors/colors';
+@import 'utilities/toggle/toggle';
 @import 'tailwind';

@@ -22,8 +22,11 @@
     <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
     <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
+    <title>Feed | NYCO Patterns</title>
+    <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
-      var VERSION = '1.2.0';
+      var VERSION = '1.2.2';
     </script>
     <noscript>
       <style>
@@ -52,45 +55,59 @@
 </html>
 
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
-  <header class="screen-tablet:layout--sidebar screen-tablet:flex">
-    <div class="flex items-center justify-center bg-primary-blue text-base-white screen-tablet:w-64 p-3 screen-tablet:p-4">
-      <h1 class="m-0 p-0"><span class="hidden">The Mayor's Office<br>for Economic Opportunity</span>
-        <svg aria-hidden="true" class="icon-logo-nyco icon-large text-base-white">
+  <header class="o-header screen-tablet:layout--sidebar">
+    <div class="o-header__banner-main color-primary-button">
+      <label class="o-header__main-toggle toggle-label" for="menu">Menu</label>
+      <h1 class="o-header__main-title"><span class="hidden"></span>
+        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco">
+          <use xlink:href="#icon-logo-nyco"></use>
+        </svg>
+        <svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco">
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
+      <div aria-hidden="true" class="o-header__main-version">v1.2.2</div>
     </div>
-    <div class="flex-1 flex flex-col content-center justify-center color-dark-background p-3 screen-tablet:p-4 screen-desktop:px-6">
-      <h1 class="jumbo mt--2 mb-0">Patterns</h1>
+    <div class="o-header__banner-secondary color-dark-background">
+      <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
       <a href="#main-content">Skip to main content</a>
     </div>
-    <div class="flex flex-col content-center justify-center color-dark-background px-3 pb-3 screen-tablet:p-4">
+    <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.2.0">v1.2.0</a>
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.2.2">
+          <svg aria-hidden="true" class="icon-github-mark icon-small mr-1">
+            <use xlink:href="#icon-github-mark"></use>
+          </svg>1.2.2</a>
       </div>
     </div>
   </header>
-  <main class="screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 min-h-screen" id="main-content">
-    <aside class="color-mid-background py-2 px-3">
-      <div class="sticky pin-t max-h-screen overflow-y-auto">
-        <div class="text-center">
-          <a class="btn mt-2 mb-4" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
+  <main class="screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
+    <aside class="o-navigation color-mid-background">
+      <input class="toggle screen-tablet:toggle-disable" id="menu" type="checkbox" />
+      <div class="o-navigation__wrap">
+        <div class="o-navigation__banner color-dark-background">
+          <h1 class="o-navigation__banner-title">Patterns</h1>
         </div>
-        <nav class="screen-tablet:pb-2">
-          <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2 screen-tablet:mb-2" href="index">Overview</a>
-        </nav>
-        <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Elements:</span>
-          <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="buttons">Buttons</a>
-          <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="colors">Colors</a>
-          <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="icons">Icons</a>
-          <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="layouts">Layouts</a>
-          <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2 screen-tablet:mb-2" href="tables">Tables</a>
-        </nav>
-        <nav class="screen-tablet:pb-2"><span class="inline-block screen-tablet:block pb-1">Objects:</span>
-          <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2" href="feed">Feed</a>
-          <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2 screen-tablet:mb-2" href="footer">Footer</a><span class="inline-block screen-tablet:block pb-1">Utilities:</span>
-          <a class="inline-block screen-tablet:block screen-tablet:border-b border-primary-blue-30t p-1 screen-tablet:p-2 screen-tablet:mb-2" href="type">Type</a>
-        </nav>
+        <div class="o-navigation__nav">
+          <div class="text-center">
+            <a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
+          </div>
+          <nav>
+            <a class="o-navigation__link" href="index">Overview</a>
+          </nav>
+          <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+            <a class="o-navigation__link" href="buttons">Buttons</a>
+            <a class="o-navigation__link" href="icons">Icons</a>
+            <a class="o-navigation__link" href="layouts">Layouts</a>
+            <a class="o-navigation__link" href="tables">Tables</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+            <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="footer">Footer</a>
+            <a class="o-navigation__link" href="feed">Feed</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="colors">Colors</a>
+            <a class="o-navigation__link" href="toggle">Toggle</a>
+            <a class="o-navigation__link" href="type">Type</a>
+          </nav>
+        </div>
       </div>
     </aside>
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
@@ -116,11 +133,11 @@
             </h2>
             <p>To use the feed, include the following scripts in your page:</p>
             <p>
-              <div class="code-block"><pre><div>&lt;script src=&quot;https://cdn.polyfill.io/v2/polyfill.js?features=Promise&amp;gated=gated&quot; type=&quot;text/javascript&quot;&gt; <span class="code__comment">&lt;!-- The feed component uses Promises so this polyfill is needed for IE support --&gt;</span></div><div>&lt;script src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.2.0/dist/objects/feed/Feed.js&quot; type=&quot;text/javascript&quot;&gt;</div></pre></div>
+              <div class="code-block"><pre><div>&lt;script src=&quot;https://cdn.polyfill.io/v2/polyfill.js?features=Promise&amp;gated=gated&quot; type=&quot;text/javascript&quot;&gt; <span class="code__comment">&lt;!-- The feed component uses Promises so this polyfill is needed for IE support --&gt;</span></div><div>&lt;script src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.2.2/dist/objects/feed/Feed.js&quot; type=&quot;text/javascript&quot;&gt;</div></pre></div>
             </p>
             <p>Optionally, but recommended, include the base styling for the feed:</p>
             <p>
-              <div class="code-block"><pre><div>&lt;link src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.2.0/dist/objects/feed/feed.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;</div></pre></div>
+              <div class="code-block"><pre><div>&lt;link src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.2.2/dist/objects/feed/feed.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;</div></pre></div>
             </p>
             <p>Then, add a container with the feed's id and the execution script with configuration parameters.</p>
             <p>
@@ -199,25 +216,18 @@
       </section>
     </article>
   </main>
-  <footer class="px-3 py-6 color-dark-background screen-tablet:layout--four-columns-gutter">
+  <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
     <nav>
-      <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2 screen-tablet:mb-2" href="index">Overview</a>
+      <a class="o-footer__nav-link" href="index">Overview</a>
+      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.2.2">GitHub Repository</a>
+      <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="The Mayor's Office for Economic Opportunity">NYC Opportunity</a>
+      <a class="o-footer__nav-link" href="https://tailwindcss.com">Tailwind CSS</a>
+      <a class="o-footer__nav-link" href="https://blueprint.cityofnewyork.us">NYC Digital Blueprint</a>
     </nav>
-    <nav><span class="inline-block screen-tablet:block pb-1">Elements:</span>
-      <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="buttons">Buttons</a>
-      <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="colors">Colors</a>
-      <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="icons">Icons</a>
-      <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="layouts">Layouts</a>
-      <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2 screen-tablet:mb-2" href="tables">Tables</a>
-    </nav>
-    <nav><span class="inline-block screen-tablet:block pb-1">Objects:</span>
-      <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2" href="feed">Feed</a>
-      <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2 screen-tablet:mb-2" href="footer">Footer</a><span class="inline-block screen-tablet:block pb-1">Utilities:</span>
-      <a class="inline-block p-1 screen-tablet:block screen-tablet:px-0 screen-tablet:py-2 screen-tablet:mb-2" href="type">Type</a>
-    </nav>
-    <div class="m-0">
+    <div></div>
+    <div class="o-footer__info">
       <a href="http://nyc.gov/opportunity" title="The Mayor's Office for Economic Opportunity">
-        <svg aria-hidden="true" class="icon-logo-secondary icon-xlarge text-base-white mb-3" style="height: 52px !important">
+        <svg aria-hidden="true" class="icon-logo-secondary o-footer__logo text-base-white" style="height: 52px !important">
           <use xlink:href="#icon-logo-secondary"></use>
         </svg>
       </a>

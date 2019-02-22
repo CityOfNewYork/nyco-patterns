@@ -39,9 +39,9 @@ p To manage the size of the icons, use the icon size utilities. The sizes are ba
 
 ul
   li
-    p <code>.icon-xsmall</code> 8px 8px
+    p <code>.icon-xsmall</code> 16px 16px
   li
-    p <code>.icon-small</code> 16px 16px
+    p <code>.icon-small</code> 24px 24px
   li
     p <code>.icon-medium</code> 32px 32px
   li

@@ -1,0 +1,1 @@
+p The basic toggle utility uses CSS to show and hide elements. The toggling control is a hidden checkbox input used along with a label to target the checkbox. When the label is clicked, it will check or uncheck the checkbox input to show or hide the target element.

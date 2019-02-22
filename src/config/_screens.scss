@@ -1,0 +1,16 @@
+
+// Dependencies
+@import 'config/variables';
+
+// Declarations
+@mixin screens($screens: map-get($variables, 'screens')) {
+  $variant: '' !global; // !global allows us to "pass" $variant to the @content
+  @content; // mobile first... then other breakpoints
+  @each $screen, $s in $screens {
+    @media (min-width: #{$s}px) {
+      $variant: $screen + '\\:' !global;
+      @content;
+    }
+  }
+  $variant: '' !global;
+}

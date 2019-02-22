@@ -4,8 +4,8 @@
 
 // Dependencies
 @import 'config/variables';
+@import 'config/screens';
 
-$screens: map-get($variables, 'screens');
 $grid: map-get($variables, 'grid');
 
 // Declaration
@@ -31,6 +31,38 @@ $grid: map-get($variables, 'grid');
     }
   }
 
+  .#{$variant}layout--two-columns-gutter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(50% - #{$grid});
+      max-width: calc(50% - #{$grid});
+      flex-basis: calc(50% - #{$grid})
+    }
+
+    > * {
+      margin-bottom: $grid
+    }
+  }
+
+  .#{$variant}layout--three-columns-gutter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(33.33% - #{$grid});
+      max-width: calc(33.33% - #{$grid});
+      flex-basis: calc(33.33% - #{$grid})
+    }
+
+    > * {
+      margin-bottom: $grid
+    }
+  }
+
   .#{$variant}layout--four-columns-gutter {
     display: flex;
     justify-content: space-between;
@@ -48,13 +80,6 @@ $grid: map-get($variables, 'grid');
   }
 }
 
-// the layout execution
-@include layouts;
-
-// the layout breakpoint execution
-@each $screen, $s in $screens {
-  @media (min-width: #{$s}px) {
-    $variant: $screen + '\\:';
-    @include layouts($variant);
-  }
+@include screens {
+  @include layouts($variant);
 }

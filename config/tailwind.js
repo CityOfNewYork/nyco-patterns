@@ -41,6 +41,7 @@ const tailwind = {
     flexbox: ['responsive'],
     margin: ['responsive'],
     padding: ['responsive'],
+    pointerEvents: [],
     maxWidth: ['responsive'],
     minHeight: ['responsive'],
     overflow: [],
