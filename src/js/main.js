@@ -2,32 +2,47 @@
 
 import Icons from '../elements/icons/Icons';
 import Feed from '../objects/feed/Feed';
-import Toggle from '../utilities/toggle/toggle';
+import Toggle from '../utilities/toggle/Toggle';
+import Track from '../utilities/track/Track';
 /** import modules here as they are written */
 
+/**
+ * Methods for the global NycoPatterns instance
+ */
 class nyco {
   /**
-   * An API for the Icons Element
+   * Method for the Icons Element
    * @param  {String} path  The path of the icon file
-   * @return {Object}       instance of Icons element
+   * @return {Object}       Icons instance
    */
   icons(path) {
     return new Icons(path);
   }
 
   /**
-   * An API for the Feed Element
+   * Method for the Feed Object
    * @param   {Object}  settings  Setting for the feed
-   * @return  {Object}            Feed element instance
+   * @return  {Object}            Feed instance
    */
-  Feed(settings) {
-    return new Feed(settings).init();
+  feed(settings) {
+    return new Feed(settings);
   }
 
+  /**
+   * Method for the Toggle Utility
+   * @return  {Object} Toggle instance
+   */
   toggle(settings) {
-    return new Toggle().init();
+    return new Toggle();
   }
-  /** add APIs here as they are written */
+
+  /**
+   * Method for the Track Module
+   * @return  {Object} Track Module
+   */
+  track(settings) {
+    return new Track();
+  }
 }
 
 export default nyco;

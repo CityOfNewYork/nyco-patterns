@@ -16,8 +16,10 @@ import _uniqBy from 'lodash-es/uniqBy';
 class Feed {
   constructor(config) {
     this.default = Feed.default;
-    this.templates = Feed.templates;
-    this.settings = _merge({}, Feed.default, config);
+
+    this._settings = _merge({}, Feed.default, config);
+
+    this.init();
   }
 
   /**
@@ -25,7 +27,7 @@ class Feed {
    */
   init() {
     let data = [];
-    let feed = this.settings.feed;
+    let feed = this._settings.feed;
     let config = {
       rssToJson: Feed.rssToJson,
       rssUrl: (Array.isArray(feed)) ? feed : [feed]
@@ -36,17 +38,17 @@ class Feed {
       // Make the request
       this._request(config, url).then((response) => {
           // Process the data
-          data.push(this._process(JSON.parse(response), this.settings));
+          data.push(this._process(JSON.parse(response), this._settings));
           // When all feeds have been requested, merge the data and compile
           if (data.length === config.rssUrl.length) {
-            this._merge(data, this.settings);
+            this._merge(data, this._settings);
 
             let compiled = this._render(
-              this._merge(data, this.settings),
-              this.settings
+              this._merge(data, this._settings),
+              this._settings
             );
 
-            let el = document.querySelector(this.settings.selector);
+            let el = document.querySelector(this._settings.selector);
             if (el) el.innerHTML = compiled;
           }
       });

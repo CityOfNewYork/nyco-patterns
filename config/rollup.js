@@ -89,18 +89,38 @@ const modules = [ // Our list of modules we are exporting
     plugins: rollup.plugins
   },
   {
-    input: './src/utilities/toggle/toggle.js',
+    input: './src/utilities/toggle/Toggle.js',
     output: [
       {
         name: 'Toggle',
-        file: './dist/utilities/toggle/toggle.js',
+        file: './dist/utilities/toggle/Toggle.js',
         sourcemap: rollup.sourcemap,
         format: rollup.format,
         strict: rollup.strict
       },
       {
         name: 'Toggle',
-        file: './dist/utilities/toggle/toggle.common.js',
+        file: './dist/utilities/toggle/Toggle.common.js',
+        sourcemap: rollup.sourcemap,
+        format: 'cjs',
+        strict: rollup.strict
+      }
+    ],
+    plugins: rollup.plugins
+  },
+  {
+    input: './src/utilities/track/Track.js',
+    output: [
+      {
+        name: 'Track',
+        file: './dist/utilities/track/Track.js',
+        sourcemap: rollup.sourcemap,
+        format: rollup.format,
+        strict: rollup.strict
+      },
+      {
+        name: 'Track',
+        file: './dist/utilities/track/Track.common.js',
         sourcemap: rollup.sourcemap,
         format: 'cjs',
         strict: rollup.strict
@@ -120,5 +140,7 @@ const modules = [ // Our list of modules we are exporting
     plugins: rollup.plugins
   }
 ];
+
+
 
 export default modules;

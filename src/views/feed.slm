@@ -78,12 +78,12 @@
                 = '    feed: "https://medium.com/feed/@nycopportunity/", ';
                 span class='code__comment' = '// Required. The feed you want to display. May be an array of multiple feeds'
               div
-                = '  }).init();';
+                = '  });';
               div
                 = '</script>';
 
         p
-          | <code>new Feed({});</code> creates a feed, accepting a configuration object as a parameter. The object should contain the configuration you would like for the feed. Note: the <code>selector</code> and <code>feed</code> parameters are required to display a feed. <code>.init();</code> is a function that executes initialization of the feed and displays it. Below is a list of the rest of the default configuration options. See the <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a> for more details on their feeds.
+          | <code>new Feed({});</code> creates a feed, accepting a configuration object as a parameter. The object should contain the configuration you would like for the feed. Note: the <code>selector</code> and <code>feed</code> parameters are required to display a feed. Below is a list of the rest of the default configuration options. See the <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a> for more details on their feeds.
 
         h2#configuration
           a href='#configuration' Configuration
@@ -127,7 +127,7 @@
                 = '  feed: "https://medium.com/feed/@nycopportunity/", ';
                 span class='code__comment' = '// required';
               div = '  template: MyTemplate';
-              div = '}).init();';
+              div = '});';
 
         p
           | Templates are passed the <code>config</code> object and whatever the response of the feed is. In Medium's case, they pass the <code>feed</code> parameter and posts within the <code>items</code> parameter in the response from their RSS feed. To see the data that gets passed to the template to use in your template, set the <code>log</code> configuration parameter to <code>true</code>. Open up the console to see the data for this particular feed demonstration.

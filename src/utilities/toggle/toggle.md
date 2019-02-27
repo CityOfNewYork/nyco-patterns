@@ -5,8 +5,8 @@ h3 Usage
 p
   div class='code-block'
     pre
-      = "import Toggle from '../utilities/toggle/toggle';\n"
-      = "new Toggle().init();"
+      = "import Toggle from '../utilities/toggle/Toggle';\n"
+      = "new Toggle();"
 
 p This uses the <code>.matches()</code> method which will require a polyfill for IE11 (and other older browser) support. The utility does not ship with a polyfill by default. See <a href='https://polyfill.io/v2/docs/features/#Element_prototype_matches'>Element Prototype Matches on MDN</a> for a suitable polyfill.
 

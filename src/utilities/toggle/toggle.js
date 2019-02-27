@@ -40,6 +40,8 @@ class Toggle {
    * @return {object}   The class
    */
   constructor(s) {
+    const body = document.querySelector('body');
+
     s = (!s) ? {} : s;
 
     this._settings = {
@@ -48,16 +50,6 @@ class Toggle {
       inactiveClass: (s.inactiveClass) ? s.inactiveClass : Toggle.inactiveClass,
       activeClass: (s.activeClass) ? s.activeClass : Toggle.activeClass,
     };
-
-    return this;
-  }
-
-  /**
-   * Initializes the module
-   * @return {object}   The class
-   */
-  init() {
-    const body = document.querySelector('body');
 
     body.addEventListener('click', (event) => {
       if (!event.target.matches(this._settings.selector))
@@ -152,7 +144,7 @@ class Toggle {
 }
 
 /** @type {String} The main selector to add the toggling function to */
-Toggle.selector = '[data-js="toggle"]';
+Toggle.selector = '[data-js*="toggle"]';
 
 /** @type {String} The namespace for our data attribute settings */
 Toggle.namespace = 'toggle';

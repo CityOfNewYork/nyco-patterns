@@ -22,11 +22,11 @@
     <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
     <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Tables | NYCO Patterns</title>
+    <title>Chart | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
-      var VERSION = '1.4.0';
+      var VERSION = '1.3.5';
     </script>
     <noscript>
       <style>
@@ -66,7 +66,7 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v1.4.0</div>
+      <div aria-hidden="true" class="o-header__main-version">v1.3.5</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
@@ -74,10 +74,10 @@
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.4.0">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.3.5">
           <svg aria-hidden="true" class="icon-github-mark icon-small mr-1">
             <use xlink:href="#icon-github-mark"></use>
-          </svg>1.4.0</a>
+          </svg>1.3.5</a>
       </div>
     </div>
   </header>
@@ -85,9 +85,9 @@
     <aside class="o-navigation bg-primary-navy">
       <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
         <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 815px">
-            <div class="text-center px-2">
-              <a class="btn mt-2 mb-2 w-full" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
+          <div class="o-navigation__stick" style="height: 967px">
+            <div class="text-center">
+              <a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
             </div>
             <nav>
               <a class="o-navigation__link" href="index">Overview</a>
@@ -103,7 +103,6 @@
               <a class="o-navigation__link" href="animate">Animate</a>
               <a class="o-navigation__link" href="colors">Colors</a>
               <a class="o-navigation__link" href="toggle">Toggle</a>
-              <a class="o-navigation__link" href="track">Track</a>
               <a class="o-navigation__link" href="type">Type</a>
             </nav>
           </div>
@@ -131,60 +130,22 @@
             <a class="o-navigation__link" href="animate">Animate</a>
             <a class="o-navigation__link" href="colors">Colors</a>
             <a class="o-navigation__link" href="toggle">Toggle</a>
-            <a class="o-navigation__link" href="track">Track</a>
             <a class="o-navigation__link" href="type">Type</a>
           </nav>
         </div>
       </div>
     </aside>
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Tables</h1>
-      <section class="pb-4">
-        <div class="mt-4 layout--content">
+      <h1 class="m-0 p-0 mt-2">Chart</h1>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="default-styling">
-              <a href="#default-styling">Default Styling</a>
-            </h2>
+            <p>documentation</p>
           </div>
-          <div>
-            <div class="table">
-              <table>
-                <thead>
-                  <tr>
-                    <td><strong>Family Size</strong></td>
-                    <td><strong>Yearly Income</strong></td>
-                    <td><strong>Weekly Income</strong></td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td class="text-right">$27,816</td>
-                    <td class="text-right">$535</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td class="text-right">$36,372</td>
-                    <td class="text-right">$699</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td class="text-right">$44,928</td>
-                    <td class="text-right">$864</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td class="text-right">$53,484</td>
-                    <td class="text-right">$1,029</td>
-                  </tr>
-                  <tr>
-                    <td>...</td>
-                    <td class="text-right">...</td>
-                    <td class="text-right">...</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div class="o-chart">Chart!</div>
           </div>
         </div>
       </section>
@@ -193,7 +154,7 @@
   <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.4.0">GitHub Repository</a>
+      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.3.5">GitHub Repository</a>
       <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="The Mayor's Office for Economic Opportunity">NYC Opportunity</a>
       <a class="o-footer__nav-link" href="https://tailwindcss.com">Tailwind CSS</a>
       <a class="o-footer__nav-link" href="https://blueprint.cityofnewyork.us">NYC Digital Blueprint</a>
