@@ -72,6 +72,6 @@
 = mixin('feed-script')
   script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js'
   script src='https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&flags=gated'
-  script src='https://cdn.rawgit.com/revolunet/843889/raw/3c459e7fdc18fb3beae9a2e4853db41e602db7a8/lzw_encoder.js'
   script src='objects/feed/FeedDocs.js'
+  script src='scripts/lwz.js'
   script src='scripts/feed.js'

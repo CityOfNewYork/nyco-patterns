@@ -66,7 +66,7 @@ function createEmbed(config, source, focus) {
           "}",
         "}",
         "function init(){",
-          "var f=new Feed(config).init();",
+          "var f=new Feed(config);",
           "if(callback)callback(f);",
         "}",
       "})({{ config }},{{ source }});",
@@ -181,7 +181,7 @@ function init(feed) {
         },
         render: function(event) {
           event.preventDefault();
-          new Feed(this.config).init();
+          new Feed(this.config);
           createEmbed(this.config, production, true);
           createShare(this.config, false);
         }
@@ -213,7 +213,7 @@ function init(feed) {
     }
   };
   function init() {
-    var f = new Feed(config).init();
+    var f = new Feed(config);
     if (callback) callback(f);
   };
 })(config, demonstration, init);

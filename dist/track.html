@@ -22,7 +22,7 @@
     <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
     <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Animate | NYCO Patterns</title>
+    <title>Track | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
@@ -138,111 +138,83 @@
       </div>
     </aside>
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Animate</h1>
+      <h1 class="m-0 p-0 mt-2">Track</h1>
       <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <p>The following selectors and their properties are animated by default;</p>
+            <h2 class="mt-0" id="events">
+              <a href="#events">Events</a>
+            </h2>
+            <p>Tracking bus for Google Analytics event tracking and Webtrends multitrack. If global gtag or Webtrends functions are not present this will not send.</p>
             <p>
-              <div class="table w-full">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Selectors</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>a</td>
-                    </tr>
-                    <tr>
-                      <td>input</td>
-                    </tr>
-                    <tr>
-                      <td>textarea</td>
-                    </tr>
-                    <tr>
-                      <td>select</td>
-                    </tr>
-                    <tr>
-                      <td>path</td>
-                    </tr>
-                    <tr>
-                      <td>rect</td>
-                    </tr>
-                    <tr>
-                      <td>.btn</td>
-                    </tr>
-                    <tr>
-                      <td>.button</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <div class="code-block"><pre>new Track();</pre></div>
             </p>
+            <p>This will initialize basic tracking for links with the <code>data-js="track"</code> attribute. An event key as well as data must be passed and should be set to the attributes <code>data-track-key</code> and <code>data-track-data</code>. The
+              data should be structured as an array of objects;</p>
             <p>
-              <div class="table w-full">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Properties</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>opacity</td>
-                    </tr>
-                    <tr>
-                      <td>background</td>
-                    </tr>
-                    <tr>
-                      <td>color</td>
-                    </tr>
-                    <tr>
-                      <td>border</td>
-                    </tr>
-                    <tr>
-                      <td>box-shadow</td>
-                    </tr>
-                    <tr>
-                      <td>outline</td>
-                    </tr>
-                    <tr>
-                      <td>transform</td>
-                    </tr>
-                    <tr>
-                      <td>stroke</td>
-                    </tr>
-                    <tr>
-                      <td>stroke-dashoffset</td>
-                    </tr>
-                    <tr>
-                      <td>fill</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <div class="code-block"><pre>[
+  {
+    &quot;event&quot;: &quot;sample-event&quot;
+  }
+]
+</pre></div>
             </p>
-            <h3>Animate.css</h3>
+            <p>You can pass any data you would like. However, for Webtrends multitrack a basic click event must have the <code>event</code> attribute set, if it does not exist the event will not register.</p>
+            <p>Additionally, the script will add the path name to the <code>event</code>. For example, the <code>event</code> for the sample click tracking demo on this page is set to "sample-event" so the script will prepend "track" which is the <code>window.location.path</code>.
+              It would then pass "track/sample-event" to Webtrends and Google Analytics.</p>
+            <p>Below are examples of passing events to the tracking methods directly;</p>
             <p>
-              <a href='https://www.npmjs.com/package/animate.scss'>Animate.scss</a>, the SASS implementation of
-              <a href='https://daneden.github.io/animate.css/'>Animate.css</a> is included as a dependency. Basic animations can be imported as needed. The following animations are included;</p>
-            <div class="table w-full">
-              <table>
-                <tbody>
-                  <tr>
-                    <td>fadeIn</td>
-                  </tr>
-                  <tr>
-                    <td>fadeInUp</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+              <div class="code-block"><pre>let track = new Track();
+
+// Tracking Click Events
+track.click(&quot;Track Click&quot;, [
+  {&quot;event&quot;: &quot;track-click&quot;}
+]);
+</pre></div>
+            </p>
+            <p>This uses the <code>.matches()</code> method which will require a polyfill for IE11 (and other older browser) support. The utility does not ship with a polyfill by default. See
+              <a href='https://polyfill.io/v2/docs/features/#Element_prototype_matches'>Element Prototype Matches on MDN</a> for a suitable polyfill.</p>
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6"></div>
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <a data-js="track" data-track-data="[{&quot;event&quot;:&quot;sample-event&quot;}]" data-track-key="Sample Event" href="#sample-event">Sample Event Tracking</a>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="views">
+              <a href="#views">Views</a>
+            </h2>
+            <p>Screen views can also be tracked for single page applications. The third data parameter will only be used for Webtrends.</p>
+            <p>
+              <div class="code-block"><pre>let track = new Track();
+
+// Tracking Screen Views (for single page apps)
+track.view(&quot;View&quot;, &quot;Sample View&quot;, [
+  {&quot;WT.si_n&quot;: &quot;View Data 1&quot;},
+  {&quot;WT.si_p&quot;: &quot;View Data 2&quot;}
+]);</pre></div>
+            </p>
+          </div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <script src="utilities/track/Track.js"></script>
+            <script type="text/javascript">
+              let track = new Track();
+
+              track.view("View", "Sample View", [{
+                  "WT.si_n": "View Data 1"
+                },
+                {
+                  "WT.si_p": "View Data 2"
+                }
+              ]);
+            </script>
+          </div>
         </div>
       </section>
     </article>

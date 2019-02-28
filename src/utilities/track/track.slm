@@ -1,0 +1,5 @@
+/
+/ Track
+/
+
+a href='#sample-event' data-js='track' data-track-key='Sample Event' data-track-data='[{"event":"sample-event"}]' Sample Event Tracking

@@ -43,6 +43,10 @@ $grid: map-get($variables, 'grid');
   @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
     position: sticky;
     top: 0px;
+
+    max-height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -63,7 +67,7 @@ $grid: map-get($variables, 'grid');
 .o-navigation__link {
   display: block;
 
-  padding: ($grid * 2) $grid;
+  padding: $grid $grid;
 
   @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
     padding-left: ($grid * 2);

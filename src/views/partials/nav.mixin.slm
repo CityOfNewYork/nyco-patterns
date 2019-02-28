@@ -19,4 +19,5 @@
     a class='${class_nav_link}' href='animate' Animate
     a class='${class_nav_link}' href='colors' Colors
     a class='${class_nav_link}' href='toggle' Toggle
+    a class='${class_nav_link}' href='track' Track
     a class='${class_nav_link}' href='type' Type
