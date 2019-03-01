@@ -1,0 +1,26 @@
+/**
+ * Select
+ */
+
+// Dependencies
+@import 'config/variables';
+@import 'config/direction';
+@import 'config/colors';
+
+$padding: map-get($variables, 'padding');
+
+// Declarations
+.select {
+  background-color: $base-white;
+  background-image: url('../svg/icon-arrow-down.svg');
+  background-position: $direction-end .5rem center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  padding: .75 * map-get($padding, 3);
+  padding-#{$direction-end}: 2.3rem;
+  white-space: normal;
+
+  &::-ms-expand {
+    display: none;
+  }
+}

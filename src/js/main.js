@@ -5,6 +5,7 @@ import Feed from '../objects/feed/Feed';
 import Toggle from '../utilities/toggle/Toggle';
 import Track from '../utilities/track/Track';
 import Chart from '../objects/chart/chart';
+import Select from '../elements/select/select';
 /** import modules here as they are written */
 
 /**
@@ -47,6 +48,10 @@ class nyco {
 
   chart() {
     return new Chart().init();
+  }
+
+  select() {
+    return new Select().init();
   }
   /** add APIs here as they are written */
 }

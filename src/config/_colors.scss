@@ -4,7 +4,47 @@ $colors: map-get($variables, 'colors');
 $statuses: map-get($variables, 'colorStatuses');
 $combinations: map-get($variables, 'colorCombinations');
 
-@mixin combination($selector, $combination, $colors, $smoothing: false) {
+// Variables
+$primary-navy: map-get($colors, 'primary-navy');
+$primary-navy-70t: map-get($colors, 'primary-navy-70t');
+$primary-navy-50t: map-get($colors, 'primary-navy-50t');
+$primary-navy-30t: map-get($colors, 'primary-navy-30t');
+
+$primary-blue: map-get($colors, 'primary-blue');
+$primary-blue-70t: map-get($colors, 'primary-blue-70t');
+$primary-blue-50t: map-get($colors, 'primary-blue-50t');
+$primary-blue-30t: map-get($colors, 'primary-blue-30t');
+
+$primary-red: map-get($colors, 'primary-red');
+$primary-red-70t: map-get($colors, 'primary-red-70t');
+$primary-red-50t: map-get($colors, 'primary-red-50t');
+$primary-red-30t: map-get($colors, 'primary-red-30t');
+
+$secondary-grey: map-get($colors, 'secondary-grey');
+$secondary-grey-70t: map-get($colors, 'secondary-grey-70t');
+$secondary-grey-50t: map-get($colors, 'secondary-grey-50t');
+$secondary-grey-30t: map-get($colors, 'secondary-grey-30t');
+
+$secondary-white: map-get($colors, 'secondary-white');
+$secondary-white-70t: map-get($colors, 'secondary-white-70t');
+$secondary-white-50t: map-get($colors, 'secondary-white-50t');
+$secondary-white-30t: map-get($colors, 'secondary-white-30t');
+
+$secondary-orange: map-get($colors, 'secondary-orange');
+$secondary-orange-70t: map-get($colors, 'secondary-orange-70t');
+$secondary-orange-50t: map-get($colors, 'secondary-orange-50t');
+$secondary-orange-30t: map-get($colors, 'secondary-orange-30t');
+
+$secondary-pink: map-get($colors, 'secondary-pink');
+$secondary-pink-70t: map-get($colors, 'secondary-pink-70t');
+$secondary-pink-50t: map-get($colors, 'secondary-pink-50t');
+$secondary-pink-30t: map-get($colors, 'secondary-pink-30t');
+
+$base-black: map-get($colors, 'base-black');
+$base-white: map-get($colors, 'base-white');
+
+// Mixins
+@mixin combination($selector, $combination, $b, $smoothing: false) {
   $color: map-get($combination, 'color');
   $background: map-get($combination, 'background-color');
   $hyperlinks: map-get($combination, 'hyperlinks');

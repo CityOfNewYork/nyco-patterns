@@ -1,0 +1,6 @@
+/
+/ Select
+/
+
+div data-js='app'
+  nyco-select :options="options"

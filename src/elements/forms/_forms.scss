@@ -1,0 +1,79 @@
+/**
+ * Forms
+ */
+
+// Dependencies
+@import 'config/variables';
+@import 'config/colors';
+@import 'config/screens';
+
+$padding: map-get($variables, 'padding');
+
+// Declarations
+fieldset, legend {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+textarea,
+select,
+optgroup {
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  color: $secondary-grey;
+}
+
+input,
+textarea {
+  &::placeholder {
+    color: $secondary-grey;
+  }
+}
+
+input,
+textarea,
+select,
+optgroup {
+  appearance: none;
+  border: 1px solid $secondary-grey;
+  border-radius: 0;
+  display: block;
+  max-width: 100%;
+  min-width: 200px;
+  width: 100%;
+
+  @media screen and (min-width: $screen-tablet) {
+    width: auto;
+  }
+
+  .error & {
+    border-color: $primary-red;
+  }
+}
+
+[type='checkbox'],
+[type='radio'] {
+  display: inline;
+}
+
+input,
+textarea {
+  padding: .75 * map-get($padding, 3);
+}
+
+input[type='number'] {
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}

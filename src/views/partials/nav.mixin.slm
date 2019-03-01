@@ -9,6 +9,7 @@
     a class='${class_nav_link}' href='icons' Icons
     a class='${class_nav_link}' href='layouts' Layouts
     a class='${class_nav_link}' href='tables' Tables
+    a class='${class_nav_link}' href='select' Select
 
     span class='${class_nav_link_header}' Objects
     a class='${class_nav_link}' href='header' Header
