@@ -1,6 +1,6 @@
 <template>
   <div>
-    <select class="select" v-model="selected">
+    <select class="select" v-model="selected" @input="event => { $emit('input', event.target.value) }">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
       </option>
@@ -19,10 +19,18 @@
 
 <script>
   export default {
-    props: ['options'],
+    props: ['options', 'value'],
     data() {
       return {
-        selected: 'all'
+        selected: null,
+      }
+    },
+    mounted() {
+      this.selected = this.value;
+    },
+    watch: {
+      value: function(newValue) {
+        this.selected = newValue;
       }
     }
   }

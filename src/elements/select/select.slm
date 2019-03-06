@@ -3,4 +3,4 @@
 /
 
 div data-js='app'
-  nyco-select :options="options"
+  nyco-select :options="options" v-model="selected"

@@ -22,6 +22,7 @@ class Select {
       data() {
         return {
           options: Select.data,
+          selected: 'all',
         }
       },
       methods: {},
