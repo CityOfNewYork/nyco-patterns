@@ -8,6 +8,7 @@ const Fs = require('fs');
 const modules = require('../config/modules');
 const mkdirp = require('mkdirp');
 const alerts = require('../config/alerts');
+const notifier = require('node-notifier');
 
 /**
  * Init
@@ -31,7 +32,7 @@ function write(module) {
   });
 }
 
-modules.forEach(function(module) {
+modules.forEach(function(module, index) {
   let outDir = Path.join(__dirname, '../', module.outDir);
   if (!Fs.existsSync(outDir)) {
     mkdirp(outDir, (err) => {
@@ -43,5 +44,11 @@ modules.forEach(function(module) {
     });
   } else {
     write(module);
+  }
+  if(index == modules.length-1){
+    notifier.notify({
+      title: 'NYCO Patterns',
+      message: 'Sass processing complete! 🎉'
+    });
   }
 });

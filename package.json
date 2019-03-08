@@ -75,7 +75,8 @@
   },
   "dependencies": {
     "animate.scss": "0.0.6",
-    "lodash-es": "^4.17.11"
+    "lodash-es": "^4.17.11",
+    "node-notifier": "^5.4.0"
   },
   "babel": {
     "plugins": [
