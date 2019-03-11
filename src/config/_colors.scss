@@ -4,6 +4,11 @@ $colors: map-get($variables, 'colors');
 $statuses: map-get($variables, 'colorStatuses');
 $combinations: map-get($variables, 'colorCombinations');
 
+$color-base-black: map-get($colors, 'base-black');
+$color-secondary-grey: map-get($colors, 'secondary-grey');
+$color-primary-red: map-get($colors, 'primary-red');
+$color-primary-navy: map-get($colors, 'primary-navy');
+
 @mixin combination($selector, $combination, $colors, $smoothing: false) {
   $color: map-get($combination, 'color');
   $background: map-get($combination, 'background-color');

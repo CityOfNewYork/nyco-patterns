@@ -1,0 +1,34 @@
+/**
+ * Inputs
+ */
+
+// Dependencies
+@import 'config/variables';
+@import 'config/inputs';
+
+
+// Declarations
+input, textarea {
+  @include inputs;
+
+  .error & {
+    border-color: $color-primary-red;
+  }
+}
+
+.input-currency-usd {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    @include input-currency-icon;
+    content: '$';
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+  }
+}

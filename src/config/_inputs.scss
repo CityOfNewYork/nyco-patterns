@@ -1,0 +1,25 @@
+
+// Dependencies
+@import 'config/variables';
+@import 'config/colors';
+@import 'config/fonts';
+
+$padding: map-get($variables, 'padding');
+
+// Declarations
+@mixin inputs() {
+  color: $color-base-black;
+  padding: .75 * map-get($padding, 2);
+  font-size: 18px;
+  border: 1px solid $color-secondary-grey;
+
+  &::placeholder {
+    color: $color-secondary-grey;
+  }
+}
+
+@mixin input-currency-icon() {
+  color: $color-primary-navy;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+}
