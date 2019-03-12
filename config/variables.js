@@ -210,6 +210,10 @@ const variables = {
   },
   buttons: {
     'radius': '500px'
+  },
+  inputs: {
+    'checkbox-radius': '6px',
+    'checkbox-size': '20px'
   }
 };
 

@@ -4,6 +4,7 @@ $colors: map-get($variables, 'colors');
 $statuses: map-get($variables, 'colorStatuses');
 $combinations: map-get($variables, 'colorCombinations');
 
+$color-base-white: map-get($colors, 'base-white');
 $color-base-black: map-get($colors, 'base-black');
 $color-secondary-grey: map-get($colors, 'secondary-grey');
 $color-primary-red: map-get($colors, 'primary-red');

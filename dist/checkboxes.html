@@ -22,7 +22,7 @@
     <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
     <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Icons | NYCO Patterns</title>
+    <title>Checkboxes | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
@@ -142,202 +142,34 @@
       </div>
     </aside>
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Icons</h1>
+      <h1 class="m-0 p-0 mt-2">Checkboxes</h1>
       <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="usage">
-              <a href="#usage">Usage</a>
+            <h2 class="mt-0" id="default">
+              <a href="#default">Default</a>
             </h2>
-            <h3>The SVG Sprite</h3>
-            <p>To use the inline SVGS, include the main icon sprite (<code>dist/icons.svg</code>) in your page markup. NYCO Patterns uses an AJAX method to cache the sprite file while not including it in the page cache to decrease the size of each page.
-              To import the icon through the global NYCO Patterns Patterns script use the following code:</p>
-            <p>
-              <div class="code-block"><pre>var nyco = new NycoPatterns();
-nyco.icons();
-</pre></div>
-            </p>
-            <p>The script expects the icon sprite path to be named <code>icons.svg</code> and live in the root directory of the site. To overwrite this, pass a path to the method:</p>
-            <p>
-              <div class="code-block"><pre>nyco.icons('path/to/icons.svg');
-</pre></div>
-            </p>
-            <p>The ES6, CommonJS, and IFFE modules all require global activation to be written into your main script:</p>
-            <p>
-              <div class="code-block"><pre>import Icons from 'components/icons/Icons.common';
-new Icons(); // or new Icons('path/to/icons.svg');
-</pre></div>
-            </p>
-            <p>This uses the <code>fetch</code> method which will require a polyfill for IE11 (and other older browser) support. The script does not ship with a polyfill by default. See
-              <a href='https://polyfill.io'>Polyfill.io</a> for a suitable polyfill.</p>
-            <h3>Markup</h3>
-            <p>There are a few options for using icons after the sprite has been loaded on the page:</p>
-            <h4>Inline SVG’s</h4>
-            <p>The first option allows you to inline an SVG with the <code>use</code> tag. This is the preferred method for ACCESS NYC. Note that you can change the color of inline SVG icon shapes that have their fill set as currentColor by using a text
-              color utility. Also, note the role="img" attribute, title tag, and title tag id for accessibility support.</p>
-            <div class="code-block"><pre>&lt;svg class=&quot;icon-logo-nyco icon-xlarge text-color-blue-dark&quot; role=&quot;img&quot;&gt;
-  &lt;title id=&quot;icon-logo-nyco-title&quot;&gt;The NYC Opportunity Logo&lt;/title&gt;
-  &lt;use xlink:href=&quot;#icon-logo-nyco&quot;&gt;&lt;/use&gt;
-&lt;/svg&gt;
-</pre></div>
-            <h4>Background Images</h4>
-            <p>The second option does not require the icon sprite to be added to the page through the JavaScript module. It uses background images that reference the icons on the CDN. This option uses a utility class that sets the background image of the
-              icon <code>.bg-{{ Icon ID Here }}</code>. Icons with background images require less markup but their shape fill color will default to black or whatever fill color the shape is set to. Note the <code>role="img"</code> and alt text attributes
-              for accessibility.</p>
-            <div class="code-block"><pre>&lt;div class=&quot;icon-logo-nyco&quot; role=&quot;img&quot; alt=&quot;The NYC Opportunity Logo&quot;&gt;&lt;/div&gt;</pre></div>
-            <h4>img tag</h4>
-            <p>The third option is to use the individual SVG path as a source attribute in an image tag. Note the alt text attribute for accessibility.</p>
-            <div class="code-block"><pre>&lt;img src=&quot;svgs/icon-logo-nyco.svg&quot; alt=&quot;The NYC Opportunity Logo&quot;&gt;</pre></div>
-            <h3>Icon sizes</h3>
-            <p>To manage the size of the icons, use the icon size utilities. The dimensions are based on the 8px grid and include the following sizes;</p>
-            <p>
-              <div class="table w-full">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>icon-1</td>
-                      <td>8px 8px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-2</td>
-                      <td>16px 16px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-3</td>
-                      <td>24px 24px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-4</td>
-                      <td>32px 32px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-5</td>
-                      <td>40px 40px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-6</td>
-                      <td>48px 48px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-7</td>
-                      <td>56px 56px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-8</td>
-                      <td>64px 64px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-9</td>
-                      <td>72px 72px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-10</td>
-                      <td>80px 80px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-11</td>
-                      <td>88px 88px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-12</td>
-                      <td>96px 96px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-large</td>
-                      <td>136px 136px</td>
-                    </tr>
-                    <tr>
-                      <td>icon-xlarge</td>
-                      <td>256px 256px</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </p>
-            <p>
-              <b>Accessibility Note</b>: If the SVG graphic doesn't serve a function, it may not be useful to screen readers. Therefore, it may be hidden using the <code>aria-hidden="true"</code> attribute.</p>
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
           <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon logo nyc</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-logo-nyc icon-xlarge text-color-blue-dark">
-                      <use xlink:href="#icon-logo-nyc"></use>
-                    </svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">xlink:href<code>#icon-logo-nyc</code></p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon logo nyco secondary</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-logo-nyco-secondary icon-xlarge text-color-blue-dark">
-                      <use xlink:href="#icon-logo-nyco-secondary"></use>
-                    </svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">xlink:href<code>#icon-logo-nyco-secondary</code></p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon logo nyco</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-logo-nyco icon-xlarge text-color-blue-dark">
-                      <use xlink:href="#icon-logo-nyco"></use>
-                    </svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">xlink:href<code>#icon-logo-nyco</code></p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon logo primary</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-logo-primary icon-xlarge text-color-blue-dark">
-                      <use xlink:href="#icon-logo-primary"></use>
-                    </svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">xlink:href<code>#icon-logo-primary</code></p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon logo secondary</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-logo-secondary icon-xlarge text-color-blue-dark">
-                      <use xlink:href="#icon-logo-secondary"></use>
-                    </svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">xlink:href<code>#icon-logo-secondary</code></p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon github mark</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-github-mark icon-xlarge text-color-blue-dark">
-                      <use xlink:href="#icon-github-mark"></use>
-                    </svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">xlink:href<code>#icon-github-mark</code></p>
-                </div>
-              </div>
-            </div>
+            <label class="checkbox" for="selection">
+              <input id="selection" name="selection" type="checkbox" value="Selection" /><span class="checkbox__label">Selection</span></label>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="error">
+              <a href="#error">Error</a>
+            </h2>
+          </div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <label class="checkbox error" for="selection-error">
+              <input id="selection-error" name="selection-error" type="checkbox" value="Selection" /><span class="checkbox__label">Selection</span></label>
           </div>
         </div>
       </section>

@@ -1,0 +1,45 @@
+/**
+ * Checkboxes
+ */
+
+// Dependencies
+@import 'config/variables';
+@import 'config/checkboxes';
+@import 'config/direction';
+@import 'config/fonts';
+
+// Declarations
+.checkbox {
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  display: block;
+
+  margin-bottom: $spacing-base;
+
+  > input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.checkbox__label {
+  display: flex;
+  line-height: $checkbox-size;
+}
+
+.checkbox__label::before {
+  @include checkboxes-btn;
+}
+
+input:checked + .checkbox__label::before {
+  @include checkboxes-btn-checked;
+}
+
+input:focus + .checkbox__label::before {
+  @include checkboxes-btn-focused;
+}
+
+.error > .checkbox__label::before {
+  border-color: $color-primary-red;
+}

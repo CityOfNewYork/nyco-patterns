@@ -6,6 +6,7 @@
   nav class='${class_nav}'
     span class='${class_nav_link_header}' Elements
     a class='${class_nav_link}' href='buttons' Buttons
+    a class='${class_nav_link}' href='checkboxes' Checkboxes
     a class='${class_nav_link}' href='icons' Icons
     a class='${class_nav_link}' href='inputs' Inputs
     a class='${class_nav_link}' href='layouts' Layouts

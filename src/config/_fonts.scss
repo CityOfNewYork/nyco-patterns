@@ -1,9 +1,7 @@
 @import 'config/variables';
 
 $font-weights: map-get($variables, 'fontWeights');
-
 $font-weight-bold: map-get($font-weights, bold);
-
 
 @mixin font-smooth() {
   -webkit-font-smoothing: antialiased;

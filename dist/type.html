@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="text-size-0" lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!--GLOBAL STYLES-->
+    <link href="https://www1.nyc.gov/assets/home/css/css-min/global.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://www1.nyc.gov/assets/home/css/css-min/module.css" media="screen" rel="stylesheet" type="text/css" />
+    <!--PRINT STYLE-->
+    <link href="https://www1.nyc.gov/assets/home/css/print.css" media="print" rel="stylesheet" type="text/css" />
+    <!--PAGE SPECIFIC STYLES-->
+    <link href="https://www1.nyc.gov/assets/home/css/modules/status-updates-short.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://www1.nyc.gov/assets/home/css/modules/status-updates-mini.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://www1.nyc.gov/assets/home/css/includes/header-agencies.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://www1.nyc.gov/assets/home/css/modules/news-panel.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://www1.nyc.gov/assets/home/css/modules/agencies-about-links.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://www1.nyc.gov/assets/home/css/modules/programs-and-initiatives.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://www1.nyc.gov/assets/home/css/modules/homepage-hero.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://www1.nyc.gov/assets/home/css/pages/agencies/index.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
+    <!--NYCO PATTERNS-->
+    <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
+    <title>Type | NYCO Patterns</title>
+    <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
+    <script type="text/javascript">
+      var VERSION = '1.4.0';
+    </script>
+    <noscript>
+      <style>
+        body {
+          visibility: visible !important;
+        }
+      </style>
+    </noscript>
+    <script type="text/javascript">
+      function load() {
+        document.body.style.visibility = 'visible'
+      };
+
+      function toggleTheme(theme) {
+        var stylesheets = document.styleSheets;
+
+        for (var i = 0; i < stylesheets.length; i++) {
+          var ss = stylesheets[i];
+          ss.disabled = (!ss.disabled && ss.href.indexOf(theme) > -1) ? true : false;
+        }
+      }
+      toggleTheme('www1.nyc.gov');
+    </script>
+  </head>
+
+</html>
+
+<body class="bg-base-black" onload="load()" style="visibility: hidden;">
+  <header class="o-header screen-tablet:layout--sidebar">
+    <div class="o-header__banner-main color-primary-button">
+      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
+      <h1 class="o-header__main-title"><span class="hidden"></span>
+        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco">
+          <use xlink:href="#icon-logo-nyco"></use>
+        </svg>
+        <svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco">
+          <use xlink:href="#icon-logo-nyco"></use>
+        </svg>
+      </h1>
+      <div aria-hidden="true" class="o-header__main-version">v1.4.0</div>
+    </div>
+    <div class="o-header__banner-secondary color-dark-background">
+      <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
+      <a href="#main-content">Skip to main content</a>
+    </div>
+    <div class="o-header__secondary-version color-dark-background">
+      <div>
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.4.0">
+          <svg aria-hidden="true" class="icon-github-mark icon-small mr-1">
+            <use xlink:href="#icon-github-mark"></use>
+          </svg>1.4.0</a>
+      </div>
+    </div>
+  </header>
+  <main class="screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
+    <aside class="o-navigation bg-primary-navy">
+      <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
+        <div class="o-navigation__nav">
+          <div class="o-navigation__stick" style="height: 815px">
+            <div class="text-center px-2">
+              <a class="btn mt-2 mb-2 w-full" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
+            </div>
+            <nav>
+              <a class="o-navigation__link" href="index">Overview</a>
+            </nav>
+            <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+              <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+              <a class="o-navigation__link" href="icons">Icons</a>
+              <a class="o-navigation__link" href="inputs">Inputs</a>
+              <a class="o-navigation__link" href="layouts">Layouts</a>
+              <a class="o-navigation__link" href="tables">Tables</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="footer">Footer</a>
+              <a class="o-navigation__link" href="feed">Feed</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="animate">Animate</a>
+              <a class="o-navigation__link" href="colors">Colors</a>
+              <a class="o-navigation__link" href="toggle">Toggle</a>
+              <a class="o-navigation__link" href="track">Track</a>
+              <a class="o-navigation__link" href="type">Type</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
+        <div class="o-navigation__banner color-dark-background">
+          <h1 class="o-navigation__banner-title">Patterns</h1>
+        </div>
+        <div class="o-navigation__nav animated">
+          <div class="text-center">
+            <a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
+          </div>
+          <nav>
+            <a class="o-navigation__link" href="index">Overview</a>
+          </nav>
+          <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+            <a class="o-navigation__link" href="buttons">Buttons</a>
+            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+            <a class="o-navigation__link" href="icons">Icons</a>
+            <a class="o-navigation__link" href="inputs">Inputs</a>
+            <a class="o-navigation__link" href="layouts">Layouts</a>
+            <a class="o-navigation__link" href="tables">Tables</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+            <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="footer">Footer</a>
+            <a class="o-navigation__link" href="feed">Feed</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="animate">Animate</a>
+            <a class="o-navigation__link" href="colors">Colors</a>
+            <a class="o-navigation__link" href="toggle">Toggle</a>
+            <a class="o-navigation__link" href="track">Track</a>
+            <a class="o-navigation__link" href="type">Type</a>
+          </nav>
+        </div>
+      </div>
+    </aside>
+    <article class="color-light-background py-2 px-4 screen-desktop:px-6">
+      <h1 class="m-0 p-0 mt-2">Type</h1>
+      <section class="pb-4">
+        <div class="mt-4 layout--content">
+          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="headings">
+              <a href="#headings">Headings</a>
+            </h2>
+          </div>
+          <div>
+            <h1>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h1>
+            <h2>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h2>
+            <h3>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h3>
+            <h4>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h4>
+            <h5>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h5>
+            <h6>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h6>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
+    <nav>
+      <a class="o-footer__nav-link" href="index">Overview</a>
+      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.4.0">GitHub Repository</a>
+      <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="The Mayor's Office for Economic Opportunity">NYC Opportunity</a>
+      <a class="o-footer__nav-link" href="https://tailwindcss.com">Tailwind CSS</a>
+      <a class="o-footer__nav-link" href="https://blueprint.cityofnewyork.us">NYC Digital Blueprint</a>
+    </nav>
+    <div></div>
+    <div class="o-footer__info">
+      <a href="http://nyc.gov/opportunity" title="The Mayor's Office for Economic Opportunity">
+        <svg aria-hidden="true" class="icon-logo-secondary o-footer__logo text-base-white" style="height: 52px !important">
+          <use xlink:href="#icon-logo-secondary"></use>
+        </svg>
+      </a>
+      <p>NYC Opportunity is the
+        <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
+        <a href='https://twitter.com/nycopportunity'
+          target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
+        <a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
+        <a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
+        <a href='https://github.com/orgs/CityOfNewYork/teams/nycopportunity' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
+      <small>© City of New York, 2019 All Rights Reserved.
+        <br>NYC is a trademark and service mark of the City of New York.</small>
+    </div>
+  </footer>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch,Promise"></script>
+  <script src="scripts/NycoPatterns.js"></script>
+  <script type="text/javascript">
+    var nyco = new NycoPatterns();
+    nyco.icons();
+    nyco.toggle();
+    nyco.track();
+  </script>
+</body>
