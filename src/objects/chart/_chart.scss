@@ -6,4 +6,13 @@
 // @import 'config/variables';
 
 // Declarations
-// .o-chart { }
+.o-chart {}
+
+.o-chart__title {
+  text-align: center;
+}
+
+.o-chart__chart {
+  position: relative;
+  overflow: auto;
+}

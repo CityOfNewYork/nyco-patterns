@@ -79,6 +79,7 @@
   },
   "dependencies": {
     "animate.scss": "0.0.6",
+    "chart.js": "^2.7.3",
     "lodash-es": "^4.17.11",
     "vue": "^2.6.6"
   },

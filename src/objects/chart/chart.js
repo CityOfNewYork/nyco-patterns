@@ -1,6 +1,6 @@
 'use strict';
 
-import Vue from 'vue/dist/vue.esm.browser'; //
+import Vue from 'vue/dist/vue.esm.browser';
 import ChartComponent from './chart.vue'; // Our component
 import ChartData from './chart.data.js'; // Our sample data
 
@@ -8,21 +8,23 @@ class Chart {
   constructor(settings = {}, data = {}) {
     this.data = data;
     this.settings = settings;
-  }
+}
 
   /**
    * Initializes the module
    */
   init() {
-    Vue.component('chart', ChartComponent);
+    Vue.component('nyco-chart', ChartComponent);
 
     new Vue({
       el: '[data-js="app"]',
       delimiters: ['v{', '}'],
-      data: {
-        'chartData': Chart.data, // set to ChartData in chart.data.js but this can be included anyway you like
-      },
-      methods: {}
+      data() {
+        return {
+          chartData: Chart.data,
+          chartTitle: 'NYC Population',
+        }
+      }
     });
 
     console.log('Hello World!');

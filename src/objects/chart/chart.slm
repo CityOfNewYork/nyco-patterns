@@ -3,4 +3,4 @@
 /
 
 div data-js='app'
-  chart v-bind='chartData'
+  nyco-chart :chart-data='chartData' :chart-title='chartTitle'
