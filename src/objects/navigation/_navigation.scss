@@ -48,6 +48,13 @@ $grid: map-get($variables, 'grid');
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
+  
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .o-navigation__link-header {
