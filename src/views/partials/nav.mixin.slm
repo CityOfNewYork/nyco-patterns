@@ -15,6 +15,7 @@
     a class='${class_nav_link}' href='header' Header
     a class='${class_nav_link}' href='footer' Footer
     a class='${class_nav_link}' href='feed' Feed
+    a class='${class_nav_link}' href='navigation' Navigation
 
     span class='${class_nav_link_header}' Utilities
     a class='${class_nav_link}' href='animate' Animate
