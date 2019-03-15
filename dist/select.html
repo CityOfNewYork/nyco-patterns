@@ -22,11 +22,11 @@
     <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
     <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Customize Your Feed | NYCO Patterns</title>
+    <title>Select | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
-      var VERSION = '1.4.2';
+      var VERSION = '1.4.0';
     </script>
     <noscript>
       <style>
@@ -66,7 +66,7 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v1.4.2</div>
+      <div aria-hidden="true" class="o-header__main-version">v1.4.0</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
@@ -74,10 +74,10 @@
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.4.2">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.4.0">
           <svg aria-hidden="true" class="icon-github-mark icon-small mr-1">
             <use xlink:href="#icon-github-mark"></use>
-          </svg>1.4.2</a>
+          </svg>1.4.0</a>
       </div>
     </div>
   </header>
@@ -85,7 +85,7 @@
     <aside class="o-navigation bg-primary-navy">
       <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
         <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 855px">
+          <div class="o-navigation__stick" style="height: 815px">
             <div class="text-center px-2">
               <a class="btn mt-2 mb-2 w-full" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
             </div>
@@ -96,11 +96,11 @@
               <a class="o-navigation__link" href="buttons">Buttons</a>
               <a class="o-navigation__link" href="icons">Icons</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
-              <a class="o-navigation__link" href="tables">Tables</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="tables">Tables</a>
+              <a class="o-navigation__link" href="select">Select</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
               <a class="o-navigation__link" href="header">Header</a>
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="feed">Feed</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a>
               <a class="o-navigation__link" href="charts">Charts</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
               <a class="o-navigation__link" href="animate">Animate</a>
               <a class="o-navigation__link" href="colors">Colors</a>
@@ -126,11 +126,11 @@
             <a class="o-navigation__link" href="buttons">Buttons</a>
             <a class="o-navigation__link" href="icons">Icons</a>
             <a class="o-navigation__link" href="layouts">Layouts</a>
-            <a class="o-navigation__link" href="tables">Tables</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+            <a class="o-navigation__link" href="tables">Tables</a>
+            <a class="o-navigation__link" href="select">Select</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
             <a class="o-navigation__link" href="header">Header</a>
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
-            <a class="o-navigation__link" href="navigation">Navigation</a>
             <a class="o-navigation__link" href="charts">Charts</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
             <a class="o-navigation__link" href="animate">Animate</a>
             <a class="o-navigation__link" href="colors">Colors</a>
@@ -142,62 +142,17 @@
       </div>
     </aside>
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Customize your feed</h1>
+      <h1 class="m-0 p-0 mt-2">Select</h1>
       <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="how-to">
-              <a href="#how-to">How-to</a>
-            </h2>
-            <form class="control-form m-0" id="js-controls" method="get">
-              <p>Edit the variables below then click render to display an updated feed with your own configuration. For details on all of the configuration parameters and advanced documentation
-                <a href='feed#configuration'>refer to the Feed component documentation here</a>.</p>
-              <button class="btn btn-form-submit mb-4" v-on:click="render">Render</button>
-              <h3 id="variables">
-                <a href="#variables">Variables</a>
-              </h3>
-              <fieldset v-for="item, name in configDefault">
-                <div class="pb-2" v-if="Array.isArray(item)">
-                  <div class="control-group flex items-center"><code class="code mr-2">{{ name }}&nbsp;<span class="code__comment" title="Default type">array</span></code>
-                    <label class="control-label" style="margin: 0 !important">
-                      <input type="text" v-bind:id="name" v-bind:name="name" v-bind:value="config[name]" v-on:change="config[name] = $event.target.value.split(&quot;,&quot;)" />
-                    </label><span class="ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1" v-bind:title="docs[name]">?</span></div>
-                </div>
-                <div class="pb-2" v-else-if="typeof item == &quot;string&quot; || !isNaN(item)">
-                  <div class="control-group flex items-center"><code class="code mr-2">{{ name }}&nbsp;<span class="code__comment" title="Default type">{{ typeof item }}</span></code>
-                    <label class="control-label" style="margin: 0 !important">
-                      <input type="text" v-bind:id="name" v-bind:name="name" v-model="config[name]" />
-                    </label><span class="ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1" v-bind:title="docs[name]">?</span></div>
-                </div>
-                <div v-else-if="typeof item === &quot;object&quot;">
-                  <div class="pb-2" v-for="value, key in item">
-                    <div class="control-group flex items-center"><code class="code mr-2">{{ name }}.{{ key }}&nbsp;<span class="code__comment" title="Default type">{{ typeof item[key] }}</span></code>
-                      <label class="control-label" style="margin: 0 !important">
-                        <input type="text" v-bind:id="name + value" v-bind:name="name + value" v-bind:value="setObjValue(name, key)" v-on:change="setObj(name, key, $event.target.value)" />
-                      </label><span class="ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1" v-bind:title="docs[name][key]">?<span style="display:none">{{ docs[name][key] }}</span></span>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-              <button class="btn btn-form-submit" v-on:click="render">Render</button>
-            </form>
+            <p>This is a Vue component that dynamically generates a select dropdown menu based on a list of options passed through.</p>
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
           <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <h2 class="mt-0" id="your-feed">
-              <a href="#your-feed">Your Feed</a>
-            </h2>
-            <form class="control-form">
-              <p>Copy and paste the following code into your page to embed this customized Feed:</p>
-              <textarea id="js-embed">{{ embed }}</textarea>
-            </form>
-            <form class="control-form mb-4">
-              <p>Copy the following url to share or save these customized Feed settings:</p>
-              <input data-js-share-base="https://cityofnewyork.github.io/nyco-patterns" id="js-share" />
-            </form>
-            <div class="border-8 p-4 border-secondary-white">
-              <div id="js-feed"></div>
+            <div data-js="app">
+              <nyco-select :options="options" v-model="selected"></nyco-select>
             </div>
           </div>
         </div>
@@ -207,7 +162,7 @@
   <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.4.2">GitHub Repository</a>
+      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.4.0">GitHub Repository</a>
       <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="The Mayor's Office for Economic Opportunity">NYC Opportunity</a>
       <a class="o-footer__nav-link" href="https://tailwindcss.com">Tailwind CSS</a>
       <a class="o-footer__nav-link" href="https://blueprint.cityofnewyork.us">NYC Digital Blueprint</a>
@@ -238,9 +193,7 @@
     nyco.toggle();
     nyco.track();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
-  <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&amp;flags=gated"></script>
-  <script src="objects/feed/FeedDocs.js"></script>
-  <script src="scripts/lwz.js"></script>
-  <script src="scripts/feed.js"></script>
+  <script type="text/javascript">
+    nyco.select();
+  </script>
 </body>

@@ -1,10 +1,10 @@
 'use strict';
 
 import Vue from 'vue/dist/vue.esm.browser';
-import ChartComponent from './chart.vue'; // Our component
-import ChartData from './chart.data.js'; // Our sample data
+import ChartComponent from './chart--bar.vue'; // Our component
+import ChartData from 'nyco-patterns/src/objects/charts/chart.data'; // Our sample data
 
-class Chart {
+class ChartBar {
   constructor(settings = {}, data = {}) {
     this.data = data;
     this.settings = settings;
@@ -14,15 +14,15 @@ class Chart {
    * Initializes the module
    */
   init() {
-    Vue.component('nyco-chart', ChartComponent);
+    Vue.component('nyco-chart-bar', ChartComponent);
 
     new Vue({
       el: '[data-js="app"]',
       delimiters: ['v{', '}'],
       data() {
         return {
-          chartData: Chart.data,
-          chartTitle: 'NYC Population',
+          data: ChartData.data,
+          options: ChartData.options
         }
       }
     });
@@ -39,6 +39,4 @@ class Chart {
   }
 }
 
-Chart.data = ChartData;
-
-export default Chart;
+export default ChartBar;

@@ -1,6 +1,0 @@
-/
-/ Chart
-/
-
-div data-js='app'
-  nyco-chart :chart-data='chartData' :chart-title='chartTitle'

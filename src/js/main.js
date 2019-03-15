@@ -4,7 +4,9 @@ import Icons from '../elements/icons/Icons';
 import Feed from '../objects/feed/Feed';
 import Toggle from '../utilities/toggle/Toggle';
 import Track from '../utilities/track/Track';
-import Chart from '../objects/chart/chart';
+
+// charts
+import ChartBar from 'nyco-patterns/src/objects/charts/chart--bar';
 /** import modules here as they are written */
 
 /**
@@ -45,8 +47,9 @@ class nyco {
     return new Track();
   }
 
-  chart() {
-    return new Chart().init();
+  // Chart Components
+  chartBar() {
+    return new ChartBar().init();
   }
   /** add APIs here as they are written */
 }

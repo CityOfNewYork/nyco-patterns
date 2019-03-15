@@ -1,0 +1,6 @@
+/
+/ Chart Bar
+/
+
+div data-js='app'
+  nyco-chart-bar :chart-data='data' :options='options'

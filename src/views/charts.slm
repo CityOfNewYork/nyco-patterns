@@ -1,4 +1,4 @@
-- pattern = 'Chart';
+- pattern = 'Charts';
 
 / Layout
 = extend('layouts/default');
@@ -20,8 +20,8 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section', 'objects/chart/chart');
+  = mixin('section', 'objects/charts/chart--bar');
 
 = content('script');
   javascript:
-    nyco.chart();
+    nyco.chartBar();
