@@ -23,9 +23,11 @@
   = mixin('section', 'objects/charts/chart--bar', 'Bar Chart');
   = mixin('section', 'objects/charts/chart--horizontal-bar', 'Horizontal Bar Chart');
   = mixin('section', 'objects/charts/chart--line', 'Line Chart');
+  = mixin('section', 'objects/charts/chart--pie', 'Pie Chart');
 
 = content('script');
   javascript:
     nyco.chart('bar');
     nyco.chart('horizontalBar');
     nyco.chart('line');
+    nyco.chart('pie');

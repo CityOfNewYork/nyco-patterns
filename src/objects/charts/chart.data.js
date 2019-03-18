@@ -82,6 +82,18 @@ const ChartData = {
         }]
       }
     }
+  },
+  pie: {
+    options: {
+      title: {
+        display: true,
+        text: 'Population Chart',
+      },
+      legend: {
+        display: true,
+      },
+      lineTension: 1,
+    }
   }
 }
 

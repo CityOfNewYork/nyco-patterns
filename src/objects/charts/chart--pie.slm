@@ -1,0 +1,6 @@
+/
+/ Chart Pie
+/
+
+div data-js='app-pie'
+  nyco-chart-pie :chart-data='data' :options='options'
