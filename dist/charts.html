@@ -178,6 +178,22 @@
           </div>
         </div>
       </section>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="line-chart">
+              <a href="#line-chart">Line Chart</a>
+            </h2>
+          </div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div data-js="app-line">
+              <nyco-chart-line :chart-data="data" :options="options"></nyco-chart-line>
+            </div>
+          </div>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
@@ -217,5 +233,6 @@
   <script type="text/javascript">
     nyco.chart('bar');
     nyco.chart('horizontalBar');
+    nyco.chart('line');
   </script>
 </body>

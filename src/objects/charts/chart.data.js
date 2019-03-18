@@ -10,6 +10,7 @@ const ChartData = {
     datasets: [
       {
         data: chartDataList,
+        fill: false, // used by line chart
         backgroundColor: [
           '#2F334F',
           '#3155A6',
