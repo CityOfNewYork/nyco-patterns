@@ -7,6 +7,7 @@ import Track from '../utilities/track/Track';
 
 // charts
 import ChartBar from 'nyco-patterns/src/objects/charts/chart--bar';
+import ChartHorizontalBar from 'nyco-patterns/src/objects/charts/chart--horizontal-bar';
 /** import modules here as they are written */
 
 /**
@@ -48,8 +49,12 @@ class nyco {
   }
 
   // Chart Components
-  chartBar() {
-    return new ChartBar().init();
+  chart(type) {
+    if (type === 'bar')
+      return new ChartBar().init()
+
+    if (type === 'horizontalBar')
+      return new ChartHorizontalBar().init();
   }
   /** add APIs here as they are written */
 }

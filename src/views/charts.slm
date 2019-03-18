@@ -20,8 +20,10 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section', 'objects/charts/chart--bar');
+  = mixin('section', 'objects/charts/chart--bar', 'Bar Chart');
+  = mixin('section', 'objects/charts/chart--horizontal-bar', 'Horizontal Bar Chart');
 
 = content('script');
   javascript:
-    nyco.chartBar();
+    nyco.chart('bar');
+    nyco.chart('horizontalBar');
