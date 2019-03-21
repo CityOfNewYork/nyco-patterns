@@ -51,7 +51,7 @@ class nyco {
   }
 
   select() {
-    return new Select().init();
+    return new Select();
   }
   /** add APIs here as they are written */
 }

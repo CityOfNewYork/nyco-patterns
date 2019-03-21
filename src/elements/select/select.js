@@ -8,6 +8,7 @@ class Select {
   constructor(settings = {}, data = {}) {
     this.data = data;
     this.settings = settings;
+    this.init();
   }
 
   /**
