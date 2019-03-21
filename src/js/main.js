@@ -5,12 +5,10 @@ import Feed from '../objects/feed/Feed';
 import Toggle from '../utilities/toggle/Toggle';
 import Track from '../utilities/track/Track';
 
-// charts
 import ChartBar from 'nyco-patterns/src/objects/charts/chart--bar';
 import ChartHorizontalBar from 'nyco-patterns/src/objects/charts/chart--horizontal-bar';
 import ChartLine from 'nyco-patterns/src/objects/charts/chart--line';
 import ChartPie from 'nyco-patterns/src/objects/charts/chart--pie';
-
 /** import modules here as they are written */
 
 /**
@@ -51,19 +49,22 @@ class nyco {
     return new Track();
   }
 
-  // Chart Components
+  /**
+   * Method for the Chart Objects
+   * @return  {Object} Chart instance
+   */
   chart(type) {
     if (type === 'bar')
-      return new ChartBar().init()
+      return new ChartBar();
 
     if (type === 'horizontalBar')
-      return new ChartHorizontalBar().init();
+      return new ChartHorizontalBar();
 
     if (type === 'line')
-      return new ChartLine().init();
+      return new ChartLine();
 
     if (type === 'pie')
-      return new ChartPie().init();
+      return new ChartPie();
   }
   /** add APIs here as they are written */
 }

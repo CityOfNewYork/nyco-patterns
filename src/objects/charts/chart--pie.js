@@ -1,15 +1,16 @@
 'use strict';
 
-const chartType = 'pie';
-
 import Vue from 'vue/dist/vue.esm.browser';
 import ChartComponent from './chart--pie.vue'; // Our component
 import ChartData from 'nyco-patterns/src/objects/charts/chart.data'; // Our sample data
+
+const chartType = 'pie';
 
 class ChartPie {
   constructor(settings = {}, data = {}) {
     this.data = data;
     this.settings = settings;
+    this.init();
   }
 
   /**
@@ -19,7 +20,7 @@ class ChartPie {
     Vue.component(`nyco-chart-${chartType}`, ChartComponent);
 
     new Vue({
-      el: `[data-js="app-${chartType}"]`,
+      el: `[data-js="chart-${chartType}"]`,
       delimiters: ['v{', '}'],
       data() {
         return {

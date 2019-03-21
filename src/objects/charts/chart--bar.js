@@ -4,20 +4,23 @@ import Vue from 'vue/dist/vue.esm.browser';
 import ChartComponent from './chart--bar.vue'; // Our component
 import ChartData from 'nyco-patterns/src/objects/charts/chart.data'; // Our sample data
 
+const chartType = 'bar';
+
 class ChartBar {
   constructor(settings = {}, data = {}) {
     this.data = data;
     this.settings = settings;
-}
+    this.init();
+  }
 
   /**
    * Initializes the module
    */
   init() {
-    Vue.component('nyco-chart-bar', ChartComponent);
+    Vue.component(`nyco-chart-${chartType}`, ChartComponent);
 
     new Vue({
-      el: '[data-js="app"]',
+      el: `[data-js="chart-${chartType}"]`,
       delimiters: ['v{', '}'],
       data() {
         return {
@@ -26,8 +29,6 @@ class ChartBar {
         }
       }
     });
-
-    console.log('Hello World!');
   }
 
   /**

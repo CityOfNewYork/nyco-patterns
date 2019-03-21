@@ -2,5 +2,5 @@
 / Chart Pie
 /
 
-div data-js='app-pie'
+div data-js='chart-pie'
   nyco-chart-pie :chart-data='data' :options='options'

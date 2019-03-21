@@ -10,6 +10,7 @@ class ChartHorizontalBar {
   constructor(settings = {}, data = {}) {
     this.data = data;
     this.settings = settings;
+    this.init();
   }
 
   /**
@@ -19,7 +20,7 @@ class ChartHorizontalBar {
     Vue.component(`nyco-chart-${chartType}`, ChartComponent);
 
     new Vue({
-      el: `[data-js="app-${chartType}"]`,
+      el: `[data-js="chart-${chartType}"]`,
       delimiters: ['v{', '}'],
       data() {
         return {
