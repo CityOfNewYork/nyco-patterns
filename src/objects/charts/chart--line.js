@@ -2,7 +2,7 @@
 
 import Vue from 'vue/dist/vue.esm.browser';
 import ChartComponent from './chart--line.vue'; // Our component
-import ChartData from 'nyco-patterns/src/objects/charts/chart.data'; // Our sample data
+import ChartData from './chart.data'; // Our sample data
 
 const chartType = 'line';
 
