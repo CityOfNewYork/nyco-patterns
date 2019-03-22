@@ -45,8 +45,7 @@ modules.forEach(function(module, index) {
   } else {
     write(module);
   }
-  if(index == modules.length-1){
-    console.log(process.env.NOTIFIER)
+  if(index == modules.length-1 && process.env.NOTIFY == 'true' ){
     notifier.notify({
       title: 'NYCO Patterns',
       message: 'Sass processing complete! 🎉'

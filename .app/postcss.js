@@ -28,7 +28,7 @@ modules.forEach(function(module, index) {
             console.log(`${alerts.error} ${err}`);
           } else {
             console.log(`${alerts.success} PostCss processed ${module.outDir}${module.outFile}`);
-            if(index == modules.length-1){
+            if(index == modules.length-1 && process.env.NOTIFY == 'true'){
               notifier.notify({
                 title: 'NYCO Patterns',
                 message: 'PostCss processing complete! 🎉'
