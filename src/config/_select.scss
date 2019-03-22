@@ -1,0 +1,22 @@
+// Dependencies
+@import 'config/colors';
+@import 'config/direction';
+@import 'config/variables';
+
+$padding: map-get($variables, 'padding');
+
+// Declarations
+@mixin selects($url) {
+  background-color: $base-white;
+  background: url($url);
+  background-position: $direction-end .5rem center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  padding: .75 * map-get($padding, 2);
+  padding-#{$direction-end}: 2.3rem;
+  white-space: normal;
+
+  &::-ms-expand {
+    display: none;
+  }
+}

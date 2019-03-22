@@ -94,7 +94,9 @@
             </nav>
             <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
               <a class="o-navigation__link" href="icons">Icons</a>
+              <a class="o-navigation__link" href="inputs">Inputs</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
               <a class="o-navigation__link" href="tables">Tables</a>
               <a class="o-navigation__link" href="select">Select</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
@@ -124,7 +126,9 @@
           </nav>
           <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
             <a class="o-navigation__link" href="buttons">Buttons</a>
+            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
             <a class="o-navigation__link" href="icons">Icons</a>
+            <a class="o-navigation__link" href="inputs">Inputs</a>
             <a class="o-navigation__link" href="layouts">Layouts</a>
             <a class="o-navigation__link" href="tables">Tables</a>
             <a class="o-navigation__link" href="select">Select</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
@@ -153,6 +157,25 @@
           <div class="screen-desktop:pl-4 screen-desktop:pl-6">
             <div data-js="app">
               <nyco-select :options="options" v-model="selected"></nyco-select>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+          <div class="screen-desktop:pr-4 screen-desktop:pr-6"></div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div class="error">
+              <select class="select" name="borough">
+                <option selected="true" value="">All Boroughs</option>
+                <option value="brooklyn">Brooklyn</option>
+                <option value="bronx">Bronx</option>
+                <option value="manhattan">Manhattan</option>
+                <option value="queens">Queens</option>
+                <option value="staten island">Staten Island</option>
+              </select>
             </div>
           </div>
         </div>

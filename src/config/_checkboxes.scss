@@ -1,0 +1,40 @@
+//
+// Variables
+//
+
+// Dependencies
+@import 'config/variables';
+@import 'config/colors';
+@import 'config/direction';
+
+$checkbox-size: map-get(map-get($variables, 'inputs'), 'checkbox-size');
+$checkbox-radius: map-get(map-get($variables, 'inputs'), 'checkbox-radius');
+$spacing-base: map-get(map-get($variables, 'dimensions'), 'spacing-base');
+
+
+// Declarations
+@mixin checkboxes-btn {
+  transition: all .2s;
+
+  background: $base-white;
+  border: 1px solid $secondary-grey;
+  border-radius: $checkbox-radius;
+  content: '';
+  display: inline-block;
+
+  width: $checkbox-size;
+  height: $checkbox-size;
+  min-width: $checkbox-size;
+  margin-#{$direction-end}: .5 * $spacing-base;
+}
+
+@mixin checkboxes-btn-checked {
+  background: $primary-navy url('../svg/icon-checkmark-white.svg') no-repeat;
+  background-size: cover;
+  border: 0;
+}
+
+@mixin checkboxes-btn-focused {
+  border: 0;
+  box-shadow: 0 0 0 1px $base-white, 0 0 0 3px $primary-navy;
+}

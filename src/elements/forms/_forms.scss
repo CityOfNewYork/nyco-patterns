@@ -65,7 +65,7 @@ optgroup {
 
 input,
 textarea {
-  padding: .75 * map-get($padding, 3);
+  padding: .75 * map-get($padding, 2);
 }
 
 input[type='number'] {

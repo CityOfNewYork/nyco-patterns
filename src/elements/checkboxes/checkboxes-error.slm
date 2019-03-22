@@ -1,0 +1,7 @@
+/
+/ Checkboxes Error
+/
+
+label class='checkbox error' for='selection-error'
+  input type='checkbox' id='selection-error' value='Selection' name='selection-error'
+  span class='checkbox__label' Selection

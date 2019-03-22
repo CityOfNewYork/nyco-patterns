@@ -1,7 +1,7 @@
 'use strict';
 
 const SelectData = [
-  { text: 'All', value: 'all' },
+  { text: 'All Boroughs', value: 'all' },
   { text: 'Brooklyn', value: 'brooklyn' },
   { text: 'Queens', value: 'queens' },
   { text: 'Manhattan', value: 'manhattan' },
