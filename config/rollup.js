@@ -5,6 +5,9 @@
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import uglify from 'rollup-plugin-uglify';
+import vue from 'rollup-plugin-vue';
+import buble from 'rollup-plugin-buble';
+import commonjs from 'rollup-plugin-commonjs';
 // import replace from 'rollup-plugin-replace';
 // import eslint from 'rollup-plugin-eslint';
 
@@ -20,6 +23,9 @@ const rollup = {
   plugins: [
     // eslint(), TODO: ES lint is throwing errors, it needs to be configured for ES6
     resolve(),
+    commonjs(),
+    vue(),
+    buble(),
     babel({
       exclude: '../node_modules/**'
     }),
