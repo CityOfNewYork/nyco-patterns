@@ -9,8 +9,6 @@
 
 $checkbox-size: map-get(map-get($variables, 'inputs'), 'checkbox-size');
 $checkbox-radius: map-get(map-get($variables, 'inputs'), 'checkbox-radius');
-$spacing-base: map-get(map-get($variables, 'dimensions'), 'spacing-base');
-
 
 // Declarations
 @mixin checkboxes-btn {
@@ -25,7 +23,7 @@ $spacing-base: map-get(map-get($variables, 'dimensions'), 'spacing-base');
   width: $checkbox-size;
   height: $checkbox-size;
   min-width: $checkbox-size;
-  margin-#{$direction-end}: .5 * $spacing-base;
+  margin-#{$direction-end}: 2 * $grid;
 }
 
 @mixin checkboxes-btn-checked {

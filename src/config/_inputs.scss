@@ -10,11 +10,9 @@ $padding: map-get($variables, 'padding');
 @mixin inputs() {
   color: inherit;
   padding: .75 * map-get($padding, 2);
-  font-size: inherit;
-  border: 1px solid $secondary-grey;
 
   &::placeholder {
-    color: $secondary-grey;
+    color: inherit;
   }
 }
 

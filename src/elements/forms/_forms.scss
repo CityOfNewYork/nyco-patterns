@@ -27,13 +27,13 @@ optgroup {
 }
 
 input {
-  color: $base-black;
+  color: inherit;
 }
 
 input,
 textarea {
   &::placeholder {
-    color: $secondary-grey;
+    color: inherit;
   }
 }
 
@@ -42,7 +42,7 @@ textarea,
 select,
 optgroup {
   appearance: none;
-  border: 1px solid $secondary-grey;
+  border: 1px solid inherit;
   border-radius: 0;
   display: block;
   max-width: 100%;

@@ -199,15 +199,6 @@ const variables = {
     'screen-tablet': 768,
     'screen-sm-mobile': 400
   },
-  dimensions: {
-    'grid-base': '8px',
-    'spacing-base': '24px',
-    'homepage-max-width': '800px',
-    'site-max-width': '1200px',
-    'site-margins': '24px',
-    'site-margins-mobile': '16px',
-    'site-min-width': '320px'
-  },
   buttons: {
     'radius': '500px'
   },
