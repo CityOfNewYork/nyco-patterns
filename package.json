@@ -16,7 +16,8 @@
   "scripts": {
     "test": "",
     "start": "cross-env PORT=8000 concurrently \"npm:*:watch\" \"npm:serve\" \"npm:sync\"",
-    "predeploy": "cross-env NODE_ENV=production concurrently \"npm:svgs\" \"npm:styles\" \"npm:scripts\" \"npm:build\" && git checkout package.json && git add \"./*\" && git commit -m \"Updating dist\"",
+    "predeploy": "cross-env NODE_ENV=production concurrently \"npm:svgs\" \"npm:styles\" \"npm:scripts\" \"npm:build\"",
+    "predeploy:commit": "git checkout package.json && git add \"./*\" && git commit -m \"Updating dist\"",
     "serve": "cross-env PORT=8000 node .app/serve.js --ext slm --watch src",
     "build": "node .app/build.js",
     "build:watch": "nodemon --ext slm --watch src -x \"npm run build\"",
