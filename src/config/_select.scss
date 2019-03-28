@@ -2,12 +2,14 @@
 @import 'config/colors';
 @import 'config/direction';
 @import 'config/variables';
+@import 'config/forms';
 
 $padding: map-get($variables, 'padding');
 
 // Declarations
 @mixin selects($url) {
-  background-color: $base-white;
+  @include forms-default;
+
   background: url($url);
   background-position: $direction-end .5rem center;
   background-repeat: no-repeat;

@@ -102,7 +102,11 @@ const variables = {
       'hyperlinks': 'primary-blue',
       'visited': 'primary-blue',
       'hover': 'primary-navy',
-      'background-color': 'base-white'
+      'background-color': 'base-white',
+      'border': 'secondary-grey',
+      'placeholder': 'secondary-grey',
+      'checkbox-background': 'primary-navy',
+      'error': 'primary-red',
     },
     'mid-background': {
       'color': 'base-black',

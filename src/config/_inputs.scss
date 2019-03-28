@@ -8,16 +8,25 @@ $padding: map-get($variables, 'padding');
 
 // Declarations
 @mixin inputs() {
-  color: inherit;
+  appearance: none;
+  font-size: inherit;
+  border-width: 1px;
+  border-type: solid;
+  border-radius: 0;
+  display: block;
+  max-width: 100%;
+  min-width: 200px;
+  width: 100%;
   padding: .75 * map-get($padding, 2);
+  cursor: pointer;
+  margin: 0;
 
-  &::placeholder {
-    color: inherit;
+  @media screen and (min-width: $screen-tablet) {
+    width: auto;
   }
 }
 
 @mixin input-currency-icon() {
-  color: $primary-navy;
   font-size: inherit;
   font-weight: $font-weight-bold;
 }

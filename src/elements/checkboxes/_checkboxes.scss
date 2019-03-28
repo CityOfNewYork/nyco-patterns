@@ -15,7 +15,6 @@ $grid: map-get($variables, 'grid');
   font-size: inherit;
   font-weight: $font-weight-bold;
   display: block;
-
   margin-bottom: $grid;
 
   > input {
@@ -23,10 +22,6 @@ $grid: map-get($variables, 'grid');
     opacity: 0;
     z-index: -1;
   }
-}
-
-.checkbox.error {
-  color: $primary-red;
 }
 
 .checkbox__label {
@@ -40,12 +35,4 @@ $grid: map-get($variables, 'grid');
 
 input:checked + .checkbox__label::before {
   @include checkboxes-btn-checked;
-}
-
-input:focus + .checkbox__label::before {
-  @include checkboxes-btn-focused;
-}
-
-.error > .checkbox__label::before {
-  border-color: $primary-red;
 }

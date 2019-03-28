@@ -51,6 +51,10 @@ $base-white: map-get($colors, 'base-white');
   $visited: map-get($combination, 'visited');
   $hover: map-get($combination, 'hover');
   $headings: map-get($combination, 'headings');
+  $input-border: map-get($combination, 'border');
+  $input-placeholder: map-get($combination, 'placeholder');
+  $checkbox-background: map-get($combination, 'checkbox-background');
+  $error: map-get($combination, 'error');
 
   color: map-get($colors, $color);
   background-color: map-get($colors, $background);
@@ -73,6 +77,33 @@ $base-white: map-get($colors, 'base-white');
     &:hover, &:active, &:focus {
       color: map-get($colors, $hover);
     }
+  }
+
+  input:not(.error &) {
+    border-color: map-get($colors, $input-border);
+
+    &::placeholder {
+      color: map-get($colors, $input-placeholder);
+    }
+  }
+
+  .checkbox__label::before {
+    border-color: map-get($colors, $input-border);
+  }
+
+  input:checked + .checkbox__label::before {
+    background-color: map-get($colors, $checkbox-background);
+  }
+
+  input:focus + .checkbox__label::before {
+    box-shadow: 0 0 0 1px map-get($colors, $background), 0 0 0 3px map-get($colors, $checkbox-background);
+  }
+
+  .error > input, 
+  .error > select,
+  .error > .checkbox__label::before {
+    border-color: map-get($colors, $error);
+    color: map-get($colors, $error);
   }
 
   h1, h4, h5, h6, .h1, .h4, .h5, .h6 {

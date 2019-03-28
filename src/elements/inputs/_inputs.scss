@@ -9,10 +9,6 @@
 // Declarations
 input, textarea {
   @include inputs;
-
-  .error & {
-    border-color: $primary-red;
-  }
 }
 
 .input-currency-usd {
@@ -32,5 +28,15 @@ input, textarea {
     transform: translateY(-50%);
     z-index: 2;
     pointer-events: none;
+  }
+}
+
+input[type='number'] {
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
   }
 }
