@@ -1,6 +1,6 @@
 {
   "name": "nyco-patterns",
-  "version": "1.4.2",
+  "version": "1.5.2",
   "description": "NYC.gov Agency Styles and Extension",
   "author": "The Mayor's Office for Economic Opportunity",
   "license": "GPL-3.0+",
@@ -16,7 +16,8 @@
   "scripts": {
     "test": "",
     "start": "cross-env PORT=8000 concurrently \"npm:*:watch\" \"npm:serve\" \"npm:sync\"",
-    "predeploy": "cross-env NODE_ENV=production concurrently \"npm:svgs\" \"npm:styles\" \"npm:scripts\" \"npm:build\" && git checkout package.json && git add \"./*\" && git commit -m \"Updating dist\"",
+    "predeploy": "cross-env NODE_ENV=production concurrently \"npm:svgs\" \"npm:styles\" \"npm:scripts\" \"npm:build\"",
+    "predeploy:commit": "git checkout package.json && git add \"./*\" && git commit -m \"Updating dist\"",
     "serve": "cross-env PORT=8000 node .app/serve.js --ext slm --watch src",
     "build": "node .app/build.js",
     "build:watch": "nodemon --ext slm --watch src -x \"npm run build\"",
@@ -79,8 +80,11 @@
   },
   "dependencies": {
     "animate.scss": "0.0.6",
+    "chart.js": "^2.7.3",
     "lodash-es": "^4.17.11",
+    "svgstore": "^3.0.0-2",
     "vue": "^2.6.6",
+    "vue-chartjs": "^3.4.0",
     "node-notifier": "^5.4.0"
   },
   "babel": {

@@ -22,7 +22,7 @@
     <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
     <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Animate | NYCO Patterns</title>
+    <title>Charts | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
@@ -148,111 +148,77 @@
       </div>
     </aside>
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Animate</h1>
+      <h1 class="m-0 p-0 mt-2">Charts</h1>
       <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <p>The following selectors and their properties are animated by default;</p>
-            <p>
-              <div class="table w-full">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Selectors</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>a</td>
-                    </tr>
-                    <tr>
-                      <td>input</td>
-                    </tr>
-                    <tr>
-                      <td>textarea</td>
-                    </tr>
-                    <tr>
-                      <td>select</td>
-                    </tr>
-                    <tr>
-                      <td>path</td>
-                    </tr>
-                    <tr>
-                      <td>rect</td>
-                    </tr>
-                    <tr>
-                      <td>.btn</td>
-                    </tr>
-                    <tr>
-                      <td>.button</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </p>
-            <p>
-              <div class="table w-full">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Properties</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>opacity</td>
-                    </tr>
-                    <tr>
-                      <td>background</td>
-                    </tr>
-                    <tr>
-                      <td>color</td>
-                    </tr>
-                    <tr>
-                      <td>border</td>
-                    </tr>
-                    <tr>
-                      <td>box-shadow</td>
-                    </tr>
-                    <tr>
-                      <td>outline</td>
-                    </tr>
-                    <tr>
-                      <td>transform</td>
-                    </tr>
-                    <tr>
-                      <td>stroke</td>
-                    </tr>
-                    <tr>
-                      <td>stroke-dashoffset</td>
-                    </tr>
-                    <tr>
-                      <td>fill</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </p>
-            <h3>Animate.css</h3>
-            <p>
-              <a href='https://www.npmjs.com/package/animate.scss'>Animate.scss</a>, the SASS implementation of
-              <a href='https://daneden.github.io/animate.css/'>Animate.css</a> is included as a dependency. Basic animations can be imported as needed. The following animations are included;</p>
-            <div class="table w-full">
-              <table>
-                <tbody>
-                  <tr>
-                    <td>fadeIn</td>
-                  </tr>
-                  <tr>
-                    <td>fadeInUp</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <h2 class="mt-0" id="bar-chart">
+              <a href="#bar-chart">Bar Chart</a>
+            </h2>
+            <p>All chart source can be found here: <code>src/objects/charts/</code>.</p>
+            <p>For a full list of customization options check the
+              <a href="https://www.chartjs.org/docs/latest/charts/">Chartjs</a> documentation</p>
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6"></div>
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div data-js="chart-bar">
+              <nyco-chart-bar :chart-data="data" :options="options"></nyco-chart-bar>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="horizontal-bar-chart">
+              <a href="#horizontal-bar-chart">Horizontal Bar Chart</a>
+            </h2>
+          </div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div data-js="chart-horizontal-bar">
+              <nyco-chart-horizontal-bar :chart-data="data" :options="options"></nyco-chart-horizontal-bar>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="line-chart">
+              <a href="#line-chart">Line Chart</a>
+            </h2>
+            <p>To achieve a smooth line, set the following properties in the dataset object:</p><span><code> pointBackgroundColor: 'transparent', </code></span><span><code> pointBackgroundColor: 'transparent', </code></span><span><code> pointBorderColor: 'transparent', </code></span><span><code> lineTension: 0, </code></span>
+            <p></p>
+            <p>Additional configuration options are viewable on
+              <a href="https://www.chartjs.org/docs/latest/charts/line.html">Chart.js</a>
+            </p>
+          </div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div data-js="chart-line">
+              <nyco-chart-line :chart-data="data" :options="options"></nyco-chart-line>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="pie-chart">
+              <a href="#pie-chart">Pie Chart</a>
+            </h2>
+          </div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div data-js="chart-pie">
+              <nyco-chart-pie :chart-data="data" :options="options"></nyco-chart-pie>
+            </div>
+          </div>
         </div>
       </section>
     </article>
@@ -290,5 +256,11 @@
     nyco.icons();
     nyco.toggle();
     nyco.track();
+  </script>
+  <script type="text/javascript">
+    nyco.chart('bar');
+    nyco.chart('horizontalBar');
+    nyco.chart('line');
+    nyco.chart('pie');
   </script>
 </body>

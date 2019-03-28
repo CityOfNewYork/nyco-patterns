@@ -4,8 +4,11 @@ import Icons from '../elements/icons/Icons';
 import Feed from '../objects/feed/Feed';
 import Toggle from '../utilities/toggle/Toggle';
 import Track from '../utilities/track/Track';
-import Chart from '../objects/chart/chart';
 import Select from '../elements/select/select';
+import ChartBar from '../objects/charts/chart--bar';
+import ChartHorizontalBar from '../objects/charts/chart--horizontal-bar';
+import ChartLine from '../objects/charts/chart--line';
+import ChartPie from '../objects/charts/chart--pie';
 /** import modules here as they are written */
 
 /**
@@ -46,12 +49,25 @@ class nyco {
     return new Track();
   }
 
-  chart() {
-    return new Chart().init();
-  }
-
   select() {
     return new Select();
+  }
+  /**
+   * Method for the Chart Objects
+   * @return  {Object} Chart instance
+   */
+  chart(type) {
+    if (type === 'bar')
+      return new ChartBar();
+
+    if (type === 'horizontalBar')
+      return new ChartHorizontalBar();
+
+    if (type === 'line')
+      return new ChartLine();
+
+    if (type === 'pie')
+      return new ChartPie();
   }
   /** add APIs here as they are written */
 }
