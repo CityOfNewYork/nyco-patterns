@@ -1,0 +1,6 @@
+/
+/ Input Error
+/
+
+div
+  input type='number'

@@ -1,0 +1,1 @@
+p This is a Vue component that dynamically generates a select dropdown menu based on a list of options passed through.

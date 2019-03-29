@@ -1,0 +1,6 @@
+/
+/ Inputs
+/
+
+div class='input'
+  input name='name' type='text'

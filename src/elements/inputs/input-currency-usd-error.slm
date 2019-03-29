@@ -1,0 +1,6 @@
+/
+/ Input Currency
+/
+
+div class='input-currency-usd error'
+  input type='number'
