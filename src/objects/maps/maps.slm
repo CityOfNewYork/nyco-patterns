@@ -1,0 +1,6 @@
+/
+/ Maps
+/
+
+div data-js='map'
+  nyco-map :data='data'

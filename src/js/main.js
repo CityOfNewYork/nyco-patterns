@@ -9,6 +9,8 @@ import ChartBar from '../objects/charts/chart--bar';
 import ChartHorizontalBar from '../objects/charts/chart--horizontal-bar';
 import ChartLine from '../objects/charts/chart--line';
 import ChartPie from '../objects/charts/chart--pie';
+
+import Map from '../objects/maps/Maps';
 /** import modules here as they are written */
 
 /**
@@ -66,6 +68,15 @@ class nyco {
     if (type === 'pie')
       return new ChartPie();
   }
+
+  /**
+   * Method for the Map Module
+   * @return  {Object} Map Module
+   */
+  map() {
+    return new Map();
+  }
+
   /** add APIs here as they are written */
 }
 

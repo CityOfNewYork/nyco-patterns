@@ -82,6 +82,7 @@
     "animate.scss": "0.0.6",
     "chart.js": "^2.7.3",
     "lodash-es": "^4.17.11",
+    "mapbox-gl": "^0.53.1",
     "svgstore": "^3.0.0-2",
     "vue": "^2.6.6",
     "vue-chartjs": "^3.4.0"

@@ -16,6 +16,7 @@
     a class='${class_nav_link}' href='feed' Feed
     a class='${class_nav_link}' href='navigation' Navigation
     a class='${class_nav_link}' href='charts' Charts
+    a class='${class_nav_link}' href='maps' Maps
 
     span class='${class_nav_link_header}' Utilities
     a class='${class_nav_link}' href='animate' Animate
