@@ -1,0 +1,38 @@
+/**
+ * Checkboxes
+ */
+
+// Dependencies
+@import 'config/variables';
+@import 'config/checkboxes';
+@import 'config/direction';
+@import 'config/fonts';
+
+$grid: map-get($variables, 'grid');
+
+// Declarations
+.checkbox {
+  font-size: inherit;
+  font-weight: $font-weight-bold;
+  display: block;
+  margin-bottom: $grid;
+
+  > input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.checkbox__label {
+  display: flex;
+  line-height: $checkbox-size;
+}
+
+.checkbox__label::before {
+  @include checkboxes-btn;
+}
+
+input:checked + .checkbox__label::before {
+  @include checkboxes-btn-checked;
+}

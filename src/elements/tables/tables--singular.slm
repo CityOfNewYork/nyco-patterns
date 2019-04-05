@@ -1,0 +1,9 @@
+div class='table--singular min-w-0 w-1/3 text-center'
+  table
+    thead
+      tr
+        td
+          strong Average Family Size
+    tbody
+      tr
+        td 3

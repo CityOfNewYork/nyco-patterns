@@ -6,16 +6,19 @@
   nav class='${class_nav}'
     span class='${class_nav_link_header}' Elements
     a class='${class_nav_link}' href='buttons' Buttons
+    a class='${class_nav_link}' href='checkboxes' Checkboxes
     a class='${class_nav_link}' href='icons' Icons
+    a class='${class_nav_link}' href='inputs' Inputs
     a class='${class_nav_link}' href='layouts' Layouts
     a class='${class_nav_link}' href='tables' Tables
+    a class='${class_nav_link}' href='select' Select
 
     span class='${class_nav_link_header}' Objects
-    a class='${class_nav_link}' href='header' Header
+    a class='${class_nav_link}' href='charts' Charts
     a class='${class_nav_link}' href='footer' Footer
     a class='${class_nav_link}' href='feed' Feed
+    a class='${class_nav_link}' href='header' Header
     a class='${class_nav_link}' href='navigation' Navigation
-    a class='${class_nav_link}' href='charts' Charts
 
     span class='${class_nav_link_header}' Utilities
     a class='${class_nav_link}' href='animate' Animate

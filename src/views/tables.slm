@@ -21,3 +21,5 @@
   h1 class='${class_demo_headers}' = pattern;
 
   = mixin('section-full', 'elements/tables/tables');
+  = mixin('section-full', 'elements/tables/tables--singular', 'Singular Table');
+  = mixin('section-full', 'elements/tables/tables--singular-caption', 'Singular Table with Caption');

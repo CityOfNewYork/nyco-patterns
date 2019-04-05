@@ -1,0 +1,16 @@
+/**
+ * Select
+ */
+
+// Dependencies
+@import 'config/colors';
+@import 'config/select';
+
+// Declarations
+.select {
+  @include selects('../svg/icon-arrow-down.svg');
+}
+
+.error .select {
+  @include selects('../svg/icon-arrow-down-red.svg');
+}
