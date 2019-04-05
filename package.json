@@ -1,8 +1,8 @@
 {
   "name": "nyco-patterns",
   "version": "1.6.0",
-  "description": "NYC.gov Agency Styles and Extension",
-  "author": "The Mayor's Office for Economic Opportunity",
+  "description": "User Interface Patterns for The Mayor's Office for Economic Opportunity",
+  "author": "products@nycopportunity.nyc.gov<NYC Opportunity>",
   "license": "GPL-3.0+",
   "homepage": "https://nycopatterns.cityofnewyork.us",
   "repository": {
