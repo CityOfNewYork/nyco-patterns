@@ -1,4 +1,4 @@
-@import 'elements/tables/tables.config';
+@import 'config/tables';
 
 @include screens {
   @include table-selectors($variant);

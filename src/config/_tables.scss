@@ -36,10 +36,8 @@ $grid: map-get($variables, 'grid');
 }
 
 @mixin tables--singular {
-  table {
-    width: 100%;
-    border-spacing: inherit;
-  }
+  width: 100%;
+  border-spacing: inherit;
 
   tbody {
     tr {
@@ -62,15 +60,21 @@ $grid: map-get($variables, 'grid');
 
 @mixin table-selectors($variant: '') {
   .#{$variant}table, [class*='#{$variant}table--'] {
-    @include tables;
+    table {
+      @include tables;
+    }
   }
 
   .#{$variant}table--singular,
   .#{$variant}table--singular-caption {
-    @include tables--singular;
+    table {
+      @include tables--singular;
+    }
   }
 
   .#{$variant}table--singular-caption {
-    @include tables--singular-caption;
+    table {
+      @include tables--singular-caption;
+    }
   }
 }
