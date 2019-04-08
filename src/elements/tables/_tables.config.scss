@@ -1,0 +1,76 @@
+@import 'config/variables';
+@import 'config/fonts';
+
+$colors: map-get($variables, 'colors');
+$grid: map-get($variables, 'grid');
+
+@mixin tables {
+  max-width: 100%;
+  min-width: 100%;
+
+  thead {
+    color: map-get($colors, 'base-white');
+    @include font-smooth();
+    border-bottom: 1px solid map-get($colors, 'primary-blue');
+
+    tr {
+      background-color: map-get($colors, 'primary-blue');
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: map-get($colors, 'secondary-white');
+      }
+    }
+  }
+
+  th {
+    vertical-align: top;
+  }
+
+  th, td, caption {
+    padding: $grid ($grid * 2);
+  }
+}
+
+@mixin tables--singular {
+  table {
+    width: 100%;
+    border-spacing: inherit;
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: map-get($colors, 'base-white');
+      }
+    }
+  }
+}
+
+@mixin tables--singular-caption {
+  caption-side: bottom;
+
+  caption {
+    background-color: map-get($colors, 'secondary-white');
+    color: map-get($colors, 'primary-navy');
+    font-size: .8em;
+  }
+}
+
+@mixin table-selectors($variant: '') {
+  .#{$variant}table, [class*='#{$variant}table--'] {
+    @include tables;
+  }
+
+  .#{$variant}table--singular,
+  .#{$variant}table--singular-caption {
+    @include tables--singular;
+  }
+
+  .#{$variant}table--singular-caption {
+    @include tables--singular-caption;
+  }
+}
