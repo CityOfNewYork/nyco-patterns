@@ -11,7 +11,7 @@ $padding: map-get($variables, 'padding');
   appearance: none;
   font-size: inherit;
   border-width: 1px;
-  border-type: solid;
+  border-style: solid;
   border-radius: 0;
   display: block;
   max-width: 100%;
@@ -20,6 +20,11 @@ $padding: map-get($variables, 'padding');
   padding: .75 * map-get($padding, 2);
   cursor: pointer;
   margin: 0;
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.6;
+  }
 
   @media screen and (min-width: $screen-tablet) {
     width: auto;
