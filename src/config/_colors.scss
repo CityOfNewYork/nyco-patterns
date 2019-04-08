@@ -81,10 +81,6 @@ $base-white: map-get($colors, 'base-white');
 
   input:not(.error &) {
     border-color: map-get($colors, $input-border);
-
-    &::placeholder {
-      color: map-get($colors, $input-placeholder);
-    }
   }
 
   .checkbox__label::before {
@@ -99,7 +95,7 @@ $base-white: map-get($colors, 'base-white');
     box-shadow: 0 0 0 1px map-get($colors, $background), 0 0 0 3px map-get($colors, $checkbox-background);
   }
 
-  .error > input, 
+  .error > input,
   .error > select,
   .error > .checkbox__label::before {
     border-color: map-get($colors, $error);
