@@ -16,6 +16,7 @@ $grid: map-get($variables, 'grid');
   font-weight: $font-weight-bold;
   display: block;
   margin-bottom: $grid;
+  cursor: pointer;
 
   > input {
     position: absolute;
