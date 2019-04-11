@@ -2,13 +2,19 @@
 
 This library maintains common agency patterns for NYC Opportunity. View the [demonstration site here for documentation](https://cityofnewyork.github.io/nyco-patterns/).
 
-To install, run;
+To install, run:
 
     npm install nyco-patterns --production --save-dev
 
 or
 
     yarn add nyco-patterns --production --dev
+
+If you're utilizing this repo inside `node_modules`, add the config below into `nodemon.json`. This ensures the correct files are watched:
+
+    {
+        "ignoreRoot": [".git"]
+    }
 
 # About NYCO
 

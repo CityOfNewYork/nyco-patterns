@@ -1,0 +1,7 @@
+/
+/ Checkboxes
+/
+
+label class='checkbox' for='selection'
+  input type='checkbox' id='selection' value='Selection' name='selection'
+  span class='checkbox__label' Selection

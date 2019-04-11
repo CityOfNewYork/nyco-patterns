@@ -4,7 +4,7 @@ import Icons from '../elements/icons/Icons';
 import Feed from '../objects/feed/Feed';
 import Toggle from '../utilities/toggle/Toggle';
 import Track from '../utilities/track/Track';
-
+import Select from '../elements/select/select';
 import ChartBar from '../objects/charts/chart--bar';
 import ChartHorizontalBar from '../objects/charts/chart--horizontal-bar';
 import ChartLine from '../objects/charts/chart--line';
@@ -51,6 +51,9 @@ class nyco {
     return new Track();
   }
 
+  select() {
+    return new Select();
+  }
   /**
    * Method for the Chart Objects
    * @return  {Object} Chart instance
