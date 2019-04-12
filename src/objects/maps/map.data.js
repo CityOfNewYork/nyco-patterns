@@ -2,7 +2,7 @@
 
 const MapData = {
   data: {
-    type: 'map',
+    api_key: 'XXX'
   }
 }
 

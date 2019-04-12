@@ -24,7 +24,7 @@
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
     <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>NYCO Patterns</title>
+    <title>Maps | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
@@ -152,23 +152,20 @@
       </div>
     </aside>
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Overview</h1>
-      <section class="pb-4">
-        <div class="mt-4 layout--content">
+      <h1 class="m-0 p-0 mt-2">Maps</h1>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <p>The global patterns seen on
-              <a href='http://www.nyc.gov/opportunity'>NYC.gov/opportunity</a> utilize a partial integration of
-              <a href='http://getbootstrap.com/2.3.2'>Bootstrap 2.3.2</a>. This library extends the NYC.gov Style Guide with custom modules and the
-              <a href='https://tailwindcss.com'>Tailwind CSS Utility framework</a>. See the
-              <a href='https://blueprint.cityofnewyork.us/design/nyc-brand/'>NYC Digital Blueprint's documentation</a> of The City's Style Guide for more details and resources.</p>
-            <p>By default, NYC.gov stylesheets are disabled in this documentation. To see what these patterns look like with the NYC.gov stylesheets, click "NYC.gov Styles" in the main navigation.</p>
-            <p>The patterns in this repository are organized as <em>Elements</em>, <em>Components</em> (coming soon), and <em>Objects</em> for styling pages with the NYC Opportunity brand. The can be dropped into any web page on linking to the global stylesheet
-              url in the head of an html page;</p>
-            <p>
-              <div class="code-block"><pre><div>&lt;link href=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.6.1/dist/styles/nyco-patterns-default.css&quot;&gt;</div></pre></div>
-            </p>
-            <p>This distribution includes a custom build of the
-              <a href='https://tailwindcss.com'>Tailwind Utility CSS Framework</a>. Refer to Tailwind CSS docs for full details on utilizing the CSS uitilites to build different types of UIs.</p>
+            <p>All map source can be found here: <code>src/objects/maps/</code>.</p>
+            <p>Maps are powered by
+              <a href="https://www.mapbox.com/">Mapbox</a>.</p>
+          </div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div data-js="map">
+              <nyco-map :data="data"></nyco-map>
+            </div>
           </div>
         </div>
       </section>
@@ -208,5 +205,8 @@
     nyco.icons();
     nyco.toggle();
     nyco.track();
+  </script>
+  <script type="text/javascript">
+    nyco.map();
   </script>
 </body>

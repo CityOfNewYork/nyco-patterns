@@ -20,6 +20,9 @@
     link href='https://www1.nyc.gov/assets/home/css/pages/agencies/index.css' media='screen' rel='stylesheet' type='text/css'
     link href='https://www1.nyc.gov/assets/opportunity/css/agency-styles.css' media='screen' rel='stylesheet' type='text/css'
 
+    /! EXTERNAL STYLES
+    link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' type='text/css'
+
     /! NYCO PATTERNS
     link rel='stylesheet' href='styles/nyco-patterns-default.css'
 
