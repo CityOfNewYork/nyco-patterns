@@ -3,6 +3,9 @@
 import Vue from 'vue/dist/vue.esm.browser';
 import MapComponent from './maps.vue'; // Our component
 import MapData from './map.data'; // Our sample data
+import https from 'https';
+import GeoJSON from 'geojson';
+import rewind from 'geojson-rewind';
 
 class Map {
   constructor(settings = {}, data = {}) {
@@ -24,6 +27,58 @@ class Map {
         return {
           data: MapData.data,
         }
+      },
+      created() {
+        this.getBoroughData();
+        this.getNeighborhoodData();
+      },
+      methods: {
+        getBoroughData() {
+          https.get('https://data.cityofnewyork.us/resource/7t3b-ywvw.json', (resp) => {
+            let data = '';
+
+            resp.on('data', (chunk) => {
+              data += chunk;
+            });
+
+            resp.on('end', () => {
+              data = JSON.parse(data);
+
+              MapData.data.boroughs = this.convertToGeoJSON(data);
+            });
+          }).on('error', (err) => {
+            MapData.data.boroughs = {
+              error: true,
+              message: err.message
+            };
+          });
+        },
+        getNeighborhoodData() {
+          https.get('https://data.cityofnewyork.us/resource/q2z5-ai38.json', (resp) => {
+            let data = '';
+
+            resp.on('data', (chunk) => {
+              data += chunk;
+            });
+
+            resp.on('end', () => {
+              data = JSON.parse(data);
+
+              MapData.data.neighborhoods = this.convertToGeoJSON(data);
+            });
+          }).on('error', (err) => {
+            MapData.data.neighborhoods = {
+              error: true,
+              message: err.message
+            };
+          });
+        },
+        convertToGeoJSON(jsonData) {
+          // ensure geojson satisfies right-hand rule
+          const data = rewind(GeoJSON.parse(jsonData, {GeoJSON: 'the_geom'}));
+
+          return data;
+        },
       }
     });
   }

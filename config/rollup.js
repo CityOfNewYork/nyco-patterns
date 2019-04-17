@@ -8,6 +8,8 @@ import uglify from 'rollup-plugin-uglify';
 import vue from 'rollup-plugin-vue';
 import buble from 'rollup-plugin-buble';
 import commonjs from 'rollup-plugin-commonjs';
+import builtins from 'rollup-plugin-node-builtins';
+import globals from 'rollup-plugin-node-globals';
 // import replace from 'rollup-plugin-replace';
 // import eslint from 'rollup-plugin-eslint';
 
@@ -22,9 +24,13 @@ const rollup = {
   strict: true,
   plugins: [
     // eslint(), TODO: ES lint is throwing errors, it needs to be configured for ES6
-    resolve(),
+    resolve({
+      preferBuiltins: true,
+    }),
     commonjs(),
     vue(),
+    globals(),
+    builtins(),
     buble(),
     babel({
       exclude: '../node_modules/**'

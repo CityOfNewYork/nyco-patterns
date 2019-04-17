@@ -23,7 +23,7 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section', 'objects/maps/maps');
+  = mixin('section-full', 'objects/maps/maps');
 
 = content('script');
   javascript:

@@ -34,7 +34,8 @@
     "svgs:optimize": "svgo -f ./src/svg -o ./dist/svg",
     "svgs:symbol": "svgstore -o ./src/views/partials/icons.slm ./dist/svg/*.svg --inline && svgstore -o ./dist/icons.svg ./dist/svg/*.svg --inline",
     "svgs:watch": "nodemon --ext svg --watch ./src/svg -x \"npm run svgs\"",
-    "make": "node .app/make.js"
+    "make": "node .app/make.js",
+    "geojsonhint": "./node_modules/.bin/geojsonhint"
   },
   "devDependencies": {
     "ajv": "^5.5.2",
@@ -67,6 +68,8 @@
     "rollup-plugin-buble": "^0.19.6",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
@@ -80,8 +83,11 @@
     "vue-template-compiler": "^2.6.6"
   },
   "dependencies": {
+    "@mapbox/geojsonhint": "^3.0.0",
     "animate.scss": "0.0.6",
     "chart.js": "^2.7.3",
+    "geojson": "^0.5.0",
+    "geojson-rewind": "^0.3.1",
     "lodash-es": "^4.17.11",
     "mapbox-gl": "^0.53.1",
     "svgstore": "^3.0.0-2",

@@ -2,7 +2,9 @@
 
 const MapData = {
   data: {
-    api_key: 'XXX'
+    api_key: 'XXX',
+    boroughs: {},
+    neighborhoods: {}
   }
 }
 
