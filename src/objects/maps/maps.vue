@@ -24,6 +24,9 @@
       //destroy map
     },
     watch: {
+      'data.zipcodes': function () {
+        this.createZipcodeLayer(this.map, this.data.zipcodes);
+      },
       'data.boroughs': function () {
         this.createBoroughLayer(this.map, this.data.boroughs);
       },
@@ -41,6 +44,31 @@
         } else {
           throw new Error("Map layer already exists");
         }
+      },
+      createZipcodeLayer(map, layerData) {
+        if (!map || !layerData) {
+          throw Error(`Required ${map ? 'layerData' : 'map'} param is empty`);
+        }
+
+        const layerRef = 'zipcodes';
+        this.trackMapLayers(layerRef);
+
+        map.on('load', function(e) {
+          map.addSource(`${layerRef}`, {
+            'type': 'geojson',
+            'data': layerData
+          });
+
+          map.addLayer({
+            'id': `${layerRef}`,
+            'type': 'fill',
+            'source': `${layerRef}`,
+            'paint': {
+              'fill-color': '#6c88c1',
+              'fill-opacity': 0.6
+            }
+          });
+        });
       },
       createBoroughLayer(map, layerData) {
         if (!map || !layerData) {

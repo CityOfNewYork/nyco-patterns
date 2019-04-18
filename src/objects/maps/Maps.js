@@ -3,7 +3,7 @@
 import Vue from 'vue/dist/vue.esm.browser';
 import MapComponent from './maps.vue'; // Our component
 import MapData from './map.data'; // Our sample data
-import https from 'https';
+import https from 'https'; // TODO: replace with fetch
 import GeoJSON from 'geojson';
 import rewind from 'geojson-rewind';
 
@@ -29,10 +29,30 @@ class Map {
         }
       },
       created() {
+        this.getZipcodeData();
         this.getBoroughData();
         this.getNeighborhoodData();
       },
       methods: {
+        getZipcodeData() {
+          https.get('https://cdn.jsdelivr.net/gh/kimpenguin/geoJSON@master/tiger-zcta.geojson', (resp) => {
+            let data = '';
+
+            resp.on('data', (chunk) => {
+              data += chunk;
+            });
+
+            resp.on('end', () => {
+              data = JSON.parse(data);
+              MapData.data.zipcodes = data;
+            });
+          }).on('error', (err) => {
+            MapData.data.zipcodes = {
+              error: true,
+              message: err.message
+            };
+          });
+        },
         getBoroughData() {
           https.get('https://data.cityofnewyork.us/resource/7t3b-ywvw.json', (resp) => {
             let data = '';
