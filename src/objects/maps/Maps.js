@@ -3,7 +3,6 @@
 import Vue from 'vue/dist/vue.esm.browser';
 import MapComponent from './maps.vue'; // Our component
 import MapData from './map.data'; // Our sample data
-import https from 'https'; // TODO: replace with fetch
 import GeoJSON from 'geojson';
 import rewind from 'geojson-rewind';
 
@@ -35,63 +34,58 @@ class Map {
       },
       methods: {
         getZipcodeData() {
-          https.get('https://cdn.jsdelivr.net/gh/kimpenguin/geoJSON@master/tiger-zcta.geojson', (resp) => {
-            let data = '';
-
-            resp.on('data', (chunk) => {
-              data += chunk;
-            });
-
-            resp.on('end', () => {
+          fetch('https://cdn.jsdelivr.net/gh/kimpenguin/geoJSON@master/tiger-zcta.geojson')
+            .then((response) => {
+              if (response.ok)
+                return response.text();
+              else
+                // eslint-disable-next-line no-console
+                if (Utility.debug()) console.dir(response);
+            })
+            .catch((error) => {
+              // eslint-disable-next-line no-console
+              if (Utility.debug()) console.dir(error);
+            })
+            .then((data) => {
               data = JSON.parse(data);
               MapData.data.zipcodes = data;
             });
-          }).on('error', (err) => {
-            MapData.data.zipcodes = {
-              error: true,
-              message: err.message
-            };
-          });
         },
         getBoroughData() {
-          https.get('https://data.cityofnewyork.us/resource/7t3b-ywvw.json', (resp) => {
-            let data = '';
-
-            resp.on('data', (chunk) => {
-              data += chunk;
-            });
-
-            resp.on('end', () => {
+          fetch('https://data.cityofnewyork.us/resource/7t3b-ywvw.json')
+            .then((response) => {
+              if (response.ok)
+                return response.text();
+              else
+                // eslint-disable-next-line no-console
+                if (Utility.debug()) console.dir(response);
+            })
+            .catch((error) => {
+              // eslint-disable-next-line no-console
+              if (Utility.debug()) console.dir(error);
+            })
+            .then((data) => {
               data = JSON.parse(data);
-
               MapData.data.boroughs = this.convertToGeoJSON(data);
             });
-          }).on('error', (err) => {
-            MapData.data.boroughs = {
-              error: true,
-              message: err.message
-            };
-          });
         },
         getNeighborhoodData() {
-          https.get('https://data.cityofnewyork.us/resource/q2z5-ai38.json', (resp) => {
-            let data = '';
-
-            resp.on('data', (chunk) => {
-              data += chunk;
-            });
-
-            resp.on('end', () => {
+          fetch('https://data.cityofnewyork.us/resource/q2z5-ai38.json')
+            .then((response) => {
+              if (response.ok)
+                return response.text();
+              else
+                // eslint-disable-next-line no-console
+                if (Utility.debug()) console.dir(response);
+            })
+            .catch((error) => {
+              // eslint-disable-next-line no-console
+              if (Utility.debug()) console.dir(error);
+            })
+            .then((data) => {
               data = JSON.parse(data);
-
               MapData.data.neighborhoods = this.convertToGeoJSON(data);
             });
-          }).on('error', (err) => {
-            MapData.data.neighborhoods = {
-              error: true,
-              message: err.message
-            };
-          });
         },
         convertToGeoJSON(jsonData) {
           // ensure geojson satisfies right-hand rule
