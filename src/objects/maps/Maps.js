@@ -25,6 +25,7 @@ class Map {
       data() {
         return {
           data: MapData.data,
+          config: MapData.config,
         }
       },
       created() {

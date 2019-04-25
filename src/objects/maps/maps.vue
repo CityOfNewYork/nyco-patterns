@@ -31,7 +31,7 @@
 <script>
   export default {
     props: [
-      'data'
+      'data', 'config'
     ],
     data() {
       return {
@@ -213,15 +213,14 @@
         }
       },
       initializeMap() {
-        mapboxgl.accessToken = this.data.api_key;
+        const mapConfig = this.config;
 
+        mapboxgl.accessToken = mapConfig.APIKey;
         this.map = new mapboxgl.Map({
-          container: 'nyco-map',
-          // [longitude, latitude]
-          center: [-73.986710, 40.693391],
-          // the initial zoom level of the map
-          zoom: 9,
-          style: 'mapbox://styles/mapbox/streets-v11'
+          container: mapConfig.containerId,
+          center: mapConfig.center,
+          zoom: mapConfig.zoom,
+          style: mapConfig.style
         });
 
         this.map.addControl(new mapboxgl.NavigationControl());
