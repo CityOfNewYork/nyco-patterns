@@ -4,9 +4,26 @@
     <div id='nyco-map' style='height: 400px; width: 500px'></div>
     <div id='nyco-map-menu' class='pt-2'></div>
     <div id="nyco-map-details">
-      Information from selected shape:
-      <span v-if='selectedZipcode'>{{selectedZipcode}}</span>
-      <span v-else>none</span>
+      <h3>Layer details</h3>
+      <p><strong>map layers:</strong> {{mapLayers}}</p>
+      <p><strong>active layer:</strong> {{activeLayer}}</p>
+      <div>
+        <strong>selected zipcode:</strong>
+        <span v-if='selectedZipcode'>{{selectedZipcode}}</span>
+        <span v-else>none</span>
+      </div>
+
+      <div>
+        <strong>selected neighborhood:</strong>
+        <span v-if='selectedNeighborhood'>{{selectedNeighborhood}}</span>
+        <span v-else>none</span>
+      </div>
+
+      <div>
+        <strong>selected borough:</strong>
+        <span v-if='selectedBorough'>{{selectedBorough}}</span>
+        <span v-else>none</span>
+      </div>
     </div>
   </div>
 </template>
@@ -19,8 +36,12 @@
     data() {
       return {
         map: null,
+        mapLoaded: false,
         mapLayers: [],
         selectedZipcode: null,
+        selectedNeighborhood: null,
+        selectedBorough: null,
+        activeLayer: 'zipcodes',
       };
     },
     mounted() {
@@ -32,16 +53,32 @@
     watch: {
       'data.zipcodes': function () {
         this.createZipcodeLayer(this.map, this.data.zipcodes);
+
+        if (this.mapLoaded)
+          this.addSource('zipcodes', this.data.zipcodes, ['in', 'GEOID10', ''], '#6c88c1');
       },
-      // 'data.boroughs': function () {
-      //   this.createBoroughLayer(this.map, this.data.boroughs);
-      // },
-      // 'data.neighborhoods': function () {
-      //   this.createNeighborhoodLayer(this.map, this.data.neighborhoods);
-      // },
+      'data.boroughs': function () {
+        this.createBoroughLayer(this.map, this.data.boroughs);
+
+        if (this.mapLoaded)
+          this.addSource('boroughs', this.data.boroughs, ['in', 'boro_name', ''], '#f9a137');
+      },
+      'data.neighborhoods': function () {
+        this.createNeighborhoodLayer(this.map, this.data.neighborhoods);
+
+        if (this.mapLoaded)
+          this.addSource('neighborhoods', this.data.neighborhoods, ['in', 'ntaname', ''], '#f2695d');
+      },
       'mapLayers': function () {
         this.toggleLayers(this.map, this.mapLayers);
       },
+      'mapLoaded': function () {
+        if (this.mapLoaded) {
+          this.addSource('zipcodes', this.data.zipcodes, ['in', 'GEOID10', ''], '#6c88c1');
+          this.addSource('neighborhoods', this.data.neighborhoods, ['in', 'ntaname', ''], '#f2695d');
+          this.addSource('boroughs', this.data.boroughs, ['in', 'boro_name', ''], '#f9a137');
+        }
+      }
     },
     methods: {
       trackMapLayers(layerRef) {
@@ -51,115 +88,74 @@
           throw new Error("Map layer already exists");
         }
       },
-      createZipcodeLayer(map, layerData) {
-        if (!map || !layerData) {
-          throw Error(`Required ${map ? 'layerData' : 'map'} param is empty`);
-        }
+      addSource(layerRef, layerData, filter, fill) {
+        // add source if it doesn't already exist and layerData isn't empty
+        if (this.map.getLayer(layerRef) === undefined && Object.entries(layerData).length !== 0) {
+          const visibility = layerRef === this.activeLayer ? 'visible' : 'none';
 
-        const layerRef = 'zipcodes';
-        this.trackMapLayers(layerRef);
-
-        map.on('load', function(e) {
-          map.addSource(`${layerRef}`, {
+          this.map.addSource(layerRef, {
             'type': 'geojson',
             'data': layerData
           });
 
-          map.addLayer({
-            'id': `${layerRef}`,
+          this.map.addLayer({
+            'id': layerRef,
             'type': 'fill',
-            'source': `${layerRef}`,
+            'source': layerRef,
             'paint': {
               'fill-outline-color': '#484896',
-              'fill-color': '#6c88c1',
-              'fill-opacity': 0.6
-            }
-          });
-
-          map.addLayer({
-            'id': `${layerRef}-highlighted`,
-            'type': 'fill',
-            'source': `${layerRef}`,
-            'paint': {
-              'fill-outline-color': '#000',
-              'fill-color': '#6c88c1',
+              'fill-color': fill,
               'fill-opacity': 0.6
             },
-            'filter': ['in', 'GEOID10', '']
+            'layout': {
+              'visibility': visibility
+            }
           });
-        });
 
-        map.on('click', (e) => {
+          this.map.addLayer({
+            'id': `${layerRef}-highlighted`,
+            'type': 'fill',
+            'source': layerRef,
+            'paint': {
+              'fill-outline-color': '#484896',
+              'fill-color': fill,
+              'fill-opacity': 0.6
+            },
+            'filter': filter ? filter : [],
+            'layout': {
+              'visibility': visibility
+            }
+          });
+        }
+      },
+      registerOnClick(layerRef, property) {
+        this.map.on('click', layerRef, (e) => {
           // set bbox as reactangle area around clicked point
           let bbox = [[e.point.x, e.point.y], [e.point.x, e.point.y]];
-          let features = map.queryRenderedFeatures(bbox, { layers: [`${layerRef}`] });
+          let features = this.map.queryRenderedFeatures(bbox, { layers: [layerRef] });
 
-          // run through the selected features and set a filter
-          // to match features with unique GEOID10 codes to activate
-          // the `zipcodes-highlighted` layer.
           const filter = features.reduce(function(memo, feature) {
-            memo.push(feature.properties.GEOID10);
+            memo.push(feature.properties[property]);
             return memo;
-          }, ['in', 'GEOID10']);
+          }, ['in', `${property}`]);
 
-          // filter format: ['in', 'GEOID10', 'zip']
-          this.selectedZipcode = filter[2];;
-          map.setFilter(`${layerRef}-highlighted`, filter);
-        });
-      },
-      createBoroughLayer(map, layerData) {
-        if (!map || !layerData) {
-          throw Error(`Required ${map ? 'layerData' : 'map'} param is empty`);
-        }
+         // filter format: ['in', property, our_output]
+          if (layerRef === 'zipcodes')
+            this.selectedZipcode = filter[2];
+          else if (layerRef === 'neighborhoods')
+            this.selectedNeighborhood = filter[2];
+          else if (layerRef === 'boroughs')
+            this.selectedBorough = filter[2]
 
-        const layerRef = 'boroughs';
-        this.trackMapLayers(layerRef);
-
-        map.on('load', function(e) {
-          map.addSource(`${layerRef}`, {
-            'type': 'geojson',
-            'data': layerData
-          });
-
-          map.addLayer({
-            'id': `${layerRef}`,
-            'type': 'fill',
-            'source': `${layerRef}`,
-            'paint': {
-              'fill-color': '#ffa133',
-              'fill-opacity': 0.6
-            }
-          });
-        });
-      },
-      createNeighborhoodLayer(map, layerData) {
-        if (!map || !layerData) {
-          throw Error(`Required ${map ? 'layerData' : 'map'} param is empty`);
-        }
-
-        const layerRef = 'neighborhoods';
-        this.trackMapLayers(layerRef);
-
-        map.on('load', function(e) {
-          map.addSource(`${layerRef}`, {
-            'type': 'geojson',
-            'data': layerData
-          });
-
-          map.addLayer({
-            'id': `${layerRef}`,
-            'type': 'fill',
-            'source': `${layerRef}`,
-            'paint': {
-              'fill-color': '#f2695d',
-              'fill-opacity': 0.5
-            }
-          });
+          // apply filter to highlighted area
+          this.map.setFilter(`${layerRef}-highlighted`, filter);
         });
       },
       toggleLayers(map, layersToToggle) {
         const toggleableLayerIds = layersToToggle;
         const layers = document.getElementById('nyco-map-menu');
+        const activeLayer = this.activeLayer;
+        const appRef = this;
 
         // clear all child nodes before adding new ones
         while (layers.firstChild) {
@@ -171,22 +167,45 @@
           const link = document.createElement('a');
 
           link.href = '#';
-          link.classList.add('active', 'inline-block', 'pr-1');
           link.textContent = id;
+          link.classList.add('inline-block', 'pr-1');
 
+          if (id === activeLayer)
+            link.classList.add('active');
+
+          // update layer visibility on map and link active state on link click
           link.onclick = function (e) {
             e.preventDefault();
             e.stopPropagation();
 
             const clickedLayer = this.textContent;
-            const visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+            let allLinks = layers.getElementsByTagName('a');
 
-            if (visibility === 'visible') {
-              map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-              this.classList.remove('active');
-            } else {
-              this.classList.add('active');
-              map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+            for (let i = 0; i < allLinks.length; i++) {
+              const layer = allLinks[i].textContent;
+              const layerVisibility = map.getLayoutProperty(layer, 'visibility');
+
+              // if our current layer is also our clicked layer
+              if (clickedLayer === layer) {
+                // if the layer is already visible, leave it alone
+                if (layerVisibility === 'visible')
+                  return;
+
+                // if it's not visible, make it visible and set it as our active layer
+                this.classList.add('active');
+                // update active layer
+                appRef.activeLayer = layer;
+
+                map.setLayoutProperty(layer, 'visibility', 'visible');
+                map.setLayoutProperty(`${layer}-highlighted`, 'visibility', 'visible');
+              } else {
+                // if our current layer is not our clicked layer
+                // remove the active class and set visibility to none
+                this.classList.remove('active');
+                map.setLayoutProperty(layer, 'visibility', 'none');
+                map.setLayoutProperty(`${layer}-highlighted`, 'visibility', 'none');
+                map.setFilter(`${layer}-highlighted`, null);
+              }
             }
           };
 
@@ -206,6 +225,40 @@
         });
 
         this.map.addControl(new mapboxgl.NavigationControl());
+        this.map.on('load', () => this.mapLoaded = true);
+      },
+      createZipcodeLayer(map, layerData) {
+        if (!map || !layerData) {
+          throw Error(`Required ${map ? 'layerData' : 'map'} param is empty`);
+        }
+
+        const layerRef = 'zipcodes';
+        const property = 'GEOID10';
+
+        this.trackMapLayers(layerRef);
+        this.registerOnClick(layerRef, property);
+      },
+      createBoroughLayer(map, layerData) {
+        if (!map || !layerData) {
+          throw Error(`Required ${map ? 'layerData' : 'map'} param is empty`);
+        }
+
+        const layerRef = 'boroughs';
+        const property = 'boro_name';
+
+        this.trackMapLayers(layerRef);
+        this.registerOnClick(layerRef, property);
+      },
+      createNeighborhoodLayer(map, layerData) {
+        if (!map || !layerData) {
+          throw Error(`Required ${map ? 'layerData' : 'map'} param is empty`);
+        }
+
+        const layerRef = 'neighborhoods';
+        const property = 'ntaname';
+
+        this.trackMapLayers(layerRef);
+        this.registerOnClick(layerRef, property);
       },
     }
   };
