@@ -30,9 +30,14 @@
 
 <script>
   export default {
-    props: [
-      'data', 'config'
-    ],
+    props: {
+      'layers': {
+        type: Array
+      },
+      'config': {
+        type: Object
+      }
+    },
     data() {
       return {
         map: null,
@@ -41,7 +46,7 @@
         selectedZipcode: null,
         selectedNeighborhood: null,
         selectedBorough: null,
-        activeLayer: 'zipcodes',
+        activeLayer: undefined,
       };
     },
     mounted() {
@@ -51,41 +56,44 @@
       //destroy map
     },
     watch: {
-      'data.zipcodes': function () {
-        this.createZipcodeLayer(this.map, this.data.zipcodes);
+      layers: function () {
+        const layers = this.layers;
 
-        if (this.mapLoaded)
-          this.addSource('zipcodes', this.data.zipcodes, ['in', 'GEOID10', ''], '#6c88c1');
-      },
-      'data.boroughs': function () {
-        this.createBoroughLayer(this.map, this.data.boroughs);
+        for (let i = 0; i < layers.length; i++) {
+          const layer = layers[i];
+          this.createLayer(layer);
 
-        if (this.mapLoaded)
-          this.addSource('boroughs', this.data.boroughs, ['in', 'boro_name', ''], '#f9a137');
-      },
-      'data.neighborhoods': function () {
-        this.createNeighborhoodLayer(this.map, this.data.neighborhoods);
+          if (layer.default)
+            this.activeLayer = layer.name;
 
-        if (this.mapLoaded)
-          this.addSource('neighborhoods', this.data.neighborhoods, ['in', 'ntaname', ''], '#f2695d');
+          if (this.mapLoaded) {
+            this.addSource(layer.name, layer.data, ['in', layer.filterBy, ''], '#6c88c1');
+          }
+        }
       },
       'mapLayers': function () {
         this.toggleLayers(this.map, this.mapLayers);
       },
       'mapLoaded': function () {
         if (this.mapLoaded) {
-          this.addSource('zipcodes', this.data.zipcodes, ['in', 'GEOID10', ''], '#6c88c1');
-          this.addSource('neighborhoods', this.data.neighborhoods, ['in', 'ntaname', ''], '#f2695d');
-          this.addSource('boroughs', this.data.boroughs, ['in', 'boro_name', ''], '#f9a137');
+          const layers = this.layers;
+
+          for (let i = 0; i < layers.length; i++) {
+            const layer = layers[i];
+
+            this.addSource(layer.name, layer.data, ['in', layer.filterBy, ''], '#6c88c1');
+          }
         }
       }
     },
     methods: {
+      createLayer(layer) {
+        this.trackMapLayers(layer.name);
+        this.registerOnClick(layer.name, layer.filterBy);
+      },
       trackMapLayers(layerRef) {
         if (!this.mapLayers.includes(layerRef)) {
           this.mapLayers.push(layerRef);
-        } else {
-          throw new Error("Map layer already exists");
         }
       },
       addSource(layerRef, layerData, filter, fill) {
@@ -225,39 +233,6 @@
 
         this.map.addControl(new mapboxgl.NavigationControl());
         this.map.on('load', () => this.mapLoaded = true);
-      },
-      createZipcodeLayer(map, layerData) {
-        if (!map || !layerData) {
-          throw Error(`Required ${map ? 'layerData' : 'map'} param is empty`);
-        }
-
-        const layerRef = 'zipcodes';
-        const property = 'GEOID10';
-
-        this.trackMapLayers(layerRef);
-        this.registerOnClick(layerRef, property);
-      },
-      createBoroughLayer(map, layerData) {
-        if (!map || !layerData) {
-          throw Error(`Required ${map ? 'layerData' : 'map'} param is empty`);
-        }
-
-        const layerRef = 'boroughs';
-        const property = 'boro_name';
-
-        this.trackMapLayers(layerRef);
-        this.registerOnClick(layerRef, property);
-      },
-      createNeighborhoodLayer(map, layerData) {
-        if (!map || !layerData) {
-          throw Error(`Required ${map ? 'layerData' : 'map'} param is empty`);
-        }
-
-        const layerRef = 'neighborhoods';
-        const property = 'ntaname';
-
-        this.trackMapLayers(layerRef);
-        this.registerOnClick(layerRef, property);
       },
     }
   };

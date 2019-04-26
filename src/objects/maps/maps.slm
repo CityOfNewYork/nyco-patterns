@@ -3,4 +3,4 @@
 /
 
 div data-js='map'
-  nyco-map :data='data' :config='config'
+  nyco-map :layers='layers' :config='config'

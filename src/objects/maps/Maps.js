@@ -24,7 +24,7 @@ class Map {
       delimiters: ['v{', '}'],
       data() {
         return {
-          data: MapData.data,
+          layers: MapData.layers,
           config: MapData.config,
         }
       },
@@ -48,8 +48,12 @@ class Map {
               if (Utility.debug()) console.dir(error);
             })
             .then((data) => {
-              data = JSON.parse(data);
-              MapData.data.zipcodes = data;
+              MapData.layers.push({
+                name: 'zipcodes',
+                data: JSON.parse(data),
+                default: true,
+                filterBy: 'GEOID10'
+              });
             });
         },
         getBoroughData() {
@@ -67,7 +71,13 @@ class Map {
             })
             .then((data) => {
               data = JSON.parse(data);
-              MapData.data.boroughs = this.convertToGeoJSON(data);
+
+              MapData.layers.push({
+                name: 'boroughs',
+                data: this.convertToGeoJSON(data),
+                default: false,
+                filterBy: 'boro_name'
+              });
             });
         },
         getNeighborhoodData() {
@@ -85,7 +95,13 @@ class Map {
             })
             .then((data) => {
               data = JSON.parse(data);
-              MapData.data.neighborhoods = this.convertToGeoJSON(data);
+
+              MapData.layers.push({
+                name: 'neighborhoods',
+                data: this.convertToGeoJSON(data),
+                default: false,
+                filterBy: 'ntaname'
+              });
             });
         },
         convertToGeoJSON(jsonData) {

@@ -1,11 +1,7 @@
 'use strict';
 
 const MapData = {
-  data: {
-    boroughs: {},
-    neighborhoods: {},
-    zipcodes: {},
-  },
+  layers: [],
   config: {
     APIKey: 'XXX',
     containerId: 'nyco-map',
