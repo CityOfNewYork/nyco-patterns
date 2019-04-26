@@ -3,7 +3,17 @@
  */
 
 // Dependencies
-// @import 'config/variables';
+@import 'config/variables';
 
 // Declarations
-// .o-maps { }
+.o-maps {
+  #nyco-map-menu {
+    a {
+      margin-right: map-get(map-get($variables, 'margin'), 1);
+    }
+
+    a.active {
+      color: map-get(map-get($variables, 'colors'), 'primary-navy');
+    }
+  }
+}
