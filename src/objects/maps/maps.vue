@@ -20,14 +20,16 @@
         map: null,
         mapLayers: [],
         mapLoaded: false,
+        mapPopup: null,
+        mapFilter: null,
         activeLayer: undefined,
       };
     },
     mounted() {
       this.initializeMap();
     },
-    beforeDestroy() {
-      //destroy map
+    destroyed() {
+      this.map.remove();
     },
     watch: {
       'layers': function () {
@@ -35,13 +37,13 @@
 
         for (let i = 0; i < layers.length; i++) {
           const layer = layers[i];
-          this.initializeLayer(layer);
+          this.trackLayer(layer.name);
 
           if (layer.default)
             this.activeLayer = layer.name;
 
           if (this.mapLoaded)
-            this.addLayer(layer);
+            this.initializeLayer(layer);
         }
       },
       'mapLayers': function () {
@@ -53,7 +55,7 @@
           const layers = this.layers;
 
           for (let i = 0; i < layers.length; i++) {
-            this.addLayer(layers[i]);
+            this.initializeLayer(layers[i]);
           }
         }
       }
@@ -74,32 +76,6 @@
         this.map.on('load', () => this.mapLoaded = true);
       },
       initializeLayer(layer) {
-        this.trackLayer(layer.name);
-        this.filterOnClick(layer);
-      },
-      trackLayer(reference) {
-        if (!this.mapLayers.includes(reference))
-          this.mapLayers.push(reference);
-      },
-      filterOnClick(layer) {
-        const map = this.map;
-
-        map.on('click', layer.name, (e) => {
-          // set bbox as reactangle area around clicked point
-          let bbox = [[e.point.x, e.point.y], [e.point.x, e.point.y]];
-          let features = map.queryRenderedFeatures(bbox, { layers: [layer.name] });
-
-          const filter = features.reduce(function(memo, feature) {
-            memo.push(feature.properties[layer.filterBy]);
-            return memo;
-          }, ['in', `${layer.filterBy}`]);
-
-          // apply filter on highlighted layer to draw focus on selection
-          map.setFilter(`${layer.name}-highlighted`, filter);
-        });
-      },
-      addLayer(layer) {
-        // add source if it doesn't already exist and layer data isn't empty
         if (this.map.getLayer(layer.name) === undefined && Object.entries(layer.data).length !== 0) {
           const visibility = layer.name === this.activeLayer ? 'visible' : 'none';
           const filter = layer.filterBy ? ['in', layer.filterBy, ''] : [];
@@ -138,7 +114,70 @@
               'visibility': visibility
             }
           });
+
+          this.filterOnClick(layer);
+          this.updateCursorOnHover(layer.name);
         }
+      },
+      initializePopup(event, layer) {
+        const $this = this;
+        const map = $this.map;
+        const layerName = `${layer.name}-highlighted`;
+        const popup = new mapboxgl.Popup()
+                        .setLngLat(event.lngLat)
+                        .setHTML(event.features[0].properties[layer.filterBy])
+                        .addTo(map);
+
+        if (popup.isOpen()) {
+          $this.mapPopup = popup;
+          map.setLayoutProperty(layerName, 'visibility', 'visible');
+          map.setFilter(layerName, $this.mapFilter);
+        }
+
+        popup.on('close', function () {
+          // reset associated states when popup dismissed while active
+          if ($this.mapPopup === popup) {
+            $this.mapPopup = null;
+            $this.mapFilter = null;
+            map.setFilter(layerName, null);
+            map.setLayoutProperty(layerName, 'visibility', 'none');
+          }
+        });
+      },
+      trackLayer(reference) {
+        if (!this.mapLayers.includes(reference))
+          this.mapLayers.push(reference);
+      },
+      filterOnClick(layer) {
+        const $this = this;
+        const map = $this.map;
+
+        map.on('click', layer.name, (e) => {
+          // set bbox as reactangle area around clicked point
+          let bbox = [[e.point.x, e.point.y], [e.point.x, e.point.y]];
+          let features = map.queryRenderedFeatures(bbox, { layers: [layer.name] });
+
+          const filter = features.reduce(function(memo, feature) {
+            memo.push(feature.properties[layer.filterBy]);
+            return memo;
+          }, ['in', `${layer.filterBy}`]);
+
+          $this.mapFilter = filter;
+          $this.initializePopup(e, layer);
+        });
+      },
+      updateCursorOnHover(layerId) {
+        const map = this.map;
+
+        // change the cursor to a pointer when the mouse is over the layer.
+        map.on('mouseenter', layerId, function () {
+          map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // change the cursor back to the default when it leaves the layer.
+        map.on('mouseleave', layerId, function () {
+          map.getCanvas().style.cursor = '';
+        });
       },
       generateFillColor() {
         // NYCO colors, ['fill-outline', 'fill']
@@ -186,9 +225,14 @@
             const selectedLayer = this.textContent;
             const links = linkContainer.getElementsByTagName('a');
 
+            // remove active popup
+            if ($this.mapPopup)
+              $this.mapPopup.remove();
+
             for (let i = 0; i < links.length; i++) {
               const currentLink = links[i];
               const currentLayer = currentLink.textContent;
+              const currentLayerHighlight = `${currentLayer}-highlighted`;
               const layerVisibility = map.getLayoutProperty(currentLayer, 'visibility');
 
               if (currentLayer === selectedLayer) {
@@ -201,13 +245,12 @@
                 $this.activeLayer = currentLayer;
                 currentLink.classList.add('active');
                 map.setLayoutProperty(currentLayer, 'visibility', 'visible');
-                map.setLayoutProperty(`${currentLayer}-highlighted`, 'visibility', 'visible');
               } else {
                 // remove links active class, set layer visibility to none and remove filters
                 currentLink.classList.remove('active');
                 map.setLayoutProperty(currentLayer, 'visibility', 'none');
-                map.setLayoutProperty(`${currentLayer}-highlighted`, 'visibility', 'none');
-                map.setFilter(`${currentLayer}-highlighted`, null);
+                map.setLayoutProperty(currentLayerHighlight, 'visibility', 'none');
+                map.setFilter(currentLayerHighlight, null);
               }
             }
           };
