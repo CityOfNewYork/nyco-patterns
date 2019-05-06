@@ -16,4 +16,26 @@
       color: map-get(map-get($variables, 'colors'), 'primary-navy');
     }
   }
+
+  // mapbox customizations
+  .mapboxgl-popup {
+    min-width: 60px;
+    max-width: 300px;
+  }
+
+  .mapboxgl-popup-content {
+    padding: 15px 20px;
+  }
+
+  .mapboxgl-popup-close-button {
+    right: 5px;
+    top: 5px;
+
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+      text-decoration-color: map-get(map-get($variables, 'colors'), 'primary-navy');
+      transform: scale(1.4);
+    }
+  }
 }

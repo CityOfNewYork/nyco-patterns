@@ -182,15 +182,15 @@
       generateFillColor() {
         // NYCO colors, ['fill-outline', 'fill']
         const colors = [
-          // dark blue
-          ['#2F334F', '#6E7085'],
-          // blue
-          ['#3155A6', '#6C88C1'],
-          // red
-          ['#2F334F', '#F2695D'],
-          // gray
+          // black, red
+          ['#000000', '#F2695D'],
+          // black, orange
+          ['#000000', '#FFA133'],
+          // dark blue, pink
+          ['#2F334F', '#EBBCD8'],
+          // dark blue, gray
           ['#2F334F', '#ACAEB9'],
-          // orange
+          // blue, orange
           ['#3155A6', '#F9A137']
         ];
 
