@@ -1,12 +1,12 @@
 'use strict';
 
 import Vue from 'vue/dist/vue.esm.browser';
-import MapComponent from './maps.vue'; // Our component
-import MapData from './map.data'; // Our sample data
+import MapComponent from './map--multi-src.vue'; // Our component
+import MapData from 'nyco-patterns/src/objects/maps/map.data'; // Our sample data
 import GeoJSON from 'geojson';
 import rewind from 'geojson-rewind';
 
-class Map {
+class MapMultiSrc {
   constructor(settings = {}, data = {}) {
     this.data = data;
     this.settings = settings;
@@ -17,15 +17,15 @@ class Map {
    * Initializes the module
    */
   init() {
-    Vue.component('nyco-map', MapComponent);
+    Vue.component('nyco-map-msrc', MapComponent);
 
     new Vue({
-      el: '[data-js="map"]',
+      el: '[data-js="map-msrc"]',
       delimiters: ['v{', '}'],
       data() {
         return {
-          layers: MapData.layers,
-          config: MapData.config,
+          layers: MapData.multi.layers,
+          config: MapData.multi.config,
         }
       },
       created() {
@@ -48,7 +48,7 @@ class Map {
               if (Utility.debug()) console.dir(error);
             })
             .then((data) => {
-              MapData.layers.push({
+              MapData.multi.layers.push({
                 name: 'zipcodes',
                 data: JSON.parse(data),
                 default: true,
@@ -72,7 +72,7 @@ class Map {
             .then((data) => {
               data = JSON.parse(data);
 
-              MapData.layers.push({
+              MapData.multi.layers.push({
                 name: 'boroughs',
                 data: this.convertToGeoJSON(data),
                 default: false,
@@ -96,7 +96,7 @@ class Map {
             .then((data) => {
               data = JSON.parse(data);
 
-              MapData.layers.push({
+              MapData.multi.layers.push({
                 name: 'neighborhoods',
                 data: this.convertToGeoJSON(data),
                 default: false,
@@ -123,4 +123,4 @@ class Map {
   }
 }
 
-export default Map;
+export default MapMultiSrc;

@@ -10,7 +10,8 @@ import ChartHorizontalBar from '../objects/charts/chart--horizontal-bar';
 import ChartLine from '../objects/charts/chart--line';
 import ChartPie from '../objects/charts/chart--pie';
 
-import Map from '../objects/maps/Maps';
+import MapMultiSrc from '../objects/maps/Map--multi-src';
+import MapSingleSrc from '../objects/maps/Map--single-src';
 /** import modules here as they are written */
 
 /**
@@ -76,8 +77,12 @@ class nyco {
    * Method for the Map Module
    * @return  {Object} Map Module
    */
-  map() {
-    return new Map();
+  map(type) {
+    if (type === 'multi-src')
+      return new MapMultiSrc();
+
+    if (type === 'single-src')
+      return new MapSingleSrc();
   }
 
   /** add APIs here as they are written */

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div id='nyco-map' style='height: 400px; width: 500px'></div>
-    <div id='nyco-map-menu' class='pt-2'></div>
+    <div id='nyco-map-msrc' style='height: 400px; width: 500px'></div>
+    <div id='nyco-map-msrc-menu' class='nyco-map-menu pt-2'></div>
   </div>
 </template>
 
@@ -200,7 +200,7 @@
         const $this = this;
         const map = $this.map;
         const activeLayer = $this.activeLayer;
-        const linkContainer = document.getElementById('nyco-map-menu');
+        const linkContainer = document.getElementById('nyco-map-msrc-menu');
 
         // clear all links before appending new ones to prevent duplicates
         while (linkContainer.firstChild) {

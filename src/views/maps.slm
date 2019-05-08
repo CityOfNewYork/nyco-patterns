@@ -22,9 +22,13 @@
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
+  p
+  p All map source files can be found here: <code>src/objects/maps/</code>. Maps are powered by <a href="https://www.mapbox.com/">Mapbox</a>, and require a Mapbox token to initialize on your own project.
 
-  = mixin('section-full', 'objects/maps/maps');
+  = mixin('section-full', 'objects/maps/map--multi-src', 'Map: multi-source');
+  = mixin('section-full', 'objects/maps/map--single-src', 'Map: single-source');
 
 = content('script');
   javascript:
-    nyco.map();
+    nyco.map('multi-src');
+    nyco.map('single-src');

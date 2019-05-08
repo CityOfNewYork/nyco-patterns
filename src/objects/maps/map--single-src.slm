@@ -1,0 +1,6 @@
+/
+/ Maps
+/
+
+div data-js='map-ssrc' class='o-maps'
+  nyco-map-ssrc :layers='layers' :config='config'
