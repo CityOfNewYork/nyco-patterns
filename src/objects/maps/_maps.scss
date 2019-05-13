@@ -17,6 +17,53 @@
     }
   }
 
+  .map-legend {
+    font-weight: 600;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    border-radius: 3px;
+    width: 120px;
+    color: #fff;
+  }
+
+  .map-legend input[type=checkbox]:first-child + label {
+    border-radius: 3px 3px 0 0;
+  }
+
+  .map-legend label:last-child {
+    border-radius: 0 0 3px 3px;
+    border: none;
+  }
+
+  .map-legend input[type=checkbox] {
+    display: none;
+  }
+
+  .map-legend input[type=checkbox] + label {
+    background-color: #3386c0;
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  .map-legend input[type=checkbox] + label {
+    background-color: #3386c0;
+    text-transform: capitalize;
+  }
+
+  .map-legend input[type=checkbox] + label:hover,
+    .map-legend input[type=checkbox]:checked + label {
+    background-color: #4ea0da;
+  }
+
+  .map-legend input[type=checkbox]:checked + label:before {
+    content: '✔';
+    margin-right: 5px;
+  }
+
   // mapbox customizations
   .mapboxgl-popup {
     min-width: 60px;
@@ -38,4 +85,8 @@
       transform: scale(1.4);
     }
   }
+}
+
+.o-maps--relative {
+  position: relative;
 }

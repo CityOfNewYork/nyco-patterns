@@ -48,7 +48,8 @@ class MapSingleSrc {
                 name: 'zcta-w-nta',
                 data: JSON.parse(data),
                 default: true,
-                filterBy: 'GEOID10'
+                filterBy: 'GEOID10',
+                legendColumn: 'boro_name'
               });
             });
         },

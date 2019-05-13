@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id='nyco-map-ssrc' style='height: 400px; width: 500px'></div>
-    <div id='nyco-map-ssrc-menu' class='nyco-map-menu pt-2'></div>
+    <nav id='map-legend' class='map-legend'></nav>
   </div>
 </template>
 
@@ -18,7 +18,8 @@
     data() {
       return {
         map: null,
-        mapLayers: [],
+        legendItems: [],
+        selectedItems: [],
         mapLoaded: false,
         mapPopup: null,
         mapFilter: null,
@@ -37,8 +38,10 @@
 
         for (let i = 0; i < layers.length; i++) {
           const layer = layers[i];
-          this.trackLayer(layer.name);
 
+          this.generateLegend(layer.data);
+
+          // TODO: not need because there should only be 1 geojson file passed through
           if (layer.default)
             this.activeLayer = layer.name;
 
@@ -46,9 +49,11 @@
             this.initializeLayer(layer);
         }
       },
-      'mapLayers': function () {
-        if (this.mapLayers.length > 1)
-          this.enableLayerToggling(this.mapLayers);
+      'legendItems': function () {
+        if (this.legendItems.length > 1)
+          this.enableFilterToggling(this.legendItems);
+
+        // console.log("legendItems: ", this.legendItems)
       },
       'mapLoaded': function () {
         if (this.mapLoaded) {
@@ -58,7 +63,30 @@
             this.initializeLayer(layers[i]);
           }
         }
-      }
+      },
+      'selectedItems': function () {
+        // when updated, set the state of the boro that matches to 'highlighted'
+        console.log('selected items: ', this.selectedItems);
+
+        const layer = this.layers[0];
+
+        const features = this.map.querySourceFeatures(layer.name);
+
+        console.log(features);
+
+        for (let f = 0; f < features.length; f++) {
+          let feature = features[f];
+
+          // filter map based on matching boro_name
+          for (let i = 0; i < this.selectedItems.length; i++) {
+            console.log("legend: ", this.selectedItems[i])
+
+            if (feature.properties[layer.legendColumn] === this.selectedItems[i]) {
+              this.map.setFilter(`${layer.name}-highlighted`, ['in', layer.legendColumn, feature.properties[layer.legendColumn]]);
+            }
+          }
+        }
+      },
     },
     methods: {
       initializeMap() {
@@ -144,9 +172,16 @@
           }
         });
       },
-      trackLayer(reference) {
-        if (!this.mapLayers.includes(reference))
-          this.mapLayers.push(reference);
+      generateLegend(layer) {
+        // console.log("generateLegend: ", layer)
+
+        layer.features.forEach((feature) => {
+          // console.log("feature: ", feature)
+          const item = feature.properties.boro_name;
+
+          if (!this.legendItems.includes(item) && item)
+            this.legendItems.push(item);
+        });
       },
       filterOnClick(layer) {
         const $this = this;
@@ -196,66 +231,52 @@
 
         return colors[Math.floor(Math.random() * colors.length)];
       },
-      enableLayerToggling(layersToToggle) {
+      enableFilterToggling(filtersToToggle) {
         const $this = this;
         const map = $this.map;
-        const activeLayer = $this.activeLayer;
-        const linkContainer = document.getElementById('nyco-map-ssrc-menu');
+        const filterGroup = document.getElementById('map-legend');
+
+        const layer = $this.layers[0];
+        const legendColumn = layer.legendColumn;
 
         // clear all links before appending new ones to prevent duplicates
-        while (linkContainer.firstChild) {
-          linkContainer.removeChild(linkContainer.firstChild);
+        while (filterGroup.firstChild) {
+          filterGroup.removeChild(filterGroup.firstChild);
         }
 
-        for (let i = 0; i < layersToToggle.length; i++) {
-          const layerRef = layersToToggle[i];
-          const link = document.createElement('a');
+        // initilize an input element for each filter type
+        for (let i = 0; i < filtersToToggle.length; i++) {
+          const layerRef = filtersToToggle[i];
 
-          link.href = '#';
-          link.textContent = layerRef;
+          // checkbox
+          const input = document.createElement('input');
+          input.type = 'checkbox';
+          input.id = layerRef;
+          input.value = layerRef;
+          filterGroup.appendChild(input);
 
-          if (layerRef === activeLayer)
-            link.classList.add('active');
+          // checkbox label
+          const label = document.createElement('label');
+          label.setAttribute('for', layerRef);
+          label.textContent = layerRef;
+          filterGroup.appendChild(label);
 
-          // on click update link state, active layer reference, and layer visibility
-          link.onclick = function (e) {
-            e.preventDefault();
-            e.stopPropagation();
+          // when the checkbox changes state, update the selected items array.
+          input.addEventListener('change', function(e) {
+            const selectedBoro = e.target.value;
 
-            const selectedLayer = this.textContent;
-            const links = linkContainer.getElementsByTagName('a');
+            // reset the checkboxes checked state
+            e.target.checked ? 'visible' : 'none';
 
-            // remove active popup
-            if ($this.mapPopup)
-              $this.mapPopup.remove();
+            if (e.target.checked && !$this.selectedItems.includes(selectedBoro))
+              $this.selectedItems.push(selectedBoro);
 
-            for (let i = 0; i < links.length; i++) {
-              const currentLink = links[i];
-              const currentLayer = currentLink.textContent;
-              const currentLayerHighlight = `${currentLayer}-highlighted`;
-              const layerVisibility = map.getLayoutProperty(currentLayer, 'visibility');
-
-              if (currentLayer === selectedLayer) {
-                // return if layer is already selected
-                if (layerVisibility === 'visible' && currentLink.classList.contains('active'))
-                  return;
-
-                // set our current layer as the global active layer,
-                // add active class to link, set layer as visible
-                $this.activeLayer = currentLayer;
-                currentLink.classList.add('active');
-                map.setLayoutProperty(currentLayer, 'visibility', 'visible');
-              } else {
-                // remove links active class, set layer visibility to none and remove filters
-                currentLink.classList.remove('active');
-                map.setLayoutProperty(currentLayer, 'visibility', 'none');
-                map.setLayoutProperty(currentLayerHighlight, 'visibility', 'none');
-                map.setFilter(currentLayerHighlight, null);
-              }
+            if (!e.target.checked && $this.selectedItems.includes(selectedBoro)) {
+              $this.selectedItems = $this.selectedItems.filter((val) => {
+                return val !== selectedBoro;
+              });
             }
-          };
-
-          linkContainer.appendChild(link);
+          });
         }
       },
     }
