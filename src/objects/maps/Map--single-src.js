@@ -22,7 +22,12 @@ class MapSingleSrc {
       delimiters: ['v{', '}'],
       data() {
         return {
-          layers: MapData.single.layers,
+          layer: {
+            name: '',
+            data: {},
+            filterBy: '',
+            legendColumn: ''
+          },
           config: MapData.single.config,
         }
       },
@@ -44,13 +49,12 @@ class MapSingleSrc {
               if (Utility.debug()) console.dir(error);
             })
             .then((data) => {
-              MapData.single.layers.push({
+              this.layer = {
                 name: 'zcta-w-nta',
                 data: JSON.parse(data),
-                default: true,
                 filterBy: 'GEOID10',
                 legendColumn: 'boro_name'
-              });
+              };
             });
         },
       }

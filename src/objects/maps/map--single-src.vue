@@ -8,8 +8,8 @@
 <script>
   export default {
     props: {
-      'layers': {
-        type: Array
+      'layer': {
+        type: Object
       },
       'config': {
         type: Object
@@ -23,7 +23,6 @@
         mapLoaded: false,
         mapPopup: null,
         mapFilter: null,
-        activeLayer: undefined,
       };
     },
     mounted() {
@@ -33,42 +32,27 @@
       this.map.remove();
     },
     watch: {
-      'layers': function () {
-        const layers = this.layers;
+      'layer': function () {
+        const layer = this.layer;
 
-        for (let i = 0; i < layers.length; i++) {
-          const layer = layers[i];
+        this.generateLegend(layer.data);
 
-          this.generateLegend(layer.data);
-
-          // TODO: not need because there should only be 1 geojson file passed through
-          if (layer.default)
-            this.activeLayer = layer.name;
-
-          if (this.mapLoaded)
-            this.initializeLayer(layer);
-        }
+        if (this.mapLoaded)
+          this.initializeLayer(layer);
       },
       'legendItems': function () {
         if (this.legendItems.length > 1)
           this.enableFilterToggling(this.legendItems);
-
-        // console.log("legendItems: ", this.legendItems)
       },
       'mapLoaded': function () {
-        if (this.mapLoaded) {
-          const layers = this.layers;
-
-          for (let i = 0; i < layers.length; i++) {
-            this.initializeLayer(layers[i]);
-          }
-        }
+        if (this.mapLoaded && this.layer)
+          this.initializeLayer(this.layer);
       },
       'selectedItems': function () {
         // when updated, set the state of the boro that matches to 'highlighted'
         console.log('selected items: ', this.selectedItems);
 
-        const layer = this.layers[0];
+        const layer = this.layer;
 
         const features = this.map.querySourceFeatures(layer.name);
 
@@ -105,7 +89,6 @@
       },
       initializeLayer(layer) {
         if (this.map.getLayer(layer.name) === undefined && Object.entries(layer.data).length !== 0) {
-          const visibility = layer.name === this.activeLayer ? 'visible' : 'none';
           const filter = layer.filterBy ? ['in', layer.filterBy, ''] : [];
           const fill = this.generateFillColor();
 
@@ -124,7 +107,7 @@
               'fill-opacity': 0.7
             },
             'layout': {
-              'visibility': visibility
+              'visibility': 'visible'
             }
           });
 
@@ -139,7 +122,7 @@
             },
             'filter': filter,
             'layout': {
-              'visibility': visibility
+              'visibility': 'visible'
             }
           });
 
@@ -236,7 +219,7 @@
         const map = $this.map;
         const filterGroup = document.getElementById('map-legend');
 
-        const layer = $this.layers[0];
+        const layer = $this.layer;
         const legendColumn = layer.legendColumn;
 
         // clear all links before appending new ones to prevent duplicates

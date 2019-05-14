@@ -3,4 +3,4 @@
 /
 
 div data-js='map-ssrc' class='o-maps o-maps--relative'
-  nyco-map-ssrc :layers='layers' :config='config'
+  nyco-map-ssrc :layer='layer' :config='config'
