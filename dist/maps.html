@@ -178,13 +178,11 @@
             <h2 class="mt-0" id="map:-single-source">
               <a href="#map:-single-source">Map: single-source</a>
             </h2>
-            <p>All map source can be found here: <code>src/objects/maps/</code>.</p>
-            <p>Maps are powered by
-              <a href="https://www.mapbox.com/">Mapbox</a>.</p>
+            <p>This map utilizes one source and displays a legend</p>
           </div>
           <div>
-            <div class="o-maps" data-js="map-ssrc">
-              <nyco-map-ssrc :config="config" :layers="layers"></nyco-map-ssrc>
+            <div class="o-maps o-maps--relative" data-js="map-ssrc">
+              <nyco-map-ssrc :config="config" :layer="layer"></nyco-map-ssrc>
             </div>
           </div>
         </div>
