@@ -53,23 +53,15 @@
         console.log('selected items: ', this.selectedItems);
 
         const layer = this.layer;
+        const strRep = this.selectedItems.join('", "'); // TODO: breaks when joining multiple boroughs
+        const filter = ['in', layer.legendColumn, `${strRep}`];
 
-        const features = this.map.querySourceFeatures(layer.name);
+        let relatedFeatures = this.map.querySourceFeatures(layer.name, {
+          sourceLayer: layer.name,
+          filter: filter
+        });
 
-        console.log(features);
-
-        for (let f = 0; f < features.length; f++) {
-          let feature = features[f];
-
-          // filter map based on matching boro_name
-          for (let i = 0; i < this.selectedItems.length; i++) {
-            console.log("legend: ", this.selectedItems[i])
-
-            if (feature.properties[layer.legendColumn] === this.selectedItems[i]) {
-              this.map.setFilter(`${layer.name}-highlighted`, ['in', layer.legendColumn, feature.properties[layer.legendColumn]]);
-            }
-          }
-        }
+        this.map.setFilter(`${layer.name}-highlighted`, filter);
       },
     },
     methods: {
