@@ -2,7 +2,7 @@
 
 import Vue from 'vue/dist/vue.esm.browser';
 import MapComponent from './map--multi-src.vue'; // Our component
-import MapData from 'nyco-patterns/src/objects/maps/map.data'; // Our sample data
+import MapData from './map.data'; // Our sample data
 import GeoJSON from 'geojson';
 import rewind from 'geojson-rewind';
 

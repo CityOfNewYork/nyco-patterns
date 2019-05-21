@@ -2,7 +2,7 @@
 
 import Vue from 'vue/dist/vue.esm.browser';
 import MapComponent from './map--single-src.vue'; // Our component
-import MapData from 'nyco-patterns/src/objects/maps/map.data'; // Our sample data
+import MapData from './map.data'; // Our sample data
 
 class MapSingleSrc {
   constructor(settings = {}, data = {}) {
