@@ -49,19 +49,28 @@
           this.initializeLayer(this.layer);
       },
       'selectedItems': function () {
-        // when updated, set the state of the boro that matches to 'highlighted'
-        console.log('selected items: ', this.selectedItems);
-
         const layer = this.layer;
-        const strRep = this.selectedItems.join('", "'); // TODO: breaks when joining multiple boroughs
-        const filter = ['in', layer.legendColumn, `${strRep}`];
+        const filter = ['in', layer.legendColumn];
 
-        let relatedFeatures = this.map.querySourceFeatures(layer.name, {
-          sourceLayer: layer.name,
-          filter: filter
-        });
+        for (let i = 0; i < this.selectedItems.length; i++) {
+          filter.push(this.selectedItems[i])
+        }
 
-        this.map.setFilter(`${layer.name}-highlighted`, filter);
+        if (this.selectedItems.length > 0) {
+          let relatedFeatures = this.map.querySourceFeatures(layer.name, {
+            sourceLayer: layer.name,
+            filter: filter
+          });
+
+          // set filter when legend item selected
+          this.map.setFilter(`${layer.name}-highlighted`, filter);
+          this.map.setLayoutProperty(`${layer.name}-highlighted`, 'visibility', 'visible');
+        }
+
+        if (!this.selectedItems.length && !this.mapPopup) {
+          this.map.setFilter(`${layer.name}-highlighted`, null);
+          this.map.setLayoutProperty(`${layer.name}-highlighted`, 'visibility', 'none');
+        }
       },
     },
     methods: {
@@ -110,7 +119,7 @@
             'paint': {
               'fill-outline-color': fill[0],
               'fill-color': fill[1],
-              'fill-opacity': 0.7
+              'fill-opacity': 1
             },
             'filter': filter,
             'layout': {
@@ -126,6 +135,14 @@
         const $this = this;
         const map = $this.map;
         const layerName = `${layer.name}-highlighted`;
+
+        // check whether shape falls under current legend selection
+        let inCurrentSelection = true;
+        let columnFilter = event.features[0].properties[layer.legendColumn];
+
+        if (!$this.selectedItems.includes(columnFilter))
+          inCurrentSelection = false;
+
         const popup = new mapboxgl.Popup()
                         .setLngLat(event.lngLat)
                         .setHTML(event.features[0].properties[layer.filterBy])
@@ -133,8 +150,28 @@
 
         if (popup.isOpen()) {
           $this.mapPopup = popup;
-          map.setLayoutProperty(layerName, 'visibility', 'visible');
-          map.setFilter(layerName, $this.mapFilter);
+
+          // if there are no legend items selected, highlight selected map shape
+          if (!$this.selectedItems.length) {
+            map.setLayoutProperty(layerName, 'visibility', 'visible');
+            map.setFilter(layerName, $this.mapFilter);
+          }
+
+          // if there are legend items selected and selected map shape isn't
+          // within any of the selected legend items, highlight selected
+          // map shape and clear legend
+          if ($this.selectedItems.length > 0 && !inCurrentSelection) {
+            map.setLayoutProperty(layerName, 'visibility', 'visible');
+            map.setFilter(layerName, $this.mapFilter);
+
+            // reset all checked legend items
+            $this.selectedItems = [];
+            const filterGroupInputs = document.getElementById('map-legend').querySelectorAll('input:checked');
+
+            for (let i = 0; i < filterGroupInputs.length; i++) {
+              filterGroupInputs[i].checked = false;
+            }
+          }
         }
 
         popup.on('close', function () {
@@ -142,17 +179,18 @@
           if ($this.mapPopup === popup) {
             $this.mapPopup = null;
             $this.mapFilter = null;
-            map.setFilter(layerName, null);
-            map.setLayoutProperty(layerName, 'visibility', 'none');
+
+            // if there are no legend items selected, reset all filters
+            if (!$this.selectedItems.length) {
+              map.setFilter(layerName, null);
+              map.setLayoutProperty(layerName, 'visibility', 'none');
+            }
           }
         });
       },
-      generateLegend(layer) {
-        // console.log("generateLegend: ", layer)
-
-        layer.features.forEach((feature) => {
-          // console.log("feature: ", feature)
-          const item = feature.properties.boro_name;
+      generateLegend(layerData) {
+        layerData.features.forEach((feature) => {
+          const item = feature.properties[this.layer.legendColumn];
 
           if (!this.legendItems.includes(item) && item)
             this.legendItems.push(item);
@@ -166,8 +204,10 @@
           // set bbox as reactangle area around clicked point
           let bbox = [[e.point.x, e.point.y], [e.point.x, e.point.y]];
           let features = map.queryRenderedFeatures(bbox, { layers: [layer.name] });
+          let legendColumnValue = null;
 
           const filter = features.reduce(function(memo, feature) {
+            legendColumnValue = feature.properties[layer.legendColumn];
             memo.push(feature.properties[layer.filterBy]);
             return memo;
           }, ['in', `${layer.filterBy}`]);
@@ -196,8 +236,6 @@
           ['#000000', '#F2695D'],
           // black, orange
           ['#000000', '#FFA133'],
-          // dark blue, pink
-          ['#2F334F', '#EBBCD8'],
           // dark blue, gray
           ['#2F334F', '#ACAEB9'],
           // blue, orange
@@ -233,22 +271,27 @@
           // checkbox label
           const label = document.createElement('label');
           label.setAttribute('for', layerRef);
+          label.setAttribute('title', layerRef);
           label.textContent = layerRef;
           filterGroup.appendChild(label);
 
           // when the checkbox changes state, update the selected items array.
           input.addEventListener('change', function(e) {
-            const selectedBoro = e.target.value;
+            const item = e.target.value;
 
             // reset the checkboxes checked state
             e.target.checked ? 'visible' : 'none';
 
-            if (e.target.checked && !$this.selectedItems.includes(selectedBoro))
-              $this.selectedItems.push(selectedBoro);
+            // remove popup if one exists
+            if ($this.mapPopup)
+              $this.mapPopup.remove();
 
-            if (!e.target.checked && $this.selectedItems.includes(selectedBoro)) {
+            if (e.target.checked && !$this.selectedItems.includes(item))
+              $this.selectedItems.push(item);
+
+            if (!e.target.checked && $this.selectedItems.includes(item)) {
               $this.selectedItems = $this.selectedItems.filter((val) => {
-                return val !== selectedBoro;
+                return val !== item;
               });
             }
           });

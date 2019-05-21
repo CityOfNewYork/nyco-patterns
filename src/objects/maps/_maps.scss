@@ -18,14 +18,14 @@
   }
 
   .map-legend {
-    font-weight: 600;
-    position: absolute;
-    top: 10px;
-    left: 10px;
     z-index: 1;
+    position: absolute;
+    top: 5px;
+    left: 5px;
     border-radius: 3px;
-    width: 120px;
-    color: #fff;
+    font-weight: 600;
+    width: 130px;
+    color: map-get(map-get($variables, 'colors'), 'base-white');
   }
 
   .map-legend input[type=checkbox]:first-child + label {
@@ -42,21 +42,20 @@
   }
 
   .map-legend input[type=checkbox] + label {
-    background-color: #3386c0;
     display: block;
-    cursor: pointer;
+    background-color: map-get(map-get($variables, 'colors'), 'primary-navy-70t');
     padding: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  }
-
-  .map-legend input[type=checkbox] + label {
-    background-color: #3386c0;
+    border-bottom: 1px solid map-get(map-get($variables, 'colors'), 'primary-navy-30t');
     text-transform: capitalize;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+    cursor: pointer;
   }
 
   .map-legend input[type=checkbox] + label:hover,
-    .map-legend input[type=checkbox]:checked + label {
-    background-color: #4ea0da;
+  .map-legend input[type=checkbox]:checked + label {
+    background-color: map-get(map-get($variables, 'colors'), 'primary-blue');
   }
 
   .map-legend input[type=checkbox]:checked + label:before {
