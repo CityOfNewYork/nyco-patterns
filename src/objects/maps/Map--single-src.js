@@ -36,7 +36,7 @@ class MapSingleSrc {
       },
       methods: {
         getData() {
-          fetch('https://cdn.jsdelivr.net/gh/kimpenguin/geoJSON@master/zcta-w-nta.geojson')
+          fetch('https://cdn.jsdelivr.net/gh/kimpenguin/geoJSON@master/nyco-nyc_zipcodes.geojson')
             .then((response) => {
               if (response.ok)
                 return response.text();
@@ -50,10 +50,10 @@ class MapSingleSrc {
             })
             .then((data) => {
               this.layer = {
-                name: 'zcta-w-nta',
+                name: 'nyco-nyc_zipcodes',
                 data: JSON.parse(data),
-                filterBy: 'GEOID10',
-                legendColumn: 'boro_name'
+                filterBy: 'ZCTA5CE10',
+                legendColumn: 'BORO'
               };
             });
         },
