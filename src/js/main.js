@@ -9,9 +9,7 @@ import ChartBar from '../objects/charts/chart--bar';
 import ChartHorizontalBar from '../objects/charts/chart--horizontal-bar';
 import ChartLine from '../objects/charts/chart--line';
 import ChartPie from '../objects/charts/chart--pie';
-
-import MapMultiSrc from '../objects/maps/Map--multi-src';
-import MapSingleSrc from '../objects/maps/Map--single-src';
+import { MapMultiLayer, MapSingleLayer } from './Map';
 /** import modules here as they are written */
 
 /**
@@ -78,11 +76,11 @@ class nyco {
    * @return  {Object} Map Module
    */
   map(type) {
-    if (type === 'multi-src')
-      return new MapMultiSrc();
+    if (type === 'multi')
+      return new MapMultiLayer();
 
-    if (type === 'single-src')
-      return new MapSingleSrc();
+    if (type === 'single')
+      return new MapSingleLayer();
   }
 
   /** add APIs here as they are written */

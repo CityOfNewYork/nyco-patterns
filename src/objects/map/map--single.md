@@ -1,0 +1,3 @@
+p This map accepts a single geoJSON layer and displays a legend based on a column selection.
+p In this example, you can filter the layer by selecting a borough from the legend (based on the <code>legendColumn</code> attribute) or by interacting directly with a shape on the map (based on the <code>filterBy</code> attribute).
+p To utilize this map, you must set <code>mapType: 'single'</code> in your <code>config</code> object.

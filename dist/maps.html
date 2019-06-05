@@ -154,7 +154,7 @@
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
       <h1 class="m-0 p-0 mt-2">Maps</h1>
       <p></p>
-      <p>All map source files can be found here: <code>src/objects/maps/</code>. Maps are powered by
+      <p>All map source files can be found here: <code>src/objects/map/</code>. Maps are powered by
         <a href="https://www.mapbox.com/">Mapbox</a>, and require a Mapbox token to initialize on your own project.</p>
       <section class="pb-4">
         <div class="mt-4 layout--content">
@@ -167,7 +167,8 @@
           </div>
           <div>
             <div class="o-maps" data-js="map-msrc">
-              <nyco-map-msrc :config="config" :layers="layers"></nyco-map-msrc>
+              <nyco-map-msrc :config="config" :layers="layers" id="nyco-map-msrc" style="height: 400px; width: 500px"></nyco-map-msrc>
+              <div class="nyco-map-menu pt-2" id="nyco-map-msrc-menu"></div>
             </div>
           </div>
         </div>
@@ -182,7 +183,8 @@
           </div>
           <div>
             <div class="o-maps o-maps--relative" data-js="map-ssrc">
-              <nyco-map-ssrc :config="config" :layer="layer"></nyco-map-ssrc>
+              <nyco-map-ssrc :config="config" :layers="layers" id="nyco-map-ssrc" style="height: 400px; width: 500px"></nyco-map-ssrc>
+              <nav class="map-legend" id="map-legend"></nav>
             </div>
           </div>
         </div>
@@ -225,7 +227,7 @@
     nyco.track();
   </script>
   <script type="text/javascript">
-    nyco.map('multi-src');
-    nyco.map('single-src');
+    nyco.map('multi');
+    nyco.map('single');
   </script>
 </body>

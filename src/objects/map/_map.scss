@@ -1,13 +1,13 @@
 /**
- * Maps
+ * Map
  */
 
 // Dependencies
 @import 'config/variables';
 
 // Declarations
-.o-maps {
-  .nyco-map-menu {
+.o-map {
+  .map-menu {
     a {
       margin-right: map-get(map-get($variables, 'margin'), 1);
     }
@@ -84,8 +84,4 @@
       transform: scale(1.4);
     }
   }
-}
-
-.o-maps--relative {
-  position: relative;
 }

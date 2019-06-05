@@ -1,2 +1,0 @@
-p This is a multi-source map, meaning you can use a one or multiple geojson files to generate the different layers displayed on a map. In this example, zipcodes, neighborhoods, and boroughs are each individual geojson files.
-p Each geojson source used should contain only one geometry field.
