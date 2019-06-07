@@ -36,7 +36,7 @@
             const layer = layers[i];
             this.trackLayer(layer.name);
 
-            if (layer.default)
+            if (layer.default || this.layers.length === 1)
               this.activeLayer = layer.name;
 
             if (this.mapLoaded)
@@ -96,15 +96,27 @@
       initializeMap() {
         const mapConfig = this.config;
 
-        mapboxgl.accessToken = mapConfig.APIKey;
-        this.map = new mapboxgl.Map({
+        let options = {
           container: mapConfig.containerId,
-          center: mapConfig.center,
-          zoom: mapConfig.zoom,
-          style: mapConfig.style
-        });
+        };
 
+        if (mapConfig.center)
+          options.center = mapConfig.center;
+
+        if (mapConfig.style)
+          options.style = mapConfig.style;
+
+        if (mapConfig.zoom)
+          options.zoom = mapConfig.zoom;
+
+        mapboxgl.accessToken = mapConfig.APIKey;
+        this.map = new mapboxgl.Map(options);
         this.map.addControl(new mapboxgl.NavigationControl());
+
+        // disable map zoom when using scroll
+        if (mapConfig.disableScroll)
+          this.map.scrollZoom.disable();
+
         this.map.on('load', () => this.mapLoaded = true);
       },
       initializeLayer(layer) {

@@ -1,0 +1,91 @@
+###Setup
+
+The map is a Vue component powered by [Mapbox](https://www.mapbox.com/) and requires a Mapbox `access token` to initialize on your own project. Follow the Mapbox documentation at this [link](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/#creating-and-managing-access-tokens) to create your `access token`.
+
+Note: If you get a `403 (Forbidden)` error from Mapbox, make sure you're using a valid Mapbox `access token`.
+
+Both map types expect the layer source to be GeoJSON. All GeoJSON source layers used to render a map object should be valid Feature Collection's and contain only one geometry field per feature. [Learn more about GeoJSON](https://geojson.org/).
+
+Note: If your map loads but the layer doesn't display, make sure your GeoJSON is valid and your layer object is properly configured.
+
+###Installation
+
+Install the `nyco-patterns` npm package by running `npm install nyco-patterns` in your project root directory.
+
+Import the component:
+
+    import NycoMap from '/node_modules/nyco-patterns/src/objects/map/map.vue';
+
+
+Initialize the component:
+
+    export default {
+      name: 'xyz',
+      data() {
+        config: {
+          APIKey: 'pk.eydcdxc...', //Mapbox Access Token
+          containerId: 'nyco-map-ml',
+          legendId: 'map-menu',
+          center: [-73.986710, 40.693391],
+          zoom: 9,
+          style: 'mapbox://styles/nyco-products/cjv6wjq8812ys1gp39mnvuk2w',
+          mapType: 'multi' //or 'single'
+        },
+        layers: [
+          { name: 'zipcodes',
+            data: GeoJSONData,
+            default: true,
+            filterBy: 'GEOID10'
+          },
+          {
+            name: 'boroughs',
+            data: GeoJSONData,
+            default: false,
+            filterBy: 'boro_name'
+          },
+          ...
+        ]
+      },
+      components: {
+        NycoMap,
+        OtherCmpt,
+      },
+    }
+
+Add the component's markup in your `<template> ... </template>`:
+
+    <div class='o-map'>
+      <nyco-map id='nyco-map-ml' :layers='layers' :config='config' style='height: 400px; width: 500px'></nyco-map>
+      <div id='map-menu' class='map-menu'></div>
+    </div>
+
+###Dependencies
+
+This component depends on [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/).
+
+###Map Configuration
+
+The `config` attributes `APIKey`, `containerId`, `center`, `zoom`, and `style` are all Mapbox attributes. You can read more about these in their [API Reference docs](https://docs.mapbox.com/mapbox-gl-js/api/).
+
+Option          | Type        | Importance | Description
+----------------|:-----------:|:----------:|------------|
+`APIKey`        | *string*         | required   | The Mapbox Access Token ([setup](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/)).
+`containerId`   | *string* | required   | The `id` of the container where you want the map to be created.
+`legendId`      | *string* | required   | The `id` of the container where you want the legend/toggle menu to be created.
+`center`        | *array*      | optional   | The inital geographical centerpoint of the map. Default is [0, 0]
+`zoom`          | *number*       | optional   | The initial zoom level of the map. Default is 0.
+`style`         | *object/string*       | required   | The map's Mapbox style. This must be an a JSON object conforming to the schema described in the [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/), or a URL to such JSON.
+`disableScroll` | *boolean*       | optional   | Set to `true` to disable map zoom when using scroll.
+`mapType`       | *string*       | required   | The type of map you want to render, can be `single` or `multi`.
+
+###Layer Configuration
+
+The `layers` array requires at least one layer object to render. The object options are below:
+
+Option          | Type        | Importance | Description
+----------------|:-----------:|:----------:|------------|
+`name`         | *string*  | required   | The layer name, also set as the Mapbox layer `id` and `source`. For the `multi` map, this value is used to generate the map menu (toggle links).
+`data`         | *object* | required   | The GeoJSON layer/source data.
+`filterBy`     | *string*  | required   | The column (feature property) you want to filter by when interacting with a shape on the map. This is the value that is displayed in the popup and determines the map shape selection (highlight) on click.
+`default`      | *string*  | required   | This ensures a specific layer is displayed on map load for a `multi` map type, with multiple layers. Set to `true` to display layer on map load, set to `false` or omit otherwise.
+`legendColumn` | *string*  | required   | The column (feature property) you want to filter by when interacting with the legend/menu for a `single` map type. The unique values of this feature property make up the legend items. All features with matching properties will be highlighted when selected through the legend.

@@ -9,6 +9,7 @@ const MapData = {
       legendId: 'nyco-map-legend',
       center: [-73.986710, 40.693391],
       zoom: 9,
+      disableScroll: true,
       style: 'mapbox://styles/nyco-products/cjv6wjq8812ys1gp39mnvuk2w',
       mapType: 'single'
     }
@@ -21,6 +22,7 @@ const MapData = {
       legendId: 'nyco-map-menu',
       center: [-73.986710, 40.693391],
       zoom: 9,
+      disableScroll: true,
       style: 'mapbox://styles/nyco-products/cjv6wjq8812ys1gp39mnvuk2w',
       mapType: 'multi'
     }

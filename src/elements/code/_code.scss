@@ -7,7 +7,7 @@
 @import 'config/fonts';
 @import 'config/code';
 
-$color: map-get($variables, 'colors');
+$colors: map-get($variables, 'colors');
 $font-sizes: map-get($variables, 'textSizes');
 $font-weights: map-get($variables, 'fontWeights');
 
@@ -15,19 +15,20 @@ $font-weights: map-get($variables, 'fontWeights');
 code, pre {
   display: inline-block;
 }
+
 .code,
 .code-block {
   font-weight: map-get($font-weights, 'normal');
-  font-size: map-get($font-sizes, 'h6');
+  font-size: map-get($font-sizes, 'html');
   line-height: 1.3;
   font-family: monospace;
-  background-color: map-get($color, 'secondary-grey-30t');
-  border: 1px solid map-get($color, 'secondary-grey-50t');
+  background-color: map-get($colors, 'secondary-grey-30t');
+  border: 1px solid map-get($colors, 'secondary-grey-50t');
   border-radius: 3px;
 }
 
 .code {
-  color: map-get($color, 'primary-blue');
+  color: map-get($colors, 'primary-blue');
   padding: 4px 8px;
   display: inline-block;
   overflow: initial;
@@ -37,11 +38,11 @@ code, pre {
 }
 
 p code, li code {
-  color: map-get($color, 'primary-blue');
+  color: map-get($colors, 'primary-blue');
   font-size: 85%;
   font-family: inherit;
   letter-spacing: 0.01em;
-  background-color: map-get($color, 'secondary-grey-30t');
+  background-color: map-get($colors, 'secondary-grey-30t');
   border-radius: 3px;
   padding: 0.2em 0.4em;
   margin: 0;
@@ -50,12 +51,12 @@ p code, li code {
 
 pre {
   font-family: monospace, monospace;
-  font-size: 1em;
-  color: map-get($color, 'primary-red');
-  background-color: map-get($color, 'secondary-grey-30t');
+  font-size: map-get($font-sizes, 'html');
+  color: map-get($colors, 'primary-red');
+  background-color: map-get($colors, 'secondary-grey-30t');
   display: block;
   padding: 16px 16px;
-  border: 1px solid map-get($color, 'secondary-grey-50t');
+  border: 1px solid map-get($colors, 'secondary-grey-50t');
   border-radius: 3px;
   max-width: 100%;
   overflow: hidden;
@@ -63,7 +64,7 @@ pre {
 }
 
 .code-block {
-  color: map-get($color, 'primary-red');
+  color: map-get($colors, 'primary-red');
   display: inline-block;
   display: block;
   max-width: 100%;

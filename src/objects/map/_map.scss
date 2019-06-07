@@ -10,6 +10,9 @@
   .map-menu {
     a {
       margin-right: map-get(map-get($variables, 'margin'), 1);
+      overflow-wrap: normal;
+      word-wrap: normal;
+      overflow: scroll;
     }
 
     a.active {

@@ -1,3 +1,3 @@
-p This map accepts one or more geoJSON layers, enabling you to utilize one or more geoJSON Feature Collection's to generate the different layers displayed on the map.
-p In this example, zipcodes, neighborhoods, and boroughs are each individual geoJSON Feature Collection objects. When interacting with a shape, the information displayed is based on the <code>filterBy</code> attribute set for the layer. The geoJSON data is set as the <code>data</code> attribute for the layer.
+p The <code>multi</code> map type accepts one or more GeoJSON layers. When a single layer is used, the menu (layer toggle links) is omitted.
+p In this example, zipcodes, neighborhoods, and boroughs are each individual GeoJSON Feature Collection objects. When you click a shape on the map, the information displayed in the popup is based on the <code>filterBy</code> attribute set for the layer.
 p To utilize this map, you must set <code>mapType: 'multi'</code> in your <code>config</code> object.
