@@ -1,0 +1,4 @@
+= mixin('demo-specs', 'text');
+  div
+    div class='my-0 text-font-size-small'
+      = 'md{{ ' + this.text + ' }}'
