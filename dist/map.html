@@ -239,13 +239,19 @@
       center: [-73.986710, 40.693391],
       zoom: 9,
       style: &#39;mapbox://styles/nyco-products/cjv6wjq8812ys1gp39mnvuk2w&#39;,
-      mapType: &#39;multi&#39; //or &#39;single&#39;
+      mapType: &#39;multi&#39; //or &#39;single&#39;,
+      colors: [
+        [&#39;#000000&#39;, &#39;#F2695D&#39;],
+        [&#39;#000000&#39;, &#39;#FFA133&#39;],
+        [&#39;#2F334F&#39;, &#39;#ACAEB9&#39;]
+      ]
     },
     layers: [
       { name: &#39;zipcodes&#39;,
         data: GeoJSONData,
         default: true,
-        filterBy: &#39;GEOID10&#39;
+        filterBy: &#39;GEOID10&#39;,
+        fill: [&#39;#000000&#39;, &#39;#F2695D&#39;]
       },
       {
         name: &#39;boroughs&#39;,
@@ -339,6 +345,13 @@
       <td align="center">required</td>
       <td>The type of map you want to render, can be <code>single</code> or <code>multi</code>.</td>
     </tr>
+    <tr>
+      <td><code>colors</code></td>
+      <td align="center"><em>array</em></td>
+      <td align="center">optional*</td>
+      <td>The <code>fill-outline</code> and <code>fill</code> color applied to a layer. The <code>colors</code> array is a list of hex value (<em>string</em>) color combinations: <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>. The first value is applied
+        as the <code>fill-outline</code> and the second as the <code>fill</code>. A color combination is applied to a layer at random, so multiple layers may share the same color combination. This attribute overrides the <code>layer.fill</code> attribute.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -373,6 +386,12 @@
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
       <td>The column (feature property) you want to filter by when interacting with a shape on the map. This is the value that is displayed in the popup and determines the map shape selection (highlight) on click.</td>
+    </tr>
+    <tr>
+      <td><code>fill</code></td>
+      <td align="center"><em>array</em></td>
+      <td align="center">required*</td>
+      <td>The <code>fill-outline</code> and <code>fill</code> color applied to the layer. The array must contain two hex values (<em>string</em>): <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>. The first value is applied as the <code>fill-outline</code>        and the second as the <code>fill</code>. This attribute is overwritten by the <code>config.colors</code> attribute.</td>
     </tr>
     <tr>
       <td><code>default</code></td>

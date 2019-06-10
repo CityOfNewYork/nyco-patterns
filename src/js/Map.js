@@ -5,6 +5,7 @@ import MapComponent from '../objects/map/map.vue'; // Our component
 import MapData from './map.data'; // Our sample data
 import GeoJSON from 'geojson';
 import rewind from 'geojson-rewind';
+import { mapColorCombinations } from '../../config/colors'
 
 class MapMultiLayer {
   constructor(settings = {}, data = {}) {
@@ -167,7 +168,8 @@ class MapSingleLayer {
                 name: 'nyco-nyc_zipcodes',
                 data: JSON.parse(data),
                 filterBy: 'ZCTA5CE10',
-                legendColumn: 'BORO'
+                legendColumn: 'BORO',
+                fill: mapColorCombinations[3]
               });
             });
         },

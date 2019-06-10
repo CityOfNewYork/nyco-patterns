@@ -1,5 +1,7 @@
 'use strict';
 
+import { mapColorCombinations } from '../../config/colors';
+
 const MapData = {
   single: {
     layers: [],
@@ -24,7 +26,8 @@ const MapData = {
       zoom: 9,
       disableScroll: true,
       style: 'mapbox://styles/nyco-products/cjv6wjq8812ys1gp39mnvuk2w',
-      mapType: 'multi'
+      mapType: 'multi',
+      colors: mapColorCombinations
     }
   }
 }

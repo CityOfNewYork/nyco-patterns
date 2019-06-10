@@ -123,7 +123,7 @@
         if (this.map.getLayer(layer.name) === undefined && Object.entries(layer.data).length !== 0) {
           const visibility = layer.name === this.activeLayer ? 'visible' : 'none';
           const filter = layer.filterBy ? ['in', layer.filterBy, ''] : [];
-          const fill = this.generateFillColor();
+          const fill = this.config.colors ? this.generateFillColor(this.config.colors) : layer.fill;
 
           this.map.addSource(layer.name, {
             'type': 'geojson',
@@ -185,19 +185,7 @@
           map.getCanvas().style.cursor = '';
         });
       },
-      generateFillColor() {
-        // NYCO colors, ['fill-outline', 'fill']
-        const colors = [
-          // black, red
-          ['#000000', '#F2695D'],
-          // black, orange
-          ['#000000', '#FFA133'],
-          // dark blue, gray
-          ['#2F334F', '#ACAEB9'],
-          // blue, orange
-          ['#3155A6', '#F9A137']
-        ];
-
+      generateFillColor(colors) {
         return colors[Math.floor(Math.random() * colors.length)];
       },
       // multi layer
