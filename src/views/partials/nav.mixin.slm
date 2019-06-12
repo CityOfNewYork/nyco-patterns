@@ -22,6 +22,7 @@
     a class='${class_nav_link}' href='navigation' Navigation
 
     span class='${class_nav_link_header}' Utilities
+    a class='${class_nav_link}' href='accessibility' Accessibility
     a class='${class_nav_link}' href='animate' Animate
     a class='${class_nav_link}' href='colors' Colors
     a class='${class_nav_link}' href='toggle' Toggle

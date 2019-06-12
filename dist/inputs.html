@@ -108,6 +108,7 @@
               <a class="o-navigation__link" href="header">Header</a>
               <a class="o-navigation__link" href="map">Map</a>
               <a class="o-navigation__link" href="navigation">Navigation</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="accessibility">Accessibility</a>
               <a class="o-navigation__link" href="animate">Animate</a>
               <a class="o-navigation__link" href="colors">Colors</a>
               <a class="o-navigation__link" href="toggle">Toggle</a>
@@ -142,6 +143,7 @@
             <a class="o-navigation__link" href="header">Header</a>
             <a class="o-navigation__link" href="map">Map</a>
             <a class="o-navigation__link" href="navigation">Navigation</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="accessibility">Accessibility</a>
             <a class="o-navigation__link" href="animate">Animate</a>
             <a class="o-navigation__link" href="colors">Colors</a>
             <a class="o-navigation__link" href="toggle">Toggle</a>
@@ -233,6 +235,155 @@
           </div>
         </div>
       </section>
+      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="autocomplete">
+              <a href="#autocomplete">Autocomplete</a>
+            </h2>
+            <p>The Autocomplete Input Element uses JavaScript to provide an accessibile and selectable list of suggested terms as a user types into the field.</p>
+            <p>The suggested terms are passed to the <code>InputAutocomplete</code> class on instantiation and can be updated on the fly with new terms. Terms are displayed in order by relevance and synonym mapping (see usage details below), Additionally
+              the function is miss-spelling tolerant.</p>
+          </div>
+        </div>
+        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div class="input-autocomplete">
+              <input aria-autocomplete="both" aria-describedby="input-autocomplete__instructions-0" aria-expanded="false" aria-owns="input-autocomplete__options" autocomplete="off" data-js="input-autocomplete__input" type="text" />
+              <div aria-live="polite" class="sr-only" id="input-autocomplete__instructions-0"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pb-4">
+        <div class="layout--content">
+          <h2 class="mt-0" id="autocomplete-usage">
+            <a href="#autocomplete-usage">Autocomplete Usage</a>
+          </h2>
+          <div>
+            <div class="my-0"><h4>Markup</h4>
+
+<pre><code>&lt;div class=&quot;input-autocomplete&quot;&gt;
+  &lt;input aria-autocomplete=&quot;both&quot; aria-describedby=&quot;input-autocomplete__instructions-0&quot; aria-expanded=&quot;false&quot; aria-owns=&quot;input-autocomplete__options&quot; autocomplete=&quot;off&quot; data-js=&quot;input-autocomplete__input&quot; type=&quot;text&quot; /&gt;
+  &lt;div aria-live=&quot;polite&quot; class=&quot;sr-only&quot; id=&quot;input-autocomplete__instructions-0&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p> Note: You can add the <code>data-persist-dropdown=&#39;true&#39;</code> attribute to the <code>input</code> element for testing. The attribute will make the dropdown persist after the input is no longer in focus.</p>
+
+<h4>Global Script</h4>
+
+<p>To use the Autocomplete Input in the global NYCO Patterns script use the following code:</p>
+
+<pre><code>&lt;!-- Global Script --&gt;
+&lt;script src=&quot;dist/scripts/NycoPatterns.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+  const nyco = new NycoPatterns();
+  nyco.inputAutocomplete({
+    options: [
+      [&#39;Bronx&#39;], [&#39;Queens&#39;]
+    ]
+  });
+&lt;/script&gt;</code></pre>
+
+<p>This function will instantiate the autocomplete with the provided options and attach the event listener to an input element with the default selector <code>[data-js=&#39;input-autocomplete__input&#39;]</code> (see markup details in the example above ).</p>
+
+<p>Below is an advanced configuration that passes a callback to the &quot;selected&quot; method of the autocomplete class. This callback is executed after a user has selected an option and the input value has been set. It will pass the selected value (<code>String</code>)
+  as the first argument and the autocomplete class (<code>Object</code>) as the second.</p>
+
+<pre><code>var autocomplete = nyco.inputAutocomplete({
+  selected: function(value, autocomplete) {
+    console.dir(&#39;Selected &#39; + value + &#39;!&#39;);
+  }
+});</code></pre>
+
+<h5>Updating Options</h5>
+
+<p>Below is an example of using the options setter to update the options after the class has been instantiated.</p>
+
+<pre><code>autocomplete.options([
+  [&#39;Bronx&#39;], [&#39;Queens&#39;], [&#39;Brooklyn&#39;], [&#39;Staten Island&#39;], [&#39;Manhattan&#39;]
+]);</code></pre>
+
+<h5>Providing Synonyms</h5>
+
+<p>Each option can be provided with a list of synonyms that will score the option higher as the user types. Try it out in the example above by typing &quot;Hunts Point&quot; in the input. The option &quot;Bronx&quot; will be listed before all other options.
+  This method can be used to provide common terms for specific search terms that exist in your site.</p>
+
+<pre><code>autocomplete.options([
+  [&#39;Bronx&#39;, &#39;Hunts Point&#39;, &#39;Arthur Avenue&#39;, &#39;Riverside&#39;, &#39;Mott Haven&#39;],
+  [&#39;Queens&#39;, &#39;Corona&#39;, &#39;East Elmhurst&#39;, &#39;Forest Hills&#39;, &#39;Fresh Pond&#39;],
+  [&#39;Brooklyn&#39;, &#39;Flatbush&#39;, &#39;Bay Ridge&#39;, &#39;DUMBO&#39;, &#39;Williamsburg&#39;],
+  [&#39;Staten Island&#39;, &#39;South Beach&#39;, &#39;Fort Wadsworth&#39;, &#39;Todt Hill&#39;, &#39;Great Kills&#39;],
+  [&#39;Manhattan&#39;, &#39;Lower&#39;, &#39;Midtown&#39;, &#39;Chinatown&#39;, &#39;SoHo&#39;]
+]);</code></pre>
+
+<h5>Providing Strings</h5>
+
+<p>The list of strings below are used for screen reader accessiblity by default. They can be overridden using the <code>.strings</code> method and passing an object of new strings. For the options strings, a dynamic variable string (denoted by <code>{{ }}</code>  below) is provided and rendered in the output of the string. This method can be used to provide a localized set of strings.</p>
+
+<pre><code>autocomplete.strings({
+  &#39;DIRECTIONS_TYPE&#39;: &#39;Start typing to generate a list of potential input options&#39;,
+  &#39;DIRECTIONS_REVIEW&#39;: &#39;Keyboard users can use the up and down arrows to review options and press enter to select an option&#39;,
+  &#39;OPTION_AVAILABLE&#39;: &#39;{{ NUMBER }} options available&#39;,
+  &#39;OPTION_SELECTED&#39;: &#39;{{ VALUE }} selected&#39;
+});</code></pre>
+
+<h4>Configuration</h4>
+
+<p>The <code>InputAutocomplete</code> class accepts an object <code>{}</code> with two properties: <code>selector</code> and <code>options</code>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th align="center">Type</th>
+      <th align="center">Importance</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>options</code></td>
+      <td align="center"><em>array</em></td>
+      <td align="center">required</td>
+      <td>The suggested terms to be displayed in the dropdown. Each item is an array with the first item being the visible value. The following values within each array are treated as synonyms that score the priority of term higher if the user types it.</td>
+    </tr>
+    <tr>
+      <td><code>selected</code></td>
+      <td align="center"><em>function</em></td>
+      <td align="center">optional</td>
+      <td>A callback method that will be executed when a user has selected an option.</td>
+    </tr>
+    <tr>
+      <td><code>selector</code></td>
+      <td align="center"><em>string</em></td>
+      <td align="center">optional</td>
+      <td>The selector for the input element. If no selector is provided the default value will be set to <code>[data-js=&quot;input-autocomplete__input&quot;]</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Cherry-picked Module Import</h4>
+
+<p>The ES6 module requires importing and object instantiation in your main script. The methods and configurations described above will work with the dedicated module.</p>
+
+<pre><code>// ES6
+import InputAutocomplete from &#39;src/elements/inputs/input-autocomplete&#39;;
+
+new InputAutocomplete({
+  options: [
+    [&#39;Bronx&#39;], [&#39;Queens&#39;]
+  ]
+});</code></pre>
+
+<h4>Accessibility</h4>
+
+<p>Accessibility is suppported through ARIA attributes that will prompt the user on how to use the dropdown list. Screen readers will also announce the list of options in the dropdown as the user navigates them with the keyboard. To maintain the elements
+  accessibility, the <code>accessibility</code> utility should be used and the appropriate ARIA attributes applied to the element (see markup section).</p></div>
+          </div>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
@@ -269,5 +420,27 @@
     nyco.icons();
     nyco.toggle();
     nyco.track();
+  </script>
+  <script type="text/javascript">
+    const autocomplete = nyco.inputAutocomplete({
+      // Providing a callback for the selected event.
+      selected: function(value) {
+        console.dir('Selected ' + value + '!');
+      }
+    });
+
+    // Updating dropdown options post instantiation.
+    autocomplete.options([
+      ['Bronx', 'Hunts Point', 'Arthur Avenue', 'Riverside', 'Mott Haven'],
+      ['Queens', 'Corona', 'East Elmhurst', 'Forest Hills', 'Fresh Pond'],
+      ['Brooklyn', 'Flatbush', 'Bay Ridge', 'DUMBO', 'Williamsburg'],
+      ['Staten Island', 'South Beach', 'Fort Wadsworth', 'Todt Hill', 'Great Kills'],
+      ['Manhattan', 'Lower', 'Midtown', 'Chinatown', 'SoHo']
+    ]);
+
+    // Updating strings used by the
+    autocomplete.strings({
+      'OPTION_SELECTED': '{{ VALUE }} is selected!'
+    });
   </script>
 </body>

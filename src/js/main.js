@@ -10,6 +10,8 @@ import ChartHorizontalBar from '../objects/charts/chart--horizontal-bar';
 import ChartLine from '../objects/charts/chart--line';
 import ChartPie from '../objects/charts/chart--pie';
 import { MapMultiLayer, MapSingleLayer } from './Map';
+import InputAutocomplete from '../elements/inputs/input-autocomplete';
+
 /** import modules here as they are written */
 
 /**
@@ -81,6 +83,14 @@ class nyco {
 
     if (type === 'single')
       return new MapSingleLayer();
+  }
+
+  /**
+   * Method for the Input Autocomplete Element
+   * @return  {Object} Input Autocomplete instance
+   */
+  inputAutocomplete(settings = {}) {
+    return new InputAutocomplete(settings);
   }
 
   /** add APIs here as they are written */
