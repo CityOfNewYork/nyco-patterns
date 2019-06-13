@@ -20,7 +20,7 @@
     "predeploy:commit": "git checkout package.json && git add \"./*\" && git commit -m \"Updating dist\"",
     "serve": "cross-env PORT=8000 node .app/serve.js --ext slm --watch src",
     "build": "node .app/build.js",
-    "build:watch": "nodemon --ext slm --watch src -x \"npm run build\"",
+    "build:watch": "nodemon --ext slm,md --watch src -x \"npm run build\"",
     "publish": "npm run build && node .app/publish.js",
     "scripts": "rollup -c ./config/rollup.js",
     "scripts:watch": "rollup -c ./config/rollup.js -w",

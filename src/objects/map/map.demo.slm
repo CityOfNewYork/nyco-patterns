@@ -1,0 +1,4 @@
+
+div class='code-block'
+  pre
+    = 'str{{ objects/map/map.demo.vue }}';
