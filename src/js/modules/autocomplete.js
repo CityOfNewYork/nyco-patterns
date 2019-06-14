@@ -242,13 +242,17 @@ class Autocomplete {
    * @param  {Number}  index
    * @return {string}  The a list item <li>.
    */
-  static listItem(scoredOption, index) {
-    const li = (index > this.MAX_ITEMS) ?
+  static listItem(scoredOption, index, maxItems) {
+    const normalizedIndex = index + 1; // start at 1
+
+    const li = (normalizedIndex > maxItems) ?
       null : document.createElement('li');
 
-    li.setAttribute('role', 'option');
-    li.setAttribute('tabindex', '-1');
-    li.setAttribute('aria-selected', 'false');
+    if (li) {
+      li.setAttribute('role', 'option');
+      li.setAttribute('tabindex', '-1');
+      li.setAttribute('aria-selected', 'false');
+    }
 
     li && li.appendChild(document.createTextNode(scoredOption.displayValue));
 
@@ -284,7 +288,7 @@ class Autocomplete {
     const documentFragment = document.createDocumentFragment();
 
     this.scoredOptions.every((scoredOption, i) => {
-      const listItem = this.settings.listItem(scoredOption, i);
+      let listItem = this.settings.listItem(scoredOption, i, this.MAX_ITEMS);
 
       listItem && documentFragment.appendChild(listItem);
       return !!listItem;
