@@ -1,0 +1,8 @@
+/
+/ Map - Multi Layer
+/
+
+div class='overflow-x-auto pb-3'
+  div data-js='nyco-map-ml' class='o-map'
+    nyco-map-ml id='nyco-map-ml' :layers='layers' :config='config' style='height: 400px; width: 500px'
+    div id='nyco-map-menu' class='map-menu pt-2'

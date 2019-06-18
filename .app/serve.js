@@ -14,10 +14,7 @@ const port = process.env.PORT;
 const dist = Path.join(__dirname, '../', 'dist');
 const views = Path.join(__dirname, '../', 'src/views');
 const engine = 'slm';
-const locals = {
-  vars: require('../config/variables'),
-  site: require('../config/site')
-};
+const locals = require('./locals');
 
 /**
  * Functions

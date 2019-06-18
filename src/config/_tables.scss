@@ -33,6 +33,13 @@ $grid: map-get($variables, 'grid');
   th, td, caption {
     padding: $grid ($grid * 2);
   }
+
+  // code style override
+  code, pre {
+    font-size: map-get($font-sizes, 'h5');
+    font-weight: map-get(map-get($variables, 'fontWeights'), 'bold');
+    color: map-get($colors, 'primary-blue');
+  }
 }
 
 @mixin tables--singular {
@@ -77,4 +84,9 @@ $grid: map-get($variables, 'grid');
       @include tables--singular-caption;
     }
   }
+}
+
+.table table,
+table {
+  @include tables
 }

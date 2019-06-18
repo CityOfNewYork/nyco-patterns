@@ -1,0 +1,8 @@
+/
+/ Map - Single Layer
+/
+
+div class='overflow-x-auto pb-3'
+  div data-js='nyco-map-sl' class='o-map relative'
+    nyco-map-sl id='nyco-map-sl' :layers='layers' :config='config' style='height: 400px; width: 500px'
+    nav id='nyco-map-legend' class='map-legend'

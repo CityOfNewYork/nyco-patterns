@@ -74,7 +74,7 @@ $base-white: map-get($colors, 'base-white');
       color: map-get($colors, $visited);
     }
 
-    &:hover, &:active, &:focus {
+    &:hover, &:active, &:focus, &.active {
       color: map-get($colors, $hover);
     }
   }

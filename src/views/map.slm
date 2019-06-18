@@ -1,0 +1,34 @@
+- pattern = 'Map';
+
+/ Layout
+= extend('layouts/default');
+
+/ Variables
+= partial('partials/styles.slm');
+= partial('partials/links.slm');
+
+/ Partials
+= partial('partials/head.mixin.slm');
+= partial('partials/nav.mixin.slm');
+= partial('partials/section.mixin.slm');
+= partial('partials/section-text.mixin.slm');
+
+/ Content blocks
+= content('head');
+  = mixin('head', pattern);
+
+= content('header');
+  = mixin('header');
+
+= content('content');
+  h1 class='${class_demo_headers}' = pattern;
+  p
+  p All map source files can be found within <code>src/objects/map/</code>.
+  = mixin('section', 'objects/map/map--multi', 'Multi-layer with toggle links');
+  = mixin('section', 'objects/map/map--single', 'Single-layer with legend');
+  = mixin('section-text', 'objects/map/readme');
+
+= content('script');
+  javascript:
+    nyco.map('multi');
+    nyco.map('single');

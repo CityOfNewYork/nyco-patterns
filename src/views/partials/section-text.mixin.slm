@@ -1,0 +1,15 @@
+= partial('demo-specs.mixin.slm');
+
+= mixin('section-text', 'path', 'title = Usage');
+  - this.slug = this.title.replace(/ /g, '-').toLowerCase();
+
+  - this.id = this.title.toLowerCase().split(' ').join('-');
+
+  section class='pb-4'
+    div class='layout--content'
+      h2 id='${this.slug}' class='mt-0'
+        a href='#${this.slug}'
+          = this.title;
+
+      - if (this.specs != 'false')
+        = mixin('demo-specs', this.path + '.md');

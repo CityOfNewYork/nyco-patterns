@@ -1,0 +1,90 @@
+/**
+ * Map
+ */
+
+// Dependencies
+@import 'config/variables';
+
+// Declarations
+.o-map {
+  .map-menu {
+    a {
+      margin-right: map-get(map-get($variables, 'margin'), 1);
+      overflow-wrap: normal;
+      word-wrap: normal;
+      overflow: scroll;
+    }
+
+    a.active {
+      color: map-get(map-get($variables, 'colors'), 'primary-navy');
+    }
+  }
+
+  .map-legend {
+    z-index: 1;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 3px;
+    font-weight: 600;
+    width: 130px;
+    color: map-get(map-get($variables, 'colors'), 'base-white');
+  }
+
+  .map-legend input[type=checkbox]:first-child + label {
+    border-radius: 3px 3px 0 0;
+  }
+
+  .map-legend label:last-child {
+    border-radius: 0 0 3px 3px;
+    border: none;
+  }
+
+  .map-legend input[type=checkbox] {
+    display: none;
+  }
+
+  .map-legend input[type=checkbox] + label {
+    display: block;
+    background-color: map-get(map-get($variables, 'colors'), 'primary-navy-70t');
+    padding: 10px;
+    border-bottom: 1px solid map-get(map-get($variables, 'colors'), 'primary-navy-30t');
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .map-legend input[type=checkbox] + label:hover,
+  .map-legend input[type=checkbox]:checked + label {
+    background-color: map-get(map-get($variables, 'colors'), 'primary-blue');
+  }
+
+  .map-legend input[type=checkbox]:checked + label:before {
+    content: '✔';
+    margin-right: 5px;
+  }
+
+  // mapbox customizations
+  .mapboxgl-popup {
+    min-width: 60px;
+    max-width: 300px;
+  }
+
+  .mapboxgl-popup-content {
+    padding: 15px 20px;
+  }
+
+  .mapboxgl-popup-close-button {
+    right: 5px;
+    top: 5px;
+
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+      text-decoration-color: map-get(map-get($variables, 'colors'), 'primary-navy');
+      transform: scale(1.4);
+    }
+  }
+}
