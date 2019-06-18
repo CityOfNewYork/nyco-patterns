@@ -4,6 +4,7 @@
 
 // Dependencies
 @import 'config/variables';
+@import 'config/animate';
 @import 'config/inputs';
 
 // Declarations
@@ -39,4 +40,48 @@ input[type='number'] {
     appearance: none;
     margin: 0;
   }
+}
+
+/**
+ * Autocomplete
+ */
+
+.input-autocomplete {
+  display: inline-block;
+}
+
+.input-autocomplete__dropdown {
+  position: relative;
+}
+
+.input-autocomplete__dropdown > ul {
+  background: map-get(map-get($variables, 'colors'), 'base-white');;
+  color: map-get(map-get($variables, 'colors'), 'base-black');
+
+  position: absolute;
+  right: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-align: left;
+  margin-top: 1px;
+  z-index: 1;
+
+  box-shadow: map-get(map-get($variables, 'display'), 'up');
+}
+
+.input-autocomplete__dropdown > ul > li {
+  @include inputs;
+  @include transition;
+  cursor: pointer;
+  border: transparent;
+}
+
+.input-autocomplete__dropdown > ul > .input-autocomplete__highlight {
+  background-color: map-get(map-get($variables, 'colors'), 'secondary-grey-50t');
 }
