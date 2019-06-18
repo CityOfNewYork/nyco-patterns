@@ -87,6 +87,4 @@ The ES6 module requires importing and object instantiation in your main script. 
       ]
     });
 
-#### Accessibility
-
-Accessibility is suppported through ARIA attributes that will prompt the user on how to use the dropdown list. Screen readers will also announce the list of options in the dropdown as the user navigates them with the keyboard. To maintain the elements accessibility, the `accessibility` utility should be used and the appropriate ARIA attributes applied to the element (see markup section).
+[//]: <> (#### Accessibility: Accessibility is suppported through ARIA attributes that will prompt the user on how to use the dropdown list. Screen readers will also announce the list of options in the dropdown as the user navigates them with the keyboard. To maintain the elements accessibility, the `accessibility` utility should be used and the appropriate ARIA attributes applied to the element (see markup section.)
