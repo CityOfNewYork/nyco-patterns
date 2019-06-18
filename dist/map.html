@@ -163,10 +163,10 @@
             <h2 class="mt-0" id="multi-layer-with-toggle-links">
               <a href="#multi-layer-with-toggle-links">Multi-layer with toggle links</a>
             </h2>
-            <p>The <code>multi</code> map type accepts one or more GeoJSON layers. When a single layer is used, the menu (layer toggle links) is omitted.</p>
-            <p>In this example, zipcodes, neighborhoods, and boroughs are each individual GeoJSON Feature Collection objects. When you click a shape on the map, the information displayed in the popup is based on the <code>filterBy</code> attribute set for
-              the layer.</p>
-            <p>To utilize this map, you must set <code>mapType: 'multi'</code> in your <code>config</code> object.</p>
+            <p>The <code>multi</code> map type accepts one or more GeoJSON layers. When a single layer is set for this object, the menu (<code>nyco-map-menu</code>) is omitted.</p>
+            <p>In this example, zipcodes, neighborhoods, and boroughs are each individual GeoJSON Feature Collection objects. Click events on the polygon shapes in the map will display information based on the <code>filterBy</code> attribute set for the
+              layer.</p>
+            <p>To utilize this map, set <code>mapType: 'multi'</code> in your <code>config</code> object.</p>
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
@@ -187,8 +187,8 @@
               <a href="#single-layer-with-legend">Single-layer with legend</a>
             </h2>
             <p>The <code>single</code> map type accepts a single GeoJSON layer and displays a legend based on the defined feature property (<code>legendColumn</code> attribute).</p>
-            <p>In this example, you can filter the layer by selecting a borough from the legend or by clicking a shape on the map. the information displayed in the popup is based on the <code>filterBy</code> attribute set for the layer.</p>
-            <p>To utilize this map, you must set <code>mapType: 'single'</code> in your <code>config</code> object.</p>
+            <p>In this example, the layer can be filtered by selecting a borough from the legend or by clicking a polygon shape on the map. The information displayed in the popup is based on the <code>filterBy</code> attribute set for the layer.</p>
+            <p>To utilize this map, set <code>mapType: 'single'</code> in the <code>config</code> object.</p>
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
@@ -211,71 +211,71 @@
             <div class="my-0"><h3>Setup</h3>
 
 <p>The map is a Vue component powered by
-  <a href="https://www.mapbox.com/">Mapbox</a> and requires a Mapbox <code>access token</code> to initialize on your own project. Follow the Mapbox documentation at this
-  <a href="https://docs.mapbox.com/help/how-mapbox-works/access-tokens/#creating-and-managing-access-tokens">link</a> to create your <code>access token</code>.</p>
+  <a href="https://www.mapbox.com/">Mapbox</a> and requires a Mapbox <code>access token</code> to initialize in a project. Follow the Mapbox documentation at this
+  <a href="https://docs.mapbox.com/help/how-mapbox-works/access-tokens/#creating-and-managing-access-tokens">link</a> to create an <code>access token</code>.</p>
 
-<p>Note: If you get a <code>403 (Forbidden)</code> error from Mapbox, make sure you&#39;re using a valid Mapbox <code>access token</code>.</p>
+<p>Note: If a <code>403 (Forbidden)</code> error from Mapbox is encountered, make sure the project is using a valid Mapbox <code>access token</code>.</p>
 
 <p>Both map types expect the layer source to be GeoJSON. All GeoJSON source layers used to render a map object should be valid Feature Collection&#39;s and contain only one geometry field per feature.
   <a href="https://geojson.org/">Learn more about GeoJSON</a>.</p>
 
-<p>Note: If your map loads but the layer doesn&#39;t display, make sure your GeoJSON is valid and your layer object is properly configured.</p>
+<p>Note: If the map loads but the layer doesn&#39;t display, make sure the GeoJSON is valid and the layer object is properly configured.</p>
 
 <h3>Installation</h3>
 
-<p>Install the <code>nyco-patterns</code> npm package by running <code>npm install nyco-patterns</code> in your project root directory.</p>
+<p>Install the <code>nyco-patterns</code> npm package by running <code>npm install nyco-patterns</code> in the project root directory.</p>
 
-<p>Import the component:</p>
+<p>Example of Component Usage in a Vue App:</p>
 
-<pre><code>import NycoMap from &#39;/node_modules/nyco-patterns/src/objects/map/map.vue&#39;;</code></pre>
+<pre><code>// demo.vue
 
-<p>Initialize the component:</p>
+&lt;template&gt;
+  &lt;div class=&#39;o-map&#39;&gt;
+    &lt;nyco-map id=&#39;nyco-map-ml&#39; :layers=&#39;layers&#39; :config=&#39;config&#39; style=&#39;height: 400px; width: 500px&#39;&gt;&lt;/nyco-map&gt;
+    &lt;div id=&#39;map-menu&#39; class=&#39;map-menu&#39;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-<pre><code>export default {
-  name: &#39;xyz&#39;,
-  data() {
-    config: {
-      APIKey: &#39;pk.eydcdxc...&#39;, //Mapbox Access Token
-      containerId: &#39;nyco-map-ml&#39;,
-      legendId: &#39;map-menu&#39;,
-      center: [-73.986710, 40.693391],
-      zoom: 9,
-      style: &#39;mapbox://styles/nyco-products/cjv6wjq8812ys1gp39mnvuk2w&#39;,
-      mapType: &#39;multi&#39; //or &#39;single&#39;,
-      colors: [
-        [&#39;#000000&#39;, &#39;#F2695D&#39;],
-        [&#39;#000000&#39;, &#39;#FFA133&#39;],
-        [&#39;#2F334F&#39;, &#39;#ACAEB9&#39;]
+&lt;script&gt;
+  import NycoMap from &#39;../node_modules/nyco-patterns/src/objects/map/map.vue&#39;;
+
+  export default {
+    name: &#39;Map&#39;,
+    data() {
+      config: {
+        APIKey: &#39;pk.eydcdxckbhbjhbjhbhj&#39;,
+        containerId: &#39;nyco-map-ml&#39;,
+        legendId: &#39;map-menu&#39;,
+        center: [-73.986710, 40.693391],
+        zoom: 9,
+        style: &#39;mapbox://styles/nyco-products/cjv6wjq8812ys1gp39mnvuk2w&#39;,
+        mapType: &#39;multi&#39;,
+        colors: [
+          [&#39;#000000&#39;, &#39;#F2695D&#39;],
+          [&#39;#000000&#39;, &#39;#FFA133&#39;],
+          [&#39;#2F334F&#39;, &#39;#ACAEB9&#39;]
+        ]
+      },
+      layers: [
+        { name: &#39;zipcodes&#39;,
+          data: GeoJSONData,
+          default: true,
+          filterBy: &#39;GEOID10&#39;,
+          fill: [&#39;#000000&#39;, &#39;#F2695D&#39;]
+        },
+        {
+          name: &#39;boroughs&#39;,
+          data: GeoJSONData,
+          default: false,
+          filterBy: &#39;boro_name&#39;
+        },
       ]
     },
-    layers: [
-      { name: &#39;zipcodes&#39;,
-        data: GeoJSONData,
-        default: true,
-        filterBy: &#39;GEOID10&#39;,
-        fill: [&#39;#000000&#39;, &#39;#F2695D&#39;]
-      },
-      {
-        name: &#39;boroughs&#39;,
-        data: GeoJSONData,
-        default: false,
-        filterBy: &#39;boro_name&#39;
-      },
-      ...
-    ]
-  },
-  components: {
-    NycoMap,
-    OtherCmpt,
-  },
-}</code></pre>
-
-<p>Add the component&#39;s markup in your <code>&lt;template&gt; ... &lt;/template&gt;</code>:</p>
-
-<pre><code>&lt;div class=&#39;o-map&#39;&gt;
-  &lt;nyco-map id=&#39;nyco-map-ml&#39; :layers=&#39;layers&#39; :config=&#39;config&#39; style=&#39;height: 400px; width: 500px&#39;&gt;&lt;/nyco-map&gt;
-  &lt;div id=&#39;map-menu&#39; class=&#39;map-menu&#39;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    components: {
+      NycoMap
+    },
+  }
+&lt;/script&gt;</code></pre>
 
 <h3>Dependencies</h3>
 
@@ -308,19 +308,19 @@
       <td><code>containerId</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The <code>id</code> of the container where you want the map to be created.</td>
+      <td>The <code>id</code> of the container where the map is to be created.</td>
     </tr>
     <tr>
       <td><code>legendId</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The <code>id</code> of the container where you want the legend/toggle menu to be created.</td>
+      <td>The <code>id</code> of the container where the legend/toggle menu is to be created.</td>
     </tr>
     <tr>
       <td><code>center</code></td>
       <td align="center"><em>array</em></td>
       <td align="center">optional</td>
-      <td>The inital geographical centerpoint of the map. Default is [0, 0]</td>
+      <td>The initial geographical centerpoint of the map. Default is [0, 0]</td>
     </tr>
     <tr>
       <td><code>zoom</code></td>
@@ -345,7 +345,7 @@
       <td><code>mapType</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The type of map you want to render, can be <code>single</code> or <code>multi</code>.</td>
+      <td>The type of map to be rendered. It can be <code>single</code> or <code>multi</code>.</td>
     </tr>
     <tr>
       <td><code>colors</code></td>
@@ -387,7 +387,7 @@
       <td><code>filterBy</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The column (feature property) you want to filter by when interacting with a shape on the map. This is the value that is displayed in the popup and determines the map shape selection (highlight) on click.</td>
+      <td>The column (feature property) to be filtered when interacting with a polygon shape on the map. This is the value that is displayed in the popup and determines the map shape selection (highlight) on click.</td>
     </tr>
     <tr>
       <td><code>fill</code></td>
@@ -405,7 +405,7 @@
       <td><code>legendColumn</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The column (feature property) you want to filter by when interacting with the legend/menu for a <code>single</code> map type. The unique values of this feature property make up the legend items. All features with matching properties will be highlighted
+      <td>The column (feature property) to be filtered when interacting with the legend/menu for a <code>single</code> map type. The unique values of this feature property make up the legend items. All features with matching properties will be highlighted
         when selected through the legend.</td>
     </tr>
   </tbody>

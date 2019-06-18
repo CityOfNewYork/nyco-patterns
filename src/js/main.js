@@ -11,7 +11,6 @@ import ChartLine from '../objects/charts/chart--line';
 import ChartPie from '../objects/charts/chart--pie';
 import { MapMultiLayer, MapSingleLayer } from './Map';
 import InputAutocomplete from '../elements/inputs/input-autocomplete';
-
 /** import modules here as they are written */
 
 /**
