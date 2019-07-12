@@ -83,7 +83,7 @@
     "chart.js": "^2.8.0",
     "geojson": "^0.5.0",
     "geojson-rewind": "^0.3.1",
-    "lodash-es": "^4.17.11",
+    "lodash-es": "^4.17.14",
     "mapbox-gl": "^0.53.1",
     "svgstore": "^3.0.0-2",
     "vue": "^2.6.6",
