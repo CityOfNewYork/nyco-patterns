@@ -24,11 +24,11 @@
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
     <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Checkboxes | NYCO Patterns</title>
+    <title>Maps | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
-      var VERSION = '1.7.0';
+      var VERSION = '1.6.1';
     </script>
     <noscript>
       <style>
@@ -68,7 +68,7 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v1.7.0</div>
+      <div aria-hidden="true" class="o-header__main-version">v1.6.1</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
@@ -76,10 +76,10 @@
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.7.0">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.6.1">
           <svg aria-hidden="true" class="icon-github-mark icon-small mr-1">
             <use xlink:href="#icon-github-mark"></use>
-          </svg>1.7.0</a>
+          </svg>1.6.1</a>
       </div>
     </div>
   </header>
@@ -106,9 +106,8 @@
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="map">Map</a>
+              <a class="o-navigation__link" href="maps">Maps</a>
               <a class="o-navigation__link" href="navigation">Navigation</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="accessibility">Accessibility</a>
               <a class="o-navigation__link" href="animate">Animate</a>
               <a class="o-navigation__link" href="colors">Colors</a>
               <a class="o-navigation__link" href="toggle">Toggle</a>
@@ -141,9 +140,8 @@
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
             <a class="o-navigation__link" href="header">Header</a>
-            <a class="o-navigation__link" href="map">Map</a>
+            <a class="o-navigation__link" href="maps">Maps</a>
             <a class="o-navigation__link" href="navigation">Navigation</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-            <a class="o-navigation__link" href="accessibility">Accessibility</a>
             <a class="o-navigation__link" href="animate">Animate</a>
             <a class="o-navigation__link" href="colors">Colors</a>
             <a class="o-navigation__link" href="toggle">Toggle</a>
@@ -154,34 +152,40 @@
       </div>
     </aside>
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Checkboxes</h1>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+      <h1 class="m-0 p-0 mt-2">Maps</h1>
+      <p></p>
+      <p>All map source files can be found here: <code>src/objects/map/</code>. Maps are powered by
+        <a href="https://www.mapbox.com/">Mapbox</a>, and require a Mapbox token to initialize on your own project.</p>
+      <section class="pb-4">
+        <div class="mt-4 layout--content">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="default">
-              <a href="#default">Default</a>
+            <h2 class="mt-0" id="map:-multi-source">
+              <a href="#map:-multi-source">Map: multi-source</a>
             </h2>
+            <p>This is a multi-source map, meaning you can use a one or multiple geojson files to generate the different layers displayed on a map. In this example, zipcodes, neighborhoods, and boroughs are each individual geojson files.</p>
+            <p>Each geojson source used should contain only one geometry field.</p>
           </div>
-        </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <label class="checkbox" for="selection">
-              <input id="selection" name="selection" type="checkbox" value="Selection" /><span class="checkbox__label">Selection</span></label>
+          <div>
+            <div class="o-maps" data-js="map-msrc">
+              <nyco-map-msrc :config="config" :layers="layers" id="nyco-map-msrc" style="height: 400px; width: 500px"></nyco-map-msrc>
+              <div class="nyco-map-menu pt-2" id="nyco-map-msrc-menu"></div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
+      <section class="pb-4">
+        <div class="mt-4 layout--content">
           <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="error">
-              <a href="#error">Error</a>
+            <h2 class="mt-0" id="map:-single-source">
+              <a href="#map:-single-source">Map: single-source</a>
             </h2>
+            <p>This map utilizes one source and displays a legend</p>
           </div>
-        </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <label class="checkbox error" for="selection-error">
-              <input id="selection-error" name="selection-error" type="checkbox" value="Selection" /><span class="checkbox__label">Selection</span></label>
+          <div>
+            <div class="o-maps o-maps--relative" data-js="map-ssrc">
+              <nyco-map-ssrc :config="config" :layers="layers" id="nyco-map-ssrc" style="height: 400px; width: 500px"></nyco-map-ssrc>
+              <nav class="map-legend" id="map-legend"></nav>
+            </div>
           </div>
         </div>
       </section>
@@ -190,7 +194,7 @@
   <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.7.0">GitHub Repository</a>
+      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.6.1">GitHub Repository</a>
       <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="products@nycopportunity.nyc.gov&lt;NYC Opportunity&gt;">NYC Opportunity</a>
       <a class="o-footer__nav-link" href="https://tailwindcss.com">Tailwind CSS</a>
       <a class="o-footer__nav-link" href="https://blueprint.cityofnewyork.us">NYC Digital Blueprint</a>
@@ -221,5 +225,9 @@
     nyco.icons();
     nyco.toggle();
     nyco.track();
+  </script>
+  <script type="text/javascript">
+    nyco.map('multi');
+    nyco.map('single');
   </script>
 </body>
