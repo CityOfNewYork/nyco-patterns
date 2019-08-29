@@ -351,8 +351,9 @@
       <td><code>colors</code></td>
       <td align="center"><em>array</em></td>
       <td align="center">optional*</td>
-      <td>The <code>fill-outline</code> and <code>fill</code> color applied to a layer. The <code>colors</code> array is a list of hex value (<em>string</em>) color combinations: <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>. The first value is applied
-        as the <code>fill-outline</code> and the second as the <code>fill</code>. A color combination is applied to a layer at random, so multiple layers may share the same color combination. This attribute overrides the <code>layer.fill</code> attribute.</td>
+      <td>The <code>fill-outline</code> and <code>fill</code> color applied to a layer. The <code>colors</code> array is a list of hex value (<em>string</em>) color combinations: <code>[[&#39;#000000&#39;, &#39;#F2695D&#39;], [&#39;#000000&#39;, &#39;#2F334F&#39;]]</code>.
+        The first value is applied as the <code>fill-outline</code> and the second as the <code>fill</code> (similar to <code>layers.fill</code>). A color combination is applied to a layer at random, so multiple layers may share the same color combination.
+        This attribute overrides the <code>layer.fill</code> attribute when set.</td>
     </tr>
   </tbody>
 </table>
@@ -392,14 +393,14 @@
     <tr>
       <td><code>fill</code></td>
       <td align="center"><em>array</em></td>
-      <td align="center">required*</td>
-      <td>The <code>fill-outline</code> and <code>fill</code> color applied to the layer. The array must contain two hex values (<em>string</em>): <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>. The first value is applied as the <code>fill-outline</code>        and the second as the <code>fill</code>. This attribute is overwritten by the <code>config.colors</code> attribute.</td>
+      <td align="center">required</td>
+      <td>The <code>fill-outline</code> and <code>fill</code> color applied to the layer. The array must contain two hex values (<em>string</em>): <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>. The first value is applied as the <code>fill-outline</code>        and the second as the <code>fill</code>. This attribute is overwritten by the <code>config.colors</code> attribute, if defined.</td>
     </tr>
     <tr>
       <td><code>default</code></td>
-      <td align="center"><em>string</em></td>
-      <td align="center">required</td>
-      <td>This ensures a specific layer is displayed on map load for a <code>multi</code> map type, with multiple layers. Set to <code>true</code> to display layer on map load, set to <code>false</code> or omit otherwise.</td>
+      <td align="center"><em>boolean</em></td>
+      <td align="center">required*</td>
+      <td>Required only for <code>multi</code> map type. This determines which layer is displayed on map load for a <code>multi</code> map type. Set to <code>true</code> to display layer on map load, set to <code>false</code> otherwise.</td>
     </tr>
     <tr>
       <td><code>legendColumn</code></td>
