@@ -38,7 +38,7 @@
           div class='code-block'
             pre
               div
-                = '<link href="' + link_stylesheet + '">';
+                = '<link href="' + link_stylesheet + ' rel="stylesheet" type="text/css">'
 
         p
           | This distribution includes a custom build of the <a href='${link_tailwind_docs}'>Tailwind Utility CSS Framework</a>. Refer to Tailwind CSS docs for full details on utilizing the CSS uitilites to build different types of UIs.
