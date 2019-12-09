@@ -47,9 +47,10 @@
           div class='code-block'
             pre
               div
-                = '<script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated" type="text/javascript"> ';
+                = '<script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated" type="text/javascript"></script> ';
                 span class='code__comment' = '<!-- The feed component uses Promises so this polyfill is needed for IE support -->';
-              div = '<script src="' + this.site.urls.cdn + '/objects/feed/Feed.js" type="text/javascript">';
+              div
+                = '<script src="' + this.site.urls.cdn + '/objects/feed/Feed.js" type="text/javascript"></script>';
 
         p
           | Optionally, but recommended, include the base styling for the feed:
@@ -57,7 +58,8 @@
         p
           div class='code-block'
             pre
-              div = '<link src="' + this.site.urls.cdn + '/objects/feed/feed.css" rel="stylesheet" type="text/css" media="screen">';
+              div
+                = '<link src="' + this.site.urls.cdn + '/objects/feed/feed.css" rel="stylesheet" type="text/css" media="screen">';
 
         p
           | Then, add a container with the feed's id and the execution script with configuration parameters.
