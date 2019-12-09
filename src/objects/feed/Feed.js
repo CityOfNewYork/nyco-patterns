@@ -36,6 +36,7 @@ class Feed {
     // Go through each feed
     _forEach(config.rssUrl, (url, index) => {
       // Make the request
+
       this._request(config, url).then((response) => {
           // Process the data
           data.push(this._process(JSON.parse(response), this._settings));
@@ -284,7 +285,7 @@ Feed.merge = {
     });
 
     // Get unique posts
-    // items = _uniqBy(items, (item) => item.guid);
+    items = _uniqBy(items, (item) => item.guid);
 
     merged.items = _orderBy(items, 'pubDate', 'desc');
 

@@ -181,6 +181,8 @@ function init(feed) {
         },
         render: function(event) {
           event.preventDefault();
+          this.config.feed = this.config.feed.split(',');
+
           new Feed(this.config);
           createEmbed(this.config, production, true);
           createShare(this.config, false);
