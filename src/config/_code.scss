@@ -1,14 +1,39 @@
 
 // Dependencies
-@import 'variables';
+@import 'config/variables';
+
+$colors: map-get($variables, 'colors');
 
 // Declarations
-@mixin inline-code() {
-  color: map-get(map-get($variables, 'colors'), 'primary-blue');
+@mixin code() {
+  display: inline-block;
+
+  @include typeface('code');
+  @include type('code');
+
+  background-color: map-get($colors, 'secondary-white-70t');
+  border: 1px solid map-get($colors, 'secondary-grey-50t');
+  border-radius: 3px;
+}
+
+@mixin code-block() {
+  color: map-get($colors, 'primary-red');
+
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+
+  padding: 16px 16px;
+}
+
+@mixin code-inline() {
+  color: map-get($colors, 'primary-blue');
+
   font-size: 85%;
   font-family: inherit;
   letter-spacing: 0.01em;
-  background-color: map-get(map-get($variables, 'colors'), 'secondary-white');
+
   border-radius: 3px;
   padding: 0.2em 0.4em;
   margin: 0;

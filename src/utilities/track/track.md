@@ -20,7 +20,7 @@ p You can pass any data you would like. However, for Webtrends multitrack a basi
 
 p Additionally, the script will add the path name to the <code>event</code>. For example, the <code>event</code> for the sample click tracking demo on this page is set to "sample-event" so the script will prepend "track" which is the <code>window.location.path</code>. It would then pass "track/sample-event" to Webtrends and Google Analytics.
 
-p Below are examples of passing events to the tracking methods directly;
+Below are examples of passing events to the tracking methods directly;
 
 p
   div class='code-block'
@@ -32,4 +32,4 @@ p
       = '  {"event": "track-click"}\n';
       = ']);\n';
 
-p This uses the <code>.matches()</code> method which will require a polyfill for IE11 (and other older browser) support. The utility does not ship with a polyfill by default. See <a href='https://polyfill.io/v2/docs/features/#Element_prototype_matches'>Element Prototype Matches on MDN</a> for a suitable polyfill.
+This uses the <code>.matches()</code> method which will require a polyfill for IE11 (and other older browser) support. The utility does not ship with a polyfill by default. See <a href='https://polyfill.io/v2/docs/features/#Element_prototype_matches'>Element Prototype Matches on MDN</a> for a suitable polyfill.

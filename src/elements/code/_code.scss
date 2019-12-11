@@ -4,85 +4,47 @@
 
 // Dependencies
 @import 'config/variables';
-@import 'config/fonts';
 @import 'config/code';
 
 $colors: map-get($variables, 'colors');
-$font-sizes: map-get($variables, 'textSizes');
-$font-weights: map-get($variables, 'fontWeights');
 
 // Declarations
 code, pre {
-  display: inline-block;
-}
-
-.code,
-.code-block {
-  font-weight: map-get($font-weights, 'normal');
-  font-size: map-get($font-sizes, 'html');
-  line-height: 1.3;
-  font-family: monospace;
-  background-color: map-get($colors, 'secondary-grey-30t');
-  border: 1px solid map-get($colors, 'secondary-grey-50t');
-  border-radius: 3px;
-}
-
-.code {
-  color: map-get($colors, 'primary-blue');
-  padding: 4px 8px;
-  display: inline-block;
-  overflow: initial;
-  line-height: inherit;
-  max-width: 100%;
-  text-overflow: ellipsis;
+  @include code();
 }
 
 p code, li code {
-  color: map-get($colors, 'primary-blue');
-  font-size: 85%;
-  font-family: inherit;
-  letter-spacing: 0.01em;
-  background-color: map-get($colors, 'secondary-grey-30t');
-  border-radius: 3px;
-  padding: 0.2em 0.4em;
-  margin: 0;
-  display: inline;
+  @include code-inline();
 }
 
 pre {
-  font-family: monospace, monospace;
-  font-size: map-get($font-sizes, 'html');
-  color: map-get($colors, 'primary-red');
-  background-color: map-get($colors, 'secondary-grey-30t');
-  display: block;
-  padding: 16px 16px;
-  border: 1px solid map-get($colors, 'secondary-grey-50t');
-  border-radius: 3px;
-  max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-}
+  @include code-block();
 
-.code-block {
-  color: map-get($colors, 'primary-red');
-  display: inline-block;
-  display: block;
-  max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-  pre {
-    color: inherit;
-    background-color: transparent;
-    margin: 0;
-    padding: 16px 16px;
-    border: none;
+  code {
+    font-family: inherit;
   }
 }
 
-p > code {
-  @include inline-code;
+.code {
+  @include code();
 }
 
 .code__comment {
-  color: map-get(map-get($variables, 'colors'), 'primary-navy-30t');
+  color: map-get($colors, 'primary-navy-30t');
+}
+
+.code-block {
+  @include code();
+  @include code-block();
+
+  padding: 0;
+
+  pre {
+    color: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    margin: 0;
+    padding: 16px;
+    border: none;
+  }
 }

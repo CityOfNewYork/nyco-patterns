@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html class="text-size-0" lang="en">
-
   <head>
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <!--GLOBAL STYLES-->
-    <link href="https://www1.nyc.gov/assets/home/css/css-min/global.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/css-min/module.css" media="screen" rel="stylesheet" type="text/css" />
     <!--PRINT STYLE-->
-    <link href="https://www1.nyc.gov/assets/home/css/print.css" media="print" rel="stylesheet" type="text/css" />
     <!--PAGE SPECIFIC STYLES-->
-    <link href="https://www1.nyc.gov/assets/home/css/modules/status-updates-short.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/modules/status-updates-mini.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/includes/header-agencies.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/modules/news-panel.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/modules/agencies-about-links.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/modules/programs-and-initiatives.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/modules/homepage-hero.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/pages/agencies/index.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
     <!--EXTERNAL STYLES-->
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
     <!--NYCO PATTERNS-->
@@ -39,34 +26,28 @@
     </noscript>
     <script type="text/javascript">
       function load() {
-        document.body.style.visibility = 'visible'
-      };
+        document.body.style.visibility = 'visible';
+      }
 
       function toggleTheme(theme) {
         var stylesheets = document.styleSheets;
 
         for (var i = 0; i < stylesheets.length; i++) {
           var ss = stylesheets[i];
-          ss.disabled = (!ss.disabled && ss.href.indexOf(theme) > -1) ? true : false;
+          ss.disabled = !ss.disabled && ss.href.indexOf(theme) > -1 ? true : false;
         }
       }
       toggleTheme('www1.nyc.gov');
     </script>
   </head>
-
 </html>
-
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <header class="o-header screen-tablet:layout--sidebar">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
-      <h1 class="o-header__main-title"><span class="hidden"></span>
-        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco">
-          <use xlink:href="#icon-logo-nyco"></use>
-        </svg>
-        <svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco">
-          <use xlink:href="#icon-logo-nyco"></use>
-        </svg>
+      <h1 class="o-header__main-title">
+        <span class="hidden"></span>
+        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg><svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg>
       </h1>
       <div aria-hidden="true" class="o-header__main-version">v1.7.0</div>
     </div>
@@ -77,9 +58,9 @@
     <div class="o-header__secondary-version color-dark-background">
       <div>
         <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.7.0">
-          <svg aria-hidden="true" class="icon-github-mark icon-small mr-1">
-            <use xlink:href="#icon-github-mark"></use>
-          </svg>1.7.0</a>
+          <svg aria-hidden="true" class="icon-github-mark icon-small mr-1"><use xlink:href="#icon-github-mark"></use></svg>
+          1.7.0
+        </a>
       </div>
     </div>
   </header>
@@ -87,67 +68,58 @@
     <aside class="o-navigation bg-primary-navy">
       <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
         <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 855px">
-            <div class="text-center px-2">
-              <a class="btn mt-2 mb-2 w-full" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
-            </div>
+          <div class="o-navigation__stick" style="height: 1015px">
+            <nav><a class="o-navigation__link" href="index">Overview</a></nav>
             <nav>
-              <a class="o-navigation__link" href="index">Overview</a>
-            </nav>
-            <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
               <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
               <a class="o-navigation__link" href="icons">Icons</a>
               <a class="o-navigation__link" href="inputs">Inputs</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
               <a class="o-navigation__link" href="tables">Tables</a>
-              <a class="o-navigation__link" href="select">Select</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="select">Select</a>
+              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
               <a class="o-navigation__link" href="charts">Charts</a>
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="header">Header</a>
               <a class="o-navigation__link" href="map">Map</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="navigation">Navigation</a>
+              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
               <a class="o-navigation__link" href="accessibility">Accessibility</a>
               <a class="o-navigation__link" href="animate">Animate</a>
               <a class="o-navigation__link" href="colors">Colors</a>
-              <a class="o-navigation__link" href="toggle">Toggle</a>
-              <a class="o-navigation__link" href="track">Track</a>
               <a class="o-navigation__link" href="type">Type</a>
             </nav>
           </div>
         </div>
       </div>
       <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
-        <div class="o-navigation__banner color-dark-background">
-          <h1 class="o-navigation__banner-title">Patterns</h1>
-        </div>
+        <div class="o-navigation__banner color-dark-background"><h1 class="o-navigation__banner-title">Patterns</h1></div>
         <div class="o-navigation__nav animated">
-          <div class="text-center">
-            <a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
-          </div>
+          <div class="text-center"><a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a></div>
+          <nav><a class="o-navigation__link" href="index">Overview</a></nav>
           <nav>
-            <a class="o-navigation__link" href="index">Overview</a>
-          </nav>
-          <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
             <a class="o-navigation__link" href="buttons">Buttons</a>
             <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
             <a class="o-navigation__link" href="icons">Icons</a>
             <a class="o-navigation__link" href="inputs">Inputs</a>
             <a class="o-navigation__link" href="layouts">Layouts</a>
             <a class="o-navigation__link" href="tables">Tables</a>
-            <a class="o-navigation__link" href="select">Select</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+            <a class="o-navigation__link" href="select">Select</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
             <a class="o-navigation__link" href="charts">Charts</a>
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
             <a class="o-navigation__link" href="header">Header</a>
             <a class="o-navigation__link" href="map">Map</a>
-            <a class="o-navigation__link" href="navigation">Navigation</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="navigation">Navigation</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
             <a class="o-navigation__link" href="accessibility">Accessibility</a>
             <a class="o-navigation__link" href="animate">Animate</a>
             <a class="o-navigation__link" href="colors">Colors</a>
-            <a class="o-navigation__link" href="toggle">Toggle</a>
-            <a class="o-navigation__link" href="track">Track</a>
             <a class="o-navigation__link" href="type">Type</a>
           </nav>
         </div>
@@ -156,17 +128,16 @@
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
       <h1 class="m-0 p-0 mt-2">Map</h1>
       <p></p>
-      <p>All map source files can be found within <code>src/objects/map/</code>.</p>
+      <p>
+        All map source files can be found within
+        <code>src/objects/map/</code>
+        .
+      </p>
       <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="multi-layer-with-toggle-links">
-              <a href="#multi-layer-with-toggle-links">Multi-layer with toggle links</a>
-            </h2>
-            <p>The <code>multi</code> map type accepts one or more GeoJSON layers. When a single layer is set for this object, the menu (<code>nyco-map-menu</code>) is omitted.</p>
-            <p>In this example, zipcodes, neighborhoods, and boroughs are each individual GeoJSON Feature Collection objects. Click events on the polygon shapes in the map will display information based on the <code>filterBy</code> attribute set for the
-              layer.</p>
-            <p>To utilize this map, set <code>mapType: 'multi'</code> in your <code>config</code> object.</p>
+          <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="multi-layer-with-toggle-links"><a href="#multi-layer-with-toggle-links">Multi-layer with toggle links</a></h2>
+            
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
@@ -182,13 +153,9 @@
       </section>
       <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="single-layer-with-legend">
-              <a href="#single-layer-with-legend">Single-layer with legend</a>
-            </h2>
-            <p>The <code>single</code> map type accepts a single GeoJSON layer and displays a legend based on the defined feature property (<code>legendColumn</code> attribute).</p>
-            <p>In this example, the layer can be filtered by selecting a borough from the legend or by clicking a polygon shape on the map. The information displayed in the popup is based on the <code>filterBy</code> attribute set for the layer.</p>
-            <p>To utilize this map, set <code>mapType: 'single'</code> in the <code>config</code> object.</p>
+          <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
+            <h2 class="mt-0" id="single-layer-with-legend"><a href="#single-layer-with-legend">Single-layer with legend</a></h2>
+            
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
@@ -204,26 +171,46 @@
       </section>
       <section class="pb-4">
         <div class="layout--content">
-          <h2 class="mt-0" id="usage">
-            <a href="#usage">Usage</a>
-          </h2>
-          <div>
-            <div class="my-0"><h3>Setup</h3>
+          <h2 class="mt-0" id="usage"><a href="#usage">Usage</a></h2>
+          <div><div class="my-0"><h3>Setup</h3>
 
-<p>The map is a Vue component powered by
-  <a href="https://www.mapbox.com/">Mapbox</a> and requires a Mapbox <code>access token</code> to initialize in a project. Follow the Mapbox documentation at this
-  <a href="https://docs.mapbox.com/help/how-mapbox-works/access-tokens/#creating-and-managing-access-tokens">link</a> to create an <code>access token</code>.</p>
+<p>
+  The map is a Vue component powered by
+  <a href="https://www.mapbox.com/">Mapbox</a>
+  and requires a Mapbox
+  <code>access token</code>
+  to initialize in a project. Follow the Mapbox documentation at this
+  <a href="https://docs.mapbox.com/help/how-mapbox-works/access-tokens/#creating-and-managing-access-tokens">link</a>
+  to create an
+  <code>access token</code>
+  .
+</p>
 
-<p>Note: If a <code>403 (Forbidden)</code> error from Mapbox is encountered, make sure the project is using a valid Mapbox <code>access token</code>.</p>
+<p>
+  Note: If a
+  <code>403 (Forbidden)</code>
+  error from Mapbox is encountered, make sure the project is using a valid Mapbox
+  <code>access token</code>
+  .
+</p>
 
-<p>Both map types expect the layer source to be GeoJSON. All GeoJSON source layers used to render a map object should be valid Feature Collection&#39;s and contain only one geometry field per feature.
-  <a href="https://geojson.org/">Learn more about GeoJSON</a>.</p>
+<p>
+  Both map types expect the layer source to be GeoJSON. All GeoJSON source layers used to render a map object should be valid Feature Collection&#39;s and contain only one geometry field per feature.
+  <a href="https://geojson.org/">Learn more about GeoJSON</a>
+  .
+</p>
 
 <p>Note: If the map loads but the layer doesn&#39;t display, make sure the GeoJSON is valid and the layer object is properly configured.</p>
 
 <h3>Installation</h3>
 
-<p>Install the <code>nyco-patterns</code> npm package by running <code>npm install nyco-patterns</code> in the project root directory.</p>
+<p>
+  Install the
+  <code>nyco-patterns</code>
+  npm package by running
+  <code>npm install nyco-patterns</code>
+  in the project root directory.
+</p>
 
 <p>Example of Component Usage in a Vue App:</p>
 
@@ -279,13 +266,31 @@
 
 <h3>Dependencies</h3>
 
-<p>This component depends on
-  <a href="https://docs.mapbox.com/mapbox-gl-js/api/">Mapbox GL JS</a>.</p>
+<p>
+  This component depends on
+  <a href="https://docs.mapbox.com/mapbox-gl-js/api/">Mapbox GL JS</a>
+  .
+</p>
 
 <h3>Map Configuration</h3>
 
-<p>The <code>config</code> attributes <code>APIKey</code>, <code>containerId</code>, <code>center</code>, <code>zoom</code>, and <code>style</code> are all Mapbox attributes. You can read more about these in their
-  <a href="https://docs.mapbox.com/mapbox-gl-js/api/">API Reference docs</a>.</p>
+<p>
+  The
+  <code>config</code>
+  attributes
+  <code>APIKey</code>
+  ,
+  <code>containerId</code>
+  ,
+  <code>center</code>
+  ,
+  <code>zoom</code>
+  , and
+  <code>style</code>
+  are all Mapbox attributes. You can read more about these in their
+  <a href="https://docs.mapbox.com/mapbox-gl-js/api/">API Reference docs</a>
+  .
+</p>
 
 <table>
   <thead>
@@ -301,20 +306,31 @@
       <td><code>APIKey</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The Mapbox Access Token (
-        <a href="https://docs.mapbox.com/help/how-mapbox-works/access-tokens/">setup</a>).</td>
+      <td>
+        The Mapbox Access Token (
+        <a href="https://docs.mapbox.com/help/how-mapbox-works/access-tokens/">setup</a>
+        ).
+      </td>
     </tr>
     <tr>
       <td><code>containerId</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The <code>id</code> of the container where the map is to be created.</td>
+      <td>
+        The
+        <code>id</code>
+        of the container where the map is to be created.
+      </td>
     </tr>
     <tr>
       <td><code>legendId</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The <code>id</code> of the container where the legend/toggle menu is to be created.</td>
+      <td>
+        The
+        <code>id</code>
+        of the container where the legend/toggle menu is to be created.
+      </td>
     </tr>
     <tr>
       <td><code>center</code></td>
@@ -332,34 +348,68 @@
       <td><code>style</code></td>
       <td align="center"><em>object/string</em></td>
       <td align="center">required</td>
-      <td>The map&#39;s Mapbox style. This must be an a JSON object conforming to the schema described in the
-        <a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/">Mapbox Style Specification</a>, or a URL to such JSON.</td>
+      <td>
+        The map&#39;s Mapbox style. This must be an a JSON object conforming to the schema described in the
+        <a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/">Mapbox Style Specification</a>
+        , or a URL to such JSON.
+      </td>
     </tr>
     <tr>
       <td><code>disableScroll</code></td>
       <td align="center"><em>boolean</em></td>
       <td align="center">optional</td>
-      <td>Set to <code>true</code> to disable map zoom when using scroll.</td>
+      <td>
+        Set to
+        <code>true</code>
+        to disable map zoom when using scroll.
+      </td>
     </tr>
     <tr>
       <td><code>mapType</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The type of map to be rendered. It can be <code>single</code> or <code>multi</code>.</td>
+      <td>
+        The type of map to be rendered. It can be
+        <code>single</code>
+        or
+        <code>multi</code>
+        .
+      </td>
     </tr>
     <tr>
       <td><code>colors</code></td>
       <td align="center"><em>array</em></td>
       <td align="center">optional*</td>
-      <td>The <code>fill-outline</code> and <code>fill</code> color applied to a layer. The <code>colors</code> array is a list of hex value (<em>string</em>) color combinations: <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>. The first value is applied
-        as the <code>fill-outline</code> and the second as the <code>fill</code>. A color combination is applied to a layer at random, so multiple layers may share the same color combination. This attribute overrides the <code>layer.fill</code> attribute.</td>
+      <td>
+        The
+        <code>fill-outline</code>
+        and
+        <code>fill</code>
+        color applied to a layer. The
+        <code>colors</code>
+        array is a list of hex value (
+        <em>string</em>
+        ) color combinations:
+        <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>
+        . The first value is applied as the
+        <code>fill-outline</code>
+        and the second as the
+        <code>fill</code>
+        . A color combination is applied to a layer at random, so multiple layers may share the same color combination. This attribute overrides the
+        <code>layer.fill</code>
+        attribute.
+      </td>
     </tr>
   </tbody>
 </table>
 
 <h3>Layer Configuration</h3>
 
-<p>The <code>layers</code> array requires at least one layer object to render. The object options are below:</p>
+<p>
+  The
+  <code>layers</code>
+  array requires at least one layer object to render. The object options are below:
+</p>
 
 <table>
   <thead>
@@ -375,7 +425,15 @@
       <td><code>name</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The layer name, also set as the Mapbox layer <code>id</code> and <code>source</code>. For the <code>multi</code> map, this value is used to generate the map menu (toggle links).</td>
+      <td>
+        The layer name, also set as the Mapbox layer
+        <code>id</code>
+        and
+        <code>source</code>
+        . For the
+        <code>multi</code>
+        map, this value is used to generate the map menu (toggle links).
+      </td>
     </tr>
     <tr>
       <td><code>data</code></td>
@@ -393,24 +451,51 @@
       <td><code>fill</code></td>
       <td align="center"><em>array</em></td>
       <td align="center">required*</td>
-      <td>The <code>fill-outline</code> and <code>fill</code> color applied to the layer. The array must contain two hex values (<em>string</em>): <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>. The first value is applied as the <code>fill-outline</code>        and the second as the <code>fill</code>. This attribute is overwritten by the <code>config.colors</code> attribute.</td>
+      <td>
+        The
+        <code>fill-outline</code>
+        and
+        <code>fill</code>
+        color applied to the layer. The array must contain two hex values (
+        <em>string</em>
+        ):
+        <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>
+        . The first value is applied as the
+        <code>fill-outline</code>
+        and the second as the
+        <code>fill</code>
+        . This attribute is overwritten by the
+        <code>config.colors</code>
+        attribute.
+      </td>
     </tr>
     <tr>
       <td><code>default</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>This ensures a specific layer is displayed on map load for a <code>multi</code> map type, with multiple layers. Set to <code>true</code> to display layer on map load, set to <code>false</code> or omit otherwise.</td>
+      <td>
+        This ensures a specific layer is displayed on map load for a
+        <code>multi</code>
+        map type, with multiple layers. Set to
+        <code>true</code>
+        to display layer on map load, set to
+        <code>false</code>
+        or omit otherwise.
+      </td>
     </tr>
     <tr>
       <td><code>legendColumn</code></td>
       <td align="center"><em>string</em></td>
       <td align="center">required</td>
-      <td>The column (feature property) to be filtered when interacting with the legend/menu for a <code>single</code> map type. The unique values of this feature property make up the legend items. All features with matching properties will be highlighted
-        when selected through the legend.</td>
+      <td>
+        The column (feature property) to be filtered when interacting with the legend/menu for a
+        <code>single</code>
+        map type. The unique values of this feature property make up the legend items. All features with matching properties will be highlighted when selected through the legend.
+      </td>
     </tr>
   </tbody>
-</table></div>
-          </div>
+</table>
+</div></div>
         </div>
       </section>
     </article>
@@ -419,26 +504,33 @@
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
       <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.7.0">GitHub Repository</a>
-      <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="products@nycopportunity.nyc.gov&lt;NYC Opportunity&gt;">NYC Opportunity</a>
+      <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">NYC Opportunity</a>
       <a class="o-footer__nav-link" href="https://tailwindcss.com">Tailwind CSS</a>
       <a class="o-footer__nav-link" href="https://blueprint.cityofnewyork.us">NYC Digital Blueprint</a>
     </nav>
     <div></div>
     <div class="o-footer__info">
-      <a href="http://nyc.gov/opportunity" title="products@nycopportunity.nyc.gov&lt;NYC Opportunity&gt;">
-        <svg aria-hidden="true" class="icon-logo-secondary o-footer__logo text-base-white" style="height: 52px !important">
-          <use xlink:href="#icon-logo-secondary"></use>
-        </svg>
+      <a href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
+        <svg aria-hidden="true" class="icon-logo-secondary o-footer__logo text-base-white" style="height: 52px !important"><use xlink:href="#icon-logo-secondary"></use></svg>
       </a>
-      <p>NYC Opportunity is the
-        <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
-        <a href='https://twitter.com/nycopportunity'
-          target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
-        <a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
-        <a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
-        <a href='https://github.com/orgs/CityOfNewYork/teams/nycopportunity' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
-      <small>© City of New York, 2019 All Rights Reserved.
-        <br>NYC is a trademark and service mark of the City of New York.</small>
+      <p>
+        NYC Opportunity is the
+        <a href="http://nyc.gov/opportunity">New York City Mayor's Office for Economic Opportunity</a>
+        . We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
+        <a href="https://twitter.com/nycopportunity" target="_blank" rel="nofollow noopener">Twitter</a>
+        ,&nbsp;
+        <a href="https://www.facebook.com/NYCOpportunity/" target="_blank" rel="nofollow noopener">Facebook</a>
+        ,&nbsp;
+        <a href="https://medium.com/@nycopportunity" target="_blank" rel="nofollow noopener">Medium</a>
+        , and&nbsp;
+        <a href="https://github.com/orgs/CityOfNewYork/teams/nycopportunity" target="_blank" rel="nofollow noopener" title="Viewable by github.com/orgs/CityOfNewYork/ members.">Github</a>
+        .
+      </p>
+      <small>
+        © City of New York, 2019 All Rights Reserved.
+        <br />
+        NYC is a trademark and service mark of the City of New York.
+      </small>
     </div>
   </footer>
   <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch,Promise"></script>

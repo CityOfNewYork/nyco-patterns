@@ -9,7 +9,7 @@
             a href='#${this.slug}'
               = this.title;
 
-        = partial(`../${this.path}.md`);
+        = `md{{ ../${this.path}.md }}`
 
     div class='${class_demo_col2}'
       div class='${class_demo_colb}'

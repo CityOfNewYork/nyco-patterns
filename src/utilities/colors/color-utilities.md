@@ -1,4 +1,5 @@
-p You can use every color as a utility class for static and hover states. These are the prefixes that are available;
+You can use every color as a utility class for static and hover states. These are the prefixes that are available;
+
 p
   code class='code' = 'bg-{ color }'
   = '   =   Background color';

@@ -1,0 +1,23 @@
+@import 'config/variables';
+@import 'elements/code/code';
+@import 'elements/tables/tables';
+
+.o-content {
+  display: block;
+
+  pre {
+    @include code-block;
+  }
+
+  pre, .code-block {
+    margin-bottom: map-get($variables, 'grid') * 2;
+  }
+
+  p code {
+    @include code-inline;
+  }
+
+  table {
+    @include tables;
+  }
+}

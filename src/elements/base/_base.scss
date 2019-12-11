@@ -46,3 +46,9 @@ a {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}

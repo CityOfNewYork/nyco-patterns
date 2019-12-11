@@ -3,7 +3,7 @@
 @import 'config/type';
 @import 'config/direction';
 
-$fonts: map-get($variables, 'fonts');
+$fonts: map-get($variables, 'fontFamily');
 
 html, body {
   @include type('html') {

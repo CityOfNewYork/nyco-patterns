@@ -5,14 +5,12 @@
 aside class='o-navigation bg-primary-navy'
   div class='o-navigation__wrap color-mid-background hidden screen-tablet:flex'
     div class='o-navigation__nav'
-      div class='o-navigation__stick' style='height: 855px'
-        div class='text-center px-2'
-          a class='btn mt-2 mb-2 w-full' data-theme='www1.nyc.gov' onclick='toggleTheme(event.target.dataset.theme)'
-            | nyc.gov styles
+      div class='o-navigation__stick' style='height: 1015px'
 
         - class_nav = '';
         - class_nav_link_header = 'o-navigation__link-header text-primary-blue-70t border-primary-blue-30t';
         - class_nav_link = 'o-navigation__link';
+
         = partial('../../views/partials/nav.mixin.slm');
         = mixin('nav');
 

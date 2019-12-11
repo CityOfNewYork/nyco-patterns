@@ -1,4 +1,4 @@
-p Screen views can also be tracked for single page applications. The third data parameter will only be used for Webtrends.
+Screen views can also be tracked for single page applications. The third data parameter will only be used for Webtrends.
 
 p
   div class='code-block'

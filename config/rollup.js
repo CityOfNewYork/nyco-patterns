@@ -2,13 +2,13 @@
  * Dependencies
  */
 
-import resolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
-import vue from 'rollup-plugin-vue';
-import buble from 'rollup-plugin-buble';
-import commonjs from 'rollup-plugin-commonjs';
-// import replace from 'rollup-plugin-replace';
-// import eslint from 'rollup-plugin-eslint';
+// import alias from 'rollup-plugin-alias';          // Define require aliases when bundling packages with Rollup.
+import resolve from 'rollup-plugin-node-resolve'; // Locate modules using the Node resolution algorithm, for using third party modules in node_modules.
+import commonjs from 'rollup-plugin-commonjs';    // Convert CommonJS modules to ES6, so they can be included in a Rollup bundle
+import vue from 'rollup-plugin-vue';              // Roll .vue files.
+import babel from 'rollup-plugin-babel';          // Transpile source code.
+import buble from 'rollup-plugin-buble';          // Convert ES2015 with buble.
+import replace from 'rollup-plugin-replace';      // Replace content while bundling.
 
 /**
  * Config
@@ -20,14 +20,29 @@ const rollup = {
   format: 'iife',
   strict: true,
   plugins: [
-    // eslint(), TODO: ES lint is throwing errors, it needs to be configured for ES6
-    resolve(),
+    babel({
+      exclude: 'node_modules/**'
+    }),
+    resolve({
+      browser: true,
+      customResolveOptions: {
+        moduleDirectory: 'node_modules'
+      }
+    }),
+    replace({
+      'process.env.NODE_ENV': `'${process.env.NODE_ENV}'`,
+      'SCREEN_DESKTOP': 960,
+      'SCREEN_TABLET': 768,
+      'SCREEN_MOBILE': 480,
+      'SCREEM_SM_MOBILE': 400
+    }),
     commonjs(),
     vue(),
-    buble(),
-    babel({
-      exclude: '../node_modules/**'
-    }),
+    buble({
+      transforms: {
+        forOf: false
+      }
+    })
   ]
 };
 

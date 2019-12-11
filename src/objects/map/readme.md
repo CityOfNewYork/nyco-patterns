@@ -1,4 +1,4 @@
-###Setup
+### Setup
 
 The map is a Vue component powered by [Mapbox](https://www.mapbox.com/) and requires a Mapbox `access token` to initialize in a project. Follow the Mapbox documentation at this [link](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/#creating-and-managing-access-tokens) to create an `access token`.
 
@@ -8,7 +8,7 @@ Both map types expect the layer source to be GeoJSON. All GeoJSON source layers 
 
 Note: If the map loads but the layer doesn't display, make sure the GeoJSON is valid and the layer object is properly configured.
 
-###Installation
+### Installation
 
 Install the `nyco-patterns` npm package by running `npm install nyco-patterns` in the project root directory.
 
@@ -64,11 +64,11 @@ Example of Component Usage in a Vue App:
       }
     </script>
 
-###Dependencies
+### Dependencies
 
 This component depends on [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/).
 
-###Map Configuration
+### Map Configuration
 
 The `config` attributes `APIKey`, `containerId`, `center`, `zoom`, and `style` are all Mapbox attributes. You can read more about these in their [API Reference docs](https://docs.mapbox.com/mapbox-gl-js/api/).
 
@@ -84,7 +84,7 @@ Option          | Type        | Importance | Description
 `mapType`       | *string*       | required   | The type of map to be rendered. It can be `single` or `multi`.
 `colors`       | *array*       | optional*  | The `fill-outline` and `fill` color applied to a layer. The `colors` array is a list of hex value (*string*) color combinations: `['#000000', '#F2695D']`. The first value is applied as the `fill-outline` and the second as the `fill`. A color combination is applied to a layer at random, so multiple layers may share the same color combination. This attribute overrides the `layer.fill` attribute.
 
-###Layer Configuration
+### Layer Configuration
 
 The `layers` array requires at least one layer object to render. The object options are below:
 

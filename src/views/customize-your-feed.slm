@@ -21,87 +21,65 @@
   h1 class='${class_demo_headers}' Customize your feed
 
   section class='${class_demo}'
-
     div class='${class_demo_col1}'
       div class='${class_demo_cola}'
+        form class='border border-solid border-primary-blue-30t bg-secondary-white-70t p-4 mb-4' method='get'
+          div class='mb-2'
+            label class='font-bold' for='js-embed' Embeddable Snippet
 
-        h2#how-to class='mt-0'
-          a href='#how-to' How-to
+            p Copy and paste the following code into your page to embed the Feed.
 
-        form#js-controls class='control-form m-0' method='get'
+            div
+              textarea#js-embed class='w-full'
+                = '{{ embed }}';
 
-          p
-            | Edit the variables below then click render to display an updated feed with your own configuration. For details on all of the configuration parameters and advanced documentation <a href='feed#configuration'>refer to the Feed component documentation here</a>.
+          div class='mb-2'
+            label class='font-bold' for='js-share' Share
 
-          button class='btn btn-form-submit mb-4' v-on:click='render' Render
+            p Copy the following url to share or save customized Feed settings.
 
-          h3#variables
-            a href='#variables' Variables
+            div
+              input#js-share class='w-full' data-js-share-base='${this.site.urls.production}'
 
-          fieldset v-for='item, name in configDefault'
+          div#js-controls
+            h3#variables
+              a href='#customize' Customize
 
-            / If the setting is an array
-            div v-if='Array.isArray(item)' class='pb-2'
-              div class='control-group flex items-center'
-                code class='code mr-2'
-                  = '{{ name }}';
-                  | &nbsp;
-                  span class='code__comment' title='Default type'
-                    = 'array';
-                label class='control-label' style='margin: 0 !important'
-                    input type='text' v-bind:name='name' v-bind:id='name' v-bind:value='config[name]' v-on:change='config[name] = $event.target.value.split(",")'
-                span class='ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1' v-bind:title='docs[name]'
-                  | ?
+            p Edit the variables below then click render (or press the return key) to display an updated feed with your own configuration.
 
-            / if the setting is a string or number
-            div v-else-if='typeof item == "string" || !isNaN(item)' class='pb-2'
-              div class='control-group flex items-center'
-                code class='code mr-2'
-                  = '{{ name }}';
-                  | &nbsp;
-                  span class='code__comment' title='Default type'
-                    = '{{ typeof item }}';
-                label class='control-label' style='margin: 0 !important'
-                  input type='text' v-bind:name='name' v-bind:id='name' v-model='config[name]'
-                span class='ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1' v-bind:title='docs[name]'
-                  | ?
+            fieldset v-for='item, name in configDefault'
+              / if the setting is a string, number, or array
+              div v-if='typeof item == "string" || !isNaN(item) || Array.isArray(item)' class='pb-2'
+                label
+                  span class='font-bold' = '{{ name }}'
+                  em = ' ({{ typeof item }})';
 
-            / If the setting is an object
-            div v-else-if='typeof item === "object"'
-              div v-for='value, key in item' class='pb-2'
-                div class='control-group flex items-center'
-                  code class='code mr-2'
-                    = '{{ name }}.{{ key }}';
-                    | &nbsp;
-                    span class='code__comment' title='Default type'
-                      = '{{ typeof item[key] }}';
-                  label class='control-label' style='margin: 0 !important'
-                    input type='text' v-bind:name='name + value' v-bind:id='name + value' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)'
-                  span class='ml-1 bg-primary-blue border-0 rounded-full text-base-white px-1' v-bind:title='docs[name][key]'
-                    | ?
-                    span style='display:none' = '{{ docs[name][key] }}'
+                p = '{{ docs[name] }}';
 
-          button class='btn btn-form-submit' v-on:click='render' Render
+                div
+                  input v-if='Array.isArray(item)' class='w-full' type='text' v-bind:name='name' v-bind:id='name' v-bind:value='config[name]' v-on:change='config[name] = $event.target.value.split(",")' v-bind:placeholder='configDefault[name].toString()'
+                  input v-else='' class='w-full' type='text' v-bind:name='name' v-bind:id='name' v-model='config[name]' v-bind:placeholder='configDefault[name].toString()'
+
+              / If the setting is an object
+              div v-else-if='typeof item === "object"' class='mb-3'
+                h4 v-bind:id='"#config-" + name'
+                  a v-bind:href='"#config-" + name' = '{{ name }}';
+
+                div v-for='value, key in item' class='pb-2'
+                  label v-bind:for='name + key'
+                    span class='font-bold' = '{{ name }}.{{ key }}'
+                    em = ' ({{ typeof item[key] }})';
+
+                  p = '{{ docs[name][key] }}';
+
+                  div
+                    textarea v-if='name === "templates"' class='w-full' v-bind:name='name + key' v-bind:id='name + key' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)' v-bind:placeholder='configDefault[name][key].toString()'
+                    input v-else='' class='w-full' type='text' v-bind:name='name + key' v-bind:id='name + key' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)' v-bind:placeholder='configDefault[name][key].toString()'
+
+            button class='btn btn-form-submit' v-on:click='render' Render
 
     div class='${class_demo_col2}'
       div class='${class_demo_colb}'
-
-        h2#your-feed class='mt-0'
-          a href='#your-feed' Your Feed
-
-        form class='control-form'
-          p
-            | Copy and paste the following code into your page to embed this customized Feed:
-
-          textarea#js-embed
-            = '{{ embed }}';
-
-        form class='control-form mb-4'
-          p
-            | Copy the following url to share or save these customized Feed settings:
-
-          input#js-share data-js-share-base='${this.site.urls.production}'
-
         div class='border-8 p-4 border-secondary-white'
           = mixin('feed-demo');
 

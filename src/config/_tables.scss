@@ -1,7 +1,7 @@
 @import 'config/variables';
 @import 'config/fonts';
 
-$colors: map-get($variables, 'colors');
+$colors: $colors;
 $grid: map-get($variables, 'grid');
 
 @mixin tables {
@@ -36,8 +36,8 @@ $grid: map-get($variables, 'grid');
 
   // code style override
   code, pre {
-    font-size: map-get($font-sizes, 'h5');
-    font-weight: map-get(map-get($variables, 'fontWeights'), 'bold');
+    font-size: map-get(map-get($variables, 'fontSize'), 'h5');
+    font-weight: map-get(map-get($variables, 'fontWeight'), 'bold');
     color: map-get($colors, 'primary-blue');
   }
 }

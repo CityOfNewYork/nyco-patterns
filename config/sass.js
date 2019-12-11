@@ -16,14 +16,15 @@ const sass = {
   ]
 };
 
-const modules = [
+module.exports = [
   {
     file: './src/scss/patterns-default.scss',
     outDir: './dist/styles/',
     outFile: 'nyco-patterns-default.css',
     sourceMapEmbed: sass.sourceMapEmbed,
     precision: sass.precision,
-    includePaths: sass.includePaths
+    includePaths: sass.includePaths,
+    devModule: true
   },
   {
     file: './src/scss/_tailwind.scss',
@@ -75,5 +76,3 @@ const modules = [
     includePaths: sass.includePaths
   }
 ];
-
-module.exports = modules;

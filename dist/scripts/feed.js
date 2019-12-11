@@ -7,8 +7,8 @@ var production = {
 
 var demonstration = {
   polyfill: production.polyfill,
-  module: 'objects/feed/Feed.js',
-  styles: 'objects/feed/feed.css'
+  module: 'objects/feed/Feed.js'// ,
+  // styles: 'objects/feed/feed.css'
 };
 
 var configPrefix = '#NYCO';
@@ -125,6 +125,7 @@ function decodeConfig(hash) {
       hash = hash.replace(configPrefix, '');
       return JSON.parse(atob(lzw_decode(decodeURI(hash))));
     }
+
     return false;
   } catch(error) {
     console.warn(error);
@@ -177,13 +178,14 @@ function init(feed) {
           if (!this.config[name]) {
             this.config[name] = {}
           }
+
           this.config[name][key] = value;
         },
         render: function(event) {
           event.preventDefault();
-          this.config.feed = this.config.feed.split(',');
-
+          // this.config.feed = this.config.feed.split(',');
           new Feed(this.config);
+
           createEmbed(this.config, production, true);
           createShare(this.config, false);
         }

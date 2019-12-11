@@ -1,10 +1,10 @@
 
-- for key in this.vars.icons
+- for key in this.variables.icons
 
   - href = key
-  - for i in this.vars.iconVariants
-    - if href.indexOf(this.vars.iconVariants[i]) > 0
-      - href = href.replace(this.vars.iconVariants[i], '')
+  - for i in this.variables.iconVariants
+    - if href.indexOf(this.variables.iconVariants[i]) > 0
+      - href = href.replace(this.variables.iconVariants[i], '')
 
   div class='flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4'
     div class='w-full'

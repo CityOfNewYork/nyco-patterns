@@ -1,6 +1,6 @@
 @import 'config/variables';
 
-$font-weights: map-get($variables, 'fontWeights');
+$font-weights: map-get($variables, 'fontWeight');
 $font-weight-bold: map-get($font-weights, bold);
 
 @mixin font-smooth() {

@@ -1,1 +1,1 @@
-p Adding <code>hidden:overflow animated</code> to the target element will animate the max-height property of the target element.
+Adding <code>hidden:overflow animated</code> to the target element will animate the max-height property of the target element.

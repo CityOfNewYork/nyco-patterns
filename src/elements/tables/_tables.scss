@@ -1,4 +1,5 @@
 @import 'config/tables';
+@import 'config/screens';
 
 @include screens {
   @include table-selectors($variant);
