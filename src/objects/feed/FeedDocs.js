@@ -12,12 +12,12 @@ class FeedDocs {
 
 FeedDocs.default = {
   feed: 'Required. string or array of strings. This may either be one RSS feed or an array of feeds. Arrays of feeds will be combined and posts will be ordered by date. Currently, this only works with Medium RSS feeds.',
-  selector: '"#js-feed"(default) or other string. The DOM element selector for your feed. The inner html of this element will be replaced with the feed.',
-  type: '"medium"(default) or other string. The feed type. Currently, only Medium feeds are supported so this shouldn\'t change.',
+  selector: '"#js-feed" (default) or other string. The DOM element selector for your feed. The inner html of this element will be replaced with the feed.',
+  type: '"medium" (default) or other string. The feed type. Currently, only Medium feeds are supported so this shouldn\'t change.',
   title: 'The title of the feed that appears in the header. By default this uses the feed\'s title. However, if using displaying multiple fields this should be set. Otherwise, it will use the last feed title that was loaded.',
   titleUrl: 'The url that the title links to. By default this uses the feed\'s url. However, if using displaying multiple fields this should be set. Otherwise, it will use the last feed url that was loaded.',
   profileImg: 'The url to the profile image. By default this uses the feed\'s profile image. However, if using displaying multiple fields this should be set.  Otherwise, it will use the last feed image that was loaded.',
-  fontSize: 'Any valid css font-size value and unit (em, px, %, etc.). Set this to a smaller percentage (say, 85%) to make the feed appear more compact in smaller columns',
+  fontSize: 'Any valid css font-size value and unit (em, px, %, etc.). Set this to a smaller percentage (say, 85%) to make the feed appear more compact in smaller columns.',
   ratioProfile: 'array of two strings. Pixel numbers without "px" unit. Image source attribute width and height for the account avatar.',
   postBorderColor: 'Any valid css border-color value. Set the color of the borders in the feed. All of the colors in the feed will inherit the style of the page except for the borders between cards. This may be any standard CSS color variable.',
   postImgHeight: 'Pixel value with "px" unit. CSS height of the post image. The width of the image defaults to 100% the width of the post.',
@@ -46,8 +46,8 @@ FeedDocs.default = {
     posts: 'The posts loop including the posts template.',
     closer: 'The closing template tag or wrapper of the entire feed.'
   },
-  log: 'false(default) or true. Enables logging data to the console. You will want this turned off in every case unless you are creating a template and need to see the data being passed to it.',
-  unique: 'false(default) or true. When using multiple feeds some Medium articles can be duplicated between publications. If you want unique posts by title switch this to true. There is no prioritization of which post will show up.'
+  log: 'false (default) or true. Enables logging data to the console. You will want this turned off in every case unless you are creating a template and need to see the data being passed to it.',
+  unique: 'true (default) or true. When using multiple feeds some Medium articles can be duplicated between publications. If you want unique posts by title switch this to true. There is no prioritization of which post will show up.'
 };
 
 export default FeedDocs;

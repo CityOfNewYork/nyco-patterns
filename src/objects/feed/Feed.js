@@ -36,7 +36,6 @@ class Feed {
     // Go through each feed
     _forEach(config.rssUrl, (url, index) => {
       // Make the request
-
       this._request(config, url).then((response) => {
           // Process the data
           data.push(this._process(JSON.parse(response), this._settings));
@@ -104,7 +103,7 @@ class Feed {
    * @return {object}          The merged feed data
    */
   _merge(data, settings) {
-    return Feed.merge[settings.type](data);
+    return Feed.merge[settings.type](data, settings);
   }
 
   /**
@@ -191,10 +190,10 @@ Feed.templates = {
                 '<%- post.title %>',
               '</a>',
             '</h4>',
-            '<span class="c-feed-item__date <%- settings.classes.date %>" ',
+            '<p class="c-feed-item__date <%- settings.classes.date %>" ',
                   'title="<%- settings.postDateTitle %>">',
-              '<%- post.date %>',
-            '</span>',
+              '<small><em><%- post.date %></em></small>',
+            '</p>',
             '<div class="c-feed-item__thumbnail <%- settings.classes.thumbnail %>"',
                  'style="',
                     'background-image: url(<%- post.thumbnail %>);',
@@ -239,6 +238,9 @@ Feed.process = {
       excerpt = post.description
         .replace(/<figure.*>.*?<\/figure>/g, '');
 
+      // Replace break tags with spaces
+      excerpt = excerpt.replace('<br>', ' ');
+
       // Remove all tags
       excerpt = excerpt.replace(/<(.|\n)*?>/g, '');
 
@@ -268,7 +270,7 @@ Feed.process = {
  * @type {Object}
  */
 Feed.merge = {
-  medium: function(data) {
+  medium: function(data, settings) {
     let merged = {};
     let items = [];
 
@@ -285,7 +287,9 @@ Feed.merge = {
     });
 
     // Get unique posts
-    items = _uniqBy(items, (item) => item.guid);
+    if (settings.unique) {
+      items = _uniqBy(items, (item) => item.guid);
+    }
 
     merged.items = _orderBy(items, 'pubDate', 'desc');
 
@@ -307,7 +311,7 @@ Feed.default = {
   fontSize: '',
   ratioProfile: ['50', '50'],
   postBorderColor: 'lightsteelblue',
-  postImgHeight: '200px',
+  postImgHeight: '168px',
   postExcerptLength: 120,
   postExcerptTrail: '…',
   postCtaText: 'Read the full post',
@@ -338,7 +342,7 @@ Feed.default = {
     closer: Feed.templates.medium.closer.join('')
   },
   log: false,
-  unique: false
+  unique: true
 };
 
 export default Feed;

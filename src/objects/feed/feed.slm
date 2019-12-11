@@ -1,6 +1,6 @@
 
 
-= mixin('feed-configuration')
+= mixin('feed-configuration');
   div class='${class_demo_class_containers}'
     div#js-configuration class='mt-2'
       div v-for='item, name in config' v-bind:id='name' class='mb-3'
@@ -20,8 +20,7 @@
         p v-if='typeof docs[name] === "string"'
           = '{{ docs[name] }}'
 
-
-= mixin('feed-template')
+= mixin('feed-template');
   div#js-templates
 
     div class='${class_demo_class_containers}'
@@ -64,12 +63,10 @@
           div v-for='template in templates.medium.closer'
             = '{{ template }}'
 
-
-= mixin('feed-demo')
+= mixin('feed-demo');
   #js-feed
 
-
-= mixin('feed-script')
+= mixin('feed-script');
   script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js'
   script src='https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&flags=gated'
   script src='objects/feed/FeedDocs.js'
