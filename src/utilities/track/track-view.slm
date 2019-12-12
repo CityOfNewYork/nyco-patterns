@@ -1,8 +1,0 @@
-script src='utilities/track/Track.js'
-javascript:
-  let track = new Track();
-
-  track.view("View", "Sample View", [
-    {"WT.si_n": "View Data 1"},
-    {"WT.si_p": "View Data 2"}
-  ]);

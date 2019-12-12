@@ -1,16 +1,17 @@
 'use strict';
 
-import Icons from '../elements/icons/Icons';
-import Feed from '../objects/feed/Feed';
-import Toggle from '../utilities/toggle/Toggle';
-import Track from '../utilities/track/Track';
+import Toggle from '@nycopportunity/patterns-framework/src/utilities/toggle/toggle';
+import Icons from '@nycopportunity/patterns-framework/src/utilities/icons/icons';
+
 import Select from '../elements/select/select';
+import InputAutocomplete from '../elements/inputs/input-autocomplete';
+
+import Feed from '../objects/feed/feed';
 import ChartBar from '../objects/charts/chart--bar';
 import ChartHorizontalBar from '../objects/charts/chart--horizontal-bar';
 import ChartLine from '../objects/charts/chart--line';
 import ChartPie from '../objects/charts/chart--pie';
-import { MapMultiLayer, MapSingleLayer } from './Map';
-import InputAutocomplete from '../elements/inputs/input-autocomplete';
+import { MapMultiLayer, MapSingleLayer } from './map';
 /** import modules here as they are written */
 
 /**
@@ -19,8 +20,8 @@ import InputAutocomplete from '../elements/inputs/input-autocomplete';
 class nyco {
   /**
    * Method for the Icons Element
-   * @param  {String} path  The path of the icon file
-   * @return {Object}       Icons instance
+   * @param  {String}  path  The path of the icon file
+   * @return {Object}        Icons instance
    */
   icons(path) {
     return new Icons(path);
@@ -37,26 +38,23 @@ class nyco {
 
   /**
    * Method for the Toggle Utility
-   * @return  {Object} Toggle instance
+   * @return  {Object}  Toggle instance
    */
   toggle(settings) {
     return new Toggle();
   }
 
   /**
-   * Method for the Track Module
-   * @return  {Object} Track Module
+   * Method for the Select Elements
+   * @return  {Object}  Select instance
    */
-  track(settings) {
-    return new Track();
-  }
-
   select() {
     return new Select();
   }
+
   /**
    * Method for the Chart Objects
-   * @return  {Object} Chart instance
+   * @return  {Object}  Chart instance
    */
   chart(type) {
     if (type === 'bar')
@@ -74,7 +72,7 @@ class nyco {
 
   /**
    * Method for the Map Module
-   * @return  {Object} Map Module
+   * @return  {Object}  Map Module
    */
   map(type) {
     if (type === 'multi')
@@ -86,7 +84,7 @@ class nyco {
 
   /**
    * Method for the Input Autocomplete Element
-   * @return  {Object} Input Autocomplete instance
+   * @return  {Object}  Input Autocomplete instance
    */
   inputAutocomplete(settings = {}) {
     return new InputAutocomplete(settings);
