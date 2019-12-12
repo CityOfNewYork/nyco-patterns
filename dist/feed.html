@@ -84,7 +84,6 @@
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="map">Map</a>
               <a class="o-navigation__link" href="navigation">Navigation</a>
               <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
               <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -114,7 +113,6 @@
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
             <a class="o-navigation__link" href="header">Header</a>
-            <a class="o-navigation__link" href="map">Map</a>
             <a class="o-navigation__link" href="navigation">Navigation</a>
             <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
             <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -128,124 +126,110 @@
     <article class="color-light-background py-2 px-4 screen-desktop:px-6">
       <h1 class="m-0 p-0 mt-2">Feed</h1>
       <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
-            <p>
-              The
-              <b>Feed Object</b>
-              embeds a Medium feed onto any web page. Multiple urls can be combined to display as many posts from different user profiles, publications, or tagged pages in publications. Refer to the
-              <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a>
-              on available feeds.
-            </p>
-            <h2 id="usage"><a href="#usage">Usage</a></h2>
-            <h3 class="h4"><a href="customize-your-feed">Embed</a></h3>
-            <p>
-              You can
-              <a href="customize-your-feed">copy and paste the embeddable snippet</a>
-              that automatically integrates the source below or you can follow the steps to integrate it manually.
-            </p>
-            <h4 class="h4" id="manual"><a href="#manual">Manual</a></h4>
-            <p>To use the feed source files, include the following scripts in your page.</p>
-            <div class="code-block">
-              <pre><div>&lt;script src=&quot;https://cdn.polyfill.io/v2/polyfill.js?features=Promise&amp;gated=gated&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt; <span class="code__comment">&lt;!-- The feed component uses Promises so this polyfill is needed for IE support --&gt;</span></div><div>&lt;script src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.7.0/dist/objects/feed/Feed.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</div></pre>
-            </div>
-            <p>Optionally, but recommended, include the base styling for the feed.</p>
-            <div class="code-block">
-              <pre><div>&lt;link src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v1.7.0/dist/objects/feed/feed.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;</div></pre>
-            </div>
-            <p>Then, add a container with the feed's id and the execution script with configuration parameters.</p>
-            <div class="code-block">
-              <pre><div>&lt;div id=&quot;js-feed&quot;&gt;&lt;/div&gt;</div><div>&lt;script type=&quot;text/javascript&quot;&gt;</div><div>  new Feed({</div><div>    selector: &quot;#js-feed&quot;, <span class="code__comment">// The DOM element selctor for the feed. Defaults to #js-feed</span></div><div>    feed: &quot;https://medium.com/feed/@nycopportunity/&quot;, <span class="code__comment">// Required. The feed you want to display. May be an array of multiple feeds</span></div><div>  });</div><div>&lt;/script&gt;</div></pre>
-            </div>
-            <p>
-              <code>new Feed({});</code>
-              creates a feed, accepting a configuration object as a parameter.
-              <a href="customize-your-feed">The full configuration can be viewed here</a>
-              . The object should contain the configuration you would like for the feed. Note: the
-              <code>selector</code>
-              and
-              <code>feed</code>
-              parameters are required to display a feed. Below is a list of the rest of the default configuration options. See the
-              <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a>
-              for more details on their feeds.
-            </p>
-            <h2 id="layouts"><a href="#layouts">Layouts</a></h2>
-            <p>
-              In the bundled styles for this component there are three layouts for the Feed items: 1 column (default), 2 column, and 3 column. In order to utilize the 2 or 3 column layouts, configure the
-              <code>classes.wrapper</code>
-              parameter to
-              <code>o-feed--3-column</code>
-              for 3 columns and
-              <code>o-feed--2-column</code>
-              for 2 columns.
-            </p>
-            <h2 id="templates"><a href="#templates">Templates</a></h2>
-            <p>
-              The feed comes shipped with ready-to-use LoDash template components for Medium feeds. Each component can be overwritten with the
-              <code>template.component</code>
-              configuration parameter. You can copy the templates below to get started creating your own template and refer to the
-              <a href="https://lodash.com/docs/4.17.5#template">LoDash documentation for templates</a>
-              .
-            </p>
-            <div id="js-templates">
-              <div class="mb-2"><code class="code">templates.opener</code></div>
-              <div class="mb-2">
-                <div class="code-block">
-                  <pre><div class="code__comment">// The opening template tag or wrapper of the entire feed.</div><div v-for="template in templates.medium.opener">{{ template }}</div></pre>
-                </div>
-              </div>
-              <div class="mb-2"><code class="code">templates.header</code></div>
-              <div class="mb-2">
-                <div class="code-block">
-                  <pre><div class="code__comment">// The header template that sits at the top of the posts.</div><div v-for="template in templates.medium.header">{{ template }}</div></pre>
-                </div>
-              </div>
-              <div class="mb-2"><code class="code">templates.posts</code></div>
-              <div class="mb-2">
-                <div class="code-block">
-                  <pre><div class="code__comment">// The posts loop including the posts template.</div><div v-for="template in templates.medium.posts">{{ template }}</div></pre>
-                </div>
-              </div>
-              <div class="mb-2"><code class="code">templates.closer</code></div>
-              <div class="mb-2">
-                <div class="code-block">
-                  <pre><div class="code__comment">// The closing template tag or wrapper of the entire feed.</div><div v-for="template in templates.medium.closer">{{ template }}</div></pre>
-                </div>
-              </div>
-            </div>
-            <p>Here's an example of passing your own template to the configuration:</p>
-            <div class="code-block">
-              <pre><div>var MyTemplate = {</div><div>  opener: &quot;&lt;div&gt;...template content...&lt;/div&gt;&quot;</div><div>  header: &quot;&lt;div&gt;...template content...&lt;/div&gt;&quot;</div><div>  posts: &quot;&lt;div&gt;...template content...&lt;/div&gt;&quot;</div><div>  closer: &quot;&lt;div&gt;...template content...&lt;/div&gt;&quot;</div><div>};</div><div>new Feed({</div><div>  selector: &quot;#feed&quot;, <span class="code__comment">// required</span></div><div>  feed: &quot;https://medium.com/feed/@nycopportunity/&quot;, <span class="code__comment">// required</span></div><div>  template: MyTemplate</div><div>});</div></pre>
-            </div>
-            <p>
-              Templates are passed the
-              <code>config</code>
-              object and whatever the response of the feed is. In Medium's case, they pass the
-              <code>feed</code>
-              parameter and posts within the
-              <code>items</code>
-              parameter in the response from their RSS feed. To see the data that gets passed to the template to use in your template, set the
-              <code>log</code>
-              configuration parameter to
-              <code>true</code>
-              . Open up the console to see the data for this particular feed demonstration.
-            </p>
-            <h2 id="rss-to-json"><a href="#rss-to-json">RSS to JSON</a></h2>
-            <p>
-              The
-              <b>Feed Object</b>
-              uses an API from
-              <a href="https://rss2json.com">https://rss2json.com</a>
-              to convert desired RSS feed into a consumable JSON object. See the
-              <a href="https://rss2json.com">RSS 2 JSON Online Converter</a>
-              documentation for details.
-            </p>
-          </div>
-        </div>
+        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white"><div class="o-content screen-desktop:pr-4 screen-desktop:pr-6"><p>
+  The
+  <strong>Feed Object</strong>
+  embeds a Medium feed onto any web page. Multiple urls can be combined to display as many posts from different user profiles, publications, or tagged pages in publications. Refer to the
+  <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a>
+  on available feeds.
+</p>
+
+<h2>Usage</h2>
+
+<h3>Embed</h3>
+
+<p>
+  <a href="customize-your-feed">Copy and paste the embeddable snippet</a>
+  that automatically integrates the latest version of the
+  <strong>Feed Object</strong>
+  .
+</p>
+
+<h4>Manual</h4>
+
+<p>To use the feed source files, include the following scripts in your page.</p>
+
+<pre><code>&lt;!-- The feed component uses Promises so this polyfill is needed for IE support --&gt;
+&lt;script src=&quot;https://cdn.polyfill.io/v2/polyfill.js?features=Promise&amp;gated=gated&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;&#39; + this.site.urls.cdn + &#39;/objects/feed/Feed.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
+
+<p>Optionally, but recommended, include the base styling for the feed.</p>
+
+<pre><code>&lt;link src=&quot;&#39; + this.site.urls.cdn + &#39;/objects/feed/feed.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;</code></pre>
+
+<p>Then, add a container with the feed&#39;s id and the execution script with configuration parameters.</p>
+
+<pre><code>&lt;div id=&quot;js-feed&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  new Feed({
+    selector: &quot;#js-feed&quot;, // The DOM element selctor for the feed. Defaults to #js-feed&#39;
+    feed: &quot;https://medium.com/feed/@nycopportunity/&quot;, // Required. The feed you want to display. May be an array of multiple feeds&#39;
+  });
+&lt;/script&gt;</code></pre>
+
+<p>
+  <code>new Feed({});</code>
+  creates a feed, accepting a configuration object as a parameter.
+  <a href="customize-your-feed">The full configuration can be viewed here</a>
+  . The object should contain the configuration you would like for the feed. Note: the
+  <code>selector</code>
+  and
+  <code>feed</code>
+  parameters are required to display a feed. Below is a list of the rest of the default configuration options. See the
+  <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a>
+  for more details on their feeds.
+</p>
+
+<h3>Layouts</h3>
+
+<p>
+  In the bundled styles for this component there are three layouts for the Feed items: 1 column (default), 2 column, and 3 column. In order to utilize the 2 or 3 column layouts, configure the
+  <code>classes.wrapper</code>
+  parameter to
+  <code>o-feed--3-column</code>
+  for 3 columns and
+  <code>o-feed--2-column</code>
+  for 2 columns.
+</p>
+
+<h3>Templates</h3>
+
+<p>
+  The feed comes shipped with ready-to-use LoDash template components for Medium feeds. Each component can be overwritten with the
+  <code>template.component</code>
+  configuration parameter. You can copy the templates below to get started creating your own template and refer to the
+  <a href="https://lodash.com/docs/4.17.5#template">LoDash documentation for templates</a>
+  .
+</p>
+
+<p>
+  Templates are passed the
+  <code>config</code>
+  object and whatever the response of the feed is. In Medium&#39;s case, they pass the
+  <code>feed</code>
+  parameter and posts within the
+  <code>items</code>
+  parameter in the response from their RSS feed. To see the data that gets passed to the template to use in your template, set the
+  <code>log</code>
+  configuration parameter to
+  <code>true</code>
+  . Open up the console to see the data for this particular feed demonstration.
+</p>
+
+<h3>RSS to JSON</h3>
+
+<p>
+  The
+  <strong>Feed Object</strong>
+  uses an API from
+  <a href="https://rss2json.com">https://rss2json.com</a>
+  to convert desired RSS feed into a consumable JSON object. See the
+  <a href="https://rss2json.com">RSS 2 JSON Online Converter</a>
+  documentation for details.
+</p>
+</div></div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <div class="border-8 p-3 border-secondary-white mx-auto" style="max-width: 300px;"><div id="js-feed"></div></div>
-          </div>
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6"><div data-js="feed"></div></div>
         </div>
       </section>
     </article>
@@ -290,11 +274,11 @@
     var nyco = new NycoPatterns();
     nyco.icons();
     nyco.toggle();
-    nyco.track();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
   <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&amp;flags=gated"></script>
-  <script src="objects/feed/FeedDocs.js"></script>
-  <script src="scripts/lwz.js"></script>
-  <script src="scripts/feed.js"></script>
+  <script src="objects/feed/feed-embed.js"></script>
+  <script type="text/javascript">
+    new FeedEmbed();
+  </script>
 </body>

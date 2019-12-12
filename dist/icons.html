@@ -84,7 +84,6 @@
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="map">Map</a>
               <a class="o-navigation__link" href="navigation">Navigation</a>
               <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
               <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -114,7 +113,6 @@
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
             <a class="o-navigation__link" href="header">Header</a>
-            <a class="o-navigation__link" href="map">Map</a>
             <a class="o-navigation__link" href="navigation">Navigation</a>
             <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
             <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -131,7 +129,52 @@
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
             <h2 class="mt-0" id="usage"><a href="#usage">Usage</a></h2>
-            
+            <h3>The SVG Sprite</h3>
+
+<p>To use the inline SVGS, include the main icon sprite (&lt;code&gt;dist/icons.svg&lt;/code&gt;) in your page markup. NYCO Patterns uses an AJAX method to cache the sprite file while not including it in the page cache to decrease the size of each page. To import the icon through the global NYCO Patterns Patterns script use the following code:</p>
+
+<p>p div class=&#39;code-block&#39; pre = &quot;var nyco = new NycoPatterns();\n&quot; = &quot;nyco.icons();\n&quot;</p>
+
+<p>The script expects the icon sprite path to be named &lt;code&gt;icons.svg&lt;/code&gt; and live in the root directory of the site. To overwrite this, pass a path to the method:</p>
+
+<p>p div class=&#39;code-block&#39; pre = &quot;nyco.icons(&#39;path/to/icons.svg&#39;);\n&quot;</p>
+
+<p>The ES6, CommonJS, and IFFE modules all require global activation to be written into your main script:</p>
+
+<p>p div class=&#39;code-block&#39; pre = &quot;import Icons from &#39;components/icons/Icons.common&#39;;\n&quot; = &quot;new Icons(); // or new Icons(&#39;path/to/icons.svg&#39;);\n&quot;</p>
+
+<p>This uses the &lt;code&gt;fetch&lt;/code&gt; method which will require a polyfill for IE11 (and other older browser) support. The script does not ship with a polyfill by default. See &lt;a href=&#39;https://polyfill.io&#39;&gt;Polyfill.io&lt;/a&gt; for a suitable polyfill.</p>
+
+<h3>Markup</h3>
+
+<p>There are a few options for using icons after the sprite has been loaded on the page:</p>
+
+<h4>Inline SVG’s</h4>
+
+<p>The first option allows you to inline an SVG with the &lt;code&gt;use&lt;/code&gt; tag. This is the preferred method for ACCESS NYC. Note that you can change the color of inline SVG icon shapes that have their fill set as currentColor by using a text color utility. Also, note the role=&quot;img&quot; attribute, title tag, and title tag id for accessibility support.</p>
+
+<p>div class=&#39;code-block&#39; pre = &#39;&lt;svg class=&quot;icon-logo-nyco icon-xlarge text-color-blue-dark&quot; role=&quot;img&quot;&gt;\n&#39; = &#39; &lt;title id=&quot;icon-logo-nyco-title&quot;&gt;The NYC Opportunity Logo&lt;/title&gt;\n&#39; = &#39; &lt;use xlink:href=&quot;#icon-logo-nyco&quot;&gt;&lt;/use&gt;\n&#39; = &#39;&lt;/svg&gt;\n&#39;</p>
+
+<h4>Background Images</h4>
+
+<p>The second option does not require the icon sprite to be added to the page through the JavaScript module. It uses background images that reference the icons on the CDN. This option uses a utility class that sets the background image of the icon &lt;code&gt;.bg-{{ Icon ID Here }}&lt;/code&gt;. Icons with background images require less markup but their shape fill color will default to black or whatever fill color the shape is set to. Note the &lt;code&gt;role=&quot;img&quot;&lt;/code&gt; and alt text attributes for accessibility.</p>
+
+<p>div class=&#39;code-block&#39; pre = &#39;&lt;div class=&quot;icon-logo-nyco&quot; role=&quot;img&quot; alt=&quot;The NYC Opportunity Logo&quot;&gt;&lt;/div&gt;&#39;</p>
+
+<h4>img tag</h4>
+
+<p>The third option is to use the individual SVG path as a source attribute in an image tag. Note the alt text attribute for accessibility.</p>
+
+<p>div class=&#39;code-block&#39; pre = &#39;&lt;img src=&quot;svgs/icon-logo-nyco.svg&quot; alt=&quot;The NYC Opportunity Logo&quot;&gt;&#39;</p>
+
+<h3>Icon sizes</h3>
+
+<p>To manage the size of the icons, use the icon size utilities. The dimensions are based on the 8px grid and include the following sizes;</p>
+
+<p>p .table.w-full table tbody tr td icon-1 td 8px 8px tr td icon-2 td 16px 16px tr td icon-3 td 24px 24px tr td icon-4 td 32px 32px tr td icon-5 td 40px 40px tr td icon-6 td 48px 48px tr td icon-7 td 56px 56px tr td icon-8 td 64px 64px tr td icon-9 td 72px 72px tr td icon-10 td 80px 80px tr td icon-11 td 88px 88px tr td icon-12 td 96px 96px tr td icon-large td 136px 136px tr td icon-xlarge td 256px 256px</p>
+
+<p>&lt;b&gt;Accessibility Note&lt;/b&gt;: If the SVG graphic doesn&#39;t serve a function, it may not be useful to screen readers. Therefore, it may be hidden using the &lt;code&gt;aria-hidden=&quot;true&quot;&lt;/code&gt; attribute.</p>
+
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
@@ -265,6 +308,5 @@
     var nyco = new NycoPatterns();
     nyco.icons();
     nyco.toggle();
-    nyco.track();
   </script>
 </body>

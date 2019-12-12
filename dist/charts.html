@@ -84,7 +84,6 @@
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="map">Map</a>
               <a class="o-navigation__link" href="navigation">Navigation</a>
               <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
               <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -114,7 +113,6 @@
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
             <a class="o-navigation__link" href="header">Header</a>
-            <a class="o-navigation__link" href="map">Map</a>
             <a class="o-navigation__link" href="navigation">Navigation</a>
             <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
             <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -131,7 +129,10 @@
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
             <h2 class="mt-0" id="bar-chart"><a href="#bar-chart">Bar Chart</a></h2>
-            
+            <p>All chart source can be found here: &lt;code&gt;src/objects/charts/&lt;/code&gt;.</p>
+
+<p>For a full list of customization options check the &lt;a href=&quot;https://www.chartjs.org/docs/latest/charts/&quot;&gt;Chartjs&lt;/a&gt; documentation</p>
+
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
@@ -157,7 +158,12 @@
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
             <h2 class="mt-0" id="line-chart"><a href="#line-chart">Line Chart</a></h2>
-            
+            <p>To achieve a smooth line, set the following properties in the dataset object:</p>
+
+<p>&lt;span&gt;&lt;code&gt; pointBackgroundColor: &#39;transparent&#39;, &lt;/code&gt;&lt;/span&gt; &lt;span&gt;&lt;code&gt; pointBackgroundColor: &#39;transparent&#39;, &lt;/code&gt;&lt;/span&gt; &lt;span&gt;&lt;code&gt; pointBorderColor: &#39;transparent&#39;, &lt;/code&gt;&lt;/span&gt; &lt;span&gt;&lt;code&gt; lineTension: 0, &lt;/code&gt;&lt;/span&gt;</p>
+
+<p>Additional configuration options are viewable on &lt;a href=&quot;https://www.chartjs.org/docs/latest/charts/line.html&quot;&gt;Chart.js&lt;/a&gt;</p>
+
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
@@ -221,7 +227,6 @@
     var nyco = new NycoPatterns();
     nyco.icons();
     nyco.toggle();
-    nyco.track();
   </script>
   <script type="text/javascript">
     nyco.chart('bar');

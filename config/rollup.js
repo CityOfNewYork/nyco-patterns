@@ -46,7 +46,11 @@ const rollup = {
   ]
 };
 
-const modules = [ // Our list of modules we are exporting
+/**
+ * Our list of modules we are exporting
+ * @return  {Array}  Exported modules
+ */
+export default [
   {
     input: './src/js/main.js',
     output: [
@@ -56,102 +60,50 @@ const modules = [ // Our list of modules we are exporting
         sourcemap: rollup.sourcemap,
         format: rollup.format,
         strict: rollup.strict
-      },
-      {
-        name: 'NycoPatterns',
-        file: './dist/scripts/NycoPatterns.common.js',
-        sourcemap: rollup.sourcemap,
-        format: 'cjs',
-        strict: rollup.strict
       }
     ],
     plugins: rollup.plugins
   },
   {
-    input: './src/elements/icons/Icons.js',
-    output: [
-      {
-        name: 'Icons',
-        file: './dist/elements/icons/Icons.js',
-        sourcemap: rollup.sourcemap,
-        format: rollup.format,
-        strict: rollup.strict
-      },
-      {
-        name: 'Icons',
-        file: './dist/elements/icons/Icons.common.js',
-        sourcemap: rollup.sourcemap,
-        format: 'cjs',
-        strict: rollup.strict
-      }
-    ],
-    plugins: rollup.plugins
-  },
-  {
-    input: './src/objects/feed/Feed.js',
+    input: './src/objects/feed/feed.js',
     output: [
       {
         name: 'Feed',
-        file: './dist/objects/feed/Feed.js',
+        file: './dist/objects/feed/feed.js',
         sourcemap: rollup.sourcemap,
         format: rollup.format,
-        strict: rollup.strict
-      },
-      {
-        name: 'Feed',
-        file: './dist/objects/feed/Feed.common.js',
-        sourcemap: rollup.sourcemap,
-        format: 'cjs',
         strict: rollup.strict
       }
     ],
     plugins: rollup.plugins
   },
   {
-    input: './src/utilities/toggle/Toggle.js',
-    output: [
-      {
-        name: 'Toggle',
-        file: './dist/utilities/toggle/Toggle.js',
-        sourcemap: rollup.sourcemap,
-        format: rollup.format,
-        strict: rollup.strict
-      },
-      {
-        name: 'Toggle',
-        file: './dist/utilities/toggle/Toggle.common.js',
-        sourcemap: rollup.sourcemap,
-        format: 'cjs',
-        strict: rollup.strict
-      }
-    ],
-    plugins: rollup.plugins
-  },
-  {
-    input: './src/utilities/track/Track.js',
-    output: [
-      {
-        name: 'Track',
-        file: './dist/utilities/track/Track.js',
-        sourcemap: rollup.sourcemap,
-        format: rollup.format,
-        strict: rollup.strict
-      },
-      {
-        name: 'Track',
-        file: './dist/utilities/track/Track.common.js',
-        sourcemap: rollup.sourcemap,
-        format: 'cjs',
-        strict: rollup.strict
-      }
-    ],
-    plugins: rollup.plugins
-  },
-  {
-    input: './src/objects/feed/FeedDocs.js',
+    input: './src/objects/feed/feed-docs.js',
     output: {
       name: 'FeedDocs',
-      file: './dist/objects/feed/FeedDocs.js',
+      file: './dist/objects/feed/feed-docs.js',
+      sourcemap: rollup.sourcemap,
+      format: rollup.format,
+      strict: rollup.strict
+    },
+    plugins: rollup.plugins
+  },
+  {
+    input: './src/objects/feed/feed-embed.js',
+    output: {
+      name: 'FeedEmbed',
+      file: './dist/objects/feed/feed-embed.js',
+      sourcemap: rollup.sourcemap,
+      format: rollup.format,
+      strict: rollup.strict
+    },
+    plugins: rollup.plugins
+  },
+  {
+    input: './src/utilities/lzw/lzw.js',
+    output: {
+      name: 'LZW',
+      file: './dist/utilities/lzw/lzw.js',
       sourcemap: rollup.sourcemap,
       format: rollup.format,
       strict: rollup.strict
@@ -159,7 +111,3 @@ const modules = [ // Our list of modules we are exporting
     plugins: rollup.plugins
   }
 ];
-
-
-
-export default modules;

@@ -22,6 +22,5 @@ body class='bg-base-black' style='visibility: hidden;' onload='load()'
     var nyco = new NycoPatterns();
     nyco.icons();
     nyco.toggle();
-    nyco.track();
 
   = content('script');

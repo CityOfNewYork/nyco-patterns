@@ -8,8 +8,7 @@
           h2 id='${this.slug}' class='mt-0'
             a href='#${this.slug}'
               = this.title;
-
-        = `md{{ ../${this.path}.md }}`
+        = 'md{{ ' + this.path + '.md }}'
 
     div class='${class_demo_col2}'
       div class='${class_demo_colb}'

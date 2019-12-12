@@ -66,7 +66,8 @@ module.exports = [
     outDir: './dist/objects/feed/',
     outFile: 'feed.css',
     precision: sass.precision,
-    includePaths: sass.includePaths
+    includePaths: sass.includePaths,
+    devModule: true
   },
   {
     file: './src/objects/mailchimp/_mailchimp.scss',

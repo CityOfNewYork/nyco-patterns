@@ -12,7 +12,8 @@ class FeedDocs {
 
 FeedDocs.default = {
   feed: 'Required. string or array of strings. This may either be one RSS feed or an array of feeds. Arrays of feeds will be combined and posts will be ordered by date. Currently, this only works with Medium RSS feeds.',
-  selector: '"#js-feed" (default) or other string. The DOM element selector for your feed. The inner html of this element will be replaced with the feed.',
+  rssToJson: '"https://api.rss2json.com/v1/api.json?rss_url=" (default) or other feed converter service.',
+  selector: '"[data-js="feed"]" (default) or other string. The DOM element selector for your feed. The inner html of this element will be replaced with the feed.',
   type: '"medium" (default) or other string. The feed type. Currently, only Medium feeds are supported so this shouldn\'t change.',
   title: 'The title of the feed that appears in the header. By default this uses the feed\'s title. However, if using displaying multiple fields this should be set. Otherwise, it will use the last feed title that was loaded.',
   titleUrl: 'The url that the title links to. By default this uses the feed\'s url. However, if using displaying multiple fields this should be set. Otherwise, it will use the last feed url that was loaded.',

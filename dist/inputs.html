@@ -84,7 +84,6 @@
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="map">Map</a>
               <a class="o-navigation__link" href="navigation">Navigation</a>
               <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
               <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -114,7 +113,6 @@
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
             <a class="o-navigation__link" href="header">Header</a>
-            <a class="o-navigation__link" href="map">Map</a>
             <a class="o-navigation__link" href="navigation">Navigation</a>
             <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
             <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -196,7 +194,10 @@
         <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
           <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
             <h2 class="mt-0" id="autocomplete"><a href="#autocomplete">Autocomplete</a></h2>
-            
+            <p>The Autocomplete Input Element uses JavaScript to provide an accessibile and selectable list of suggested terms as a user types into the field.</p>
+
+<p>The suggested terms are passed to the &lt;code&gt;InputAutocomplete&lt;/code&gt; class on instantiation and can be updated on the fly with new terms. Terms are displayed in order by relevance and synonym mapping (see usage details below), Additionally the function is miss-spelling tolerant.</p>
+
           </div>
         </div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
@@ -405,7 +406,6 @@ new InputAutocomplete({
     var nyco = new NycoPatterns();
     nyco.icons();
     nyco.toggle();
-    nyco.track();
   </script>
   <script type="text/javascript">
     const autocomplete = nyco.inputAutocomplete({

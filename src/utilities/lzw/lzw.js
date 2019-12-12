@@ -1,5 +1,14 @@
-// src @url https://gist.github.com/revolunet/843889#gistcomment-2795911
-function lzw_encode(s) {
+/**
+ * LZW Compression Algorithim
+ * @url https://whatis.techtarget.com/definition/LZW-compression
+ */
+class LZW {
+  constructor () {
+    return this;
+  }
+}
+
+LZW.encode = function(s) {
   if (!s) return s;
   var dict = new Map();
   var data = (s + "").split("");
@@ -7,6 +16,7 @@ function lzw_encode(s) {
   var currChar;
   var phrase = data[0];
   var code = 256;
+
   for (var i = 1; i < data.length; i++) {
       currChar = data[i];
       if (dict.has(phrase + currChar)) {
@@ -18,14 +28,17 @@ function lzw_encode(s) {
           phrase = currChar;
       }
   }
+
   out.push(phrase.length > 1 ? dict.get(phrase) : phrase.charCodeAt(0));
+
   for (var i = 0; i < out.length; i++) {
       out[i] = String.fromCharCode(out[i]);
   }
+
   return out.join("");
 }
 
-function lzw_decode(s) {
+LZW.decode = function(s) {
   var dict = new Map(); // Use a Map!
   var data = (s + "").split("");
   var currChar = data[0];
@@ -33,18 +46,24 @@ function lzw_decode(s) {
   var out = [currChar];
   var code = 256;
   var phrase;
+
   for (var i = 1; i < data.length; i++) {
-      var currCode = data[i].charCodeAt(0);
-      if (currCode < 256) {
-          phrase = data[i];
-      } else {
-          phrase = dict.has(currCode) ? dict.get(currCode) : (oldPhrase + currChar);
-      }
-      out.push(phrase);
-      currChar = phrase.charAt(0);
-      dict.set(code, oldPhrase + currChar);
-      code++;
-      oldPhrase = phrase;
+    var currCode = data[i].charCodeAt(0);
+
+    if (currCode < 256) {
+        phrase = data[i];
+    } else {
+        phrase = dict.has(currCode) ? dict.get(currCode) : (oldPhrase + currChar);
+    }
+
+    out.push(phrase);
+    currChar = phrase.charAt(0);
+    dict.set(code, oldPhrase + currChar);
+    code++;
+    oldPhrase = phrase;
   }
+
   return out.join("");
 }
+
+export default LZW;

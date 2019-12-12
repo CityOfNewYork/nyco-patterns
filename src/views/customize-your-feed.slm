@@ -11,14 +11,13 @@
 
 / Content blocks
 = content('head');
-  = mixin('head', 'Customize Your Feed');
+  = mixin('head', 'Feed Embed');
 
 = content('header');
   = mixin('header');
 
 = content('content');
-
-  h1 class='${class_demo_headers}' Customize your feed
+  h1 class='${class_demo_headers}' Embeddable Snippet
 
   section class='${class_demo}'
     div class='${class_demo_col1}'
@@ -81,7 +80,11 @@
     div class='${class_demo_col2}'
       div class='${class_demo_colb}'
         div class='border-8 p-4 border-secondary-white'
-          = mixin('feed-demo');
+          div data-js='feed'
 
 = content('script');
-  = mixin('feed-script');
+  script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js'
+  script src='https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&flags=gated'
+  script src='objects/feed/feed-embed.js'
+  javascript:
+    new FeedEmbed();
