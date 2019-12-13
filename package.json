@@ -22,7 +22,7 @@
     "publish": "cross-env NODE_ENV=production pttrn publish"
   },
   "devDependencies": {
-    "@nycopportunity/patterns-framework": "0.0.19",
+    "@nycopportunity/patterns-framework": "0.0.21",
     "chalk": "^3.0.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
