@@ -52,8 +52,8 @@ const variables = {
     'h4': '1.44em',
     'h5': '1.2em',
     'h6': '1em',
-    'html': '1em',
-    'code': '1.2em',
+    'html': '16px',
+    'code': '1em',
     'small': '0.833em',
     'blockquote': '2.074em'
   },
