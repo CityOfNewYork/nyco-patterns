@@ -1,1 +1,2 @@
-div data-js='feed'
+div class='border-8 p-4 border-secondary-white'
+  div data-js='feed'

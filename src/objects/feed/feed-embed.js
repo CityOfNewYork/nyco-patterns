@@ -5,13 +5,11 @@ import LZW from '../../utilities/lzw/lzw';
 class FeedEmbed {
   constructor() {
     var production = {
-      polyfill: 'https://cdn.polyfill.io/v2/polyfill.js?features=Promise&flags=gated',
       module: 'https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v' + VERSION + '/dist/objects/feed/feed.js',
       styles: 'https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v' + VERSION + '/dist/objects/feed/feed.css'
     };
 
     var demonstration = {
-      polyfill: production.polyfill,
       module: 'objects/feed/feed.js',
       styles: 'objects/feed/feed.css'
     };

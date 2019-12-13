@@ -3,6 +3,7 @@
  */
 
 // Dependencies
+@import '@nycopportunity/patterns-framework/src/utilities/spinner/spinner';
 @import 'config/variables';
 
 $oFeed_breakpoint: #{map-get(map-get($variables, 'screens'), 'screen-tablet')}px;
@@ -25,6 +26,17 @@ $oFeed_breakpoint: #{map-get(map-get($variables, 'screens'), 'screen-tablet')}px
   overflow: hidden;
   margin-right: map-get(map-get($variables, 'margin'), 1);
   flex-shrink: 0;
+}
+
+.o-feed__spinner {
+  color: map-get(map-get($variables, 'colors'), 'secondary-orange');
+  display: flex;
+  justify-content: center;
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .c-feed-item {

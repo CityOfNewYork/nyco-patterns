@@ -3,6 +3,8 @@
 /**
  * Dependencies
  */
+import 'core-js/features/promise';
+
 import _template from 'lodash-es/template';
 import _forEach from 'lodash-es/forEach';
 import _merge from 'lodash-es/merge';
@@ -10,8 +12,10 @@ import _values from 'lodash-es/values';
 import _orderBy from 'lodash-es/orderBy';
 import _uniqBy from 'lodash-es/uniqBy';
 
+import Spinner from '@nycopportunity/patterns-framework/src/utilities/spinner/spinner';
+
 /**
- *
+ * Pattern Class
  */
 class Feed {
   constructor(config) {
@@ -26,6 +30,15 @@ class Feed {
    * Initializes the module
    */
   init() {
+    // Create a loading animation
+    let el = document.querySelector(this._settings.selector);
+    let spinner = new Spinner();
+    let loading = document.createElement('div');
+
+    loading.setAttribute('class', 'o-feed__spinner');
+    loading.appendChild(spinner);
+    el.appendChild(loading);
+
     let data = [];
     let feed = this._settings.feed;
     let config = {
@@ -62,8 +75,6 @@ class Feed {
               this._merge(data, this._settings),
               this._settings
             );
-
-            let el = document.querySelector(this._settings.selector);
 
             if (el) {
               el.innerHTML = compiled;
@@ -374,7 +385,7 @@ Feed.merge = {
     }
 
     merged.items = _orderBy(items, 'pubDate', 'desc');
-    console.dir(merged);
+
     return merged;
   }
 }

@@ -79,8 +79,7 @@
 
     div class='${class_demo_col2}'
       div class='${class_demo_colb}'
-        div class='border-8 p-4 border-secondary-white'
-          div data-js='feed'
+        = partial('../objects/feed/feed.slm');
 
 = content('script');
   script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js'

@@ -6,17 +6,17 @@ The **Feed Object** embeds a Medium feed onto any web page. Multiple urls can be
 
 [Copy and paste the embeddable snippet](customize-your-feed) that automatically integrates the latest version of the **Feed Object**.
 
-#### Manual
+### Manual Integration
 
-To use the feed source files, include the following scripts in your page.
+To use the feed source files, include the following scripts in your page. Replace `{{ version }}` with the semantic version in the top right of this page.
 
     <!-- The feed component uses Promises so this polyfill is needed for IE support -->
     <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated" type="text/javascript"></script>
-    <script src="' + this.site.urls.cdn + '/objects/feed/Feed.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/Feed.js" type="text/javascript"></script>
 
-Optionally, but recommended, include the base styling for the feed.
+Optionally, but recommended, include the base styling for the feed. Replace `{{ version }}` with the semantic version in the top right of this page.
 
-    <link src="' + this.site.urls.cdn + '/objects/feed/feed.css" rel="stylesheet" type="text/css" media="screen">
+    <link src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/feed.css" rel="stylesheet" type="text/css" media="screen">
 
 Then, add a container with the feed's id and the execution script with configuration parameters.
 
@@ -42,4 +42,4 @@ Templates are passed the `config` object and whatever the response of the feed i
 
 ### RSS to JSON
 
-The **Feed Object** uses an API from [https://rss2json.com](https://rss2json.com) to convert desired RSS feed into a consumable JSON object. See the [RSS 2 JSON Online Converter](https://rss2json.com) documentation for details.
+By default the **Feed Object** uses an API from [https://rss2json.com](https://rss2json.com) to convert desired RSS feed into a consumable JSON object. See the [RSS 2 JSON Online Converter](https://rss2json.com) documentation for details. It will also work with a self-hosted installation of [NYCO's RSS into JSON proxy](https://github.com/CityOfNewYork/nyco-rss-2-json).
