@@ -145,17 +145,25 @@
   .
 </p>
 
-<h4>Manual</h4>
+<h3>Manual Integration</h3>
 
-<p>To use the feed source files, include the following scripts in your page.</p>
+<p>
+  To use the feed source files, include the following scripts in your page. Replace
+  <code>{{ version }}</code>
+  with the semantic version in the top right of this page.
+</p>
 
 <pre><code>&lt;!-- The feed component uses Promises so this polyfill is needed for IE support --&gt;
 &lt;script src=&quot;https://cdn.polyfill.io/v2/polyfill.js?features=Promise&amp;gated=gated&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&#39; + this.site.urls.cdn + &#39;/objects/feed/Feed.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
+&lt;script src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/Feed.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
 
-<p>Optionally, but recommended, include the base styling for the feed.</p>
+<p>
+  Optionally, but recommended, include the base styling for the feed. Replace
+  <code>{{ version }}</code>
+  with the semantic version in the top right of this page.
+</p>
 
-<pre><code>&lt;link src=&quot;&#39; + this.site.urls.cdn + &#39;/objects/feed/feed.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;</code></pre>
+<pre><code>&lt;link src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/feed.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;</code></pre>
 
 <p>Then, add a container with the feed&#39;s id and the execution script with configuration parameters.</p>
 
@@ -219,17 +227,21 @@
 <h3>RSS to JSON</h3>
 
 <p>
-  The
+  By default the
   <strong>Feed Object</strong>
   uses an API from
   <a href="https://rss2json.com">https://rss2json.com</a>
   to convert desired RSS feed into a consumable JSON object. See the
   <a href="https://rss2json.com">RSS 2 JSON Online Converter</a>
-  documentation for details.
+  documentation for details. It will also work with a self-hosted installation of
+  <a href="https://github.com/CityOfNewYork/nyco-rss-2-json">NYCO&#39;s RSS into JSON proxy</a>
+  .
 </p>
 </div></div>
         <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6"><div data-js="feed"></div></div>
+          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+            <div class="border-8 p-4 border-secondary-white"><div data-js="feed"></div></div>
+          </div>
         </div>
       </section>
     </article>
@@ -267,8 +279,7 @@
       </small>
     </div>
   </footer>
-  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch,Promise"></script>
-  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js"></script>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch"></script>
   <script src="scripts/NycoPatterns.js"></script>
   <script type="text/javascript">
     var nyco = new NycoPatterns();
