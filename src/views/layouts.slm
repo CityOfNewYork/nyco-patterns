@@ -22,8 +22,9 @@
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
-
-  = mixin('section-full', 'elements/layouts/layout--wrap', 'Wrapped Layout');
-  = mixin('section-full', 'elements/layouts/layout--sidebar', 'Sidebar Layout');
-  = mixin('section-full', 'elements/layouts/layout--content', 'Content Layout');
-  = mixin('section-full', 'elements/layouts/layout--four-columns-gutter', 'Four Column Gutter Layout');
+  = mixin('section', 'elements/layouts/layout-wrap');
+  = mixin('section', 'elements/layouts/layout-sidebar');
+  = mixin('section', 'elements/layouts/layout-content');
+  = mixin('section', 'elements/layouts/layout-two-columns-gutter');
+  = mixin('section', 'elements/layouts/layout-three-columns-gutter');
+  = mixin('section', 'elements/layouts/layout-four-columns-gutter');

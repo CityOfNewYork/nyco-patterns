@@ -22,5 +22,4 @@
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
-
   = mixin('section', 'utilities/accessibility/accessibility');

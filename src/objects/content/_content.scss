@@ -9,15 +9,15 @@
     @include code-block;
   }
 
-  pre, .code-block {
-    margin-bottom: map-get($variables, 'grid') * 2;
-  }
-
   p code {
     @include code-inline;
   }
 
   table {
     @include tables;
+  } 
+
+  pre, .code-block, table {
+    margin-bottom: map-get($variables, 'grid') * 2;
   }
 }

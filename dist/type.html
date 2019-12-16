@@ -42,7 +42,7 @@
   </head>
 </html>
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
-  <header class="o-header screen-tablet:layout--sidebar">
+  <header class="o-header screen-tablet:layout--sidebar w-full">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
@@ -68,30 +68,28 @@
     <aside class="o-navigation bg-primary-navy">
       <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
         <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 1015px">
-            <nav><a class="o-navigation__link" href="index">Overview</a></nav>
-            <nav>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-              <a class="o-navigation__link" href="buttons">Buttons</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-              <a class="o-navigation__link" href="icons">Icons</a>
-              <a class="o-navigation__link" href="inputs">Inputs</a>
-              <a class="o-navigation__link" href="layouts">Layouts</a>
-              <a class="o-navigation__link" href="tables">Tables</a>
-              <a class="o-navigation__link" href="select">Select</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
-              <a class="o-navigation__link" href="footer">Footer</a>
-              <a class="o-navigation__link" href="feed">Feed</a>
-              <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="accessibility">Accessibility</a>
-              <a class="o-navigation__link" href="animate">Animate</a>
-              <a class="o-navigation__link" href="colors">Colors</a>
-              <a class="o-navigation__link" href="type">Type</a>
-            </nav>
-          </div>
+          <nav><a class="o-navigation__link" href="index">Overview</a></nav>
+          <nav>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+            <a class="o-navigation__link" href="buttons">Buttons</a>
+            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+            <a class="o-navigation__link" href="icons">Icons</a>
+            <a class="o-navigation__link" href="inputs">Inputs</a>
+            <a class="o-navigation__link" href="layouts">Layouts</a>
+            <a class="o-navigation__link" href="tables">Tables</a>
+            <a class="o-navigation__link" href="select">Select</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+            <a class="o-navigation__link" href="charts">Charts</a>
+            <a class="o-navigation__link" href="footer">Footer</a>
+            <a class="o-navigation__link" href="feed">Feed</a>
+            <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="navigation">Navigation</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="accessibility">Accessibility</a>
+            <a class="o-navigation__link" href="animate">Animate</a>
+            <a class="o-navigation__link" href="colors">Colors</a>
+            <a class="o-navigation__link" href="type">Type</a>
+          </nav>
         </div>
       </div>
       <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
@@ -123,20 +121,192 @@
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Type</h1>
-      <section class="pb-4">
-        <div class="mt-4 layout--content">
-          <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="headings"><a href="#headings">Headings</a></h2>
+    <article class="color-light-background py-2">
+      <h1 class="m-0 p-0 mt-2 px-4 screen-desktop:px-6">Type</h1>
+      <section class="pb-4" id="h1">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center"><h1 class="h1">The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h1></div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;h1 class=&quot;h1&quot;&gt;The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.&lt;/h1&gt;
+</pre></div>
+            <h2>Heading 1</h2>
+
+<p>
+  Use the
+  <code>&lt;h1&gt;</code>
+  tag for semantic hierarchy. Using the correct markup for text hierarchy is
+  <a href="https://www.w3.org/TR/WCAG20-TECHS/H42.html">important for assistive technologies</a>
+  . The
+  <code>.h1</code>
+  class can be used to style type tags as
+  <code>&lt;h1&gt;</code>
+  tags if is better for them to be visually styled that way.
+</p>
+
           </div>
-          <div>
-            <h1>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h1>
-            <h2>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h2>
-            <h3>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h3>
-            <h4>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h4>
-            <h5>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h5>
-            <h6>The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h6>
+        </div>
+      </section>
+      <section class="pb-4" id="h2">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center"><h2 class="h2">The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h2></div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;h2 class=&quot;h2&quot;&gt;The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.&lt;/h2&gt;
+</pre></div>
+            <h2>Heading 2</h2>
+
+<p>
+  Use the
+  <code>&lt;h2&gt;</code>
+  tag for semantic hierarchy or the
+  <code>.h2</code>
+  class for visual styling.
+</p>
+
+          </div>
+        </div>
+      </section>
+      <section class="pb-4" id="h3">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center"><h3 class="h3">The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h3></div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;h3 class=&quot;h3&quot;&gt;The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.&lt;/h3&gt;
+</pre></div>
+            <h2>Heading 3</h2>
+
+<p>
+  Use the
+  <code>&lt;h3&gt;</code>
+  tag for semantic hierarchy or the
+  <code>.h3</code>
+  class for visual styling.
+</p>
+
+          </div>
+        </div>
+      </section>
+      <section class="pb-4" id="h4">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center"><h4 class="h4">The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h4></div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;h4 class=&quot;h4&quot;&gt;The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.&lt;/h4&gt;
+</pre></div>
+            <h2>Heading 4</h2>
+
+<p>
+  Use the
+  <code>&lt;h4&gt;</code>
+  tag for semantic hierarchy or the
+  <code>.h4</code>
+  class for visual styling.
+</p>
+
+          </div>
+        </div>
+      </section>
+      <section class="pb-4" id="h5">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center"><h5 class="h5">The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h5></div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;h5 class=&quot;h5&quot;&gt;The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.&lt;/h5&gt;
+</pre></div>
+            <h2>Heading 5</h2>
+
+<p>
+  Use the
+  <code>&lt;h5&gt;</code>
+  tag for semantic hierarchy or the
+  <code>.h5</code>
+  class for visual styling.
+</p>
+
+          </div>
+        </div>
+      </section>
+      <section class="pb-4" id="h6">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center"><h6 class="h6">The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h6></div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;h6 class=&quot;h6&quot;&gt;The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.&lt;/h6&gt;
+</pre></div>
+            <h2>Heading 6</h2>
+
+<p>
+  Use the
+  <code>&lt;h6&gt;</code>
+  tag for semantic hierarchy or the
+  <code>.h6</code>
+  class for visual styling.
+</p>
+
+          </div>
+        </div>
+      </section>
+      <section class="pb-4" id="small">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center"><small class="small">The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</small></div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;small class=&quot;small&quot;&gt;The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.&lt;/small&gt;
+</pre></div>
+            <h2>Small</h2>
+
+<p>
+  The
+  <code>&lt;small&gt;</code>
+  tag is used to define text that is smaller than the body font.
+</p>
+
+          </div>
+        </div>
+      </section>
+      <section class="pb-4" id="blockquote">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center"><blockquote class="blockquote">The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</blockquote></div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;blockquote class=&quot;blockquote&quot;&gt;The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.&lt;/blockquote&gt;
+</pre></div>
+            <h2>Blockquote</h2>
+
+<p>
+  The
+  <code>&lt;blockquote&gt;</code>
+  tag is used to indicate the quotation of a large section of text from another source.
+</p>
+
+          </div>
+        </div>
+      </section>
+      <section class="pb-4" id="jumbo">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center"><h1 class="type-jumbo">The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h1></div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;h1 class=&quot;type-jumbo&quot;&gt;The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.&lt;/h1&gt;
+</pre></div>
+            <h2>Jumbo</h2>
+
+<p>
+  The
+  <code>.jumbo</code>
+  class is the largest heading size reserved for emphasized headings.
+</p>
+
           </div>
         </div>
       </section>

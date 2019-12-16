@@ -22,7 +22,6 @@
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
-
-  = mixin('section', 'elements/buttons/button');
-  = mixin('section', 'elements/buttons/button--primary', 'Primary Button');
-  = mixin('section', 'elements/buttons/button--secondary', 'Secondary Button');
+  = mixin('section', 'elements/buttons/buttons');
+  = mixin('section', 'elements/buttons/buttons-primary');
+  = mixin('section', 'elements/buttons/buttons-secondary');

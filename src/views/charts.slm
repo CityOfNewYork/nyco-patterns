@@ -19,15 +19,14 @@
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
-
-  = mixin('section', 'objects/charts/chart--bar', 'Bar Chart');
-  = mixin('section', 'objects/charts/chart--horizontal-bar', 'Horizontal Bar Chart');
-  = mixin('section', 'objects/charts/chart--line', 'Line Chart');
-  = mixin('section', 'objects/charts/chart--pie', 'Pie Chart');
+  = mixin('section', 'objects/charts/chart-bar');
+  = mixin('section', 'objects/charts/chart-horizontal-bar');
+  = mixin('section', 'objects/charts/chart-line');
+  / = mixin('section', 'objects/charts/chart-pie');
 
 = content('script');
   javascript:
     nyco.chart('bar');
     nyco.chart('horizontalBar');
     nyco.chart('line');
-    nyco.chart('pie');
+    // nyco.chart('pie');

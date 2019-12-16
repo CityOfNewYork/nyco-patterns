@@ -1,0 +1,9 @@
+div class='layout--two-columns-gutter bg-secondary-white p-4 text-center'
+  div class='bg-base-white p-4'
+    | Cell A
+  div class='bg-base-white p-4'
+    | Cell B
+  div class='bg-base-white p-4'
+    | Cell C
+  div class='bg-base-white p-4'
+    | Cell D

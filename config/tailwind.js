@@ -20,6 +20,7 @@ module.exports = {
     backgroundColor: variables.colors,
     borderWidth: variables.borderWidth,
     borderColor: global.Object.assign({ default: '' }, variables.colors),
+    boxShadow: variables.boxShadow,
     margin: variables.margin,
     padding: variables.padding,
     maxWidth: {
@@ -48,7 +49,8 @@ module.exports = {
     minHeight: ['responsive'],
     overflow: [],
     whitespace: [],
-    width: ['responsive']
+    width: ['responsive'],
+    boxShadow: ['responsive']
   },
   options: {
     prefix: '',

@@ -11,11 +11,11 @@
 
 / Content blocks
 = content('head');
-  = mixin('head', 'Icons');
+  = mixin('head', pattern);
 
 = content('header');
   = mixin('header');
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern
-  = mixin('section', 'elements/icons/icons', 'Usage');
+  = mixin('section', 'elements/icons/icons', false);

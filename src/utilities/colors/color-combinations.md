@@ -1,0 +1,3 @@
+## Color Combinations
+
+These combinations are tested for adequate contrast following the distinguishability guideline of the Web Content Accessibility Guidelines (WCAG) 2.0. Hyperlinks are underlined to accommodate color blindness to avoid solely relying on color to distinguish them. WCAG AA compliance depends on the base text size. The examples may not be fully compliant because their font-size is set to a smaller size.

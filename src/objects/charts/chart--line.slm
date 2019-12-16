@@ -1,6 +1,0 @@
-/
-/ Chart Line
-/
-
-div data-js='chart-line'
-  nyco-chart-line :chart-data='data' :options='options'

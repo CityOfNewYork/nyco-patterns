@@ -1,1 +1,1 @@
-p The <code>.sr-only</code> utility will hide elements visually but keep them visible to screen readers.
+The `.sr-only` utility will hide elements visually but keep them visible to screen readers.

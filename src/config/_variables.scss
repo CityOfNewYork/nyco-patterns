@@ -195,7 +195,9 @@ $variables:(
     checkbox-radius: 6px,
     checkbox-size: 20px
   ),
-  display: (
-    up: 0px 5px 11px 1px rgba(0,0,0,0.45)
+  boxShadow: (
+    shadow-none: none,
+    up: 0px 2px 15px 3px rgba(0, 0, 0, .25),
+    inset: inset 0px 2px 15px 3px rgba(0, 0, 0, .25)
   )
 );

@@ -1,5 +1,5 @@
 = mixin('section-full', 'path', 'title = Default Styling');
-  - this.slug = this.title.replace(/ /g, '-').toLowerCase();
+  - this.slug = this.path.split('/')[2];
 
   section class='pb-4'
     div class='mt-4 layout--content'

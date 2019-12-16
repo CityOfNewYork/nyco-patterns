@@ -23,14 +23,12 @@
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
-
-  = mixin('section', 'elements/inputs/input', 'Default');
-  = mixin('section', 'elements/inputs/input-error', 'Error');
-  = mixin('section', 'elements/inputs/input-number', 'Number');
-  = mixin('section', 'elements/inputs/input-currency-usd', 'Currency');
-  = mixin('section', 'elements/inputs/input-currency-usd-error', 'Currency Error');
-  = mixin('section', 'elements/inputs/input-autocomplete', 'Autocomplete');
-  = mixin('section-text', 'elements/inputs/input-autocomplete.readme', 'Autocomplete Usage');
+  = mixin('section', 'elements/inputs/input');
+  = mixin('section', 'elements/inputs/input-error');
+  = mixin('section', 'elements/inputs/input-number');
+  = mixin('section', 'elements/inputs/input-currency-usd');
+  = mixin('section', 'elements/inputs/input-currency-usd-error');
+  = mixin('section', 'elements/inputs/input-autocomplete');
 
 = content('script');
   javascript:

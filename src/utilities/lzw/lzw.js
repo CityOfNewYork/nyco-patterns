@@ -3,7 +3,7 @@
  * @url https://whatis.techtarget.com/definition/LZW-compression
  */
 class LZW {
-  constructor () {
+  constructor() {
     return this;
   }
 }
@@ -11,7 +11,7 @@ class LZW {
 LZW.encode = function(s) {
   if (!s) return s;
   var dict = new Map();
-  var data = (s + "").split("");
+  var data = (s + "").split(""); 
   var out = [];
   var currChar;
   var phrase = data[0];

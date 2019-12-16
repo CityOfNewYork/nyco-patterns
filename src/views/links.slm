@@ -22,5 +22,4 @@
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
-
-  = mixin('section-full', 'elements/links/links', 'Default Styling');
+  = mixin('section-full', 'elements/links/links');

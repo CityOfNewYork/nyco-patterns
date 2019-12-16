@@ -1,15 +1,18 @@
-You can use every color as a utility class for static and hover states. These are the prefixes that are available;
+## Color Utilities
 
-p
-  code class='code' = 'bg-{ color }'
-  = '   =   Background color';
-p
-  code class='code' = 'text-{ color }'
-  = '   =   Text color';
-p
-  code class='code' = 'border-{ color }'
-  = '   =   Border color';
-p
-  | Refer to
-  a<> href='${link_tailwind_docs}' Tailwind CSS docs
-  | for full details on using color utilities and <code>hover:</code> states.
+Color Utilities are enabled through [Tailwind.css](https://tailwindcss.com). The background, text, and border color can be set for the static, hover, and responsive states of any element using the proper prefex below.
+
+    /* Background Color */
+    .bg-{{ color }}
+
+    /* Text Color */
+    .text-{{ color }}
+
+    /* Border Color */
+    .border-{{ color }}
+
+    /* Hover State (for the background property) */
+    .hover:bg-{{ color }}
+
+    /* Responsive State (for the background property) */
+    .{{ screen size }}:bg-{{ color }}

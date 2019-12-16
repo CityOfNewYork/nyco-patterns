@@ -6,7 +6,7 @@
 / Variables
 = partial('partials/styles.slm');
 = partial('partials/links.slm');
-
+ 
 / Partials
 = partial('partials/head.mixin.slm');
 = partial('partials/nav.mixin.slm');
@@ -22,7 +22,7 @@
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern
-  = mixin('section', 'objects/feed/feed');
+  = mixin('section', 'objects/feed/feed', false);
 
 = content('script');
   script src='https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js'

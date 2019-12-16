@@ -22,7 +22,6 @@
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
-
   = mixin('section', 'elements/select/select');
   = mixin('section', 'elements/select/select-error');
 

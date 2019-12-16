@@ -42,7 +42,7 @@
   </head>
 </html>
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
-  <header class="o-header screen-tablet:layout--sidebar">
+  <header class="o-header screen-tablet:layout--sidebar w-full">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
@@ -68,30 +68,28 @@
     <aside class="o-navigation bg-primary-navy">
       <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
         <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 1015px">
-            <nav><a class="o-navigation__link" href="index">Overview</a></nav>
-            <nav>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-              <a class="o-navigation__link" href="buttons">Buttons</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-              <a class="o-navigation__link" href="icons">Icons</a>
-              <a class="o-navigation__link" href="inputs">Inputs</a>
-              <a class="o-navigation__link" href="layouts">Layouts</a>
-              <a class="o-navigation__link" href="tables">Tables</a>
-              <a class="o-navigation__link" href="select">Select</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
-              <a class="o-navigation__link" href="footer">Footer</a>
-              <a class="o-navigation__link" href="feed">Feed</a>
-              <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="accessibility">Accessibility</a>
-              <a class="o-navigation__link" href="animate">Animate</a>
-              <a class="o-navigation__link" href="colors">Colors</a>
-              <a class="o-navigation__link" href="type">Type</a>
-            </nav>
-          </div>
+          <nav><a class="o-navigation__link" href="index">Overview</a></nav>
+          <nav>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+            <a class="o-navigation__link" href="buttons">Buttons</a>
+            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+            <a class="o-navigation__link" href="icons">Icons</a>
+            <a class="o-navigation__link" href="inputs">Inputs</a>
+            <a class="o-navigation__link" href="layouts">Layouts</a>
+            <a class="o-navigation__link" href="tables">Tables</a>
+            <a class="o-navigation__link" href="select">Select</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+            <a class="o-navigation__link" href="charts">Charts</a>
+            <a class="o-navigation__link" href="footer">Footer</a>
+            <a class="o-navigation__link" href="feed">Feed</a>
+            <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="navigation">Navigation</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="accessibility">Accessibility</a>
+            <a class="o-navigation__link" href="animate">Animate</a>
+            <a class="o-navigation__link" href="colors">Colors</a>
+            <a class="o-navigation__link" href="type">Type</a>
+          </nav>
         </div>
       </div>
       <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
@@ -123,27 +121,88 @@
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Icons</h1>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="usage"><a href="#usage">Usage</a></h2>
-            <h3>The SVG Sprite</h3>
+    <article class="color-light-background py-2">
+      <h1 class="m-0 p-0 mt-2 px-4 screen-desktop:px-6">Icons</h1>
+      <section class="pb-4" id="icons">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center">
+            <div class="layout--two-columns-gutter screen-desktop:layout--four-columns-gutter">
+              <div>
+                <div class="color-light-background border border-secondary-grey-50t border-b-0 rounded-t text-center p-2" style="min-height:150px">
+                  <svg class="icon-logo-nyc icon-large text-color-blue-dark"><use xlink:href="#icon-logo-nyc"></use></svg>
+                </div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">#icon-logo-nyc</pre></div>
+              </div>
+              <div>
+                <div class="color-light-background border border-secondary-grey-50t border-b-0 rounded-t text-center p-2" style="min-height:150px">
+                  <svg class="icon-logo-nyco-secondary icon-large text-color-blue-dark"><use xlink:href="#icon-logo-nyco-secondary"></use></svg>
+                </div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">#icon-logo-nyco-secondary</pre></div>
+              </div>
+              <div>
+                <div class="color-light-background border border-secondary-grey-50t border-b-0 rounded-t text-center p-2" style="min-height:150px">
+                  <svg class="icon-logo-nyco icon-large text-color-blue-dark"><use xlink:href="#icon-logo-nyco"></use></svg>
+                </div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">#icon-logo-nyco</pre></div>
+              </div>
+              <div>
+                <div class="color-light-background border border-secondary-grey-50t border-b-0 rounded-t text-center p-2" style="min-height:150px">
+                  <svg class="icon-logo-primary icon-large text-color-blue-dark"><use xlink:href="#icon-logo-primary"></use></svg>
+                </div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">#icon-logo-primary</pre></div>
+              </div>
+              <div>
+                <div class="color-light-background border border-secondary-grey-50t border-b-0 rounded-t text-center p-2" style="min-height:150px">
+                  <svg class="icon-logo-secondary icon-large text-color-blue-dark"><use xlink:href="#icon-logo-secondary"></use></svg>
+                </div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">#icon-logo-secondary</pre></div>
+              </div>
+              <div>
+                <div class="color-light-background border border-secondary-grey-50t border-b-0 rounded-t text-center p-2" style="min-height:150px">
+                  <svg class="icon-github-mark icon-large text-color-blue-dark"><use xlink:href="#icon-github-mark"></use></svg>
+                </div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">#icon-github-mark</pre></div>
+              </div>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+            </div>
+          </div>
+        </div>
+        <div class="layout--content px-4"><div class="o-content mx-auto"><h2>Usage</h2>
 
-<p>To use the inline SVGS, include the main icon sprite (&lt;code&gt;dist/icons.svg&lt;/code&gt;) in your page markup. NYCO Patterns uses an AJAX method to cache the sprite file while not including it in the page cache to decrease the size of each page. To import the icon through the global NYCO Patterns Patterns script use the following code:</p>
+<h3>The SVG Sprite</h3>
 
-<p>p div class=&#39;code-block&#39; pre = &quot;var nyco = new NycoPatterns();\n&quot; = &quot;nyco.icons();\n&quot;</p>
+<p>
+  To use the inline SVGS, include the main icon sprite (
+  <code>dist/icons.svg</code>
+  ) in your page markup. NYCO Patterns uses an AJAX method to cache the sprite file while not including it in the page cache to decrease the size of each page. To import the icon through the global NYCO Patterns Patterns script use the following code:
+</p>
 
-<p>The script expects the icon sprite path to be named &lt;code&gt;icons.svg&lt;/code&gt; and live in the root directory of the site. To overwrite this, pass a path to the method:</p>
+<pre><code>var nyco = new NycoPatterns();
+nyco.icons();</code></pre>
 
-<p>p div class=&#39;code-block&#39; pre = &quot;nyco.icons(&#39;path/to/icons.svg&#39;);\n&quot;</p>
+<p>
+  The script expects the icon sprite path to be
+  <code>./icons.svg</code>
+  (relative to the displayed page). To overwrite this, pass a path to the method:
+</p>
 
-<p>The ES6, CommonJS, and IFFE modules all require global activation to be written into your main script:</p>
+<pre><code>nyco.icons(&#39;path/to/icons.svg&#39;);</code></pre>
 
-<p>p div class=&#39;code-block&#39; pre = &quot;import Icons from &#39;components/icons/Icons.common&#39;;\n&quot; = &quot;new Icons(); // or new Icons(&#39;path/to/icons.svg&#39;);\n&quot;</p>
+<p>The ES6 and IFFE modules all require instantiation in your main script:</p>
 
-<p>This uses the &lt;code&gt;fetch&lt;/code&gt; method which will require a polyfill for IE11 (and other older browser) support. The script does not ship with a polyfill by default. See &lt;a href=&#39;https://polyfill.io&#39;&gt;Polyfill.io&lt;/a&gt; for a suitable polyfill.</p>
+<pre><code>import Icons from &#39;src/elements/icons/icons&#39;;
+new Icons();
+// or 
+new Icons(&#39;path/to/icons.svg&#39;);</code></pre>
+
+<p>
+  This uses the
+  <code>fetch</code>
+  method which will require a polyfill for IE11 (and other older browser) support. The script does not ship with a polyfill by default. See
+  <a href="https://polyfill.io">Polyfill.io</a>
+  for a suitable polyfill.
+</p>
 
 <h3>Markup</h3>
 
@@ -151,120 +210,113 @@
 
 <h4>Inline SVG’s</h4>
 
-<p>The first option allows you to inline an SVG with the &lt;code&gt;use&lt;/code&gt; tag. This is the preferred method for ACCESS NYC. Note that you can change the color of inline SVG icon shapes that have their fill set as currentColor by using a text color utility. Also, note the role=&quot;img&quot; attribute, title tag, and title tag id for accessibility support.</p>
+<p>
+  The first option allows you to inline an SVG with the
+  <code>use</code>
+  tag. This is the preferred method for ACCESS NYC. Note that you can change the color of inline SVG icon shapes that have their fill set as currentColor by using a text color utility. Also, note the role=&quot;img&quot; attribute, title tag, and title tag id for accessibility support.
+</p>
 
-<p>div class=&#39;code-block&#39; pre = &#39;&lt;svg class=&quot;icon-logo-nyco icon-xlarge text-color-blue-dark&quot; role=&quot;img&quot;&gt;\n&#39; = &#39; &lt;title id=&quot;icon-logo-nyco-title&quot;&gt;The NYC Opportunity Logo&lt;/title&gt;\n&#39; = &#39; &lt;use xlink:href=&quot;#icon-logo-nyco&quot;&gt;&lt;/use&gt;\n&#39; = &#39;&lt;/svg&gt;\n&#39;</p>
+<pre><code>&lt;svg class=&quot;icon-logo-nyco icon-xlarge text-color-blue-dark&quot; role=&quot;img&quot;&gt;
+  &lt;title id=&quot;icon-logo-nyco-title&quot;&gt;The NYC Opportunity Logo&lt;/title&gt;
+  &lt;use xlink:href=&quot;#icon-logo-nyco&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
 
 <h4>Background Images</h4>
 
-<p>The second option does not require the icon sprite to be added to the page through the JavaScript module. It uses background images that reference the icons on the CDN. This option uses a utility class that sets the background image of the icon &lt;code&gt;.bg-{{ Icon ID Here }}&lt;/code&gt;. Icons with background images require less markup but their shape fill color will default to black or whatever fill color the shape is set to. Note the &lt;code&gt;role=&quot;img&quot;&lt;/code&gt; and alt text attributes for accessibility.</p>
+<p>
+  The second option does not require the icon sprite to be added to the page through the JavaScript module. It uses background images that reference the icons on the CDN. This option uses a utility class that sets the background image of the icon
+  <code>.bg-{{ Icon ID Here }}</code>
+  . Icons with background images require less markup but their shape fill color will default to black or whatever fill color the shape is set to. Note the
+  <code>role=&quot;img&quot;</code>
+  and alt text attributes for accessibility.
+</p>
 
-<p>div class=&#39;code-block&#39; pre = &#39;&lt;div class=&quot;icon-logo-nyco&quot; role=&quot;img&quot; alt=&quot;The NYC Opportunity Logo&quot;&gt;&lt;/div&gt;&#39;</p>
+<pre><code>&lt;div class=&quot;icon-logo-nyco&quot; role=&quot;img&quot; alt=&quot;The NYC Opportunity Logo&quot;&gt;&lt;/div&gt;</code></pre>
 
 <h4>img tag</h4>
 
 <p>The third option is to use the individual SVG path as a source attribute in an image tag. Note the alt text attribute for accessibility.</p>
 
-<p>div class=&#39;code-block&#39; pre = &#39;&lt;img src=&quot;svgs/icon-logo-nyco.svg&quot; alt=&quot;The NYC Opportunity Logo&quot;&gt;&#39;</p>
+<pre><code>&lt;img src=&quot;svgs/icon-logo-nyco.svg&quot; alt=&quot;The NYC Opportunity Logo&quot;&gt;</code></pre>
 
 <h3>Icon sizes</h3>
 
 <p>To manage the size of the icons, use the icon size utilities. The dimensions are based on the 8px grid and include the following sizes;</p>
 
-<p>p .table.w-full table tbody tr td icon-1 td 8px 8px tr td icon-2 td 16px 16px tr td icon-3 td 24px 24px tr td icon-4 td 32px 32px tr td icon-5 td 40px 40px tr td icon-6 td 48px 48px tr td icon-7 td 56px 56px tr td icon-8 td 64px 64px tr td icon-9 td 72px 72px tr td icon-10 td 80px 80px tr td icon-11 td 88px 88px tr td icon-12 td 96px 96px tr td icon-large td 136px 136px tr td icon-xlarge td 256px 256px</p>
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Dimensions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>icon-1</td>
+      <td>8px 8px</td>
+    </tr>
+    <tr>
+      <td>icon-2</td>
+      <td>16px 16px</td>
+    </tr>
+    <tr>
+      <td>icon-3</td>
+      <td>24px 24px</td>
+    </tr>
+    <tr>
+      <td>icon-4</td>
+      <td>32px 32px</td>
+    </tr>
+    <tr>
+      <td>icon-5</td>
+      <td>40px 40px</td>
+    </tr>
+    <tr>
+      <td>icon-6</td>
+      <td>48px 48px</td>
+    </tr>
+    <tr>
+      <td>icon-7</td>
+      <td>56px 56px</td>
+    </tr>
+    <tr>
+      <td>icon-8</td>
+      <td>64px 64px</td>
+    </tr>
+    <tr>
+      <td>icon-9</td>
+      <td>72px 72px</td>
+    </tr>
+    <tr>
+      <td>icon-10</td>
+      <td>80px 80px</td>
+    </tr>
+    <tr>
+      <td>icon-11</td>
+      <td>88px 88px</td>
+    </tr>
+    <tr>
+      <td>icon-12</td>
+      <td>96px 96px</td>
+    </tr>
+    <tr>
+      <td>icon-large</td>
+      <td>136px 136px</td>
+    </tr>
+    <tr>
+      <td>icon-xlarge</td>
+      <td>256px 256px</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>&lt;b&gt;Accessibility Note&lt;/b&gt;: If the SVG graphic doesn&#39;t serve a function, it may not be useful to screen readers. Therefore, it may be hidden using the &lt;code&gt;aria-hidden=&quot;true&quot;&lt;/code&gt; attribute.</p>
-
-          </div>
-        </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon logo nyc</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-logo-nyc icon-xlarge text-color-blue-dark"><use xlink:href="#icon-logo-nyc"></use></svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">
-                    xlink:href
-                    <code>#icon-logo-nyc</code>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon logo nyco secondary</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-logo-nyco-secondary icon-xlarge text-color-blue-dark"><use xlink:href="#icon-logo-nyco-secondary"></use></svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">
-                    xlink:href
-                    <code>#icon-logo-nyco-secondary</code>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon logo nyco</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-logo-nyco icon-xlarge text-color-blue-dark"><use xlink:href="#icon-logo-nyco"></use></svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">
-                    xlink:href
-                    <code>#icon-logo-nyco</code>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon logo primary</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-logo-primary icon-xlarge text-color-blue-dark"><use xlink:href="#icon-logo-primary"></use></svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">
-                    xlink:href
-                    <code>#icon-logo-primary</code>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon logo secondary</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-logo-secondary icon-xlarge text-color-blue-dark"><use xlink:href="#icon-logo-secondary"></use></svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">
-                    xlink:href
-                    <code>#icon-logo-secondary</code>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4">
-              <div class="w-full">
-                <div class="text-font-size-small">
-                  <h3 class="text-h6 capitalize mt-0 mb-2">icon github mark</h3>
-                  <div class="py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center" style="min-height:150px">
-                    <svg class="icon-github-mark icon-xlarge text-color-blue-dark"><use xlink:href="#icon-github-mark"></use></svg>
-                  </div>
-                  <p class="mb-0 flex justify-between">
-                    xlink:href
-                    <code>#icon-github-mark</code>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<p>
+  <strong>Accessibility Note</strong>
+  : If the SVG graphic doesn&#39;t serve a function, it may not be useful to screen readers. Therefore, it may be hidden using the
+  <code>aria-hidden=&quot;true&quot;</code>
+  attribute.
+</p>
+</div></div>
       </section>
     </article>
   </main>

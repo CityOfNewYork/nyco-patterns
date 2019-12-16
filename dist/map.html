@@ -42,7 +42,7 @@
   </head>
 </html>
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
-  <header class="o-header screen-tablet:layout--sidebar">
+  <header class="o-header screen-tablet:layout--sidebar w-full">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
@@ -68,30 +68,28 @@
     <aside class="o-navigation bg-primary-navy">
       <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
         <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 1015px">
-            <nav><a class="o-navigation__link" href="index">Overview</a></nav>
-            <nav>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-              <a class="o-navigation__link" href="buttons">Buttons</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-              <a class="o-navigation__link" href="icons">Icons</a>
-              <a class="o-navigation__link" href="inputs">Inputs</a>
-              <a class="o-navigation__link" href="layouts">Layouts</a>
-              <a class="o-navigation__link" href="tables">Tables</a>
-              <a class="o-navigation__link" href="select">Select</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
-              <a class="o-navigation__link" href="footer">Footer</a>
-              <a class="o-navigation__link" href="feed">Feed</a>
-              <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="accessibility">Accessibility</a>
-              <a class="o-navigation__link" href="animate">Animate</a>
-              <a class="o-navigation__link" href="colors">Colors</a>
-              <a class="o-navigation__link" href="type">Type</a>
-            </nav>
-          </div>
+          <nav><a class="o-navigation__link" href="index">Overview</a></nav>
+          <nav>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+            <a class="o-navigation__link" href="buttons">Buttons</a>
+            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+            <a class="o-navigation__link" href="icons">Icons</a>
+            <a class="o-navigation__link" href="inputs">Inputs</a>
+            <a class="o-navigation__link" href="layouts">Layouts</a>
+            <a class="o-navigation__link" href="tables">Tables</a>
+            <a class="o-navigation__link" href="select">Select</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+            <a class="o-navigation__link" href="charts">Charts</a>
+            <a class="o-navigation__link" href="footer">Footer</a>
+            <a class="o-navigation__link" href="feed">Feed</a>
+            <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="navigation">Navigation</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="accessibility">Accessibility</a>
+            <a class="o-navigation__link" href="animate">Animate</a>
+            <a class="o-navigation__link" href="colors">Colors</a>
+            <a class="o-navigation__link" href="type">Type</a>
+          </nav>
         </div>
       </div>
       <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
@@ -123,28 +121,17 @@
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Map</h1>
+    <article class="color-light-background py-2">
+      <h1 class="m-0 p-0 mt-2 px-4 screen-desktop:px-6">Map</h1>
       <p></p>
       <p>
         All map source files can be found within
         <code>src/objects/map/</code>
         .
       </p>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="multi-layer-with-toggle-links"><a href="#multi-layer-with-toggle-links">Multi-layer with toggle links</a></h2>
-            <p>The &lt;code&gt;multi&lt;/code&gt; map type accepts one or more GeoJSON layers. When a single layer is set for this object, the menu (&lt;code&gt;nyco-map-menu&lt;/code&gt;) is omitted.</p>
-
-<p>In this example, zipcodes, neighborhoods, and boroughs are each individual GeoJSON Feature Collection objects. Click events on the polygon shapes in the map will display information based on the &lt;code&gt;filterBy&lt;/code&gt; attribute set for the layer.</p>
-
-<p>To utilize this map, set &lt;code&gt;mapType: &#39;multi&#39;&lt;/code&gt; in your &lt;code&gt;config&lt;/code&gt; object.</p>
-
-          </div>
-        </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+      <section class="pb-4" id="map-multi">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center">
             <div class="overflow-x-auto pb-3">
               <div class="o-map" data-js="nyco-map-ml">
                 <nyco-map-ml :config="config" :layers="layers" id="nyco-map-ml" style="height: 400px; width: 500px"></nyco-map-ml>
@@ -153,21 +140,27 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="single-layer-with-legend"><a href="#single-layer-with-legend">Single-layer with legend</a></h2>
-            <p>The &lt;code&gt;single&lt;/code&gt; map type accepts a single GeoJSON layer and displays a legend based on the defined feature property (&lt;code&gt;legendColumn&lt;/code&gt; attribute).</p>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;div class=&quot;overflow-x-auto pb-3&quot;&gt;
+  &lt;div class=&quot;o-map&quot; data-js=&quot;nyco-map-ml&quot;&gt;
+    &lt;nyco-map-ml :config=&quot;config&quot; :layers=&quot;layers&quot; id=&quot;nyco-map-ml&quot; style=&quot;height: 400px; width: 500px&quot;&gt;&lt;/nyco-map-ml&gt;
+    &lt;div class=&quot;map-menu pt-2&quot; id=&quot;nyco-map-menu&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+            <p>The &lt;code&gt;multi&lt;/code&gt; map type accepts one or more GeoJSON layers. When a single layer is set for this object, the menu (&lt;code&gt;nyco-map-menu&lt;/code&gt;) is omitted.</p>
 
-<p>In this example, the layer can be filtered by selecting a borough from the legend or by clicking a polygon shape on the map. The information displayed in the popup is based on the &lt;code&gt;filterBy&lt;/code&gt; attribute set for the layer.</p>
+<p>In this example, zipcodes, neighborhoods, and boroughs are each individual GeoJSON Feature Collection objects. Click events on the polygon shapes in the map will display information based on the &lt;code&gt;filterBy&lt;/code&gt; attribute set for the layer.</p>
 
-<p>To utilize this map, set &lt;code&gt;mapType: &#39;single&#39;&lt;/code&gt; in the &lt;code&gt;config&lt;/code&gt; object.</p>
+<p>To utilize this map, set &lt;code&gt;mapType: &#39;multi&#39;&lt;/code&gt; in your &lt;code&gt;config&lt;/code&gt; object.</p>
 
           </div>
         </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+      </section>
+      <section class="pb-4" id="map-single">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center">
             <div class="overflow-x-auto pb-3">
               <div class="o-map relative" data-js="nyco-map-sl">
                 <nyco-map-sl :config="config" :layers="layers" id="nyco-map-sl" style="height: 400px; width: 500px"></nyco-map-sl>
@@ -176,10 +169,27 @@
             </div>
           </div>
         </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;div class=&quot;overflow-x-auto pb-3&quot;&gt;
+  &lt;div class=&quot;o-map relative&quot; data-js=&quot;nyco-map-sl&quot;&gt;
+    &lt;nyco-map-sl :config=&quot;config&quot; :layers=&quot;layers&quot; id=&quot;nyco-map-sl&quot; style=&quot;height: 400px; width: 500px&quot;&gt;&lt;/nyco-map-sl&gt;
+    &lt;nav class=&quot;map-legend&quot; id=&quot;nyco-map-legend&quot;&gt;&lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+            <p>The &lt;code&gt;single&lt;/code&gt; map type accepts a single GeoJSON layer and displays a legend based on the defined feature property (&lt;code&gt;legendColumn&lt;/code&gt; attribute).</p>
+
+<p>In this example, the layer can be filtered by selecting a borough from the legend or by clicking a polygon shape on the map. The information displayed in the popup is based on the &lt;code&gt;filterBy&lt;/code&gt; attribute set for the layer.</p>
+
+<p>To utilize this map, set &lt;code&gt;mapType: &#39;single&#39;&lt;/code&gt; in the &lt;code&gt;config&lt;/code&gt; object.</p>
+
+          </div>
+        </div>
       </section>
       <section class="pb-4">
         <div class="layout--content">
-          <h2 class="mt-0" id="usage"><a href="#usage">Usage</a></h2>
+          <h2 class="mt-0" id="readme"><a href="#readme"></a></h2>
           <div><div class="my-0"><h3>Setup</h3>
 
 <p>

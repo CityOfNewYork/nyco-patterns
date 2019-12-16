@@ -24,8 +24,8 @@
   h1 class='${class_demo_headers}' = pattern;
   p
   p All map source files can be found within <code>src/objects/map/</code>.
-  = mixin('section', 'objects/map/map--multi', 'Multi-layer with toggle links');
-  = mixin('section', 'objects/map/map--single', 'Single-layer with legend');
+  = mixin('section', 'objects/map/map-multi');
+  = mixin('section', 'objects/map/map-single');
   = mixin('section-text', 'objects/map/readme');
 
 = content('script');

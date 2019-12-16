@@ -19,5 +19,4 @@
 
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
-
-  = mixin('section-full', 'objects/footer/footer');
+  = mixin('section', 'objects/footer/footer');

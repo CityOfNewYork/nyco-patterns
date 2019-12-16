@@ -1,5 +1,5 @@
 / This is the layout styling
-- class_demo_headers = 'm-0 p-0 mt-2';
+- class_demo_headers = 'm-0 p-0 mt-2 px-4 screen-desktop:px-6';
 - class_demo = 'flex flex-col screen-desktop:flex-row flex-wrap pb-4';
 -   class_demo_col1 = 'mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white';
 -     class_demo_cola = 'o-content screen-desktop:pr-4 screen-desktop:pr-6';

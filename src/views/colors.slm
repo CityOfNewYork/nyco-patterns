@@ -23,5 +23,5 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section-full', 'utilities/colors/color-combinations', 'Color Combinations');
-  = mixin('section', 'utilities/colors/color-utilities', 'Color Utilities');
+  = mixin('section', 'utilities/colors/color-combinations', false);
+  = mixin('section', 'utilities/colors/color-utilities', false);

@@ -23,5 +23,5 @@
 = content('content');
   h1 class='${class_demo_headers}' = pattern;
 
-  = mixin('section', 'elements/checkboxes/checkboxes', 'Default');
-  = mixin('section', 'elements/checkboxes/checkboxes-error', 'Error');
+  = mixin('section', 'elements/checkboxes/checkboxes');
+  = mixin('section', 'elements/checkboxes/checkboxes-error');

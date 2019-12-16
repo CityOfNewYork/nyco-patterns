@@ -1,22 +1,18 @@
+div class='layout--two-columns-gutter screen-desktop:layout--four-columns-gutter'
+  - for key in this.variables.icons
 
-- for key in this.variables.icons
+    - href = key
+    - for i in this.variables.iconVariants
+      - if href.indexOf(this.variables.iconVariants[i]) > 0
+        - href = href.replace(this.variables.iconVariants[i], '')
 
-  - href = key
-  - for i in this.variables.iconVariants
-    - if href.indexOf(this.variables.iconVariants[i]) > 0
-      - href = href.replace(this.variables.iconVariants[i], '')
+    div class=''
+      div class='color-light-background border border-secondary-grey-50t border-b-0 rounded-t text-center p-2' style='min-height:150px'
+        svg class='${key} icon-large text-color-blue-dark'
+          use xlink:href='#${key.split("--")[0]}'
 
-  div class='flex flex-col justify-between items-center border border-secondary-grey-30t p-2 mb-4'
-    div class='w-full'
+      div class='code-block border-secondary-grey-50t rounded-t-none border-t-0'
+        pre class='small' #${key}
 
-      div class='text-font-size-small'
-
-        h3 class='text-h6 capitalize mt-0 mb-2' ${key.replace(/-/g," ")}
-
-        div class='py-4 text-center bg-secondary-white px-2 mb-2 flex items-center justify-center' style='min-height:150px'
-          svg class='${key} icon-xlarge text-color-blue-dark'
-            use xlink:href='#${key.split("--")[0]}'
-
-        p class='mb-0 flex justify-between'
-          | xlink:href
-          code #${key}
+  div &nbsp;
+  div &nbsp;

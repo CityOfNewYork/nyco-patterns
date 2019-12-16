@@ -42,7 +42,7 @@
   </head>
 </html>
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
-  <header class="o-header screen-tablet:layout--sidebar">
+  <header class="o-header screen-tablet:layout--sidebar w-full">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
@@ -68,30 +68,28 @@
     <aside class="o-navigation bg-primary-navy">
       <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
         <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 1015px">
-            <nav><a class="o-navigation__link" href="index">Overview</a></nav>
-            <nav>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-              <a class="o-navigation__link" href="buttons">Buttons</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-              <a class="o-navigation__link" href="icons">Icons</a>
-              <a class="o-navigation__link" href="inputs">Inputs</a>
-              <a class="o-navigation__link" href="layouts">Layouts</a>
-              <a class="o-navigation__link" href="tables">Tables</a>
-              <a class="o-navigation__link" href="select">Select</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
-              <a class="o-navigation__link" href="footer">Footer</a>
-              <a class="o-navigation__link" href="feed">Feed</a>
-              <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="accessibility">Accessibility</a>
-              <a class="o-navigation__link" href="animate">Animate</a>
-              <a class="o-navigation__link" href="colors">Colors</a>
-              <a class="o-navigation__link" href="type">Type</a>
-            </nav>
-          </div>
+          <nav><a class="o-navigation__link" href="index">Overview</a></nav>
+          <nav>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+            <a class="o-navigation__link" href="buttons">Buttons</a>
+            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+            <a class="o-navigation__link" href="icons">Icons</a>
+            <a class="o-navigation__link" href="inputs">Inputs</a>
+            <a class="o-navigation__link" href="layouts">Layouts</a>
+            <a class="o-navigation__link" href="tables">Tables</a>
+            <a class="o-navigation__link" href="select">Select</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+            <a class="o-navigation__link" href="charts">Charts</a>
+            <a class="o-navigation__link" href="footer">Footer</a>
+            <a class="o-navigation__link" href="feed">Feed</a>
+            <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="navigation">Navigation</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="accessibility">Accessibility</a>
+            <a class="o-navigation__link" href="animate">Animate</a>
+            <a class="o-navigation__link" href="colors">Colors</a>
+            <a class="o-navigation__link" href="type">Type</a>
+          </nav>
         </div>
       </div>
       <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
@@ -123,191 +121,205 @@
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Colors</h1>
-      <section class="pb-4">
-        <div class="mt-4 layout--content">
-          <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="color-combinations"><a href="#color-combinations">Color Combinations</a></h2>
-          </div>
-          <div>
-            <div class="mb-2">
-              <article class="color-light-background w-full py-4 p-2 border border-secondary-grey-30t border-b-0">
-                <h1 class="m-0">Headings</h1>
-                <div class="capitalize">light background Text</div>
-                <a href="#">Hyperlinks</a>
-              </article>
-              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-light-background</pre></div>
-            </div>
-            <div class="mb-2">
-              <article class="color-mid-background w-full py-4 p-2 border border-secondary-grey-30t border-b-0">
-                <h1 class="m-0">Headings</h1>
-                <div class="capitalize">mid background Text</div>
-                <a href="#">Hyperlinks</a>
-              </article>
-              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-mid-background</pre></div>
-            </div>
-            <div class="mb-2">
-              <article class="color-dark-background w-full py-4 p-2 border border-secondary-grey-30t border-b-0">
-                <h1 class="m-0">Headings</h1>
-                <div class="capitalize">dark background Text</div>
-                <a href="#">Hyperlinks</a>
-              </article>
-              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-dark-background</pre></div>
-            </div>
-            <div class="mb-2">
-              <article class="color-primary-button w-full py-4 p-2 border border-secondary-grey-30t border-b-0"><div class="capitalize">primary button Text</div></article>
-              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-primary-button</pre></div>
-            </div>
-            <div class="mb-2">
-              <article class="color-secondary-button w-full py-4 p-2 border border-secondary-grey-30t border-b-0"><div class="capitalize">secondary button Text</div></article>
-              <div class="code-block rounded-t-none border-t-0"><pre class="small">.color-secondary-button</pre></div>
+    <article class="color-light-background py-2">
+      <h1 class="m-0 p-0 mt-2 px-4 screen-desktop:px-6">Colors</h1>
+      <section class="pb-4" id="color-combinations">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center">
+            <div class="screen-desktop:layout--three-columns-gutter">
+              <div class="mb-2">
+                <article class="color-light-background w-full py-4 p-2 border border-secondary-grey-50t border-b-0">
+                  <h1 class="m-0">Headings</h1>
+                  <div class="capitalize">light background Text</div>
+                  <a href="#">Hyperlinks</a>
+                </article>
+                <div class="code-block rounded-t-none border-secondary-grey-50t border-t-0"><pre class="small">.color-light-background</pre></div>
+              </div>
+              <div class="mb-2">
+                <article class="color-mid-background w-full py-4 p-2 border border-secondary-grey-50t border-b-0">
+                  <h1 class="m-0">Headings</h1>
+                  <div class="capitalize">mid background Text</div>
+                  <a href="#">Hyperlinks</a>
+                </article>
+                <div class="code-block rounded-t-none border-secondary-grey-50t border-t-0"><pre class="small">.color-mid-background</pre></div>
+              </div>
+              <div class="mb-2">
+                <article class="color-dark-background w-full py-4 p-2 border border-secondary-grey-50t border-b-0">
+                  <h1 class="m-0">Headings</h1>
+                  <div class="capitalize">dark background Text</div>
+                  <a href="#">Hyperlinks</a>
+                </article>
+                <div class="code-block rounded-t-none border-secondary-grey-50t border-t-0"><pre class="small">.color-dark-background</pre></div>
+              </div>
+              <div class="mb-2">
+                <article class="color-primary-button w-full py-4 p-2 border border-secondary-grey-50t border-b-0"><div class="capitalize">primary button Text</div></article>
+                <div class="code-block rounded-t-none border-secondary-grey-50t border-t-0"><pre class="small">.color-primary-button</pre></div>
+              </div>
+              <div class="mb-2">
+                <article class="color-secondary-button w-full py-4 p-2 border border-secondary-grey-50t border-b-0"><div class="capitalize">secondary button Text</div></article>
+                <div class="code-block rounded-t-none border-secondary-grey-50t border-t-0"><pre class="small">.color-secondary-button</pre></div>
+              </div>
+              <div>&nbsp;</div>
             </div>
           </div>
         </div>
+        <div class="layout--content px-4"><div class="o-content mx-auto"><h2>Color Combinations</h2>
+
+<p>These combinations are tested for adequate contrast following the distinguishability guideline of the Web Content Accessibility Guidelines (WCAG) 2.0. Hyperlinks are underlined to accommodate color blindness to avoid solely relying on color to distinguish them. WCAG AA compliance depends on the base text size. The examples may not be fully compliant because their font-size is set to a smaller size.</p>
+</div></div>
       </section>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="o-content screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="color-utilities"><a href="#color-utilities">Color Utilities</a></h2>
-            <p>You can use every color as a utility class for static and hover states. These are the prefixes that are available;</p>
-
-<p>
-  p code class=&#39;code&#39; = &#39;bg-{ color }&#39; = &#39; = Background color&#39;; p code class=&#39;code&#39; = &#39;text-{ color }&#39; = &#39; = Text color&#39;; p code class=&#39;code&#39; = &#39;border-{ color }&#39; = &#39; = Border color&#39;; p | Refer to a&lt;&gt; href=&#39;${link
-  <em>tailwind</em>
-  docs}&#39; Tailwind CSS docs | for full details on using color utilities and &lt;code&gt;hover:&lt;/code&gt; states.
-</p>
-
-          </div>
-        </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+      <section class="pb-4" id="color-utilities">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center">
             <div class="layout--two-columns-gutter screen-desktop:layout--four-columns-gutter">
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-navy py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy</pre></div>
+                <div class="bg-primary-navy py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-navy</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-navy-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy-70t</pre></div>
+                <div class="bg-primary-navy-70t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-navy-70t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-navy-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy-50t</pre></div>
+                <div class="bg-primary-navy-50t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-navy-50t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-navy-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-navy-30t</pre></div>
+                <div class="bg-primary-navy-30t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-navy-30t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-blue py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue</pre></div>
+                <div class="bg-primary-blue py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-blue</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-blue-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue-70t</pre></div>
+                <div class="bg-primary-blue-70t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-blue-70t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-blue-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue-50t</pre></div>
+                <div class="bg-primary-blue-50t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-blue-50t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-blue-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-blue-30t</pre></div>
+                <div class="bg-primary-blue-30t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-blue-30t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-red py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red</pre></div>
+                <div class="bg-primary-red py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-red</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-red-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red-70t</pre></div>
+                <div class="bg-primary-red-70t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-red-70t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-red-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red-50t</pre></div>
+                <div class="bg-primary-red-50t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-red-50t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-primary-red-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">primary-red-30t</pre></div>
+                <div class="bg-primary-red-30t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-primary-red-30t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-grey py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey</pre></div>
+                <div class="bg-secondary-grey py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-grey</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-grey-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey-70t</pre></div>
+                <div class="bg-secondary-grey-70t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-grey-70t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-grey-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey-50t</pre></div>
+                <div class="bg-secondary-grey-50t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-grey-50t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-grey-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-grey-30t</pre></div>
+                <div class="bg-secondary-grey-30t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-grey-30t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-white py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white</pre></div>
+                <div class="bg-secondary-white py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-white</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-white-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white-70t</pre></div>
+                <div class="bg-secondary-white-70t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-white-70t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-white-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white-50t</pre></div>
+                <div class="bg-secondary-white-50t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-white-50t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-white-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-white-30t</pre></div>
+                <div class="bg-secondary-white-30t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-white-30t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-orange py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange</pre></div>
+                <div class="bg-secondary-orange py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-orange</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-orange-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange-70t</pre></div>
+                <div class="bg-secondary-orange-70t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-orange-70t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-orange-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange-50t</pre></div>
+                <div class="bg-secondary-orange-50t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-orange-50t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-orange-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-orange-30t</pre></div>
+                <div class="bg-secondary-orange-30t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-orange-30t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-pink py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink</pre></div>
+                <div class="bg-secondary-pink py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-pink</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-pink-70t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink-70t</pre></div>
+                <div class="bg-secondary-pink-70t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-pink-70t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-pink-50t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink-50t</pre></div>
+                <div class="bg-secondary-pink-50t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-pink-50t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-secondary-pink-30t py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">secondary-pink-30t</pre></div>
+                <div class="bg-secondary-pink-30t py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-secondary-pink-30t</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-base-black py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">base-black</pre></div>
+                <div class="bg-base-black py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-base-black</pre></div>
               </div>
               <div class="inline-block w-full mb-2">
-                <div class="bg-base-white py-4 border border-secondary-grey-30t border-b-0"></div>
-                <div class="code-block rounded-t-none border-t-0"><pre class="small">base-white</pre></div>
+                <div class="bg-base-white py-4 border border-secondary-grey-50t border-b-0 rounded-t"></div>
+                <div class="code-block border-secondary-grey-50t rounded-t-none border-t-0"><pre class="small">.{{ prefix }}-base-white</pre></div>
               </div>
               <div>&nbsp;</div>
               <div>&nbsp;</div>
             </div>
           </div>
         </div>
+        <div class="layout--content px-4"><div class="o-content mx-auto"><h2>Color Utilities</h2>
+
+<p>
+  Color Utilities are enabled through
+  <a href="https://tailwindcss.com">Tailwind.css</a>
+  . The background, text, and border color can be set for the static, hover, and responsive states of any element using the proper prefex below.
+</p>
+
+<pre><code>/* Background Color */
+.bg-{{ color }}
+
+/* Text Color */
+.text-{{ color }}
+
+/* Border Color */
+.border-{{ color }}
+
+/* Hover State (for the background property) */
+.hover:bg-{{ color }}
+
+/* Responsive State (for the background property) */
+.{{ screen size }}:bg-{{ color }}</code></pre>
+</div></div>
       </section>
     </article>
   </main>

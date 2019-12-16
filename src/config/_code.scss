@@ -28,14 +28,14 @@ $colors: map-get($variables, 'colors');
 }
 
 @mixin code-inline() {
-  color: map-get($colors, 'primary-blue');
+  color: map-get($colors, 'primary-blue'); 
 
   font-size: 85%;
   font-family: inherit;
   letter-spacing: 0.01em;
 
   border-radius: 3px;
-  padding: 0.2em 0.4em;
+  padding: 0.1em 0.3em;
   margin: 0;
   display: inline;
 }

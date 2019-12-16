@@ -1,9 +1,8 @@
 = partial('demo-specs.mixin.slm');
 
-= mixin('section-text', 'path', 'title = Usage');
-  - this.slug = this.title.replace(/ /g, '-').toLowerCase();
-
-  - this.id = this.title.toLowerCase().split(' ').join('-');
+= mixin('section-text', 'path');
+  - this.slug = this.path.split('/')[2]; 
+  - this.id = this.path.split('/')[2];
 
   section class='pb-4'
     div class='layout--content'

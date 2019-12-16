@@ -42,7 +42,7 @@
   </head>
 </html>
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
-  <header class="o-header screen-tablet:layout--sidebar">
+  <header class="o-header screen-tablet:layout--sidebar w-full">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
@@ -68,30 +68,28 @@
     <aside class="o-navigation bg-primary-navy">
       <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
         <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 1015px">
-            <nav><a class="o-navigation__link" href="index">Overview</a></nav>
-            <nav>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-              <a class="o-navigation__link" href="buttons">Buttons</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-              <a class="o-navigation__link" href="icons">Icons</a>
-              <a class="o-navigation__link" href="inputs">Inputs</a>
-              <a class="o-navigation__link" href="layouts">Layouts</a>
-              <a class="o-navigation__link" href="tables">Tables</a>
-              <a class="o-navigation__link" href="select">Select</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
-              <a class="o-navigation__link" href="footer">Footer</a>
-              <a class="o-navigation__link" href="feed">Feed</a>
-              <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="accessibility">Accessibility</a>
-              <a class="o-navigation__link" href="animate">Animate</a>
-              <a class="o-navigation__link" href="colors">Colors</a>
-              <a class="o-navigation__link" href="type">Type</a>
-            </nav>
-          </div>
+          <nav><a class="o-navigation__link" href="index">Overview</a></nav>
+          <nav>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+            <a class="o-navigation__link" href="buttons">Buttons</a>
+            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+            <a class="o-navigation__link" href="icons">Icons</a>
+            <a class="o-navigation__link" href="inputs">Inputs</a>
+            <a class="o-navigation__link" href="layouts">Layouts</a>
+            <a class="o-navigation__link" href="tables">Tables</a>
+            <a class="o-navigation__link" href="select">Select</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+            <a class="o-navigation__link" href="charts">Charts</a>
+            <a class="o-navigation__link" href="footer">Footer</a>
+            <a class="o-navigation__link" href="feed">Feed</a>
+            <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="navigation">Navigation</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="accessibility">Accessibility</a>
+            <a class="o-navigation__link" href="animate">Animate</a>
+            <a class="o-navigation__link" href="colors">Colors</a>
+            <a class="o-navigation__link" href="type">Type</a>
+          </nav>
         </div>
       </div>
       <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
@@ -123,21 +121,26 @@
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Select</h1>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white"><div class="o-content screen-desktop:pr-4 screen-desktop:pr-6"><p>This is a Vue component that dynamically generates a select dropdown menu based on a list of options passed through.</p>
-</div></div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+    <article class="color-light-background py-2">
+      <h1 class="m-0 p-0 mt-2 px-4 screen-desktop:px-6">Select</h1>
+      <section class="pb-4" id="select">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center">
             <div data-js="app"><nyco-select :options="options" v-model="selected"></nyco-select></div>
           </div>
         </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;div data-js=&quot;app&quot;&gt;&lt;nyco-select :options=&quot;options&quot; v-model=&quot;selected&quot;&gt;&lt;/nyco-select&gt;&lt;/div&gt;
+</pre></div>
+            <p>This is a Vue component that dynamically generates a select dropdown menu based on a list of options passed through.</p>
+
+          </div>
+        </div>
       </section>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white"><div class="o-content screen-desktop:pr-4 screen-desktop:pr-6"></div></div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+      <section class="pb-4" id="select-error">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center">
             <div class="error">
               <select class="select" name="borough">
                 <option selected="true" value="">All Boroughs</option>
@@ -148,6 +151,22 @@
                 <option value="staten island">Staten Island</option>
               </select>
             </div>
+          </div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;div class=&quot;error&quot;&gt;
+  &lt;select class=&quot;select&quot; name=&quot;borough&quot;&gt;
+    &lt;option selected=&quot;true&quot; value=&quot;&quot;&gt;All Boroughs&lt;/option&gt;
+    &lt;option value=&quot;brooklyn&quot;&gt;Brooklyn&lt;/option&gt;
+    &lt;option value=&quot;bronx&quot;&gt;Bronx&lt;/option&gt;
+    &lt;option value=&quot;manhattan&quot;&gt;Manhattan&lt;/option&gt;
+    &lt;option value=&quot;queens&quot;&gt;Queens&lt;/option&gt;
+    &lt;option value=&quot;staten island&quot;&gt;Staten Island&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+</pre></div>
+            
           </div>
         </div>
       </section>

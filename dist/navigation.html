@@ -42,7 +42,7 @@
   </head>
 </html>
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
-  <header class="o-header screen-tablet:layout--sidebar">
+  <header class="o-header screen-tablet:layout--sidebar w-full">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
@@ -68,30 +68,28 @@
     <aside class="o-navigation bg-primary-navy">
       <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
         <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 1015px">
-            <nav><a class="o-navigation__link" href="index">Overview</a></nav>
-            <nav>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-              <a class="o-navigation__link" href="buttons">Buttons</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-              <a class="o-navigation__link" href="icons">Icons</a>
-              <a class="o-navigation__link" href="inputs">Inputs</a>
-              <a class="o-navigation__link" href="layouts">Layouts</a>
-              <a class="o-navigation__link" href="tables">Tables</a>
-              <a class="o-navigation__link" href="select">Select</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
-              <a class="o-navigation__link" href="footer">Footer</a>
-              <a class="o-navigation__link" href="feed">Feed</a>
-              <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="accessibility">Accessibility</a>
-              <a class="o-navigation__link" href="animate">Animate</a>
-              <a class="o-navigation__link" href="colors">Colors</a>
-              <a class="o-navigation__link" href="type">Type</a>
-            </nav>
-          </div>
+          <nav><a class="o-navigation__link" href="index">Overview</a></nav>
+          <nav>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+            <a class="o-navigation__link" href="buttons">Buttons</a>
+            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+            <a class="o-navigation__link" href="icons">Icons</a>
+            <a class="o-navigation__link" href="inputs">Inputs</a>
+            <a class="o-navigation__link" href="layouts">Layouts</a>
+            <a class="o-navigation__link" href="tables">Tables</a>
+            <a class="o-navigation__link" href="select">Select</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+            <a class="o-navigation__link" href="charts">Charts</a>
+            <a class="o-navigation__link" href="footer">Footer</a>
+            <a class="o-navigation__link" href="feed">Feed</a>
+            <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="navigation">Navigation</a>
+            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+            <a class="o-navigation__link" href="accessibility">Accessibility</a>
+            <a class="o-navigation__link" href="animate">Animate</a>
+            <a class="o-navigation__link" href="colors">Colors</a>
+            <a class="o-navigation__link" href="type">Type</a>
+          </nav>
         </div>
       </div>
       <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
@@ -123,39 +121,36 @@
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Navigation</h1>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white"><div class="o-content screen-desktop:pr-4 screen-desktop:pr-6"></div></div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
+    <article class="color-light-background py-2">
+      <h1 class="m-0 p-0 mt-2 px-4 screen-desktop:px-6">Navigation</h1>
+      <section class="pb-4" id="navigation">
+        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+          <div class="layout--wrap mx-auto flex justify-center">
             <aside class="o-navigation bg-primary-navy">
               <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
                 <div class="o-navigation__nav">
-                  <div class="o-navigation__stick" style="height: 1015px">
-                    <nav><a class="o-navigation__link" href="index">Overview</a></nav>
-                    <nav>
-                      <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-                      <a class="o-navigation__link" href="buttons">Buttons</a>
-                      <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-                      <a class="o-navigation__link" href="icons">Icons</a>
-                      <a class="o-navigation__link" href="inputs">Inputs</a>
-                      <a class="o-navigation__link" href="layouts">Layouts</a>
-                      <a class="o-navigation__link" href="tables">Tables</a>
-                      <a class="o-navigation__link" href="select">Select</a>
-                      <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-                      <a class="o-navigation__link" href="charts">Charts</a>
-                      <a class="o-navigation__link" href="footer">Footer</a>
-                      <a class="o-navigation__link" href="feed">Feed</a>
-                      <a class="o-navigation__link" href="header">Header</a>
-                      <a class="o-navigation__link" href="navigation">Navigation</a>
-                      <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-                      <a class="o-navigation__link" href="accessibility">Accessibility</a>
-                      <a class="o-navigation__link" href="animate">Animate</a>
-                      <a class="o-navigation__link" href="colors">Colors</a>
-                      <a class="o-navigation__link" href="type">Type</a>
-                    </nav>
-                  </div>
+                  <nav><a class="o-navigation__link" href="index">Overview</a></nav>
+                  <nav>
+                    <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+                    <a class="o-navigation__link" href="buttons">Buttons</a>
+                    <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+                    <a class="o-navigation__link" href="icons">Icons</a>
+                    <a class="o-navigation__link" href="inputs">Inputs</a>
+                    <a class="o-navigation__link" href="layouts">Layouts</a>
+                    <a class="o-navigation__link" href="tables">Tables</a>
+                    <a class="o-navigation__link" href="select">Select</a>
+                    <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+                    <a class="o-navigation__link" href="charts">Charts</a>
+                    <a class="o-navigation__link" href="footer">Footer</a>
+                    <a class="o-navigation__link" href="feed">Feed</a>
+                    <a class="o-navigation__link" href="header">Header</a>
+                    <a class="o-navigation__link" href="navigation">Navigation</a>
+                    <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+                    <a class="o-navigation__link" href="accessibility">Accessibility</a>
+                    <a class="o-navigation__link" href="animate">Animate</a>
+                    <a class="o-navigation__link" href="colors">Colors</a>
+                    <a class="o-navigation__link" href="type">Type</a>
+                  </nav>
                 </div>
               </div>
               <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
@@ -187,6 +182,68 @@
                 </div>
               </div>
             </aside>
+          </div>
+        </div>
+        <div class="layout--content px-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;aside class=&quot;o-navigation bg-primary-navy&quot;&gt;
+  &lt;div class=&quot;o-navigation__wrap color-mid-background hidden screen-tablet:flex&quot;&gt;
+    &lt;div class=&quot;o-navigation__nav&quot;&gt;
+      &lt;nav&gt;&lt;a class=&quot;o-navigation__link&quot; href=&quot;index&quot;&gt;Overview&lt;/a&gt;&lt;/nav&gt;
+      &lt;nav&gt;
+        &lt;span class=&quot;o-navigation__link-header text-primary-blue-70t border-primary-blue-30t&quot;&gt;Elements&lt;/span&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;buttons&quot;&gt;Buttons&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;checkboxes&quot;&gt;Checkboxes&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;icons&quot;&gt;Icons&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;inputs&quot;&gt;Inputs&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;layouts&quot;&gt;Layouts&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;tables&quot;&gt;Tables&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;select&quot;&gt;Select&lt;/a&gt;
+        &lt;span class=&quot;o-navigation__link-header text-primary-blue-70t border-primary-blue-30t&quot;&gt;Objects&lt;/span&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;charts&quot;&gt;Charts&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;footer&quot;&gt;Footer&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;feed&quot;&gt;Feed&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;header&quot;&gt;Header&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;navigation&quot;&gt;Navigation&lt;/a&gt;
+        &lt;span class=&quot;o-navigation__link-header text-primary-blue-70t border-primary-blue-30t&quot;&gt;Utilities&lt;/span&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;accessibility&quot;&gt;Accessibility&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;animate&quot;&gt;Animate&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;colors&quot;&gt;Colors&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;type&quot;&gt;Type&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden&quot; id=&quot;js-navigation&quot;&gt;
+    &lt;div class=&quot;o-navigation__banner color-dark-background&quot;&gt;&lt;h1 class=&quot;o-navigation__banner-title&quot;&gt;Patterns&lt;/h1&gt;&lt;/div&gt;
+    &lt;div class=&quot;o-navigation__nav animated&quot;&gt;
+      &lt;div class=&quot;text-center&quot;&gt;&lt;a class=&quot;btn mt-2 mb-2 px-5&quot; data-theme=&quot;www1.nyc.gov&quot; onclick=&quot;toggleTheme(event.target.dataset.theme)&quot;&gt;nyc.gov styles&lt;/a&gt;&lt;/div&gt;
+      &lt;nav&gt;&lt;a class=&quot;o-navigation__link&quot; href=&quot;index&quot;&gt;Overview&lt;/a&gt;&lt;/nav&gt;
+      &lt;nav&gt;
+        &lt;span class=&quot;o-navigation__link-header text-primary-blue-70t border-primary-blue-30t&quot;&gt;Elements&lt;/span&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;buttons&quot;&gt;Buttons&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;checkboxes&quot;&gt;Checkboxes&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;icons&quot;&gt;Icons&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;inputs&quot;&gt;Inputs&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;layouts&quot;&gt;Layouts&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;tables&quot;&gt;Tables&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;select&quot;&gt;Select&lt;/a&gt;
+        &lt;span class=&quot;o-navigation__link-header text-primary-blue-70t border-primary-blue-30t&quot;&gt;Objects&lt;/span&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;charts&quot;&gt;Charts&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;footer&quot;&gt;Footer&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;feed&quot;&gt;Feed&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;header&quot;&gt;Header&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;navigation&quot;&gt;Navigation&lt;/a&gt;
+        &lt;span class=&quot;o-navigation__link-header text-primary-blue-70t border-primary-blue-30t&quot;&gt;Utilities&lt;/span&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;accessibility&quot;&gt;Accessibility&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;animate&quot;&gt;Animate&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;colors&quot;&gt;Colors&lt;/a&gt;
+        &lt;a class=&quot;o-navigation__link&quot; href=&quot;type&quot;&gt;Type&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;
+</pre></div>
+            
           </div>
         </div>
       </section>
