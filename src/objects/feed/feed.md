@@ -2,7 +2,7 @@ The **Feed Object** embeds a Medium feed onto any web page. Multiple urls can be
 
 ## Usage
 
-### Embed
+### [Embed](customize-your-feed)
 
 [Copy and paste the embeddable snippet](customize-your-feed) that automatically integrates the latest version of the **Feed Object**.
 

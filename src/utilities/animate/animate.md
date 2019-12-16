@@ -5,7 +5,9 @@
     fadeIn
     fadeInUp
 
-The following selectors and their properties are animated by default;
+## Default Animations
+
+The following elements and certain properties are animated by default;
 
     a
     input

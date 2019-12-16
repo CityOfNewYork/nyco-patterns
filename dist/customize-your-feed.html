@@ -83,6 +83,7 @@
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
             <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
             <a class="o-navigation__link" href="navigation">Navigation</a>
             <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
             <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -111,6 +112,7 @@
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
             <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
             <a class="o-navigation__link" href="navigation">Navigation</a>
             <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
             <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -126,7 +128,7 @@
       <section class="pb-4" id="feed-form">
         <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
           <div class="layout--wrap mx-auto flex justify-center">
-            <div class="p-3 color-light-background overflow-scroll shadow-up" style="max-height: 500px; width: 300px;"><div data-js="feed"></div></div>
+            <div class="p-3 color-light-background overflow-scroll shadow-up" style="max-height: 500px; width: 900px;"><div data-js="feed"></div></div>
           </div>
         </div>
         <div class="layout--content px-4">
@@ -143,7 +145,7 @@
                 <div><input class="w-full" data-js-share-base="https://cityofnewyork.github.io/nyco-patterns" id="js-share" /></div>
               </div>
               <div id="js-controls">
-                <h3 id="variables"><a href="#customize">Customize</a></h3>
+                <h3>Customize</h3>
                 <p>Edit the variables below then click render (or press the return key) to display an updated feed with your own configuration.</p>
                 <fieldset v-for="item, name in configDefault">
                   <div class="pb-2" v-if='typeof item == "string" || !isNaN(item) || Array.isArray(item)'>
@@ -158,7 +160,7 @@
                     </div>
                   </div>
                   <div class="mb-3" v-else-if='typeof item === "object"'>
-                    <h4 v-bind:id='"#config-" + name'><a v-bind:href='"#config-" + name'>{{ name }}</a></h4>
+                    <h4>{{ name }}</h4>
                     <div class="pb-2" v-for="value, key in item">
                       <label v-bind:for="name + key">
                         <span class="font-bold">{{ name }}.{{ key }}</span>
@@ -172,7 +174,7 @@
                     </div>
                   </div>
                 </fieldset>
-                <button class="btn btn-form-submit" v-on:click="render">Render</button>
+                <button class="btn color-primary-button" v-on:click="render">Render</button>
               </div>
             </form>
           </div>

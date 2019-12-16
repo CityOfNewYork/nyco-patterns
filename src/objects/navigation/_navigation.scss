@@ -48,10 +48,10 @@ $grid: map-get($variables, 'grid');
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   -ms-overflow-style: none;
   scrollbar-width: none;
-  
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -59,7 +59,7 @@ $grid: map-get($variables, 'grid');
 
 .o-navigation__link-header {
   display: block;
-  font-weight: bold;
+  // font-weight: bold;
   border-bottom: 1px solid !important;
 
   padding: ($grid * 2) $grid;

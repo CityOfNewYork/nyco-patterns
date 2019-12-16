@@ -1,5 +1,6 @@
 @import 'config/variables';
 @import 'config/fonts';
+@import 'config/code';
 
 $colors: $colors;
 $grid: map-get($variables, 'grid');
@@ -36,9 +37,14 @@ $grid: map-get($variables, 'grid');
 
   // code style override
   code, pre {
-    font-size: map-get(map-get($variables, 'fontSize'), 'h5');
-    font-weight: map-get(map-get($variables, 'fontWeight'), 'bold');
-    color: map-get($colors, 'primary-blue');
+    // font-size: map-get(map-get($variables, 'fontSize'), 'h5');
+    // font-weight: map-get(map-get($variables, 'fontWeight'), 'bold');
+    // color: map-get($colors, 'primary-blue');
+    @include code-inline;
+  }
+
+  pre {
+    @include code-block;
   }
 }
 

@@ -58,16 +58,18 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   a {
-    text-decoration: inherit
+    font-weight: inherit;
+    text-decoration: inherit;
   }
 }
 
 small, .small {
-  @include type('small'); 
+  @include type('small');
 }
 
 blockquote, .blockquote {
-  border-left: map-get($variables, 'grid') solid rgba(0, 0, 0, 0.2);
+  border-left: map-get($variables, 'grid') solid;
+  border-color: inherit;
   padding-left: map-get($variables, 'grid') * 2;
 
   @include type('blockquote') {

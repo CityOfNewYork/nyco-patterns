@@ -83,6 +83,7 @@
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
             <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
             <a class="o-navigation__link" href="navigation">Navigation</a>
             <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
             <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -111,6 +112,7 @@
             <a class="o-navigation__link" href="footer">Footer</a>
             <a class="o-navigation__link" href="feed">Feed</a>
             <a class="o-navigation__link" href="header">Header</a>
+            <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
             <a class="o-navigation__link" href="navigation">Navigation</a>
             <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
             <a class="o-navigation__link" href="accessibility">Accessibility</a>
@@ -125,11 +127,11 @@
       <h1 class="m-0 p-0 mt-2 px-4 screen-desktop:px-6">Buttons</h1>
       <section class="pb-4" id="buttons">
         <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center"><button class="btn">Submit</button></div>
+          <div class="layout--wrap mx-auto flex justify-center"><button class="btn">Default</button></div>
         </div>
         <div class="layout--content px-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;button class=&quot;btn&quot;&gt;Submit&lt;/button&gt;
+            <div class="code-block"><pre>&lt;button class=&quot;btn&quot;&gt;Default&lt;/button&gt;
 </pre></div>
             <p>
   Buttons should be written using the
@@ -138,7 +140,9 @@
   <code>&lt;a&gt;</code>
   tag styled with the
   <code>.btn</code>
-  class and has in-page functionality (such as toggling elements), the role attribute should be set to &quot;button&quot; and the tabindex attribute should be set to &quot;0.&quot; Refer to the best practices illustrated in the MDN documentation for the &quot;button&quot; role.
+  class and has in-page functionality (such as toggling elements), the role attribute should be set to &quot;button&quot; and the tabindex attribute should be set to &quot;0.&quot; Refer to the best practices illustrated in the
+  <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">MDN documentation for the &quot;button&quot; role</a>
+  .
 </p>
 
 <p>
@@ -146,9 +150,17 @@
   <code>&lt;button&gt;</code>
   element and appears within a
   <code>&lt;form&gt;</code>
-  tag, the type attribute should be explicitly set to &quot;submit,&quot; &quot;reset,&quot; or &quot;reset.&quot; By default (without the type attribute)
+  tag, the type attribute should be explicitly set to
+  <em>submit</em>
+  ,
+  <em>reset</em>
+  , or
+  <em>reset</em>
+  . By default (without the type attribute)
   <code>&lt;button&gt;</code>
-  elements are set to the &quot;submit&quot; type.
+  elements are set to the
+  <em>submit</em>
+  type.
 </p>
 
           </div>
@@ -164,18 +176,32 @@
 </pre></div>
             <h2>Primary Button</h2>
 
+<p>
+  The primary button should be used for in-page functionality and form submitting buttons. Use the
+  <code>.color-primary-button</code>
+  <a href="/colors#color-combinations">color combination</a>
+  to apply this style.
+</p>
+
           </div>
         </div>
       </section>
       <section class="pb-4" id="buttons-secondary">
         <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center"><button class="btn color-secondary-button">Submit</button></div>
+          <div class="layout--wrap mx-auto flex justify-center"><a class="btn color-secondary-button">Go to Page</a></div>
         </div>
         <div class="layout--content px-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;button class=&quot;btn color-secondary-button&quot;&gt;Submit&lt;/button&gt;
+            <div class="code-block"><pre>&lt;a class=&quot;btn color-secondary-button&quot;&gt;Go to Page&lt;/a&gt;
 </pre></div>
             <h2>Secondary Button</h2>
+
+<p>
+  The secondary button should be used for calls-to-action and page links (not anchor links). Use the
+  <code>.color-secondary-button</code>
+  <a href="/colors#color-combinations">color combination</a>
+  to apply this style.
+</p>
 
           </div>
         </div>

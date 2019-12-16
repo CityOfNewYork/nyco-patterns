@@ -17,8 +17,7 @@ form class='border border-solid border-primary-blue-30t bg-secondary-white-70t p
       input#js-share class='w-full' data-js-share-base='${this.site.urls.production}'
 
   div#js-controls
-    h3#variables
-      a href='#customize' Customize
+    h3 Customize
 
     p Edit the variables below then click render (or press the return key) to display an updated feed with your own configuration.
 
@@ -37,8 +36,7 @@ form class='border border-solid border-primary-blue-30t bg-secondary-white-70t p
 
       / If the setting is an object
       div v-else-if='typeof item === "object"' class='mb-3'
-        h4 v-bind:id='"#config-" + name'
-          a v-bind:href='"#config-" + name' = '{{ name }}';
+        h4 = '{{ name }}';
 
         div v-for='value, key in item' class='pb-2'
           label v-bind:for='name + key'
@@ -51,4 +49,4 @@ form class='border border-solid border-primary-blue-30t bg-secondary-white-70t p
             textarea v-if='name === "templates"' class='w-full' v-bind:name='name + key' v-bind:id='name + key' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)' v-bind:placeholder='configDefault[name][key].toString()'
             input v-else='' class='w-full' type='text' v-bind:name='name + key' v-bind:id='name + key' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)' v-bind:placeholder='configDefault[name][key].toString()'
 
-    button class='btn btn-form-submit' v-on:click='render' Render
+    button class='btn color-primary-button' v-on:click='render' Render

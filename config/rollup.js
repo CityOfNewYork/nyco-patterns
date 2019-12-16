@@ -98,16 +98,5 @@ export default [
       strict: rollup.strict
     },
     plugins: rollup.plugins
-  },
-  {
-    input: './src/utilities/lzw/lzw.js',
-    output: {
-      name: 'LZW',
-      file: './dist/utilities/lzw/lzw.js',
-      sourcemap: rollup.sourcemap,
-      format: rollup.format,
-      strict: rollup.strict
-    },
-    plugins: rollup.plugins
   }
 ];
