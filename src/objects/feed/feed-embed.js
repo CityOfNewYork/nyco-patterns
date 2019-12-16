@@ -1,6 +1,6 @@
 import Feed from './feed';
 import FeedDocs from './feed-docs';
-import LZW from '../../utilities/lzw/lzw';
+import LZW from '@nycopportunity/patterns-framework/src/utilities/lzw/lzw';
 
 class FeedEmbed {
   constructor() {
