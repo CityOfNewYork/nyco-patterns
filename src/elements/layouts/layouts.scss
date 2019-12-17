@@ -31,6 +31,18 @@ $grid: map-get($variables, 'grid');
     }
   }
 
+  .#{$variant}layout--two-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(50%);
+      max-width: calc(50%);
+      flex-basis: calc(50%)
+    }
+  }
+
   .#{$variant}layout--two-columns-gutter {
     display: flex;
     justify-content: space-between;
@@ -47,6 +59,18 @@ $grid: map-get($variables, 'grid');
     }
   }
 
+  .#{$variant}layout--three-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(33.33%);
+      max-width: calc(33.33%);
+      flex-basis: calc(33.33%)
+    }
+  }
+
   .#{$variant}layout--three-columns-gutter {
     display: flex;
     justify-content: space-between;
@@ -60,6 +84,18 @@ $grid: map-get($variables, 'grid');
 
     > * {
       margin-bottom: $grid
+    }
+  }
+
+  .#{$variant}layout--four-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(25%);
+      max-width: calc(25%);
+      flex-basis: calc(25%)
     }
   }
 

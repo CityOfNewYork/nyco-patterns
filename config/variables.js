@@ -131,6 +131,11 @@ const variables = {
     '6': '48px',
     'auto': 'auto'
   },
+  maxWidth: {
+    '1/2': '50%',
+    'full': '100%',
+    '900': '896px'
+  },
   screens: {
     'screen-desktop': 960,
     'screen-mobile': 480,

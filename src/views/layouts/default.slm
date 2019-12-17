@@ -1,6 +1,5 @@
 doctype html
 html lang='en' class='text-size-0'
-
   = content('head');
 
 body class='bg-base-black' style='visibility: hidden;' onload='load()'

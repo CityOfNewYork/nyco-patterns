@@ -1,4 +1,0 @@
-div
-  p This text will be read aloud and remain visible to users.
-  p Below is an example of a <code>p</code> element with the <code>sr-only</code> class applied. If you're not using a screen reader, use your dev tools inspect feature to view the element:
-  p class='sr-only' However, this text will be read aloud by screen readers.

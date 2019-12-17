@@ -1,13 +1,12 @@
 / Layout
 = extend('layouts/full');
 
-/ Strings
-= partial('partials/styles.slm');
-= partial('partials/links.slm');
+/ Variables
+= partial('variables/classes.slm');
 
-/ Partials
-= partial('partials/head.mixin.slm');
-= partial('partials/nav.mixin.slm');
+/ Mixins
+= partial('mixins/head.slm');
+= partial('mixins/nav.slm');
 
 / Content blocks
 = content('head');
@@ -15,5 +14,5 @@
 
 = content('content');
   div class='layout--wrap mx-auto px-4 pb-6'
-    h1 class='${class_demo_headers}' Overview
+    h1 class='${classDemoHeaders}' Overview
     = 'md{{ content/index.md }}';

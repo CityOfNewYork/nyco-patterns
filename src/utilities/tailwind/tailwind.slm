@@ -1,0 +1,66 @@
+h2 Theme
+
+div#responsive-variants
+  div class='p-2 border-b border-secondary-white-70t'
+    a href='${this.site.urls.tailwindDocs}theme/#screens' class='capitalize' target='_blank' Screens
+
+    span = '(Responsive Variant)';
+
+  div class='bg-secondary-white-70t' id='config-screens' aria-hidden='true'
+    div class='p-2 layout--two-columns border-b border-base-white'
+      div
+        b Class
+      div
+        b Property Value
+
+    - for (i in this.site.tailwind.theme.screens)
+      div class='p-2 layout--two-columns font-code text-primary-red small border-b border-base-white'
+        div = `.${i}:{{ utility }}`;
+        div = `${this.site.tailwind.theme.screens[i]}`;
+
+h2 Core Plugins
+
+div class='p-2 layout--three-columns items-center'
+  div
+    b Plugin
+  div
+    b Variants
+  div class='text-right'
+    b Configuration
+
+div class='mb-4'
+  - for (i in this.site.tailwind.corePlugins)
+    - plugin = this.site.tailwind.corePlugins[i];
+    - name = plugin.replace(/[\w]([A-Z])/g, (m) => m[0] + ' ' + m[1]).toLowerCase();
+    - link = name.replace(' ', '-');
+
+    - config = (this.site.tailwind.theme.hasOwnProperty(plugin)) ? this.site.tailwind.theme[plugin] : false;
+    - variants = (this.site.tailwind.variants.hasOwnProperty(plugin)) ? this.site.tailwind.variants[plugin] : false;
+
+    div class='p-2 layout--three-columns items-center border-b border-secondary-white-70t'
+      a href='${this.site.urls.tailwindDocs}${link}' class='capitalize' target='_blank' = name;
+
+      div class='font-code'
+        - if (variants)
+          = '[';
+          = `${variants.toString().replace(',', ', ')}`;
+          = ']';
+
+      div class='text-right'
+        - if (config)
+          a class='cursor-pointer' type='button' aria-controls='config-${link}' aria-expanded='false' data-js='toggle' Customized
+        - else
+          div class='text-secondary-grey' Default
+
+    - if (config)
+      div class='bg-secondary-white-70t hidden' id='config-${link}' aria-hidden='true'
+        div class='p-2 layout--two-columns border-b border-base-white'
+          div
+            b Class
+          div
+            b Property Value
+
+        - for (i in config)
+          div class='p-2 layout--two-columns font-code text-primary-red small border-b border-base-white'
+            div = `.{{ prefix }}-${i}`;
+            div = `${config[i]}`;

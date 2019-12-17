@@ -6,10 +6,10 @@ footer class='o-footer color-dark-background screen-tablet:layout--four-columns-
 
   nav
     a class='o-footer__nav-link' href='index' Overview
-    a class='o-footer__nav-link' href='${link_source}' GitHub Repository
-    a class='o-footer__nav-link' href='${link_nyc_opportunity}' title='${this.site.package.author}' NYC Opportunity
-    a class='o-footer__nav-link' href='${link_tailwind_docs}' Tailwind CSS
-    a class='o-footer__nav-link' href='${link_blueprint}' NYC Digital Blueprint
+    a class='o-footer__nav-link' href='${this.site.urls.source}' GitHub Repository
+    a class='o-footer__nav-link' href='${this.site.urls.nycOpportunity}' title='${this.site.package.author}' NYC Opportunity
+    a class='o-footer__nav-link' href='${this.site.urls.tailwind}' Tailwind CSS
+    a class='o-footer__nav-link' href='${this.site.urls.blueprint}' NYC Digital Blueprint
 
   div
 
@@ -20,10 +20,10 @@ footer class='o-footer color-dark-background screen-tablet:layout--four-columns-
 
     p
       | NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
-      | <a href='${link_twitter}' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
-      | <a href='${link_facebook}' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
-      | <a href='${link_medium}' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
-      | <a href='${link_github_team}' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
+      | <a href='${this.site.urls.twitter}' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
+      | <a href='${this.site.urls.facebook}' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
+      | <a href='${this.site.urls.medium}' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
+      | <a href='${this.site.urls.github_team}' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
 
     small
       - let date = new Date();

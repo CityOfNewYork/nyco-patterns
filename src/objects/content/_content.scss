@@ -5,17 +5,17 @@
 .o-content {
   display: block;
 
+  code {
+    @include code-inline;
+  }
+
   pre {
     @include code-block;
   }
 
-  p code {
-    @include code-inline;
-  }
-
   table {
     @include tables;
-  } 
+  }
 
   pre, .code-block, table {
     margin-bottom: map-get($variables, 'grid') * 2;

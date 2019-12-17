@@ -3,12 +3,13 @@
 / Layout
 = extend('layouts/default');
 
-= partial('partials/styles.slm');
-= partial('partials/links.slm');
-= partial('partials/head.mixin.slm');
-= partial('partials/nav.mixin.slm');
-= partial('partials/section.mixin.slm');
-= partial('partials/section-full.mixin.slm');
+/ Variables
+= partial('variables/classes.slm');
+
+/ Mixins
+= partial('mixins/head.slm');
+= partial('mixins/nav.slm');
+= partial('mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -18,13 +19,13 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${class_demo_headers}' = pattern;
-  = mixin('section', 'utilities/type/h1');
-  = mixin('section', 'utilities/type/h2');
-  = mixin('section', 'utilities/type/h3');
-  = mixin('section', 'utilities/type/h4');
-  = mixin('section', 'utilities/type/h5');
-  = mixin('section', 'utilities/type/h6');
-  = mixin('section', 'utilities/type/small');
-  = mixin('section', 'utilities/type/blockquote');
-  = mixin('section', 'utilities/type/jumbo');
+  h1 class='${classDemoHeaders}' = pattern;
+  = mixin('pattern', 'utilities/type/h1');
+  = mixin('pattern', 'utilities/type/h2');
+  = mixin('pattern', 'utilities/type/h3');
+  = mixin('pattern', 'utilities/type/h4');
+  = mixin('pattern', 'utilities/type/h5');
+  = mixin('pattern', 'utilities/type/h6');
+  = mixin('pattern', 'utilities/type/small');
+  = mixin('pattern', 'utilities/type/blockquote');
+  = mixin('pattern', 'utilities/type/jumbo');

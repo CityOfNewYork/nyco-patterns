@@ -16,3 +16,5 @@ Color Utilities are enabled through [Tailwind.css](https://tailwindcss.com). The
 
     /* Responsive State (for the background property) */
     .{{ screen size }}:bg-{{ color }}
+
+More details can be found in the [Tailwind Utilities](/tailwind) documentation.

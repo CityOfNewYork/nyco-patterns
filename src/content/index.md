@@ -1,6 +1,6 @@
 
 
-The global patterns seen on <a href='${link_nyc_opportunity}'>NYC.gov/opportunity</a> utilize a partial integration of <a href='${link_bootstrap}'>Bootstrap 2.3.2</a>. This library extends the NYC.gov Style Guide with custom modules and the <a href='${link_tailwind_docs}'>Tailwind CSS Utility framework</a>. See the <a href='${link_blueprint_nyc_brand}'>NYC Digital Blueprint's documentation</a> of The City's Style Guide for more details and resources.
+The global patterns seen on <a href='${this.site.urls.nycOpportunity}'>NYC.gov/opportunity</a> utilize a partial integration of <a href='${this.site.urls.bootstrap}'>Bootstrap 2.3.2</a>. This library extends the NYC.gov Style Guide with custom modules and the <a href='${this.site.urls.tailwind}'>Tailwind CSS Utility framework</a>. See the <a href='${this.site.urls.blueprint_nyc_brand}'>NYC Digital Blueprint's documentation</a> of The City's Style Guide for more details and resources.
 
 By default, NYC.gov stylesheets are disabled in this documentation. To see what these patterns look like with the NYC.gov stylesheets, click "NYC.gov Styles" in the main navigation.
 
@@ -8,4 +8,4 @@ The patterns in this repository are organized as <em>Elements</em>, <em>Componen
 
     <link href="" rel="stylesheet" type="text/css">
 
-This distribution includes a custom build of the <a href='${link_tailwind_docs}'>Tailwind Utility CSS Framework</a>. Refer to Tailwind CSS docs for full details on utilizing the CSS uitilites to build different types of UIs.
+This distribution includes a custom build of the <a href='${this.site.urls.tailwind}'>Tailwind Utility CSS Framework</a>. Refer to Tailwind CSS docs for full details on utilizing the CSS uitilites to build different types of UIs.

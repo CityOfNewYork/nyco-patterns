@@ -1,0 +1,23 @@
+- pattern = 'Tailwind';
+
+/ Layout
+= extend('layouts/default');
+
+/ Variables
+= partial('variables/classes.slm');
+
+/ Mixins
+= partial('mixins/head.slm');
+= partial('mixins/nav.slm');
+= partial('mixins/readme.slm');
+
+/ Content blocks
+= content('head');
+  = mixin('head', pattern);
+
+= content('header');
+  = mixin('header');
+
+= content('content');
+  h1 class='${classDemoHeaders}' = pattern;
+  = mixin('readme', 'utilities/tailwind/tailwind');

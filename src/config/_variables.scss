@@ -182,6 +182,11 @@ $variables:(
     -1: -8px,
     auto: auto
   ),
+  maxWidth: (
+    900: 896px,
+    1/2: 50%,
+    full: 100%
+  ),
   screens: (
     screen-desktop: 960,
     screen-mobile: 480,

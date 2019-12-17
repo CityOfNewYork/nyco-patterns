@@ -21,12 +21,13 @@ pre {
   @include code-block();
 
   code {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    background-color: inherit;
-    border: none;
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    background-color: inherit !important;
+    border: none !important;
   }
 }
 

@@ -1,0 +1,6 @@
+/**
+/ Shared Classes throughout the site
+/**
+
+- classDemoHeaders = 'm-0 p-0 mt-2 px-4 screen-desktop:px-6';
+- classNavLinkHeader = 'inline-block screen-tablet:block pb-1';

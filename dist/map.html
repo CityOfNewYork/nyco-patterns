@@ -86,9 +86,9 @@
             <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
             <a class="o-navigation__link" href="navigation">Navigation</a>
             <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-            <a class="o-navigation__link" href="accessibility">Accessibility</a>
             <a class="o-navigation__link" href="animate">Animate</a>
             <a class="o-navigation__link" href="colors">Colors</a>
+            <a class="o-navigation__link" href="type">Tailwind</a>
             <a class="o-navigation__link" href="type">Type</a>
           </nav>
         </div>
@@ -115,9 +115,9 @@
             <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
             <a class="o-navigation__link" href="navigation">Navigation</a>
             <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-            <a class="o-navigation__link" href="accessibility">Accessibility</a>
             <a class="o-navigation__link" href="animate">Animate</a>
             <a class="o-navigation__link" href="colors">Colors</a>
+            <a class="o-navigation__link" href="type">Tailwind</a>
             <a class="o-navigation__link" href="type">Type</a>
           </nav>
         </div>
@@ -131,8 +131,8 @@
         <code>src/objects/map/</code>
         .
       </p>
-      <section class="pb-4" id="map-multi">
-        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+      <section class="mt-6" id="map-multi">
+        <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout--wrap mx-auto flex justify-center">
             <div class="overflow-x-auto pb-3">
               <div class="o-map" data-js="nyco-map-ml">
@@ -142,7 +142,7 @@
             </div>
           </div>
         </div>
-        <div class="layout--content px-4">
+        <div class="layout--content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div class=&quot;overflow-x-auto pb-3&quot;&gt;
   &lt;div class=&quot;o-map&quot; data-js=&quot;nyco-map-ml&quot;&gt;
@@ -160,8 +160,8 @@
           </div>
         </div>
       </section>
-      <section class="pb-4" id="map-single">
-        <div class="bg-secondary-white-50t my-6 p-4 screen-desktop:p-6">
+      <section class="mt-6" id="map-single">
+        <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout--wrap mx-auto flex justify-center">
             <div class="overflow-x-auto pb-3">
               <div class="o-map relative" data-js="nyco-map-sl">
@@ -171,7 +171,7 @@
             </div>
           </div>
         </div>
-        <div class="layout--content px-4">
+        <div class="layout--content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div class=&quot;overflow-x-auto pb-3&quot;&gt;
   &lt;div class=&quot;o-map relative&quot; data-js=&quot;nyco-map-sl&quot;&gt;
@@ -187,335 +187,6 @@
 <p>To utilize this map, set &lt;code&gt;mapType: &#39;single&#39;&lt;/code&gt; in the &lt;code&gt;config&lt;/code&gt; object.</p>
 
           </div>
-        </div>
-      </section>
-      <section class="pb-4">
-        <div class="layout--content">
-          <h2 class="mt-0" id="readme"><a href="#readme"></a></h2>
-          <div><div class="my-0"><h3>Setup</h3>
-
-<p>
-  The map is a Vue component powered by
-  <a href="https://www.mapbox.com/">Mapbox</a>
-  and requires a Mapbox
-  <code>access token</code>
-  to initialize in a project. Follow the Mapbox documentation at this
-  <a href="https://docs.mapbox.com/help/how-mapbox-works/access-tokens/#creating-and-managing-access-tokens">link</a>
-  to create an
-  <code>access token</code>
-  .
-</p>
-
-<p>
-  Note: If a
-  <code>403 (Forbidden)</code>
-  error from Mapbox is encountered, make sure the project is using a valid Mapbox
-  <code>access token</code>
-  .
-</p>
-
-<p>
-  Both map types expect the layer source to be GeoJSON. All GeoJSON source layers used to render a map object should be valid Feature Collection&#39;s and contain only one geometry field per feature.
-  <a href="https://geojson.org/">Learn more about GeoJSON</a>
-  .
-</p>
-
-<p>Note: If the map loads but the layer doesn&#39;t display, make sure the GeoJSON is valid and the layer object is properly configured.</p>
-
-<h3>Installation</h3>
-
-<p>
-  Install the
-  <code>nyco-patterns</code>
-  npm package by running
-  <code>npm install nyco-patterns</code>
-  in the project root directory.
-</p>
-
-<p>Example of Component Usage in a Vue App:</p>
-
-<pre><code>// demo.vue
-
-&lt;template&gt;
-  &lt;div class=&#39;o-map&#39;&gt;
-    &lt;nyco-map id=&#39;nyco-map-ml&#39; :layers=&#39;layers&#39; :config=&#39;config&#39; style=&#39;height: 400px; width: 500px&#39;&gt;&lt;/nyco-map&gt;
-    &lt;div id=&#39;map-menu&#39; class=&#39;map-menu&#39;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-  import NycoMap from &#39;../node_modules/nyco-patterns/src/objects/map/map.vue&#39;;
-
-  export default {
-    name: &#39;Map&#39;,
-    data() {
-      config: {
-        APIKey: &#39;pk.eydcdxckbhbjhbjhbhj&#39;,
-        containerId: &#39;nyco-map-ml&#39;,
-        legendId: &#39;map-menu&#39;,
-        center: [-73.986710, 40.693391],
-        zoom: 9,
-        style: &#39;mapbox://styles/nyco-products/cjv6wjq8812ys1gp39mnvuk2w&#39;,
-        mapType: &#39;multi&#39;,
-        colors: [
-          [&#39;#000000&#39;, &#39;#F2695D&#39;],
-          [&#39;#000000&#39;, &#39;#FFA133&#39;],
-          [&#39;#2F334F&#39;, &#39;#ACAEB9&#39;]
-        ]
-      },
-      layers: [
-        { name: &#39;zipcodes&#39;,
-          data: GeoJSONData,
-          default: true,
-          filterBy: &#39;GEOID10&#39;,
-          fill: [&#39;#000000&#39;, &#39;#F2695D&#39;]
-        },
-        {
-          name: &#39;boroughs&#39;,
-          data: GeoJSONData,
-          default: false,
-          filterBy: &#39;boro_name&#39;
-        },
-      ]
-    },
-    components: {
-      NycoMap
-    },
-  }
-&lt;/script&gt;</code></pre>
-
-<h3>Dependencies</h3>
-
-<p>
-  This component depends on
-  <a href="https://docs.mapbox.com/mapbox-gl-js/api/">Mapbox GL JS</a>
-  .
-</p>
-
-<h3>Map Configuration</h3>
-
-<p>
-  The
-  <code>config</code>
-  attributes
-  <code>APIKey</code>
-  ,
-  <code>containerId</code>
-  ,
-  <code>center</code>
-  ,
-  <code>zoom</code>
-  , and
-  <code>style</code>
-  are all Mapbox attributes. You can read more about these in their
-  <a href="https://docs.mapbox.com/mapbox-gl-js/api/">API Reference docs</a>
-  .
-</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Option</th>
-      <th align="center">Type</th>
-      <th align="center">Importance</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>APIKey</code></td>
-      <td align="center"><em>string</em></td>
-      <td align="center">required</td>
-      <td>
-        The Mapbox Access Token (
-        <a href="https://docs.mapbox.com/help/how-mapbox-works/access-tokens/">setup</a>
-        ).
-      </td>
-    </tr>
-    <tr>
-      <td><code>containerId</code></td>
-      <td align="center"><em>string</em></td>
-      <td align="center">required</td>
-      <td>
-        The
-        <code>id</code>
-        of the container where the map is to be created.
-      </td>
-    </tr>
-    <tr>
-      <td><code>legendId</code></td>
-      <td align="center"><em>string</em></td>
-      <td align="center">required</td>
-      <td>
-        The
-        <code>id</code>
-        of the container where the legend/toggle menu is to be created.
-      </td>
-    </tr>
-    <tr>
-      <td><code>center</code></td>
-      <td align="center"><em>array</em></td>
-      <td align="center">optional</td>
-      <td>The initial geographical centerpoint of the map. Default is [0, 0]</td>
-    </tr>
-    <tr>
-      <td><code>zoom</code></td>
-      <td align="center"><em>number</em></td>
-      <td align="center">optional</td>
-      <td>The initial zoom level of the map. Default is 0.</td>
-    </tr>
-    <tr>
-      <td><code>style</code></td>
-      <td align="center"><em>object/string</em></td>
-      <td align="center">required</td>
-      <td>
-        The map&#39;s Mapbox style. This must be an a JSON object conforming to the schema described in the
-        <a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/">Mapbox Style Specification</a>
-        , or a URL to such JSON.
-      </td>
-    </tr>
-    <tr>
-      <td><code>disableScroll</code></td>
-      <td align="center"><em>boolean</em></td>
-      <td align="center">optional</td>
-      <td>
-        Set to
-        <code>true</code>
-        to disable map zoom when using scroll.
-      </td>
-    </tr>
-    <tr>
-      <td><code>mapType</code></td>
-      <td align="center"><em>string</em></td>
-      <td align="center">required</td>
-      <td>
-        The type of map to be rendered. It can be
-        <code>single</code>
-        or
-        <code>multi</code>
-        .
-      </td>
-    </tr>
-    <tr>
-      <td><code>colors</code></td>
-      <td align="center"><em>array</em></td>
-      <td align="center">optional*</td>
-      <td>
-        The
-        <code>fill-outline</code>
-        and
-        <code>fill</code>
-        color applied to a layer. The
-        <code>colors</code>
-        array is a list of hex value (
-        <em>string</em>
-        ) color combinations:
-        <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>
-        . The first value is applied as the
-        <code>fill-outline</code>
-        and the second as the
-        <code>fill</code>
-        . A color combination is applied to a layer at random, so multiple layers may share the same color combination. This attribute overrides the
-        <code>layer.fill</code>
-        attribute.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<h3>Layer Configuration</h3>
-
-<p>
-  The
-  <code>layers</code>
-  array requires at least one layer object to render. The object options are below:
-</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Option</th>
-      <th align="center">Type</th>
-      <th align="center">Importance</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>name</code></td>
-      <td align="center"><em>string</em></td>
-      <td align="center">required</td>
-      <td>
-        The layer name, also set as the Mapbox layer
-        <code>id</code>
-        and
-        <code>source</code>
-        . For the
-        <code>multi</code>
-        map, this value is used to generate the map menu (toggle links).
-      </td>
-    </tr>
-    <tr>
-      <td><code>data</code></td>
-      <td align="center"><em>object</em></td>
-      <td align="center">required</td>
-      <td>The GeoJSON layer/source data.</td>
-    </tr>
-    <tr>
-      <td><code>filterBy</code></td>
-      <td align="center"><em>string</em></td>
-      <td align="center">required</td>
-      <td>The column (feature property) to be filtered when interacting with a polygon shape on the map. This is the value that is displayed in the popup and determines the map shape selection (highlight) on click.</td>
-    </tr>
-    <tr>
-      <td><code>fill</code></td>
-      <td align="center"><em>array</em></td>
-      <td align="center">required*</td>
-      <td>
-        The
-        <code>fill-outline</code>
-        and
-        <code>fill</code>
-        color applied to the layer. The array must contain two hex values (
-        <em>string</em>
-        ):
-        <code>[&#39;#000000&#39;, &#39;#F2695D&#39;]</code>
-        . The first value is applied as the
-        <code>fill-outline</code>
-        and the second as the
-        <code>fill</code>
-        . This attribute is overwritten by the
-        <code>config.colors</code>
-        attribute.
-      </td>
-    </tr>
-    <tr>
-      <td><code>default</code></td>
-      <td align="center"><em>string</em></td>
-      <td align="center">required</td>
-      <td>
-        This ensures a specific layer is displayed on map load for a
-        <code>multi</code>
-        map type, with multiple layers. Set to
-        <code>true</code>
-        to display layer on map load, set to
-        <code>false</code>
-        or omit otherwise.
-      </td>
-    </tr>
-    <tr>
-      <td><code>legendColumn</code></td>
-      <td align="center"><em>string</em></td>
-      <td align="center">required</td>
-      <td>
-        The column (feature property) to be filtered when interacting with the legend/menu for a
-        <code>single</code>
-        map type. The unique values of this feature property make up the legend items. All features with matching properties will be highlighted when selected through the legend.
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
         </div>
       </section>
     </article>
@@ -543,7 +214,7 @@
         ,&nbsp;
         <a href="https://medium.com/@nycopportunity" target="_blank" rel="nofollow noopener">Medium</a>
         , and&nbsp;
-        <a href="https://github.com/orgs/CityOfNewYork/teams/nycopportunity" target="_blank" rel="nofollow noopener" title="Viewable by github.com/orgs/CityOfNewYork/ members.">Github</a>
+        <a href="" target="_blank" rel="nofollow noopener" title="Viewable by github.com/orgs/CityOfNewYork/ members.">Github</a>
         .
       </p>
       <small>

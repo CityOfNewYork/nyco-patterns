@@ -6,6 +6,7 @@ $colors: map-get($variables, 'colors');
 
 // Declarations
 @mixin code() {
+  color: map-get($colors, 'primary-blue');
   display: inline-block;
 
   @include typeface('code');
@@ -14,6 +15,8 @@ $colors: map-get($variables, 'colors');
   background-color: map-get($colors, 'secondary-white-70t');
   border: 1px solid map-get($colors, 'secondary-grey-50t');
   border-radius: 3px;
+
+  padding: 0 0.3em 0.1em;
 }
 
 @mixin code-block() {
@@ -28,14 +31,11 @@ $colors: map-get($variables, 'colors');
 }
 
 @mixin code-inline() {
-  color: map-get($colors, 'primary-blue');
-
   font-size: 85%;
   font-family: inherit;
   letter-spacing: 0.01em;
 
   border-radius: 3px;
-  padding: 0 0.3em 0.1em;
   margin: 0;
   display: inline;
 }

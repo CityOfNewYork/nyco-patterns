@@ -27,14 +27,14 @@ module.exports = [
     devModule: true
   },
   {
-    file: './src/scss/_tailwind.scss',
+    file: './src/utilities/tailwind/_tailwind.scss',
     outDir: './dist/styles/',
     outFile: 'tailwind.css',
     precision: sass.precision,
     includePaths: sass.includePaths
   },
   {
-    file: './src/scss/_tailwind.scss',
+    file: './src/utilities/tailwind/_tailwind.scss',
     outDir: './dist/styles/',
     outFile: '_tailwind.scss',
     precision: sass.precision,

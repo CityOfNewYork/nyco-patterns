@@ -135,12 +135,31 @@ const templates = {
       "// $var: map-get(map-get($variables, ''), '');"
     ].join("\n"),
   'views': [
-      "= extend('layouts/default')",
+      "- pattern = '{{ Pattern }}';",
       "",
-      "- title = '{{ Pattern }}'",
+      "/ Layout",
+      "= extend('layouts/default');",
       "",
-      "= content('main')",
-      ""
+      "/ Variables",
+      "= partial('partials/styles.slm');",
+      "",
+      "/ Mixins",
+      "= partial('partials/head.mixin.slm');",
+      "= partial('partials/nav.mixin.slm');",
+      "= partial('partials/pattern.mixin.slm');",
+      "= partial('partials/readme.mixin.slm');",
+      "",
+      "/ Content blocks",
+      "= content('head');",
+      "  = mixin('head', pattern);",
+      "",
+      "= content('header');",
+      "  = mixin('header');",
+      "",
+      "= content('content');",
+      "  h1 class='${classDemoHeaders}' = pattern;",
+      "  = mixin('readme', '{{ type }}/{{ pattern }}/{{ pattern }}');",
+      "",
     ].join("\n")
 };
 
