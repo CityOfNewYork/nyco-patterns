@@ -4,12 +4,7 @@
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!--GLOBAL STYLES-->
-    <!--PRINT STYLE-->
-    <!--PAGE SPECIFIC STYLES-->
-    <!--EXTERNAL STYLES-->
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
-    <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
     <title>Type | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
@@ -28,16 +23,6 @@
       function load() {
         document.body.style.visibility = 'visible';
       }
-
-      function toggleTheme(theme) {
-        var stylesheets = document.styleSheets;
-
-        for (var i = 0; i < stylesheets.length; i++) {
-          var ss = stylesheets[i];
-          ss.disabled = !ss.disabled && ss.href.indexOf(theme) > -1 ? true : false;
-        }
-      }
-      toggleTheme('www1.nyc.gov');
     </script>
   </head>
 </html>
@@ -66,65 +51,76 @@
   </header>
   <main class="screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
     <aside class="o-navigation bg-primary-navy">
-      <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
-        <div class="o-navigation__nav">
-          <nav><a class="o-navigation__link" href="index">Overview</a></nav>
-          <nav>
-            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-            <a class="o-navigation__link" href="buttons">Buttons</a>
-            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-            <a class="o-navigation__link" href="icons">Icons</a>
-            <a class="o-navigation__link" href="inputs">Inputs</a>
-            <a class="o-navigation__link" href="layouts">Layouts</a>
-            <a class="o-navigation__link" href="tables">Tables</a>
-            <a class="o-navigation__link" href="select">Select</a>
-            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-            <a class="o-navigation__link" href="charts">Charts</a>
-            <a class="o-navigation__link" href="footer">Footer</a>
-            <a class="o-navigation__link" href="feed">Feed</a>
-            <a class="o-navigation__link" href="header">Header</a>
-            <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
-            <a class="o-navigation__link" href="navigation">Navigation</a>
-            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-            <a class="o-navigation__link" href="animate">Animate</a>
-            <a class="o-navigation__link" href="colors">Colors</a>
-            <a class="o-navigation__link" href="type">Tailwind</a>
-            <a class="o-navigation__link" href="type">Type</a>
-          </nav>
+      <div class="screen-tablet:flex hidden w-full">
+        <div class="o-navigation__wrap color-mid-background">
+          <div class="o-navigation__nav">
+            <nav><a class="o-navigation__link" href="index">Overview</a></nav>
+            <nav>
+              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+              <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+              <a class="o-navigation__link" href="code">Code</a>
+              <a class="o-navigation__link" href="icons">Icons</a>
+              <a class="o-navigation__link" href="inputs">Inputs</a>
+              <a class="o-navigation__link" href="layouts">Layouts</a>
+              <a class="o-navigation__link" href="links">Links</a>
+              <a class="o-navigation__link" href="tables">Tables</a>
+              <a class="o-navigation__link" href="select">Select</a>
+              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="charts">Charts</a>
+              <a class="o-navigation__link" href="content">Content</a>
+              <a class="o-navigation__link" href="footer">Footer</a>
+              <a class="o-navigation__link" href="feed">Feed</a>
+              <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
+              <a class="o-navigation__link" href="navigation">Navigation</a>
+              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="animate">Animate</a>
+              <a class="o-navigation__link" href="colors">Colors</a>
+              <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+              <a class="o-navigation__link" href="type">Type</a>
+            </nav>
+          </div>
         </div>
       </div>
-      <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
-        <div class="o-navigation__banner color-dark-background"><h1 class="o-navigation__banner-title">Patterns</h1></div>
-        <div class="o-navigation__nav animated">
-          <div class="text-center"><a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a></div>
-          <nav><a class="o-navigation__link" href="index">Overview</a></nav>
-          <nav>
-            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-            <a class="o-navigation__link" href="buttons">Buttons</a>
-            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-            <a class="o-navigation__link" href="icons">Icons</a>
-            <a class="o-navigation__link" href="inputs">Inputs</a>
-            <a class="o-navigation__link" href="layouts">Layouts</a>
-            <a class="o-navigation__link" href="tables">Tables</a>
-            <a class="o-navigation__link" href="select">Select</a>
-            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-            <a class="o-navigation__link" href="charts">Charts</a>
-            <a class="o-navigation__link" href="footer">Footer</a>
-            <a class="o-navigation__link" href="feed">Feed</a>
-            <a class="o-navigation__link" href="header">Header</a>
-            <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
-            <a class="o-navigation__link" href="navigation">Navigation</a>
-            <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-            <a class="o-navigation__link" href="animate">Animate</a>
-            <a class="o-navigation__link" href="colors">Colors</a>
-            <a class="o-navigation__link" href="type">Tailwind</a>
-            <a class="o-navigation__link" href="type">Type</a>
-          </nav>
+      <div class="screen-tablet:hidden w-full">
+        <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated" id="js-navigation">
+          <div class="o-navigation__banner color-dark-background"><h1 class="o-navigation__banner-title">Patterns</h1></div>
+          <div class="animated">
+            <div class="o-navigation__nav">
+              <nav><a class="o-navigation__link" href="index">Overview</a></nav>
+              <nav>
+                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+                <a class="o-navigation__link" href="buttons">Buttons</a>
+                <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+                <a class="o-navigation__link" href="code">Code</a>
+                <a class="o-navigation__link" href="icons">Icons</a>
+                <a class="o-navigation__link" href="inputs">Inputs</a>
+                <a class="o-navigation__link" href="layouts">Layouts</a>
+                <a class="o-navigation__link" href="links">Links</a>
+                <a class="o-navigation__link" href="tables">Tables</a>
+                <a class="o-navigation__link" href="select">Select</a>
+                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+                <a class="o-navigation__link" href="charts">Charts</a>
+                <a class="o-navigation__link" href="content">Content</a>
+                <a class="o-navigation__link" href="footer">Footer</a>
+                <a class="o-navigation__link" href="feed">Feed</a>
+                <a class="o-navigation__link" href="header">Header</a>
+                <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
+                <a class="o-navigation__link" href="navigation">Navigation</a>
+                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+                <a class="o-navigation__link" href="animate">Animate</a>
+                <a class="o-navigation__link" href="colors">Colors</a>
+                <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+                <a class="o-navigation__link" href="type">Type</a>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </aside>
     <article class="color-light-background py-2">
-      <h1 class="m-0 p-0 mt-2 px-4 screen-desktop:px-6">Type</h1>
+      <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Type</h1></div>
       <section class="mt-6" id="h1">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout--wrap mx-auto flex justify-center"><h1 class="h1">The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.</h1></div>

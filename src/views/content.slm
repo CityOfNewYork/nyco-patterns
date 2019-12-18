@@ -1,4 +1,4 @@
-- pattern = 'Tailwind';
+- pattern = 'Content';
 
 / Layout
 = extend('layouts/default');
@@ -9,7 +9,7 @@
 / Mixins
 = partial('mixins/head.slm');
 = partial('mixins/nav.slm');
-= partial('mixins/readme.slm');
+= partial('mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -19,5 +19,6 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${classDemoHeaders}' = pattern;
-  = mixin('readme', 'utilities/tailwind/tailwind');
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern;
+  = mixin('pattern', 'objects/content/content');

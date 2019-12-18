@@ -16,26 +16,23 @@ module.exports = {
     separator: ':'
   },
   theme: {
-    colors: variables.colors,
-    fonts: variables.fonts,
+    borderWidth: variables.borderWidth,
+    boxShadow: variables.boxShadow,
+    colors: global.Object.assign({ default: '' }, variables.colors),
     fontFamily: variables.fontFamily,
     fontWeight: variables.fontWeight,
     fontSize: variables.fontSize,
     lineHeight: variables.lineHeight,
-    backgroundColor: variables.colors,
-    borderWidth: variables.borderWidth,
-    borderColor: global.Object.assign({ default: '' }, variables.colors),
-    boxShadow: variables.boxShadow,
     margin: variables.margin,
-    padding: variables.padding,
     maxWidth: variables.maxWidth,
+    padding: variables.padding,
     screens: {
       'screen-desktop': `${variables.screens['screen-desktop']}px`,
       'screen-tablet': `${variables.screens['screen-tablet']}px`,
       'screen-mobile': `${variables.screens['screen-mobile']}px`,
       'screen-sm-mobile': `${variables.screens['screen-desktop']}px`
     },
-    textColor: variables.colors
+    width: variables.width
   },
   variants: {
     preflight: [],
@@ -104,7 +101,7 @@ module.exports = {
     visibility: [],
     whitespace: [],
     wordBreak: [],
-    width: [],
+    width: ['responsive'],
     zIndex: []
   },
   /**
@@ -177,7 +174,7 @@ module.exports = {
     'visibility',
     'whitespace',
     // 'wordBreak',
-    // 'width',
+    'width',
     'zIndex'
   ]
 };

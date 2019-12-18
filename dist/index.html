@@ -4,12 +4,7 @@
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!--GLOBAL STYLES-->
-    <!--PRINT STYLE-->
-    <!--PAGE SPECIFIC STYLES-->
-    <!--EXTERNAL STYLES-->
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
-    <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
     <title>NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
@@ -28,16 +23,6 @@
       function load() {
         document.body.style.visibility = 'visible';
       }
-
-      function toggleTheme(theme) {
-        var stylesheets = document.styleSheets;
-
-        for (var i = 0; i < stylesheets.length; i++) {
-          var ss = stylesheets[i];
-          ss.disabled = !ss.disabled && ss.href.indexOf(theme) > -1 ? true : false;
-        }
-      }
-      toggleTheme('www1.nyc.gov');
     </script>
   </head>
 </html>
@@ -51,10 +36,7 @@
       <button aria-controls="navigation" aria-expanded="false" aria-pressed="false" class="cursor-pointer underline font-bold" data-js="toggle">Menu</button>
     </div>
   </header>
-  <main class="o-content">
-    <div class="layout--wrap mx-auto px-4 pb-6">
-      <h1 class="m-0 p-0 mt-2 px-4 screen-desktop:px-6">Overview</h1>
-      <p>
+  <main class="o-content"><p>
   The global patterns seen on &lt;a href=&#39;${this.site.urls.nycOpportunity}&#39;&gt;NYC.gov/opportunity&lt;/a&gt; utilize a partial integration of &lt;a href=&#39;${this.site.urls.bootstrap}&#39;&gt;Bootstrap 2.3.2&lt;/a&gt;. This library extends the NYC.gov Style Guide with custom modules and the &lt;a href=&#39;${this.site.urls.tailwind}&#39;&gt;Tailwind CSS Utility framework&lt;/a&gt;. See the &lt;a href=&#39;${this.site.urls.blueprint
   <em>nyc</em>
   brand}&#39;&gt;NYC Digital Blueprint&#39;s documentation&lt;/a&gt; of The City&#39;s Style Guide for more details and resources.
@@ -67,9 +49,7 @@
 <pre><code>&lt;link href=&quot;&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</code></pre>
 
 <p>This distribution includes a custom build of the &lt;a href=&#39;${this.site.urls.tailwind}&#39;&gt;Tailwind Utility CSS Framework&lt;/a&gt;. Refer to Tailwind CSS docs for full details on utilizing the CSS uitilites to build different types of UIs.</p>
-
-    </div>
-  </main>
+</main>
   <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>

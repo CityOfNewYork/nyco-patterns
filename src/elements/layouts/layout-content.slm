@@ -3,5 +3,5 @@ div class='layout--sidebar w-full screen-tablet:flex'
     div class='p-6'
       | Sidebar
   div class='bg-secondary-white layout--content p-6'
-    div class='bg-base-white p-6 text-center'
+    div class='mx-auto bg-base-white p-6 text-center'
       | Content

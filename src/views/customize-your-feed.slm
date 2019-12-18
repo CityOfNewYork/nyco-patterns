@@ -19,7 +19,8 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${classDemoHeaders}' Embeddable Snippet
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' Embeddable Snippet
   section id='feed-form' class='pb-4'
     div class='bg-secondary-white-50t my-6 p-4 screen-desktop:p-6'
       div class='layout--wrap mx-auto flex justify-center'

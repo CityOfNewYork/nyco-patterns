@@ -19,7 +19,8 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${classDemoHeaders}' = pattern;
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern;
   = mixin('pattern', 'objects/charts/chart-bar');
   = mixin('pattern', 'objects/charts/chart-horizontal-bar');
   = mixin('pattern', 'objects/charts/chart-line');

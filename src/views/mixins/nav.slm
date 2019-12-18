@@ -7,14 +7,17 @@
     span class='${classNavLinkHeader}' Elements
     a class='${classNavLink}' href='buttons' Buttons
     a class='${classNavLink}' href='checkboxes' Checkboxes
+    a class='${classNavLink}' href='code' Code
     a class='${classNavLink}' href='icons' Icons
     a class='${classNavLink}' href='inputs' Inputs
     a class='${classNavLink}' href='layouts' Layouts
+    a class='${classNavLink}' href='links' Links
     a class='${classNavLink}' href='tables' Tables
     a class='${classNavLink}' href='select' Select
 
     span class='${classNavLinkHeader}' Objects
     a class='${classNavLink}' href='charts' Charts
+    a class='${classNavLink}' href='content' Content
     a class='${classNavLink}' href='footer' Footer
     a class='${classNavLink}' href='feed' Feed
     a class='${classNavLink}' href='header' Header
@@ -25,5 +28,5 @@
     span class='${classNavLinkHeader}' Utilities
     a class='${classNavLink}' href='animate' Animate
     a class='${classNavLink}' href='colors' Colors
-    a class='${classNavLink}' href='type' Tailwind
+    a class='${classNavLink}' href='tailwindcss' Tailwindcss
     a class='${classNavLink}' href='type' Type

@@ -1,0 +1,21 @@
+article class='o-content color-light-background p-4'
+  p The Mayor’s Office for Economic Opportunity helps the City use evidence and innovation to reduce poverty and increase equity.
+
+  p
+    code Sample Inline Code
+
+  table
+    thead
+      tr
+        td Table Styling
+    tbody
+      tr
+        td Cell
+      tr
+        td Cell
+
+  pre
+    = "<div>\n";
+    = "  Sample Code Block\n";
+    = "</div>\n";
+

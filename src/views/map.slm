@@ -19,7 +19,8 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${classDemoHeaders}' = pattern;
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern;
   p
   p All map source files can be found within <code>src/objects/map/</code>.
   = mixin('pattern', 'objects/map/map-multi');

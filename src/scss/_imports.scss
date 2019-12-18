@@ -61,7 +61,9 @@
 * Utilities
 ************/
 
+@import '@nycopportunity/patterns-framework/src/utilities/spinner/spinner';
+@import '@nycopportunity/patterns-framework/src/utilities/toggle/toggle';
 @import 'utilities/type/type';
 @import 'utilities/colors/colors';
 @import 'utilities/animate/animate';
-@import 'utilities/tailwind/tailwind';
+@import 'utilities/tailwindcss/tailwindcss';

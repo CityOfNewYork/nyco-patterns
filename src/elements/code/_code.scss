@@ -15,6 +15,8 @@ code, pre {
 
 p code, li code {
   @include code-inline();
+
+  padding: 0 0.3em 0.1em;
 }
 
 pre {

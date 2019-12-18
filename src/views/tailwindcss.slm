@@ -1,4 +1,4 @@
-- pattern = 'Code';
+- pattern = 'Tailwindcss';
 
 / Layout
 = extend('layouts/default');
@@ -9,7 +9,7 @@
 / Mixins
 = partial('mixins/head.slm');
 = partial('mixins/nav.slm');
-= partial('mixins/pattern.slm');
+= partial('mixins/readme.slm');
 
 / Content blocks
 = content('head');
@@ -21,6 +21,4 @@
 = content('content');
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
-  = mixin('pattern', 'elements/code/code');
-  = mixin('pattern', 'elements/code/code-inline');
-  = mixin('pattern', 'elements/code/code-block');
+  = mixin('readme', 'utilities/tailwindcss/tailwindcss');

@@ -19,7 +19,8 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${classDemoHeaders}' = pattern;
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern;
   = mixin('pattern', 'utilities/type/h1');
   = mixin('pattern', 'utilities/type/h2');
   = mixin('pattern', 'utilities/type/h3');

@@ -102,6 +102,10 @@ $base-white: map-get($colors, 'base-white');
     color: map-get($colors, $error);
   }
 
+  .error::after {
+    color: map-get($colors, $error);
+  }
+
   h1, h4, h5, h6, .h1, .h4, .h5, .h6 {
     color: map-get($colors, $headings);
   }
