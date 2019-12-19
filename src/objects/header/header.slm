@@ -20,7 +20,6 @@ header class='o-header screen-tablet:layout--sidebar w-full'
 
   div class='o-header__banner-secondary color-dark-background'
     h1 class='o-header__secondary-title text-jumbo' Patterns
-    a href='#main-content' Skip to main content
 
   div class='o-header__secondary-version color-dark-background'
     div
