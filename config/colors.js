@@ -38,7 +38,7 @@ const nycoColors = {
   colorCombinations: {
     'light-background': {
       'color': 'base-black',
-      'headings': 'primary-navy',
+      'headings': 'base-black',
       'hyperlinks': 'primary-blue',
       'visited': 'primary-blue',
       'hover': 'primary-navy',
@@ -50,7 +50,7 @@ const nycoColors = {
     },
     'mid-background': {
       'color': 'base-black',
-      'headings': 'primary-navy',
+      'headings': 'base-black',
       'hyperlinks': 'primary-blue',
       'visited': 'primary-blue',
       'hover': 'primary-navy',

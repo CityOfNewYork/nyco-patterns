@@ -24,3 +24,4 @@
   = mixin('pattern', 'elements/buttons/buttons');
   = mixin('pattern', 'elements/buttons/buttons-primary');
   = mixin('pattern', 'elements/buttons/buttons-secondary');
+  = mixin('pattern', 'elements/buttons/buttons-large');

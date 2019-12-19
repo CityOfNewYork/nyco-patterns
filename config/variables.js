@@ -42,7 +42,7 @@ const variables = {
     'html': 'normal',
     'code': 'normal',
     'small': 'normal',
-    'blockquote': 'normal'
+    'blockquote': 'bold'
   },
   fontSize: {
     'jumbo': '3em',
@@ -157,9 +157,11 @@ const variables = {
     'checkbox-size': '20px'
   },
   boxShadow: {
-    'shadow-none': 'none',
-    'up': '0px 2px 15px 3px rgba(0, 0, 0, .25)',
-    'inset': 'inset 0px 2px 15px 3px rgba(0, 0, 0, .25)'
+    'none': 'none',
+    'up-transparent': '8px 8px 0px 0px rgba(47, 51, 79, 0)',
+    'up': '8px 8px 0px 0px rgba(47, 51, 79, 100)',
+    'up-2-transparent': '16px 16px 0px 0px rgba(47, 51, 79, 0)',
+    'up-2': '16px 16px 0px 0px rgba(47, 51, 79, 100)'
   }
 };
 

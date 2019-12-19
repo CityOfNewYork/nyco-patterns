@@ -68,13 +68,26 @@ small, .small {
 }
 
 blockquote, .blockquote {
-  border-left: map-get($variables, 'grid') solid;
-  border-color: inherit;
-  padding-left: map-get($variables, 'grid') * 2;
-
   @include type('blockquote') {
     margin: $type-margin;
   };
+
+  footer {
+    font-size: 65%;
+    font-weight: normal;
+    padding-left: map-get($variables, 'grid') * 3;
+  }
+
+  cite {
+    font-style: normal;
+  }
+
+  p {
+    border-left: map-get($variables, 'grid') solid;
+    border-color: inherit;
+    padding-left: map-get($variables, 'grid') * 2;
+    margin-bottom: 0.64em;
+  }
 }
 
 .jumbo {

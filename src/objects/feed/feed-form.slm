@@ -49,4 +49,4 @@ form class='border border-solid border-primary-blue-30t bg-secondary-white-70t p
             textarea v-if='name === "templates"' class='w-full' v-bind:name='name + key' v-bind:id='name + key' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)' v-bind:placeholder='configDefault[name][key].toString()'
             input v-else='' class='w-full' type='text' v-bind:name='name + key' v-bind:id='name + key' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)' v-bind:placeholder='configDefault[name][key].toString()'
 
-    button class='btn color-primary-button' v-on:click='render' Render
+    button class='btn btn-large color-primary-button' v-on:click='render' Render
