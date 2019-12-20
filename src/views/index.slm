@@ -7,13 +7,45 @@
 / Mixins
 = partial('mixins/head.slm');
 = partial('mixins/nav.slm');
+= partial('mixins/readme.slm');
 
 / Content blocks
 = content('head');
   = mixin('head');
 
 = content('content');
-  / div class='layout--wrap mx-auto px-4 pb-6'
-    / h1 class='${classDemoHeaders}' Overview
+  / div class='${classPageHeader}'
+  /   h1 class='${classPageH1}' Overview
+  section class='color-dark-background p-6'
+    div class='layout-wrap mx-auto py-6'
+      div class='layout-content'
+        div class='layout-two-columns mx-auto pl-6'
+          / h1 class='mb-0'
+          /   span class='hidden'
+          /     | The NYC Mayor's Office for Economic Opportunity
 
-  = 'md{{ content/index.md }}';
+          /   svg aria-hidden='true' class='icon-logo-primary icon-xlarge' style='height: 120px !important'
+          /     title
+          /       | The NYC Mayor's Office for Economic Opportunity
+          /     use xlink:href='#icon-logo-nyco-secondary'
+
+          h1 class='jumbo m-0 font-nycgov' style='font-weight: 600; font-size: 7em; line-height: 1em; border-left: 16px solid; padding-left: 24px;'
+            div style='line-height: 0.8em;' Common
+            div Agency
+            div class='text-primary-red' Patterns
+
+  section class='color-light-background p-6'
+    div class='layout-wrap layout-three-columns mx-auto py-6'
+      article class='p-2'
+        div class='${classDemoShadow} p-4'
+          h1 class='m-0' tailwindcss
+
+      article class='p-2'
+        div class='${classDemoShadow} p-4'
+          h1 class='m-0' Feed
+
+      article class='p-2'
+        div class='${classDemoShadow} p-4'
+          h1 class='m-0' Data Vizualization
+
+  = mixin('readme', 'content/index');
