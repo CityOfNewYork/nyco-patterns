@@ -28,7 +28,7 @@
 </html>
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
-  <header class="o-header screen-tablet:layout--sidebar w-full">
+  <header class="o-header screen-tablet:layout-sidebar w-full">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
@@ -47,7 +47,7 @@
       </div>
     </div>
   </header>
-  <main class="screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
+  <main class="screen-tablet:layout-sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
     <aside class="o-navigation bg-primary-navy">
       <div class="screen-tablet:flex hidden w-full">
         <div class="o-navigation__wrap color-mid-background">
@@ -121,18 +121,20 @@
       <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Layouts</h1></div>
       <section class="mt-6" id="layout-wrap">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
-            <div class="layout--wrap w-full"><div class="bg-base-white py-6 mx-auto text-center">Content</div></div>
+          <div class="layout-wrap mx-auto flex justify-center">
+            <div class="layout-wrap w-full shadow-up-2 border-2 border-primary-navy mb-2"><div class="bg-base-white py-6 mx-auto text-center">Content</div></div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;layout--wrap w-full&quot;&gt;&lt;div class=&quot;bg-base-white py-6 mx-auto text-center&quot;&gt;Content&lt;/div&gt;&lt;/div&gt;
+            <div class="code-block"><pre>&lt;div class=&quot;layout-wrap w-full shadow-up-2 border-2 border-primary-navy mb-2&quot;&gt;&lt;div class=&quot;bg-base-white py-6 mx-auto text-center&quot;&gt;Content&lt;/div&gt;&lt;/div&gt;
 </pre></div>
             <h2>Wrap</h2>
 
 <p>
-  The maximum width for wrapped content is
+  The
+  <code>.layout-wrap</code>
+  element will have a maximum width of
   <code>1200px</code>
   .
 </p>
@@ -140,52 +142,62 @@
           </div>
         </div>
       </section>
-      <section class="mt-6" id="layout-sidebar">
+      <section class="mt-6" id="layout-content">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
-            <div class="layout--sidebar w-full screen-tablet:flex">
-              <div class="bg-secondary-grey p-6"><div class="p-6">Sidebar</div></div>
-              <div class="bg-base-white p-6"></div>
-            </div>
+          <div class="layout-wrap mx-auto flex justify-center">
+            <div class="layout-content w-full p-4 bg-secondary-grey-30t shadow-up-2 border-2 border-primary-navy mb-2"><div class="mx-auto p-6 bg-base-white text-center">Content</div></div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;layout--sidebar w-full screen-tablet:flex&quot;&gt;
-  &lt;div class=&quot;bg-secondary-grey p-6&quot;&gt;&lt;div class=&quot;p-6&quot;&gt;Sidebar&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-base-white p-6&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+            <div class="code-block"><pre>&lt;div class=&quot;layout-content w-full p-4 bg-secondary-grey-30t shadow-up-2 border-2 border-primary-navy mb-2&quot;&gt;&lt;div class=&quot;mx-auto p-6 bg-base-white text-center&quot;&gt;Content&lt;/div&gt;&lt;/div&gt;
 </pre></div>
-            <h2>Layout with Sidebar</h2>
+            <h2>Content Layout</h2>
+
+<p>
+  The first child of the
+  <code>.layout-content</code>
+  element will have a maximum width of
+  <code>600px</code>
+  intended for longform content.
+</p>
 
           </div>
         </div>
       </section>
-      <section class="mt-6" id="layout-content">
+      <section class="mt-6" id="layout-sidebar">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
-            <div class="layout--sidebar w-full screen-tablet:flex">
-              <div class="bg-secondary-grey p-6"><div class="p-6">Sidebar</div></div>
-              <div class="bg-secondary-white layout--content p-6"><div class="mx-auto bg-base-white p-6 text-center">Content</div></div>
+          <div class="layout-wrap mx-auto flex justify-center">
+            <div class="layout-sidebar w-full screen-tablet:flex shadow-up-2 border-2 border-primary-navy mb-2">
+              <div class="bg-base-white p-6"><div class="p-6">Sidebar</div></div>
+              <div class="bg-secondary-grey-30t p-6"></div>
             </div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;layout--sidebar w-full screen-tablet:flex&quot;&gt;
-  &lt;div class=&quot;bg-secondary-grey p-6&quot;&gt;&lt;div class=&quot;p-6&quot;&gt;Sidebar&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-secondary-white layout--content p-6&quot;&gt;&lt;div class=&quot;mx-auto bg-base-white p-6 text-center&quot;&gt;Content&lt;/div&gt;&lt;/div&gt;
+            <div class="code-block"><pre>&lt;div class=&quot;layout-sidebar w-full screen-tablet:flex shadow-up-2 border-2 border-primary-navy mb-2&quot;&gt;
+  &lt;div class=&quot;bg-base-white p-6&quot;&gt;&lt;div class=&quot;p-6&quot;&gt;Sidebar&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;bg-secondary-grey-30t p-6&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre></div>
-            <h2>Content Layout</h2>
+            <h2>Layout with Sidebar</h2>
+
+<p>
+  The first child of the
+  <code>.layout-sidebar</code>
+  element will have a fixed width of
+  <code>16rem</code>
+  for sidebar content. The second child&#39;s width will stretch to the end of the viewport&#39;s width.
+</p>
 
           </div>
         </div>
       </section>
       <section class="mt-6" id="layout-two-columns-gutter">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
-            <div class="layout--two-columns-gutter bg-secondary-white p-4 text-center">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <div class="layout-two-columns-gutter bg-secondary-grey-30t p-4 text-center shadow-up-2 border-2 border-primary-navy mb-2">
               <div class="bg-base-white p-4">Cell A</div>
               <div class="bg-base-white p-4">Cell B</div>
               <div class="bg-base-white p-4">Cell C</div>
@@ -193,9 +205,9 @@
             </div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;layout--two-columns-gutter bg-secondary-white p-4 text-center&quot;&gt;
+            <div class="code-block"><pre>&lt;div class=&quot;layout-two-columns-gutter bg-secondary-grey-30t p-4 text-center shadow-up-2 border-2 border-primary-navy mb-2&quot;&gt;
   &lt;div class=&quot;bg-base-white p-4&quot;&gt;Cell A&lt;/div&gt;
   &lt;div class=&quot;bg-base-white p-4&quot;&gt;Cell B&lt;/div&gt;
   &lt;div class=&quot;bg-base-white p-4&quot;&gt;Cell C&lt;/div&gt;
@@ -205,8 +217,14 @@
             <h2>Two Columns with Gutter</h2>
 
 <p>
-  No gutter option is available using
-  <code>.layout--two-columns</code>
+  The children of the
+  <code>.layout-two-columns-gutter</code>
+  element will be
+  <code>50%</code>
+  the width of their parent with an
+  <code>8px</code>
+  gutter in between. No gutter option is available using
+  <code>.layout-two-columns</code>
   .
 </p>
 
@@ -215,8 +233,8 @@
       </section>
       <section class="mt-6" id="layout-three-columns-gutter">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
-            <div class="layout--three-columns-gutter bg-secondary-white p-4 text-center">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <div class="layout-three-columns-gutter bg-secondary-grey-30t p-4 text-center shadow-up-2 border-2 border-primary-navy mb-2">
               <div class="bg-base-white p-4">Cell A</div>
               <div class="bg-base-white p-4">Cell B</div>
               <div class="bg-base-white p-4">Cell C</div>
@@ -226,9 +244,9 @@
             </div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;layout--three-columns-gutter bg-secondary-white p-4 text-center&quot;&gt;
+            <div class="code-block"><pre>&lt;div class=&quot;layout-three-columns-gutter bg-secondary-grey-30t p-4 text-center shadow-up-2 border-2 border-primary-navy mb-2&quot;&gt;
   &lt;div class=&quot;bg-base-white p-4&quot;&gt;Cell A&lt;/div&gt;
   &lt;div class=&quot;bg-base-white p-4&quot;&gt;Cell B&lt;/div&gt;
   &lt;div class=&quot;bg-base-white p-4&quot;&gt;Cell C&lt;/div&gt;
@@ -240,8 +258,14 @@
             <h2>Three Columns with Gutter</h2>
 
 <p>
-  No gutter option is available using
-  <code>.layout--three-columns</code>
+  The children of the
+  <code>.layout-three-columns-gutter</code>
+  element will be
+  <code>33.3%</code>
+  the width of their parent with an
+  <code>8px</code>
+  gutter in between. No gutter option is available using
+  <code>.layout-three-columns</code>
   .
 </p>
 
@@ -250,8 +274,8 @@
       </section>
       <section class="mt-6" id="layout-four-columns-gutter">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
-            <div class="layout--four-columns-gutter bg-secondary-white p-4 text-center">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <div class="layout-four-columns-gutter bg-secondary-grey-30t p-4 text-center shadow-up-2 border-2 border-primary-navy mb-2">
               <div class="bg-base-white p-4">Cell A</div>
               <div class="bg-base-white p-4">Cell B</div>
               <div class="bg-base-white p-4">Cell C</div>
@@ -267,9 +291,9 @@
             </div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;layout--four-columns-gutter bg-secondary-white p-4 text-center&quot;&gt;
+            <div class="code-block"><pre>&lt;div class=&quot;layout-four-columns-gutter bg-secondary-grey-30t p-4 text-center shadow-up-2 border-2 border-primary-navy mb-2&quot;&gt;
   &lt;div class=&quot;bg-base-white p-4&quot;&gt;Cell A&lt;/div&gt;
   &lt;div class=&quot;bg-base-white p-4&quot;&gt;Cell B&lt;/div&gt;
   &lt;div class=&quot;bg-base-white p-4&quot;&gt;Cell C&lt;/div&gt;
@@ -287,8 +311,14 @@
             <h2>Four Columns with Gutter</h2>
 
 <p>
-  No gutter option is available using
-  <code>.layout--four-columns</code>
+  The children of the
+  <code>.layout-four-columns-gutter</code>
+  element will be
+  <code>25%</code>
+  the width of their parent with an
+  <code>8px</code>
+  gutter in between. No gutter option is available using
+  <code>.layout-four-columns</code>
   .
 </p>
 
@@ -297,7 +327,7 @@
       </section>
     </article>
   </main>
-  <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
+  <footer class="o-footer color-dark-background screen-tablet:layout-four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
       <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.7.0">GitHub Repository</a>

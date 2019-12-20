@@ -2,7 +2,7 @@
 / Header
 /
 
-header class='o-header screen-tablet:layout--sidebar w-full'
+header class='o-header screen-tablet:layout-sidebar w-full'
   div class='o-header__banner-main color-primary-button'
     button class='o-header__main-toggle' data-js='toggle' aria-pressed='false' aria-controls='js-navigation' Menu
 

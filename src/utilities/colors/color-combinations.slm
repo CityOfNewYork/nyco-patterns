@@ -1,4 +1,4 @@
-div class='screen-desktop:layout--three-columns-gutter'
+div class='screen-desktop:layout-three-columns-gutter'
   - for (key in this.variables.colorCombinations)
     - value = this.variables.colorCombinations[key];
 

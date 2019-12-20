@@ -1,3 +1,3 @@
 ## Wrap
 
-The maximum width for wrapped content is `1200px`.
+The `.layout-wrap` element will have a maximum width of `1200px`.

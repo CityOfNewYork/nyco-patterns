@@ -47,3 +47,21 @@ The plugin table below describes the available variants for each utility. An emp
 Example; the core plugin for padding is `padding`. Adding or removing it to the whitelist will determine wether those utilities are compiled to the global stylesheet.
 
 slm{{ utilities/tailwindcss/tailwindcss.slm }}
+
+### Installation
+
+**tailwindcss** is not imported the same way as other patterns. All utilities are compiled to a Sass file...
+
+    /dist/styles/_tailwind.scss
+
+(which can be imported in a Sass project)...
+
+    @import 'node_modules/@nycopportunity/nyco-patterns/dist/styles/_tailwind.scss';
+
+... and a CSS file in the **/dist** folder:
+
+    /dist/styles/tailwind.css
+
+The CSS file can be included through a CDN. Replace `{{ version }}` with the latest release in the top right corner of this page.
+
+    <link href="https://cdn.jsdelivr.net/gh/cityofnewyork/@nycopportunity/nyco-patterns@v{{ version }}/dist/styles/tailwind.css" rel="stylesheet">

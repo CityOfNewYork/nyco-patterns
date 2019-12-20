@@ -2,7 +2,7 @@
 / Footer
 /
 
-footer class='o-footer color-dark-background screen-tablet:layout--four-columns-gutter'
+footer class='o-footer color-dark-background screen-tablet:layout-four-columns-gutter'
 
   nav
     a class='o-footer__nav-link' href='index' Overview

@@ -10,11 +10,11 @@ $grid: map-get($variables, 'grid');
 
 // Declaration
 @mixin layouts($variant: '') {
-  .#{$variant}layout--wrap {
+  .#{$variant}layout-wrap {
     max-width: 1200px;
   }
 
-  .#{$variant}layout--sidebar {
+  .#{$variant}layout-sidebar {
     > *:first-child {
       width: 16rem
     }
@@ -24,14 +24,14 @@ $grid: map-get($variables, 'grid');
     }
   }
 
-  .#{$variant}layout--content {
+  .#{$variant}layout-content {
     > *:first-child {
       max-width: 600px;
       width: 100%
     }
   }
 
-  .#{$variant}layout--two-columns {
+  .#{$variant}layout-two-columns {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -43,7 +43,7 @@ $grid: map-get($variables, 'grid');
     }
   }
 
-  .#{$variant}layout--two-columns-gutter {
+  .#{$variant}layout-two-columns-gutter {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -59,7 +59,7 @@ $grid: map-get($variables, 'grid');
     }
   }
 
-  .#{$variant}layout--three-columns {
+  .#{$variant}layout-three-columns {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -71,15 +71,15 @@ $grid: map-get($variables, 'grid');
     }
   }
 
-  .#{$variant}layout--three-columns-gutter {
+  .#{$variant}layout-three-columns-gutter {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
     > * {
-      width: calc(33.33% - #{$grid / 2});
-      max-width: calc(33.33% - #{$grid / 2});
-      flex-basis: calc(33.33% - #{$grid / 2})
+      width: calc(33.33% - #{$grid / 1.5});
+      max-width: calc(33.33% - #{$grid / 1.5});
+      flex-basis: calc(33.33% - #{$grid / 1.5})
     }
 
     > * {
@@ -87,7 +87,7 @@ $grid: map-get($variables, 'grid');
     }
   }
 
-  .#{$variant}layout--four-columns {
+  .#{$variant}layout-four-columns {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -99,7 +99,7 @@ $grid: map-get($variables, 'grid');
     }
   }
 
-  .#{$variant}layout--four-columns-gutter {
+  .#{$variant}layout-four-columns-gutter {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

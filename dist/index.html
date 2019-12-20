@@ -28,29 +28,46 @@
 </html>
 <body onload="load()" style="visibility: hidden;">
   <header class="overflow-hidden color-dark-background py-2">
-    <div class="layout--wrap mx-auto px-6 flex justify-between items-center">
+    <div class="layout-wrap mx-auto px-6 flex justify-between items-center">
       <h1 class="m-0 flex">
         <span class="hidden"></span>
-        <svg aria-hidden="true" class="icon-logo-nyco" style="width:96px;height:52px;"><use xlink:href="#icon-logo-nyco"></use></svg>
+        <svg aria-hidden="true" class="icon-logo-nyco" style="width: 96px; height: 52px;"><use xlink:href="#icon-logo-nyco"></use></svg>
       </h1>
       <button aria-controls="navigation" aria-expanded="false" aria-pressed="false" class="cursor-pointer underline font-bold" data-js="toggle">Menu</button>
     </div>
   </header>
-  <main class="o-content"><p>
-  The global patterns seen on &lt;a href=&#39;${this.site.urls.nycOpportunity}&#39;&gt;NYC.gov/opportunity&lt;/a&gt; utilize a partial integration of &lt;a href=&#39;${this.site.urls.bootstrap}&#39;&gt;Bootstrap 2.3.2&lt;/a&gt;. This library extends the NYC.gov Style Guide with custom modules and the &lt;a href=&#39;${this.site.urls.tailwind}&#39;&gt;Tailwind CSS Utility framework&lt;/a&gt;. See the &lt;a href=&#39;${this.site.urls.blueprint
-  <em>nyc</em>
-  brand}&#39;&gt;NYC Digital Blueprint&#39;s documentation&lt;/a&gt; of The City&#39;s Style Guide for more details and resources.
-</p>
-
-<p>By default, NYC.gov stylesheets are disabled in this documentation. To see what these patterns look like with the NYC.gov stylesheets, click &quot;NYC.gov Styles&quot; in the main navigation.</p>
-
-<p>The patterns in this repository are organized as &lt;em&gt;Elements&lt;/em&gt;, &lt;em&gt;Components&lt;/em&gt; (coming soon), and &lt;em&gt;Objects&lt;/em&gt; for styling pages with the NYC Opportunity brand. The can be dropped into any web page on linking to the global stylesheet url in the head of an html page;</p>
-
-<pre><code>&lt;link href=&quot;&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</code></pre>
-
-<p>This distribution includes a custom build of the &lt;a href=&#39;${this.site.urls.tailwind}&#39;&gt;Tailwind Utility CSS Framework&lt;/a&gt;. Refer to Tailwind CSS docs for full details on utilizing the CSS uitilites to build different types of UIs.</p>
-</main>
-  <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
+  <main class="o-content">
+    <section class="color-dark-background p-6">
+      <div class="layout-wrap mx-auto py-6">
+        <div class="layout-content">
+          <div class="layout-two-columns mx-auto pl-6">
+            <h1 class="jumbo m-0 font-nycgov" style="font-weight: 600; font-size: 7em; line-height: 1em; border-left: 16px solid; padding-left: 24px;">
+              <div style="line-height: 0.8em;">Common</div>
+              <div>Agency</div>
+              <div class="text-primary-red">Patterns</div>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="color-light-background p-6">
+      <div class="layout-wrap layout-three-columns mx-auto py-6">
+        <article class="p-2">
+          <div class="shadow-up-2 border-2 border-primary-navy mb-2 p-4"><h1 class="m-0">tailwindcss</h1></div>
+        </article>
+        <article class="p-2">
+          <div class="shadow-up-2 border-2 border-primary-navy mb-2 p-4"><h1 class="m-0">Feed</h1></div>
+        </article>
+        <article class="p-2">
+          <div class="shadow-up-2 border-2 border-primary-navy mb-2 p-4"><h1 class="m-0">Data Vizualization</h1></div>
+        </article>
+      </div>
+    </section>
+    <section class="mt-6" id="">
+      <div class="layout-content px-4 pb-4"><div class="o-content mx-auto"></div></div>
+    </section>
+  </main>
+  <footer class="o-footer color-dark-background screen-tablet:layout-four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
       <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.7.0">GitHub Repository</a>

@@ -7,7 +7,7 @@ body class='bg-base-black' style='visibility: hidden;' onload='load()'
 
   = partial('../../objects/header/header.slm');
 
-  main#main-content class='screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen'
+  main#main-content class='screen-tablet:layout-sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen'
     = partial('../../objects/navigation/navigation.slm');
 
     article class='color-light-background py-2'

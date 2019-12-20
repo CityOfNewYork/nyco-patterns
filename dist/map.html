@@ -28,7 +28,7 @@
 </html>
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
-  <header class="o-header screen-tablet:layout--sidebar w-full">
+  <header class="o-header screen-tablet:layout-sidebar w-full">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
@@ -47,7 +47,7 @@
       </div>
     </div>
   </header>
-  <main class="screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
+  <main class="screen-tablet:layout-sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
     <aside class="o-navigation bg-primary-navy">
       <div class="screen-tablet:flex hidden w-full">
         <div class="o-navigation__wrap color-mid-background">
@@ -127,7 +127,7 @@
       </p>
       <section class="mt-6" id="map-multi">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
+          <div class="layout-wrap mx-auto flex justify-center">
             <div class="overflow-x-auto pb-3">
               <div class="o-map" data-js="nyco-map-ml">
                 <nyco-map-ml :config="config" :layers="layers" id="nyco-map-ml" style="height: 400px; width: 500px"></nyco-map-ml>
@@ -136,7 +136,7 @@
             </div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div class=&quot;overflow-x-auto pb-3&quot;&gt;
   &lt;div class=&quot;o-map&quot; data-js=&quot;nyco-map-ml&quot;&gt;
@@ -156,7 +156,7 @@
       </section>
       <section class="mt-6" id="map-single">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
+          <div class="layout-wrap mx-auto flex justify-center">
             <div class="overflow-x-auto pb-3">
               <div class="o-map relative" data-js="nyco-map-sl">
                 <nyco-map-sl :config="config" :layers="layers" id="nyco-map-sl" style="height: 400px; width: 500px"></nyco-map-sl>
@@ -165,7 +165,7 @@
             </div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div class=&quot;overflow-x-auto pb-3&quot;&gt;
   &lt;div class=&quot;o-map relative&quot; data-js=&quot;nyco-map-sl&quot;&gt;
@@ -185,7 +185,7 @@
       </section>
     </article>
   </main>
-  <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
+  <footer class="o-footer color-dark-background screen-tablet:layout-four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
       <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.7.0">GitHub Repository</a>

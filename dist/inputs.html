@@ -28,7 +28,7 @@
 </html>
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
-  <header class="o-header screen-tablet:layout--sidebar w-full">
+  <header class="o-header screen-tablet:layout-sidebar w-full">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
@@ -47,7 +47,7 @@
       </div>
     </div>
   </header>
-  <main class="screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
+  <main class="screen-tablet:layout-sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
     <aside class="o-navigation bg-primary-navy">
       <div class="screen-tablet:flex hidden w-full">
         <div class="o-navigation__wrap color-mid-background">
@@ -121,11 +121,11 @@
       <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Inputs</h1></div>
       <section class="mt-6" id="input">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
+          <div class="layout-wrap mx-auto flex justify-center">
             <div class="input"><input name="name" type="text" /></div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div class=&quot;input&quot;&gt;&lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt;&lt;/div&gt;
 </pre></div>
@@ -135,11 +135,11 @@
       </section>
       <section class="mt-6" id="input-error">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
+          <div class="layout-wrap mx-auto flex justify-center">
             <div class="error"><input type="text" /></div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div class=&quot;error&quot;&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/div&gt;
 </pre></div>
@@ -150,11 +150,11 @@
       </section>
       <section class="mt-6" id="input-number">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
+          <div class="layout-wrap mx-auto flex justify-center">
             <div><input type="number" /></div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div&gt;&lt;input type=&quot;number&quot; /&gt;&lt;/div&gt;
 </pre></div>
@@ -165,11 +165,11 @@
       </section>
       <section class="mt-6" id="input-currency-usd">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
+          <div class="layout-wrap mx-auto flex justify-center">
             <div class="input-currency-usd"><input type="number" /></div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div class=&quot;input-currency-usd&quot;&gt;&lt;input type=&quot;number&quot; /&gt;&lt;/div&gt;
 </pre></div>
@@ -180,11 +180,11 @@
       </section>
       <section class="mt-6" id="input-currency-usd-error">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
+          <div class="layout-wrap mx-auto flex justify-center">
             <div class="input-currency-usd error"><input type="number" /></div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div class=&quot;input-currency-usd error&quot;&gt;&lt;input type=&quot;number&quot; /&gt;&lt;/div&gt;
 </pre></div>
@@ -195,14 +195,14 @@
       </section>
       <section class="mt-6" id="input-autocomplete">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout--wrap mx-auto flex justify-center">
+          <div class="layout-wrap mx-auto flex justify-center">
             <div class="input-autocomplete">
               <input aria-autocomplete="both" aria-describedby="input-autocomplete__instructions-0" aria-expanded="false" aria-owns="input-autocomplete__options" autocomplete="off" data-js="input-autocomplete__input" type="text" />
               <div aria-live="polite" class="sr-only" id="input-autocomplete__instructions-0"></div>
             </div>
           </div>
         </div>
-        <div class="layout--content px-4 pb-4">
+        <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div class=&quot;input-autocomplete&quot;&gt;
   &lt;input aria-autocomplete=&quot;both&quot; aria-describedby=&quot;input-autocomplete__instructions-0&quot; aria-expanded=&quot;false&quot; aria-owns=&quot;input-autocomplete__options&quot; autocomplete=&quot;off&quot; data-js=&quot;input-autocomplete__input&quot; type=&quot;text&quot; /&gt;
@@ -370,7 +370,7 @@ new InputAutocomplete({
       </section>
     </article>
   </main>
-  <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
+  <footer class="o-footer color-dark-background screen-tablet:layout-four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
       <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.7.0">GitHub Repository</a>

@@ -22,8 +22,8 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
   = mixin('pattern', 'elements/layouts/layout-wrap');
-  = mixin('pattern', 'elements/layouts/layout-sidebar');
   = mixin('pattern', 'elements/layouts/layout-content');
+  = mixin('pattern', 'elements/layouts/layout-sidebar');
   = mixin('pattern', 'elements/layouts/layout-two-columns-gutter');
   = mixin('pattern', 'elements/layouts/layout-three-columns-gutter');
   = mixin('pattern', 'elements/layouts/layout-four-columns-gutter');

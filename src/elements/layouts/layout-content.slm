@@ -1,7 +1,2 @@
-div class='layout--sidebar w-full screen-tablet:flex'
-  div class='bg-secondary-grey p-6'
-    div class='p-6'
-      | Sidebar
-  div class='bg-secondary-white layout--content p-6'
-    div class='mx-auto bg-base-white p-6 text-center'
-      | Content
+div class='layout-content w-full p-4 bg-secondary-grey-30t ${classDemoShadow}'
+  div class='mx-auto p-6 bg-base-white text-center' Content

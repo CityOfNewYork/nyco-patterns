@@ -1,4 +1,4 @@
-div class='layout--two-columns-gutter screen-desktop:layout--four-columns-gutter'
+div class='layout-two-columns-gutter screen-desktop:layout-four-columns-gutter'
   - for key in this.variables.icons
 
     - href = key
