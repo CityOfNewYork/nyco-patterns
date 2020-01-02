@@ -25,7 +25,6 @@ $checkbox-radius: map-get(map-get($variables, 'inputs'), 'checkbox-radius');
 }
 
 @mixin checkboxes-btn-checked {
-  background-image: url('../svg/icon-checkmark-white.svg'); 
   background-repeat: no-repeat;
   background-size: cover;
   border: 0;

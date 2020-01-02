@@ -3,11 +3,12 @@
 /
 
 div class='error'
-  select class='select' name="borough"
-    option value='' selected='true' All Boroughs
-    option value='brooklyn' Brooklyn
-    option value='bronx' Bronx
-    option value='manhattan' Manhattan
-    option value='queens' Queens
-    option value='staten island' Staten Island
-   
+  select class='select'
+    option Select a Borough
+    option ---
+    option Bronx
+    option Brooklyn
+    option Manhattan
+    option Queens
+    option Staten Island
+

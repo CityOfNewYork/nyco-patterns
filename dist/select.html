@@ -122,14 +122,38 @@
       <section class="mt-6" id="select">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div data-js="app"><nyco-select :options="options" v-model="selected"></nyco-select></div>
+            <div>
+              <select class="select">
+                <option>Select a Borough</option>
+                <option>---</option>
+                <option>Bronx</option>
+                <option>Brooklyn</option>
+                <option>Manhattan</option>
+                <option>Queens</option>
+                <option>Staten Island</option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div data-js=&quot;app&quot;&gt;&lt;nyco-select :options=&quot;options&quot; v-model=&quot;selected&quot;&gt;&lt;/nyco-select&gt;&lt;/div&gt;
+            <div class="code-block"><pre>&lt;div&gt;
+  &lt;select class=&quot;select&quot;&gt;
+    &lt;option&gt;Select a Borough&lt;/option&gt;
+    &lt;option&gt;---&lt;/option&gt;
+    &lt;option&gt;Bronx&lt;/option&gt;
+    &lt;option&gt;Brooklyn&lt;/option&gt;
+    &lt;option&gt;Manhattan&lt;/option&gt;
+    &lt;option&gt;Queens&lt;/option&gt;
+    &lt;option&gt;Staten Island&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
 </pre></div>
-            <p>This is a Vue component that dynamically generates a select dropdown menu based on a list of options passed through.</p>
+            <p>
+  A styled select element. Styling of the element is determined by the
+  <a href="/colors">Color Combination utility</a>
+  it is nested under.
+</p>
 
           </div>
         </div>
@@ -138,13 +162,14 @@
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
             <div class="error">
-              <select class="select" name="borough">
-                <option selected="true" value="">All Boroughs</option>
-                <option value="brooklyn">Brooklyn</option>
-                <option value="bronx">Bronx</option>
-                <option value="manhattan">Manhattan</option>
-                <option value="queens">Queens</option>
-                <option value="staten island">Staten Island</option>
+              <select class="select">
+                <option>Select a Borough</option>
+                <option>---</option>
+                <option>Bronx</option>
+                <option>Brooklyn</option>
+                <option>Manhattan</option>
+                <option>Queens</option>
+                <option>Staten Island</option>
               </select>
             </div>
           </div>
@@ -152,13 +177,14 @@
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;div class=&quot;error&quot;&gt;
-  &lt;select class=&quot;select&quot; name=&quot;borough&quot;&gt;
-    &lt;option selected=&quot;true&quot; value=&quot;&quot;&gt;All Boroughs&lt;/option&gt;
-    &lt;option value=&quot;brooklyn&quot;&gt;Brooklyn&lt;/option&gt;
-    &lt;option value=&quot;bronx&quot;&gt;Bronx&lt;/option&gt;
-    &lt;option value=&quot;manhattan&quot;&gt;Manhattan&lt;/option&gt;
-    &lt;option value=&quot;queens&quot;&gt;Queens&lt;/option&gt;
-    &lt;option value=&quot;staten island&quot;&gt;Staten Island&lt;/option&gt;
+  &lt;select class=&quot;select&quot;&gt;
+    &lt;option&gt;Select a Borough&lt;/option&gt;
+    &lt;option&gt;---&lt;/option&gt;
+    &lt;option&gt;Bronx&lt;/option&gt;
+    &lt;option&gt;Brooklyn&lt;/option&gt;
+    &lt;option&gt;Manhattan&lt;/option&gt;
+    &lt;option&gt;Queens&lt;/option&gt;
+    &lt;option&gt;Staten Island&lt;/option&gt;
   &lt;/select&gt;
 &lt;/div&gt;
 </pre></div>
@@ -195,7 +221,7 @@
         .
       </p>
       <small>
-        © City of New York, 2019 All Rights Reserved.
+        © City of New York, 2020 All Rights Reserved.
         <br />
         NYC is a trademark and service mark of the City of New York.
       </small>

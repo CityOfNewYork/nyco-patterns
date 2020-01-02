@@ -7,10 +7,10 @@
 $padding: map-get($variables, 'padding');
 
 // Declarations
-@mixin selects($url) {
+@mixin selects() {
   @include forms-default;
 
-  background: url($url);
+  color: inherit;
   background-position: $direction-end .5rem center;
   background-repeat: no-repeat;
   background-size: 14px 14px;

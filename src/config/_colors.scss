@@ -45,15 +45,22 @@ $base-white: map-get($colors, 'base-white');
 
 // Mixins
 @mixin combination($selector, $combination, $b, $smoothing: false) {
+  // Get the namespace for the color (not the value)
   $color: map-get($combination, 'color');
+  $headings: map-get($combination, 'headings');
   $background: map-get($combination, 'background-color');
+
   $hyperlinks: map-get($combination, 'hyperlinks');
   $visited: map-get($combination, 'visited');
   $hover: map-get($combination, 'hover');
-  $headings: map-get($combination, 'headings');
+
   $input-border: map-get($combination, 'border');
   $input-placeholder: map-get($combination, 'placeholder');
+  $input-background: map-get($combination, 'input-background');
   $checkbox-background: map-get($combination, 'checkbox-background');
+  $checkbox-check: map-get($combination, 'checkbox-check');
+  $select-arrow: map-get($combination, 'select-arrow');
+
   $error: map-get($combination, 'error');
 
   color: map-get($colors, $color);
@@ -79,16 +86,27 @@ $base-white: map-get($colors, 'base-white');
     }
   }
 
-  input:not(.error &) {
+  input:not(.error), textarea:not(.error), select:not(.error) {
     border-color: map-get($colors, $input-border);
+    background-color: map-get($colors, $input-background);
+
+    &::placeholder {
+      color: map-get($combination, 'placeholder');
+    }
+  }
+
+  .select {
+    background-image: url($select-arrow);
   }
 
   .checkbox__label::before {
     border-color: map-get($colors, $input-border);
+    background-color: map-get($colors, $input-background);
   }
 
   input:checked + .checkbox__label::before {
     background-color: map-get($colors, $checkbox-background);
+    background-image: url($checkbox-check);
   }
 
   input:focus + .checkbox__label::before {
