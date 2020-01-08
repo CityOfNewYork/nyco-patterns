@@ -14,38 +14,49 @@
   = mixin('head');
 
 = content('content');
-  / div class='${classPageHeader}'
-  /   h1 class='${classPageH1}' Overview
   section class='color-dark-background p-6'
-    div class='layout-wrap mx-auto py-6'
-      div class='layout-content'
-        div class='layout-two-columns mx-auto pl-6'
-          / h1 class='mb-0'
-          /   span class='hidden'
-          /     | The NYC Mayor's Office for Economic Opportunity
+    div class='layout-wrap layout-content mx-auto py-6'
+      div class='mx-auto py-6'
+        div class='flex justify-center items-center mb-6'
+          svg aria-hidden='true' class='icon-logo-primary' style='width: 287px; height: 133px;'
+            use xlink:href='#icon-logo-primary'
 
-          /   svg aria-hidden='true' class='icon-logo-primary icon-xlarge' style='height: 120px !important'
-          /     title
-          /       | The NYC Mayor's Office for Economic Opportunity
-          /     use xlink:href='#icon-logo-nyco-secondary'
-
-          h1 class='jumbo m-0 font-nycgov' style='font-weight: 600; font-size: 7em; line-height: 1em; border-left: 16px solid; padding-left: 24px;'
+          h1 class='jumbo m-0 pl-2 ml-2 font-nycgov' style='font-weight: 600; line-height: 1em; border-left: 8px solid;'
             div style='line-height: 0.8em;' Common
             div Agency
             div class='text-primary-red' Patterns
 
-  section class='color-light-background p-6'
-    div class='layout-wrap layout-three-columns mx-auto py-6'
-      article class='p-2'
-        div class='${classDemoShadow} p-4'
-          h1 class='m-0' tailwindcss
+        div
+          p <b>For creating websites and digital products for The Mayor's Office for Economic Opportunity</b>. The <b>NYCO Patterns</b> provide simple and flexible CSS and JavaScript based components and utilities for building UI's quickly and easily. Ideally suited for internal or external marketing websites, custom digital applications, stand-alone reports, documentation, and dashboards.
 
-      article class='p-2'
-        div class='${classDemoShadow} p-4'
-          h1 class='m-0' Feed
+  section class='color-mid-background p-6'
+    div class='layout-wrap layout-content mx-auto py-6'
+      div class='mx-auto'
+        h2 class='text-center' Browse the Patterns
+        div class='text-h4 color-light-background p-6 ${classDemoShadow}'
+          - classNav = '';
+          - classNavLinkHeader = 'o-navigation__link-header text-primary-blue-70t border-primary-blue-30t';
+          - classNavLink = 'o-navigation__link';
 
-      article class='p-2'
-        div class='${classDemoShadow} p-4'
-          h1 class='m-0' Data Vizualization
+          = mixin('nav');
 
-  = mixin('readme', 'content/index');
+  / section class='color-mid-background p-6'
+  /   div class='layout-wrap layout-content mx-auto py-6'
+  /     div class='mx-auto'
+  /       | Accessibility first
+
+  / section class='color-light-background p-6'
+  /   div class='layout-wrap layout-three-columns mx-auto py-6'
+  /     article class='p-2'
+  /       div class='${classDemoShadow} p-4'
+  /         h1 class='m-0' tailwindcss
+
+  /     article class='p-2'
+  /       div class='${classDemoShadow} p-4'
+  /         h1 class='m-0' Feed
+
+  /     article class='p-2'
+  /       div class='${classDemoShadow} p-4'
+  /         h1 class='m-0' Data Vizualization
+
+  / = mixin('readme', 'content/index');

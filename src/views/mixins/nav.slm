@@ -1,7 +1,7 @@
 = mixin('nav');
   nav class='${classNav}'
     a class='${classNavLink}' href='index'
-      | Overview
+      | Home
 
   nav class='${classNav}'
     span class='${classNavLinkHeader}' Elements
