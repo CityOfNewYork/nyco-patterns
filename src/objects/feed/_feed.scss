@@ -3,6 +3,7 @@
  */
 
 // Dependencies
+@import '@nycopportunity/patterns-framework/src/utilities/spinner/spinner';
 @import 'config/variables';
 
 $oFeed_breakpoint: #{map-get(map-get($variables, 'screens'), 'screen-tablet')}px;
@@ -24,6 +25,18 @@ $oFeed_breakpoint: #{map-get(map-get($variables, 'screens'), 'screen-tablet')}px
   border-radius: 1000px;
   overflow: hidden;
   margin-right: map-get(map-get($variables, 'margin'), 1);
+  flex-shrink: 0;
+}
+
+.o-feed__spinner {
+  color: map-get(map-get($variables, 'colors'), 'secondary-orange');
+  display: flex;
+  justify-content: center;
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .c-feed-item {
@@ -38,16 +51,26 @@ $oFeed_breakpoint: #{map-get(map-get($variables, 'screens'), 'screen-tablet')}px
   }
 }
 
+.c-feed-item__date {
+  margin-bottom: map-get(map-get($variables, 'margin'), 1);
+}
+
 .c-feed-item__thumbnail {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: map-get(map-get($variables, 'margin'), 3);
+
+  // order: -1;
+  margin-top: 0;
+  background-size: cover;
+  background-position: center center;
+  border: 1px solid;
 }
 
 .c-feed-item__excerpt {
   font-size: inherit;
-  margin-top: map-get(map-get($variables, 'margin'), 3);
+  margin-top: map-get(map-get($variables, 'margin'), 1);
 }
 
 // Column Layouts
@@ -56,22 +79,25 @@ $oFeed_breakpoint: #{map-get(map-get($variables, 'screens'), 'screen-tablet')}px
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     &:after {
       content: '';
       flex: auto;
     }
   }
+
   .c-feed-item {
     display: flex;
     flex-direction: column;
     border-bottom: none;
   }
+
   .c-feed-item__thumbnail {
     order: -1;
-    margin-top: 0;
-    background-size: cover;
-    background-position: center center;
-    border: 1px solid;
+    // margin-top: 0;
+    // background-size: cover;
+    // background-position: center center;
+    // border: 1px solid;
   }
 }
 
@@ -97,6 +123,7 @@ $oFeed_breakpoint: #{map-get(map-get($variables, 'screens'), 'screen-tablet')}px
       max-width: calc(50% - 12px);
     }
   }
+
   .o-feed__items:after {
     display: none;
   }

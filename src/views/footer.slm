@@ -3,12 +3,13 @@
 / Layout
 = extend('layouts/default');
 
-= partial('partials/styles.slm');
-= partial('partials/links.slm');
-= partial('partials/head.mixin.slm');
-= partial('partials/nav.mixin.slm');
-= partial('partials/section.mixin.slm');
-= partial('partials/section-full.mixin.slm');
+/ Variables
+= partial('variables/classes.slm');
+
+/ Mixins
+= partial('mixins/head.slm');
+= partial('mixins/nav.slm');
+= partial('mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -18,6 +19,6 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${class_demo_headers}' = pattern;
-
-  = mixin('section-full', 'objects/footer/footer');
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern;
+  = mixin('pattern', 'objects/footer/footer');

@@ -1,0 +1,5 @@
+div class='layout-sidebar w-full screen-tablet:flex ${classDemoShadow}'
+  div class='bg-base-white p-6'
+    div class='p-6'
+      | Sidebar
+  div class='bg-secondary-grey-30t p-6'

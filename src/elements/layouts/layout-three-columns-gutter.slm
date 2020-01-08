@@ -1,0 +1,13 @@
+div class='layout-three-columns-gutter bg-secondary-grey-30t p-4 text-center ${classDemoShadow}'
+  div class='bg-base-white p-4'
+    | Cell A
+  div class='bg-base-white p-4'
+    | Cell B
+  div class='bg-base-white p-4'
+    | Cell C
+  div class='bg-base-white p-4'
+    | Cell D
+  div class='bg-base-white p-4'
+    | Cell E
+  div class='bg-base-white p-4'
+    | Cell F

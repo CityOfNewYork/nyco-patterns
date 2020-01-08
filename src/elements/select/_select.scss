@@ -8,9 +8,5 @@
 
 // Declarations
 .select {
-  @include selects('../svg/icon-arrow-down.svg');
-}
-
-.error .select {
-  @include selects('../svg/icon-arrow-down-red.svg');
+  @include selects();
 }

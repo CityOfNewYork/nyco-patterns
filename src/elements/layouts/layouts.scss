@@ -10,11 +10,11 @@ $grid: map-get($variables, 'grid');
 
 // Declaration
 @mixin layouts($variant: '') {
-  .#{$variant}layout--wrap {
+  .#{$variant}layout-wrap {
     max-width: 1200px;
   }
 
-  .#{$variant}layout--sidebar {
+  .#{$variant}layout-sidebar {
     > *:first-child {
       width: 16rem
     }
@@ -24,22 +24,34 @@ $grid: map-get($variables, 'grid');
     }
   }
 
-  .#{$variant}layout--content {
+  .#{$variant}layout-content {
     > *:first-child {
       max-width: 600px;
       width: 100%
     }
   }
 
-  .#{$variant}layout--two-columns-gutter {
+  .#{$variant}layout-two-columns {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
     > * {
-      width: calc(50% - #{$grid});
-      max-width: calc(50% - #{$grid});
-      flex-basis: calc(50% - #{$grid})
+      width: calc(50%);
+      max-width: calc(50%);
+      flex-basis: calc(50%)
+    }
+  }
+
+  .#{$variant}layout-two-columns-gutter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(50% - #{$grid / 2});
+      max-width: calc(50% - #{$grid / 2});
+      flex-basis: calc(50% - #{$grid / 2})
     }
 
     > * {
@@ -47,15 +59,27 @@ $grid: map-get($variables, 'grid');
     }
   }
 
-  .#{$variant}layout--three-columns-gutter {
+  .#{$variant}layout-three-columns {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
     > * {
-      width: calc(33.33% - #{$grid});
-      max-width: calc(33.33% - #{$grid});
-      flex-basis: calc(33.33% - #{$grid})
+      width: calc(33.33%);
+      max-width: calc(33.33%);
+      flex-basis: calc(33.33%)
+    }
+  }
+
+  .#{$variant}layout-three-columns-gutter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(33.33% - #{$grid / 1.5});
+      max-width: calc(33.33% - #{$grid / 1.5});
+      flex-basis: calc(33.33% - #{$grid / 1.5})
     }
 
     > * {
@@ -63,15 +87,27 @@ $grid: map-get($variables, 'grid');
     }
   }
 
-  .#{$variant}layout--four-columns-gutter {
+  .#{$variant}layout-four-columns {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
     > * {
-      width: calc(25% - #{$grid});
-      max-width: calc(25% - #{$grid});
-      flex-basis: calc(25% - #{$grid})
+      width: calc(25%);
+      max-width: calc(25%);
+      flex-basis: calc(25%)
+    }
+  }
+
+  .#{$variant}layout-four-columns-gutter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc(25% - #{($grid * 0.75)});
+      max-width: calc(25% - #{($grid * 0.75)});
+      flex-basis: calc(25% - #{($grid * 0.75)})
     }
 
     > * {

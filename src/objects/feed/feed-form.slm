@@ -1,0 +1,52 @@
+form class='border border-solid border-primary-blue-30t bg-secondary-white-70t p-4 mb-4' method='get'
+  div class='mb-2'
+    label class='font-bold' for='js-embed' Embeddable Snippet
+
+    p Copy and paste the following code into your page to embed the Feed.
+
+    div
+      textarea#js-embed class='w-full'
+        = '{{ embed }}';
+
+  div class='mb-2'
+    label class='font-bold' for='js-share' Share
+
+    p Copy the following url to share or save customized Feed settings.
+
+    div
+      input#js-share class='w-full' data-js-share-base='${this.site.urls.production}'
+
+  div#js-controls
+    h3 Customize
+
+    p Edit the variables below then click render (or press the return key) to display an updated feed with your own configuration.
+
+    fieldset v-for='item, name in configDefault'
+      / if the setting is a string, number, or array
+      div v-if='typeof item == "string" || !isNaN(item) || Array.isArray(item)' class='pb-2'
+        label
+          span class='font-bold' = '{{ name }}'
+          em = ' ({{ typeof item }})';
+
+        p = '{{ docs[name] }}';
+
+        div
+          input v-if='Array.isArray(item)' class='w-full' type='text' v-bind:name='name' v-bind:id='name' v-bind:value='config[name]' v-on:change='config[name] = $event.target.value.split(",")' v-bind:placeholder='configDefault[name].toString()'
+          input v-else='' class='w-full' type='text' v-bind:name='name' v-bind:id='name' v-model='config[name]' v-bind:placeholder='configDefault[name].toString()'
+
+      / If the setting is an object
+      div v-else-if='typeof item === "object"' class='mb-3'
+        h4 = '{{ name }}';
+
+        div v-for='value, key in item' class='pb-2'
+          label v-bind:for='name + key'
+            span class='font-bold' = '{{ name }}.{{ key }}'
+            em = ' ({{ typeof item[key] }})';
+
+          p = '{{ docs[name][key] }}';
+
+          div
+            textarea v-if='name === "templates"' class='w-full' v-bind:name='name + key' v-bind:id='name + key' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)' v-bind:placeholder='configDefault[name][key].toString()'
+            input v-else='' class='w-full' type='text' v-bind:name='name + key' v-bind:id='name + key' v-bind:value='setObjValue(name, key)' v-on:change='setObj(name, key, $event.target.value)' v-bind:placeholder='configDefault[name][key].toString()'
+
+    button class='btn btn-large color-primary-button' v-on:click='render' Render

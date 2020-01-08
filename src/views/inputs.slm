@@ -4,15 +4,12 @@
 = extend('layouts/default');
 
 / Variables
-= partial('partials/styles.slm');
-= partial('partials/links.slm');
+= partial('variables/classes.slm');
 
-/ Partials
-= partial('partials/head.mixin.slm');
-= partial('partials/nav.mixin.slm');
-= partial('partials/section.mixin.slm');
-= partial('partials/section-full.mixin.slm');
-= partial('partials/section-text.mixin.slm');
+/ Mixins
+= partial('mixins/head.slm');
+= partial('mixins/nav.slm');
+= partial('mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -22,15 +19,14 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${class_demo_headers}' = pattern;
-
-  = mixin('section', 'elements/inputs/input', 'Default');
-  = mixin('section', 'elements/inputs/input-error', 'Error');
-  = mixin('section', 'elements/inputs/input-number', 'Number');
-  = mixin('section', 'elements/inputs/input-currency-usd', 'Currency');
-  = mixin('section', 'elements/inputs/input-currency-usd-error', 'Currency Error');
-  = mixin('section', 'elements/inputs/input-autocomplete', 'Autocomplete');
-  = mixin('section-text', 'elements/inputs/input-autocomplete.readme', 'Autocomplete Usage');
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern;
+  = mixin('pattern', 'elements/inputs/input');
+  = mixin('pattern', 'elements/inputs/input-error');
+  = mixin('pattern', 'elements/inputs/input-number');
+  = mixin('pattern', 'elements/inputs/input-currency-usd');
+  = mixin('pattern', 'elements/inputs/input-currency-usd-error');
+  = mixin('pattern', 'elements/inputs/input-autocomplete');
 
 = content('script');
   javascript:

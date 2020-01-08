@@ -1,0 +1,26 @@
+article class='o-content color-light-background p-4 max-w-900'
+  h1 Worker Connect: A Critical Tool for the City’s Frontline Workers
+
+  p
+    img src='images/worker-connect.jpg'
+
+  p Each day caseworkers across New York City assist thousands of residents in need of City services and public benefits. To do so, workers must often collect information and documentation from prospective and existing clients to determine their eligibility for these assistance programs. Sometimes this information may be missing, inaccessible, or stored across separate agency client information systems that do not communicate with one another. For some of the City’s most vulnerable, missing data and documentation can be a critical barrier to getting the help they need.
+
+  p
+    code Sample Inline Code
+
+  table
+    thead
+      tr
+        td Table Styling
+    tbody
+      tr
+        td Cell
+      tr
+        td Cell
+
+  pre
+    = "<div>\n";
+    = "  Sample Code Block\n";
+    = "</div>\n";
+

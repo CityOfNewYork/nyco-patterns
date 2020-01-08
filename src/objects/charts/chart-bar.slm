@@ -1,0 +1,6 @@
+/
+/ Chart Bar
+/
+
+div data-js='chart-bar' class='bg-base-white px-2'
+  nyco-chart-bar :chart-data='data' :options='options'

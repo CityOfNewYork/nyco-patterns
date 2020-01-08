@@ -2,7 +2,7 @@
 / Header
 /
 
-header class='o-header screen-tablet:layout--sidebar'
+header class='o-header screen-tablet:layout-sidebar w-full'
   div class='o-header__banner-main color-primary-button'
     button class='o-header__main-toggle' data-js='toggle' aria-pressed='false' aria-controls='js-navigation' Menu
 
@@ -20,11 +20,10 @@ header class='o-header screen-tablet:layout--sidebar'
 
   div class='o-header__banner-secondary color-dark-background'
     h1 class='o-header__secondary-title text-jumbo' Patterns
-    a href='#main-content' Skip to main content
 
   div class='o-header__secondary-version color-dark-background'
     div
-      a href='${link_source}' class='btn flex items-center'
+      a href='${this.site.urls.source}' class='btn flex items-center'
         svg aria-hidden='true' class='icon-github-mark icon-small mr-1'
           use xlink:href='#icon-github-mark'
 

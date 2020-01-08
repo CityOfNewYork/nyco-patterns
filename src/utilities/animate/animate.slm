@@ -1,3 +1,6 @@
 /
 / Animate
 /
+
+div class='animated fadeInUp p-6 bg-base-white shadow-up'
+  | Refresh the page to see this element's appearance animated.

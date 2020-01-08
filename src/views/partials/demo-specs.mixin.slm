@@ -1,4 +1,0 @@
-= mixin('demo-specs', 'text');
-  div
-    div class='my-0'
-      = 'md{{ ' + this.text + ' }}'

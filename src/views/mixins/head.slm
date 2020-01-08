@@ -1,0 +1,32 @@
+= mixin('head', 'title = NYCO Patterns');
+  head
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+
+    / EXTERNAL STYLES
+    link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' type='text/css'
+
+    / Global Stylesheet
+    link rel='stylesheet' href='styles/nyco-patterns-default.css'
+
+    - if (this.title == 'NYCO Patterns') {
+      - title = this.title;
+    - } else {
+      - title = this.title + ' | NYCO Patterns';
+    - };
+
+    title = title;
+
+    link rel='icon' type='image/png' sizes='32x32' href='/images/favicon/favicon-32x32.png'
+    link rel='shortcut icon' href='/images/favicon/favicon.ico'
+
+    javascript:
+      var VERSION = '${this.site.versions.package}';
+
+    noscript
+      style
+        = 'body { visibility: visible !important; }';
+
+    javascript:
+      function load() { document.body.style.visibility = 'visible' };

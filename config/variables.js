@@ -11,10 +11,13 @@ const { nycoColors } = require('./colors');
 
 const variables = {
   cdn: '"https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v' + package.version + '/dist"',
-  fonts: {
+  fontFamily: {
     'system': [
       '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto',
       'Oxygen-Sans', 'Ubuntu', 'Cantarell', '"Helvetica Neue"', 'sans-serif'
+    ],
+    'code': [
+      'monospace'
     ],
     'nycgov': [
       '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'
@@ -26,7 +29,7 @@ const variables = {
       '"Noto Serif"', 'serif'
     ]
   },
-  fontWeights: {
+  fontWeight: {
     'normal': 'normal',
     'bold': 'bold',
     'jumbo': 'normal',
@@ -37,10 +40,11 @@ const variables = {
     'h5': 'bold',
     'h6': 'bold',
     'html': 'normal',
+    'code': 'normal',
     'small': 'normal',
-    'blockquote': 'normal'
+    'blockquote': 'bold'
   },
-  textSizes: {
+  fontSize: {
     'jumbo': '3em',
     'h1': '2.488em',
     'h2': '2.074em',
@@ -48,11 +52,12 @@ const variables = {
     'h4': '1.44em',
     'h5': '1.2em',
     'h6': '1em',
-    'html': '1em',
+    'html': '16px',
+    'code': '1em',
     'small': '0.833em',
     'blockquote': '2.074em'
   },
-  leading: {
+  lineHeight: {
     'jumbo': '1.2',
     'h1': '1.2',
     'h2': '1.2',
@@ -61,6 +66,7 @@ const variables = {
     'h5': '1.2',
     'h6': '1.2',
     'html': '1.5',
+    'code': '1.6',
     'small': 'normal',
     'blockquote': 'normal'
   },
@@ -96,7 +102,7 @@ const variables = {
     'animate-scss-speed': '0.75s',
     'animate-timing-function': 'cubic-bezier(0.23, 1, 0.32, 1)'
   },
-  borderWidths: {
+  borderWidth: {
     '0': '0',
     'default': '1px',
     '2': '2px',
@@ -125,6 +131,18 @@ const variables = {
     '6': '48px',
     'auto': 'auto'
   },
+  maxWidth: {
+    '1/2': '50%',
+    'full': '100%',
+    '600': '600px',
+    '900': '896px'
+  },
+  width: {
+    '1/2': '50%',
+    'full': '100%',
+    '600': '600px',
+    '900': '896px'
+  },
   screens: {
     'screen-desktop': 960,
     'screen-mobile': 480,
@@ -138,8 +156,12 @@ const variables = {
     'checkbox-radius': '6px',
     'checkbox-size': '20px'
   },
-  display: {
-    'up': '0px 5px 11px 1px rgba(0,0,0,0.45)'
+  boxShadow: {
+    'none': 'none',
+    'up-transparent': '8px 8px 0px 0px rgba(47, 51, 79, 0)',
+    'up': '8px 8px 0px 0px rgba(47, 51, 79, 100)',
+    'up-2-transparent': '16px 16px 0px 0px rgba(47, 51, 79, 0)',
+    'up-2': '16px 16px 0px 0px rgba(47, 51, 79, 100)'
   }
 };
 

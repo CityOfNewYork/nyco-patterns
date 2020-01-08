@@ -1,65 +1,32 @@
-p The following selectors and their properties are animated by default;
+## Animate.css
 
-p
-  .table.w-full
-    table
-      thead
-        tr
-          th Selectors
-      tbody
-        tr
-          td a
-        tr
-          td input
-        tr
-          td textarea
-        tr
-          td select
-        tr
-          td path
-        tr
-          td rect
-        tr
-          td .btn
-        tr
-          td .button
+[Animate.scss](https://www.npmjs.com/package/animate.scss), the SASS implementation of [Animate.css](https://daneden.github.io/animate.css/) is included as a dependency. Basic animations can be imported as needed. The following animations are included;
 
-p
-  .table.w-full
-    table
-      thead
-        tr
-          th Properties
-      tbody
-        tr
-          td opacity
-        tr
-          td background
-        tr
-          td color
-        tr
-          td border
-        tr
-          td box-shadow
-        tr
-          td outline
-        tr
-          td transform
-        tr
-          td stroke
-        tr
-          td stroke-dashoffset
-        tr
-          td fill
+    fadeIn
+    fadeInUp
 
-h3 Animate.css
+## Default Animations
 
-p <a href='https://www.npmjs.com/package/animate.scss'>Animate.scss</a>, the SASS implementation of <a href='https://daneden.github.io/animate.css/'>Animate.css</a> is included as a dependency. Basic animations can be imported as needed. The following animations are included;
+The following elements and certain properties are animated by default;
 
-.table.w-full
-  table
-    tbody
-      tr
-        td fadeIn
-      tr
-        td fadeInUp
+    a
+    input
+    textarea
+    select
+    path
+    rect
+    .btn
+    .button
+
+Properties;
+
+    opacity
+    background
+    color
+    border
+    box-shadow
+    outline
+    transform
+    stroke
+    stroke-dashoffset
+    fill

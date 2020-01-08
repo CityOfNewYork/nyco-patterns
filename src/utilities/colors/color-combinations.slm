@@ -1,17 +1,38 @@
-  - for (key in this.vars.colorCombinations)
-    - value = this.vars.colorCombinations[key];
+div class='screen-desktop:layout-three-columns-gutter'
+  - for (key in this.variables.colorCombinations)
+    - value = this.variables.colorCombinations[key];
 
     div class='mb-2'
-      article class='color-${key} w-full py-4 p-2 border border-secondary-grey-30t border-b-0'
+      article class='color-${key} w-full py-4 p-2 border border-secondary-grey-50t border-b-0'
         - if (value['headings'])
-          - ;
           h1 class='m-0' Headings
 
         div class='capitalize' ${key.replace(/-/g," ")} Text
+
         - if (value['hyperlinks'])
-          - ;
           a href='#' Hyperlinks
 
-      div class='code-block rounded-t-none border-t-0'
+        - if (value['input-background'])
+          div class='mt-1 mb-2'
+            label class='font-bold' Inputs
+            div class='input capitalize'
+              input placeholder='Placeholder'
+
+        - if (value['checkbox-background'])
+          div class='mt-1 mb-2'
+            label class='checkbox capitalize' for='${key}-checkbox'
+              input id='${key}-checkbox' type='checkbox'
+              span class='checkbox__label' Checkboxes
+
+        - if (value['select-arrow'])
+          div class='mt-1 mb-2'
+            label class='font-bold' Selects
+            select class='select'
+              option Select an option
+
+
+      div class='code-block rounded-t-none border-secondary-grey-50t border-t-0'
         pre class='small'
           | .color-${key}
+
+  div &nbsp;

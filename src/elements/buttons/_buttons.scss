@@ -46,8 +46,7 @@ button {
 
 // Declarations
 @mixin buttons($variant: '') {
-  .#{$variant}btn, [class*='#{$variant}btn--'],
-  .#{$variant}button, [class*='#{$variant}button--'] {
+  .#{$variant}btn, .#{$variant}buttons {
     color: inherit;
     font-weight: bold;
     font-size: inherit;
@@ -63,10 +62,9 @@ button {
     background: transparent;
     padding: ($grid * 1.5) ($grid * 2);
 
-    border: 2px solid;
+    border: ($grid / 4) solid;
     border-color: currentColor;
-    border-radius: map-get($buttons, 'radius');
-    box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0);
+    box-shadow: map-get(map-get($variables, 'boxShadow'), 'up-transparent');
 
     transition: background .1s ease-in,
                 color .1s ease-in,
@@ -76,17 +74,23 @@ button {
       vertical-align: middle;
     }
 
-    &:hover {
-      box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, .25);
+    &:hover, &:focus {
+      box-shadow: map-get(map-get($variables, 'boxShadow'), 'up');
     }
 
     &.color-primary-button {
       @include button-hover('primary-button');
+      border-color: transparent;
     }
 
     &.color-secondary-button {
       @include button-hover('secondary-button');
+      border-color: transparent;
     }
+  }
+
+  .#{$variant}btn-large, .#{$variant}button-large {
+    padding: (($grid * 3) - ($grid / 2)) ($grid * 4);
   }
 }
 

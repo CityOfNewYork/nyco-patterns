@@ -1,13 +1,19 @@
 @import 'config/variables';
 
-$sizes: map-get($variables, 'textSizes');
-$weights: map-get($variables, 'fontWeights');
-$leading: map-get($variables, 'leading');
+$font-family: map-get($variables, 'fontFamily');
+$font-size: map-get($variables, 'fontSize');
+$font-weight: map-get($variables, 'fontWeight');
+$line-height: map-get($variables, 'lineHeight');
+
+@mixin typeface($key: 'html') {
+  font-family: map-get($font-size, $key);
+}
 
 @mixin type($key: 'html') {
-  font-size: map-get($sizes, $key);
-  font-weight: map-get($weights, $key);
-  line-height: map-get($leading, $key);
+  font-size: map-get($font-size, $key);
+  font-weight: map-get($font-weight, $key);
+  line-height: map-get($line-height, $key);
+
   @content;
 }
 

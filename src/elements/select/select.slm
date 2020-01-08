@@ -2,5 +2,12 @@
 / Select
 /
 
-div data-js='app'
-  nyco-select :options='options' v-model='selected'
+div
+  select class='select'
+    option Select a Borough
+    option ---
+    option Bronx
+    option Brooklyn
+    option Manhattan
+    option Queens
+    option Staten Island

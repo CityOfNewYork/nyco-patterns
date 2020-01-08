@@ -3,12 +3,13 @@
 / Layout
 = extend('layouts/default');
 
-= partial('partials/styles.slm');
-= partial('partials/links.slm');
-= partial('partials/head.mixin.slm');
-= partial('partials/nav.mixin.slm');
-= partial('partials/section.mixin.slm');
-= partial('partials/section-full.mixin.slm');
+/ Variables
+= partial('variables/classes.slm');
+
+/ Mixins
+= partial('mixins/head.slm');
+= partial('mixins/nav.slm');
+= partial('mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -18,16 +19,16 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${class_demo_headers}' = pattern;
-
-  = mixin('section', 'objects/charts/chart--bar', 'Bar Chart');
-  = mixin('section', 'objects/charts/chart--horizontal-bar', 'Horizontal Bar Chart');
-  = mixin('section', 'objects/charts/chart--line', 'Line Chart');
-  = mixin('section', 'objects/charts/chart--pie', 'Pie Chart');
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern;
+  = mixin('pattern', 'objects/charts/chart-bar');
+  = mixin('pattern', 'objects/charts/chart-horizontal-bar');
+  = mixin('pattern', 'objects/charts/chart-line');
+  / = mixin('pattern', 'objects/charts/chart-pie');
 
 = content('script');
   javascript:
     nyco.chart('bar');
     nyco.chart('horizontalBar');
     nyco.chart('line');
-    nyco.chart('pie');
+    // nyco.chart('pie');

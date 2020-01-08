@@ -1,34 +1,16 @@
 <!DOCTYPE html>
 <html class="text-size-0" lang="en">
-
   <head>
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!--GLOBAL STYLES-->
-    <link href="https://www1.nyc.gov/assets/home/css/css-min/global.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/css-min/module.css" media="screen" rel="stylesheet" type="text/css" />
-    <!--PRINT STYLE-->
-    <link href="https://www1.nyc.gov/assets/home/css/print.css" media="print" rel="stylesheet" type="text/css" />
-    <!--PAGE SPECIFIC STYLES-->
-    <link href="https://www1.nyc.gov/assets/home/css/modules/status-updates-short.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/modules/status-updates-mini.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/includes/header-agencies.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/modules/news-panel.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/modules/agencies-about-links.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/modules/programs-and-initiatives.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/modules/homepage-hero.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/home/css/pages/agencies/index.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://www1.nyc.gov/assets/opportunity/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
-    <!--EXTERNAL STYLES-->
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
-    <!--NYCO PATTERNS-->
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
     <title>Charts | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
-      var VERSION = '1.7.0';
+      var VERSION = '2.0.1';
     </script>
     <noscript>
       <style>
@@ -39,235 +21,220 @@
     </noscript>
     <script type="text/javascript">
       function load() {
-        document.body.style.visibility = 'visible'
-      };
-
-      function toggleTheme(theme) {
-        var stylesheets = document.styleSheets;
-
-        for (var i = 0; i < stylesheets.length; i++) {
-          var ss = stylesheets[i];
-          ss.disabled = (!ss.disabled && ss.href.indexOf(theme) > -1) ? true : false;
-        }
+        document.body.style.visibility = 'visible';
       }
-      toggleTheme('www1.nyc.gov');
     </script>
   </head>
-
 </html>
-
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
-  <header class="o-header screen-tablet:layout--sidebar">
+  <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
+  <header class="o-header screen-tablet:layout-sidebar w-full">
     <div class="o-header__banner-main color-primary-button">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
-      <h1 class="o-header__main-title"><span class="hidden"></span>
-        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco">
-          <use xlink:href="#icon-logo-nyco"></use>
-        </svg>
-        <svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco">
-          <use xlink:href="#icon-logo-nyco"></use>
-        </svg>
+      <h1 class="o-header__main-title">
+        <span class="hidden"></span>
+        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg><svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v1.7.0</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.0.1</div>
     </div>
-    <div class="o-header__banner-secondary color-dark-background">
-      <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
-      <a href="#main-content">Skip to main content</a>
-    </div>
+    <div class="o-header__banner-secondary color-dark-background"><h1 class="o-header__secondary-title text-jumbo">Patterns</h1></div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.7.0">
-          <svg aria-hidden="true" class="icon-github-mark icon-small mr-1">
-            <use xlink:href="#icon-github-mark"></use>
-          </svg>1.7.0</a>
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.0.1">
+          <svg aria-hidden="true" class="icon-github-mark icon-small mr-1"><use xlink:href="#icon-github-mark"></use></svg>
+          2.0.1
+        </a>
       </div>
     </div>
   </header>
-  <main class="screen-tablet:layout--sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
+  <main class="screen-tablet:layout-sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
     <aside class="o-navigation bg-primary-navy">
-      <div class="o-navigation__wrap color-mid-background hidden screen-tablet:flex">
-        <div class="o-navigation__nav">
-          <div class="o-navigation__stick" style="height: 855px">
-            <div class="text-center px-2">
-              <a class="btn mt-2 mb-2 w-full" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
-            </div>
+      <div class="screen-tablet:flex hidden w-full">
+        <div class="o-navigation__wrap color-mid-background">
+          <div class="o-navigation__nav">
+            <nav><a class="o-navigation__link" href="index">Home</a></nav>
             <nav>
-              <a class="o-navigation__link" href="index">Overview</a>
-            </nav>
-            <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
               <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+              <a class="o-navigation__link" href="code">Code</a>
               <a class="o-navigation__link" href="icons">Icons</a>
               <a class="o-navigation__link" href="inputs">Inputs</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
+              <a class="o-navigation__link" href="links">Links</a>
               <a class="o-navigation__link" href="tables">Tables</a>
-              <a class="o-navigation__link" href="select">Select</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="select">Select</a>
+              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
               <a class="o-navigation__link" href="charts">Charts</a>
+              <a class="o-navigation__link" href="content">Content</a>
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="map">Map</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="accessibility">Accessibility</a>
+              <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
+              <a class="o-navigation__link" href="navigation">Navigation</a>
+              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
               <a class="o-navigation__link" href="animate">Animate</a>
               <a class="o-navigation__link" href="colors">Colors</a>
-              <a class="o-navigation__link" href="toggle">Toggle</a>
-              <a class="o-navigation__link" href="track">Track</a>
+              <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
               <a class="o-navigation__link" href="type">Type</a>
             </nav>
           </div>
         </div>
       </div>
-      <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated screen-tablet:hidden" id="js-navigation">
-        <div class="o-navigation__banner color-dark-background">
-          <h1 class="o-navigation__banner-title">Patterns</h1>
-        </div>
-        <div class="o-navigation__nav animated">
-          <div class="text-center">
-            <a class="btn mt-2 mb-2 px-5" data-theme="www1.nyc.gov" onclick="toggleTheme(event.target.dataset.theme)">nyc.gov styles</a>
+      <div class="screen-tablet:hidden w-full">
+        <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated" id="js-navigation">
+          <div class="o-navigation__banner color-dark-background"><h1 class="o-navigation__banner-title">Patterns</h1></div>
+          <div class="animated">
+            <div class="o-navigation__nav">
+              <nav><a class="o-navigation__link" href="index">Home</a></nav>
+              <nav>
+                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
+                <a class="o-navigation__link" href="buttons">Buttons</a>
+                <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+                <a class="o-navigation__link" href="code">Code</a>
+                <a class="o-navigation__link" href="icons">Icons</a>
+                <a class="o-navigation__link" href="inputs">Inputs</a>
+                <a class="o-navigation__link" href="layouts">Layouts</a>
+                <a class="o-navigation__link" href="links">Links</a>
+                <a class="o-navigation__link" href="tables">Tables</a>
+                <a class="o-navigation__link" href="select">Select</a>
+                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+                <a class="o-navigation__link" href="charts">Charts</a>
+                <a class="o-navigation__link" href="content">Content</a>
+                <a class="o-navigation__link" href="footer">Footer</a>
+                <a class="o-navigation__link" href="feed">Feed</a>
+                <a class="o-navigation__link" href="header">Header</a>
+                <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
+                <a class="o-navigation__link" href="navigation">Navigation</a>
+                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
+                <a class="o-navigation__link" href="animate">Animate</a>
+                <a class="o-navigation__link" href="colors">Colors</a>
+                <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+                <a class="o-navigation__link" href="type">Type</a>
+              </nav>
+            </div>
           </div>
-          <nav>
-            <a class="o-navigation__link" href="index">Overview</a>
-          </nav>
-          <nav><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-            <a class="o-navigation__link" href="buttons">Buttons</a>
-            <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-            <a class="o-navigation__link" href="icons">Icons</a>
-            <a class="o-navigation__link" href="inputs">Inputs</a>
-            <a class="o-navigation__link" href="layouts">Layouts</a>
-            <a class="o-navigation__link" href="tables">Tables</a>
-            <a class="o-navigation__link" href="select">Select</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-            <a class="o-navigation__link" href="charts">Charts</a>
-            <a class="o-navigation__link" href="footer">Footer</a>
-            <a class="o-navigation__link" href="feed">Feed</a>
-            <a class="o-navigation__link" href="header">Header</a>
-            <a class="o-navigation__link" href="map">Map</a>
-            <a class="o-navigation__link" href="navigation">Navigation</a><span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-            <a class="o-navigation__link" href="accessibility">Accessibility</a>
-            <a class="o-navigation__link" href="animate">Animate</a>
-            <a class="o-navigation__link" href="colors">Colors</a>
-            <a class="o-navigation__link" href="toggle">Toggle</a>
-            <a class="o-navigation__link" href="track">Track</a>
-            <a class="o-navigation__link" href="type">Type</a>
-          </nav>
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2 px-4 screen-desktop:px-6">
-      <h1 class="m-0 p-0 mt-2">Charts</h1>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="bar-chart">
-              <a href="#bar-chart">Bar Chart</a>
-            </h2>
-            <p>All chart source can be found here: <code>src/objects/charts/</code>.</p>
-            <p>For a full list of customization options check the
-              <a href="https://www.chartjs.org/docs/latest/charts/">Chartjs</a> documentation</p>
+    <article class="color-light-background py-2">
+      <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Charts</h1></div>
+      <section class="mt-6" id="chart-bar">
+        <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <div class="bg-base-white px-2" data-js="chart-bar"><nyco-chart-bar :chart-data="data" :options="options"></nyco-chart-bar></div>
           </div>
         </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <div data-js="chart-bar">
-              <nyco-chart-bar :chart-data="data" :options="options"></nyco-chart-bar>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="horizontal-bar-chart">
-              <a href="#horizontal-bar-chart">Horizontal Bar Chart</a>
-            </h2>
-          </div>
-        </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <div data-js="chart-horizontal-bar">
-              <nyco-chart-horizontal-bar :chart-data="data" :options="options"></nyco-chart-horizontal-bar>
-            </div>
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-bar&quot;&gt;&lt;nyco-chart-bar :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-bar&gt;&lt;/div&gt;
+</pre></div>
+            <h2>Bar Chart</h2>
+
+<p>
+  All chart source can be found here:
+  <code>src/objects/charts/</code>
+  .
+</p>
+
+<p>
+  For a full list of customization options check the
+  <a href="https://www.chartjs.org/docs/latest/charts/">Chart.js</a>
+  documentation.
+</p>
+
           </div>
         </div>
       </section>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="line-chart">
-              <a href="#line-chart">Line Chart</a>
-            </h2>
-            <p>To achieve a smooth line, set the following properties in the dataset object:</p><span><code> pointBackgroundColor: 'transparent', </code></span><span><code> pointBackgroundColor: 'transparent', </code></span><span><code> pointBorderColor: 'transparent', </code></span><span><code> lineTension: 0, </code></span>
-            <p></p>
-            <p>Additional configuration options are viewable on
-              <a href="https://www.chartjs.org/docs/latest/charts/line.html">Chart.js</a>
-            </p>
+      <section class="mt-6" id="chart-horizontal-bar">
+        <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <div class="bg-base-white px-2" data-js="chart-horizontal-bar"><nyco-chart-horizontal-bar :chart-data="data" :options="options"></nyco-chart-horizontal-bar></div>
           </div>
         </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <div data-js="chart-line">
-              <nyco-chart-line :chart-data="data" :options="options"></nyco-chart-line>
-            </div>
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-horizontal-bar&quot;&gt;&lt;nyco-chart-horizontal-bar :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-horizontal-bar&gt;&lt;/div&gt;
+</pre></div>
+            <h2>Horizontal Bar Chart</h2>
+
           </div>
         </div>
       </section>
-      <section class="flex flex-col screen-desktop:flex-row flex-wrap pb-4">
-        <div class="mt-4 max-w-full screen-desktop:w-1/2 screen-desktop:border-r border-secondary-white">
-          <div class="screen-desktop:pr-4 screen-desktop:pr-6">
-            <h2 class="mt-0" id="pie-chart">
-              <a href="#pie-chart">Pie Chart</a>
-            </h2>
+      <section class="mt-6" id="chart-line">
+        <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <div class="bg-base-white" data-js="chart-line"><nyco-chart-line :chart-data="data" :options="options"></nyco-chart-line></div>
           </div>
         </div>
-        <div class="mt-4 w-full max-w-full screen-desktop:max-w-1/2">
-          <div class="screen-desktop:pl-4 screen-desktop:pl-6">
-            <div data-js="chart-pie">
-              <nyco-chart-pie :chart-data="data" :options="options"></nyco-chart-pie>
-            </div>
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;div class=&quot;bg-base-white&quot; data-js=&quot;chart-line&quot;&gt;&lt;nyco-chart-line :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-line&gt;&lt;/div&gt;
+</pre></div>
+            <h2>Line Chart</h2>
+
+<p>To achieve a smooth line, set the following properties in the dataset object:</p>
+
+<pre><code>pointBackgroundColor: &#39;transparent&#39;,
+pointBackgroundColor: &#39;transparent&#39;,
+pointBorderColor: &#39;transparent&#39;,
+lineTension: 0,</code></pre>
+
+<p>
+  Additional configuration options are viewable on
+  <a href="https://www.chartjs.org/docs/latest/charts/line.html">Chart.js</a>
+  .
+</p>
+
           </div>
         </div>
       </section>
     </article>
   </main>
-  <footer class="o-footer color-dark-background screen-tablet:layout--four-columns-gutter">
+  <footer class="o-footer color-dark-background screen-tablet:layout-four-columns-gutter">
     <nav>
       <a class="o-footer__nav-link" href="index">Overview</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v1.7.0">GitHub Repository</a>
-      <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="products@nycopportunity.nyc.gov&lt;NYC Opportunity&gt;">NYC Opportunity</a>
+      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.0.1">GitHub Repository</a>
+      <a class="o-footer__nav-link" href="http://www.nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">NYC Opportunity</a>
       <a class="o-footer__nav-link" href="https://tailwindcss.com">Tailwind CSS</a>
       <a class="o-footer__nav-link" href="https://blueprint.cityofnewyork.us">NYC Digital Blueprint</a>
     </nav>
     <div></div>
     <div class="o-footer__info">
-      <a href="http://nyc.gov/opportunity" title="products@nycopportunity.nyc.gov&lt;NYC Opportunity&gt;">
-        <svg aria-hidden="true" class="icon-logo-secondary o-footer__logo text-base-white" style="height: 52px !important">
-          <use xlink:href="#icon-logo-secondary"></use>
-        </svg>
+      <a href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
+        <svg aria-hidden="true" class="icon-logo-secondary o-footer__logo text-base-white" style="height: 52px !important"><use xlink:href="#icon-logo-secondary"></use></svg>
       </a>
-      <p>NYC Opportunity is the
-        <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
-        <a href='https://twitter.com/nycopportunity'
-          target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
-        <a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
-        <a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
-        <a href='https://github.com/orgs/CityOfNewYork/teams/nycopportunity' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
-      <small>© City of New York, 2019 All Rights Reserved.
-        <br>NYC is a trademark and service mark of the City of New York.</small>
+      <p>
+        NYC Opportunity is the
+        <a href="http://nyc.gov/opportunity">New York City Mayor's Office for Economic Opportunity</a>
+        . We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
+        <a href="https://twitter.com/nycopportunity" target="_blank" rel="nofollow noopener">Twitter</a>
+        ,&nbsp;
+        <a href="https://www.facebook.com/NYCOpportunity/" target="_blank" rel="nofollow noopener">Facebook</a>
+        ,&nbsp;
+        <a href="https://medium.com/@nycopportunity" target="_blank" rel="nofollow noopener">Medium</a>
+        , and&nbsp;
+        <a href="" target="_blank" rel="nofollow noopener" title="Viewable by github.com/orgs/CityOfNewYork/ members.">Github</a>
+        .
+      </p>
+      <small>
+        © City of New York, 2020 All Rights Reserved.
+        <br />
+        NYC is a trademark and service mark of the City of New York.
+      </small>
     </div>
   </footer>
-  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch,Promise"></script>
-  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js"></script>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch"></script>
   <script src="scripts/NycoPatterns.js"></script>
   <script type="text/javascript">
     var nyco = new NycoPatterns();
     nyco.icons();
     nyco.toggle();
-    nyco.track();
   </script>
   <script type="text/javascript">
     nyco.chart('bar');
     nyco.chart('horizontalBar');
     nyco.chart('line');
-    nyco.chart('pie');
+    // nyco.chart('pie');
   </script>
 </body>

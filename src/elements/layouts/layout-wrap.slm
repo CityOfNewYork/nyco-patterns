@@ -1,0 +1,2 @@
+div class='layout-wrap w-full ${classDemoShadow}'
+  div class='bg-base-white py-6 mx-auto text-center' Content

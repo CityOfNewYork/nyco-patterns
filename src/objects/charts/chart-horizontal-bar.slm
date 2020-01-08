@@ -1,0 +1,6 @@
+/
+/ Chart Horizontal Bar
+/
+
+div data-js='chart-horizontal-bar' class='bg-base-white px-2'
+  nyco-chart-horizontal-bar :chart-data='data' :options='options'

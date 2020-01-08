@@ -1,0 +1,6 @@
+/
+/ Chart Line
+/
+
+div data-js='chart-line' class='bg-base-white'
+  nyco-chart-line :chart-data='data' :options='options'

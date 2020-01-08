@@ -3,7 +3,7 @@
 @import 'config/type';
 @import 'config/direction';
 
-$fonts: map-get($variables, 'fonts');
+$fonts: map-get($variables, 'fontFamily');
 
 html, body {
   @include type('html') {
@@ -58,7 +58,8 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   a {
-    text-decoration: inherit
+    font-weight: inherit;
+    text-decoration: inherit;
   }
 }
 
@@ -70,6 +71,23 @@ blockquote, .blockquote {
   @include type('blockquote') {
     margin: $type-margin;
   };
+
+  footer {
+    font-size: 65%;
+    font-weight: normal;
+    padding-left: map-get($variables, 'grid') * 3;
+  }
+
+  cite {
+    font-style: normal;
+  }
+
+  p {
+    border-left: map-get($variables, 'grid') solid;
+    border-color: inherit;
+    padding-left: map-get($variables, 'grid') * 2;
+    margin-bottom: 0.64em;
+  }
 }
 
 .jumbo {

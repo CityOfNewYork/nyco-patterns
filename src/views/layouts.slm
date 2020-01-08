@@ -4,14 +4,12 @@
 = extend('layouts/default');
 
 / Variables
-= partial('partials/styles.slm');
-= partial('partials/links.slm');
+= partial('variables/classes.slm');
 
-/ Partials
-= partial('partials/head.mixin.slm');
-= partial('partials/nav.mixin.slm');
-= partial('partials/section.mixin.slm');
-= partial('partials/section-full.mixin.slm');
+/ Mixins
+= partial('mixins/head.slm');
+= partial('mixins/nav.slm');
+= partial('mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -21,9 +19,11 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${class_demo_headers}' = pattern;
-
-  = mixin('section-full', 'elements/layouts/layout--wrap', 'Wrapped Layout');
-  = mixin('section-full', 'elements/layouts/layout--sidebar', 'Sidebar Layout');
-  = mixin('section-full', 'elements/layouts/layout--content', 'Content Layout');
-  = mixin('section-full', 'elements/layouts/layout--four-columns-gutter', 'Four Column Gutter Layout');
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern;
+  = mixin('pattern', 'elements/layouts/layout-wrap');
+  = mixin('pattern', 'elements/layouts/layout-content');
+  = mixin('pattern', 'elements/layouts/layout-sidebar');
+  = mixin('pattern', 'elements/layouts/layout-two-columns-gutter');
+  = mixin('pattern', 'elements/layouts/layout-three-columns-gutter');
+  = mixin('pattern', 'elements/layouts/layout-four-columns-gutter');

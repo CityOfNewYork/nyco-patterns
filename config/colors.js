@@ -38,23 +38,33 @@ const nycoColors = {
   colorCombinations: {
     'light-background': {
       'color': 'base-black',
-      'headings': 'primary-navy',
+      'headings': 'base-black',
       'hyperlinks': 'primary-blue',
       'visited': 'primary-blue',
       'hover': 'primary-navy',
       'background-color': 'base-white',
       'border': 'secondary-grey',
+      'input-background': 'base-white',
       'placeholder': 'secondary-grey',
       'checkbox-background': 'primary-navy',
-      'error': 'primary-red',
+      'checkbox-check': '"../svg/icon-checkmark-white.svg"',
+      'select-arrow': '"../svg/icon-arrow-down-navy.svg"',
+      'error': 'primary-red'
     },
     'mid-background': {
       'color': 'base-black',
-      'headings': 'primary-navy',
+      'headings': 'base-black',
       'hyperlinks': 'primary-blue',
       'visited': 'primary-blue',
       'hover': 'primary-navy',
-      'background-color': 'secondary-white'
+      'background-color': 'secondary-white',
+      'border': 'secondary-grey',
+      'input-background': 'base-white',
+      'placeholder': 'secondary-grey',
+      'checkbox-background': 'primary-navy',
+      'checkbox-check': '"../svg/icon-checkmark-white.svg"',
+      'select-arrow': '"../svg/icon-arrow-down-navy.svg"',
+      'error': 'primary-red'
     },
     'dark-background': {
       'color': 'base-white',
@@ -63,7 +73,14 @@ const nycoColors = {
       'hyperlinks': 'base-white',
       'visited': 'base-white',
       'hover': 'base-white',
-      'background-color': 'primary-navy'
+      'background-color': 'primary-navy',
+      'border': 'base-white',
+      'input-background': 'primary-navy',
+      'placeholder': 'base-white',
+      'checkbox-background': 'base-white',
+      'checkbox-check': '"../svg/icon-checkmark-navy.svg"',
+      'select-arrow': '"../svg/icon-arrow-down-white.svg"',
+      'error': 'primary-red'
     },
     'primary-button': {
       'font-weight': 'bold',

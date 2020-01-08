@@ -1,3 +1,0 @@
-a data-js='toggle' href='#anchor-target' class='inline-block mb-3' Toggle Anchor
-
-div#anchor-target aria-hidden='true' class='bg-secondary-white p-6 text-center hidden' Targeted toggle anchor element

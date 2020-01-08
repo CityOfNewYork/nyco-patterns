@@ -5,7 +5,7 @@
       <div aria-live="polite" class="sr-only" id="input-autocomplete__instructions-0"></div>
     </div>
 
-  Note: You can add the `data-persist-dropdown='true'` attribute to the `input` element for testing. The attribute will make the dropdown persist after the input is no longer in focus.
+Note: You can add the `data-persist-dropdown='true'` attribute to the `input` element for testing. The attribute will make the dropdown persist after the input is no longer in focus.
 
 #### Global Script
 

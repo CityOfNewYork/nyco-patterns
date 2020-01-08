@@ -1,0 +1,3 @@
+## Small
+
+The `<small>` tag is used to define text that is smaller than the body font. Use the `<small>` tag or the `.small` class for visual styling.

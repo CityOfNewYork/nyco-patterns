@@ -1,45 +1,62 @@
 / Layout
-= extend('layouts/default');
+= extend('layouts/full');
 
-/ Styles
-= partial('partials/styles.slm');
+/ Variables
+= partial('variables/classes.slm');
 
-/ Links
-= partial('partials/links.slm');
-
-/ Partials
-= partial('partials/head.mixin.slm');
-= partial('partials/nav.mixin.slm');
+/ Mixins
+= partial('mixins/head.slm');
+= partial('mixins/nav.slm');
+= partial('mixins/readme.slm');
 
 / Content blocks
 = content('head');
   = mixin('head');
 
-= content('header');
-  = mixin('header');
-
 = content('content');
-  h1 class='${class_demo_headers}' Overview
+  section class='color-dark-background p-6'
+    div class='layout-wrap layout-content mx-auto py-6'
+      div class='mx-auto py-6'
+        div class='flex justify-center items-center mb-6'
+          svg aria-hidden='true' class='icon-logo-primary' style='width: 287px; height: 133px;'
+            use xlink:href='#icon-logo-primary'
 
-  section class='pb-4'
-    div class='mt-4 layout--content'
-      div class='${class_demo_cola}'
+          h1 class='jumbo m-0 pl-2 ml-2 font-nycgov' style='font-weight: 600; line-height: 1em; border-left: 8px solid;'
+            div style='line-height: 0.8em;' Common
+            div Agency
+            div class='text-primary-red' Patterns
 
-        p
-          | The global patterns seen on <a href='${link_nyc_opportunity}'>NYC.gov/opportunity</a> utilize a partial integration of <a href='${link_bootstrap}'>Bootstrap 2.3.2</a>. This library extends the NYC.gov Style Guide with custom modules and the <a href='${link_tailwind_docs}'>Tailwind CSS Utility framework</a>. See the <a href='${link_blueprint_nyc_brand}'>NYC Digital Blueprint's documentation</a> of The City's Style Guide for more details and resources.
+        div
+          p <b>For creating websites and digital products for The Mayor's Office for Economic Opportunity</b>. The <b>NYCO Patterns</b> provide simple and flexible CSS and JavaScript based components and utilities for building UI's quickly and easily. Ideally suited for internal or external marketing websites, custom digital applications, stand-alone reports, documentation, and dashboards.
 
-        p
-          | By default, NYC.gov stylesheets are disabled in this documentation. To see what these patterns look like with the NYC.gov stylesheets, click "NYC.gov Styles" in the main navigation.
+  section class='color-mid-background p-6'
+    div class='layout-wrap layout-content mx-auto py-6'
+      div class='mx-auto'
+        h2 class='text-center' Browse the Patterns
+        div class='text-h4 color-light-background p-6 ${classDemoShadow}'
+          - classNav = '';
+          - classNavLinkHeader = 'o-navigation__link-header text-primary-blue-70t border-primary-blue-30t';
+          - classNavLink = 'o-navigation__link';
 
-        p
-          | The patterns in this repository are organized as <em>Elements</em>, <em>Components</em> (coming soon), and <em>Objects</em> for styling pages with the NYC Opportunity brand. The can be dropped into any web page on linking to the global stylesheet url in the head of an html page;
+          = mixin('nav');
 
-        p
-          div class='code-block'
-            pre
-              div
-                = '<link href="' + link_stylesheet + ' rel="stylesheet" type="text/css">'
+  / section class='color-mid-background p-6'
+  /   div class='layout-wrap layout-content mx-auto py-6'
+  /     div class='mx-auto'
+  /       | Accessibility first
 
-        p
-          | This distribution includes a custom build of the <a href='${link_tailwind_docs}'>Tailwind Utility CSS Framework</a>. Refer to Tailwind CSS docs for full details on utilizing the CSS uitilites to build different types of UIs.
+  / section class='color-light-background p-6'
+  /   div class='layout-wrap layout-three-columns mx-auto py-6'
+  /     article class='p-2'
+  /       div class='${classDemoShadow} p-4'
+  /         h1 class='m-0' tailwindcss
 
+  /     article class='p-2'
+  /       div class='${classDemoShadow} p-4'
+  /         h1 class='m-0' Feed
+
+  /     article class='p-2'
+  /       div class='${classDemoShadow} p-4'
+  /         h1 class='m-0' Data Vizualization
+
+  / = mixin('readme', 'content/index');

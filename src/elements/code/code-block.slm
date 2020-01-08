@@ -1,0 +1,6 @@
+div class='code-block'
+  pre
+    = "// Sample Code Block\n";
+    = "function helloWorld() {\n";
+    = "  console.log('Hello World!');\n";
+    = "}\n";

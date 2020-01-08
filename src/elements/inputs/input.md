@@ -1,0 +1,1 @@
+A styled input element. Styling of the element is determined by the [Color Combination utility](/colors) it is nested under.
