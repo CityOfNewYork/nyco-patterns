@@ -16,7 +16,7 @@ body class='bg-base-black' style='visibility: hidden;' onload='load()'
   = partial('../../objects/footer/footer.slm');
 
   script crossorigin='anonymous' src='https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch'
-  script src='scripts/NycoPatterns.js'
+  script src='scripts/nyco-patterns.js'
 
   javascript:
     var nyco = new NycoPatterns();

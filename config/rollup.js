@@ -56,7 +56,7 @@ export default [
     output: [
       {
         name: 'NycoPatterns',
-        file: './dist/scripts/NycoPatterns.js',
+        file: './dist/scripts/nyco-patterns.js',
         sourcemap: rollup.sourcemap,
         format: rollup.format,
         strict: rollup.strict
