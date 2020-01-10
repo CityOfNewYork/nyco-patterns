@@ -31,6 +31,3 @@
     a class='${classNavLink}' href='colors' Colors
     a class='${classNavLink}' href='tailwindcss' Tailwindcss
     a class='${classNavLink}' href='type' Type
-
-  nav class='${classNav}'
-    a class='${classNavLink}' href='https://github.com/CityOfNewYork/nyco-patterns-framework' Framework
