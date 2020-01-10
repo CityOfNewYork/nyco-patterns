@@ -16,7 +16,7 @@ To use the feed source files, include the following scripts in your page. Replac
 
 Optionally, but recommended, include the base styling for the feed. Replace `{{ version }}` with the semantic version in the top right of this page.
 
-    <link src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/feed.css" rel="stylesheet" type="text/css" media="screen">
+    <link src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/feed.css" rel="stylesheet" type="text/css">
 
 Then, add a container with the feed's id and the execution script with configuration parameters.
 

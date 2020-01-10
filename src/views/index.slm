@@ -29,10 +29,27 @@
         div
           p <b>For creating websites and digital products for The Mayor's Office for Economic Opportunity</b>. The <b>NYCO Patterns</b> provide simple and flexible CSS and JavaScript based components and utilities for building UI's quickly and easily. Ideally suited for internal or external marketing websites, custom digital applications, stand-alone reports, documentation, and dashboards.
 
-  section class='color-mid-background p-6'
+        p class='text-center'
+          a class='btn btn-large color-secondary-button' href='#browse-the-patterns' Browse the Patterns
+
+        p class='text-center'
+          a href='${this.site.urls.release}' target='_blank' = 'v' + this.site.versions.package;
+
+  section class='color-light-background p-6'
     div class='layout-wrap layout-content mx-auto py-6'
       div class='mx-auto'
-        h2 class='text-center' Browse the Patterns
+        h2 class='text-center mt-0' Installation
+
+        p
+          | The NYCO Patterns are built on the <a href="${this.site.urls.nycoPatternsFramework}">NYCO Patterns Framework</a> and can be installed using documentation in the Framework's repository.
+
+        p class='text-center'
+          a class='btn btn-large color-primary-button' href='${this.site.urls.installation}' Read the Documentation
+
+  section id='browse-the-patterns' class='color-mid-background p-6'
+    div class='layout-wrap layout-content mx-auto py-6'
+      div class='mx-auto'
+        h2 class='text-center mt-0' Browse the Patterns
         div class='text-h4 color-light-background p-6 ${classDemoShadow}'
           - classNav = '';
           - classNavLinkHeader = 'o-navigation__link-header text-primary-blue-70t border-primary-blue-30t';

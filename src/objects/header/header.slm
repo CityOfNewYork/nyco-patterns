@@ -23,7 +23,7 @@ header class='o-header screen-tablet:layout-sidebar w-full'
 
   div class='o-header__secondary-version color-dark-background'
     div
-      a href='${this.site.urls.source}' class='btn flex items-center'
+      a href='${this.site.urls.release}' class='btn flex items-center'
         svg aria-hidden='true' class='icon-github-mark icon-small mr-1'
           use xlink:href='#icon-github-mark'
 

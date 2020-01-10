@@ -5,11 +5,13 @@
 footer class='o-footer color-dark-background screen-tablet:layout-four-columns-gutter'
 
   nav
-    a class='o-footer__nav-link' href='index' Overview
+    a class='o-footer__nav-link' href='index' Home
     a class='o-footer__nav-link' href='${this.site.urls.source}' GitHub Repository
-    a class='o-footer__nav-link' href='${this.site.urls.nycOpportunity}' title='${this.site.package.author}' NYC Opportunity
-    a class='o-footer__nav-link' href='${this.site.urls.tailwind}' Tailwind CSS
-    a class='o-footer__nav-link' href='${this.site.urls.blueprint}' NYC Digital Blueprint
+    a class='o-footer__nav-link' href='${this.site.urls.nycoPatternsFramework}' NYCO Patterns Framework
+    a class='o-footer__nav-link' href='${this.site.urls.nycOpportunityOnGithub}' NYCO Opportunity on GitHub
+    / a class='o-footer__nav-link' href='${this.site.urls.nycOpportunity}' title='${this.site.package.author}' NYC Opportunity
+    / a class='o-footer__nav-link' href='${this.site.urls.tailwind}' Tailwind CSS
+    / a class='o-footer__nav-link' href='${this.site.urls.blueprint}' NYC Digital Blueprint
 
   div
 

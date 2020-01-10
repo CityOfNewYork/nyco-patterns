@@ -64,4 +64,4 @@ slm{{ utilities/tailwindcss/tailwindcss.slm }}
 
 The CSS file can be included through a CDN. Replace `{{ version }}` with the latest release in the top right corner of this page.
 
-    <link href="https://cdn.jsdelivr.net/gh/cityofnewyork/@nycopportunity/nyco-patterns@v{{ version }}/dist/styles/tailwind.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/cityofnewyork/@nycopportunity/nyco-patterns@v{{ version }}/dist/styles/tailwind.css" rel="stylesheet" type="text/css">
