@@ -159,9 +159,9 @@ const variables = {
   boxShadow: {
     'none': 'none',
     'up-transparent': '8px 8px 0px 0px rgba(47, 51, 79, 0)',
-    'up': '8px 8px 0px 0px rgba(47, 51, 79, 100)',
+    'up': '8px 8px 0px 0px',
     'up-2-transparent': '16px 16px 0px 0px rgba(47, 51, 79, 0)',
-    'up-2': '16px 16px 0px 0px rgba(47, 51, 79, 100)'
+    'up-2': '16px 16px 0px 0px'
   }
 };
 
