@@ -18,7 +18,7 @@ div class='screen-desktop:layout-three-columns-gutter'
             div class='input capitalize'
               input placeholder='Placeholder'
 
-        - if (value['checkbox-background'])
+        - if (value['checkbox-check'])
           div class='mt-1 mb-2'
             label class='checkbox capitalize' for='${key}-checkbox'
               input id='${key}-checkbox' type='checkbox'
