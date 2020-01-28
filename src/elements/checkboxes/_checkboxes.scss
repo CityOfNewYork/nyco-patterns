@@ -27,7 +27,7 @@ $grid: map-get($variables, 'grid');
 
 .checkbox__label {
   display: flex;
-  line-height: $checkbox-size;
+  line-height: map-get(map-get($variables, 'inputs'), 'checkbox-size');
 }
 
 .checkbox__label::before {

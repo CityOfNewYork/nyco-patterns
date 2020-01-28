@@ -10,6 +10,7 @@
 = partial('mixins/head.slm');
 = partial('mixins/nav.slm');
 = partial('mixins/pattern.slm');
+= partial('mixins/readme.slm');
 
 / Content blocks
 = content('head');
@@ -21,4 +22,7 @@
 = content('content');
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern
-  = mixin('pattern', 'elements/icons/icons', false);
+
+  = mixin('pattern', 'elements/icons/icons-logo', false);
+  = mixin('pattern', 'elements/icons/icons-ui', false);
+  = mixin('readme', 'elements/icons/icons');

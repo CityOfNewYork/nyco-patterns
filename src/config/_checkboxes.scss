@@ -7,25 +7,27 @@
 @import 'config/colors';
 @import 'config/direction';
 
-$checkbox-size: map-get(map-get($variables, 'inputs'), 'checkbox-size');
-$checkbox-radius: map-get(map-get($variables, 'inputs'), 'checkbox-radius');
-
 // Declarations
 @mixin checkboxes-btn {
+  $size: map-get(map-get($variables, 'inputs'), 'checkbox-size');
+  $radius: map-get(map-get($variables, 'inputs'), 'border-radius');
+
   transition: all .2s;
   border-width: 1px;
   border-style: solid;
-  border-radius: $checkbox-radius;
+  border-radius: $radius;
   content: '';
   display: inline-block;
-  width: $checkbox-size;
-  height: $checkbox-size;
-  min-width: $checkbox-size;
-  margin-#{$direction-end}: 2 * $grid;
+  width: $size;
+  height: $size;
+  min-width: $size;
+  margin-#{$direction-end}: $grid;
+
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
 }
 
 @mixin checkboxes-btn-checked {
-  background-repeat: no-repeat;
-  background-size: cover;
   border: 0;
 }

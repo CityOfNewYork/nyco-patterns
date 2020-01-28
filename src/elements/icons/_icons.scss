@@ -28,6 +28,18 @@ $screens: map-get($variables, 'screens');
   display: inline-block;
 }
 
+[class*='icon-ui-'] {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+
+  circle {
+    fill: currentColor;
+  }
+}
+
 @each $key, $var in map-get($variables, 'icons') {
   $path: $key;
 
@@ -49,7 +61,6 @@ $screens: map-get($variables, 'screens');
     width: nth($var, 1);
     height: nth($var, 2);
   }
-
 }
 
 @include screens {

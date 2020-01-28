@@ -46,9 +46,9 @@ const nycoColors = {
       'border': 'secondary-grey',
       'input-background': 'base-white',
       'placeholder': 'secondary-grey',
-      'checkbox-background': 'primary-navy',
-      'checkbox-check': '"../svg/icon-checkmark-white.svg"',
-      'select-arrow': '"../svg/icon-arrow-down-navy.svg"',
+      'focus': 'primary-navy',
+      'checkbox-check': '"../svg/icon-ui-check-white.svg"',
+      'select-arrow': '"../svg/icon-ui-chevron-down-navy.svg"',
       'error': 'primary-red'
     },
     'mid-background': {
@@ -61,9 +61,9 @@ const nycoColors = {
       'border': 'secondary-grey',
       'input-background': 'base-white',
       'placeholder': 'secondary-grey',
-      'checkbox-background': 'primary-navy',
-      'checkbox-check': '"../svg/icon-checkmark-white.svg"',
-      'select-arrow': '"../svg/icon-arrow-down-navy.svg"',
+      'focus': 'primary-navy',
+      'checkbox-check': '"../svg/icon-ui-check-white.svg"',
+      'select-arrow': '"../svg/icon-ui-chevron-down-navy.svg"',
       'error': 'primary-red'
     },
     'dark-background': {
@@ -77,9 +77,9 @@ const nycoColors = {
       'border': 'base-white',
       'input-background': 'primary-navy',
       'placeholder': 'base-white',
-      'checkbox-background': 'base-white',
-      'checkbox-check': '"../svg/icon-checkmark-navy.svg"',
-      'select-arrow': '"../svg/icon-arrow-down-white.svg"',
+      'focus': 'base-white',
+      'checkbox-check': '"../svg/icon-ui-check-navy.svg"',
+      'select-arrow': '"../svg/icon-ui-chevron-down-white.svg"',
       'error': 'primary-red'
     },
     'primary-button': {

@@ -1,4 +1,4 @@
-## Usage
+## Icon Usage
 
 ### The SVG Sprite
 
@@ -15,7 +15,7 @@ The ES6 and IFFE modules all require instantiation in your main script:
 
     import Icons from 'src/elements/icons/icons';
     new Icons();
-    // or 
+    // or
     new Icons('path/to/icons.svg');
 
 This uses the `fetch` method which will require a polyfill for IE11 (and other older browser) support. The script does not ship with a polyfill by default. See [Polyfill.io](https://polyfill.io) for a suitable polyfill.

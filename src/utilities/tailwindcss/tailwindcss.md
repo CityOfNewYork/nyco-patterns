@@ -8,7 +8,7 @@ A Utility class, such as `.inline { display: inline }`, allows the developer to 
 
 [![tailwindcss](https://tailwindcss.com/img/twitter-large-card.png)](https://tailwindcss.com)
 
-NYCO Patterns integrates the [tailwindcss](https://tailwindcss.com), a CSS utility-first framework processed by [PostCSS](https://postcss.org/) that supports custom configuration. The NYCO Patterns configuration lives in [config/tailwind.js](https://github.com/CityOfNewYork/nyco-patterns/blob/master/config/tailwind.js) and below is a table describing the current configuration.
+NYCO Patterns integrates [tailwindcss](https://tailwindcss.com), a CSS utility-first framework processed by [PostCSS](https://postcss.org/) that supports custom configuration. The NYCO Patterns configuration lives in [config/tailwind.js](https://github.com/CityOfNewYork/nyco-patterns/blob/master/config/tailwind.js) and below is a table describing the current configuration.
 
 A simple example for using a utility to add padding to an element would be to use the utility `.p-1`. This will add `8px` of padding on all sides of an element.
 

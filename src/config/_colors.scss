@@ -57,7 +57,7 @@ $base-white: map-get($colors, 'base-white');
   $input-border: map-get($combination, 'border');
   $input-placeholder: map-get($combination, 'placeholder');
   $input-background: map-get($combination, 'input-background');
-  $checkbox-background: map-get($combination, 'checkbox-background');
+  $focus: map-get($combination, 'focus');
   $checkbox-check: map-get($combination, 'checkbox-check');
   $select-arrow: map-get($combination, 'select-arrow');
 
@@ -74,6 +74,10 @@ $base-white: map-get($colors, 'base-white');
     @include font-smooth;
   }
 
+  /**
+   * Hyperlinks
+   */
+
   a:not(.btn) {
     color: map-get($colors, $hyperlinks);
 
@@ -85,6 +89,10 @@ $base-white: map-get($colors, 'base-white');
       color: map-get($colors, $hover);
     }
   }
+
+  /**
+   * Inputs, Selects, Checkboxes
+   */
 
   input:not(.error), textarea:not(.error), select:not(.error) {
     border-color: map-get($colors, $input-border);
@@ -104,14 +112,33 @@ $base-white: map-get($colors, 'base-white');
     background-color: map-get($colors, $input-background);
   }
 
+  /**
+   * Checkbox Checked
+   */
+
   input:checked + .checkbox__label::before {
-    background-color: map-get($colors, $checkbox-background);
+    background-color: map-get($colors, $focus);
     background-image: url($checkbox-check);
   }
 
-  input:focus + .checkbox__label::before {
-    box-shadow: 0 0 0 1px map-get($colors, $background), 0 0 0 3px map-get($colors, $checkbox-background);
+  /**
+   * Focus State
+   */
+
+  .input > input:focus,
+  .select:focus {
+    outline: none;
   }
+
+  .input > input:focus,
+  .select:focus,
+  input:focus + .checkbox__label::before {
+    box-shadow: 0 0 0 1px map-get($colors, $background), 0 0 0 3px map-get($colors, $focus);
+  }
+
+  /**
+   * Error State
+   */
 
   .error > input,
   .error > select,
@@ -123,6 +150,10 @@ $base-white: map-get($colors, 'base-white');
   .error::after {
     color: map-get($colors, $error);
   }
+
+  /**
+   * Headings
+   */
 
   h1, h4, h5, h6, .h1, .h4, .h5, .h6 {
     color: map-get($colors, $headings);
