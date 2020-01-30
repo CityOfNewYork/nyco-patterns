@@ -10,7 +10,7 @@
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
-      var VERSION = '2.0.9';
+      var VERSION = '2.0.10';
     </script>
     <noscript>
       <style>
@@ -35,14 +35,14 @@
         <span class="hidden"></span>
         <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg><svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.0.9</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.0.10</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background"><h1 class="o-header__secondary-title text-jumbo">Patterns</h1></div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.0.9">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.0.10">
           <svg aria-hidden="true" class="icon-ui-github icon-small mr-1"><use xlink:href="#icon-ui-github"></use></svg>
-          2.0.9
+          2.0.10
         </a>
       </div>
     </div>
@@ -130,23 +130,43 @@
       <section class="mt-6" id="checkboxes">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <label class="checkbox" for="selection">
-              <input id="selection" name="selection" type="checkbox" value="Selection" />
-              <span class="checkbox__label">Selection</span>
-            </label>
+            <fieldset>
+              <legend class="mb-1">Options</legend>
+              <label class="checkbox" for="option-a">
+                <input id="option-a" name="option-a" type="checkbox" value="option-a" />
+                <span class="checkbox__label">Option A</span>
+              </label>
+              <label class="checkbox" for="option-b">
+                <input id="option-b" name="option-b" type="checkbox" value="option-b" />
+                <span class="checkbox__label">Option B</span>
+              </label>
+            </fieldset>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;label class=&quot;checkbox&quot; for=&quot;selection&quot;&gt;
-  &lt;input id=&quot;selection&quot; name=&quot;selection&quot; type=&quot;checkbox&quot; value=&quot;Selection&quot; /&gt;
-  &lt;span class=&quot;checkbox__label&quot;&gt;Selection&lt;/span&gt;
-&lt;/label&gt;
+            <div class="code-block"><pre>&lt;fieldset&gt;
+  &lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;
+  &lt;label class=&quot;checkbox&quot; for=&quot;option-a&quot;&gt;
+    &lt;input id=&quot;option-a&quot; name=&quot;option-a&quot; type=&quot;checkbox&quot; value=&quot;option-a&quot; /&gt;
+    &lt;span class=&quot;checkbox__label&quot;&gt;Option A&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;checkbox&quot; for=&quot;option-b&quot;&gt;
+    &lt;input id=&quot;option-b&quot; name=&quot;option-b&quot; type=&quot;checkbox&quot; value=&quot;option-b&quot; /&gt;
+    &lt;span class=&quot;checkbox__label&quot;&gt;Option B&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;
 </pre></div>
             <p>
   A styled checkbox element. Styling of the element is determined by the
   <a href="/colors">Color Combination utility</a>
-  it is nested under.
+  it is nested under. Note the
+  <code>&lt;fieldset&gt;</code>
+  and
+  <code>&lt;legend&gt;</code>
+  used for making the form more understandable for all users. Read more about form grouping in
+  <a href="https://www.w3.org/WAI/tutorials/forms/grouping/">W3&#39;s Web Accessibility Tutorials</a>
+  .
 </p>
 
           </div>
@@ -155,18 +175,32 @@
       <section class="mt-6" id="checkboxes-error">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <label class="checkbox error" for="selection-error">
-              <input id="selection-error" name="selection-error" type="checkbox" value="Selection" />
-              <span class="checkbox__label">Selection</span>
-            </label>
+            <fieldset>
+              <legend class="mb-1">Options</legend>
+              <label class="checkbox error" for="option-c">
+                <input id="option-c" name="option-c" type="checkbox" value="option-c" />
+                <span class="checkbox__label">Option C</span>
+              </label>
+              <label class="checkbox error" for="option-d">
+                <input id="option-d" name="option-d" type="checkbox" value="option-d" />
+                <span class="checkbox__label">Option D</span>
+              </label>
+            </fieldset>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;label class=&quot;checkbox error&quot; for=&quot;selection-error&quot;&gt;
-  &lt;input id=&quot;selection-error&quot; name=&quot;selection-error&quot; type=&quot;checkbox&quot; value=&quot;Selection&quot; /&gt;
-  &lt;span class=&quot;checkbox__label&quot;&gt;Selection&lt;/span&gt;
-&lt;/label&gt;
+            <div class="code-block"><pre>&lt;fieldset&gt;
+  &lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;
+  &lt;label class=&quot;checkbox error&quot; for=&quot;option-c&quot;&gt;
+    &lt;input id=&quot;option-c&quot; name=&quot;option-c&quot; type=&quot;checkbox&quot; value=&quot;option-c&quot; /&gt;
+    &lt;span class=&quot;checkbox__label&quot;&gt;Option C&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;checkbox error&quot; for=&quot;option-d&quot;&gt;
+    &lt;input id=&quot;option-d&quot; name=&quot;option-d&quot; type=&quot;checkbox&quot; value=&quot;option-d&quot; /&gt;
+    &lt;span class=&quot;checkbox__label&quot;&gt;Option D&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;
 </pre></div>
             <h2>Error</h2>
 

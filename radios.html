@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Header | NYCO Patterns</title>
+    <title>Radios | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
@@ -126,54 +126,84 @@
       </div>
     </aside>
     <article class="color-light-background py-2">
-      <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Header</h1></div>
-      <section class="mt-6" id="header">
+      <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Radios</h1></div>
+      <section class="mt-6" id="radios">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <header class="o-header screen-tablet:layout-sidebar w-full">
-              <div class="o-header__banner-main color-primary-button">
-                <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
-                <h1 class="o-header__main-title">
-                  <span class="hidden"></span>
-                  <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg><svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg>
-                </h1>
-                <div aria-hidden="true" class="o-header__main-version">v2.0.10</div>
-              </div>
-              <div class="o-header__banner-secondary color-dark-background"><h1 class="o-header__secondary-title text-jumbo">Patterns</h1></div>
-              <div class="o-header__secondary-version color-dark-background">
-                <div>
-                  <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.0.10">
-                    <svg aria-hidden="true" class="icon-ui-github icon-small mr-1"><use xlink:href="#icon-ui-github"></use></svg>
-                    2.0.10
-                  </a>
-                </div>
-              </div>
-            </header>
+            <fieldset>
+              <legend class="mb-1">Options</legend>
+              <label class="radio" for="option-1">
+                <input id="option-1" name="options" type="radio" value="option-1" />
+                <span class="radio__label">Option 1</span>
+              </label>
+              <label class="radio" for="option-2">
+                <input id="option-2" name="options" type="radio" value="option-2" />
+                <span class="radio__label">Option 2</span>
+              </label>
+            </fieldset>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;header class=&quot;o-header screen-tablet:layout-sidebar w-full&quot;&gt;
-  &lt;div class=&quot;o-header__banner-main color-primary-button&quot;&gt;
-    &lt;button aria-controls=&quot;js-navigation&quot; aria-pressed=&quot;false&quot; class=&quot;o-header__main-toggle&quot; data-js=&quot;toggle&quot;&gt;Menu&lt;/button&gt;
-    &lt;h1 class=&quot;o-header__main-title&quot;&gt;
-      &lt;span class=&quot;hidden&quot;&gt;&lt;/span&gt;
-      &lt;svg aria-hidden=&quot;true&quot; class=&quot;o-header__logo-main icon-logo-nyco&quot;&gt;&lt;use xlink:href=&quot;#icon-logo-nyco&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;svg aria-hidden=&quot;true&quot; class=&quot;o-header__logo-secondary icon-logo-nyco&quot;&gt;&lt;use xlink:href=&quot;#icon-logo-nyco&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
-    &lt;/h1&gt;
-    &lt;div aria-hidden=&quot;true&quot; class=&quot;o-header__main-version&quot;&gt;v2.0.10&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;o-header__banner-secondary color-dark-background&quot;&gt;&lt;h1 class=&quot;o-header__secondary-title text-jumbo&quot;&gt;Patterns&lt;/h1&gt;&lt;/div&gt;
-  &lt;div class=&quot;o-header__secondary-version color-dark-background&quot;&gt;
-    &lt;div&gt;
-      &lt;a class=&quot;btn flex items-center&quot; href=&quot;https://github.com/CityOfNewYork/nyco-patterns/tree/v2.0.10&quot;&gt;
-        &lt;svg aria-hidden=&quot;true&quot; class=&quot;icon-ui-github icon-small mr-1&quot;&gt;&lt;use xlink:href=&quot;#icon-ui-github&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
-        2.0.10
-      &lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/header&gt;
+            <div class="code-block"><pre>&lt;fieldset&gt;
+  &lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;
+  &lt;label class=&quot;radio&quot; for=&quot;option-1&quot;&gt;
+    &lt;input id=&quot;option-1&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-1&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 1&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;radio&quot; for=&quot;option-2&quot;&gt;
+    &lt;input id=&quot;option-2&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-2&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 2&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;
 </pre></div>
-            
+            <p>
+  A styled radio element. Styling of the element is determined by the
+  <a href="/colors">Color Combination utility</a>
+  it is nested under. Note the
+  <code>&lt;fieldset&gt;</code>
+  and
+  <code>&lt;legend&gt;</code>
+  used for making the form more understandable for all users. Read more about form grouping in
+  <a href="https://www.w3.org/WAI/tutorials/forms/grouping/">W3&#39;s Web Accessibility Tutorials</a>
+  .
+</p>
+
+          </div>
+        </div>
+      </section>
+      <section class="mt-6" id="radios-error">
+        <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <fieldset>
+              <legend class="mb-1">Options</legend>
+              <label class="radio error" for="option-3">
+                <input id="option-3" name="options" type="radio" value="option-3" />
+                <span class="radio__label">Option 3</span>
+              </label>
+              <label class="radio error" for="option-4">
+                <input id="option-4" name="options" type="radio" value="option-4" />
+                <span class="radio__label">Option 4</span>
+              </label>
+            </fieldset>
+          </div>
+        </div>
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;fieldset&gt;
+  &lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;
+  &lt;label class=&quot;radio error&quot; for=&quot;option-3&quot;&gt;
+    &lt;input id=&quot;option-3&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-3&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 3&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class=&quot;radio error&quot; for=&quot;option-4&quot;&gt;
+    &lt;input id=&quot;option-4&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-4&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 4&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;
+</pre></div>
+            <h2>Error</h2>
+
           </div>
         </div>
       </section>
