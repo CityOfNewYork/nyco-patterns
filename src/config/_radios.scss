@@ -9,12 +9,12 @@
 @import 'config/direction';
 
 // Declarations
-@mixin checkboxes {
+@mixin radios {
   $grid: map-get($variables, 'grid');
 
   font-size: inherit;
   font-weight: $font-weight-bold;
-  display: block;
+  display: inline-block;
   margin-bottom: $grid;
 
   cursor: pointer;
@@ -28,9 +28,7 @@
   }
 }
 
-@mixin checkboxes-label {
-  // display: flex;
-  // line-height: map-get(map-get($variables, 'inputs'), 'checkbox-size');
+@mixin radios-label {
   color: inherit;
   font-size: inherit;
 
@@ -47,15 +45,15 @@
   cursor: pointer;
 }
 
-@mixin checkboxes-btn {
-  $size: map-get(map-get($variables, 'inputs'), 'checkbox-size');
+@mixin radios-btn {
+  $size: map-get(map-get($variables, 'inputs'), 'radio-size');
   $radius: map-get(map-get($variables, 'inputs'), 'border-radius');
 
-  transition: all .2s;
+  content: '';
+
   border-width: 1px;
   border-style: solid;
-  border-radius: $radius;
-  content: '';
+  border-radius: 100%;
   display: inline-block;
   width: $size;
   height: $size;
@@ -65,8 +63,10 @@
   background-repeat: no-repeat;
   background-size: 24px 24px;
   background-position: center;
+
+  transition: all .2s;
 }
 
-@mixin checkboxes-btn-checked {
+@mixin radios-btn-checked {
   border: 0;
 }

@@ -94,7 +94,11 @@ $base-white: map-get($colors, 'base-white');
    * Inputs, Selects, Checkboxes
    */
 
-  input:not(.error), textarea:not(.error), select:not(.error) {
+  input:not(.error),
+  textarea:not(.error),
+  select:not(.error),
+  .checkbox__label,
+  .radio__label {
     border-color: map-get($colors, $input-border);
     background-color: map-get($colors, $input-background);
 
@@ -108,17 +112,30 @@ $base-white: map-get($colors, 'base-white');
   }
 
   .checkbox__label::before {
-    border-color: map-get($colors, $input-border);
     background-color: map-get($colors, $input-background);
   }
 
+  .radio__label:before,
+  .checkbox__label::before {
+    border-color: map-get($colors, $focus);
+  }
+
   /**
-   * Checkbox Checked
+   * Selected States for Checkboxes and Radios
    */
 
   input:checked + .checkbox__label::before {
     background-color: map-get($colors, $focus);
     background-image: url($checkbox-check);
+  }
+
+  input:checked + .checkbox__label::before {
+    box-shadow: inset 0 0 0 1.25px map-get($colors, $background), 0 0 0 2px map-get($colors, $focus);
+  }
+
+  input:checked + .radio__label::before {
+    background-color: map-get($colors, $focus);
+    box-shadow: inset 0 0 0 1.25px map-get($colors, $background), 0 0 0 2px map-get($colors, $focus);
   }
 
   /**
@@ -132,7 +149,8 @@ $base-white: map-get($colors, 'base-white');
 
   .input > input:focus,
   .select:focus,
-  input:focus + .checkbox__label::before {
+  input:focus + .checkbox__label,
+  input:focus + .radio__label {
     box-shadow: 0 0 0 1px map-get($colors, $background), 0 0 0 3px map-get($colors, $focus);
   }
 
@@ -142,7 +160,10 @@ $base-white: map-get($colors, 'base-white');
 
   .error > input,
   .error > select,
-  .error > .checkbox__label::before {
+  .error > .checkbox__label,
+  .error > .radio__label,
+  .error > .checkbox__label::before,
+  .error > .radio__label::before {
     border-color: map-get($colors, $error);
     color: map-get($colors, $error);
   }

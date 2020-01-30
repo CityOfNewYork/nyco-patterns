@@ -441,6 +441,7 @@ const variables = {
   },
   inputs: {
     'checkbox-size': '24px',
+    'radio-size': '24px',
     'border-radius': '1px'
   },
   boxShadow: {

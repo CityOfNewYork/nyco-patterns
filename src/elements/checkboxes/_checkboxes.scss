@@ -3,31 +3,15 @@
  */
 
 // Dependencies
-@import 'config/variables';
 @import 'config/checkboxes';
-@import 'config/direction';
-@import 'config/fonts';
-
-$grid: map-get($variables, 'grid');
 
 // Declarations
 .checkbox {
-  font-size: inherit;
-  font-weight: $font-weight-bold;
-  display: block;
-  margin-bottom: $grid;
-  cursor: pointer;
-
-  > input {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-  }
+  @include checkboxes;
 }
 
 .checkbox__label {
-  display: flex;
-  line-height: map-get(map-get($variables, 'inputs'), 'checkbox-size');
+  @include checkboxes-label;
 }
 
 .checkbox__label::before {

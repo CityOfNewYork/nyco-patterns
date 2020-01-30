@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Checkboxes | NYCO Patterns</title>
+    <title>Radios | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
@@ -126,19 +126,19 @@
       </div>
     </aside>
     <article class="color-light-background py-2">
-      <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Checkboxes</h1></div>
-      <section class="mt-6" id="checkboxes">
+      <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Radios</h1></div>
+      <section class="mt-6" id="radios">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
             <fieldset>
               <legend class="mb-1">Options</legend>
-              <label class="checkbox" for="option-a">
-                <input id="option-a" name="option-a" type="checkbox" value="option-a" />
-                <span class="checkbox__label">Option A</span>
+              <label class="radio" for="option-1">
+                <input id="option-1" name="options" type="radio" value="option-1" />
+                <span class="radio__label">Option 1</span>
               </label>
-              <label class="checkbox" for="option-b">
-                <input id="option-b" name="option-b" type="checkbox" value="option-b" />
-                <span class="checkbox__label">Option B</span>
+              <label class="radio" for="option-2">
+                <input id="option-2" name="options" type="radio" value="option-2" />
+                <span class="radio__label">Option 2</span>
               </label>
             </fieldset>
           </div>
@@ -147,18 +147,18 @@
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;fieldset&gt;
   &lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;
-  &lt;label class=&quot;checkbox&quot; for=&quot;option-a&quot;&gt;
-    &lt;input id=&quot;option-a&quot; name=&quot;option-a&quot; type=&quot;checkbox&quot; value=&quot;option-a&quot; /&gt;
-    &lt;span class=&quot;checkbox__label&quot;&gt;Option A&lt;/span&gt;
+  &lt;label class=&quot;radio&quot; for=&quot;option-1&quot;&gt;
+    &lt;input id=&quot;option-1&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-1&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 1&lt;/span&gt;
   &lt;/label&gt;
-  &lt;label class=&quot;checkbox&quot; for=&quot;option-b&quot;&gt;
-    &lt;input id=&quot;option-b&quot; name=&quot;option-b&quot; type=&quot;checkbox&quot; value=&quot;option-b&quot; /&gt;
-    &lt;span class=&quot;checkbox__label&quot;&gt;Option B&lt;/span&gt;
+  &lt;label class=&quot;radio&quot; for=&quot;option-2&quot;&gt;
+    &lt;input id=&quot;option-2&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-2&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 2&lt;/span&gt;
   &lt;/label&gt;
 &lt;/fieldset&gt;
 </pre></div>
             <p>
-  A styled checkbox element. Styling of the element is determined by the
+  A styled radio element. Styling of the element is determined by the
   <a href="/colors">Color Combination utility</a>
   it is nested under. Note the
   <code>&lt;fieldset&gt;</code>
@@ -172,18 +172,18 @@
           </div>
         </div>
       </section>
-      <section class="mt-6" id="checkboxes-error">
+      <section class="mt-6" id="radios-error">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
             <fieldset>
               <legend class="mb-1">Options</legend>
-              <label class="checkbox error" for="option-c">
-                <input id="option-c" name="option-c" type="checkbox" value="option-c" />
-                <span class="checkbox__label">Option C</span>
+              <label class="radio error" for="option-3">
+                <input id="option-3" name="options" type="radio" value="option-3" />
+                <span class="radio__label">Option 3</span>
               </label>
-              <label class="checkbox error" for="option-d">
-                <input id="option-d" name="option-d" type="checkbox" value="option-d" />
-                <span class="checkbox__label">Option D</span>
+              <label class="radio error" for="option-4">
+                <input id="option-4" name="options" type="radio" value="option-4" />
+                <span class="radio__label">Option 4</span>
               </label>
             </fieldset>
           </div>
@@ -192,13 +192,13 @@
           <div class="o-content mx-auto">
             <div class="code-block"><pre>&lt;fieldset&gt;
   &lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;
-  &lt;label class=&quot;checkbox error&quot; for=&quot;option-c&quot;&gt;
-    &lt;input id=&quot;option-c&quot; name=&quot;option-c&quot; type=&quot;checkbox&quot; value=&quot;option-c&quot; /&gt;
-    &lt;span class=&quot;checkbox__label&quot;&gt;Option C&lt;/span&gt;
+  &lt;label class=&quot;radio error&quot; for=&quot;option-3&quot;&gt;
+    &lt;input id=&quot;option-3&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-3&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 3&lt;/span&gt;
   &lt;/label&gt;
-  &lt;label class=&quot;checkbox error&quot; for=&quot;option-d&quot;&gt;
-    &lt;input id=&quot;option-d&quot; name=&quot;option-d&quot; type=&quot;checkbox&quot; value=&quot;option-d&quot; /&gt;
-    &lt;span class=&quot;checkbox__label&quot;&gt;Option D&lt;/span&gt;
+  &lt;label class=&quot;radio error&quot; for=&quot;option-4&quot;&gt;
+    &lt;input id=&quot;option-4&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-4&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 4&lt;/span&gt;
   &lt;/label&gt;
 &lt;/fieldset&gt;
 </pre></div>

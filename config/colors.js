@@ -63,6 +63,7 @@ const nycoColors = {
       'placeholder': 'secondary-grey',
       'focus': 'primary-navy',
       'checkbox-check': '"../svg/icon-ui-check-white.svg"',
+      'radio-check': '"../svg/icon-ui-check-white.svg"',
       'select-arrow': '"../svg/icon-ui-chevron-down-navy.svg"',
       'error': 'primary-red'
     },

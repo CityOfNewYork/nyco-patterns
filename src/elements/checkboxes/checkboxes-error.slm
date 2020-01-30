@@ -2,6 +2,13 @@
 / Checkboxes Error
 /
 
-label class='checkbox error' for='selection-error'
-  input type='checkbox' id='selection-error' value='Selection' name='selection-error'
-  span class='checkbox__label' Selection
+fieldset
+  legend class='mb-1' Options
+
+  label class='checkbox error' for='option-c'
+    input type='checkbox' id='option-c' value='option-c' name='option-c'
+    span class='checkbox__label' Option C
+
+  label class='checkbox error' for='option-d'
+    input type='checkbox' id='option-d' value='option-d' name='option-d'
+    span class='checkbox__label' Option D

@@ -1,0 +1,1 @@
+A styled radio element. Styling of the element is determined by the [Color Combination utility](/colors) it is nested under. Note the `<fieldset>` and `<legend>` used for making the form more understandable for all users. Read more about form grouping in [W3's Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/forms/grouping/).

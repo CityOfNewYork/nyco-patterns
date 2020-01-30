@@ -108,6 +108,7 @@ $variables:(
       placeholder: secondary-grey,
       focus: primary-navy,
       checkbox-check: "../svg/icon-ui-check-white.svg",
+      radio-check: "../svg/icon-ui-check-white.svg",
       select-arrow: "../svg/icon-ui-chevron-down-navy.svg",
       error: primary-red
     ),
@@ -509,6 +510,7 @@ $variables:(
   ),
   inputs: (
     checkbox-size: 24px,
+    radio-size: 24px,
     border-radius: 1px
   ),
   boxShadow: (
