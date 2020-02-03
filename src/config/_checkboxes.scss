@@ -8,10 +8,12 @@
 @import 'config/fonts';
 @import 'config/direction';
 
+$grid: map-get($variables, 'grid');
+$size: map-get(map-get($variables, 'inputs'), 'checkbox-size');
+$radius: map-get(map-get($variables, 'inputs'), 'border-radius');
+
 // Declarations
 @mixin checkboxes {
-  $grid: map-get($variables, 'grid');
-
   font-size: inherit;
   font-weight: $font-weight-bold;
   display: block;
@@ -29,14 +31,12 @@
 }
 
 @mixin checkboxes-label {
-  // display: flex;
-  // line-height: map-get(map-get($variables, 'inputs'), 'checkbox-size');
   color: inherit;
   font-size: inherit;
 
   display: flex;
   margin: 0;
-  padding: .75 * map-get($padding, 2);
+  padding: .75 * map-get(map-get($variables, 'padding'), 2);
 
   border-width: 1px;
   border-style: solid;
@@ -48,9 +48,6 @@
 }
 
 @mixin checkboxes-btn {
-  $size: map-get(map-get($variables, 'inputs'), 'checkbox-size');
-  $radius: map-get(map-get($variables, 'inputs'), 'border-radius');
-
   transition: all .2s;
   border-width: 1px;
   border-style: solid;

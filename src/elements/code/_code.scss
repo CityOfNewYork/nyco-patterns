@@ -4,6 +4,7 @@
 
 // Dependencies
 @import 'config/variables';
+@import 'config/type';
 @import 'config/code';
 
 $colors: map-get($variables, 'colors');

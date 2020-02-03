@@ -8,10 +8,12 @@
 @import 'config/fonts';
 @import 'config/direction';
 
+$grid: map-get($variables, 'grid');
+$size: map-get(map-get($variables, 'inputs'), 'radio-size');
+$radius: map-get(map-get($variables, 'inputs'), 'border-radius');
+
 // Declarations
 @mixin radios {
-  $grid: map-get($variables, 'grid');
-
   font-size: inherit;
   font-weight: $font-weight-bold;
   display: inline-block;
@@ -34,7 +36,7 @@
 
   display: flex;
   margin: 0;
-  padding: .75 * map-get($padding, 2);
+  padding: .75 * map-get(map-get($variables, 'padding'), 2);
 
   border-width: 1px;
   border-style: solid;
@@ -46,9 +48,6 @@
 }
 
 @mixin radios-btn {
-  $size: map-get(map-get($variables, 'inputs'), 'radio-size');
-  $radius: map-get(map-get($variables, 'inputs'), 'border-radius');
-
   content: '';
 
   border-width: 1px;
