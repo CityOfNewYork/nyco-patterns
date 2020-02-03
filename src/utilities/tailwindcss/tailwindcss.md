@@ -52,16 +52,16 @@ slm{{ utilities/tailwindcss/tailwindcss.slm }}
 
 **tailwindcss** is not imported the same way as other patterns. All utilities are compiled to a Sass file...
 
-    /dist/styles/_tailwind.scss
+    /dist/utilities/tailwindcss/_tailwindcss.scss
 
 (which can be imported in a Sass project)...
 
-    @import 'node_modules/@nycopportunity/nyco-patterns/dist/styles/_tailwind.scss';
+    @import 'node_modules/@nycopportunity/nyco-patterns/dist/utilities/tailwindcss/_tailwindcss.scss';
 
 ... and a CSS file in the **/dist** folder:
 
-    /dist/styles/tailwind.css
+    /dist/utilities/tailwindcss/tailwindcss.css
 
 The CSS file can be included through a CDN. Replace `{{ version }}` with the latest release in the top right corner of this page.
 
-    <link href="https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v{{ version }}/dist/styles/tailwind.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v{{ version }}/dist/utilities/tailwindcss/tailwindcss.css" rel="stylesheet" type="text/css">
