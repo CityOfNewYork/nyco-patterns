@@ -2,10 +2,11 @@
  * Dependencies
  */
 
-const tailwindcss = require('tailwindcss'); // utility framework/management
-const autoprefixer = require('autoprefixer'); // adds vendor spec prefixes
-const cssnano = require('cssnano'); // modern css compiling/minification
-const mqpacker = require('css-mqpacker'); // packs media queries together
+const tailwindcss = require('tailwindcss');         // utility framework/management
+const autoprefixer = require('autoprefixer');       // adds vendor spec prefixes
+const cssnano = require('cssnano');                 // modern css compiling/minification
+const mqpacker = require('css-mqpacker');           // packs media queries together
+const failonwarn = require('postcss-fail-on-warn'); // logs failures to the console
 
 /**
  * Config
@@ -19,7 +20,8 @@ const postCss = {
     mqpacker({
       sort: true
     }),
-    cssnano()
+    cssnano(),
+    failonwarn()
   ]
 };
 
