@@ -13,8 +13,9 @@
     a class='${classNavLink}' href='inputs' Inputs
     a class='${classNavLink}' href='layouts' Layouts
     a class='${classNavLink}' href='links' Links
-    a class='${classNavLink}' href='tables' Tables
     a class='${classNavLink}' href='select' Select
+    a class='${classNavLink}' href='radios' Radios
+    a class='${classNavLink}' href='tables' Tables
 
     span class='${classNavLinkHeader}' Objects
     a class='${classNavLink}' href='charts' Charts
