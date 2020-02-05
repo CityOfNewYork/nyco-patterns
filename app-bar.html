@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
     <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Official | NYCO Patterns</title>
+    <title>App Bar | NYCO Patterns</title>
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
@@ -130,24 +130,33 @@
       </div>
     </aside>
     <article class="color-light-background py-2">
-      <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Official</h1></div>
-      <section class="mt-6" id="official">
+      <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">App Bar</h1></div>
+      <section class="mt-6" id="app-bar">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <section class="o-official color-mid-background">
-              <svg class="o-official__icon icon icon-logo-nyc"><use xlink:href="#icon-logo-nyc"></use></svg>
-              <small class="o-official__line px-1">Official website of the City of New York</small>
-            </section>
+            <header class="o-app-bar layout-sidebar flex">
+              <div class="color-primary-button">
+                <svg class="o-app-bar__icon icon icon-logo-nyco-secondary"><use xlink:href="#icon-logo-nyco-secondary"></use></svg>
+              </div>
+              <div class="color-dark-background"></div>
+            </header>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;section class=&quot;o-official color-mid-background&quot;&gt;
-  &lt;svg class=&quot;o-official__icon icon icon-logo-nyc&quot;&gt;&lt;use xlink:href=&quot;#icon-logo-nyc&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
-  &lt;small class=&quot;o-official__line px-1&quot;&gt;Official website of the City of New York&lt;/small&gt;
-&lt;/section&gt;
+            <div class="code-block"><pre>&lt;header class=&quot;o-app-bar layout-sidebar flex&quot;&gt;
+  &lt;div class=&quot;color-primary-button&quot;&gt;
+    &lt;svg class=&quot;o-app-bar__icon icon icon-logo-nyco-secondary&quot;&gt;&lt;use xlink:href=&quot;#icon-logo-nyco-secondary&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;color-dark-background&quot;&gt;&lt;/div&gt;
+&lt;/header&gt;
 </pre></div>
-            
+            <p>
+  The Application Bar Object can be used as a
+  <a href="header">Header Object</a>
+  replacement for progressive web applications.
+</p>
+
           </div>
         </div>
       </section>

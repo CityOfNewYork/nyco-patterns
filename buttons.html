@@ -10,7 +10,7 @@
     <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
     <script type="text/javascript">
-      var VERSION = '2.1.2';
+      var VERSION = '2.1.3';
     </script>
     <noscript>
       <style>
@@ -35,14 +35,14 @@
         <span class="hidden"></span>
         <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg><svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.1.2</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.1.3</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background"><h1 class="o-header__secondary-title text-jumbo">Patterns</h1></div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.1.2">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.1.3">
           <svg aria-hidden="true" class="icon-ui-github icon-small mr-1"><use xlink:href="#icon-ui-github"></use></svg>
-          2.1.2
+          2.1.3
         </a>
       </div>
     </div>
@@ -70,6 +70,7 @@
               <a class="o-navigation__link" href="radios">Radios</a>
               <a class="o-navigation__link" href="tables">Tables</a>
               <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="App Bar">App Bar</a>
               <a class="o-navigation__link" href="charts">Charts</a>
               <a class="o-navigation__link" href="content">Content</a>
               <a class="o-navigation__link" href="footer">Footer</a>
@@ -109,6 +110,7 @@
                 <a class="o-navigation__link" href="radios">Radios</a>
                 <a class="o-navigation__link" href="tables">Tables</a>
                 <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
+                <a class="o-navigation__link" href="App Bar">App Bar</a>
                 <a class="o-navigation__link" href="charts">Charts</a>
                 <a class="o-navigation__link" href="content">Content</a>
                 <a class="o-navigation__link" href="footer">Footer</a>
@@ -212,17 +214,38 @@
       </section>
       <section class="mt-6" id="buttons-large">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
-          <div class="layout-wrap mx-auto flex justify-center"><button class="btn btn-large">Large Button</button></div>
+          <div class="layout-wrap mx-auto flex justify-center"><button class="btn btn-large color-primary-button">Large Button</button></div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;button class=&quot;btn btn-large&quot;&gt;Large Button&lt;/button&gt;
+            <div class="code-block"><pre>&lt;button class=&quot;btn btn-large color-primary-button&quot;&gt;Large Button&lt;/button&gt;
 </pre></div>
             <h2>Large Button</h2>
 
 <p>
   To use a large button add the
   <code>.btn-large</code>
+  class to the
+  <code>.btn</code>
+  element.
+</p>
+
+          </div>
+        </div>
+      </section>
+      <section class="mt-6" id="buttons-app">
+        <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
+          <div class="layout-wrap mx-auto flex justify-center"><button class="btn btn-app color-primary-button">Default</button></div>
+        </div>
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto">
+            <div class="code-block"><pre>&lt;button class=&quot;btn btn-app color-primary-button&quot;&gt;Default&lt;/button&gt;
+</pre></div>
+            <h2>Application Button</h2>
+
+<p>
+  Application buttons are ideal for progressive web applications. They have no hover state and a slight bevel. To use an application button add the
+  <code>.btn-app</code>
   class to the
   <code>.btn</code>
   element.
