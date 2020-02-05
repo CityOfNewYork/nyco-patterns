@@ -3,21 +3,78 @@
 //
 
 // Dependencies
+@import 'config/variables';
+
 $colors: map-get($variables, 'colors');
 $colorCombinations: map-get($variables, 'colorCombinations');
 
 // Declarations
+@mixin button-reset() {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  // Inherit font & color from ancestor
+  color: inherit;
+  font: inherit;
+
+  // Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+.
+  line-height: normal;
+
+  // Corrects font smoothing for webkit (and firefox)
+  -moz-osx-font-smoothing: inherit;
+   -webkit-font-smoothing: inherit;
+
+  // Corrects inability to style clickable `input` types in iOS
+  -webkit-appearance: none;
+
+  // Remove excess padding and border in Firefox 4+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
 @mixin button-hover($name: 'primary-button') {
   $combination: map-get($colorCombinations, $name);
-  $color-namespace: map-get($combination, 'color');
-  $bg-color-namespace: map-get($combination, 'background-color');
-  $color: map-get($colors, $color-namespace);
-  $bg-color: map-get($colors, $bg-color-namespace);
+  $color: map-get($combination, 'color');
+  $background: map-get($combination, 'background-color');
+
+  $text: map-get($colors, $color);
+  $bg-color: map-get($colors, $background);
+
+  $level0: saturate(darken($bg-color, 5%), 5%);
+  $level1: darken($bg-color, 25%);
 
   &:hover,
-  &:focus,
   &:active {
-    color: $color;
-    background: saturate(darken($bg-color, 5%), 5%);
+    color: $text;
+    background: $level0;
+    box-shadow: map-get(map-get($variables, 'boxShadow'), 'up') $level1, 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+}
+
+@mixin button-app-hover($name: 'primary-button') {
+  $combination: map-get($colorCombinations, $name);
+  $color: map-get($combination, 'color');
+  $background: map-get($combination, 'background-color');
+
+  $text: map-get($colors, $color);
+  $bg-color: map-get($colors, $background);
+
+  $level0: $bg-color;
+  $level1: darken($bg-color, 5%);
+
+  background: linear-gradient(0deg, $level1 0%, $level0 100%);
+
+  &:hover,
+  &:active {
+    color: $text;
+    background: linear-gradient(0deg, $level1 0%, $level0 100%);
+    box-shadow: none;
   }
 }

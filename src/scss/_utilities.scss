@@ -2,9 +2,9 @@
  * Utilities
  */
 
-@import '@nycopportunity/patterns-framework/src/utilities/spinner/spinner';
-@import '@nycopportunity/patterns-framework/src/utilities/toggle/toggle';
-@import 'utilities/type/type';
-@import 'utilities/colors/colors';
-@import 'utilities/animate/animate';
-@import 'utilities/tailwindcss/tailwindcss';
+@import '@nycopportunity/patterns-framework/src/utilities/spinner/_spinner.scss';
+@import '@nycopportunity/patterns-framework/src/utilities/toggle/_toggle.scss';
+@import 'utilities/type/_type.scss';
+@import 'utilities/colors/_colors.scss';
+@import 'utilities/animate/_animate.scss';
+@import 'utilities/tailwindcss/_tailwindcss.scss';

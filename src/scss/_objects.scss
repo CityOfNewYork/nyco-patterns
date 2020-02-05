@@ -8,10 +8,12 @@
 // will require their own Objects. Object namespaces are prefixed with 'o-'.
 
 // @import 'objects/.../...';
-@import 'objects/header/header';
-@import 'objects/footer/footer';
-@import 'objects/feed/feed';
-@import 'objects/navigation/navigation';
-@import 'objects/map/map';
-@import 'objects/content/content';
+@import 'objects/app-bar/_app-bar.scss';
+@import 'objects/header/_header.scss';
+@import 'objects/footer/_footer.scss';
+@import 'objects/feed/_feed.scss';
+@import 'objects/navigation/_navigation.scss';
+@import 'objects/map/_map.scss';
+@import 'objects/content/_content.scss';
+@import 'objects/official/_official.scss';
 // objects - end

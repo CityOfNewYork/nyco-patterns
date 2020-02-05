@@ -1,9 +1,10 @@
 @charset 'utf-8';
 
-@import 'assets.scss';
+@import '_assets.scss';
 
 // if @font-face is used it needs to be first imported first.
-@import 'elements/fonts/fonts';
-@import 'objects';
-@import 'elements';
-@import 'utilities';
+@import 'elements/fonts/_fonts.scss';
+
+@import '_objects.scss';
+@import '_elements.scss';
+@import '_utilities.scss';

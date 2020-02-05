@@ -6,15 +6,15 @@
 // include classes that assign color, modify the display of elements, or set up
 // scaffolding like typography or grid systems. Uitilities will have their own
 // namespace prefixes based on their attributes.
-@import 'elements/base/base';
-@import 'elements/code/code';
-@import 'elements/links/links';
-@import 'elements/layouts/layouts';
-@import 'elements/icons/icons';
-@import 'elements/tables/tables';
-@import 'elements/buttons/buttons';
-@import 'elements/select/select';
-@import 'elements/inputs/inputs';
-@import 'elements/checkboxes/checkboxes';
-@import 'elements/radios/radios';
+@import 'elements/base/_base.scss';
+@import 'elements/code/_code.scss';
+@import 'elements/links/_links.scss';
+@import 'elements/layouts/_layouts.scss';
+@import 'elements/icons/_icons.scss';
+@import 'elements/tables/_tables.scss';
+@import 'elements/buttons/_buttons.scss';
+@import 'elements/select/_select.scss';
+@import 'elements/inputs/_inputs.scss';
+@import 'elements/checkboxes/_checkboxes.scss';
+@import 'elements/radios/_radios.scss';
 // elements - end

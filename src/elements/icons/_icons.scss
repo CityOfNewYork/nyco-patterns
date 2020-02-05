@@ -5,6 +5,7 @@
 // Dependencies
 @import 'config/variables';
 @import 'config/screens';
+@import 'config/cdn';
 @import 'scss/functions/str-replace';
 
 $screens: map-get($variables, 'screens');
@@ -52,7 +53,7 @@ $screens: map-get($variables, 'screens');
   .bg-#{$key} {
     width: nth($var, 1);
     height: nth($var, 2);
-    background-image: url('../svg/#{$path}.svg');
+    background-image: url('#{$cdn}#{path-to-svg}#{$path}.svg');
     background-repeat: no-repeat;
     background-size: 100%;
   }

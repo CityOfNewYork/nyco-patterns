@@ -1,0 +1,31 @@
+/**
+ * Official
+ */
+
+// Dependencies
+@import 'config/variables';
+
+$grid: map-get($variables, 'grid');
+
+// Declarations
+.o-official {
+  font-size: 85%;
+
+  padding-left: $grid * 3;
+  padding-right: $grid * 3;
+  padding-top: $grid / 2;
+  padding-bottom: $grid / 2;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.o-official__icon {
+  width: 56px !important;
+  height: 18px !important;
+}
+
+.o-official__line {
+  line-height: 0;
+}

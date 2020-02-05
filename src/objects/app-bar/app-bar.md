@@ -1,0 +1,1 @@
+The Application Bar Object can be used as a [Header Object](header) replacement for progressive web applications.

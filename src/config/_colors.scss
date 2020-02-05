@@ -1,5 +1,6 @@
 @import 'config/variables';
 @import 'config/fonts';
+@import 'config/cdn';
 
 $colors: map-get($variables, 'colors');
 $statuses: map-get($variables, 'colorStatuses');
@@ -109,7 +110,7 @@ $base-white: map-get($colors, 'base-white');
   }
 
   .select {
-    background-image: url($select-arrow);
+    background-image: url('#{$cdn}#{$path-to-svg}#{$select-arrow}');
   }
 
   .checkbox__label::before {
@@ -127,7 +128,7 @@ $base-white: map-get($colors, 'base-white');
 
   input:checked + .checkbox__label::before {
     background-color: map-get($colors, $focus);
-    background-image: url($checkbox-check);
+    background-image: url('#{$cdn}#{$path-to-svg}#{$checkbox-check}');
   }
 
   input:checked + .checkbox__label::before {
@@ -143,16 +144,21 @@ $base-white: map-get($colors, 'base-white');
    * Focus State
    */
 
+  .btn,
   .input > input:focus,
   .select:focus {
     outline: none;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0),
+                0 0 0 3px rgba(255, 255, 255, 0);
   }
 
+  .btn:focus,
   .input > input:focus,
   .select:focus,
   input:focus + .checkbox__label,
   input:focus + .radio__label {
-    box-shadow: 0 0 0 1px map-get($colors, $background), 0 0 0 3px map-get($colors, $focus);
+    box-shadow: 0 0 0 1px map-get($colors, $background),
+                0 0 0 3px map-get($colors, $focus);
   }
 
   /**

@@ -25,3 +25,4 @@
   = mixin('pattern', 'elements/buttons/buttons-primary');
   = mixin('pattern', 'elements/buttons/buttons-secondary');
   = mixin('pattern', 'elements/buttons/buttons-large');
+  = mixin('pattern', 'elements/buttons/buttons-app');

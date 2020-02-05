@@ -1,5 +1,5 @@
 $variables:(
-  cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v2.1.0/dist",
+  cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v2.1.3/dist",
   fontFamily: (
     system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
     code: (monospace),
@@ -124,8 +124,8 @@ $variables:(
       input-background: primary-navy,
       placeholder: base-white,
       focus: base-white,
-      checkbox-check: "../svg/icon-ui-check-navy.svg",
-      select-arrow: "../svg/icon-ui-chevron-down-white.svg",
+      checkbox-check: "icon-ui-check-navy.svg",
+      select-arrow: "icon-ui-chevron-down-white.svg",
       error: primary-red
     ),
     primary-button: (
@@ -505,13 +505,11 @@ $variables:(
     screen-tablet: 768,
     screen-sm-mobile: 400
   ),
-  buttons: (
-    radius: 500px
-  ),
   inputs: (
     checkbox-size: 24px,
     radio-size: 24px,
-    border-radius: 1px
+    border-radius: 1px,
+    button-radius: 1px
   ),
   boxShadow: (
     none: none,

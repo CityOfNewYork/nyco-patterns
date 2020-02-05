@@ -18,6 +18,7 @@
     a class='${classNavLink}' href='tables' Tables
 
     span class='${classNavLinkHeader}' Objects
+    a class='${classNavLink}' href='App Bar' App Bar
     a class='${classNavLink}' href='charts' Charts
     a class='${classNavLink}' href='content' Content
     a class='${classNavLink}' href='footer' Footer
@@ -26,6 +27,7 @@
     / a class='${classNavLink}' href='map' Map
     a class='${classNavLink}' href='mailchimp' Mailchimp
     a class='${classNavLink}' href='navigation' Navigation
+    / a class='${classNavLink}' href='official' Official
 
     span class='${classNavLinkHeader}' Utilities
     a class='${classNavLink}' href='animate' Animate

@@ -1,11 +1,12 @@
 @import 'config/variables';
 @import 'config/fonts';
+@import 'config/cdn';
 @import 'scss/functions/font-source-declaration';
 @import 'scss/functions/font-face';
 
 @include font-face(
   'Noto Sans',
-  '../fonts/noto-sans/NotoSans',
+  '#{$cdn}#{$path-to-fonts}noto-sans/NotoSans',
   (eot woff2 woff ttf)) {
     font-weight: normal;
     font-style: normal
@@ -13,7 +14,7 @@
 
 @include font-face(
   'Noto Sans',
-  '../fonts/noto-sans/NotoSans-Italic',
+  '#{$cdn}#{$path-to-fonts}/noto-sans/NotoSans-Italic',
   (eot woff2 woff ttf)) {
     font-weight: normal;
     font-style: italic
@@ -21,7 +22,7 @@
 
 @include font-face(
   'Noto Sans',
-  '../fonts/noto-sans/NotoSans-Bold',
+  '#{$cdn}#{$path-to-fonts}/noto-sans/NotoSans-Bold',
   (eot woff2 woff ttf)) {
     font-weight: bold;
     font-style: normal
@@ -29,7 +30,7 @@
 
 @include font-face(
   'Noto Sans',
-  '../fonts/noto-sans/NotoSans-BoldItalic',
+  '#{$cdn}#{$path-to-fonts}/noto-sans/NotoSans-BoldItalic',
   (eot woff2 woff ttf)) {
     font-weight: bold;
     font-style: italic

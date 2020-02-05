@@ -9,36 +9,7 @@
 
 $buttons: map-get($variables, 'buttons');
 $grid: map-get($variables, 'grid');
-
-@mixin button-reset() {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
-
-  background: transparent;
-
-  /* inherit font & color from ancestor */
-  color: inherit;
-  font: inherit;
-
-  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-  line-height: normal;
-
-  /* Corrects font smoothing for webkit */
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-
-  /* Corrects inability to style clickable `input` types in iOS */
-  -webkit-appearance: none;
-
-  /* Remove excess padding and border in Firefox 4+ */
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
-}
+$radius: map-get(map-get($variables, 'inputs'), 'button-radius');
 
 button {
   @include button-reset();
@@ -64,7 +35,7 @@ button {
 
     border: ($grid / 4) solid;
     border-color: currentColor;
-    box-shadow: map-get(map-get($variables, 'boxShadow'), 'up-transparent');
+    border-radius: $radius;
 
     transition: background .1s ease-in,
                 color .1s ease-in,
@@ -72,10 +43,6 @@ button {
 
     .icon {
       vertical-align: middle;
-    }
-
-    &:hover, &:focus {
-      box-shadow: map-get(map-get($variables, 'boxShadow'), 'up');
     }
 
     &.color-primary-button {
@@ -88,6 +55,28 @@ button {
       border-color: transparent;
     }
   }
+
+  /**
+   * Application Button
+   */
+
+  .#{$variant}btn-app, .#{$variant}button-app {
+    border-radius: $radius * 2;
+
+    &.color-primary-button {
+      @include button-app-hover('primary-button');
+      border-color: transparent;
+    }
+
+    &.color-secondary-button {
+      @include button-app-hover('secondary-button');
+      border-color: transparent;
+    }
+  }
+
+  /**
+   * Large Button
+   */
 
   .#{$variant}btn-large, .#{$variant}button-large {
     padding: (($grid * 3) - ($grid / 2)) ($grid * 4);

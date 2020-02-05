@@ -21,4 +21,4 @@
 = content('content');
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
-  = mixin('pattern', 'components/official/official');
+  = mixin('pattern', 'objects/official/official');

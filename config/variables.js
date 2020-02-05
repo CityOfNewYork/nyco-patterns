@@ -436,13 +436,11 @@ const variables = {
     'screen-tablet': 768,
     'screen-sm-mobile': 400
   },
-  buttons: {
-    'radius': '500px'
-  },
   inputs: {
     'checkbox-size': '24px',
     'radio-size': '24px',
-    'border-radius': '1px'
+    'border-radius': '1px',
+    'button-radius': '1px'
   },
   boxShadow: {
     'none': 'none',

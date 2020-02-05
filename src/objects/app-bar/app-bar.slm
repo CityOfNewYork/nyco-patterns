@@ -1,0 +1,11 @@
+/
+/ Official
+/
+
+header class='o-app-bar layout-sidebar flex'
+  div class='color-primary-button'
+    svg class='o-app-bar__icon icon icon-logo-nyco-secondary'
+      use xlink:href='#icon-logo-nyco-secondary'
+
+  div class='color-dark-background'
+

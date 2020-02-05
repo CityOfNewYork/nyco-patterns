@@ -79,8 +79,8 @@ const nycoColors = {
       'input-background': 'primary-navy',
       'placeholder': 'base-white',
       'focus': 'base-white',
-      'checkbox-check': '"../svg/icon-ui-check-navy.svg"',
-      'select-arrow': '"../svg/icon-ui-chevron-down-white.svg"',
+      'checkbox-check': '"icon-ui-check-navy.svg"',
+      'select-arrow': '"icon-ui-chevron-down-white.svg"',
       'error': 'primary-red'
     },
     'primary-button': {
