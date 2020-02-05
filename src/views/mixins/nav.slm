@@ -18,7 +18,7 @@
     a class='${classNavLink}' href='tables' Tables
 
     span class='${classNavLinkHeader}' Objects
-    a class='${classNavLink}' href='App Bar' App Bar
+    a class='${classNavLink}' href='app-bar' App Bar
     a class='${classNavLink}' href='charts' Charts
     a class='${classNavLink}' href='content' Content
     a class='${classNavLink}' href='footer' Footer
