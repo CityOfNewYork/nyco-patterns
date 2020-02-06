@@ -2,9 +2,9 @@
 / Official
 /
 
-header class='o-app-bar layout-sidebar flex'
+header class='o-header-app layout-sidebar flex'
   div class='color-primary-button'
-    svg class='o-app-bar__icon icon icon-logo-nyco-secondary'
+    svg class='o-header-app__icon icon icon-logo-nyco-secondary'
       use xlink:href='#icon-logo-nyco-secondary'
 
   div class='color-dark-background'

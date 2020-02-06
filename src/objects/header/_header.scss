@@ -55,7 +55,8 @@ $iconSizes: map-get($variables, 'iconSizes');
 
 .o-header__logo-main {
   width: nth(map-get($iconSizes, 'xlarge'), 1) !important;
-  height: 30px !important;
+  height: 25px !important;
+  padding: 0 $grid * 3;
 
   @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
     display: none;
@@ -120,4 +121,30 @@ $iconSizes: map-get($variables, 'iconSizes');
     display: flex;
     visibility: visible;
   }
+}
+
+/**
+ * Application Header
+ */
+
+.o-header-app {
+  width: 100%;
+}
+
+.o-header-app > div {
+  padding-left: $grid * 3;
+  padding-right: $grid * 3;
+  padding-top: $grid;
+  padding-bottom: $grid;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.o-header-app__icon {
+  width: 179px !important;
+  height: 24px !important;
+  position: relative;
+  bottom: -1px;
 }

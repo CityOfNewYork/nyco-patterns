@@ -22,3 +22,4 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
   = mixin('pattern', 'objects/header/header');
+  = mixin('pattern', 'objects/header/header-app');

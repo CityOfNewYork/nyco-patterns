@@ -9,8 +9,8 @@ header class='o-header screen-tablet:layout-sidebar w-full'
     h1 class='o-header__main-title'
       span class='hidden' = this.site.author;
 
-      svg aria-hidden='true' class='o-header__logo-main icon-logo-nyco'
-        use xlink:href='#icon-logo-nyco'
+      svg aria-hidden='true' class='o-header__logo-main icon-logo-nyco-secondary'
+        use xlink:href='#icon-logo-nyco-secondary'
 
       svg aria-hidden='true' class='o-header__logo-secondary icon-logo-nyco'
         use xlink:href='#icon-logo-nyco'
