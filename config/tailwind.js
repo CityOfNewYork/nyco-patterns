@@ -17,6 +17,7 @@ module.exports = {
   },
   theme: {
     borderWidth: variables.borderWidth,
+    borderRadius: variables.borderRadius,
     boxShadow: variables.boxShadow,
     colors: global.Object.assign({ default: '' }, variables.colors),
     fontFamily: variables.fontFamily,

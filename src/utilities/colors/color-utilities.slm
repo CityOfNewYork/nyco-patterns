@@ -4,25 +4,25 @@ div class='layout-two-columns-gutter screen-desktop:layout-four-columns-gutter'
       - value = this.variables.colors[key]
 
       div class='inline-block w-full mb-2'
-        div class='bg-${key} py-4 border border-secondary-grey-50t border-b-0 rounded-t'
+        div class='bg-${key} py-6 border border-secondary-grey-50t border-b-0 rounded-t'
 
         div class='code-block border-secondary-grey-50t rounded-t-none border-t-0'
-          div class='p-1 layout-two-columns font-code text-primary-red small border-b border-base-white'
+          div class='p-1 layout-two-columns font-code text-primary-red small'
             div
               | Hex
-            div class='text-right'
+            div class='text-right uppercase'
               = `${value}`
-          div class='p-1 layout-two-columns font-code text-primary-red small border-b border-base-white'
+          div class='p-1 layout-two-columns font-code text-primary-red small'
             div
               | Border
             div class='text-right'
               = `.border-${key}`;
-          div class='p-1 layout-two-columns font-code text-primary-red small border-b border-base-white'
+          div class='p-1 layout-two-columns font-code text-primary-red small'
             div
               | Text
             div class='text-right'
               = `.text-${key}`;
-          div class='p-1 layout-two-columns font-code text-primary-red small border-b border-base-white'
+          div class='p-1 layout-two-columns font-code text-primary-red small'
             div
               | Background
             div class='text-right'

@@ -3,13 +3,39 @@
  */
 
 const package = require('../package.json');
-const { nycoColors } = require('./colors');
+const colors = require('./colors');
 
 /**
  * Config
  */
 
 const variables = {
+  animate: {
+    'ease-in-quint': 'cubic-bezier(0.755, 0.05, 0.855, 0.06)',
+    'ease-out-quint': 'cubic-bezier(0.23, 1, 0.32, 1)',
+    'animate-scss-speed': '0.75s',
+    'animate-timing-function': 'cubic-bezier(0.23, 1, 0.32, 1)'
+  },
+  borderRadius: {
+    'none': '0',
+    'default': '1px'
+  },
+  borderWidth: {
+    '0': '0',
+    'default': '1px',
+    '2': '2px',
+    '4': '4px',
+    '8': '8px'
+  },
+  boxShadow: {
+    'none': 'none',
+    'up-transparent': '8px 8px 0px 0px rgba(47, 51, 79, 0)',
+    'up': '8px 8px 0px 0px',
+    'up-2-transparent': '16px 16px 0px 0px rgba(47, 51, 79, 0)',
+    'up-2': '16px 16px 0px 0px'
+  },
+  colors: colors.colors,
+  colorCombinations: colors.colorCombinations,
   cdn: '"https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v' + package.version + '/dist"',
   fontFamily: {
     'system': [
@@ -57,21 +83,7 @@ const variables = {
     'small': '0.833em',
     'blockquote': '2.074em'
   },
-  lineHeight: {
-    'jumbo': '1.2',
-    'h1': '1.2',
-    'h2': '1.2',
-    'h3': '1.2',
-    'h4': '1.2',
-    'h5': '1.2',
-    'h6': '1.2',
-    'html': '1.5',
-    'code': '1.6',
-    'small': 'normal',
-    'blockquote': 'normal'
-  },
-  colors: nycoColors.colors,
-  colorCombinations: nycoColors.colorCombinations,
+  grid: '8px',
   icons: {
     'icon-logo-nyc': '350px 117px',
     'icon-logo-nyco-secondary': '694px 76px',
@@ -383,28 +395,24 @@ const variables = {
     'large': '136px 136px',
     'xlarge': '256px 256px'
   },
-  animate: {
-    'ease-in-quint': 'cubic-bezier(0.755, 0.05, 0.855, 0.06)',
-    'ease-out-quint': 'cubic-bezier(0.23, 1, 0.32, 1)',
-    'animate-scss-speed': '0.75s',
-    'animate-timing-function': 'cubic-bezier(0.23, 1, 0.32, 1)'
+  inputs: {
+    'checkbox-size': '24px',
+    'radio-size': '24px',
+    'border-radius': '1px',
+    'button-radius': '1px'
   },
-  borderWidth: {
-    '0': '0',
-    'default': '1px',
-    '2': '2px',
-    '4': '4px',
-    '8': '8px'
-  },
-  grid: '8px',
-  padding: {
-    '0': '0',
-    '1': '8px',
-    '2': '16px',
-    '3': '24px',
-    '4': '32px',
-    '5': '40px',
-    '6': '48px'
+  lineHeight: {
+    'jumbo': '1.2',
+    'h1': '1.2',
+    'h2': '1.2',
+    'h3': '1.2',
+    'h4': '1.2',
+    'h5': '1.2',
+    'h6': '1.2',
+    'html': '1.5',
+    'code': '1.6',
+    'small': 'normal',
+    'blockquote': 'normal'
   },
   margin: {
     '-2': '-16px',
@@ -424,11 +432,14 @@ const variables = {
     '600': '600px',
     '900': '896px'
   },
-  width: {
-    '1/2': '50%',
-    'full': '100%',
-    '600': '600px',
-    '900': '896px'
+  padding: {
+    '0': '0',
+    '1': '8px',
+    '2': '16px',
+    '3': '24px',
+    '4': '32px',
+    '5': '40px',
+    '6': '48px'
   },
   screens: {
     'screen-desktop': 960,
@@ -436,18 +447,11 @@ const variables = {
     'screen-tablet': 768,
     'screen-sm-mobile': 400
   },
-  inputs: {
-    'checkbox-size': '24px',
-    'radio-size': '24px',
-    'border-radius': '1px',
-    'button-radius': '1px'
-  },
-  boxShadow: {
-    'none': 'none',
-    'up-transparent': '8px 8px 0px 0px rgba(47, 51, 79, 0)',
-    'up': '8px 8px 0px 0px',
-    'up-2-transparent': '16px 16px 0px 0px rgba(47, 51, 79, 0)',
-    'up-2': '16px 16px 0px 0px'
+  width: {
+    '1/2': '50%',
+    'full': '100%',
+    '600': '600px',
+    '900': '896px'
   }
 };
 
