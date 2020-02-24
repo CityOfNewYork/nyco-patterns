@@ -1,11 +1,35 @@
 div class='layout-two-columns-gutter screen-desktop:layout-four-columns-gutter'
   - for (key in this.variables.colors)
+    - value = this.variables.colors[key]
+
     div class='inline-block w-full mb-2'
       div class='bg-${key} py-4 border border-secondary-grey-50t border-b-0 rounded-t'
 
       div class='code-block border-secondary-grey-50t rounded-t-none border-t-0'
-        pre class='small'
-          = `.{{ prefix }}-${key}`;
+          div class='p-1 layout-two-columns font-code text-primary-red small border-b border-base-white'
+            div
+              | Hex:
+            div class='text-right'
+              = `${value}`
+          div class='p-1 layout-two-columns font-code text-primary-red small border-b border-base-white'
+            div
+              | Border
+            div class='text-right'
+              = `.border-${key}`;
+          div class='p-1 layout-two-columns font-code text-primary-red small border-b border-base-white'
+            div
+              | Text
+            div class='text-right'
+              = `.text-${key}`;
+          div class='p-1 layout-two-columns font-code text-primary-red small border-b border-base-white'
+            div
+              | Background
+            div class='text-right'
+              = `.bg-${key}`;
+
+
 
   div &nbsp;
   div &nbsp;
+
+
