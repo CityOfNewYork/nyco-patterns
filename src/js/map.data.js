@@ -1,6 +1,6 @@
 'use strict';
 
-import { mapColorCombinations } from '../../config/colors';
+import mapColorCombinations from '../../config/colors';
 
 const MapData = {
   single: {
