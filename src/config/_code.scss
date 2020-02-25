@@ -3,6 +3,7 @@
 @import 'config/variables';
 
 $colors: map-get($variables, 'colors');
+$radius: map-get(map-get($variables, 'borderRadius'), 'default');
 
 // Declarations
 @mixin code() {
@@ -14,7 +15,7 @@ $colors: map-get($variables, 'colors');
 
   background-color: map-get($colors, 'secondary-white-70t');
   border: 1px solid map-get($colors, 'secondary-grey-50t');
-  border-radius: 3px;
+  border-radius: $radius;
 
   padding: 0 0.3em;
 }

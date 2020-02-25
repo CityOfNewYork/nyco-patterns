@@ -1,4 +1,149 @@
 $variables:(
+  animate: (
+    ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06),
+    ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1),
+    animate-scss-speed: 0.75s,
+    animate-timing-function: cubic-bezier(0.23, 1, 0.32, 1)
+  ),
+  borderRadius: (
+    none: 0,
+    default: 1px
+  ),
+  borderWidth: (
+    0: 0,
+    2: 2px,
+    4: 4px,
+    8: 8px,
+    default: 1px
+  ),
+  boxShadow: (
+    none: none,
+    up-transparent: 8px 8px 0px 0px rgba(47, 51, 79, 0),
+    up: 8px 8px 0px 0px,
+    up-2-transparent: 16px 16px 0px 0px rgba(47, 51, 79, 0),
+    up-2: 16px 16px 0px 0px
+  ),
+  colors: (
+    navy: #24325b,
+    navy-70t: #4157aa,
+    navy-50t: #8195dc,
+    navy-30t: #cdd8ef,
+    blue: #284cca,
+    blue-70t: #568adf,
+    blue-50t: #96beff,
+    blue-30t: #d2e8ff,
+    red: #fc5d52,
+    red-70t: #ff8787,
+    red-50t: #ffafaf,
+    red-30t: #ffdbdb,
+    grey: #7c7f83,
+    grey-70t: #999ca4,
+    grey-50t: #c1c6cb,
+    grey-30t: #e6e8ec,
+    white: #F3F3F3,
+    white-70t: #F6F6F6,
+    white-50t: #F9F9FA,
+    white-30t: #FBFCFC,
+    orange: #faa302,
+    orange-70t: #fbb95a,
+    orange-50t: #fbd8a1,
+    orange-30t: #ffeecd,
+    pink: #f9a5da,
+    pink-70t: #ffc0f6,
+    pink-50t: #fbd9ff,
+    pink-30t: #fff0fe,
+    base-black: #000000,
+    base-white: #FFFFFF,
+    primary-navy: #24325b,
+    primary-navy-70t: #4157aa,
+    primary-navy-50t: #8195dc,
+    primary-navy-30t: #cdd8ef,
+    primary-blue: #284cca,
+    primary-blue-70t: #568adf,
+    primary-blue-50t: #96beff,
+    primary-blue-30t: #d2e8ff,
+    primary-red: #fc5d52,
+    primary-red-70t: #ff8787,
+    primary-red-50t: #ffafaf,
+    primary-red-30t: #ffdbdb,
+    secondary-grey: #7c7f83,
+    secondary-grey-70t: #999ca4,
+    secondary-grey-50t: #c1c6cb,
+    secondary-grey-30t: #e6e8ec,
+    secondary-white: #F3F3F3,
+    secondary-white-70t: #F6F6F6,
+    secondary-white-50t: #F9F9FA,
+    secondary-white-30t: #FBFCFC,
+    secondary-orange: #faa302,
+    secondary-orange-70t: #fbb95a,
+    secondary-orange-50t: #fbd8a1,
+    secondary-orange-30t: #ffeecd,
+    secondary-pink: #f9a5da,
+    secondary-pink-70t: #ffc0f6,
+    secondary-pink-50t: #fbd9ff,
+    secondary-pink-30t: #fff0fe
+  ),
+  colorCombinations: (
+    light-background: (
+      color: base-black,
+      headings: base-black,
+      hyperlinks: blue,
+      visited: blue,
+      hover: navy,
+      background-color: base-white,
+      border: grey,
+      input-background: base-white,
+      placeholder: grey,
+      focus: navy,
+      checkbox-check: "../svg/icon-ui-check-white.svg",
+      select-arrow: "../svg/icon-ui-chevron-down-navy.svg",
+      error: red
+    ),
+    mid-background: (
+      color: base-black,
+      headings: base-black,
+      hyperlinks: blue,
+      visited: blue,
+      hover: navy,
+      background-color: white,
+      border: grey,
+      input-background: base-white,
+      placeholder: grey,
+      focus: navy,
+      checkbox-check: "../svg/icon-ui-check-white.svg",
+      radio-check: "../svg/icon-ui-check-white.svg",
+      select-arrow: "../svg/icon-ui-chevron-down-navy.svg",
+      error: red
+    ),
+    dark-background: (
+      color: base-white,
+      font-smooth: true,
+      headings: base-white,
+      hyperlinks: base-white,
+      visited: base-white,
+      hover: base-white,
+      background-color: navy,
+      border: base-white,
+      input-background: navy,
+      placeholder: base-white,
+      focus: base-white,
+      checkbox-check: "icon-ui-check-navy.svg",
+      select-arrow: "icon-ui-chevron-down-white.svg",
+      error: red
+    ),
+    primary-button: (
+      font-weight: bold,
+      color: base-white,
+      font-smooth: true,
+      background-color: blue
+    ),
+    secondary-button: (
+      font-weight: bold,
+      color: base-white,
+      font-smooth: true,
+      background-color: red
+    )
+  ),
   cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v2.2.1/dist",
   fontFamily: (
     system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
@@ -35,112 +180,7 @@ $variables:(
     small: 0.833em,
     blockquote: 2.074em
   ),
-  lineHeight: (
-    jumbo: 1.2,
-    h1: 1.2,
-    h2: 1.2,
-    h3: 1.2,
-    h4: 1.2,
-    h5: 1.2,
-    h6: 1.2,
-    html: 1.5,
-    code: 1.6,
-    small: normal,
-    blockquote: normal
-  ),
-  colors: (
-    primary-navy: #24325b,
-    primary-navy-70t: #4157aa,
-    primary-navy-50t: #8195dc,
-    primary-navy-30t: #cdd8ef,
-    primary-blue: #284cca,
-    primary-blue-70t: #568adf,
-    primary-blue-50t: #96beff,
-    primary-blue-30t: #d2e8ff,
-    primary-red: #fc5d52,
-    primary-red-70t: #ff8787,
-    primary-red-50t: #ffafaf,
-    primary-red-30t: #ffdbdb,
-    secondary-grey: #7c7f83,
-    secondary-grey-70t: #999ca4,
-    secondary-grey-50t: #c1c6cb,
-    secondary-grey-30t: #e6e8ec,
-    secondary-white: #F3F3F3,
-    secondary-white-70t: #F6F6F6,
-    secondary-white-50t: #F9F9FA,
-    secondary-white-30t: #FBFCFC,
-    secondary-orange: #faa302,
-    secondary-orange-70t: #fbb95a,
-    secondary-orange-50t: #fbd8a1,
-    secondary-orange-30t: #ffeecd,
-    secondary-pink: #f9a5da,
-    secondary-pink-70t: #ffc0f6,
-    secondary-pink-50t: #fbd9ff,
-    secondary-pink-30t: #fff0fe,
-    base-black: #000000,
-    base-white: #FFFFFF
-  ),
-  colorCombinations: (
-    light-background: (
-      color: base-black,
-      headings: base-black,
-      hyperlinks: primary-blue,
-      visited: primary-blue,
-      hover: primary-navy,
-      background-color: base-white,
-      border: secondary-grey,
-      input-background: base-white,
-      placeholder: secondary-grey,
-      focus: primary-navy,
-      checkbox-check: "../svg/icon-ui-check-white.svg",
-      select-arrow: "../svg/icon-ui-chevron-down-navy.svg",
-      error: primary-red
-    ),
-    mid-background: (
-      color: base-black,
-      headings: base-black,
-      hyperlinks: primary-blue,
-      visited: primary-blue,
-      hover: primary-navy,
-      background-color: secondary-white,
-      border: secondary-grey,
-      input-background: base-white,
-      placeholder: secondary-grey,
-      focus: primary-navy,
-      checkbox-check: "../svg/icon-ui-check-white.svg",
-      radio-check: "../svg/icon-ui-check-white.svg",
-      select-arrow: "../svg/icon-ui-chevron-down-navy.svg",
-      error: primary-red
-    ),
-    dark-background: (
-      color: base-white,
-      font-smooth: true,
-      headings: base-white,
-      hyperlinks: base-white,
-      visited: base-white,
-      hover: base-white,
-      background-color: primary-navy,
-      border: base-white,
-      input-background: primary-navy,
-      placeholder: base-white,
-      focus: base-white,
-      checkbox-check: "icon-ui-check-navy.svg",
-      select-arrow: "icon-ui-chevron-down-white.svg",
-      error: primary-red
-    ),
-    primary-button: (
-      font-weight: bold,
-      color: base-white,
-      font-smooth: true,
-      background-color: primary-blue
-    ),
-    secondary-button: (
-      font-weight: bold,
-      color: base-white,
-      font-smooth: true,
-      background-color: primary-red
-    )
-  ),
+  grid: 8px,
   icons: (
     icon-logo-nyc: 350px 117px,
     icon-logo-nyco-secondary: 694px 76px,
@@ -452,28 +492,24 @@ $variables:(
     large: 136px 136px,
     xlarge: 256px 256px
   ),
-  animate: (
-    ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06),
-    ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1),
-    animate-scss-speed: 0.75s,
-    animate-timing-function: cubic-bezier(0.23, 1, 0.32, 1)
+  inputs: (
+    checkbox-size: 24px,
+    radio-size: 24px,
+    border-radius: 1px,
+    button-radius: 1px
   ),
-  borderWidth: (
-    0: 0,
-    2: 2px,
-    4: 4px,
-    8: 8px,
-    default: 1px
-  ),
-  grid: 8px,
-  padding: (
-    0: 0,
-    1: 8px,
-    2: 16px,
-    3: 24px,
-    4: 32px,
-    5: 40px,
-    6: 48px
+  lineHeight: (
+    jumbo: 1.2,
+    h1: 1.2,
+    h2: 1.2,
+    h3: 1.2,
+    h4: 1.2,
+    h5: 1.2,
+    h6: 1.2,
+    html: 1.5,
+    code: 1.6,
+    small: normal,
+    blockquote: normal
   ),
   margin: (
     0: 0,
@@ -493,11 +529,14 @@ $variables:(
     1/2: 50%,
     full: 100%
   ),
-  width: (
-    600: 600px,
-    900: 896px,
-    1/2: 50%,
-    full: 100%
+  padding: (
+    0: 0,
+    1: 8px,
+    2: 16px,
+    3: 24px,
+    4: 32px,
+    5: 40px,
+    6: 48px
   ),
   screens: (
     screen-desktop: 960,
@@ -505,17 +544,10 @@ $variables:(
     screen-tablet: 768,
     screen-sm-mobile: 400
   ),
-  inputs: (
-    checkbox-size: 24px,
-    radio-size: 24px,
-    border-radius: 1px,
-    button-radius: 1px
-  ),
-  boxShadow: (
-    none: none,
-    up-transparent: 8px 8px 0px 0px rgba(47, 51, 79, 0),
-    up: 8px 8px 0px 0px,
-    up-2-transparent: 16px 16px 0px 0px rgba(47, 51, 79, 0),
-    up-2: 16px 16px 0px 0px
+  width: (
+    600: 600px,
+    900: 896px,
+    1/2: 50%,
+    full: 100%
   )
 );

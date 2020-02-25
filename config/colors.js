@@ -2,70 +2,81 @@
  * Config
  */
 
-const nycoColors = {
-  colors: {
-    'primary-navy': '#24325b',
-    'primary-navy-70t': '#4157aa',
-    'primary-navy-50t': '#8195dc',
-    'primary-navy-30t': '#cdd8ef',
-    'primary-blue': '#284cca',
-    'primary-blue-70t': '#568adf',
-    'primary-blue-50t': '#96beff',
-    'primary-blue-30t': '#d2e8ff',
-    'primary-red': '#fc5d52',
-    'primary-red-70t': '#ff8787',
-    'primary-red-50t': '#ffafaf',
-    'primary-red-30t': '#ffdbdb',
-    'secondary-grey': '#7c7f83',
-    'secondary-grey-70t': '#999ca4',
-    'secondary-grey-50t': '#c1c6cb',
-    'secondary-grey-30t': '#e6e8ec',
-    'secondary-white': '#F3F3F3',
-    'secondary-white-70t': '#F6F6F6',
-    'secondary-white-50t': '#F9F9FA',
-    'secondary-white-30t': '#FBFCFC',
-    'secondary-orange': '#faa302',
-    'secondary-orange-70t': '#fbb95a',
-    'secondary-orange-50t': '#fbd8a1',
-    'secondary-orange-30t': '#ffeecd',
-    'secondary-pink': '#f9a5da',
-    'secondary-pink-70t': '#ffc0f6',
-    'secondary-pink-50t': '#fbd9ff',
-    'secondary-pink-30t': '#fff0fe',
+const colors = {
+  'primary': [
+    'navy',
+    'blue',
+    'red'
+  ],
+  'secondary': [
+    'grey',
+    'white',
+    'orange',
+    'pink'
+  ],
+  'colors': {
+    'navy': '#24325b',
+    'navy-70t': '#4157aa',
+    'navy-50t': '#8195dc',
+    'navy-30t': '#cdd8ef',
+    'blue': '#284cca',
+    'blue-70t': '#568adf',
+    'blue-50t': '#96beff',
+    'blue-30t': '#d2e8ff',
+    'red': '#fc5d52',
+    'red-70t': '#ff8787',
+    'red-50t': '#ffafaf',
+    'red-30t': '#ffdbdb',
+    'grey': '#7c7f83',
+    'grey-70t': '#999ca4',
+    'grey-50t': '#c1c6cb',
+    'grey-30t': '#e6e8ec',
+    'white': '#F3F3F3',
+    'white-70t': '#F6F6F6',
+    'white-50t': '#F9F9FA',
+    'white-30t': '#FBFCFC',
+    'orange': '#faa302',
+    'orange-70t': '#fbb95a',
+    'orange-50t': '#fbd8a1',
+    'orange-30t': '#ffeecd',
+    'pink': '#f9a5da',
+    'pink-70t': '#ffc0f6',
+    'pink-50t': '#fbd9ff',
+    'pink-30t': '#fff0fe',
     'base-black': '#000000',
     'base-white': '#FFFFFF'
   },
-  colorCombinations: {
+  'colorCombinations': {
     'light-background': {
       'color': 'base-black',
       'headings': 'base-black',
-      'hyperlinks': 'primary-blue',
-      'visited': 'primary-blue',
-      'hover': 'primary-navy',
+      'hyperlinks': 'blue',
+      'visited': 'blue',
+      'hover': 'navy',
       'background-color': 'base-white',
-      'border': 'secondary-grey',
+      'border': 'grey',
       'input-background': 'base-white',
-      'placeholder': 'secondary-grey',
-      'focus': 'primary-navy',
+      'placeholder': 'grey',
+      'focus': 'navy',
       'checkbox-check': '"../svg/icon-ui-check-white.svg"',
       'select-arrow': '"../svg/icon-ui-chevron-down-navy.svg"',
-      'error': 'primary-red'
+      'error': 'red'
     },
     'mid-background': {
       'color': 'base-black',
       'headings': 'base-black',
-      'hyperlinks': 'primary-blue',
-      'visited': 'primary-blue',
-      'hover': 'primary-navy',
-      'background-color': 'secondary-white',
-      'border': 'secondary-grey',
+      'hyperlinks': 'blue',
+      'visited': 'blue',
+      'hover': 'navy',
+      'background-color': 'white',
+      'border': 'grey',
       'input-background': 'base-white',
-      'placeholder': 'secondary-grey',
-      'focus': 'primary-navy',
+      'placeholder': 'grey',
+      'focus': 'navy',
       'checkbox-check': '"../svg/icon-ui-check-white.svg"',
       'radio-check': '"../svg/icon-ui-check-white.svg"',
       'select-arrow': '"../svg/icon-ui-chevron-down-navy.svg"',
-      'error': 'primary-red'
+      'error': 'red'
     },
     'dark-background': {
       'color': 'base-white',
@@ -74,39 +85,71 @@ const nycoColors = {
       'hyperlinks': 'base-white',
       'visited': 'base-white',
       'hover': 'base-white',
-      'background-color': 'primary-navy',
+      'background-color': 'navy',
       'border': 'base-white',
-      'input-background': 'primary-navy',
+      'input-background': 'navy',
       'placeholder': 'base-white',
       'focus': 'base-white',
       'checkbox-check': '"icon-ui-check-navy.svg"',
       'select-arrow': '"icon-ui-chevron-down-white.svg"',
-      'error': 'primary-red'
+      'error': 'red'
     },
     'primary-button': {
       'font-weight': 'bold',
       'color': 'base-white',
       'font-smooth': true,
-      'background-color': 'primary-blue'
+      'background-color': 'blue'
     },
     'secondary-button': {
       'font-weight': 'bold',
       'color': 'base-white',
       'font-smooth': true,
-      'background-color': 'primary-red'
+      'background-color': 'red'
     }
   },
 };
 
-const color = nycoColors.colors;
-const mapColorCombinations = [
-  [color['primary-navy'], color['primary-navy-70t']],
-  [color['base-black'], color['secondary-orange']],
-  [color['primary-navy'], color['secondary-grey']],
-  [color['primary-blue'], color['secondary-orange']],
+/**
+ * TEMP Backwards Compatible Color Utils. Deprecate for next major release.
+ * Adds the primary and secondary namespaces of the colors so they compile in
+ * the site utilities.
+ * @since v2.2.2
+ */
+Object.keys(colors.colors).forEach((key) => {
+  if (colors.primary.includes(key.split('-')[0])) {
+    colors.colors[`primary-${key}`] = colors.colors[key];
+  }
+
+  if (colors.secondary.includes(key.split('-')[0])) {
+    colors.colors[`secondary-${key}`] = colors.colors[key];
+  }
+});
+
+/**
+ * Map Color Utils
+ */
+
+colors.mapColorCombinations = [
+  [
+    colors.colors['primary-navy'],
+    colors.colors['primary-navy-70t']
+  ],
+  [
+    colors.colors['base-black'],
+    colors.colors['secondary-orange']
+  ],
+  [
+    colors.colors['primary-navy'],
+    colors.colors['secondary-grey']
+  ],
+  [
+    colors.colors['primary-blue'],
+    colors.colors['secondary-orange']
+  ],
 ];
 
-module.exports = {
-  nycoColors,
-  mapColorCombinations
-};
+/**
+ * Export our modules
+ */
+
+module.exports = colors;
