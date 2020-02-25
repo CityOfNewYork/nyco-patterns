@@ -9,7 +9,11 @@ const colors = require('./colors');
  * Config
  */
 
-const variables = {
+const tokens = {
+  opts: {
+    output: '"./src/config/_tokens.scss"',
+    prefix: '"$tokens:"'
+  },
   animate: {
     'ease-in-quint': 'cubic-bezier(0.755, 0.05, 0.855, 0.06)',
     'ease-out-quint': 'cubic-bezier(0.23, 1, 0.32, 1)',
@@ -455,4 +459,4 @@ const variables = {
   }
 };
 
-module.exports = variables;
+module.exports = tokens;

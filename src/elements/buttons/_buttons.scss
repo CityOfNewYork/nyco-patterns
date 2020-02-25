@@ -7,9 +7,9 @@
 @import 'config/buttons';
 @import 'config/screens';
 
-$buttons: map-get($variables, 'buttons');
-$grid: map-get($variables, 'grid');
-$radius: map-get(map-get($variables, 'inputs'), 'button-radius');
+$buttons: map-get($tokens, 'buttons');
+$grid: map-get($tokens, 'grid');
+$radius: map-get(map-get($tokens, 'inputs'), 'button-radius');
 
 button {
   @include button-reset();

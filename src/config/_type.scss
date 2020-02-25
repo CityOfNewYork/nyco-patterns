@@ -1,9 +1,9 @@
-@import 'config/variables';
+@import 'config/tokens';
 
-$font-family: map-get($variables, 'fontFamily');
-$font-size: map-get($variables, 'fontSize');
-$font-weight: map-get($variables, 'fontWeight');
-$line-height: map-get($variables, 'lineHeight');
+$font-family: map-get($tokens, 'fontFamily');
+$font-size: map-get($tokens, 'fontSize');
+$font-weight: map-get($tokens, 'fontWeight');
+$line-height: map-get($tokens, 'lineHeight');
 
 @mixin typeface($key: 'html') {
   font-family: map-get($font-size, $key);

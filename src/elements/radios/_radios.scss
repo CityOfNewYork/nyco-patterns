@@ -3,12 +3,12 @@
  */
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 @import 'config/radios';
 @import 'config/direction';
 @import 'config/fonts';
 
-$grid: map-get($variables, 'grid');
+$grid: map-get($tokens, 'grid');
 
 // Declarations
 .radio {

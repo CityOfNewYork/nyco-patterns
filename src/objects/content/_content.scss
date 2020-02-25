@@ -1,4 +1,4 @@
-@import 'config/variables';
+@import 'config/tokens';
 @import 'elements/code/code';
 @import 'elements/tables/tables';
 
@@ -23,10 +23,10 @@
   }
 
   img {
-    box-shadow: 0 0 0 map-get($variables, 'grid') / 2;
+    box-shadow: 0 0 0 map-get($tokens, 'grid') / 2;
   }
 
   pre, .code-block, table {
-    margin-bottom: map-get($variables, 'grid') * 2;
+    margin-bottom: map-get($tokens, 'grid') * 2;
   }
 }

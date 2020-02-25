@@ -3,12 +3,12 @@
  */
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 
-$screens: map-get($variables, 'screens');
-$colors: map-get($variables, 'colors');
-$grid: map-get($variables, 'grid');
-$iconSizes: map-get($variables, 'iconSizes');
+$screens: map-get($tokens, 'screens');
+$colors: map-get($tokens, 'colors');
+$grid: map-get($tokens, 'grid');
+$iconSizes: map-get($tokens, 'iconSizes');
 
 // Declarations
 .o-header {

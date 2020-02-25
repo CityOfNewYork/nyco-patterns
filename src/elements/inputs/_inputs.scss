@@ -3,7 +3,7 @@
  */
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 @import 'config/animate';
 @import 'config/inputs';
 
@@ -55,8 +55,8 @@ input[type='number'] {
 }
 
 .input-autocomplete__dropdown > ul {
-  background: map-get(map-get($variables, 'colors'), 'base-white');;
-  color: map-get(map-get($variables, 'colors'), 'base-black');
+  background: map-get(map-get($tokens, 'colors'), 'base-white');;
+  color: map-get(map-get($tokens, 'colors'), 'base-black');
 
   position: absolute;
   right: 0;
@@ -72,7 +72,7 @@ input[type='number'] {
   margin-top: 1px;
   z-index: 1;
 
-  box-shadow: map-get(map-get($variables, 'boxShadow'), 'up');
+  box-shadow: map-get(map-get($tokens, 'boxShadow'), 'up');
 }
 
 .input-autocomplete__dropdown > ul > li {
@@ -83,5 +83,5 @@ input[type='number'] {
 }
 
 .input-autocomplete__dropdown > ul > .input-autocomplete__highlight {
-  background-color: map-get(map-get($variables, 'colors'), 'secondary-grey-50t');
+  background-color: map-get(map-get($tokens, 'colors'), 'secondary-grey-50t');
 }

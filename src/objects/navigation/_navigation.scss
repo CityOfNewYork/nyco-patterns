@@ -3,11 +3,11 @@
  */
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 @import 'config/type';
 
-$screens: map-get($variables, 'screens');
-$grid: map-get($variables, 'grid');
+$screens: map-get($tokens, 'screens');
+$grid: map-get($tokens, 'grid');
 
 // Declarations
 .o-navigation {

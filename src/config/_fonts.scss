@@ -1,6 +1,6 @@
-@import 'config/variables';
+@import 'config/tokens';
 
-$font-weights: map-get($variables, 'fontWeight');
+$font-weights: map-get($tokens, 'fontWeight');
 $font-weight-bold: map-get($font-weights, bold);
 
 @mixin font-smooth() {

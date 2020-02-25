@@ -3,14 +3,14 @@
 //
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 @import 'config/colors';
 @import 'config/fonts';
 @import 'config/direction';
 
-$grid: map-get($variables, 'grid');
-$size: map-get(map-get($variables, 'inputs'), 'radio-size');
-$radius: map-get(map-get($variables, 'inputs'), 'border-radius');
+$grid: map-get($tokens, 'grid');
+$size: map-get(map-get($tokens, 'inputs'), 'radio-size');
+$radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
 
 // Declarations
 @mixin radios {
@@ -36,11 +36,11 @@ $radius: map-get(map-get($variables, 'inputs'), 'border-radius');
 
   display: flex;
   margin: 0;
-  padding: .75 * map-get(map-get($variables, 'padding'), 2);
+  padding: .75 * map-get(map-get($tokens, 'padding'), 2);
 
   border-width: 1px;
   border-style: solid;
-  border-radius: map-get(map-get($variables, 'inputs'), 'border-radius');
+  border-radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
 
   transition: all .2s;
 

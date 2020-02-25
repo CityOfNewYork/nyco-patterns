@@ -1,9 +1,9 @@
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 
-$colors: map-get($variables, 'colors');
-$radius: map-get(map-get($variables, 'borderRadius'), 'default');
+$colors: map-get($tokens, 'colors');
+$radius: map-get(map-get($tokens, 'borderRadius'), 'default');
 
 // Declarations
 @mixin code() {

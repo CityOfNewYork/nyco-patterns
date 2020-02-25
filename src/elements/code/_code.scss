@@ -3,11 +3,11 @@
  */
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 @import 'config/type';
 @import 'config/code';
 
-$colors: map-get($variables, 'colors');
+$colors: map-get($tokens, 'colors');
 
 // Declarations
 code, pre {

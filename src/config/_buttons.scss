@@ -5,8 +5,8 @@
 // Dependencies
 @import 'config/variables';
 
-$colors: map-get($variables, 'colors');
-$colorCombinations: map-get($variables, 'colorCombinations');
+$colors: map-get($tokens, 'colors');
+$colorCombinations: map-get($tokens, 'colorCombinations');
 
 // Declarations
 @mixin button-reset() {
@@ -54,7 +54,7 @@ $colorCombinations: map-get($variables, 'colorCombinations');
   &:active {
     color: $text;
     background: $level0;
-    box-shadow: map-get(map-get($variables, 'boxShadow'), 'up') $level1, 0 0 0 3px rgba(255, 255, 255, 0);
+    box-shadow: map-get(map-get($tokens, 'boxShadow'), 'up') $level1, 0 0 0 3px rgba(255, 255, 255, 0);
   }
 }
 

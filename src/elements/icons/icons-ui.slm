@@ -1,11 +1,11 @@
 div class='layout-two-columns-gutter screen-desktop:layout-four-columns-gutter'
-  - for key in this.variables.icons
+  - for key in this.tokens.icons
     - if key.includes('icon-ui-')
 
       - href = key
-      - for i in this.variables.iconVariants
-        - if href.indexOf(this.variables.iconVariants[i]) > 0
-          - href = href.replace(this.variables.iconVariants[i], '')
+      - for i in this.tokens.iconVariants
+        - if href.indexOf(this.tokens.iconVariants[i]) > 0
+          - href = href.replace(this.tokens.iconVariants[i], '')
 
       div class=''
         div class='color-light-background border border-secondary-grey-50t border-b-0 rounded-t text-center p-2'

@@ -1,7 +1,7 @@
 div class='layout-two-columns-gutter screen-desktop:layout-four-columns-gutter'
-  - for (key in this.variables.colors)
+  - for (key in this.tokens.colors)
     - if (!key.includes('primary') && !key.includes('secondary'))
-      - value = this.variables.colors[key]
+      - value = this.tokens.colors[key]
 
       div class='inline-block w-full mb-2'
         div class='bg-${key} py-6 border border-secondary-grey-50t border-b-0 rounded-t'

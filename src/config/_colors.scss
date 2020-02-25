@@ -1,10 +1,10 @@
-@import 'config/variables';
+@import 'config/tokens';
 @import 'config/fonts';
 @import 'config/cdn';
 
-$colors: map-get($variables, 'colors');
-$statuses: map-get($variables, 'colorStatuses');
-$combinations: map-get($variables, 'colorCombinations');
+$colors: map-get($tokens, 'colors');
+$statuses: map-get($tokens, 'colorStatuses');
+$combinations: map-get($tokens, 'colorCombinations');
 
 // Variables
 $primary-navy: map-get($colors, 'primary-navy');

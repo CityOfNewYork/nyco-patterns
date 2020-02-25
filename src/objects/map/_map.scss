@@ -3,20 +3,20 @@
  */
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 
 // Declarations
 .o-map {
   .map-menu {
     a {
-      margin-right: map-get(map-get($variables, 'margin'), 1);
+      margin-right: map-get(map-get($tokens, 'margin'), 1);
       overflow-wrap: normal;
       word-wrap: normal;
       overflow: scroll;
     }
 
     a.active {
-      color: map-get(map-get($variables, 'colors'), 'primary-navy');
+      color: map-get(map-get($tokens, 'colors'), 'primary-navy');
     }
   }
 
@@ -28,7 +28,7 @@
     border-radius: 3px;
     font-weight: 600;
     width: 130px;
-    color: map-get(map-get($variables, 'colors'), 'base-white');
+    color: map-get(map-get($tokens, 'colors'), 'base-white');
   }
 
   .map-legend input[type=checkbox]:first-child + label {
@@ -46,9 +46,9 @@
 
   .map-legend input[type=checkbox] + label {
     display: block;
-    background-color: map-get(map-get($variables, 'colors'), 'primary-navy-70t');
+    background-color: map-get(map-get($tokens, 'colors'), 'primary-navy-70t');
     padding: 10px;
-    border-bottom: 1px solid map-get(map-get($variables, 'colors'), 'primary-navy-30t');
+    border-bottom: 1px solid map-get(map-get($tokens, 'colors'), 'primary-navy-30t');
     text-transform: capitalize;
     text-overflow: ellipsis;
     overflow-x: hidden;
@@ -58,7 +58,7 @@
 
   .map-legend input[type=checkbox] + label:hover,
   .map-legend input[type=checkbox]:checked + label {
-    background-color: map-get(map-get($variables, 'colors'), 'primary-blue');
+    background-color: map-get(map-get($tokens, 'colors'), 'primary-blue');
   }
 
   .map-legend input[type=checkbox]:checked + label:before {
@@ -83,7 +83,7 @@
     &:hover {
       background-color: transparent;
       text-decoration: underline;
-      text-decoration-color: map-get(map-get($variables, 'colors'), 'primary-navy');
+      text-decoration-color: map-get(map-get($tokens, 'colors'), 'primary-navy');
       transform: scale(1.4);
     }
   }

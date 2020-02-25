@@ -12,7 +12,9 @@ const sass = {
   sourceMapEmbed: true,
   precision: 2,
   includePaths: [
-    './node_modules', './src'
+    './src/',
+    './node_modules/@nycopportunity/',
+    './node_modules/animate.scss/'
   ]
 };
 

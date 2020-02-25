@@ -3,7 +3,7 @@
  */
 
 // const defaultConfig = require('tailwindcss/defaultConfig')();
-const variables = require('./variables.js');
+const tokens = require('./tokens.js');
 
 /**
  * Config
@@ -16,24 +16,24 @@ module.exports = {
     separator: ':'
   },
   theme: {
-    borderWidth: variables.borderWidth,
-    borderRadius: variables.borderRadius,
-    boxShadow: variables.boxShadow,
-    colors: global.Object.assign({ default: '' }, variables.colors),
-    fontFamily: variables.fontFamily,
-    fontWeight: variables.fontWeight,
-    fontSize: variables.fontSize,
-    lineHeight: variables.lineHeight,
-    margin: variables.margin,
-    maxWidth: variables.maxWidth,
-    padding: variables.padding,
+    borderWidth: tokens.borderWidth,
+    borderRadius: tokens.borderRadius,
+    boxShadow: tokens.boxShadow,
+    colors: global.Object.assign({ default: '' }, tokens.colors),
+    fontFamily: tokens.fontFamily,
+    fontWeight: tokens.fontWeight,
+    fontSize: tokens.fontSize,
+    lineHeight: tokens.lineHeight,
+    margin: tokens.margin,
+    maxWidth: tokens.maxWidth,
+    padding: tokens.padding,
     screens: {
-      'screen-desktop': `${variables.screens['screen-desktop']}px`,
-      'screen-tablet': `${variables.screens['screen-tablet']}px`,
-      'screen-mobile': `${variables.screens['screen-mobile']}px`,
-      'screen-sm-mobile': `${variables.screens['screen-desktop']}px`
+      'screen-desktop': `${tokens.screens['screen-desktop']}px`,
+      'screen-tablet': `${tokens.screens['screen-tablet']}px`,
+      'screen-mobile': `${tokens.screens['screen-mobile']}px`,
+      'screen-sm-mobile': `${tokens.screens['screen-desktop']}px`
     },
-    width: variables.width
+    width: tokens.width
   },
   variants: {
     preflight: [],

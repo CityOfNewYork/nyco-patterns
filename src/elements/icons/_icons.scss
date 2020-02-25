@@ -3,16 +3,16 @@
  */
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 @import 'config/screens';
 @import 'config/cdn';
 @import 'scss/functions/str-replace';
 
-$screens: map-get($variables, 'screens');
+$screens: map-get($tokens, 'screens');
 
 // Declarations
 @mixin iconSizes($variant: '') {
-  @each $key, $var in map-get($variables, 'iconSizes') {
+  @each $key, $var in map-get($tokens, 'iconSizes') {
     .#{$variant}icon-#{$key} {
       width: nth($var, 1) !important;
       height: nth($var, 2) !important;
@@ -41,11 +41,11 @@ $screens: map-get($variables, 'screens');
   }
 }
 
-@each $key, $var in map-get($variables, 'icons') {
+@each $key, $var in map-get($tokens, 'icons') {
   $path: $key;
 
-  @if map-get($variables, 'iconVariants') {
-    @each $str in map-get($variables, 'iconVariants') {
+  @if map-get($tokens, 'iconVariants') {
+    @each $str in map-get($tokens, 'iconVariants') {
       $path: str-replace($path, $str);
     }
   }

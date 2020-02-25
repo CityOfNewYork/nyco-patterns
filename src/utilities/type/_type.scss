@@ -1,9 +1,9 @@
-@import 'config/variables';
+@import 'config/tokens';
 @import 'config/fonts';
 @import 'config/type';
 @import 'config/direction';
 
-$fonts: map-get($variables, 'fontFamily');
+$fonts: map-get($tokens, 'fontFamily');
 
 html, body {
   @include type('html') {
@@ -75,7 +75,7 @@ blockquote, .blockquote {
   footer {
     font-size: 65%;
     font-weight: normal;
-    padding-left: map-get($variables, 'grid') * 3;
+    padding-left: map-get($tokens, 'grid') * 3;
   }
 
   cite {
@@ -83,9 +83,9 @@ blockquote, .blockquote {
   }
 
   p {
-    border-left: map-get($variables, 'grid') solid;
+    border-left: map-get($tokens, 'grid') solid;
     border-color: inherit;
-    padding-left: map-get($variables, 'grid') * 2;
+    padding-left: map-get($tokens, 'grid') * 2;
     margin-bottom: 0.64em;
   }
 }

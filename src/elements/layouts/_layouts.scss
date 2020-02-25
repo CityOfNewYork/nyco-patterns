@@ -3,10 +3,10 @@
  */
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 @import 'config/screens';
 
-$grid: map-get($variables, 'grid');
+$grid: map-get($tokens, 'grid');
 
 // Declaration
 @mixin layouts($variant: '') {
