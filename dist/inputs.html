@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap"
     rel="stylesheet" />
   <script type="text/javascript">
-    var VERSION = '2.2.3';
+    var VERSION = '2.3.0';
   </script><noscript>
     <style>
       body {
@@ -46,17 +46,17 @@
           class="o-header__logo-secondary icon-logo-nyco">
           <use xlink:href="#icon-logo-nyco"></use>
         </svg></h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.2.3</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.3.0</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div><a class="btn flex items-center"
-          href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.2.3"><svg
+          href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.3.0"><svg
             aria-hidden="true" class="icon-ui-github icon-small mr-1">
             <use xlink:href="#icon-ui-github"></use>
-          </svg>2.2.3</a></div>
+          </svg>2.3.0</a></div>
     </div>
   </header>
   <main
@@ -261,9 +261,7 @@
             <pre><code>&lt;div class=&quot;input-autocomplete&quot;&gt;
   &lt;input aria-autocomplete=&quot;both&quot; aria-describedby=&quot;input-autocomplete__instructions-0&quot; aria-expanded=&quot;false&quot; aria-owns=&quot;input-autocomplete__options&quot; autocomplete=&quot;off&quot; data-js=&quot;input-autocomplete__input&quot; type=&quot;text&quot; /&gt;
   &lt;div aria-live=&quot;polite&quot; class=&quot;sr-only&quot; id=&quot;input-autocomplete__instructions-0&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-</code></pre>
+&lt;/div&gt;</code></pre>
             <p>Note: You can add the
               <code>data-persist-dropdown=&#39;true&#39;</code> attribute to the
               <code>input</code> element for testing. The attribute will make
@@ -281,9 +279,7 @@
       [&#39;Bronx&#39;], [&#39;Queens&#39;]
     ]
   });
-&lt;/script&gt;
-
-</code></pre>
+&lt;/script&gt;</code></pre>
             <p>This function will instantiate the autocomplete with the provided
               options and attach the event listener to an input element with the
               default selector
@@ -299,17 +295,13 @@
   selected: function(value, autocomplete) {
     console.dir(&#39;Selected &#39; + value + &#39;!&#39;);
   }
-});
-
-</code></pre>
+});</code></pre>
             <h5 id="heading-updating-options">Updating Options</h5>
             <p>Below is an example of using the options setter to update the
               options after the class has been instantiated.</p>
             <pre><code>autocomplete.options([
   [&#39;Bronx&#39;], [&#39;Queens&#39;], [&#39;Brooklyn&#39;], [&#39;Staten Island&#39;], [&#39;Manhattan&#39;]
-]);
-
-</code></pre>
+]);</code></pre>
             <h5 id="heading-providing-synonyms">Providing Synonyms</h5>
             <p>Each option can be provided with a list of synonyms that will
               score the option higher as the user types. Try it out in the
@@ -323,9 +315,7 @@
   [&#39;Brooklyn&#39;, &#39;Flatbush&#39;, &#39;Bay Ridge&#39;, &#39;DUMBO&#39;, &#39;Williamsburg&#39;],
   [&#39;Staten Island&#39;, &#39;South Beach&#39;, &#39;Fort Wadsworth&#39;, &#39;Todt Hill&#39;, &#39;Great Kills&#39;],
   [&#39;Manhattan&#39;, &#39;Lower&#39;, &#39;Midtown&#39;, &#39;Chinatown&#39;, &#39;SoHo&#39;]
-]);
-
-</code></pre>
+]);</code></pre>
             <h5 id="heading-providing-strings">Providing Strings</h5>
             <p>The list of strings below are used for screen reader accessiblity
               by default. They can be overridden using the <code>.strings</code>
@@ -338,25 +328,49 @@
   &#39;DIRECTIONS_REVIEW&#39;: &#39;Keyboard users can use the up and down arrows to review options and press enter to select an option&#39;,
   &#39;OPTION_AVAILABLE&#39;: &#39;{{ NUMBER }} options available&#39;,
   &#39;OPTION_SELECTED&#39;: &#39;{{ VALUE }} selected&#39;
-});
-
-</code></pre>
+});</code></pre>
             <h4 id="heading-configuration">Configuration</h4>
             <p>The <code>InputAutocomplete</code> class accepts an object
               <code>{}</code> with two properties: <code>selector</code> and
               <code>options</code>.</p>
-            <p>Option | Type | Importance | Description
-              —————-|:———–:|:———-:|————| <code>options</code> | <em>array</em> |
-              required | The suggested terms to be displayed in the dropdown.
-              Each item is an array with the first item being the visible value.
-              The following values within each array are treated as synonyms
-              that score the priority of term higher if the user types it.
-              <code>selected</code> | <em>function</em> | optional | A callback
-              method that will be executed when a user has selected an option.
-              <code>selector</code> | <em>string</em> | optional | The selector
-              for the input element. If no selector is provided the default
-              value will be set to
-              <code>[data-js=&quot;input-autocomplete__input&quot;]</code>.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Option</th>
+                  <th align="center">Type</th>
+                  <th align="center">Importance</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>options</code></td>
+                  <td align="center"><em>array</em></td>
+                  <td align="center">required</td>
+                  <td>The suggested terms to be displayed in the dropdown. Each
+                    item is an array with the first item being the visible
+                    value. The following values within each array are treated as
+                    synonyms that score the priority of term higher if the user
+                    types it.</td>
+                </tr>
+                <tr>
+                  <td><code>selected</code></td>
+                  <td align="center"><em>function</em></td>
+                  <td align="center">optional</td>
+                  <td>A callback method that will be executed when a user has
+                    selected an option.</td>
+                </tr>
+                <tr>
+                  <td><code>selector</code></td>
+                  <td align="center"><em>string</em></td>
+                  <td align="center">optional</td>
+                  <td>The selector for the input element. If no selector is
+                    provided the default value will be set to
+                    <code>[data-js=&quot;input-autocomplete__input&quot;]</code>.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
             <h4 id="heading-cherry-picked-module-import">Cherry-picked Module
               Import</h4>
             <p>The ES6 module requires importing and object instantiation in
@@ -369,9 +383,15 @@ new InputAutocomplete({
   options: [
     [&#39;Bronx&#39;], [&#39;Queens&#39;]
   ]
-});
-
-</code></pre>
+});</code></pre>
+            <p>[//]: &lt;&gt; (#### Accessibility: Accessibility is suppported
+              through ARIA attributes that will prompt the user on how to use
+              the dropdown list. Screen readers will also announce the list of
+              options in the dropdown as the user navigates them with the
+              keyboard. To maintain the elements accessibility, the
+              <code>accessibility</code> utility should be used and the
+              appropriate ARIA attributes applied to the element (see markup
+              section.)</p>
           </div>
         </div>
       </section>
@@ -442,5 +462,4 @@ new InputAutocomplete({
       'OPTION_SELECTED': '{{ VALUE }} is selected!'
     });
   </script>
-  <script src="/reload/reload.js"></script>
 </body>

@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap"
     rel="stylesheet" />
   <script type="text/javascript">
-    var VERSION = '2.2.3';
+    var VERSION = '2.3.0';
   </script><noscript>
     <style>
       body {
@@ -46,17 +46,17 @@
           class="o-header__logo-secondary icon-logo-nyco">
           <use xlink:href="#icon-logo-nyco"></use>
         </svg></h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.2.3</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.3.0</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div><a class="btn flex items-center"
-          href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.2.3"><svg
+          href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.3.0"><svg
             aria-hidden="true" class="icon-ui-github icon-small mr-1">
             <use xlink:href="#icon-ui-github"></use>
-          </svg>2.2.3</a></div>
+          </svg>2.3.0</a></div>
     </div>
   </header>
   <main
@@ -187,9 +187,7 @@
             <p>There are a few options when integrating the Pattern Framework,
               and pattern libraries built using the framework, but using NPM
               Install is recommended.</p>
-            <pre><code>$ npm install @nycopportunity/{{ pattern framework or library }}
-
-</code></pre>
+            <pre><code>$ npm install @nycopportunity/{{ pattern framework or library }}</code></pre>
             <h2 id="heading-download">Download</h2>
             <p>Optionally, you may download an archive of the repository to
               include in your project.</p>
@@ -199,14 +197,10 @@
               such as <a href="https://www.jsdelivr.com">JsDelivr</a>. For
               example, the CDN link of the v0.1.0 default stylesheet for ACCESS
               NYC Patterns:</p>
-            <pre><code>https://cdn.jsdelivr.net/gh/cityofnewyork/access-nyc-patterns@v0.1.0/dist/styles/site-default.css
-
-</code></pre>
+            <pre><code>https://cdn.jsdelivr.net/gh/cityofnewyork/access-nyc-patterns@v0.1.0/dist/styles/site-default.css</code></pre>
             <p>Include this link in the <code>&lt;head&gt;</code> of your html
               document.</p>
-            <pre><code>&lt;link href=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/access-nyc-patterns@v0.1.0/dist/styles/site-default.css&quot; rel=&quot;stylesheet&quot;&gt;
-
-</code></pre>
+            <pre><code>&lt;link href=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/access-nyc-patterns@v0.1.0/dist/styles/site-default.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
             <p>Learn more about the different ways to use JsDelivr on it’s <a
                 href="https://www.jsdelivr.com/features">feature page</a>. All
               Patterns are distributed with their own styles and script
@@ -220,30 +214,21 @@
             <h2 id="heading-sass">Sass</h2>
             <p>Sass stylesheets for any pattern can be imported into a project
               from the source directory.</p>
-            <pre><code>@import &#39;node_modules/{{ pattern framework or library }}/src/components/accordion/accordion&#39;;
-
-
-</code></pre>
+            <pre><code>@import &#39;node_modules/{{ pattern framework or library }}/src/components/accordion/accordion&#39;;</code></pre>
             <h3 id="heading-specificity">Specificity</h3>
             <p>The majority of patterns share the same filename for the Sass and
               JavaScript (if a pattern uses JavaScript). It may be necessary to
               specify that you need to import the Sass file for <a
                 href="https://reactjs.org/">React</a> (or other) applications.
             </p>
-            <pre><code>@import &#39;node_modules/{{ pattern framework or library }}/src/components/accordion/_accordion.scss&#39;;
-
-</code></pre>
+            <pre><code>@import &#39;node_modules/{{ pattern framework or library }}/src/components/accordion/_accordion.scss&#39;;</code></pre>
             <h3 id="heading-tailwindcss">tailwindcss</h3>
             <p>Importing tailwindcss is an exception
               <strong>tailwindcss</strong> because it is compiled to a Sass file
               in the <em>dist</em> directory…</p>
-            <pre><code>@import &#39;node_modules/{{ pattern framework or library }}/dist/styles/_tailwindcss.scss&#39;;
-
-</code></pre>
+            <pre><code>@import &#39;node_modules/{{ pattern framework or library }}/dist/styles/_tailwindcss.scss&#39;;</code></pre>
             <p>… and a CSS file in the distribution folder:</p>
-            <pre><code>&lt;link href=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/{{ pattern framework or library }}@{{ version }}/dist/styles/tailwindcss.css&quot; rel=&quot;stylesheet&quot;&gt;
-
-</code></pre>
+            <pre><code>&lt;link href=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/{{ pattern framework or library }}@{{ version }}/dist/styles/tailwindcss.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
             <h3 id="heading-asset-paths-and-cdn">Asset Paths and CDN</h3>
             <p>The styles use the <code>url()</code> for loading webfonts,
               images, and svgs. By default, it is set to look for asset
@@ -253,15 +238,11 @@
             <pre><code>styles/site-default.scss
 images/..
 fonts/..
-svg/..
-
-</code></pre>
+svg/..</code></pre>
             <p>However, you can set the path to a different path that includes
               all of these files using the <code>$cdn</code> variable.</p>
             <pre><code>// $cdn: &#39;../&#39;; (default)
-$cdn: &#39;path/to/assets/&#39;;
-
-</code></pre>
+$cdn: &#39;path/to/assets/&#39;;</code></pre>
             <p>This variable should be placed above all of your imports of the
               pattern Sass files. The CDN can be set to another local path (such
               as an absolute path), or, it can be set to the remote url within
@@ -271,17 +252,13 @@ $cdn: &#39;path/to/assets/&#39;;
               from the patterns GitHub repository and the tag of the installed
               version. ex;</p>
             <pre><code>@import &#39;config/tokens&#39;;
-$cdn: map-get($tokens, &#39;cdn&#39;);
-
-</code></pre>
+$cdn: map-get($tokens, &#39;cdn&#39;);</code></pre>
             <p>These are the default paths to the different asset types within
               the asset folder. Uncomment and set to override their defaults.
             </p>
             <pre><code>$path-to-fonts: &#39;fonts/&#39;;
 $path-to-images: &#39;images/&#39;;
-$path-to-svg: &#39;svg/&#39;;
-
-</code></pre>
+$path-to-svg: &#39;svg/&#39;;</code></pre>
             <p>This is recommended for <a
                 href="https://webpack.js.org/">Webpack</a> projects using the <a
                 href="https://webpack.js.org/loaders/css-loader">css-loader</a>
@@ -296,13 +273,9 @@ $path-to-svg: &#39;svg/&#39;;
               <code>&#39;node_modules/@nycopportunity/{{ pattern framework or library }}/src&#39;</code>
               to your “resolve” or “include” paths which will allow you to write
               the shorthand path;</p>
-            <pre><code>@import &#39;components/accordion/accordion&#39;;
-
-</code></pre>
+            <pre><code>@import &#39;components/accordion/accordion&#39;;</code></pre>
             <p>or</p>
-            <pre><code>@import &#39;components/accordion/_accordion.scss&#39;;
-
-</code></pre>
+            <pre><code>@import &#39;components/accordion/_accordion.scss&#39;;</code></pre>
             <p>For example; the <a
                 href="https://github.com/sass/node-sass">node-sass</a>
               <code>includePaths</code> option which is array of paths that
@@ -317,9 +290,7 @@ $path-to-svg: &#39;svg/&#39;;
   }, (err, result) =&gt; {
     Fs.writeFile(`./dist/styles/site-default.css`, result.css);
   }
-});
-
-</code></pre>
+});</code></pre>
             <p>Similar to the the <a
                 href="https://www.npmjs.com/package/gulp-sass">gulp-sass</a>
               <code>includePaths</code> option.</p>
@@ -329,9 +300,7 @@ $path-to-svg: &#39;svg/&#39;;
       &#39;node_modules&#39;,
       &#39;node_modules/@nycopportunity/{{ pattern framework or library }}/src&#39;
     ]})).pipe(gulp.dest(&#39;./css&#39;));
-});
-
-</code></pre>
+});</code></pre>
             <p><a href="https://webpack.js.org/">Webpack</a> can be configured
               with the <a
                 href="https://webpack.js.org/configuration/resolve/#resolvemodules">resolve
@@ -344,9 +313,7 @@ $path-to-svg: &#39;svg/&#39;;
       &#39;./node_modules/@nycopportunity/{{ pattern framework or library }}/src&#39;
     ]
   }
-};
-
-</code></pre>
+};</code></pre>
             <h2 id="heading-scripts">Scripts</h2>
             <p>The JavaScript source is written as ES Modules, and using <a
                 href="https://rollupjs.org">Rollup.js</a>, individual components
@@ -356,16 +323,12 @@ $path-to-svg: &#39;svg/&#39;;
               initializing it.</p>
             <h3 id="heading-es-module-import">ES Module Import</h3>
             <pre><code>import Accordion from &#39;src/components/accordion/accordion&#39;;
-new Accordion();
-
-</code></pre>
+new Accordion();</code></pre>
             <h3 id="heading-iffe">IFFE</h3>
             <pre><code>&lt;script src=&quot;dist/components/accordion.iffe.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   new Accordion();
-&lt;/script&gt;
-
-</code></pre>
+&lt;/script&gt;</code></pre>
             <p><strong>Note</strong> You can also use IFFE modules through the
               CDN installation method without needing using NPM to install in
               your project.</p>
@@ -378,9 +341,7 @@ new Accordion();
 &lt;script type=&quot;text/javascript&quot;&gt;
   var patterns = new {{ Main }}();
   patterns.accordion();
-&lt;/script&gt;
-
-</code></pre>
+&lt;/script&gt;</code></pre>
             <p>The main JavaScript import file in the source will show how each
               component needs to be initialized if it isn’t specified in the
               pattern’s documentation.</p>
@@ -432,5 +393,4 @@ new Accordion();
     nyco.icons();
     nyco.toggle();
   </script>
-  <script src="/reload/reload.js"></script>
 </body>

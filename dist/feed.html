@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap"
     rel="stylesheet" />
   <script type="text/javascript">
-    var VERSION = '2.2.3';
+    var VERSION = '2.3.0';
   </script><noscript>
     <style>
       body {
@@ -46,17 +46,17 @@
           class="o-header__logo-secondary icon-logo-nyco">
           <use xlink:href="#icon-logo-nyco"></use>
         </svg></h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.2.3</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.3.0</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div><a class="btn flex items-center"
-          href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.2.3"><svg
+          href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.3.0"><svg
             aria-hidden="true" class="icon-ui-github icon-small mr-1">
             <use xlink:href="#icon-ui-github"></use>
-          </svg>2.2.3</a></div>
+          </svg>2.3.0</a></div>
     </div>
   </header>
   <main
@@ -182,15 +182,11 @@
               version in the top right of this page.</p>
             <pre><code>&lt;!-- The feed component uses Promises so this polyfill is needed for IE support --&gt;
 &lt;script src=&quot;https://cdn.polyfill.io/v2/polyfill.js?features=Promise&amp;gated=gated&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/Feed.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-</code></pre>
+&lt;script src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/Feed.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
             <p>Optionally, but recommended, include the base styling for the
               feed. Replace <code>{{ version }}</code> with the semantic version
               in the top right of this page.</p>
-            <pre><code>&lt;link src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/feed.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
-
-</code></pre>
+            <pre><code>&lt;link src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/feed.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</code></pre>
             <p>Then, add a container with the feed’s id and the execution script
               with configuration parameters.</p>
             <pre><code>&lt;div id=&quot;js-feed&quot;&gt;&lt;/div&gt;
@@ -199,9 +195,7 @@
     selector: &quot;#js-feed&quot;, // The DOM element selctor for the feed. Defaults to #js-feed&#39;
     feed: &quot;https://medium.com/feed/@nycopportunity/&quot;, // Required. The feed you want to display. May be an array of multiple feeds&#39;
   });
-&lt;/script&gt;
-
-</code></pre>
+&lt;/script&gt;</code></pre>
             <p><code>new Feed({});</code> creates a feed, accepting a
               configuration object as a parameter. <a
                 href="customize-your-feed">The full configuration can be viewed
@@ -301,5 +295,4 @@
   <script type="text/javascript">
     new FeedEmbed();
   </script>
-  <script src="/reload/reload.js"></script>
 </body>
