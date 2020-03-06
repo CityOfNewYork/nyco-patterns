@@ -1,5 +1,5 @@
 $tokens:(
-  opts: (
+  config: (
     output: "./src/config/_tokens.scss",
     prefix: "$tokens:"
   ),
@@ -152,24 +152,29 @@ $tokens:(
   fontFamily: (
     system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
     code: (monospace),
-    nycgov: ("Helvetica Neue", Helvetica, Arial, sans-serif),
-    default-sans: ("Noto Sans", sans-serif),
-    default-serif: ("Noto Serif", serif)
+    default: ("IBM Plex Sans", sans-serif),
+    default-sans: ("IBM Plex Sans", sans-serif),
+    default-serif: ("IBM Plex Serif", sans-serif),
+    h1: ("Helvetica Neue Pro", "Helvetica Neue", Helvetica, Arial, sans-serif),
+    h2: ("Helvetica Neue Pro", "Helvetica Neue", Helvetica, Arial, sans-serif),
+    h3: ("Helvetica Neue Pro", "Helvetica Neue", Helvetica, Arial, sans-serif),
+    blockquote: ("Helvetica Neue Pro", "Helvetica Neue", Helvetica, Arial, sans-serif),
+    jumbo: ("Helvetica Neue Pro", "Helvetica Neue", Helvetica, Arial, sans-serif)
   ),
   fontWeight: (
-    normal: normal,
-    bold: bold,
-    jumbo: normal,
+    html: normal,
     h1: bold,
-    h2: normal,
-    h3: normal,
+    h2: bold,
+    h3: bold,
     h4: bold,
     h5: bold,
     h6: bold,
-    html: normal,
-    code: normal,
+    jumbo: bold,
+    blockquote: bold,
     small: normal,
-    blockquote: bold
+    code: normal,
+    normal: normal,
+    bold: bold
   ),
   fontSize: (
     jumbo: 3em,

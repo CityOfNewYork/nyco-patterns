@@ -1,5 +1,5 @@
 / Layout
-= extend('layouts/full');
+= extend('templates/full');
 
 / Variables
 = partial('variables/classes.slm');
@@ -33,7 +33,7 @@
           a class='btn btn-large color-secondary-button' href='#browse-the-patterns' Browse the Patterns
 
         p class='text-center'
-          a href='${this.site.urls.release}' target='_blank' = 'v' + this.site.versions.package;
+          a href='${this.urls.release}' target='_blank' = 'v' + this.versions.package;
 
   section class='color-light-background p-6'
     div class='layout-wrap layout-content mx-auto py-6'
@@ -41,10 +41,10 @@
         h2 class='text-center mt-0' Installation
 
         p
-          | The NYCO Patterns are built on the <a href="${this.site.urls.nycoPatternsFramework}">NYCO Patterns Framework</a> and can be installed using documentation in the Framework's repository.
+          | The NYCO Patterns are built on the <a href="${this.urls.nycoPatternsFramework}">NYCO Patterns Framework</a> and can be installed using documentation in the Framework's repository.
 
         p class='text-center'
-          a class='btn btn-large color-primary-button' href='${this.site.urls.installation}' Read the Documentation
+          a class='btn btn-large color-primary-button' href='${this.urls.installation}' Read the Documentation
 
   section id='browse-the-patterns' class='color-mid-background p-6'
     div class='layout-wrap layout-content mx-auto py-6'

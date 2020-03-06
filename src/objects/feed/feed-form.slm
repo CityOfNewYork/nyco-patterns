@@ -14,7 +14,7 @@ form class='border border-solid border-primary-blue-30t bg-secondary-white-70t p
     p Copy the following url to share or save customized Feed settings.
 
     div
-      input#js-share class='w-full' data-js-share-base='${this.site.urls.production}'
+      input#js-share class='w-full' data-js-share-base='${this.urls.production}'
 
   div#js-controls
     h3 Customize

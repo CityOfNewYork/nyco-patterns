@@ -1,8 +1,8 @@
 = mixin('nav');
   nav class='${classNav}'
     a class='${classNavLink}' href='index' Home
-    a class='${classNavLink}' href='${this.site.urls.patterns}' target='_blank' About the Patterns ↗
-    a class='${classNavLink}' href='${this.site.urls.installation}' target='_blank' Installation ↗
+    a class='${classNavLink}' href='${this.urls.patterns}' target='_blank' About the Patterns ↗
+    a class='${classNavLink}' href='${this.urls.installation}' target='_blank' Installation ↗
 
   nav class='${classNav}'
     span class='${classNavLinkHeader}' Elements

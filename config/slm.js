@@ -4,17 +4,49 @@
 
 const package = require('../package.json');
 const tailwind = require('./tailwind.js');
+const tokens = require('./tokens.js');
 
 /**
  * Config
  */
 
-const site = {
+module.exports = {
+  config: {
+    src: 'src',
+    views: 'views',
+    dist: 'dist',
+    blacklist: [
+      'layouts',
+      'templates',
+      'mixins',
+      'variables'
+    ],
+    marked: {
+      gfm: true,
+      headerIds: true,
+      headerPrefix: 'heading-',
+      // pedantic: true,
+      smartypants: true
+    },
+    beautify: {
+      indent_size: 2,
+      indent_char: ' ',
+      preserve_newlines: false,
+      indent_inner_html: false,
+      wrap_line_length: 80,
+      indent_inner_html: false,
+    }
+  },
   package: package,
   versions: {
     package: package.version,
     tailwindcss: package.devDependencies.tailwindcss.replace('^', ''),
     bootstrap: '2.3.2'
+  },
+  process: {
+    env: {
+      NODE_ENV: process.env.NODE_ENV
+    }
   },
   urls: {
     production: 'https://nycopatterns.cityofnewyork.us',
@@ -40,14 +72,6 @@ const site = {
     blueprintNYCBrand: 'https://blueprint.cityofnewyork.us/design/nyc-brand/',
     playbook: 'https://playbook.cityofnewyork.us/'
   },
-  prettier: {
-    parser: 'html',
-    printWidth: 2000,
-    singleQuote: true,
-    jsxBracketSameLine: true,
-    htmlWhitespaceSensitivity: 'ignore'
-  },
-  tailwind: tailwind
+  tailwind: tailwind,
+  tokens: tokens
 };
-
-module.exports = site;

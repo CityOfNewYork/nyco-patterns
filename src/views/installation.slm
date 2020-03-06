@@ -1,0 +1,25 @@
+- pattern = 'Installation';
+
+/ Layout
+= extend('templates/default');
+
+/ Variables
+= partial('variables/classes.slm');
+
+/ Mixins
+= partial('mixins/head.slm');
+= partial('mixins/nav.slm');
+= partial('mixins/readme.slm');
+
+/ Content blocks
+= content('head');
+  = mixin('head', pattern);
+
+= content('header');
+  = mixin('header');
+
+= content('content');
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern;
+
+  = mixin('readme', '../node_modules/@nycopportunity/patterns-framework/docs/installation');

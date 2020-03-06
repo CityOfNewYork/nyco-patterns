@@ -12,11 +12,13 @@ NYCO Patterns integrates [tailwindcss](https://tailwindcss.com), a CSS utility-f
 
 A simple example for using a utility to add padding to an element would be to use the utility `.p-1`. This will add `8px` of padding on all sides of an element.
 
-    .p-1 {
-      padding: 8px
-    }
+```
+.p-1 {
+  padding: 8px
+}
 
-    <div class="p-1"></div>
+<div class="p-1"></div>
+```
 
 ### Configuration
 
@@ -46,7 +48,7 @@ The plugin table below describes the available variants for each utility. An emp
 
 Example; the core plugin for padding is `padding`. Adding or removing it to the whitelist will determine wether those utilities are compiled to the global stylesheet.
 
-slm{{ utilities/tailwindcss/tailwindcss.slm }}
+include{{ utilities/tailwindcss/tailwindcss.slm }}
 
 ### Installation
 

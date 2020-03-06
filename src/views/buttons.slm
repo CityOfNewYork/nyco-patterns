@@ -1,7 +1,7 @@
 - pattern = 'Buttons';
 
 / Layout
-= extend('layouts/default');
+= extend('templates/default');
 
 / Variables
 = partial('variables/classes.slm');

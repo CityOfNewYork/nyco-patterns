@@ -4,9 +4,6 @@
     meta http-equiv='X-UA-Compatible' content='IE=edge'
     meta name='viewport' content='width=device-width, initial-scale=1'
 
-    / EXTERNAL STYLES
-    link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' type='text/css'
-
     / Global Stylesheet
     link rel='stylesheet' href='styles/nyco-patterns-default.css'
 
@@ -21,8 +18,20 @@
     link rel='icon' type='image/png' sizes='32x32' href='/images/favicon/favicon-32x32.png'
     link rel='shortcut icon' href='/images/favicon/favicon.ico'
 
+    link href='https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;display=swap' rel='stylesheet'
+
+    / style
+    /   = "body {"
+    /   = "  font-family: 'IBM Plex Sans', 'Noto Sans', sans-serif !important;"
+    /   = "}"
+
+    /   = "h1, .h1, h2, .h2, h3, .h3, .blockquote, blockquote, .jumbo {"
+    /   = "  font-family: 'Helvetica Neue Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;"
+    /   = "  font-weight: 900 !important;"
+    /   = "}"
+
     javascript:
-      var VERSION = '${this.site.versions.package}';
+      var VERSION = '${this.versions.package}';
 
     noscript
       style

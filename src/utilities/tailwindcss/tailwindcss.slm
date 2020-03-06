@@ -6,15 +6,15 @@ div class='p-2 bg-secondary-white'
   b Plugin (link to docs)
 
 div class='mb-4'
-  - for (plugin in this.site.tailwind.theme)
+  - for (plugin in this.tailwind.theme)
     - name = plugin.replace(/[\w]([A-Z])/g, (m) => m[0] + ' ' + m[1]).toLowerCase();
     - link = name.replace(' ', '-');
 
-    - config = (this.site.tailwind.theme.hasOwnProperty(plugin)) ? this.site.tailwind.theme[plugin] : false;
-    - variants = (this.site.tailwind.variants.hasOwnProperty(plugin)) ? this.site.tailwind.variants[plugin] : false;
+    - config = (this.tailwind.theme.hasOwnProperty(plugin)) ? this.tailwind.theme[plugin] : false;
+    - variants = (this.tailwind.variants.hasOwnProperty(plugin)) ? this.tailwind.variants[plugin] : false;
 
     div id='config-${link}' class='p-2 layout-two-columns items-center border-b border-secondary-white-70t'
-      a href='${this.site.urls.tailwindDocs}${link}' class='capitalize' target='_blank' = `${name}`;
+      a href='${this.urls.tailwindDocs}${link}' class='capitalize' target='_blank' = `${name}`;
 
       div class='text-right'
         - if (config)
@@ -27,13 +27,13 @@ div class='mb-4'
         div class='p-2 layout-two-columns border-b border-base-white'
           div
             b Class
-          div class='pl-6'
+          div class='pl-1'
             b Property Value
 
         - for (i in config)
           div class='p-2 layout-two-columns font-code text-primary-red small border-b border-base-white'
             div = `.{{ prefix }}-${i}`;
-            div class='pl-6'
+            div class='pl-1'
               - if (Array.isArray(config[i]))
                 = `${config[i].join(', ')}`;
               - else
@@ -50,16 +50,16 @@ div class='p-2 layout-three-columns items-center bg-secondary-white'
     b Configuration
 
 div class='mb-4'
-  - for (i in this.site.tailwind.corePlugins)
-    - plugin = this.site.tailwind.corePlugins[i];
+  - for (i in this.tailwind.corePlugins)
+    - plugin = this.tailwind.corePlugins[i];
     - name = plugin.replace(/[\w]([A-Z])/g, (m) => m[0] + ' ' + m[1]).toLowerCase();
     - link = name.replace(' ', '-');
 
-    - config = (this.site.tailwind.theme.hasOwnProperty(plugin)) ? this.site.tailwind.theme[plugin] : false;
-    - variants = (this.site.tailwind.variants.hasOwnProperty(plugin)) ? this.site.tailwind.variants[plugin] : false;
+    - config = (this.tailwind.theme.hasOwnProperty(plugin)) ? this.tailwind.theme[plugin] : false;
+    - variants = (this.tailwind.variants.hasOwnProperty(plugin)) ? this.tailwind.variants[plugin] : false;
 
     div class='p-2 layout-three-columns items-center border-b border-secondary-white-70t'
-      a href='${this.site.urls.tailwindDocs}${link}' class='capitalize' target='_blank' = `${name}`;
+      a href='${this.urls.tailwindDocs}${link}' class='capitalize' target='_blank' = `${name}`;
 
       div class='font-code'
         - if (variants)

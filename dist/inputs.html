@@ -1,134 +1,158 @@
 <!DOCTYPE html>
 <html class="text-size-0" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
-    <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Inputs | NYCO Patterns</title>
-    <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
-    <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
-    <script type="text/javascript">
-      var VERSION = '2.2.3';
-    </script>
-    <noscript>
-      <style>
-        body {
-          visibility: visible !important;
-        }
-      </style>
-    </noscript>
-    <script type="text/javascript">
-      function load() {
-        document.body.style.visibility = 'visible';
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
+  <title>Inputs | NYCO Patterns</title>
+  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32"
+    type="image/png" />
+  <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
+  <link
+    href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap"
+    rel="stylesheet" />
+  <script type="text/javascript">
+    var VERSION = '2.2.3';
+  </script><noscript>
+    <style>
+      body {
+        visibility: visible !important;
       }
-    </script>
-  </head>
+    </style>
+  </noscript>
+  <script type="text/javascript">
+    function load() {
+      document.body.style.visibility = 'visible'
+    };
+  </script>
+</head>
+
 </html>
-<body class="bg-base-black" onload="load()" style="visibility: hidden;">
-  <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
+
+<body class="bg-base-black" onload="load()" style="visibility: hidden;"><a
+    class="o-sr-skip px-4 py-2 color-mid-background hidden"
+    href="#main-content">Skip to main content</a>
   <header class="o-header screen-tablet:layout-sidebar w-full">
-    <div class="o-header__banner-main color-primary-button">
-      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
-      <h1 class="o-header__main-title">
-        <span class="hidden"></span>
-        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco-secondary"><use xlink:href="#icon-logo-nyco-secondary"></use></svg><svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg>
-      </h1>
+    <div class="o-header__banner-main color-primary-button"><button
+        aria-controls="js-navigation" aria-pressed="false"
+        class="o-header__main-toggle" data-js="toggle">Menu</button>
+      <h1 class="o-header__main-title"><span class="hidden"></span><svg
+          aria-hidden="true"
+          class="o-header__logo-main icon-logo-nyco-secondary">
+          <use xlink:href="#icon-logo-nyco-secondary"></use>
+        </svg><svg aria-hidden="true"
+          class="o-header__logo-secondary icon-logo-nyco">
+          <use xlink:href="#icon-logo-nyco"></use>
+        </svg></h1>
       <div aria-hidden="true" class="o-header__main-version">v2.2.3</div>
     </div>
-    <div class="o-header__banner-secondary color-dark-background"><h1 class="o-header__secondary-title text-jumbo">Patterns</h1></div>
+    <div class="o-header__banner-secondary color-dark-background">
+      <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
+    </div>
     <div class="o-header__secondary-version color-dark-background">
-      <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.2.3">
-          <svg aria-hidden="true" class="icon-ui-github icon-small mr-1"><use xlink:href="#icon-ui-github"></use></svg>
-          2.2.3
-        </a>
-      </div>
+      <div><a class="btn flex items-center"
+          href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.2.3"><svg
+            aria-hidden="true" class="icon-ui-github icon-small mr-1">
+            <use xlink:href="#icon-ui-github"></use>
+          </svg>2.2.3</a></div>
     </div>
   </header>
-  <main class="screen-tablet:layout-sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
+  <main
+    class="screen-tablet:layout-sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen"
+    id="main-content">
     <aside class="o-navigation bg-primary-navy">
       <div class="screen-tablet:flex hidden w-full">
         <div class="o-navigation__wrap color-mid-background">
           <div class="o-navigation__nav">
-            <nav>
-              <a class="o-navigation__link" href="index">Home</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" target="_blank">About the Patterns ↗</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" target="_blank">Installation ↗</a>
-            </nav>
-            <nav>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-              <a class="o-navigation__link" href="buttons">Buttons</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-              <a class="o-navigation__link" href="code">Code</a>
-              <a class="o-navigation__link" href="icons">Icons</a>
-              <a class="o-navigation__link" href="inputs">Inputs</a>
-              <a class="o-navigation__link" href="layouts">Layouts</a>
-              <a class="o-navigation__link" href="links">Links</a>
-              <a class="o-navigation__link" href="select">Select</a>
-              <a class="o-navigation__link" href="radios">Radios</a>
-              <a class="o-navigation__link" href="tables">Tables</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
-              <a class="o-navigation__link" href="content">Content</a>
-              <a class="o-navigation__link" href="footer">Footer</a>
-              <a class="o-navigation__link" href="feed">Feed</a>
-              <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="animate">Animate</a>
-              <a class="o-navigation__link" href="colors">Colors</a>
-              <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
-              <a class="o-navigation__link" href="type">Type</a>
-            </nav>
+            <nav><a class="o-navigation__link" href="index">Home</a><a
+                class="o-navigation__link"
+                href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md"
+                target="_blank">About the Patterns ↗</a><a
+                class="o-navigation__link"
+                href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md"
+                target="_blank">Installation ↗</a></nav>
+            <nav><span
+                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span><a
+                class="o-navigation__link" href="buttons">Buttons</a><a
+                class="o-navigation__link" href="checkboxes">Checkboxes</a><a
+                class="o-navigation__link" href="code">Code</a><a
+                class="o-navigation__link" href="icons">Icons</a><a
+                class="o-navigation__link" href="inputs">Inputs</a><a
+                class="o-navigation__link" href="layouts">Layouts</a><a
+                class="o-navigation__link" href="links">Links</a><a
+                class="o-navigation__link" href="select">Select</a><a
+                class="o-navigation__link" href="radios">Radios</a><a
+                class="o-navigation__link" href="tables">Tables</a><span
+                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span><a
+                class="o-navigation__link" href="charts">Charts</a><a
+                class="o-navigation__link" href="content">Content</a><a
+                class="o-navigation__link" href="footer">Footer</a><a
+                class="o-navigation__link" href="feed">Feed</a><a
+                class="o-navigation__link" href="header">Header</a><a
+                class="o-navigation__link" href="mailchimp">Mailchimp</a><a
+                class="o-navigation__link" href="navigation">Navigation</a><span
+                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span><a
+                class="o-navigation__link" href="animate">Animate</a><a
+                class="o-navigation__link" href="colors">Colors</a><a
+                class="o-navigation__link" href="tailwindcss">Tailwindcss</a><a
+                class="o-navigation__link" href="type">Type</a></nav>
           </div>
         </div>
       </div>
       <div class="screen-tablet:hidden w-full">
-        <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated" id="js-navigation">
-          <div class="o-navigation__banner color-dark-background"><h1 class="o-navigation__banner-title">Patterns</h1></div>
+        <div
+          class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated"
+          id="js-navigation">
+          <div class="o-navigation__banner color-dark-background">
+            <h1 class="o-navigation__banner-title">Patterns</h1>
+          </div>
           <div class="animated">
             <div class="o-navigation__nav">
-              <nav>
-                <a class="o-navigation__link" href="index">Home</a>
-                <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" target="_blank">About the Patterns ↗</a>
-                <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" target="_blank">Installation ↗</a>
-              </nav>
-              <nav>
-                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-                <a class="o-navigation__link" href="buttons">Buttons</a>
-                <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-                <a class="o-navigation__link" href="code">Code</a>
-                <a class="o-navigation__link" href="icons">Icons</a>
-                <a class="o-navigation__link" href="inputs">Inputs</a>
-                <a class="o-navigation__link" href="layouts">Layouts</a>
-                <a class="o-navigation__link" href="links">Links</a>
-                <a class="o-navigation__link" href="select">Select</a>
-                <a class="o-navigation__link" href="radios">Radios</a>
-                <a class="o-navigation__link" href="tables">Tables</a>
-                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-                <a class="o-navigation__link" href="charts">Charts</a>
-                <a class="o-navigation__link" href="content">Content</a>
-                <a class="o-navigation__link" href="footer">Footer</a>
-                <a class="o-navigation__link" href="feed">Feed</a>
-                <a class="o-navigation__link" href="header">Header</a>
-                <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
-                <a class="o-navigation__link" href="navigation">Navigation</a>
-                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-                <a class="o-navigation__link" href="animate">Animate</a>
-                <a class="o-navigation__link" href="colors">Colors</a>
-                <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
-                <a class="o-navigation__link" href="type">Type</a>
-              </nav>
+              <nav><a class="o-navigation__link" href="index">Home</a><a
+                  class="o-navigation__link"
+                  href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md"
+                  target="_blank">About the Patterns ↗</a><a
+                  class="o-navigation__link"
+                  href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md"
+                  target="_blank">Installation ↗</a></nav>
+              <nav><span
+                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span><a
+                  class="o-navigation__link" href="buttons">Buttons</a><a
+                  class="o-navigation__link" href="checkboxes">Checkboxes</a><a
+                  class="o-navigation__link" href="code">Code</a><a
+                  class="o-navigation__link" href="icons">Icons</a><a
+                  class="o-navigation__link" href="inputs">Inputs</a><a
+                  class="o-navigation__link" href="layouts">Layouts</a><a
+                  class="o-navigation__link" href="links">Links</a><a
+                  class="o-navigation__link" href="select">Select</a><a
+                  class="o-navigation__link" href="radios">Radios</a><a
+                  class="o-navigation__link" href="tables">Tables</a><span
+                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span><a
+                  class="o-navigation__link" href="charts">Charts</a><a
+                  class="o-navigation__link" href="content">Content</a><a
+                  class="o-navigation__link" href="footer">Footer</a><a
+                  class="o-navigation__link" href="feed">Feed</a><a
+                  class="o-navigation__link" href="header">Header</a><a
+                  class="o-navigation__link" href="mailchimp">Mailchimp</a><a
+                  class="o-navigation__link"
+                  href="navigation">Navigation</a><span
+                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span><a
+                  class="o-navigation__link" href="animate">Animate</a><a
+                  class="o-navigation__link" href="colors">Colors</a><a
+                  class="o-navigation__link"
+                  href="tailwindcss">Tailwindcss</a><a
+                  class="o-navigation__link" href="type">Type</a></nav>
             </div>
           </div>
         </div>
       </div>
     </aside>
     <article class="color-light-background py-2">
-      <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Inputs</h1></div>
+      <div class="px-4 screen-desktop:px-6">
+        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Inputs</h1>
+      </div>
       <section class="mt-6" id="input">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
@@ -137,14 +161,12 @@
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;input&quot;&gt;&lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt;&lt;/div&gt;
-</pre></div>
-            <p>
-  A styled input element. Styling of the element is determined by the
-  <a href="/colors">Color Combination utility</a>
-  it is nested under.
-</p>
-
+            <div class="code-block">
+              <pre>&lt;div class=&quot;input&quot;&gt;&lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt;&lt;/div&gt;</pre>
+            </div>
+            <p>A styled input element. Styling of the element is determined by
+              the <a href="/colors">Color Combination utility</a> it is nested
+              under.</p>
           </div>
         </div>
       </section>
@@ -156,10 +178,10 @@
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;error&quot;&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/div&gt;
-</pre></div>
-            <h2>Error</h2>
-
+            <div class="code-block">
+              <pre>&lt;div class=&quot;error&quot;&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/div&gt;</pre>
+            </div>
+            <h2 id="heading-error">Error</h2>
           </div>
         </div>
       </section>
@@ -171,10 +193,10 @@
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div&gt;&lt;input type=&quot;number&quot; /&gt;&lt;/div&gt;
-</pre></div>
-            <h2>Number</h2>
-
+            <div class="code-block">
+              <pre>&lt;div&gt;&lt;input type=&quot;number&quot; /&gt;&lt;/div&gt;</pre>
+            </div>
+            <h2 id="heading-number">Number</h2>
           </div>
         </div>
       </section>
@@ -186,10 +208,10 @@
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;input-currency-usd&quot;&gt;&lt;input type=&quot;number&quot; /&gt;&lt;/div&gt;
-</pre></div>
-            <h2>Currency</h2>
-
+            <div class="code-block">
+              <pre>&lt;div class=&quot;input-currency-usd&quot;&gt;&lt;input type=&quot;number&quot; /&gt;&lt;/div&gt;</pre>
+            </div>
+            <h2 id="heading-currency">Currency</h2>
           </div>
         </div>
       </section>
@@ -201,55 +223,55 @@
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;input-currency-usd error&quot;&gt;&lt;input type=&quot;number&quot; /&gt;&lt;/div&gt;
-</pre></div>
-            <h2>Currency Error</h2>
-
+            <div class="code-block">
+              <pre>&lt;div class=&quot;input-currency-usd error&quot;&gt;&lt;input type=&quot;number&quot; /&gt;&lt;/div&gt;</pre>
+            </div>
+            <h2 id="heading-currency-error">Currency Error</h2>
           </div>
         </div>
       </section>
       <section class="mt-6" id="input-autocomplete">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="input-autocomplete">
-              <input aria-autocomplete="both" aria-describedby="input-autocomplete__instructions-0" aria-expanded="false" aria-owns="input-autocomplete__options" autocomplete="off" data-js="input-autocomplete__input" type="text" />
-              <div aria-live="polite" class="sr-only" id="input-autocomplete__instructions-0"></div>
+            <div class="input-autocomplete"><input aria-autocomplete="both"
+                aria-describedby="input-autocomplete__instructions-0"
+                aria-expanded="false" aria-owns="input-autocomplete__options"
+                autocomplete="off" data-js="input-autocomplete__input"
+                type="text" />
+              <div aria-live="polite" class="sr-only"
+                id="input-autocomplete__instructions-0"></div>
             </div>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;input-autocomplete&quot;&gt;
+            <div class="code-block">
+              <pre>&lt;div class=&quot;input-autocomplete&quot;&gt;&lt;input aria-autocomplete=&quot;both&quot; aria-describedby=&quot;input-autocomplete__instructions-0&quot; aria-expanded=&quot;false&quot; aria-owns=&quot;input-autocomplete__options&quot; autocomplete=&quot;off&quot; data-js=&quot;input-autocomplete__input&quot; type=&quot;text&quot; /&gt;&lt;div aria-live=&quot;polite&quot; class=&quot;sr-only&quot; id=&quot;input-autocomplete__instructions-0&quot;&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+            </div>
+            <h2 id="heading-input-autocomplete">Input Autocomplete</h2>
+            <p>The Autocomplete Input Element uses JavaScript to provide an
+              accessibile and selectable list of suggested terms as a user types
+              into the field.</p>
+            <p>The suggested terms are passed to the
+              <code>InputAutocomplete</code> class on instantiation and can be
+              updated on the fly with new terms. Terms are displayed in order by
+              relevance and synonym mapping (see usage details below),
+              Additionally the function is miss-spelling tolerant.</p>
+            <h4 id="heading-markup">Markup</h4>
+            <pre><code>&lt;div class=&quot;input-autocomplete&quot;&gt;
   &lt;input aria-autocomplete=&quot;both&quot; aria-describedby=&quot;input-autocomplete__instructions-0&quot; aria-expanded=&quot;false&quot; aria-owns=&quot;input-autocomplete__options&quot; autocomplete=&quot;off&quot; data-js=&quot;input-autocomplete__input&quot; type=&quot;text&quot; /&gt;
   &lt;div aria-live=&quot;polite&quot; class=&quot;sr-only&quot; id=&quot;input-autocomplete__instructions-0&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-</pre></div>
-            <h2>Input Autocomplete</h2>
 
-<p>The Autocomplete Input Element uses JavaScript to provide an accessibile and selectable list of suggested terms as a user types into the field.</p>
-
-<p>The suggested terms are passed to the &lt;code&gt;InputAutocomplete&lt;/code&gt; class on instantiation and can be updated on the fly with new terms. Terms are displayed in order by relevance and synonym mapping (see usage details below), Additionally the function is miss-spelling tolerant.</p>
-
-<h4>Markup</h4>
-
-<pre><code>&lt;div class=&quot;input-autocomplete&quot;&gt;
-  &lt;input aria-autocomplete=&quot;both&quot; aria-describedby=&quot;input-autocomplete__instructions-0&quot; aria-expanded=&quot;false&quot; aria-owns=&quot;input-autocomplete__options&quot; autocomplete=&quot;off&quot; data-js=&quot;input-autocomplete__input&quot; type=&quot;text&quot; /&gt;
-  &lt;div aria-live=&quot;polite&quot; class=&quot;sr-only&quot; id=&quot;input-autocomplete__instructions-0&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-<p>
-  Note: You can add the
-  <code>data-persist-dropdown=&#39;true&#39;</code>
-  attribute to the
-  <code>input</code>
-  element for testing. The attribute will make the dropdown persist after the input is no longer in focus.
-</p>
-
-<h4>Global Script</h4>
-
-<p>To use the Autocomplete Input in the global NYCO Patterns script use the following code:</p>
-
-<pre><code>&lt;!-- Global Script --&gt;
+</code></pre>
+            <p>Note: You can add the
+              <code>data-persist-dropdown=&#39;true&#39;</code> attribute to the
+              <code>input</code> element for testing. The attribute will make
+              the dropdown persist after the input is no longer in focus.</p>
+            <h4 id="heading-global-script">Global Script</h4>
+            <p>To use the Autocomplete Input in the global NYCO Patterns script
+              use the following code:</p>
+            <pre><code>&lt;!-- Global Script --&gt;
 &lt;script src=&quot;dist/scripts/NycoPatterns.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
@@ -259,165 +281,139 @@
       [&#39;Bronx&#39;], [&#39;Queens&#39;]
     ]
   });
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;
 
-<p>
-  This function will instantiate the autocomplete with the provided options and attach the event listener to an input element with the default selector
-  <code>[data-js=&#39;input-autocomplete__input&#39;]</code>
-  (see markup details in the example above ).
-</p>
-
-<p>
-  Below is an advanced configuration that passes a callback to the &quot;selected&quot; method of the autocomplete class. This callback is executed after a user has selected an option and the input value has been set. It will pass the selected value (
-  <code>String</code>
-  ) as the first argument and the autocomplete class (
-  <code>Object</code>
-  ) as the second.
-</p>
-
-<pre><code>var autocomplete = nyco.inputAutocomplete({
+</code></pre>
+            <p>This function will instantiate the autocomplete with the provided
+              options and attach the event listener to an input element with the
+              default selector
+              <code>[data-js=&#39;input-autocomplete__input&#39;]</code> (see
+              markup details in the example above ).</p>
+            <p>Below is an advanced configuration that passes a callback to the
+              “selected” method of the autocomplete class. This callback is
+              executed after a user has selected an option and the input value
+              has been set. It will pass the selected value
+              (<code>String</code>) as the first argument and the autocomplete
+              class (<code>Object</code>) as the second.</p>
+            <pre><code>var autocomplete = nyco.inputAutocomplete({
   selected: function(value, autocomplete) {
     console.dir(&#39;Selected &#39; + value + &#39;!&#39;);
   }
-});</code></pre>
+});
 
-<h5>Updating Options</h5>
-
-<p>Below is an example of using the options setter to update the options after the class has been instantiated.</p>
-
-<pre><code>autocomplete.options([
+</code></pre>
+            <h5 id="heading-updating-options">Updating Options</h5>
+            <p>Below is an example of using the options setter to update the
+              options after the class has been instantiated.</p>
+            <pre><code>autocomplete.options([
   [&#39;Bronx&#39;], [&#39;Queens&#39;], [&#39;Brooklyn&#39;], [&#39;Staten Island&#39;], [&#39;Manhattan&#39;]
-]);</code></pre>
+]);
 
-<h5>Providing Synonyms</h5>
-
-<p>Each option can be provided with a list of synonyms that will score the option higher as the user types. Try it out in the example above by typing &quot;Hunts Point&quot; in the input. The option &quot;Bronx&quot; will be listed before all other options. This method can be used to provide common terms for specific search terms that exist in your site.</p>
-
-<pre><code>autocomplete.options([
+</code></pre>
+            <h5 id="heading-providing-synonyms">Providing Synonyms</h5>
+            <p>Each option can be provided with a list of synonyms that will
+              score the option higher as the user types. Try it out in the
+              example above by typing “Hunts Point” in the input. The option
+              “Bronx” will be listed before all other options. This method can
+              be used to provide common terms for specific search terms that
+              exist in your site.</p>
+            <pre><code>autocomplete.options([
   [&#39;Bronx&#39;, &#39;Hunts Point&#39;, &#39;Arthur Avenue&#39;, &#39;Riverside&#39;, &#39;Mott Haven&#39;],
   [&#39;Queens&#39;, &#39;Corona&#39;, &#39;East Elmhurst&#39;, &#39;Forest Hills&#39;, &#39;Fresh Pond&#39;],
   [&#39;Brooklyn&#39;, &#39;Flatbush&#39;, &#39;Bay Ridge&#39;, &#39;DUMBO&#39;, &#39;Williamsburg&#39;],
   [&#39;Staten Island&#39;, &#39;South Beach&#39;, &#39;Fort Wadsworth&#39;, &#39;Todt Hill&#39;, &#39;Great Kills&#39;],
   [&#39;Manhattan&#39;, &#39;Lower&#39;, &#39;Midtown&#39;, &#39;Chinatown&#39;, &#39;SoHo&#39;]
-]);</code></pre>
+]);
 
-<h5>Providing Strings</h5>
-
-<p>
-  The list of strings below are used for screen reader accessiblity by default. They can be overridden using the
-  <code>.strings</code>
-  method and passing an object of new strings. For the options strings, a dynamic variable string (denoted by
-  <code>{{ }}</code>
-  below) is provided and rendered in the output of the string. This method can be used to provide a localized set of strings.
-</p>
-
-<pre><code>autocomplete.strings({
+</code></pre>
+            <h5 id="heading-providing-strings">Providing Strings</h5>
+            <p>The list of strings below are used for screen reader accessiblity
+              by default. They can be overridden using the <code>.strings</code>
+              method and passing an object of new strings. For the options
+              strings, a dynamic variable string (denoted by <code>{{ }}</code>
+              below) is provided and rendered in the output of the string. This
+              method can be used to provide a localized set of strings.</p>
+            <pre><code>autocomplete.strings({
   &#39;DIRECTIONS_TYPE&#39;: &#39;Start typing to generate a list of potential input options&#39;,
   &#39;DIRECTIONS_REVIEW&#39;: &#39;Keyboard users can use the up and down arrows to review options and press enter to select an option&#39;,
   &#39;OPTION_AVAILABLE&#39;: &#39;{{ NUMBER }} options available&#39;,
   &#39;OPTION_SELECTED&#39;: &#39;{{ VALUE }} selected&#39;
-});</code></pre>
+});
 
-<h4>Configuration</h4>
-
-<p>
-  The
-  <code>InputAutocomplete</code>
-  class accepts an object
-  <code>{}</code>
-  with two properties:
-  <code>selector</code>
-  and
-  <code>options</code>
-  .
-</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Option</th>
-      <th align="center">Type</th>
-      <th align="center">Importance</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>options</code></td>
-      <td align="center"><em>array</em></td>
-      <td align="center">required</td>
-      <td>The suggested terms to be displayed in the dropdown. Each item is an array with the first item being the visible value. The following values within each array are treated as synonyms that score the priority of term higher if the user types it.</td>
-    </tr>
-    <tr>
-      <td><code>selected</code></td>
-      <td align="center"><em>function</em></td>
-      <td align="center">optional</td>
-      <td>A callback method that will be executed when a user has selected an option.</td>
-    </tr>
-    <tr>
-      <td><code>selector</code></td>
-      <td align="center"><em>string</em></td>
-      <td align="center">optional</td>
-      <td>
-        The selector for the input element. If no selector is provided the default value will be set to
-        <code>[data-js=&quot;input-autocomplete__input&quot;]</code>
-        .
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<h4>Cherry-picked Module Import</h4>
-
-<p>The ES6 module requires importing and object instantiation in your main script. The methods and configurations described above will work with the dedicated module.</p>
-
-<pre><code>// ES6
+</code></pre>
+            <h4 id="heading-configuration">Configuration</h4>
+            <p>The <code>InputAutocomplete</code> class accepts an object
+              <code>{}</code> with two properties: <code>selector</code> and
+              <code>options</code>.</p>
+            <p>Option | Type | Importance | Description
+              —————-|:———–:|:———-:|————| <code>options</code> | <em>array</em> |
+              required | The suggested terms to be displayed in the dropdown.
+              Each item is an array with the first item being the visible value.
+              The following values within each array are treated as synonyms
+              that score the priority of term higher if the user types it.
+              <code>selected</code> | <em>function</em> | optional | A callback
+              method that will be executed when a user has selected an option.
+              <code>selector</code> | <em>string</em> | optional | The selector
+              for the input element. If no selector is provided the default
+              value will be set to
+              <code>[data-js=&quot;input-autocomplete__input&quot;]</code>.</p>
+            <h4 id="heading-cherry-picked-module-import">Cherry-picked Module
+              Import</h4>
+            <p>The ES6 module requires importing and object instantiation in
+              your main script. The methods and configurations described above
+              will work with the dedicated module.</p>
+            <pre><code>// ES6
 import InputAutocomplete from &#39;src/elements/inputs/input-autocomplete&#39;;
 
 new InputAutocomplete({
   options: [
     [&#39;Bronx&#39;], [&#39;Queens&#39;]
   ]
-});</code></pre>
+});
 
+</code></pre>
           </div>
         </div>
       </section>
     </article>
   </main>
-  <footer class="o-footer color-dark-background screen-tablet:layout-four-columns-gutter">
-    <nav>
-      <a class="o-footer__nav-link" href="index">Home</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns">GitHub Repository</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a>
-      <a class="o-footer__nav-link" href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO Opportunity on GitHub</a>
-    </nav>
+  <footer
+    class="o-footer color-dark-background screen-tablet:layout-four-columns-gutter">
+    <nav><a class="o-footer__nav-link" href="index">Home</a><a
+        class="o-footer__nav-link"
+        href="https://github.com/CityOfNewYork/nyco-patterns">GitHub
+        Repository</a><a class="o-footer__nav-link"
+        href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO
+        Patterns Framework</a><a class="o-footer__nav-link"
+        href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO
+        Opportunity on GitHub</a></nav>
     <div></div>
-    <div class="o-footer__info">
-      <a href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
-        <svg aria-hidden="true" class="icon-logo-secondary o-footer__logo text-base-white" style="height: 52px !important"><use xlink:href="#icon-logo-secondary"></use></svg>
-      </a>
-      <p>
-        NYC Opportunity is the
-        <a href="http://nyc.gov/opportunity">New York City Mayor's Office for Economic Opportunity</a>
-        . We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
-        <a href="https://twitter.com/nycopportunity" target="_blank" rel="nofollow noopener">Twitter</a>
-        ,&nbsp;
-        <a href="https://www.facebook.com/NYCOpportunity/" target="_blank" rel="nofollow noopener">Facebook</a>
-        ,&nbsp;
-        <a href="https://medium.com/@nycopportunity" target="_blank" rel="nofollow noopener">Medium</a>
-        , and&nbsp;
-        <a href="" target="_blank" rel="nofollow noopener" title="Viewable by github.com/orgs/CityOfNewYork/ members.">Github</a>
-        .
-      </p>
-      <small>
-        © City of New York, 2020 All Rights Reserved.
-        <br />
-        NYC is a trademark and service mark of the City of New York.
-      </small>
+    <div class="o-footer__info"><a href="http://nyc.gov/opportunity"
+        title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;"><svg
+          aria-hidden="true"
+          class="icon-logo-secondary o-footer__logo text-base-white"
+          style="height: 52px !important">
+          <use xlink:href="#icon-logo-secondary"></use>
+        </svg></a>
+      <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York
+          City Mayor's Office for Economic Opportunity</a>. We are committed to
+        sharing open source software that we use in our products. Feel free to
+        ask questions and share feedback. Follow @nycopportunity on&nbsp;<a
+          href='https://twitter.com/nycopportunity' target='_blank'
+          rel='nofollow noopener'>Twitter</a>,&nbsp;<a
+          href='https://www.facebook.com/NYCOpportunity/' target='_blank'
+          rel='nofollow noopener'>Facebook</a>,&nbsp;<a
+          href='https://medium.com/@nycopportunity' target='_blank'
+          rel='nofollow noopener'>Medium</a>, and&nbsp;<a href=''
+          target='_blank' rel='nofollow noopener'
+          title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
+      </p><small>© City of New York, 2020 All Rights Reserved.<br>NYC is a
+        trademark and service mark of the City of New York.</small>
     </div>
   </footer>
-  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch"></script>
+  <script crossorigin="anonymous"
+    src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch">
+  </script>
   <script src="scripts/nyco-patterns.js"></script>
   <script type="text/javascript">
     var nyco = new NycoPatterns();
@@ -431,19 +427,20 @@ new InputAutocomplete({
         console.dir('Selected ' + value + '!');
       }
     });
-
     // Updating dropdown options post instantiation.
     autocomplete.options([
       ['Bronx', 'Hunts Point', 'Arthur Avenue', 'Riverside', 'Mott Haven'],
       ['Queens', 'Corona', 'East Elmhurst', 'Forest Hills', 'Fresh Pond'],
       ['Brooklyn', 'Flatbush', 'Bay Ridge', 'DUMBO', 'Williamsburg'],
-      ['Staten Island', 'South Beach', 'Fort Wadsworth', 'Todt Hill', 'Great Kills'],
+      ['Staten Island', 'South Beach', 'Fort Wadsworth', 'Todt Hill',
+        'Great Kills'
+      ],
       ['Manhattan', 'Lower', 'Midtown', 'Chinatown', 'SoHo']
     ]);
-
     // Updating strings used by the
     autocomplete.strings({
-      OPTION_SELECTED: '{{ VALUE }} is selected!'
+      'OPTION_SELECTED': '{{ VALUE }} is selected!'
     });
   </script>
+  <script src="/reload/reload.js"></script>
 </body>

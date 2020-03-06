@@ -10,6 +10,7 @@ $line-height: map-get($tokens, 'lineHeight');
 }
 
 @mixin type($key: 'html') {
+  font-family: map-get($font-family, $key);
   font-size: map-get($font-size, $key);
   font-weight: map-get($font-weight, $key);
   line-height: map-get($line-height, $key);

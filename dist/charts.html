@@ -1,239 +1,267 @@
 <!DOCTYPE html>
 <html class="text-size-0" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" type="text/css" />
-    <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-    <title>Charts | NYCO Patterns</title>
-    <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
-    <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
-    <script type="text/javascript">
-      var VERSION = '2.2.3';
-    </script>
-    <noscript>
-      <style>
-        body {
-          visibility: visible !important;
-        }
-      </style>
-    </noscript>
-    <script type="text/javascript">
-      function load() {
-        document.body.style.visibility = 'visible';
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
+  <title>Charts | NYCO Patterns</title>
+  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32"
+    type="image/png" />
+  <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
+  <link
+    href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap"
+    rel="stylesheet" />
+  <script type="text/javascript">
+    var VERSION = '2.2.3';
+  </script><noscript>
+    <style>
+      body {
+        visibility: visible !important;
       }
-    </script>
-  </head>
+    </style>
+  </noscript>
+  <script type="text/javascript">
+    function load() {
+      document.body.style.visibility = 'visible'
+    };
+  </script>
+</head>
+
 </html>
-<body class="bg-base-black" onload="load()" style="visibility: hidden;">
-  <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
+
+<body class="bg-base-black" onload="load()" style="visibility: hidden;"><a
+    class="o-sr-skip px-4 py-2 color-mid-background hidden"
+    href="#main-content">Skip to main content</a>
   <header class="o-header screen-tablet:layout-sidebar w-full">
-    <div class="o-header__banner-main color-primary-button">
-      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
-      <h1 class="o-header__main-title">
-        <span class="hidden"></span>
-        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco-secondary"><use xlink:href="#icon-logo-nyco-secondary"></use></svg><svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco"><use xlink:href="#icon-logo-nyco"></use></svg>
-      </h1>
+    <div class="o-header__banner-main color-primary-button"><button
+        aria-controls="js-navigation" aria-pressed="false"
+        class="o-header__main-toggle" data-js="toggle">Menu</button>
+      <h1 class="o-header__main-title"><span class="hidden"></span><svg
+          aria-hidden="true"
+          class="o-header__logo-main icon-logo-nyco-secondary">
+          <use xlink:href="#icon-logo-nyco-secondary"></use>
+        </svg><svg aria-hidden="true"
+          class="o-header__logo-secondary icon-logo-nyco">
+          <use xlink:href="#icon-logo-nyco"></use>
+        </svg></h1>
       <div aria-hidden="true" class="o-header__main-version">v2.2.3</div>
     </div>
-    <div class="o-header__banner-secondary color-dark-background"><h1 class="o-header__secondary-title text-jumbo">Patterns</h1></div>
+    <div class="o-header__banner-secondary color-dark-background">
+      <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
+    </div>
     <div class="o-header__secondary-version color-dark-background">
-      <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.2.3">
-          <svg aria-hidden="true" class="icon-ui-github icon-small mr-1"><use xlink:href="#icon-ui-github"></use></svg>
-          2.2.3
-        </a>
-      </div>
+      <div><a class="btn flex items-center"
+          href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.2.3"><svg
+            aria-hidden="true" class="icon-ui-github icon-small mr-1">
+            <use xlink:href="#icon-ui-github"></use>
+          </svg>2.2.3</a></div>
     </div>
   </header>
-  <main class="screen-tablet:layout-sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen" id="main-content">
+  <main
+    class="screen-tablet:layout-sidebar screen-tablet:flex items-stretch m-0 p-0 screen-tablet:min-h-screen"
+    id="main-content">
     <aside class="o-navigation bg-primary-navy">
       <div class="screen-tablet:flex hidden w-full">
         <div class="o-navigation__wrap color-mid-background">
           <div class="o-navigation__nav">
-            <nav>
-              <a class="o-navigation__link" href="index">Home</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" target="_blank">About the Patterns ↗</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" target="_blank">Installation ↗</a>
-            </nav>
-            <nav>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-              <a class="o-navigation__link" href="buttons">Buttons</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-              <a class="o-navigation__link" href="code">Code</a>
-              <a class="o-navigation__link" href="icons">Icons</a>
-              <a class="o-navigation__link" href="inputs">Inputs</a>
-              <a class="o-navigation__link" href="layouts">Layouts</a>
-              <a class="o-navigation__link" href="links">Links</a>
-              <a class="o-navigation__link" href="select">Select</a>
-              <a class="o-navigation__link" href="radios">Radios</a>
-              <a class="o-navigation__link" href="tables">Tables</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
-              <a class="o-navigation__link" href="content">Content</a>
-              <a class="o-navigation__link" href="footer">Footer</a>
-              <a class="o-navigation__link" href="feed">Feed</a>
-              <a class="o-navigation__link" href="header">Header</a>
-              <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
-              <a class="o-navigation__link" href="navigation">Navigation</a>
-              <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="animate">Animate</a>
-              <a class="o-navigation__link" href="colors">Colors</a>
-              <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
-              <a class="o-navigation__link" href="type">Type</a>
-            </nav>
+            <nav><a class="o-navigation__link" href="index">Home</a><a
+                class="o-navigation__link"
+                href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md"
+                target="_blank">About the Patterns ↗</a><a
+                class="o-navigation__link"
+                href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md"
+                target="_blank">Installation ↗</a></nav>
+            <nav><span
+                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span><a
+                class="o-navigation__link" href="buttons">Buttons</a><a
+                class="o-navigation__link" href="checkboxes">Checkboxes</a><a
+                class="o-navigation__link" href="code">Code</a><a
+                class="o-navigation__link" href="icons">Icons</a><a
+                class="o-navigation__link" href="inputs">Inputs</a><a
+                class="o-navigation__link" href="layouts">Layouts</a><a
+                class="o-navigation__link" href="links">Links</a><a
+                class="o-navigation__link" href="select">Select</a><a
+                class="o-navigation__link" href="radios">Radios</a><a
+                class="o-navigation__link" href="tables">Tables</a><span
+                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span><a
+                class="o-navigation__link" href="charts">Charts</a><a
+                class="o-navigation__link" href="content">Content</a><a
+                class="o-navigation__link" href="footer">Footer</a><a
+                class="o-navigation__link" href="feed">Feed</a><a
+                class="o-navigation__link" href="header">Header</a><a
+                class="o-navigation__link" href="mailchimp">Mailchimp</a><a
+                class="o-navigation__link" href="navigation">Navigation</a><span
+                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span><a
+                class="o-navigation__link" href="animate">Animate</a><a
+                class="o-navigation__link" href="colors">Colors</a><a
+                class="o-navigation__link" href="tailwindcss">Tailwindcss</a><a
+                class="o-navigation__link" href="type">Type</a></nav>
           </div>
         </div>
       </div>
       <div class="screen-tablet:hidden w-full">
-        <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated" id="js-navigation">
-          <div class="o-navigation__banner color-dark-background"><h1 class="o-navigation__banner-title">Patterns</h1></div>
+        <div
+          class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated"
+          id="js-navigation">
+          <div class="o-navigation__banner color-dark-background">
+            <h1 class="o-navigation__banner-title">Patterns</h1>
+          </div>
           <div class="animated">
             <div class="o-navigation__nav">
-              <nav>
-                <a class="o-navigation__link" href="index">Home</a>
-                <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" target="_blank">About the Patterns ↗</a>
-                <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" target="_blank">Installation ↗</a>
-              </nav>
-              <nav>
-                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span>
-                <a class="o-navigation__link" href="buttons">Buttons</a>
-                <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
-                <a class="o-navigation__link" href="code">Code</a>
-                <a class="o-navigation__link" href="icons">Icons</a>
-                <a class="o-navigation__link" href="inputs">Inputs</a>
-                <a class="o-navigation__link" href="layouts">Layouts</a>
-                <a class="o-navigation__link" href="links">Links</a>
-                <a class="o-navigation__link" href="select">Select</a>
-                <a class="o-navigation__link" href="radios">Radios</a>
-                <a class="o-navigation__link" href="tables">Tables</a>
-                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span>
-                <a class="o-navigation__link" href="charts">Charts</a>
-                <a class="o-navigation__link" href="content">Content</a>
-                <a class="o-navigation__link" href="footer">Footer</a>
-                <a class="o-navigation__link" href="feed">Feed</a>
-                <a class="o-navigation__link" href="header">Header</a>
-                <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
-                <a class="o-navigation__link" href="navigation">Navigation</a>
-                <span class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span>
-                <a class="o-navigation__link" href="animate">Animate</a>
-                <a class="o-navigation__link" href="colors">Colors</a>
-                <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
-                <a class="o-navigation__link" href="type">Type</a>
-              </nav>
+              <nav><a class="o-navigation__link" href="index">Home</a><a
+                  class="o-navigation__link"
+                  href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md"
+                  target="_blank">About the Patterns ↗</a><a
+                  class="o-navigation__link"
+                  href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md"
+                  target="_blank">Installation ↗</a></nav>
+              <nav><span
+                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span><a
+                  class="o-navigation__link" href="buttons">Buttons</a><a
+                  class="o-navigation__link" href="checkboxes">Checkboxes</a><a
+                  class="o-navigation__link" href="code">Code</a><a
+                  class="o-navigation__link" href="icons">Icons</a><a
+                  class="o-navigation__link" href="inputs">Inputs</a><a
+                  class="o-navigation__link" href="layouts">Layouts</a><a
+                  class="o-navigation__link" href="links">Links</a><a
+                  class="o-navigation__link" href="select">Select</a><a
+                  class="o-navigation__link" href="radios">Radios</a><a
+                  class="o-navigation__link" href="tables">Tables</a><span
+                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span><a
+                  class="o-navigation__link" href="charts">Charts</a><a
+                  class="o-navigation__link" href="content">Content</a><a
+                  class="o-navigation__link" href="footer">Footer</a><a
+                  class="o-navigation__link" href="feed">Feed</a><a
+                  class="o-navigation__link" href="header">Header</a><a
+                  class="o-navigation__link" href="mailchimp">Mailchimp</a><a
+                  class="o-navigation__link"
+                  href="navigation">Navigation</a><span
+                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span><a
+                  class="o-navigation__link" href="animate">Animate</a><a
+                  class="o-navigation__link" href="colors">Colors</a><a
+                  class="o-navigation__link"
+                  href="tailwindcss">Tailwindcss</a><a
+                  class="o-navigation__link" href="type">Type</a></nav>
             </div>
           </div>
         </div>
       </div>
     </aside>
     <article class="color-light-background py-2">
-      <div class="px-4 screen-desktop:px-6"><h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Charts</h1></div>
+      <div class="px-4 screen-desktop:px-6">
+        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Charts</h1>
+      </div>
       <section class="mt-6" id="chart-bar">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="bg-base-white px-2" data-js="chart-bar"><nyco-chart-bar :chart-data="data" :options="options"></nyco-chart-bar></div>
+            <div class="bg-base-white px-2" data-js="chart-bar">
+              <nyco-chart-bar :chart-data="data" :options="options">
+              </nyco-chart-bar>
+            </div>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-bar&quot;&gt;&lt;nyco-chart-bar :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-bar&gt;&lt;/div&gt;
-</pre></div>
-            <h2>Bar Chart</h2>
-
-<p>
-  All chart source can be found here:
-  <code>src/objects/charts/</code>
-  .
-</p>
-
-<p>
-  For a full list of customization options check the
-  <a href="https://www.chartjs.org/docs/latest/charts/">Chart.js</a>
-  documentation.
-</p>
-
+            <div class="code-block">
+              <pre>&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-bar&quot;&gt;&lt;nyco-chart-bar :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-bar&gt;&lt;/div&gt;</pre>
+            </div>
+            <h2 id="heading-bar-chart">Bar Chart</h2>
+            <p>All chart source can be found here:
+              <code>src/objects/charts/</code>.</p>
+            <p>For a full list of customization options check the <a
+                href="https://www.chartjs.org/docs/latest/charts/">Chart.js</a>
+              documentation.</p>
           </div>
         </div>
       </section>
       <section class="mt-6" id="chart-horizontal-bar">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="bg-base-white px-2" data-js="chart-horizontal-bar"><nyco-chart-horizontal-bar :chart-data="data" :options="options"></nyco-chart-horizontal-bar></div>
+            <div class="bg-base-white px-2" data-js="chart-horizontal-bar">
+              <nyco-chart-horizontal-bar :chart-data="data" :options="options">
+              </nyco-chart-horizontal-bar>
+            </div>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-horizontal-bar&quot;&gt;&lt;nyco-chart-horizontal-bar :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-horizontal-bar&gt;&lt;/div&gt;
-</pre></div>
-            <h2>Horizontal Bar Chart</h2>
-
+            <div class="code-block">
+              <pre>&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-horizontal-bar&quot;&gt;&lt;nyco-chart-horizontal-bar :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-horizontal-bar&gt;&lt;/div&gt;</pre>
+            </div>
+            <h2 id="heading-horizontal-bar-chart">Horizontal Bar Chart</h2>
           </div>
         </div>
       </section>
       <section class="mt-6" id="chart-line">
         <div class="bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="bg-base-white" data-js="chart-line"><nyco-chart-line :chart-data="data" :options="options"></nyco-chart-line></div>
+            <div class="bg-base-white" data-js="chart-line">
+              <nyco-chart-line :chart-data="data" :options="options">
+              </nyco-chart-line>
+            </div>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <div class="code-block"><pre>&lt;div class=&quot;bg-base-white&quot; data-js=&quot;chart-line&quot;&gt;&lt;nyco-chart-line :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-line&gt;&lt;/div&gt;
-</pre></div>
-            <h2>Line Chart</h2>
-
-<p>To achieve a smooth line, set the following properties in the dataset object:</p>
-
-<pre><code>pointBackgroundColor: &#39;transparent&#39;,
+            <div class="code-block">
+              <pre>&lt;div class=&quot;bg-base-white&quot; data-js=&quot;chart-line&quot;&gt;&lt;nyco-chart-line :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-line&gt;&lt;/div&gt;</pre>
+            </div>
+            <h2 id="heading-line-chart">Line Chart</h2>
+            <p>To achieve a smooth line, set the following properties in the
+              dataset object:</p>
+            <pre><code>pointBackgroundColor: &#39;transparent&#39;,
 pointBackgroundColor: &#39;transparent&#39;,
 pointBorderColor: &#39;transparent&#39;,
-lineTension: 0,</code></pre>
+lineTension: 0,
 
-<p>
-  Additional configuration options are viewable on
-  <a href="https://www.chartjs.org/docs/latest/charts/line.html">Chart.js</a>
-  .
-</p>
-
+</code></pre>
+            <p>Additional configuration options are viewable on <a
+                href="https://www.chartjs.org/docs/latest/charts/line.html">Chart.js</a>.
+            </p>
           </div>
         </div>
       </section>
     </article>
   </main>
-  <footer class="o-footer color-dark-background screen-tablet:layout-four-columns-gutter">
-    <nav>
-      <a class="o-footer__nav-link" href="index">Home</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns">GitHub Repository</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a>
-      <a class="o-footer__nav-link" href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO Opportunity on GitHub</a>
-    </nav>
+  <footer
+    class="o-footer color-dark-background screen-tablet:layout-four-columns-gutter">
+    <nav><a class="o-footer__nav-link" href="index">Home</a><a
+        class="o-footer__nav-link"
+        href="https://github.com/CityOfNewYork/nyco-patterns">GitHub
+        Repository</a><a class="o-footer__nav-link"
+        href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO
+        Patterns Framework</a><a class="o-footer__nav-link"
+        href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO
+        Opportunity on GitHub</a></nav>
     <div></div>
-    <div class="o-footer__info">
-      <a href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
-        <svg aria-hidden="true" class="icon-logo-secondary o-footer__logo text-base-white" style="height: 52px !important"><use xlink:href="#icon-logo-secondary"></use></svg>
-      </a>
-      <p>
-        NYC Opportunity is the
-        <a href="http://nyc.gov/opportunity">New York City Mayor's Office for Economic Opportunity</a>
-        . We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
-        <a href="https://twitter.com/nycopportunity" target="_blank" rel="nofollow noopener">Twitter</a>
-        ,&nbsp;
-        <a href="https://www.facebook.com/NYCOpportunity/" target="_blank" rel="nofollow noopener">Facebook</a>
-        ,&nbsp;
-        <a href="https://medium.com/@nycopportunity" target="_blank" rel="nofollow noopener">Medium</a>
-        , and&nbsp;
-        <a href="" target="_blank" rel="nofollow noopener" title="Viewable by github.com/orgs/CityOfNewYork/ members.">Github</a>
-        .
-      </p>
-      <small>
-        © City of New York, 2020 All Rights Reserved.
-        <br />
-        NYC is a trademark and service mark of the City of New York.
-      </small>
+    <div class="o-footer__info"><a href="http://nyc.gov/opportunity"
+        title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;"><svg
+          aria-hidden="true"
+          class="icon-logo-secondary o-footer__logo text-base-white"
+          style="height: 52px !important">
+          <use xlink:href="#icon-logo-secondary"></use>
+        </svg></a>
+      <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York
+          City Mayor's Office for Economic Opportunity</a>. We are committed to
+        sharing open source software that we use in our products. Feel free to
+        ask questions and share feedback. Follow @nycopportunity on&nbsp;<a
+          href='https://twitter.com/nycopportunity' target='_blank'
+          rel='nofollow noopener'>Twitter</a>,&nbsp;<a
+          href='https://www.facebook.com/NYCOpportunity/' target='_blank'
+          rel='nofollow noopener'>Facebook</a>,&nbsp;<a
+          href='https://medium.com/@nycopportunity' target='_blank'
+          rel='nofollow noopener'>Medium</a>, and&nbsp;<a href=''
+          target='_blank' rel='nofollow noopener'
+          title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
+      </p><small>© City of New York, 2020 All Rights Reserved.<br>NYC is a
+        trademark and service mark of the City of New York.</small>
     </div>
   </footer>
-  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch"></script>
+  <script crossorigin="anonymous"
+    src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch">
+  </script>
   <script src="scripts/nyco-patterns.js"></script>
   <script type="text/javascript">
     var nyco = new NycoPatterns();
@@ -246,4 +274,5 @@ lineTension: 0,</code></pre>
     nyco.chart('line');
     // nyco.chart('pie');
   </script>
+  <script src="/reload/reload.js"></script>
 </body>

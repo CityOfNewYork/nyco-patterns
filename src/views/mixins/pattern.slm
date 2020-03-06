@@ -11,6 +11,9 @@
         - if this.code === 'true'
           div class='code-block'
             pre
-              = 'code{{ ' + this.path + '.slm }}';
+              / = 'code{{ ' + this.path + '.slm }}';
+              = this.include(this.path);
 
-        = 'md{{ ' + this.path + '.md }}';
+
+        / = 'md{{ ' + this.path + '.md }}';
+        == this.include(`${this.path}.md`);

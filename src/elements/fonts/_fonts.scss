@@ -4,35 +4,54 @@
 @import 'scss/functions/font-source-declaration';
 @import 'scss/functions/font-face';
 
-@include font-face(
-  'Noto Sans',
-  '#{$cdn}#{$path-to-fonts}noto-sans/NotoSans',
-  (eot woff2 woff ttf)) {
-    font-weight: normal;
-    font-style: normal
-  };
+// @include font-face(
+//   'Noto Sans',
+//   '#{$cdn}#{$path-to-fonts}noto-sans/NotoSans',
+//   (eot woff2 woff ttf)) {
+//     font-weight: normal;
+//     font-style: normal
+//   };
 
-@include font-face(
-  'Noto Sans',
-  '#{$cdn}#{$path-to-fonts}/noto-sans/NotoSans-Italic',
-  (eot woff2 woff ttf)) {
-    font-weight: normal;
-    font-style: italic
-  };
+// @include font-face(
+//   'Noto Sans',
+//   '#{$cdn}#{$path-to-fonts}/noto-sans/NotoSans-Italic',
+//   (eot woff2 woff ttf)) {
+//     font-weight: normal;
+//     font-style: italic
+//   };
 
-@include font-face(
-  'Noto Sans',
-  '#{$cdn}#{$path-to-fonts}/noto-sans/NotoSans-Bold',
-  (eot woff2 woff ttf)) {
-    font-weight: bold;
-    font-style: normal
-  };
+// @include font-face(
+//   'Noto Sans',
+//   '#{$cdn}#{$path-to-fonts}/noto-sans/NotoSans-Bold',
+//   (eot woff2 woff ttf)) {
+//     font-weight: bold;
+//     font-style: normal
+//   };
 
-@include font-face(
-  'Noto Sans',
-  '#{$cdn}#{$path-to-fonts}/noto-sans/NotoSans-BoldItalic',
-  (eot woff2 woff ttf)) {
-    font-weight: bold;
-    font-style: italic
-  };
+// @include font-face(
+//   'Noto Sans',
+//   '#{$cdn}#{$path-to-fonts}/noto-sans/NotoSans-BoldItalic',
+//   (eot woff2 woff ttf)) {
+//     font-weight: bold;
+//     font-style: italic
+//   };
 
+@include font-face('IBM Plex Sans', '#{$cdn}#{$path-to-fonts}/IBM-Plex-Sans/IBMPlexSans-Regular', (eot woff2 woff ttf otf)) {
+  font-weight: normal;
+  font-style: normal
+};
+
+@include font-face('IBM Plex Sans', '#{$cdn}#{$path-to-fonts}/IBM-Plex-Sans/IBMPlexSans-Italic', (eot woff2 woff ttf otf)) {
+  font-weight: normal;
+  font-style: normal
+};
+
+@include font-face('IBM Plex Sans', '#{$cdn}#{$path-to-fonts}/IBM-Plex-Sans/IBMPlexSans-Bold', (eot woff2 woff ttf otf)) {
+  font-weight: bold;
+  font-style: normal
+};
+
+@include font-face('IBM Plex Sans', '#{$cdn}#{$path-to-fonts}/IBM-Plex-Sans/IBMPlexSans-BoldItalic', (eot woff2 woff ttf otf)) {
+  font-weight: bold;
+  font-style: italic
+};

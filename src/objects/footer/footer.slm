@@ -6,26 +6,26 @@ footer class='o-footer color-dark-background screen-tablet:layout-four-columns-g
 
   nav
     a class='o-footer__nav-link' href='index' Home
-    a class='o-footer__nav-link' href='${this.site.urls.source}' GitHub Repository
-    a class='o-footer__nav-link' href='${this.site.urls.nycoPatternsFramework}' NYCO Patterns Framework
-    a class='o-footer__nav-link' href='${this.site.urls.nycOpportunityOnGithub}' NYCO Opportunity on GitHub
-    / a class='o-footer__nav-link' href='${this.site.urls.nycOpportunity}' title='${this.site.package.author}' NYC Opportunity
-    / a class='o-footer__nav-link' href='${this.site.urls.tailwind}' Tailwind CSS
-    / a class='o-footer__nav-link' href='${this.site.urls.blueprint}' NYC Digital Blueprint
+    a class='o-footer__nav-link' href='${this.urls.source}' GitHub Repository
+    a class='o-footer__nav-link' href='${this.urls.nycoPatternsFramework}' NYCO Patterns Framework
+    a class='o-footer__nav-link' href='${this.urls.nycOpportunityOnGithub}' NYCO Opportunity on GitHub
+    / a class='o-footer__nav-link' href='${this.urls.nycOpportunity}' title='${this.package.author}' NYC Opportunity
+    / a class='o-footer__nav-link' href='${this.urls.tailwind}' Tailwind CSS
+    / a class='o-footer__nav-link' href='${this.urls.blueprint}' NYC Digital Blueprint
 
   div
 
   div class='o-footer__info'
-    a href='http://nyc.gov/opportunity' title='${this.site.package.author}'
+    a href='http://nyc.gov/opportunity' title='${this.package.author}'
       svg class='icon-logo-secondary o-footer__logo text-base-white' aria-hidden='true' style='height: 52px !important'
         use xlink:href='#icon-logo-secondary'
 
     p
       | NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
-      | <a href='${this.site.urls.twitter}' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
-      | <a href='${this.site.urls.facebook}' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
-      | <a href='${this.site.urls.medium}' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
-      | <a href='${this.site.urls.github_team}' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
+      | <a href='${this.urls.twitter}' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
+      | <a href='${this.urls.facebook}' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
+      | <a href='${this.urls.medium}' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
+      | <a href='${this.urls.github_team}' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
 
     small
       - let date = new Date();
