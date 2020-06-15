@@ -2,7 +2,6 @@
  * Dependencies
  */
 
-// const defaultConfig = require('tailwindcss/defaultConfig')();
 const tokens = require('./tokens.js');
 
 /**
@@ -10,11 +9,12 @@ const tokens = require('./tokens.js');
  */
 
 module.exports = {
-  options: {
-    prefix: '',
-    important: false,
-    separator: ':'
-  },
+  // options: {
+  //   prefix: '',
+  //   important: false,
+  //   separator: ':'
+  // },
+  important: true,
   theme: {
     borderWidth: tokens.borderWidth,
     borderRadius: tokens.borderRadius,
@@ -106,7 +106,7 @@ module.exports = {
     zIndex: []
   },
   /**
-   * These are the plugins that will be enabled in the process utilitiy stylesheet
+   * These are the plugins that will be enabled in the process utility stylesheet
    */
   corePlugins: [
     // 'preflight',
