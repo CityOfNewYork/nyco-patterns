@@ -50,14 +50,6 @@ $screens: map-get($tokens, 'screens');
     }
   }
 
-  .bg-#{$key} {
-    width: nth($var, 1);
-    height: nth($var, 2);
-    background-image: url('#{$cdn}#{path-to-svg}#{$path}.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-
   .#{$key} {
     width: nth($var, 1);
     height: nth($var, 2);
