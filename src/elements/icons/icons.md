@@ -33,12 +33,6 @@ The first option allows you to inline an SVG with the `use` tag. This is the pre
       <use xlink:href="#icon-logo-nyco"></use>
     </svg>
 
-#### Background Images
-
-The second option does not require the icon sprite to be added to the page through the JavaScript module. It uses background images that reference the icons on the CDN. This option uses a utility class that sets the background image of the icon `.bg-{{ Icon ID Here }}`. Icons with background images require less markup but their shape fill color will default to black or whatever fill color the shape is set to. Note the `role="img"` and alt text attributes for accessibility.
-
-    <div class="icon-logo-nyco" role="img" alt="The NYC Opportunity Logo"></div>
-
 #### img tag
 
 The third option is to use the individual SVG path as a source attribute in an image tag. Note the alt text attribute for accessibility.
