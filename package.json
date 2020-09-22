@@ -19,7 +19,8 @@
     "default": "cross-env NODE_ENV=production pttrn default",
     "version": "npm run default && git add .",
     "prepublishOnly": "git push && git push --tags",
-    "publish": "cross-env NODE_ENV=production pttrn publish",
+    "publish": "npm run gh-pages",
+    "gh-pages": "cross-env NODE_ENV=production pttrn publish",
     "pttrn": "pttrn"
   },
   "devDependencies": {
@@ -62,39 +63,5 @@
         }
       ]
     ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "google"
-    ],
-    "rules": {
-      "curly": [
-        "error",
-        "multi-line"
-      ],
-      "comma-dangle": [
-        "error",
-        "never"
-      ],
-      "arrow-parens": [
-        "error",
-        "as-needed"
-      ]
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module"
-    }
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "comment-whitespace-inside": null,
-      "no-missing-end-of-source-newline": null,
-      "at-rule-empty-line-before": null,
-      "number-leading-zero": "never",
-      "selector-pseudo-element-colon-notation": null
-    }
   }
 }
