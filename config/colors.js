@@ -58,8 +58,8 @@ const colors = {
       'input-background': 'base-white',
       'placeholder': 'grey',
       'focus': 'navy',
-      'checkbox-check': '"../svg/icon-ui-check-white.svg"',
-      'select-arrow': '"../svg/icon-ui-chevron-down-navy.svg"',
+      'checkbox-check': '"icon-ui-check-white.svg"',
+      'select-arrow': '"icon-ui-chevron-down-navy.svg"',
       'error': 'red'
     },
     'mid-background': {
@@ -73,9 +73,9 @@ const colors = {
       'input-background': 'base-white',
       'placeholder': 'grey',
       'focus': 'navy',
-      'checkbox-check': '"../svg/icon-ui-check-white.svg"',
-      'radio-check': '"../svg/icon-ui-check-white.svg"',
-      'select-arrow': '"../svg/icon-ui-chevron-down-navy.svg"',
+      'checkbox-check': '"icon-ui-check-white.svg"',
+      'radio-check': '"icon-ui-check-white.svg"',
+      'select-arrow': '"icon-ui-chevron-down-navy.svg"',
       'error': 'red'
     },
     'dark-background': {
