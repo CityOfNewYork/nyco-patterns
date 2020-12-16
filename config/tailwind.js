@@ -28,12 +28,28 @@ module.exports = {
     maxWidth: tokens.maxWidth,
     padding: tokens.padding,
     screens: {
-      'screen-desktop': `${tokens.screens['screen-desktop']}px`,
-      'screen-tablet': `${tokens.screens['screen-tablet']}px`,
-      'screen-mobile': `${tokens.screens['screen-mobile']}px`,
-      'screen-sm-mobile': `${tokens.screens['screen-desktop']}px`
+      'desktop': `${tokens.screens['desktop']}px`,
+      'tablet': `${tokens.screens['tablet']}px`,
+      'mobile': `${tokens.screens['mobile']}px`,
+      'small': `${tokens.screens['desktop']}px`
     },
-    width: tokens.width
+    spacing: {
+      '0': '0',
+      '1': '8px',
+      '2': '16px',
+      '3': '24px',
+      '4': '32px',
+      '5': '40px',
+      '6': '48px'
+    },
+    width: tokens.width,
+    extend: {
+      margin: {
+        '-2': '-16px',
+        '-1': '-8px',
+        'auto': 'auto'
+      }
+    }
   },
   variants: {
     preflight: [],
@@ -93,6 +109,12 @@ module.exports = {
     textColor: ['hover', 'focus'],
     fontSize: ['responsive'],
     fontStyle: [],
+    gap: ['responsive'],
+    gridColumn: ['responsive'],
+    gridColumnStart: ['responsive'],
+    gridColumnEnd: ['responsive'],
+    gridTemplateColumns: ['responsive'],
+    gridTemplateRows: ['responsive'],
     textTransform: [],
     textDecoration: [],
     fontSmoothing: [],
@@ -138,6 +160,12 @@ module.exports = {
     // 'float',
     'fontFamily',
     'fontWeight',
+    'gap',
+    'gridColumn',
+    'gridColumnStart',
+    'gridColumnEnd',
+    'gridTemplateColumns',
+    'gridTemplateRows',
     'height',
     'lineHeight',
     // 'listStylePosition',

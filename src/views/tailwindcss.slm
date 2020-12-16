@@ -10,6 +10,7 @@
 = partial('mixins/head.slm');
 = partial('mixins/nav.slm');
 = partial('mixins/readme.slm');
+= partial('mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -21,4 +22,7 @@
 = content('content');
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
+
   = mixin('readme', 'utilities/tailwindcss/tailwindcss');
+  = mixin('readme', 'utilities/tailwindcss/tailwindcss-ui');
+  = mixin('pattern', 'utilities/tailwindcss/tailwindcss-description-lists');

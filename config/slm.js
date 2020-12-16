@@ -65,7 +65,7 @@ module.exports = {
     twitter: 'https://twitter.com/nycopportunity',
     instagram: 'https://www.instagram.com/nycopportunity/',
     bootstrap: 'http://getbootstrap.com/2.3.2',
-    tailwind: 'https://tailwindcss.com',
+    tailwind: 'https://v1.tailwindcss.com',
     tailwindDocs: 'https://tailwindcss.com/docs/',
     cityStyleGuide: 'https://www1.nyc.gov/assets/doitt/downloads/pdf/user_experience_design_public.pdf',
     blueprint: 'https://blueprint.cityofnewyork.us',

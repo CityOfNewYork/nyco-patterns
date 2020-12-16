@@ -148,7 +148,7 @@ $tokens:(
       background-color: red
     )
   ),
-  cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v2.3.3/dist",
+  cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v2.3.4/dist",
   fontFamily: (
     system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
     code: (monospace),
@@ -520,42 +520,25 @@ $tokens:(
     small: normal,
     blockquote: normal
   ),
-  margin: (
-    0: 0,
-    1: 8px,
-    2: 16px,
-    3: 24px,
-    4: 32px,
-    5: 40px,
-    6: 48px,
-    -2: -16px,
-    -1: -8px,
-    auto: auto
-  ),
   maxWidth: (
     600: 600px,
     900: 896px,
+    1/4: 25%,
+    1/3: 33.33%,
     1/2: 50%,
     full: 100%
   ),
-  padding: (
-    0: 0,
-    1: 8px,
-    2: 16px,
-    3: 24px,
-    4: 32px,
-    5: 40px,
-    6: 48px
-  ),
   screens: (
-    screen-desktop: 960,
-    screen-mobile: 480,
-    screen-tablet: 768,
-    screen-sm-mobile: 400
+    desktop: 960,
+    tablet: 768,
+    mobile: 480,
+    small: 400
   ),
   width: (
     600: 600px,
     900: 896px,
+    1/4: 25%,
+    1/3: 33.33%,
     1/2: 50%,
     full: 100%
   )

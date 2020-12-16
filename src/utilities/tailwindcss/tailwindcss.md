@@ -6,9 +6,7 @@ A Utility class, such as `.inline { display: inline }`, allows the developer to 
 
 ## Tailwindcss
 
-[![tailwindcss](https://tailwindcss.com/img/twitter-large-card.png)](https://tailwindcss.com)
-
-NYCO Patterns integrates [tailwindcss](https://tailwindcss.com), a CSS utility-first framework processed by [PostCSS](https://postcss.org/) that supports custom configuration. The NYCO Patterns configuration lives in [config/tailwind.js](https://github.com/CityOfNewYork/nyco-patterns/blob/master/config/tailwind.js) and below is a table describing the current configuration.
+NYCO Patterns integrates [Tailwindcss](https://v1.tailwindcss.com/) (v1), a CSS utility-first framework processed by [PostCSS](https://postcss.org/) that supports custom configuration. The NYCO Patterns configuration lives in [config/tailwind.js](https://github.com/CityOfNewYork/nyco-patterns/blob/master/config/tailwind.js) and below is a table describing the current configuration.
 
 A simple example for using a utility to add padding to an element would be to use the utility `.p-1`. This will add `8px` of padding on all sides of an element.
 
@@ -24,9 +22,9 @@ A simple example for using a utility to add padding to an element would be to us
 
 There are three parts to the NYCO Patterns tailwindcss configuration.
 
-* [Theme](#config-theme): This object contains customizations for particular utilities such as font families, colors, margin, padding, etc. [Source documentation](https://tailwindcss.com/docs/theme).
-* [Variants](#config-variants-and-core-plugins): This object contains variants that represent different states that the utilities appear in such as media queries, `:hover`, and `:focus` states. [Source documentation](https://tailwindcss.com/docs/configuring-variants).
-* [Core Plugins](#config-variants-and-core-plugins): This array is a white list of utility plugins that defines what sets of utilities will be compiled in the final stylesheet distribution. [Source documentation](https://tailwindcss.com/docs/configuration#core-plugins).
+* [Theme](#config-theme): This object contains customizations for particular utilities such as font families, colors, margin, padding, etc. [Source documentation](https://v1.tailwindcss.com/docs/theme).
+* [Variants](#config-variants-and-core-plugins): This object contains variants that represent different states that the utilities appear in such as media queries, `:hover`, and `:focus` states. [Source documentation](https://v1.tailwindcss.com/docs/configuring-variants).
+* [Core Plugins](#config-variants-and-core-plugins): This array is a white list of utility plugins that defines what sets of utilities will be compiled in the final stylesheet distribution. [Source documentation](https://v1.tailwindcss.com/docs/configuration#core-plugins).
 
 #### Theme
 
