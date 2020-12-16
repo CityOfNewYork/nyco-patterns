@@ -12,7 +12,7 @@ $iconSizes: map-get($tokens, 'iconSizes');
 
 // Declarations
 .o-header {
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     display: flex;
   }
 }
@@ -24,7 +24,7 @@ $iconSizes: map-get($tokens, 'iconSizes');
 
   padding: $grid ($grid * 4);
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     justify-content: center;
     padding: ($grid * 4);
   }
@@ -37,7 +37,7 @@ $iconSizes: map-get($tokens, 'iconSizes');
 
 .o-header__main-toggle,
 .o-header__main-version {
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     display: none;
     visibility: hidden;
   }
@@ -58,7 +58,7 @@ $iconSizes: map-get($tokens, 'iconSizes');
   height: 25px !important;
   padding: 0 $grid * 3;
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     display: none;
     visibility: hidden;
   }
@@ -74,7 +74,7 @@ $iconSizes: map-get($tokens, 'iconSizes');
   margin-top: ($grid * 4);
   margin-bottom: ($grid * 4);
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     display: inline;
     visibility: visible;
   }
@@ -90,12 +90,12 @@ $iconSizes: map-get($tokens, 'iconSizes');
 
   padding: ($grid * 4);
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     display: flex;
     visibility: visible;
   }
 
-  @media (min-width: #{map-get($screens, 'screen-desktop')}px) {
+  @media (min-width: #{map-get($screens, 'desktop')}px) {
     justify-content: center;
     padding-left: ($grid * 6);
     padding-right:  ($grid * 6);
@@ -116,7 +116,7 @@ $iconSizes: map-get($tokens, 'iconSizes');
   justify-content: center;
   padding: ($grid * 4);
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     display: flex;
     visibility: visible;
   }

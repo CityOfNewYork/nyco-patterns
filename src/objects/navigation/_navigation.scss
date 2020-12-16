@@ -22,7 +22,7 @@ $grid: map-get($tokens, 'grid');
 .o-navigation__banner {
   padding: ($grid * 2) ($grid * 4);
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     display: none;
     visibility: hidden;
   }
@@ -40,7 +40,7 @@ $grid: map-get($tokens, 'grid');
 }
 
 .o-navigation__stick {
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     position: sticky;
     top: 0px;
 
@@ -65,7 +65,7 @@ $grid: map-get($tokens, 'grid');
   padding: ($grid * 2) $grid;
   margin-top: ($grid * 2);
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     padding-left: ($grid * 2);
     padding-right: ($grid * 2);
   }
@@ -76,7 +76,7 @@ $grid: map-get($tokens, 'grid');
 
   padding: $grid $grid;
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     padding-left: ($grid * 2);
     padding-right: ($grid * 2);
   }

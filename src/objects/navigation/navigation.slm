@@ -3,7 +3,7 @@
 /*
 
 aside class='o-navigation bg-primary-navy'
-  div class='screen-tablet:flex hidden w-full'
+  div class='tablet:flex hidden w-full'
     div class='o-navigation__wrap color-mid-background'
       div class='o-navigation__nav'
         - classNav = '';
@@ -13,7 +13,7 @@ aside class='o-navigation bg-primary-navy'
         = partial('../../views/mixins/nav.slm');
         = mixin('nav');
 
-  div class='screen-tablet:hidden w-full'
+  div class='tablet:hidden w-full'
     div#js-navigation class='o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated'
       div class='o-navigation__banner color-dark-background'
         h1 class='o-navigation__banner-title' Patterns

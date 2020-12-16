@@ -16,7 +16,7 @@ input, textarea {
   position: relative;
 
   input {
-    padding-left: map-get($padding, 3);
+    padding-left: map-get($tokens, 'grid') * 3
   }
 
   &::after {

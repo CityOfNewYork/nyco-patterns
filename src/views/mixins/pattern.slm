@@ -2,7 +2,7 @@
   - this.slug = this.path.split('/')[2];
 
   section id='${this.slug}' class='mt-6'
-    div class='bg-secondary-white-50t mb-6 p-4 screen-desktop:p-6'
+    div class='bg-secondary-white-50t mb-6 p-4 desktop:p-6'
       div class='layout-wrap mx-auto flex justify-center'
         = partial(`../${this.path}.slm`);
 

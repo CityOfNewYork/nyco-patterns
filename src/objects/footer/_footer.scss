@@ -20,7 +20,7 @@ $iconSizes: map-get($tokens, 'iconSizes');
   border-bottom: 1px solid !important;
   padding: ($grid * 2) $grid;
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     padding-left: ($grid * 2);
     padding-right: ($grid * 2);
   }
@@ -30,7 +30,7 @@ $iconSizes: map-get($tokens, 'iconSizes');
   display: block;
   padding: ($grid * 2) $grid;
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     padding-left: ($grid * 2);
     padding-right: ($grid * 2);
   }
@@ -40,7 +40,7 @@ $iconSizes: map-get($tokens, 'iconSizes');
   margin-top: ($grid * 6);
   margin-bottom: 0;
 
-  @media (min-width: #{map-get($screens, 'screen-tablet')}px) {
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
     margin: 0px;
   }
 }

@@ -9,7 +9,7 @@
 .o-map {
   .map-menu {
     a {
-      margin-right: map-get(map-get($tokens, 'margin'), 1);
+      margin-right: map-get($tokens, 'grid');
       overflow-wrap: normal;
       word-wrap: normal;
       overflow: scroll;

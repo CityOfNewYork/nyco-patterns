@@ -15,7 +15,7 @@ body style='visibility: hidden;' onload='load()'
 
   / aside id='navigation' class='color-mid-background hidden hidden:overflowFadeInUp animated'
   /   div class='p-4 animated'
-  /     div class='layout-wrap screen-tablet:layout-two-columns-gutter justify-center mx-auto'
+  /     div class='layout-wrap tablet:layout-two-columns-gutter justify-center mx-auto'
   /       div
   /         {% include '../partials/nav.twig' with { 'classes': {
   /           'header': 'block p-3 text-h4 font-normal border-b text-primary-navy border-primary-navy',

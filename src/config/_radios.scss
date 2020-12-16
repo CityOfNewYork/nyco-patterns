@@ -36,7 +36,7 @@ $radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
 
   display: flex;
   margin: 0;
-  padding: .75 * map-get(map-get($tokens, 'padding'), 2);
+  padding: .75 * (map-get($tokens, 'grid') * 2);
 
   border-width: 1px;
   border-style: solid;

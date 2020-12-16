@@ -5,10 +5,10 @@
 // Declarations
 
 // Variables
-$screen-desktop: #{map-get(map-get($tokens, 'screens'), 'screen-desktop')}px;
-$screen-tablet: #{map-get(map-get($tokens, 'screens'), 'screen-tablet')}px;
-$screen-mobile: #{map-get(map-get($tokens, 'screens'), 'screen-mobile')}px;
-$screen-sm-mobile: #{map-get(map-get($tokens, 'screens'), 'screen-sm-mobile')}px;
+$desktop: #{map-get(map-get($tokens, 'screens'), 'desktop')}px;
+$tablet: #{map-get(map-get($tokens, 'screens'), 'tablet')}px;
+$mobile: #{map-get(map-get($tokens, 'screens'), 'mobile')}px;
+$small: #{map-get(map-get($tokens, 'screens'), 'small')}px;
 
 // Mixins
 @mixin screens($screens: map-get($tokens, 'screens')) {

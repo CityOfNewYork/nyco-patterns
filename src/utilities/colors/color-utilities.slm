@@ -1,4 +1,4 @@
-div class='layout-two-columns-gutter screen-desktop:layout-four-columns-gutter'
+div class='layout-two-columns-gutter desktop:layout-four-columns-gutter'
   - for (key in this.tokens.colors)
     - if (!key.includes('primary') && !key.includes('secondary'))
       - value = this.tokens.colors[key]

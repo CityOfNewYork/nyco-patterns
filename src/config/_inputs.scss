@@ -18,7 +18,7 @@ $padding: map-get($tokens, 'padding');
   max-width: 100%;
   min-width: 200px;
   width: 100%;
-  padding: .75 * map-get($padding, 2);
+  padding: .75 * (map-get($tokens, 'grid') * 2);
   cursor: pointer;
   margin: 0;
 
@@ -27,7 +27,7 @@ $padding: map-get($tokens, 'padding');
     opacity: 0.6;
   }
 
-  @media screen and (min-width: $screen-tablet) {
+  @media screen and (min-width: $tablet) {
     width: auto;
   }
 }

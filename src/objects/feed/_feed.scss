@@ -6,13 +6,13 @@
 @import 'patterns-framework/src/utilities/spinner/spinner';
 @import 'config/tokens';
 
-$oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'screen-tablet')}px;
+$oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'tablet')}px;
 
 // Declarations
 .o-feed__header {
   display: flex;
   align-items: center;
-  padding-bottom: map-get(map-get($tokens, 'padding'), 2);
+  padding-bottom: map-get($tokens, 'grid') * 2;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-color: inherit;
@@ -24,7 +24,7 @@ $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'screen-tablet')}px;
   height: 50px;
   border-radius: 1000px;
   overflow: hidden;
-  margin-right: map-get(map-get($tokens, 'margin'), 1);
+  margin-right: map-get($tokens, 'grid');
   flex-shrink: 0;
 }
 
@@ -40,8 +40,8 @@ $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'screen-tablet')}px;
 }
 
 .c-feed-item {
-  margin-top: map-get(map-get($tokens, 'margin'), 4);
-  padding-bottom: map-get(map-get($tokens, 'padding'), 4);
+  margin-top: map-get($tokens, 'grid') * 4;
+  padding-bottom: map-get($tokens, 'grid') * 4;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-color: inherit;
@@ -52,14 +52,14 @@ $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'screen-tablet')}px;
 }
 
 .c-feed-item__date {
-  margin-bottom: map-get(map-get($tokens, 'margin'), 1);
+  margin-bottom: map-get($tokens, 'grid')
 }
 
 .c-feed-item__thumbnail {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: map-get(map-get($tokens, 'margin'), 3);
+  margin-top: map-get($tokens, 'grid') * 3;
 
   // order: -1;
   margin-top: 0;
@@ -70,7 +70,7 @@ $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'screen-tablet')}px;
 
 .c-feed-item__excerpt {
   font-size: inherit;
-  margin-top: map-get(map-get($tokens, 'margin'), 1);
+  margin-top: map-get($tokens, 'grid');
 }
 
 // Column Layouts
