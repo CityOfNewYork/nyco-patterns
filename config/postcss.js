@@ -15,13 +15,13 @@ const failonwarn = require('postcss-fail-on-warn'); // logs failures to the cons
 const postCss = {
   parser: 'postcss-scss',
   plugins: [
-    tailwindcss('./config/tailwind.js'),
-    autoprefixer('last 4 version'),
+    tailwindcss(require('./tailwind.js')),
+    // autoprefixer('last 4 version'),
     mqpacker({
       sort: true
     }),
-    cssnano(),
-    failonwarn()
+    // cssnano(),
+    // failonwarn()
   ]
 };
 

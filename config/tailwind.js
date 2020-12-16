@@ -3,6 +3,7 @@
  */
 
 const tokens = require('./tokens.js');
+const defaults = require('tailwindcss/defaultTheme');
 
 /**
  * Config
@@ -43,12 +44,11 @@ module.exports = {
       '6': '48px'
     },
     width: tokens.width,
-    extend: {
-      margin: {
-        '-2': '-16px',
-        '-1': '-8px',
-        'auto': 'auto'
-      }
+    margin: {
+      ...defaults.margin,
+      '-2': '-16px',
+      '-1': '-8px',
+      'auto': 'auto'
     }
   },
   variants: {

@@ -22,11 +22,11 @@ module.exports = {
   },
   borderRadius: {
     'none': '0',
-    'default': '1px'
+    'DEFAULT': '1px'
   },
   borderWidth: {
     '0': '0',
-    'default': '1px',
+    'DEFAULT': '1px',
     '2': '2px',
     '4': '4px',
     '8': '8px'
