@@ -36,7 +36,6 @@
     "eslint-config-google": "^0.14.0",
     "node-emoji": "^1.10.0",
     "postcss": "^8.2.1",
-    "postcss-fail-on-warn": "^0.1.0",
     "rollup-plugin-vue": "^4.2.0",
     "stylelint-config-standard": "^19.0.0",
     "tailwindcss": "^2.0.2",
