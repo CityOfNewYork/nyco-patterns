@@ -1,1 +1,441 @@
-button{border:none;margin:0;padding:0;width:auto;overflow:visible;background:transparent;color:inherit;font:inherit;line-height:normal;-moz-osx-font-smoothing:inherit;-webkit-font-smoothing:inherit;-webkit-appearance:none}button::-moz-focus-inner{border:0;padding:0}.btn,.buttons{color:inherit;font-weight:700;font-size:inherit;font-family:inherit;line-height:1;text-align:center;text-decoration:none;text-transform:none;display:inline-block;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer;background:transparent;padding:12px 16px;border:2px solid;border-radius:1px;-webkit-transition:background .1s ease-in,color .1s ease-in,-webkit-box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,-webkit-box-shadow .1s ease-in;-o-transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in,-webkit-box-shadow .1s ease-in}.btn .icon,.buttons .icon{vertical-align:middle}.btn.color-primary-button,.buttons.color-primary-button{border-color:transparent}.btn.color-primary-button:active,.btn.color-primary-button:hover,.buttons.color-primary-button:active,.buttons.color-primary-button:hover{color:#fff;background:#1e41ba;-webkit-box-shadow:8px 8px 0 0 #132460,0 0 0 3px hsla(0,0%,100%,0);box-shadow:8px 8px 0 0 #132460,0 0 0 3px hsla(0,0%,100%,0)}.btn.color-secondary-button,.buttons.color-secondary-button{border-color:transparent}.btn.color-secondary-button:active,.btn.color-secondary-button:hover,.buttons.color-secondary-button:active,.buttons.color-secondary-button:hover{color:#fff;background:#ff4336;-webkit-box-shadow:8px 8px 0 0 #cb1004,0 0 0 3px hsla(0,0%,100%,0);box-shadow:8px 8px 0 0 #cb1004,0 0 0 3px hsla(0,0%,100%,0)}.btn-app,.button-app{border-radius:2px}.btn-app.color-primary-button,.button-app.color-primary-button{background:-webkit-gradient(linear,left bottom,left top,from(#2444b5),to(#284cca));background:-o-linear-gradient(bottom,#2444b5 0,#284cca 100%);background:linear-gradient(0deg,#2444b5,#284cca);border-color:transparent}.btn-app.color-primary-button:active,.btn-app.color-primary-button:hover,.button-app.color-primary-button:active,.button-app.color-primary-button:hover{color:#fff;background:-webkit-gradient(linear,left bottom,left top,from(#2444b5),to(#284cca));background:-o-linear-gradient(bottom,#2444b5 0,#284cca 100%);background:linear-gradient(0deg,#2444b5,#284cca);-webkit-box-shadow:none;box-shadow:none}.btn-app.color-secondary-button,.button-app.color-secondary-button{background:-webkit-gradient(linear,left bottom,left top,from(#fc4639),to(#fc5d52));background:-o-linear-gradient(bottom,#fc4639 0,#fc5d52 100%);background:linear-gradient(0deg,#fc4639,#fc5d52);border-color:transparent}.btn-app.color-secondary-button:active,.btn-app.color-secondary-button:hover,.button-app.color-secondary-button:active,.button-app.color-secondary-button:hover{color:#fff;background:-webkit-gradient(linear,left bottom,left top,from(#fc4639),to(#fc5d52));background:-o-linear-gradient(bottom,#fc4639 0,#fc5d52 100%);background:linear-gradient(0deg,#fc4639,#fc5d52);-webkit-box-shadow:none;box-shadow:none}.btn-large,.button-large{padding:20px 32px}@media (min-width:400px){.small\:btn,.small\:buttons{color:inherit;font-weight:700;font-size:inherit;font-family:inherit;line-height:1;text-align:center;text-decoration:none;text-transform:none;display:inline-block;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer;background:transparent;padding:12px 16px;border:2px solid;border-radius:1px;-webkit-transition:background .1s ease-in,color .1s ease-in,-webkit-box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,-webkit-box-shadow .1s ease-in;-o-transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in,-webkit-box-shadow .1s ease-in}.small\:btn .icon,.small\:buttons .icon{vertical-align:middle}.small\:btn.color-primary-button,.small\:buttons.color-primary-button{border-color:transparent}.small\:btn.color-primary-button:active,.small\:btn.color-primary-button:hover,.small\:buttons.color-primary-button:active,.small\:buttons.color-primary-button:hover{color:#fff;background:#1e41ba;-webkit-box-shadow:8px 8px 0 0 #132460,0 0 0 3px hsla(0,0%,100%,0);box-shadow:8px 8px 0 0 #132460,0 0 0 3px hsla(0,0%,100%,0)}.small\:btn.color-secondary-button,.small\:buttons.color-secondary-button{border-color:transparent}.small\:btn.color-secondary-button:active,.small\:btn.color-secondary-button:hover,.small\:buttons.color-secondary-button:active,.small\:buttons.color-secondary-button:hover{color:#fff;background:#ff4336;-webkit-box-shadow:8px 8px 0 0 #cb1004,0 0 0 3px hsla(0,0%,100%,0);box-shadow:8px 8px 0 0 #cb1004,0 0 0 3px hsla(0,0%,100%,0)}.small\:btn-app,.small\:button-app{border-radius:2px}.small\:btn-app.color-primary-button,.small\:button-app.color-primary-button{background:-webkit-gradient(linear,left bottom,left top,from(#2444b5),to(#284cca));background:-o-linear-gradient(bottom,#2444b5 0,#284cca 100%);background:linear-gradient(0deg,#2444b5,#284cca);border-color:transparent}.small\:btn-app.color-primary-button:active,.small\:btn-app.color-primary-button:hover,.small\:button-app.color-primary-button:active,.small\:button-app.color-primary-button:hover{color:#fff;background:-webkit-gradient(linear,left bottom,left top,from(#2444b5),to(#284cca));background:-o-linear-gradient(bottom,#2444b5 0,#284cca 100%);background:linear-gradient(0deg,#2444b5,#284cca);-webkit-box-shadow:none;box-shadow:none}.small\:btn-app.color-secondary-button,.small\:button-app.color-secondary-button{background:-webkit-gradient(linear,left bottom,left top,from(#fc4639),to(#fc5d52));background:-o-linear-gradient(bottom,#fc4639 0,#fc5d52 100%);background:linear-gradient(0deg,#fc4639,#fc5d52);border-color:transparent}.small\:btn-app.color-secondary-button:active,.small\:btn-app.color-secondary-button:hover,.small\:button-app.color-secondary-button:active,.small\:button-app.color-secondary-button:hover{color:#fff;background:-webkit-gradient(linear,left bottom,left top,from(#fc4639),to(#fc5d52));background:-o-linear-gradient(bottom,#fc4639 0,#fc5d52 100%);background:linear-gradient(0deg,#fc4639,#fc5d52);-webkit-box-shadow:none;box-shadow:none}.small\:btn-large,.small\:button-large{padding:20px 32px}}@media (min-width:480px){.mobile\:btn,.mobile\:buttons{color:inherit;font-weight:700;font-size:inherit;font-family:inherit;line-height:1;text-align:center;text-decoration:none;text-transform:none;display:inline-block;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer;background:transparent;padding:12px 16px;border:2px solid;border-radius:1px;-webkit-transition:background .1s ease-in,color .1s ease-in,-webkit-box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,-webkit-box-shadow .1s ease-in;-o-transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in,-webkit-box-shadow .1s ease-in}.mobile\:btn .icon,.mobile\:buttons .icon{vertical-align:middle}.mobile\:btn.color-primary-button,.mobile\:buttons.color-primary-button{border-color:transparent}.mobile\:btn.color-primary-button:active,.mobile\:btn.color-primary-button:hover,.mobile\:buttons.color-primary-button:active,.mobile\:buttons.color-primary-button:hover{color:#fff;background:#1e41ba;-webkit-box-shadow:8px 8px 0 0 #132460,0 0 0 3px hsla(0,0%,100%,0);box-shadow:8px 8px 0 0 #132460,0 0 0 3px hsla(0,0%,100%,0)}.mobile\:btn.color-secondary-button,.mobile\:buttons.color-secondary-button{border-color:transparent}.mobile\:btn.color-secondary-button:active,.mobile\:btn.color-secondary-button:hover,.mobile\:buttons.color-secondary-button:active,.mobile\:buttons.color-secondary-button:hover{color:#fff;background:#ff4336;-webkit-box-shadow:8px 8px 0 0 #cb1004,0 0 0 3px hsla(0,0%,100%,0);box-shadow:8px 8px 0 0 #cb1004,0 0 0 3px hsla(0,0%,100%,0)}.mobile\:btn-app,.mobile\:button-app{border-radius:2px}.mobile\:btn-app.color-primary-button,.mobile\:button-app.color-primary-button{background:-webkit-gradient(linear,left bottom,left top,from(#2444b5),to(#284cca));background:-o-linear-gradient(bottom,#2444b5 0,#284cca 100%);background:linear-gradient(0deg,#2444b5,#284cca);border-color:transparent}.mobile\:btn-app.color-primary-button:active,.mobile\:btn-app.color-primary-button:hover,.mobile\:button-app.color-primary-button:active,.mobile\:button-app.color-primary-button:hover{color:#fff;background:-webkit-gradient(linear,left bottom,left top,from(#2444b5),to(#284cca));background:-o-linear-gradient(bottom,#2444b5 0,#284cca 100%);background:linear-gradient(0deg,#2444b5,#284cca);-webkit-box-shadow:none;box-shadow:none}.mobile\:btn-app.color-secondary-button,.mobile\:button-app.color-secondary-button{background:-webkit-gradient(linear,left bottom,left top,from(#fc4639),to(#fc5d52));background:-o-linear-gradient(bottom,#fc4639 0,#fc5d52 100%);background:linear-gradient(0deg,#fc4639,#fc5d52);border-color:transparent}.mobile\:btn-app.color-secondary-button:active,.mobile\:btn-app.color-secondary-button:hover,.mobile\:button-app.color-secondary-button:active,.mobile\:button-app.color-secondary-button:hover{color:#fff;background:-webkit-gradient(linear,left bottom,left top,from(#fc4639),to(#fc5d52));background:-o-linear-gradient(bottom,#fc4639 0,#fc5d52 100%);background:linear-gradient(0deg,#fc4639,#fc5d52);-webkit-box-shadow:none;box-shadow:none}.mobile\:btn-large,.mobile\:button-large{padding:20px 32px}}@media (min-width:768px){.tablet\:btn,.tablet\:buttons{color:inherit;font-weight:700;font-size:inherit;font-family:inherit;line-height:1;text-align:center;text-decoration:none;text-transform:none;display:inline-block;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer;background:transparent;padding:12px 16px;border:2px solid;border-radius:1px;-webkit-transition:background .1s ease-in,color .1s ease-in,-webkit-box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,-webkit-box-shadow .1s ease-in;-o-transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in,-webkit-box-shadow .1s ease-in}.tablet\:btn .icon,.tablet\:buttons .icon{vertical-align:middle}.tablet\:btn.color-primary-button,.tablet\:buttons.color-primary-button{border-color:transparent}.tablet\:btn.color-primary-button:active,.tablet\:btn.color-primary-button:hover,.tablet\:buttons.color-primary-button:active,.tablet\:buttons.color-primary-button:hover{color:#fff;background:#1e41ba;-webkit-box-shadow:8px 8px 0 0 #132460,0 0 0 3px hsla(0,0%,100%,0);box-shadow:8px 8px 0 0 #132460,0 0 0 3px hsla(0,0%,100%,0)}.tablet\:btn.color-secondary-button,.tablet\:buttons.color-secondary-button{border-color:transparent}.tablet\:btn.color-secondary-button:active,.tablet\:btn.color-secondary-button:hover,.tablet\:buttons.color-secondary-button:active,.tablet\:buttons.color-secondary-button:hover{color:#fff;background:#ff4336;-webkit-box-shadow:8px 8px 0 0 #cb1004,0 0 0 3px hsla(0,0%,100%,0);box-shadow:8px 8px 0 0 #cb1004,0 0 0 3px hsla(0,0%,100%,0)}.tablet\:btn-app,.tablet\:button-app{border-radius:2px}.tablet\:btn-app.color-primary-button,.tablet\:button-app.color-primary-button{background:-webkit-gradient(linear,left bottom,left top,from(#2444b5),to(#284cca));background:-o-linear-gradient(bottom,#2444b5 0,#284cca 100%);background:linear-gradient(0deg,#2444b5,#284cca);border-color:transparent}.tablet\:btn-app.color-primary-button:active,.tablet\:btn-app.color-primary-button:hover,.tablet\:button-app.color-primary-button:active,.tablet\:button-app.color-primary-button:hover{color:#fff;background:-webkit-gradient(linear,left bottom,left top,from(#2444b5),to(#284cca));background:-o-linear-gradient(bottom,#2444b5 0,#284cca 100%);background:linear-gradient(0deg,#2444b5,#284cca);-webkit-box-shadow:none;box-shadow:none}.tablet\:btn-app.color-secondary-button,.tablet\:button-app.color-secondary-button{background:-webkit-gradient(linear,left bottom,left top,from(#fc4639),to(#fc5d52));background:-o-linear-gradient(bottom,#fc4639 0,#fc5d52 100%);background:linear-gradient(0deg,#fc4639,#fc5d52);border-color:transparent}.tablet\:btn-app.color-secondary-button:active,.tablet\:btn-app.color-secondary-button:hover,.tablet\:button-app.color-secondary-button:active,.tablet\:button-app.color-secondary-button:hover{color:#fff;background:-webkit-gradient(linear,left bottom,left top,from(#fc4639),to(#fc5d52));background:-o-linear-gradient(bottom,#fc4639 0,#fc5d52 100%);background:linear-gradient(0deg,#fc4639,#fc5d52);-webkit-box-shadow:none;box-shadow:none}.tablet\:btn-large,.tablet\:button-large{padding:20px 32px}}@media (min-width:960px){.desktop\:btn,.desktop\:buttons{color:inherit;font-weight:700;font-size:inherit;font-family:inherit;line-height:1;text-align:center;text-decoration:none;text-transform:none;display:inline-block;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer;background:transparent;padding:12px 16px;border:2px solid;border-radius:1px;-webkit-transition:background .1s ease-in,color .1s ease-in,-webkit-box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,-webkit-box-shadow .1s ease-in;-o-transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in;transition:background .1s ease-in,color .1s ease-in,box-shadow .1s ease-in,-webkit-box-shadow .1s ease-in}.desktop\:btn .icon,.desktop\:buttons .icon{vertical-align:middle}.desktop\:btn.color-primary-button,.desktop\:buttons.color-primary-button{border-color:transparent}.desktop\:btn.color-primary-button:active,.desktop\:btn.color-primary-button:hover,.desktop\:buttons.color-primary-button:active,.desktop\:buttons.color-primary-button:hover{color:#fff;background:#1e41ba;-webkit-box-shadow:8px 8px 0 0 #132460,0 0 0 3px hsla(0,0%,100%,0);box-shadow:8px 8px 0 0 #132460,0 0 0 3px hsla(0,0%,100%,0)}.desktop\:btn.color-secondary-button,.desktop\:buttons.color-secondary-button{border-color:transparent}.desktop\:btn.color-secondary-button:active,.desktop\:btn.color-secondary-button:hover,.desktop\:buttons.color-secondary-button:active,.desktop\:buttons.color-secondary-button:hover{color:#fff;background:#ff4336;-webkit-box-shadow:8px 8px 0 0 #cb1004,0 0 0 3px hsla(0,0%,100%,0);box-shadow:8px 8px 0 0 #cb1004,0 0 0 3px hsla(0,0%,100%,0)}.desktop\:btn-app,.desktop\:button-app{border-radius:2px}.desktop\:btn-app.color-primary-button,.desktop\:button-app.color-primary-button{background:-webkit-gradient(linear,left bottom,left top,from(#2444b5),to(#284cca));background:-o-linear-gradient(bottom,#2444b5 0,#284cca 100%);background:linear-gradient(0deg,#2444b5,#284cca);border-color:transparent}.desktop\:btn-app.color-primary-button:active,.desktop\:btn-app.color-primary-button:hover,.desktop\:button-app.color-primary-button:active,.desktop\:button-app.color-primary-button:hover{color:#fff;background:-webkit-gradient(linear,left bottom,left top,from(#2444b5),to(#284cca));background:-o-linear-gradient(bottom,#2444b5 0,#284cca 100%);background:linear-gradient(0deg,#2444b5,#284cca);-webkit-box-shadow:none;box-shadow:none}.desktop\:btn-app.color-secondary-button,.desktop\:button-app.color-secondary-button{background:-webkit-gradient(linear,left bottom,left top,from(#fc4639),to(#fc5d52));background:-o-linear-gradient(bottom,#fc4639 0,#fc5d52 100%);background:linear-gradient(0deg,#fc4639,#fc5d52);border-color:transparent}.desktop\:btn-app.color-secondary-button:active,.desktop\:btn-app.color-secondary-button:hover,.desktop\:button-app.color-secondary-button:active,.desktop\:button-app.color-secondary-button:hover{color:#fff;background:-webkit-gradient(linear,left bottom,left top,from(#fc4639),to(#fc5d52));background:-o-linear-gradient(bottom,#fc4639 0,#fc5d52 100%);background:linear-gradient(0deg,#fc4639,#fc5d52);-webkit-box-shadow:none;box-shadow:none}.desktop\:btn-large,.desktop\:button-large{padding:20px 32px}}
+/**
+ * Buttons
+ */
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.btn, .buttons {
+  color: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: initial;
+  display: inline-flex;
+  appearance: none;
+  cursor: pointer;
+  background: transparent;
+  padding: 12px 16px;
+  border: 2px solid;
+  border-color: currentColor;
+  border-radius: 1px;
+  transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
+}
+
+.btn .icon, .buttons .icon {
+  vertical-align: middle;
+}
+
+.btn.color-primary-button, .buttons.color-primary-button {
+  border-color: transparent;
+}
+
+.btn.color-primary-button:hover, .btn.color-primary-button:active, .buttons.color-primary-button:hover, .buttons.color-primary-button:active {
+  color: #FFFFFF;
+  background: #1e41ba;
+  box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
+}
+
+.btn.color-secondary-button, .buttons.color-secondary-button {
+  border-color: transparent;
+}
+
+.btn.color-secondary-button:hover, .btn.color-secondary-button:active, .buttons.color-secondary-button:hover, .buttons.color-secondary-button:active {
+  color: #FFFFFF;
+  background: #ff4336;
+  box-shadow: 8px 8px 0px 0px #cb1004, 0 0 0 3px rgba(255, 255, 255, 0);
+}
+
+/**
+ * Application Button
+ */
+
+.btn-app, .button-app {
+  border-radius: 2px;
+}
+
+.btn-app.color-primary-button, .button-app.color-primary-button {
+  background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+  border-color: transparent;
+}
+
+.btn-app.color-primary-button:hover, .btn-app.color-primary-button:active, .button-app.color-primary-button:hover, .button-app.color-primary-button:active {
+  color: #FFFFFF;
+  background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+  box-shadow: none;
+}
+
+.btn-app.color-secondary-button, .button-app.color-secondary-button {
+  background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
+  border-color: transparent;
+}
+
+.btn-app.color-secondary-button:hover, .btn-app.color-secondary-button:active, .button-app.color-secondary-button:hover, .button-app.color-secondary-button:active {
+  color: #FFFFFF;
+  background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
+  box-shadow: none;
+}
+
+/**
+ * Large Button
+ */
+
+.btn-large, .button-large {
+  padding: 20px 32px;
+}
+
+@media (min-width: 400px) {
+  .small\:btn, .small\:buttons {
+    color: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: initial;
+    display: inline-flex;
+    appearance: none;
+    cursor: pointer;
+    background: transparent;
+    padding: 12px 16px;
+    border: 2px solid;
+    border-color: currentColor;
+    border-radius: 1px;
+    transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
+  }
+
+  .small\:btn .icon, .small\:buttons .icon {
+    vertical-align: middle;
+  }
+
+  .small\:btn.color-primary-button, .small\:buttons.color-primary-button {
+    border-color: transparent;
+  }
+
+  .small\:btn.color-primary-button:hover, .small\:btn.color-primary-button:active, .small\:buttons.color-primary-button:hover, .small\:buttons.color-primary-button:active {
+    color: #FFFFFF;
+    background: #1e41ba;
+    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  .small\:btn.color-secondary-button, .small\:buttons.color-secondary-button {
+    border-color: transparent;
+  }
+
+  .small\:btn.color-secondary-button:hover, .small\:btn.color-secondary-button:active, .small\:buttons.color-secondary-button:hover, .small\:buttons.color-secondary-button:active {
+    color: #FFFFFF;
+    background: #ff4336;
+    box-shadow: 8px 8px 0px 0px #cb1004, 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  /**
+   * Application Button
+   */
+
+  .small\:btn-app, .small\:button-app {
+    border-radius: 2px;
+  }
+
+  .small\:btn-app.color-primary-button, .small\:button-app.color-primary-button {
+    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    border-color: transparent;
+  }
+
+  .small\:btn-app.color-primary-button:hover, .small\:btn-app.color-primary-button:active, .small\:button-app.color-primary-button:hover, .small\:button-app.color-primary-button:active {
+    color: #FFFFFF;
+    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    box-shadow: none;
+  }
+
+  .small\:btn-app.color-secondary-button, .small\:button-app.color-secondary-button {
+    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
+    border-color: transparent;
+  }
+
+  .small\:btn-app.color-secondary-button:hover, .small\:btn-app.color-secondary-button:active, .small\:button-app.color-secondary-button:hover, .small\:button-app.color-secondary-button:active {
+    color: #FFFFFF;
+    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
+    box-shadow: none;
+  }
+
+  /**
+   * Large Button
+   */
+
+  .small\:btn-large, .small\:button-large {
+    padding: 20px 32px;
+  }
+}
+
+@media (min-width: 480px) {
+  .mobile\:btn, .mobile\:buttons {
+    color: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: initial;
+    display: inline-flex;
+    appearance: none;
+    cursor: pointer;
+    background: transparent;
+    padding: 12px 16px;
+    border: 2px solid;
+    border-color: currentColor;
+    border-radius: 1px;
+    transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
+  }
+
+  .mobile\:btn .icon, .mobile\:buttons .icon {
+    vertical-align: middle;
+  }
+
+  .mobile\:btn.color-primary-button, .mobile\:buttons.color-primary-button {
+    border-color: transparent;
+  }
+
+  .mobile\:btn.color-primary-button:hover, .mobile\:btn.color-primary-button:active, .mobile\:buttons.color-primary-button:hover, .mobile\:buttons.color-primary-button:active {
+    color: #FFFFFF;
+    background: #1e41ba;
+    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  .mobile\:btn.color-secondary-button, .mobile\:buttons.color-secondary-button {
+    border-color: transparent;
+  }
+
+  .mobile\:btn.color-secondary-button:hover, .mobile\:btn.color-secondary-button:active, .mobile\:buttons.color-secondary-button:hover, .mobile\:buttons.color-secondary-button:active {
+    color: #FFFFFF;
+    background: #ff4336;
+    box-shadow: 8px 8px 0px 0px #cb1004, 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  /**
+   * Application Button
+   */
+
+  .mobile\:btn-app, .mobile\:button-app {
+    border-radius: 2px;
+  }
+
+  .mobile\:btn-app.color-primary-button, .mobile\:button-app.color-primary-button {
+    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    border-color: transparent;
+  }
+
+  .mobile\:btn-app.color-primary-button:hover, .mobile\:btn-app.color-primary-button:active, .mobile\:button-app.color-primary-button:hover, .mobile\:button-app.color-primary-button:active {
+    color: #FFFFFF;
+    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    box-shadow: none;
+  }
+
+  .mobile\:btn-app.color-secondary-button, .mobile\:button-app.color-secondary-button {
+    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
+    border-color: transparent;
+  }
+
+  .mobile\:btn-app.color-secondary-button:hover, .mobile\:btn-app.color-secondary-button:active, .mobile\:button-app.color-secondary-button:hover, .mobile\:button-app.color-secondary-button:active {
+    color: #FFFFFF;
+    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
+    box-shadow: none;
+  }
+
+  /**
+   * Large Button
+   */
+
+  .mobile\:btn-large, .mobile\:button-large {
+    padding: 20px 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tablet\:btn, .tablet\:buttons {
+    color: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: initial;
+    display: inline-flex;
+    appearance: none;
+    cursor: pointer;
+    background: transparent;
+    padding: 12px 16px;
+    border: 2px solid;
+    border-color: currentColor;
+    border-radius: 1px;
+    transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
+  }
+
+  .tablet\:btn .icon, .tablet\:buttons .icon {
+    vertical-align: middle;
+  }
+
+  .tablet\:btn.color-primary-button, .tablet\:buttons.color-primary-button {
+    border-color: transparent;
+  }
+
+  .tablet\:btn.color-primary-button:hover, .tablet\:btn.color-primary-button:active, .tablet\:buttons.color-primary-button:hover, .tablet\:buttons.color-primary-button:active {
+    color: #FFFFFF;
+    background: #1e41ba;
+    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  .tablet\:btn.color-secondary-button, .tablet\:buttons.color-secondary-button {
+    border-color: transparent;
+  }
+
+  .tablet\:btn.color-secondary-button:hover, .tablet\:btn.color-secondary-button:active, .tablet\:buttons.color-secondary-button:hover, .tablet\:buttons.color-secondary-button:active {
+    color: #FFFFFF;
+    background: #ff4336;
+    box-shadow: 8px 8px 0px 0px #cb1004, 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  /**
+   * Application Button
+   */
+
+  .tablet\:btn-app, .tablet\:button-app {
+    border-radius: 2px;
+  }
+
+  .tablet\:btn-app.color-primary-button, .tablet\:button-app.color-primary-button {
+    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    border-color: transparent;
+  }
+
+  .tablet\:btn-app.color-primary-button:hover, .tablet\:btn-app.color-primary-button:active, .tablet\:button-app.color-primary-button:hover, .tablet\:button-app.color-primary-button:active {
+    color: #FFFFFF;
+    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    box-shadow: none;
+  }
+
+  .tablet\:btn-app.color-secondary-button, .tablet\:button-app.color-secondary-button {
+    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
+    border-color: transparent;
+  }
+
+  .tablet\:btn-app.color-secondary-button:hover, .tablet\:btn-app.color-secondary-button:active, .tablet\:button-app.color-secondary-button:hover, .tablet\:button-app.color-secondary-button:active {
+    color: #FFFFFF;
+    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
+    box-shadow: none;
+  }
+
+  /**
+   * Large Button
+   */
+
+  .tablet\:btn-large, .tablet\:button-large {
+    padding: 20px 32px;
+  }
+}
+
+@media (min-width: 960px) {
+  .desktop\:btn, .desktop\:buttons {
+    color: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: initial;
+    display: inline-flex;
+    appearance: none;
+    cursor: pointer;
+    background: transparent;
+    padding: 12px 16px;
+    border: 2px solid;
+    border-color: currentColor;
+    border-radius: 1px;
+    transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
+  }
+
+  .desktop\:btn .icon, .desktop\:buttons .icon {
+    vertical-align: middle;
+  }
+
+  .desktop\:btn.color-primary-button, .desktop\:buttons.color-primary-button {
+    border-color: transparent;
+  }
+
+  .desktop\:btn.color-primary-button:hover, .desktop\:btn.color-primary-button:active, .desktop\:buttons.color-primary-button:hover, .desktop\:buttons.color-primary-button:active {
+    color: #FFFFFF;
+    background: #1e41ba;
+    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  .desktop\:btn.color-secondary-button, .desktop\:buttons.color-secondary-button {
+    border-color: transparent;
+  }
+
+  .desktop\:btn.color-secondary-button:hover, .desktop\:btn.color-secondary-button:active, .desktop\:buttons.color-secondary-button:hover, .desktop\:buttons.color-secondary-button:active {
+    color: #FFFFFF;
+    background: #ff4336;
+    box-shadow: 8px 8px 0px 0px #cb1004, 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  /**
+   * Application Button
+   */
+
+  .desktop\:btn-app, .desktop\:button-app {
+    border-radius: 2px;
+  }
+
+  .desktop\:btn-app.color-primary-button, .desktop\:button-app.color-primary-button {
+    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    border-color: transparent;
+  }
+
+  .desktop\:btn-app.color-primary-button:hover, .desktop\:btn-app.color-primary-button:active, .desktop\:button-app.color-primary-button:hover, .desktop\:button-app.color-primary-button:active {
+    color: #FFFFFF;
+    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    box-shadow: none;
+  }
+
+  .desktop\:btn-app.color-secondary-button, .desktop\:button-app.color-secondary-button {
+    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
+    border-color: transparent;
+  }
+
+  .desktop\:btn-app.color-secondary-button:hover, .desktop\:btn-app.color-secondary-button:active, .desktop\:button-app.color-secondary-button:hover, .desktop\:button-app.color-secondary-button:active {
+    color: #FFFFFF;
+    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
+    box-shadow: none;
+  }
+
+  /**
+   * Large Button
+   */
+
+  .desktop\:btn-large, .desktop\:button-large {
+    padding: 20px 32px;
+  }
+}
