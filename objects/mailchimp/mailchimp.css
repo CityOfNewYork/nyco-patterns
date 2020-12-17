@@ -1,1 +1,32 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");.bodyContent,.formEmailButton,body,label{font-family:Noto Sans}.formEmailButton,.masthead{font-weight:400;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}.formEmailButton{border-radius:500px;-webkit-transition:-webkit-box-shadow .2s ease-in;transition:-webkit-box-shadow .2s ease-in;-o-transition:box-shadow .2s ease-in;transition:box-shadow .2s ease-in;transition:box-shadow .2s ease-in,-webkit-box-shadow .2s ease-in}.formEmailButton:hover{-webkit-box-shadow:0 2px 15px 3px rgba(0,0,0,.25);box-shadow:0 2px 15px 3px rgba(0,0,0,.25)}a:link{font-weight:700}
+/**
+ * Mailchimp
+ * Styling for an external Mailchimp form
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+
+body,
+label,
+.bodyContent,
+.formEmailButton {
+  font-family: "Noto Sans";
+}
+
+.masthead, .formEmailButton {
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.formEmailButton {
+  border-radius: 500px;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.formEmailButton:hover {
+  box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.25);
+}
+
+a:link {
+  font-weight: bold;
+}

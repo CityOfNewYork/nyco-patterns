@@ -1,1 +1,72 @@
-.o-navigation{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}.o-navigation__wrap{-webkit-box-flex:1;-ms-flex:1;flex:1}.o-navigation__banner{padding:16px 32px}.o-navigation__banner-title{font-size:1em;line-height:1.2;font-weight:700;margin:0}.o-navigation__nav{-webkit-box-flex:1;-ms-flex:1;flex:1;padding:16px 24px}.o-navigation__stick{-ms-overflow-style:none;scrollbar-width:none}.o-navigation__stick::-webkit-scrollbar{display:none}.o-navigation__link-header{display:block;border-bottom:1px solid!important;padding:16px 8px;margin-top:16px}.o-navigation__link{display:block;padding:8px}@media (min-width:768px){.o-navigation__banner{display:none;visibility:hidden}.o-navigation__stick{position:-webkit-sticky;position:sticky;top:0;max-height:100vh;overflow-y:scroll;-webkit-overflow-scrolling:touch}.o-navigation__link,.o-navigation__link-header{padding-left:16px;padding-right:16px}}
+/**
+ * Navigation
+ */
+
+.o-navigation {
+  display: flex;
+  align-items: stretch;
+}
+
+.o-navigation__wrap {
+  flex: 1;
+}
+
+.o-navigation__banner {
+  padding: 16px 32px;
+}
+
+.o-navigation__banner-title {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.2;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.o-navigation__nav {
+  flex: 1;
+  padding: 16px 24px;
+}
+
+.o-navigation__stick {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.o-navigation__stick::-webkit-scrollbar {
+  display: none;
+}
+
+.o-navigation__link-header {
+  display: block;
+  border-bottom: 1px solid !important;
+  padding: 16px 8px;
+  margin-top: 16px;
+}
+
+.o-navigation__link {
+  display: block;
+  padding: 8px 8px;
+}
+
+@media (min-width: 768px) {
+  .o-navigation__banner {
+    display: none;
+    visibility: hidden;
+  }
+  .o-navigation__stick {
+    position: sticky;
+    top: 0px;
+    max-height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .o-navigation__link-header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .o-navigation__link {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

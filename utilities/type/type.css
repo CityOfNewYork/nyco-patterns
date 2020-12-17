@@ -1,1 +1,105 @@
-body,html{font-size:16px;font-weight:400;line-height:1.5;font-family:IBM Plex Sans,sans-serif}.h1,h1{font-size:2.488em}.h1,.h2,h1,h2{font-family:Helvetica Neue Pro,Helvetica Neue,Helvetica,Arial,sans-serif;font-weight:700;line-height:1.2;margin:1.25em 0 .64em}.h2,h2{font-size:2.074em}.h3,h3{font-family:Helvetica Neue Pro,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:1.728em}.h3,.h4,h3,h4{font-weight:700;line-height:1.2;margin:1.25em 0 .64em}.h4,h4{font-size:1.44em}.h5,h5{font-size:1.2em}.h5,.h6,h5,h6{font-weight:700;line-height:1.2;margin:1.25em 0 .64em}.h6,h6{font-size:1em}.h1 a,.h2 a,.h3 a,.h4 a,.h5 a,.h6 a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit;text-decoration:inherit}.small,small{font-size:.833em;font-weight:400;line-height:normal}.blockquote,blockquote{font-family:Helvetica Neue Pro,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:2.074em;font-weight:700;line-height:normal;margin:1.25em 0 .64em}.blockquote footer,blockquote footer{font-size:65%;font-weight:400;padding-left:24px}.blockquote cite,blockquote cite{font-style:normal}.blockquote p,blockquote p{border-left:8px solid;border-color:inherit;padding-left:16px;margin-bottom:.64em}.jumbo{font-family:Helvetica Neue Pro,Helvetica Neue,Helvetica,Arial,sans-serif;font-size:3em;font-weight:700;line-height:1.2;margin:1.25em 0 .64em}ol,p,ul{margin-top:0;margin-bottom:1.25em}
+html, body {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1, .h1 {
+  font-family: "Helvetica Neue Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.488em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 1.25em 0 0.64em;
+}
+
+h2, .h2 {
+  font-family: "Helvetica Neue Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.074em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 1.25em 0 0.64em;
+}
+
+h3, .h3 {
+  font-family: "Helvetica Neue Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.728em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 1.25em 0 0.64em;
+}
+
+h4, .h4 {
+  font-size: 1.44em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 1.25em 0 0.64em;
+}
+
+h5, .h5 {
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 1.25em 0 0.64em;
+}
+
+h6, .h6 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 1.25em 0 0.64em;
+}
+
+h1 a, .h1 a,
+h2 a, .h2 a,
+h3 a, .h3 a,
+h4 a, .h4 a,
+h5 a, .h5 a,
+h6 a, .h6 a {
+  font-weight: inherit;
+  text-decoration: inherit;
+}
+
+small, .small {
+  font-size: 0.833em;
+  font-weight: normal;
+  line-height: normal;
+}
+
+blockquote, .blockquote {
+  font-family: "Helvetica Neue Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.074em;
+  font-weight: bold;
+  line-height: normal;
+  margin: 1.25em 0 0.64em;
+}
+
+blockquote footer, .blockquote footer {
+  font-size: 65%;
+  font-weight: normal;
+  padding-left: 24px;
+}
+
+blockquote cite, .blockquote cite {
+  font-style: normal;
+}
+
+blockquote p, .blockquote p {
+  border-left: 8px solid;
+  border-color: inherit;
+  padding-left: 16px;
+  margin-bottom: 0.64em;
+}
+
+.jumbo {
+  font-family: "Helvetica Neue Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 1.25em 0 0.64em;
+}
+
+p, ul, ol {
+  margin-top: 0px;
+  margin-bottom: 1.25em;
+}
