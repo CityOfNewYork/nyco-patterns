@@ -1,6 +1,6 @@
 ## Color Utilities
 
-Color Utilities are enabled through [Tailwind.css](https://tailwindcss.com). The background, text, and border color can be set for the static, hover, and responsive states of any element using the proper prefex below.
+Color Utilities are enabled through [Tailwindcss](/tailwindcss). The background, text, and border color can be set for the static, hover, and responsive states of any element using the proper prefix below.
 
     /* Background Color */
     .bg-{{ color }}
@@ -15,6 +15,6 @@ Color Utilities are enabled through [Tailwind.css](https://tailwindcss.com). The
     .hover:bg-{{ color }}
 
     /* Responsive State (for the background property) */
-    .{{ screen size }}:bg-{{ color }}
+    .{{ variant }}:bg-{{ color }}
 
-More details about the configuration can be found in the [Tailwind Utilities](/tailwindcss) documentation.
+More details about the configuration can be found in the [Tailwindcss Utilities](/tailwindcss) documentation.

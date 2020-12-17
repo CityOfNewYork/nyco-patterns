@@ -24,5 +24,6 @@
     h1 class='${classPageH1}' = pattern;
 
   = mixin('readme', 'utilities/tailwindcss/tailwindcss');
+  = mixin('readme', 'utilities/tailwindcss/tailwindcss-installation');
   = mixin('readme', 'utilities/tailwindcss/tailwindcss-ui');
   = mixin('pattern', 'utilities/tailwindcss/tailwindcss-description-lists');
