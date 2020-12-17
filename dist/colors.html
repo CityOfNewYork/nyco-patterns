@@ -54,7 +54,7 @@
     <div class="o-header__secondary-version color-dark-background">
       <div><a class="btn flex items-center"
           href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.4.0"><svg
-            aria-hidden="true" class="icon-ui-github icon-small mr-1">
+            aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#icon-ui-github"></use>
           </svg>2.4.0</a></div>
     </div>
@@ -1122,10 +1122,9 @@
           <div class="o-content mx-auto">
             <h2 id="heading-color-utilities">Color Utilities</h2>
             <p>Color Utilities are enabled through <a
-                href="https://tailwindcss.com">Tailwind.css</a>. The background,
-              text, and border color can be set for the static, hover, and
-              responsive states of any element using the proper prefex below.
-            </p>
+                href="/tailwindcss">Tailwindcss</a>. The background, text, and
+              border color can be set for the static, hover, and responsive
+              states of any element using the proper prefix below.</p>
             <pre><code>/* Background Color */
 .bg-{{ color }}
 
@@ -1139,9 +1138,9 @@
 .hover:bg-{{ color }}
 
 /* Responsive State (for the background property) */
-.{{ screen size }}:bg-{{ color }}</code></pre>
+.{{ variant }}:bg-{{ color }}</code></pre>
             <p>More details about the configuration can be found in the <a
-                href="/tailwindcss">Tailwind Utilities</a> documentation.</p>
+                href="/tailwindcss">Tailwindcss Utilities</a> documentation.</p>
           </div>
         </div>
       </section>
@@ -1190,4 +1189,5 @@
     nyco.icons();
     nyco.toggle();
   </script>
+  <script src="/reload/reload.js"></script>
 </body>

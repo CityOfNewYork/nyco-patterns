@@ -22,11 +22,11 @@ module.exports = {
   },
   borderRadius: {
     'none': '0',
-    'default': '1px'
+    'DEFAULT': '1px'
   },
   borderWidth: {
     '0': '0',
-    'default': '1px',
+    'DEFAULT': '1px',
     '2': '2px',
     '4': '4px',
     '8': '8px'
@@ -103,6 +103,15 @@ module.exports = {
     'blockquote': '2.074em'
   },
   grid: '8px',
+  spacing: {
+    '0': '0',
+    '1': '8px',
+    '2': '16px',
+    '3': '24px',
+    '4': '32px',
+    '5': '40px',
+    '6': '48px'
+  },
   icons: {
     'icon-logo-nyc': '350px 117px',
     'icon-logo-nyco-secondary': '694px 76px',
