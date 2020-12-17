@@ -20,15 +20,13 @@ $screens: map-get($tokens, 'screens');
   }
 }
 
+.icon,
 [class*='icon-'] {
   overflow: visible !important;
   max-width: 100% !important;
 }
 
-[class*='bg-icon-'] {
-  display: inline-block;
-}
-
+.icon-ui,
 [class*='icon-ui-'] {
   stroke: currentColor;
   stroke-width: 2;
