@@ -3,7 +3,7 @@
 //
 
 // Dependencies
-@import 'config/variables';
+@import 'config/tokens';
 
 $colors: map-get($tokens, 'colors');
 $colorCombinations: map-get($tokens, 'colorCombinations');
