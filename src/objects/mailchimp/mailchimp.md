@@ -1,6 +1,4 @@
-## Signup Form
-
-Signup Forms can be hosted on Mailchimp using the [Form Builder](https://mailchimp.com/help/how-the-form-builder-works/). By default, these forms will be styled in the brand of Mailchimp but they can be customized using NYCO Patterns values. Additionally, typography and buttons can be customize by importing a stylesheet via the CDN.
+Sign-up Forms can be hosted on Mailchimp using the [Form Builder](https://mailchimp.com/help/how-the-form-builder-works/). By default, these forms will be styled in the brand of Mailchimp but they can be customized using NYCO Patterns values. Additionally, typography and buttons can be customize by importing a stylesheet via the CDN.
 
 ### Form Builder
 
@@ -10,7 +8,7 @@ Below are the suggested base settings for the [Form Builder](https://mailchimp.c
 
 Setting                        | Value
 -------------------------------|-
-**Background** > Background    | `#2F334F` (Primary Navy)
+**Background** > Background    | `#031553` (Navy)
 **Header** > Font Size         | `28px`
 **Header** > Line Height       | `Slight`
 **Header** > Margin Bottom     | `30px`
@@ -33,9 +31,9 @@ Setting                        | Value
 
 Setting                          | Value
 ---------------------------------|-
-**Buttons** > Background         | `#3155A6` (Primary Blue)
+**Buttons** > Background         | `#1642DF` (Blue)
 **Buttons** > Text Color         | `#FFFFFF` (Base White)
-**Buttons Hovered** > Background | `#3155A6` (Primary Blue)
+**Buttons Hovered** > Background | `#1642DF` (Blue)
 **Buttons Hovered** > Text Color | `#FFFFFF` (Base White)
 **Field Labels** > Line Height   | `1 1/2 Spacing`
 **Field Labels** > Font-Family   | `Trebuchet MS`
@@ -43,11 +41,11 @@ Setting                          | Value
 **Field Labels** > Text Color    | `#5D5D5D`
 **Field Text** > Font-Family     | `Trebuchet MS`
 **Field Text** > Text Color      | `#5D5D5D`
-**Required** > Text Color        | `#F2695D` (Primary Red)
+**Required** > Text Color        | `#FC5D52` (Primary Red)
 **Required** > Visibility        | `Hide`
 **Required Legend** > Display    | `Hide`
 **Help Text** > Text Color       | `#777777`
-**Errors** > Text Color          | `#F2695D` (Primary Red)
+**Errors** > Text Color          | `#FC5D52` (Primary Red)
 **Errors** > Font Weight         | `Normal`
 
 #### Advanced
