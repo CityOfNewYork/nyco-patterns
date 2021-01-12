@@ -1,4 +1,4 @@
-div class='grid grid-cols-2 desktop:grid-cols-4 gap-2'
+div class='w-full grid mobile:grid-cols-2 desktop:grid-cols-3 gap-2'
   - for (key in this.tokens.colors)
     - value = this.tokens.colors[key]
     - name = key.split('-').join(' ');
@@ -10,8 +10,10 @@ div class='grid grid-cols-2 desktop:grid-cols-4 gap-2'
     - base = name.split(' ')[0];
 
     article class=''
-      button class='bg-${key} py-6 border border-b-0 border-grey-30t rounded-t w-full'
-        span class='sr-only' Copy hex value to clipboard
+      button class='bg-${key} py-6 border border-b-0 border-grey-30t rounded-t w-full' title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' data-copy='copy-${key}-hex' data-js='copy'
+        span class='inline-block bg-white p-1 rounded'
+          svg class='icon-ui-copy block text-blue' aria-hidden='true'
+            use xlink:href='#icon-ui-copy'
 
       div class=''
         div class='p-1 pb-0 capitalize border-l border-r border-grey-30t'
@@ -19,27 +21,22 @@ div class='grid grid-cols-2 desktop:grid-cols-4 gap-2'
 
         div class='border rounded-t-none border-t-0 border-grey-30t'
           dl class='small p-1 grid grid-cols-3 gap-1'
-            dt class='pb-1' Hex
-            dd class='font-code text-red col-span-2 uppercase'
-              input value='bg-${key}' class='sr-only'
-              button title='Copy to clipboard' aria-label='Copy to clipboard' class='block font-code text-red' = value
+            dt class='border-4 border-transparent' Value
+            dd class='col-span-2'
+              input value='${value}' class='sr-only' data-copy-target='copy-${key}-value'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-left border-4 border-transparent font-code text-red' data-copy='copy-${key}-value' data-js='copy' = value
 
-            dt class='pb-1' Background
+            dt class='border-4 border-transparent' Background
             dd class=' col-span-2'
-              input value='bg-${key}' class='sr-only'
-              button title='Copy to clipboard' aria-label='Copy to clipboard' class='block font-code text-red' = `.bg-${key}`
+              input value='bg-${key}' class='sr-only' data-copy-target='copy-${key}-bg'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-left border-4 border-transparent font-code text-red' data-copy='copy-${key}-bg' data-js='copy' = `.bg-${key}`
 
-            dt class='pb-1' Text
+            dt class='border-4 border-transparent' Text
             dd class='col-span-2'
-              input value='text-${key}' class='sr-only'
-              button title='Copy to clipboard' aria-label='Copy to clipboard' class='block font-code text-red' = `.text-${key}`
+              input value='text-${key}' class='sr-only' data-copy-target='copy-${key}-text'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-left border-4 border-transparent font-code text-red' data-copy='copy-${key}-text' data-js='copy' = `.text-${key}`
 
-            dt class='' Border
+            dt class='border-4 border-transparent' Border
             dd class='col-span-2'
-              input value='border-${key}' class='sr-only'
-              button title='Copy to clipboard' aria-label='Copy to clipboard' class='block font-code text-red' = `.border-${key}`
-
-  div &nbsp;
-  div &nbsp;
-
-
+              input value='border-${key}' class='sr-only' data-copy-target='copy-${key}-border'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-left border-4 border-transparent font-code text-red' data-copy='copy-${key}-border' data-js='copy' = `.border-${key}`

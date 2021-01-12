@@ -3976,6 +3976,10 @@ a, input, textarea, select, path, rect, .btn, .button {
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity)) !important;
 }
 
+.bg-transparent{
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
 .bg{
   background-color:  !important;
 }
@@ -4165,6 +4169,10 @@ a, input, textarea, select, path, rect, .btn, .button {
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity)) !important;
 }
 
+.hover\:bg-transparent:hover{
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
 .hover\:bg:hover{
   background-color:  !important;
 }
@@ -4352,6 +4360,10 @@ a, input, textarea, select, path, rect, .btn, .button {
 .focus\:bg-base-white:focus{
   --tw-bg-opacity: 1 !important;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity)) !important;
+}
+
+.focus\:bg-transparent:focus{
+  background-color: rgba(255, 255, 255, 0) !important;
 }
 
 .focus\:bg:focus{
@@ -4719,6 +4731,10 @@ a, input, textarea, select, path, rect, .btn, .button {
   border-color: rgba(255, 255, 255, var(--tw-border-opacity)) !important;
 }
 
+.border-transparent{
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+
 .hover\:border-navy:hover{
   --tw-border-opacity: 1 !important;
   border-color: rgba(3, 21, 83, var(--tw-border-opacity)) !important;
@@ -4904,6 +4920,10 @@ a, input, textarea, select, path, rect, .btn, .button {
   border-color: rgba(255, 255, 255, var(--tw-border-opacity)) !important;
 }
 
+.hover\:border-transparent:hover{
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+
 .focus\:border-navy:focus{
   --tw-border-opacity: 1 !important;
   border-color: rgba(3, 21, 83, var(--tw-border-opacity)) !important;
@@ -5087,6 +5107,10 @@ a, input, textarea, select, path, rect, .btn, .button {
 .focus\:border-base-white:focus{
   --tw-border-opacity: 1 !important;
   border-color: rgba(255, 255, 255, var(--tw-border-opacity)) !important;
+}
+
+.focus\:border-transparent:focus{
+  border-color: rgba(255, 255, 255, 0) !important;
 }
 
 .border-opacity-0{
@@ -5741,6 +5765,10 @@ a, input, textarea, select, path, rect, .btn, .button {
   border-color: rgba(255, 255, 255, var(--tw-divide-opacity)) !important;
 }
 
+.divide-transparent > :not([hidden]) ~ :not([hidden]){
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+
 .divide-opacity-0 > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 0 !important;
 }
@@ -6035,6 +6063,10 @@ a, input, textarea, select, path, rect, .btn, .button {
 
 .fill-base-white{
   fill: #FFFFFF !important;
+}
+
+.fill-transparent{
+  fill: rgba(255, 255, 255, 0) !important;
 }
 
 .flex-1{
@@ -6561,6 +6593,11 @@ a, input, textarea, select, path, rect, .btn, .button {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0)) !important;
 }
 
+.from-transparent{
+  --tw-gradient-from: rgba(255, 255, 255, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0)) !important;
+}
+
 .from{
   --tw-gradient-from:  !important;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0)) !important;
@@ -6714,6 +6751,10 @@ a, input, textarea, select, path, rect, .btn, .button {
   --tw-gradient-stops: var(--tw-gradient-from), #FFFFFF, var(--tw-gradient-to, rgba(255, 255, 255, 0)) !important;
 }
 
+.via-transparent{
+  --tw-gradient-stops: var(--tw-gradient-from), rgba(255, 255, 255, 0), var(--tw-gradient-to, rgba(255, 255, 255, 0)) !important;
+}
+
 .via{
   --tw-gradient-stops: var(--tw-gradient-from), , var(--tw-gradient-to, rgba(255, 255, 255, 0)) !important;
 }
@@ -6864,6 +6905,10 @@ a, input, textarea, select, path, rect, .btn, .button {
 
 .to-base-white{
   --tw-gradient-to: #FFFFFF !important;
+}
+
+.to-transparent{
+  --tw-gradient-to: rgba(255, 255, 255, 0) !important;
 }
 
 .to{
@@ -9524,6 +9569,10 @@ a, input, textarea, select, path, rect, .btn, .button {
   color: rgba(255, 255, 255, var(--tw-placeholder-opacity)) !important;
 }
 
+.placeholder-transparent::placeholder{
+  color: rgba(255, 255, 255, 0) !important;
+}
+
 .placeholder::placeholder{
   color:  !important;
 }
@@ -10270,6 +10319,10 @@ a, input, textarea, select, path, rect, .btn, .button {
   stroke: #FFFFFF !important;
 }
 
+.stroke-transparent{
+  stroke: rgba(255, 255, 255, 0) !important;
+}
+
 .stroke-0{
   stroke-width: 0 !important;
 }
@@ -10491,6 +10544,10 @@ a, input, textarea, select, path, rect, .btn, .button {
   color: rgba(255, 255, 255, var(--tw-text-opacity)) !important;
 }
 
+.text-transparent{
+  color: rgba(255, 255, 255, 0) !important;
+}
+
 .text{
   color:  !important;
 }
@@ -10680,6 +10737,10 @@ a, input, textarea, select, path, rect, .btn, .button {
   color: rgba(255, 255, 255, var(--tw-text-opacity)) !important;
 }
 
+.hover\:text-transparent:hover{
+  color: rgba(255, 255, 255, 0) !important;
+}
+
 .hover\:text:hover{
   color:  !important;
 }
@@ -10867,6 +10928,10 @@ a, input, textarea, select, path, rect, .btn, .button {
 .focus\:text-base-white:focus{
   --tw-text-opacity: 1 !important;
   color: rgba(255, 255, 255, var(--tw-text-opacity)) !important;
+}
+
+.focus\:text-transparent:focus{
+  color: rgba(255, 255, 255, 0) !important;
 }
 
 .focus\:text:focus{
