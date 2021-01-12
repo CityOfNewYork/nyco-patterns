@@ -1,7 +1,8 @@
 'use strict';
 
-import Toggle from '@nycopportunity/patterns-framework/src/utilities/toggle/toggle';
-import Icons from '@nycopportunity/patterns-framework/src/utilities/icons/icons';
+import Copy from '@nycopportunity/pttrn-scripts/src/copy/copy';
+import Icons from '@nycopportunity/pttrn-scripts/src/icons/icons';
+import Toggle from '@nycopportunity/pttrn-scripts/src/toggle/toggle';
 
 import Select from '../elements/select/select';
 import InputAutocomplete from '../elements/inputs/input-autocomplete';
@@ -14,13 +15,24 @@ import ChartPie from '../objects/charts/chart-pie';
 /** import modules here as they are written */
 
 /**
- * Methods for the global NycoPatterns instance
+ * Methods for the main entry point
  */
-class nyco {
+class Main {
   /**
-   * Method for the Icons Element
+   * Method for the Copy utility
+   *
+   * @return  {Object}  Instance of Copy
+   */
+  copy() {
+    return new Copy();
+  }
+
+  /**
+   * Method for the Icons utility
+   *
    * @param  {String}  path  The path of the icon file
-   * @return {Object}        Icons instance
+   *
+   * @return {Object}        Instance of Icons
    */
   icons(path) {
     return new Icons(path);
@@ -28,7 +40,9 @@ class nyco {
 
   /**
    * Method for the Feed Object
+   *
    * @param   {Object}  settings  Setting for the feed
+   *
    * @return  {Object}            Feed instance
    */
   feed(settings) {
@@ -37,6 +51,7 @@ class nyco {
 
   /**
    * Method for the Toggle Utility
+   *
    * @return  {Object}  Toggle instance
    */
   toggle(settings) {
@@ -45,6 +60,7 @@ class nyco {
 
   /**
    * Method for the Select Elements
+   *
    * @return  {Object}  Select instance
    */
   select() {
@@ -53,6 +69,7 @@ class nyco {
 
   /**
    * Method for the Chart Objects
+   *
    * @return  {Object}  Chart instance
    */
   chart(type) {
@@ -71,6 +88,7 @@ class nyco {
 
   /**
    * Method for the Input Autocomplete Element
+   *
    * @return  {Object}  Input Autocomplete instance
    */
   inputAutocomplete(settings = {}) {
@@ -80,4 +98,4 @@ class nyco {
   /** add APIs here as they are written */
 }
 
-export default nyco;
+export default Main;
