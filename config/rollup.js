@@ -2,16 +2,16 @@
  * Dependencies
  */
 
-import resolve from '@rollup/plugin-node-resolve'; // Locate modules using the Node resolution algorithm, for using third party modules in node_modules.
-import commonjs from '@rollup/plugin-commonjs';    // Convert CommonJS modules to ES6, so they can be included in a Rollup bundle
-import replace from '@rollup/plugin-replace';      // Replace content while bundling.
-import vue from 'rollup-plugin-vue';               // Roll .vue files.
+const resolve = require('@rollup/plugin-node-resolve'); // Locate modules using the Node resolution algorithm, for using third party modules in node_modules.
+const commonjs = require('@rollup/plugin-commonjs');    // Convert CommonJS modules to ES6, so they can be included in a Rollup bundle
+const replace = require('@rollup/plugin-replace');      // Replace content while bundling.
+const vue = require('rollup-plugin-vue');               // Roll .vue files.
 
 /**
  * Config
+ *
+ * @type {Object}
  */
-
-// Rollup Configuration
 const rollup = {
   sourcemap: 'inline',
   format: 'iife',
@@ -37,55 +37,56 @@ const rollup = {
 
 /**
  * Our list of modules we are exporting
- * @return  {Array}  Exported modules
+ *
+ * @type {Array}
  */
-export default [
+module.exports = [
   {
     input: './src/js/main.js',
-    output: [
-      {
-        name: 'NycoPatterns',
-        file: './dist/scripts/nyco-patterns.js',
-        sourcemap: rollup.sourcemap,
-        format: rollup.format,
-        strict: rollup.strict
-      }
-    ],
-    plugins: rollup.plugins
+    output: [{
+      name: 'NYCO',
+      file: './dist/scripts/nyco.js',
+      sourcemap: rollup.sourcemap,
+      format: rollup.format,
+      strict: rollup.strict
+    }],
+    plugins: rollup.plugins,
+    devModule: true
   },
   {
     input: './src/objects/feed/feed.js',
-    output: [
-      {
-        name: 'Feed',
-        file: './dist/objects/feed/feed.js',
-        sourcemap: rollup.sourcemap,
-        format: rollup.format,
-        strict: rollup.strict
-      }
-    ],
-    plugins: rollup.plugins
+    output: [{
+      name: 'Feed',
+      file: './dist/objects/feed/feed.js',
+      sourcemap: rollup.sourcemap,
+      format: rollup.format,
+      strict: rollup.strict
+    }],
+    plugins: rollup.plugins,
+    devModule: true
   },
   {
     input: './src/objects/feed/feed-docs.js',
-    output: {
+    output: [{
       name: 'FeedDocs',
       file: './dist/objects/feed/feed-docs.js',
       sourcemap: rollup.sourcemap,
       format: rollup.format,
       strict: rollup.strict
-    },
-    plugins: rollup.plugins
+    }],
+    plugins: rollup.plugins,
+    devModule: true
   },
   {
     input: './src/objects/feed/feed-embed.js',
-    output: {
+    output: [{
       name: 'FeedEmbed',
       file: './dist/objects/feed/feed-embed.js',
       sourcemap: rollup.sourcemap,
       format: rollup.format,
       strict: rollup.strict
-    },
-    plugins: rollup.plugins
+    }],
+    plugins: rollup.plugins,
+    devModule: true
   }
 ];

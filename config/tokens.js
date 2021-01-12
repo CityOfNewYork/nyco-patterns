@@ -10,10 +10,8 @@ const colors = require('./colors');
  */
 
 module.exports = {
-  config: {
-    output: '"./src/config/_tokens.scss"',
-    prefix: '"$tokens:"'
-  },
+  output: `"${process.env.PWD}/src/config/_tokens.scss"`,
+  prefix: '"$tokens:"',
   animate: {
     'ease-in-quint': 'cubic-bezier(0.755, 0.05, 0.855, 0.06)',
     'ease-out-quint': 'cubic-bezier(0.23, 1, 0.32, 1)',

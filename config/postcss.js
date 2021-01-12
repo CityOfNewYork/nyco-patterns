@@ -13,7 +13,7 @@ const mqpacker = require('css-mqpacker');   // packs media queries together
 const postCss = {
   parser: 'postcss-scss',
   plugins: [
-    tailwindcss(require('./tailwind.js')),
+    tailwindcss(require('./tailwindcss.js')),
     mqpacker({sort: true})
   ]
 };

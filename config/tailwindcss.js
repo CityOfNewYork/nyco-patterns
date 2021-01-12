@@ -141,7 +141,7 @@ module.exports = {
     stroke: [],
     strokeWidth: [],
     tableLayout: [],
-    textAlign: [],
+    textAlign: ['responsive'],
     textColor: ['hover', 'focus'],
     textDecoration: [],
     textOpacity: [],
