@@ -7,21 +7,21 @@ $radius: map-get(map-get($tokens, 'borderRadius'), 'default');
 
 // Declarations
 @mixin code() {
-  color: map-get($colors, 'primary-blue');
+  color: map-get($colors, blue);
   display: inline-block;
 
   @include typeface('code');
   @include type('code');
 
-  background-color: map-get($colors, 'secondary-white-70t');
-  border: 1px solid map-get($colors, 'secondary-grey-50t');
+  background-color: map-get($colors, 'white-70t');
+  border: 1px solid map-get($colors, 'grey-50t');
   border-radius: $radius;
 
   padding: 0 0.3em;
 }
 
 @mixin code-block() {
-  color: map-get($colors, 'primary-red');
+  color: map-get($colors, red);
 
   display: block;
   max-width: 100%;

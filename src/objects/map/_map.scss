@@ -16,7 +16,7 @@
     }
 
     a.active {
-      color: map-get(map-get($tokens, 'colors'), 'primary-navy');
+      color: map-get(map-get($tokens, 'colors'), navy);
     }
   }
 
@@ -46,9 +46,9 @@
 
   .map-legend input[type=checkbox] + label {
     display: block;
-    background-color: map-get(map-get($tokens, 'colors'), 'primary-navy-70t');
+    background-color: map-get(map-get($tokens, 'colors'), 'navy-70t');
     padding: 10px;
-    border-bottom: 1px solid map-get(map-get($tokens, 'colors'), 'primary-navy-30t');
+    border-bottom: 1px solid map-get(map-get($tokens, 'colors'), 'navy-30t');
     text-transform: capitalize;
     text-overflow: ellipsis;
     overflow-x: hidden;
@@ -58,7 +58,7 @@
 
   .map-legend input[type=checkbox] + label:hover,
   .map-legend input[type=checkbox]:checked + label {
-    background-color: map-get(map-get($tokens, 'colors'), 'primary-blue');
+    background-color: map-get(map-get($tokens, 'colors'), blue);
   }
 
   .map-legend input[type=checkbox]:checked + label:before {
@@ -83,7 +83,7 @@
     &:hover {
       background-color: transparent;
       text-decoration: underline;
-      text-decoration-color: map-get(map-get($tokens, 'colors'), 'primary-navy');
+      text-decoration-color: map-get(map-get($tokens, 'colors'), navy);
       transform: scale(1.4);
     }
   }

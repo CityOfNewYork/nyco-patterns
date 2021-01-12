@@ -12,17 +12,17 @@ $grid: map-get($tokens, 'grid');
   thead {
     color: map-get($colors, 'base-white');
     @include font-smooth();
-    border-bottom: 1px solid map-get($colors, 'primary-blue');
+    border-bottom: 1px solid map-get($colors, blue);
 
     tr {
-      background-color: map-get($colors, 'primary-blue');
+      background-color: map-get($colors, blue);
     }
   }
 
   tbody {
     tr {
       &:nth-child(odd) {
-        background-color: map-get($colors, 'secondary-white');
+        background-color: map-get($colors, white);
       }
     }
   }
@@ -39,7 +39,7 @@ $grid: map-get($tokens, 'grid');
   code, pre {
     // font-size: map-get(map-get($tokens, 'fontSize'), 'h5');
     // font-weight: map-get(map-get($tokens, 'fontWeight'), 'bold');
-    // color: map-get($colors, 'primary-blue');
+    // color: map-get($colors, blue);
     @include code-inline;
   }
 
@@ -65,8 +65,8 @@ $grid: map-get($tokens, 'grid');
   caption-side: bottom;
 
   caption {
-    background-color: map-get($colors, 'secondary-white');
-    color: map-get($colors, 'primary-navy');
+    background-color: map-get($colors, white);
+    color: map-get($colors, navy);
     font-size: .8em;
   }
 }

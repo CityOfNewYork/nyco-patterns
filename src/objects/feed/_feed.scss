@@ -3,7 +3,7 @@
  */
 
 // Dependencies
-@import 'patterns-framework/src/utilities/spinner/spinner';
+@import 'pttrn-scripts/src/spinner/spinner';
 @import 'config/tokens';
 
 $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'tablet')}px;
@@ -29,7 +29,7 @@ $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'tablet')}px;
 }
 
 .o-feed__spinner {
-  color: map-get(map-get($tokens, 'colors'), 'secondary-orange');
+  color: map-get(map-get($tokens, 'colors'), marigold);
   display: flex;
   justify-content: center;
 

@@ -7,40 +7,41 @@ $statuses: map-get($tokens, 'colorStatuses');
 $combinations: map-get($tokens, 'colorCombinations');
 
 // Variables
-$primary-navy: map-get($colors, 'primary-navy');
-$primary-navy-70t: map-get($colors, 'primary-navy-70t');
-$primary-navy-50t: map-get($colors, 'primary-navy-50t');
-$primary-navy-30t: map-get($colors, 'primary-navy-30t');
+$navy: map-get($colors, navy);
+$navy-70t: map-get($colors, 'navy-70t');
+$navy-50t: map-get($colors, 'navy-50t');
+$navy-30t: map-get($colors, 'navy-30t');
 
-$primary-blue: map-get($colors, 'primary-blue');
-$primary-blue-70t: map-get($colors, 'primary-blue-70t');
-$primary-blue-50t: map-get($colors, 'primary-blue-50t');
-$primary-blue-30t: map-get($colors, 'primary-blue-30t');
+$blue: map-get($colors, blue);
+$blue-70t: map-get($colors, 'blue-70t');
+$blue-50t: map-get($colors, 'blue-50t');
+$blue-30t: map-get($colors, 'blue-30t');
 
-$primary-red: map-get($colors, 'primary-red');
-$primary-red-70t: map-get($colors, 'primary-red-70t');
-$primary-red-50t: map-get($colors, 'primary-red-50t');
-$primary-red-30t: map-get($colors, 'primary-red-30t');
+$red: map-get($colors, 'red');
+$red-70t: map-get($colors, 'red-70t');
+$red-50t: map-get($colors, 'red-50t');
+$red-30t: map-get($colors, 'red-30t');
 
-$secondary-grey: map-get($colors, 'secondary-grey');
-$secondary-grey-70t: map-get($colors, 'secondary-grey-70t');
-$secondary-grey-50t: map-get($colors, 'secondary-grey-50t');
-$secondary-grey-30t: map-get($colors, 'secondary-grey-30t');
+$grey: map-get($colors, grey);
+$grey-70t: map-get($colors, 'grey-70t');
+$grey-50t: map-get($colors, 'grey-50t');
+$grey-30t: map-get($colors, 'grey-30t');
+$grey-20t: map-get($colors, 'grey-20t');
 
-$secondary-white: map-get($colors, 'secondary-white');
-$secondary-white-70t: map-get($colors, 'secondary-white-70t');
-$secondary-white-50t: map-get($colors, 'secondary-white-50t');
-$secondary-white-30t: map-get($colors, 'secondary-white-30t');
+$white: map-get($colors, white);
+$white-70t: map-get($colors, 'white-70t');
+$white-50t: map-get($colors, 'white-50t');
+$white-30t: map-get($colors, 'white-30t');
 
-$secondary-orange: map-get($colors, 'secondary-orange');
-$secondary-orange-70t: map-get($colors, 'secondary-orange-70t');
-$secondary-orange-50t: map-get($colors, 'secondary-orange-50t');
-$secondary-orange-30t: map-get($colors, 'secondary-orange-30t');
+$marigold: map-get($colors, marigold);
+$marigold-70t: map-get($colors, 'marigold-70t');
+$marigold-50t: map-get($colors, 'marigold-50t');
+$marigold-30t: map-get($colors, 'marigold-30t');
 
-$secondary-pink: map-get($colors, 'secondary-pink');
-$secondary-pink-70t: map-get($colors, 'secondary-pink-70t');
-$secondary-pink-50t: map-get($colors, 'secondary-pink-50t');
-$secondary-pink-30t: map-get($colors, 'secondary-pink-30t');
+$pink: map-get($colors, pink);
+$pink-70t: map-get($colors, 'pink-70t');
+$pink-50t: map-get($colors, 'pink-50t');
+$pink-30t: map-get($colors, 'pink-30t');
 
 $base-black: map-get($colors, 'base-black');
 $base-white: map-get($colors, 'base-white');
