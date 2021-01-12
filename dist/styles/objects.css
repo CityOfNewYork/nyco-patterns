@@ -99,29 +99,30 @@
 
 .o-footer {
   padding: 48px 24px;
+  border-top: 8px solid !important;
 }
 
-.o-footer__nav-header {
-  display: block;
+.o-footer__divider {
   border-bottom: 1px solid !important;
-  padding: 16px 8px;
 }
 
-.o-footer__nav-link {
-  display: block;
-  padding: 16px 8px;
+.o-footer__inline-nav > a,
+.o-footer__inline-nav > button {
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
-.o-footer__info {
-  margin-top: 48px;
-  margin-bottom: 0;
+.o-footer__inline-nav > *:first-child {
+  margin-left: 0 !important;
+}
+
+.o-footer__inline-nav > *:last-child {
+  margin-right: 0 !important;
 }
 
 .o-footer__logo {
-  color: #FFFFFF;
-  width: 256px !important;
-  height: 52px !important;
-  margin-bottom: 24px;
+  width: 257px;
+  height: 45px;
 }
 
 /**
@@ -327,7 +328,7 @@
 }
 
 .o-map .map-menu a.active {
-  color: #24325b;
+  color: #031553;
 }
 
 .o-map .map-legend {
@@ -368,7 +369,7 @@
 
 .o-map .map-legend input[type=checkbox] + label:hover,
 .o-map .map-legend input[type=checkbox]:checked + label {
-  background-color: #284cca;
+  background-color: #1642DF;
 }
 
 .o-map .map-legend input[type=checkbox]:checked + label:before {
@@ -393,105 +394,8 @@
 .o-map .mapboxgl-popup-close-button:hover {
   background-color: transparent;
   text-decoration: underline;
-  text-decoration-color: #24325b;
+  text-decoration-color: #031553;
   transform: scale(1.4);
-}
-
-/**
- * Code
- */
-
-code, pre {
-  color: #284cca;
-  display: inline-block;
-  font-family: 1em;
-  font-family: monospace;
-  font-size: 1em;
-  font-weight: normal;
-  line-height: 1.6;
-  background-color: #F6F6F6;
-  border: 1px solid #c1c6cb;
-  padding: 0 0.3em;
-}
-
-p code, li code {
-  font-size: 85%;
-  font-family: inherit;
-  letter-spacing: 0.01em;
-  border-radius: 3px;
-  margin: 0;
-  display: inline;
-  padding: 0 0.3em 0.1em;
-}
-
-pre {
-  color: #fc5d52;
-  display: block;
-  max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-  padding: 16px 16px;
-}
-
-pre code {
-  color: inherit !important;
-  font-family: inherit !important;
-  font-size: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-  background-color: inherit !important;
-  border: none !important;
-  padding: 0 !important;
-}
-
-.code {
-  color: #284cca;
-  display: inline-block;
-  font-family: 1em;
-  font-family: monospace;
-  font-size: 1em;
-  font-weight: normal;
-  line-height: 1.6;
-  background-color: #F6F6F6;
-  border: 1px solid #c1c6cb;
-  padding: 0 0.3em;
-}
-
-.code__comment {
-  color: #cdd8ef;
-}
-
-.code-block {
-  color: #284cca;
-  display: inline-block;
-  font-family: 1em;
-  font-family: monospace;
-  font-size: 1em;
-  font-weight: normal;
-  line-height: 1.6;
-  background-color: #F6F6F6;
-  border: 1px solid #c1c6cb;
-  padding: 0 0.3em;
-  color: #fc5d52;
-  display: block;
-  max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-  padding: 16px 16px;
-  padding: 0;
-}
-
-.code-block pre {
-  color: inherit;
-  font-size: inherit;
-  background-color: transparent;
-  margin: 0;
-  padding: 16px;
-  border: none;
-}
-
-.code-block code {
-  padding: 0;
 }
 
 .table table,
@@ -505,12 +409,12 @@ table thead {
   color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border-bottom: 1px solid #284cca;
+  border-bottom: 1px solid #1642DF;
 }
 
 .table table thead tr,
 table thead tr {
-  background-color: #284cca;
+  background-color: #1642DF;
 }
 
 .table table tbody tr:nth-child(odd),
@@ -560,11 +464,11 @@ table pre {
   color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border-bottom: 1px solid #284cca;
+  border-bottom: 1px solid #1642DF;
 }
 
 .table table thead tr, [class*=table--] table thead tr {
-  background-color: #284cca;
+  background-color: #1642DF;
 }
 
 .table table tbody tr:nth-child(odd), [class*=table--] table tbody tr:nth-child(odd) {
@@ -614,7 +518,7 @@ table pre {
 
 .table--singular-caption table caption {
   background-color: #F3F3F3;
-  color: #24325b;
+  color: #031553;
   font-size: 0.8em;
 }
 
@@ -654,11 +558,11 @@ table pre {
   color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border-bottom: 1px solid #284cca;
+  border-bottom: 1px solid #1642DF;
 }
 
 .o-content table thead tr {
-  background-color: #284cca;
+  background-color: #1642DF;
 }
 
 .o-content table tbody tr:nth-child(odd) {
@@ -733,11 +637,11 @@ table pre {
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #284cca;
+    border-bottom: 1px solid #1642DF;
   }
 
   .small\:table table thead tr, [class*="small:table--"] table thead tr {
-    background-color: #284cca;
+    background-color: #1642DF;
   }
 
   .small\:table table tbody tr:nth-child(odd), [class*="small:table--"] table tbody tr:nth-child(odd) {
@@ -787,7 +691,7 @@ table pre {
 
   .small\:table--singular-caption table caption {
     background-color: #F3F3F3;
-    color: #24325b;
+    color: #031553;
     font-size: 0.8em;
   }
 }
@@ -802,11 +706,11 @@ table pre {
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #284cca;
+    border-bottom: 1px solid #1642DF;
   }
 
   .mobile\:table table thead tr, [class*="mobile:table--"] table thead tr {
-    background-color: #284cca;
+    background-color: #1642DF;
   }
 
   .mobile\:table table tbody tr:nth-child(odd), [class*="mobile:table--"] table tbody tr:nth-child(odd) {
@@ -856,7 +760,7 @@ table pre {
 
   .mobile\:table--singular-caption table caption {
     background-color: #F3F3F3;
-    color: #24325b;
+    color: #031553;
     font-size: 0.8em;
   }
 }
@@ -890,17 +794,6 @@ table pre {
     display: flex;
     visibility: visible;
   }
-  .o-footer__nav-header {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .o-footer__nav-link {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .o-footer__info {
-    margin: 0px;
-  }
   .o-navigation__banner {
     display: none;
     visibility: hidden;
@@ -929,11 +822,11 @@ table pre {
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #284cca;
+    border-bottom: 1px solid #1642DF;
   }
 
   .tablet\:table table thead tr, [class*="tablet:table--"] table thead tr {
-    background-color: #284cca;
+    background-color: #1642DF;
   }
 
   .tablet\:table table tbody tr:nth-child(odd), [class*="tablet:table--"] table tbody tr:nth-child(odd) {
@@ -983,7 +876,7 @@ table pre {
 
   .tablet\:table--singular-caption table caption {
     background-color: #F3F3F3;
-    color: #24325b;
+    color: #031553;
     font-size: 0.8em;
   }
 }
@@ -1020,11 +913,11 @@ table pre {
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #284cca;
+    border-bottom: 1px solid #1642DF;
   }
 
   .desktop\:table table thead tr, [class*="desktop:table--"] table thead tr {
-    background-color: #284cca;
+    background-color: #1642DF;
   }
 
   .desktop\:table table tbody tr:nth-child(odd), [class*="desktop:table--"] table tbody tr:nth-child(odd) {
@@ -1074,7 +967,7 @@ table pre {
 
   .desktop\:table--singular-caption table caption {
     background-color: #F3F3F3;
-    color: #24325b;
+    color: #031553;
     font-size: 0.8em;
   }
 }

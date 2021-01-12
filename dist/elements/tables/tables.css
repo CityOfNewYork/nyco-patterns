@@ -9,12 +9,12 @@ table thead {
   color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border-bottom: 1px solid #284cca;
+  border-bottom: 1px solid #1642DF;
 }
 
 .table table thead tr,
 table thead tr {
-  background-color: #284cca;
+  background-color: #1642DF;
 }
 
 .table table tbody tr:nth-child(odd),
@@ -64,11 +64,11 @@ table pre {
   color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border-bottom: 1px solid #284cca;
+  border-bottom: 1px solid #1642DF;
 }
 
 .table table thead tr, [class*=table--] table thead tr {
-  background-color: #284cca;
+  background-color: #1642DF;
 }
 
 .table table tbody tr:nth-child(odd), [class*=table--] table tbody tr:nth-child(odd) {
@@ -118,7 +118,7 @@ table pre {
 
 .table--singular-caption table caption {
   background-color: #F3F3F3;
-  color: #24325b;
+  color: #031553;
   font-size: 0.8em;
 }
 
@@ -132,11 +132,11 @@ table pre {
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #284cca;
+    border-bottom: 1px solid #1642DF;
   }
 
   .small\:table table thead tr, [class*="small:table--"] table thead tr {
-    background-color: #284cca;
+    background-color: #1642DF;
   }
 
   .small\:table table tbody tr:nth-child(odd), [class*="small:table--"] table tbody tr:nth-child(odd) {
@@ -186,7 +186,7 @@ table pre {
 
   .small\:table--singular-caption table caption {
     background-color: #F3F3F3;
-    color: #24325b;
+    color: #031553;
     font-size: 0.8em;
   }
 }
@@ -201,11 +201,11 @@ table pre {
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #284cca;
+    border-bottom: 1px solid #1642DF;
   }
 
   .mobile\:table table thead tr, [class*="mobile:table--"] table thead tr {
-    background-color: #284cca;
+    background-color: #1642DF;
   }
 
   .mobile\:table table tbody tr:nth-child(odd), [class*="mobile:table--"] table tbody tr:nth-child(odd) {
@@ -255,7 +255,7 @@ table pre {
 
   .mobile\:table--singular-caption table caption {
     background-color: #F3F3F3;
-    color: #24325b;
+    color: #031553;
     font-size: 0.8em;
   }
 }
@@ -270,11 +270,11 @@ table pre {
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #284cca;
+    border-bottom: 1px solid #1642DF;
   }
 
   .tablet\:table table thead tr, [class*="tablet:table--"] table thead tr {
-    background-color: #284cca;
+    background-color: #1642DF;
   }
 
   .tablet\:table table tbody tr:nth-child(odd), [class*="tablet:table--"] table tbody tr:nth-child(odd) {
@@ -324,7 +324,7 @@ table pre {
 
   .tablet\:table--singular-caption table caption {
     background-color: #F3F3F3;
-    color: #24325b;
+    color: #031553;
     font-size: 0.8em;
   }
 }
@@ -339,11 +339,11 @@ table pre {
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #284cca;
+    border-bottom: 1px solid #1642DF;
   }
 
   .desktop\:table table thead tr, [class*="desktop:table--"] table thead tr {
-    background-color: #284cca;
+    background-color: #1642DF;
   }
 
   .desktop\:table table tbody tr:nth-child(odd), [class*="desktop:table--"] table tbody tr:nth-child(odd) {
@@ -393,7 +393,7 @@ table pre {
 
   .desktop\:table--singular-caption table caption {
     background-color: #F3F3F3;
-    color: #24325b;
+    color: #031553;
     font-size: 0.8em;
   }
 }

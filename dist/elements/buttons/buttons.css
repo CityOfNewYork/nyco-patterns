@@ -52,8 +52,8 @@ button::-moz-focus-inner {
 
 .btn.color-primary-button:hover, .btn.color-primary-button:active, .buttons.color-primary-button:hover, .buttons.color-primary-button:active {
   color: #FFFFFF;
-  background: #1e41ba;
-  box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
+  background: #0e38cd;
+  box-shadow: 8px 8px 0px 0px #0b206b, 0 0 0 3px rgba(255, 255, 255, 0);
 }
 
 .btn.color-secondary-button, .buttons.color-secondary-button {
@@ -75,13 +75,13 @@ button::-moz-focus-inner {
 }
 
 .btn-app.color-primary-button, .button-app.color-primary-button {
-  background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+  background: linear-gradient(0deg, #143bc8 0%, #1642DF 100%);
   border-color: transparent;
 }
 
 .btn-app.color-primary-button:hover, .btn-app.color-primary-button:active, .button-app.color-primary-button:hover, .button-app.color-primary-button:active {
   color: #FFFFFF;
-  background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+  background: linear-gradient(0deg, #143bc8 0%, #1642DF 100%);
   box-shadow: none;
 }
 
@@ -135,8 +135,8 @@ button::-moz-focus-inner {
 
   .small\:btn.color-primary-button:hover, .small\:btn.color-primary-button:active, .small\:buttons.color-primary-button:hover, .small\:buttons.color-primary-button:active {
     color: #FFFFFF;
-    background: #1e41ba;
-    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
+    background: #0e38cd;
+    box-shadow: 8px 8px 0px 0px #0b206b, 0 0 0 3px rgba(255, 255, 255, 0);
   }
 
   .small\:btn.color-secondary-button, .small\:buttons.color-secondary-button {
@@ -158,13 +158,13 @@ button::-moz-focus-inner {
   }
 
   .small\:btn-app.color-primary-button, .small\:button-app.color-primary-button {
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    background: linear-gradient(0deg, #143bc8 0%, #1642DF 100%);
     border-color: transparent;
   }
 
   .small\:btn-app.color-primary-button:hover, .small\:btn-app.color-primary-button:active, .small\:button-app.color-primary-button:hover, .small\:button-app.color-primary-button:active {
     color: #FFFFFF;
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    background: linear-gradient(0deg, #143bc8 0%, #1642DF 100%);
     box-shadow: none;
   }
 
@@ -219,8 +219,8 @@ button::-moz-focus-inner {
 
   .mobile\:btn.color-primary-button:hover, .mobile\:btn.color-primary-button:active, .mobile\:buttons.color-primary-button:hover, .mobile\:buttons.color-primary-button:active {
     color: #FFFFFF;
-    background: #1e41ba;
-    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
+    background: #0e38cd;
+    box-shadow: 8px 8px 0px 0px #0b206b, 0 0 0 3px rgba(255, 255, 255, 0);
   }
 
   .mobile\:btn.color-secondary-button, .mobile\:buttons.color-secondary-button {
@@ -242,13 +242,13 @@ button::-moz-focus-inner {
   }
 
   .mobile\:btn-app.color-primary-button, .mobile\:button-app.color-primary-button {
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    background: linear-gradient(0deg, #143bc8 0%, #1642DF 100%);
     border-color: transparent;
   }
 
   .mobile\:btn-app.color-primary-button:hover, .mobile\:btn-app.color-primary-button:active, .mobile\:button-app.color-primary-button:hover, .mobile\:button-app.color-primary-button:active {
     color: #FFFFFF;
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    background: linear-gradient(0deg, #143bc8 0%, #1642DF 100%);
     box-shadow: none;
   }
 
@@ -303,8 +303,8 @@ button::-moz-focus-inner {
 
   .tablet\:btn.color-primary-button:hover, .tablet\:btn.color-primary-button:active, .tablet\:buttons.color-primary-button:hover, .tablet\:buttons.color-primary-button:active {
     color: #FFFFFF;
-    background: #1e41ba;
-    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
+    background: #0e38cd;
+    box-shadow: 8px 8px 0px 0px #0b206b, 0 0 0 3px rgba(255, 255, 255, 0);
   }
 
   .tablet\:btn.color-secondary-button, .tablet\:buttons.color-secondary-button {
@@ -326,13 +326,13 @@ button::-moz-focus-inner {
   }
 
   .tablet\:btn-app.color-primary-button, .tablet\:button-app.color-primary-button {
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    background: linear-gradient(0deg, #143bc8 0%, #1642DF 100%);
     border-color: transparent;
   }
 
   .tablet\:btn-app.color-primary-button:hover, .tablet\:btn-app.color-primary-button:active, .tablet\:button-app.color-primary-button:hover, .tablet\:button-app.color-primary-button:active {
     color: #FFFFFF;
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    background: linear-gradient(0deg, #143bc8 0%, #1642DF 100%);
     box-shadow: none;
   }
 
@@ -387,8 +387,8 @@ button::-moz-focus-inner {
 
   .desktop\:btn.color-primary-button:hover, .desktop\:btn.color-primary-button:active, .desktop\:buttons.color-primary-button:hover, .desktop\:buttons.color-primary-button:active {
     color: #FFFFFF;
-    background: #1e41ba;
-    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
+    background: #0e38cd;
+    box-shadow: 8px 8px 0px 0px #0b206b, 0 0 0 3px rgba(255, 255, 255, 0);
   }
 
   .desktop\:btn.color-secondary-button, .desktop\:buttons.color-secondary-button {
@@ -410,13 +410,13 @@ button::-moz-focus-inner {
   }
 
   .desktop\:btn-app.color-primary-button, .desktop\:button-app.color-primary-button {
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    background: linear-gradient(0deg, #143bc8 0%, #1642DF 100%);
     border-color: transparent;
   }
 
   .desktop\:btn-app.color-primary-button:hover, .desktop\:btn-app.color-primary-button:active, .desktop\:button-app.color-primary-button:hover, .desktop\:button-app.color-primary-button:active {
     color: #FFFFFF;
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
+    background: linear-gradient(0deg, #143bc8 0%, #1642DF 100%);
     box-shadow: none;
   }
 

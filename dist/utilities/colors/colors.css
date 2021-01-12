@@ -22,15 +22,15 @@
 }
 
 .color-light-background a:not(.btn) {
-  color: #284cca;
+  color: #1642DF;
 }
 
 .color-light-background a:not(.btn):visited {
-  color: #284cca;
+  color: #1642DF;
 }
 
 .color-light-background a:not(.btn):hover, .color-light-background a:not(.btn):active, .color-light-background a:not(.btn):focus, .color-light-background a:not(.btn).active {
-  color: #24325b;
+  color: #031553;
 }
 
 .color-light-background input:not(.error),
@@ -38,7 +38,7 @@
 .color-light-background select:not(.error),
 .color-light-background .checkbox__label,
 .color-light-background .radio__label {
-  border-color: #7c7f83;
+  border-color: #57595C;
   background-color: #FFFFFF;
 }
 
@@ -47,7 +47,7 @@
 .color-light-background select:not(.error)::placeholder,
 .color-light-background .checkbox__label::placeholder,
 .color-light-background .radio__label::placeholder {
-  color: grey;
+  color: grey-50t;
 }
 
 .color-light-background .select {
@@ -60,21 +60,21 @@
 
 .color-light-background .radio__label:before,
 .color-light-background .checkbox__label::before {
-  border-color: #24325b;
+  border-color: #031553;
 }
 
 .color-light-background input:checked + .checkbox__label::before {
-  background-color: #24325b;
+  background-color: #031553;
   background-image: url("../svg/icon-ui-check-white.svg");
 }
 
 .color-light-background input:checked + .checkbox__label::before {
-  box-shadow: inset 0 0 0 1.25px #FFFFFF, 0 0 0 2px #24325b;
+  box-shadow: inset 0 0 0 1.25px #FFFFFF, 0 0 0 2px #031553;
 }
 
 .color-light-background input:checked + .radio__label::before {
-  background-color: #24325b;
-  box-shadow: inset 0 0 0 1.25px #FFFFFF, 0 0 0 2px #24325b;
+  background-color: #031553;
+  box-shadow: inset 0 0 0 1.25px #FFFFFF, 0 0 0 2px #031553;
 }
 
 .color-light-background .btn,
@@ -89,7 +89,7 @@
 .color-light-background .select:focus,
 .color-light-background input:focus + .checkbox__label,
 .color-light-background input:focus + .radio__label {
-  box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 3px #24325b;
+  box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 3px #031553;
 }
 
 .color-light-background .error > input,
@@ -134,15 +134,15 @@
 }
 
 .color-mid-background a:not(.btn) {
-  color: #284cca;
+  color: #1642DF;
 }
 
 .color-mid-background a:not(.btn):visited {
-  color: #284cca;
+  color: #1642DF;
 }
 
 .color-mid-background a:not(.btn):hover, .color-mid-background a:not(.btn):active, .color-mid-background a:not(.btn):focus, .color-mid-background a:not(.btn).active {
-  color: #24325b;
+  color: #031553;
 }
 
 .color-mid-background input:not(.error),
@@ -150,7 +150,7 @@
 .color-mid-background select:not(.error),
 .color-mid-background .checkbox__label,
 .color-mid-background .radio__label {
-  border-color: #7c7f83;
+  border-color: #57595C;
   background-color: #FFFFFF;
 }
 
@@ -159,7 +159,7 @@
 .color-mid-background select:not(.error)::placeholder,
 .color-mid-background .checkbox__label::placeholder,
 .color-mid-background .radio__label::placeholder {
-  color: grey;
+  color: grey-50t;
 }
 
 .color-mid-background .select {
@@ -172,21 +172,21 @@
 
 .color-mid-background .radio__label:before,
 .color-mid-background .checkbox__label::before {
-  border-color: #24325b;
+  border-color: #031553;
 }
 
 .color-mid-background input:checked + .checkbox__label::before {
-  background-color: #24325b;
+  background-color: #031553;
   background-image: url("../svg/icon-ui-check-white.svg");
 }
 
 .color-mid-background input:checked + .checkbox__label::before {
-  box-shadow: inset 0 0 0 1.25px #F3F3F3, 0 0 0 2px #24325b;
+  box-shadow: inset 0 0 0 1.25px #F3F3F3, 0 0 0 2px #031553;
 }
 
 .color-mid-background input:checked + .radio__label::before {
-  background-color: #24325b;
-  box-shadow: inset 0 0 0 1.25px #F3F3F3, 0 0 0 2px #24325b;
+  background-color: #031553;
+  box-shadow: inset 0 0 0 1.25px #F3F3F3, 0 0 0 2px #031553;
 }
 
 .color-mid-background .btn,
@@ -201,7 +201,7 @@
 .color-mid-background .select:focus,
 .color-mid-background input:focus + .checkbox__label,
 .color-mid-background input:focus + .radio__label {
-  box-shadow: 0 0 0 1px #F3F3F3, 0 0 0 3px #24325b;
+  box-shadow: 0 0 0 1px #F3F3F3, 0 0 0 3px #031553;
 }
 
 .color-mid-background .error > input,
@@ -224,7 +224,7 @@
 
 .color-dark-background {
   color: #FFFFFF;
-  background-color: #24325b;
+  background-color: #031553;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /**
@@ -265,7 +265,7 @@
 .color-dark-background .checkbox__label,
 .color-dark-background .radio__label {
   border-color: #FFFFFF;
-  background-color: #24325b;
+  background-color: #031553;
 }
 
 .color-dark-background input:not(.error)::placeholder,
@@ -281,7 +281,7 @@
 }
 
 .color-dark-background .checkbox__label::before {
-  background-color: #24325b;
+  background-color: #031553;
 }
 
 .color-dark-background .radio__label:before,
@@ -295,12 +295,12 @@
 }
 
 .color-dark-background input:checked + .checkbox__label::before {
-  box-shadow: inset 0 0 0 1.25px #24325b, 0 0 0 2px #FFFFFF;
+  box-shadow: inset 0 0 0 1.25px #031553, 0 0 0 2px #FFFFFF;
 }
 
 .color-dark-background input:checked + .radio__label::before {
   background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1.25px #24325b, 0 0 0 2px #FFFFFF;
+  box-shadow: inset 0 0 0 1.25px #031553, 0 0 0 2px #FFFFFF;
 }
 
 .color-dark-background .btn,
@@ -315,7 +315,7 @@
 .color-dark-background .select:focus,
 .color-dark-background input:focus + .checkbox__label,
 .color-dark-background input:focus + .radio__label {
-  box-shadow: 0 0 0 1px #24325b, 0 0 0 3px #FFFFFF;
+  box-shadow: 0 0 0 1px #031553, 0 0 0 3px #FFFFFF;
 }
 
 .color-dark-background .error > input,
@@ -338,7 +338,7 @@
 
 .color-primary-button {
   color: #FFFFFF;
-  background-color: #284cca;
+  background-color: #1642DF;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -371,11 +371,11 @@
 }
 
 .color-primary-button input:checked + .checkbox__label::before {
-  box-shadow: inset 0 0 0 1.25px #284cca, 0 0 0 2px;
+  box-shadow: inset 0 0 0 1.25px #1642DF, 0 0 0 2px;
 }
 
 .color-primary-button input:checked + .radio__label::before {
-  box-shadow: inset 0 0 0 1.25px #284cca, 0 0 0 2px;
+  box-shadow: inset 0 0 0 1.25px #1642DF, 0 0 0 2px;
 }
 
 .color-primary-button .btn,
@@ -390,7 +390,7 @@
 .color-primary-button .select:focus,
 .color-primary-button input:focus + .checkbox__label,
 .color-primary-button input:focus + .radio__label {
-  box-shadow: 0 0 0 1px #284cca, 0 0 0 3px;
+  box-shadow: 0 0 0 1px #1642DF, 0 0 0 3px;
 }
 
 .color-secondary-button {
