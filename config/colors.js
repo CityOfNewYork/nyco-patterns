@@ -5,44 +5,54 @@
 const colors = {
   'primary': [
     'navy',
-    'blue',
-    'red'
+    'blue'
   ],
   'secondary': [
+    'red',
     'grey',
-    'white',
-    'orange',
-    'pink'
+    'white'
+  ],
+  'tertiary': [
+    'marigold',
+    'pink',
+    'green'
   ],
   'colors': {
-    'navy': '#24325b',
+    'navy': '#031553',
     'navy-70t': '#4157aa',
     'navy-50t': '#8195dc',
     'navy-30t': '#cdd8ef',
-    'blue': '#284cca',
+    'blue': '#1642DF',
     'blue-70t': '#568adf',
     'blue-50t': '#96beff',
     'blue-30t': '#d2e8ff',
+    'blue-20t': '#E7F2FE',
+    'blue-10t': '#F0F7FE',
     'red': '#fc5d52',
     'red-70t': '#ff8787',
     'red-50t': '#ffafaf',
     'red-30t': '#ffdbdb',
-    'grey': '#7c7f83',
-    'grey-70t': '#999ca4',
-    'grey-50t': '#c1c6cb',
-    'grey-30t': '#e6e8ec',
+    'grey': '#57595C',
+    'grey-70t': '#7c7f83',
+    'grey-50t': '#999ca4',
+    'grey-30t': '#c1c6cb',
+    'grey-20t': '#e6e8ec',
     'white': '#F3F3F3',
     'white-70t': '#F6F6F6',
     'white-50t': '#F9F9FA',
     'white-30t': '#FBFCFC',
-    'orange': '#faa302',
-    'orange-70t': '#fbb95a',
-    'orange-50t': '#fbd8a1',
-    'orange-30t': '#ffeecd',
+    'marigold': '#faa302',
+    'marigold-70t': '#fbb95a',
+    'marigold-50t': '#fbd8a1',
+    'marigold-30t': '#ffeecd',
     'pink': '#f9a5da',
     'pink-70t': '#ffc0f6',
     'pink-50t': '#fbd9ff',
     'pink-30t': '#fff0fe',
+    'green': '#04A487',
+    'green-70t': '#11D4B1',
+    'green-50t': '#AEF4E7',
+    'green-30t': '#E6FEFA',
     'base-black': '#000000',
     'base-white': '#FFFFFF'
   },
@@ -56,7 +66,7 @@ const colors = {
       'background-color': 'base-white',
       'border': 'grey',
       'input-background': 'base-white',
-      'placeholder': 'grey',
+      'placeholder': 'grey-50t',
       'focus': 'navy',
       'checkbox-check': '"icon-ui-check-white.svg"',
       'select-arrow': '"icon-ui-chevron-down-navy.svg"',
@@ -71,7 +81,7 @@ const colors = {
       'background-color': 'white',
       'border': 'grey',
       'input-background': 'base-white',
-      'placeholder': 'grey',
+      'placeholder': 'grey-50t',
       'focus': 'navy',
       'checkbox-check': '"icon-ui-check-white.svg"',
       'radio-check': '"icon-ui-check-white.svg"',
@@ -109,21 +119,22 @@ const colors = {
   },
 };
 
-/**
- * TEMP Backwards Compatible Color Utils. Deprecate for next major release.
- * Adds the primary and secondary namespaces of the colors so they compile in
- * the site utilities.
- * @since v2.2.2
- */
-Object.keys(colors.colors).forEach((key) => {
-  if (colors.primary.includes(key.split('-')[0])) {
-    colors.colors[`primary-${key}`] = colors.colors[key];
-  }
+// /**
+//  * TEMP Backwards Compatible Color Utils. Deprecate for next major release.
+//  * Adds the primary and secondary namespaces of the colors so they compile in
+//  * the site utilities.
+//  *
+//  * @since v2.2.2
+//  */
+// Object.keys(colors.colors).forEach((key) => {
+//   if (colors.primary.includes(key.split('-')[0])) {
+//     colors.colors[`primary-${key}`] = colors.colors[key];
+//   }
 
-  if (colors.secondary.includes(key.split('-')[0])) {
-    colors.colors[`secondary-${key}`] = colors.colors[key];
-  }
-});
+//   if (colors.secondary.includes(key.split('-')[0])) {
+//     colors.colors[`secondary-${key}`] = colors.colors[key];
+//   }
+// });
 
 /**
  * Map Color Utils
@@ -131,20 +142,20 @@ Object.keys(colors.colors).forEach((key) => {
 
 colors.mapColorCombinations = [
   [
-    colors.colors['primary-navy'],
-    colors.colors['primary-navy-70t']
+    colors.colors['navy'],
+    colors.colors['navy-70t']
   ],
   [
     colors.colors['base-black'],
-    colors.colors['secondary-orange']
+    colors.colors['marigold']
   ],
   [
-    colors.colors['primary-navy'],
-    colors.colors['secondary-grey']
+    colors.colors['navy'],
+    colors.colors['grey']
   ],
   [
-    colors.colors['primary-blue'],
-    colors.colors['secondary-orange']
+    colors.colors['blue'],
+    colors.colors['marigold']
   ],
 ];
 
