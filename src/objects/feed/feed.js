@@ -12,7 +12,7 @@ import _values from 'lodash-es/values';
 import _orderBy from 'lodash-es/orderBy';
 import _uniqBy from 'lodash-es/uniqBy';
 
-import Spinner from '@nycopportunity/patterns-framework/src/utilities/spinner/spinner';
+import Spinner from '@nycopportunity/pttrn-scripts/src/spinner/spinner';
 
 /**
  * Pattern Class
@@ -58,13 +58,13 @@ class Feed {
            * else if using the NYCO self hosted Rss2Json converter
            * @source https://github.com/CityOfNewYork/nyco-rss-2-json
            */
-          if (config.rssToJson === Feed.rssToJson) {
+          if (config.rssToJson === Feed.rssToJson)
             json = json; // do nothing
-          } else if (config.rssToJson.includes('convertRssIntoJson?rssFeed=')) {
+          else if (config.rssToJson.includes('convertRssIntoJson?rssFeed='))
             json = Feed.nycoRssToJson(json);
-          } else {
+          else
+            // eslint-disable-next-line no-console
             console.warn('NYCO Feed Object: This RSS to JSON converter is not recognized.');
-          }
 
           // Process the data
           data.push(this._process(json, this._settings));
@@ -76,11 +76,11 @@ class Feed {
               this._settings
             );
 
-            if (el) {
+            if (el)
               el.innerHTML = compiled;
-            } else {
+            else
+              // eslint-disable-next-line no-console
               console.warn(`NYCO Feed Object: Couldn't find the element "${this._settings.selector}"`);
-            }
           }
       });
     });
@@ -103,13 +103,11 @@ class Feed {
 
       xhr.onreadystatechange = function(event) {
         let _xhr = event.target;
-        if (_xhr.readyState === 4) {
-          if (_xhr.status >= 200 && _xhr.status < 400) {
+        if (_xhr.readyState === 4)
+          if (_xhr.status >= 200 && _xhr.status < 400)
             resolve(_xhr.response);
-          } else {
+          else
             reject(new Error(_xhr.status));
-          }
-        }
       };
 
       xhr.ontimeout = function() {
@@ -157,6 +155,7 @@ class Feed {
   _render(data, settings) {
     data.settings = settings;
 
+    // eslint-disable-next-line no-console
     if (settings.log) console.dir(data);
 
     let template = _values(settings.templates).join('');
@@ -380,9 +379,8 @@ Feed.merge = {
     });
 
     // Get unique posts
-    if (settings.unique) {
+    if (settings.unique)
       items = _uniqBy(items, (item) => item.guid);
-    }
 
     merged.items = _orderBy(items, 'pubDate', 'desc');
 

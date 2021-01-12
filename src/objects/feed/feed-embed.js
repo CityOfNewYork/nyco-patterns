@@ -1,6 +1,6 @@
 import Feed from './feed';
 import FeedDocs from './feed-docs';
-import LZW from '@nycopportunity/patterns-framework/src/utilities/lzw/lzw';
+import LZW from '@nycopportunity/pttrn-scripts/src/lzw/lzw';
 
 class FeedEmbed {
   constructor() {
@@ -76,11 +76,10 @@ class FeedEmbed {
         "<\/script>"
       ];
 
-      if (config.selector.indexOf('#') >= 0) {
+      if (config.selector.indexOf('#') >= 0)
         clipboard.unshift(
           "<div id='" + config.selector.replace('#','') + "'></div>"
         );
-      }
 
       var embed = document.getElementById('js-embed');
 
@@ -140,7 +139,9 @@ class FeedEmbed {
 
         return false;
       } catch(error) {
+        // eslint-disable-next-line no-console
         console.warn(error);
+
         return false;
       }
     }
@@ -151,8 +152,9 @@ class FeedEmbed {
      */
     function init(feed) {
       var docs = new FeedDocs();
+
       // Documentation app
-      if (document.getElementById('js-configuration')) {
+      if (document.getElementById('js-configuration'))
         new Vue({
           el: '#js-configuration',
           data: {
@@ -160,19 +162,17 @@ class FeedEmbed {
             docs: docs.default
           },
         });
-      }
 
-      if (document.getElementById('js-templates')) {
+      if (document.getElementById('js-templates'))
         new Vue({
           el: '#js-templates',
           data: {
             templates: feed.templates
           },
         });
-      }
 
       // Custom Feed app
-      if (document.getElementById('js-controls')) {
+      if (document.getElementById('js-controls'))
         new Vue({
           el: '#js-controls',
           data: {
@@ -182,14 +182,12 @@ class FeedEmbed {
           },
           methods: {
             setObjValue: function(name, key) {
-              if (this.config[name]) {
+              if (this.config[name])
                 return this.config[name][key];
-              }
             },
             setObj: function(name, key, value) {
-              if (!this.config[name]) {
+              if (!this.config[name])
                 this.config[name] = {}
-              }
 
               this.config[name][key] = value;
             },
@@ -203,7 +201,6 @@ class FeedEmbed {
             }
           }
         });
-      }
     }
 
     // Self initiating function for the Feed script. This should mostly mirror
