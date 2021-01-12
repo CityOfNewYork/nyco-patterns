@@ -1,15 +1,15 @@
 - pattern = 'Mailchimp';
 
 / Layout
-= extend('templates/default');
+= extend('/slm/templates/default');
 
 / Variables
-= partial('variables/classes.slm');
+= partial('/slm/variables/classes.slm');
 
 / Mixins
-= partial('mixins/head.slm');
-= partial('mixins/nav.slm');
-= partial('mixins/pattern.slm');
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -21,4 +21,5 @@
 = content('content');
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
-  = mixin('pattern', 'objects/mailchimp/mailchimp', false);
+
+  = mixin('pattern', 'objects/mailchimp/mailchimp', false, 'Sign-up Form');

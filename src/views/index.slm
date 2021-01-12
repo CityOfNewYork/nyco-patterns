@@ -1,13 +1,13 @@
 / Layout
-= extend('templates/full');
+= extend('/slm/templates/full');
 
 / Variables
-= partial('variables/classes.slm');
+= partial('/slm/variables/classes.slm');
 
 / Mixins
-= partial('mixins/head.slm');
-= partial('mixins/nav.slm');
-= partial('mixins/readme.slm');
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/readme.slm');
 
 / Content blocks
 = content('head');
@@ -24,7 +24,7 @@
           h1 class='jumbo m-0 pl-2 ml-2 font-nycgov' style='font-weight: 600; line-height: 1em; border-left: 8px solid;'
             div style='line-height: 0.8em;' Common
             div Agency
-            div class='text-primary-red' Patterns
+            div class='text-red' Patterns
 
         div
           p <b>For creating websites and digital products for The Mayor's Office for Economic Opportunity</b>. The <b>NYCO Patterns</b> provide simple and flexible CSS and JavaScript based components and utilities for building UI's quickly and easily. Ideally suited for internal or external marketing websites, custom digital applications, stand-alone reports, documentation, and dashboards.
@@ -52,7 +52,7 @@
         h2 class='text-center mt-0' Browse the Patterns
         div class='text-h4 color-light-background p-6 ${classDemoShadow}'
           - classNav = '';
-          - classNavLinkHeader = 'o-navigation__link-header text-primary-blue-70t border-primary-blue-30t';
+          - classNavLinkHeader = 'o-navigation__link-header text-blue-70t border-blue-30t';
           - classNavLink = 'o-navigation__link';
 
           = mixin('nav');

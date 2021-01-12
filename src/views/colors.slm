@@ -1,15 +1,15 @@
 - pattern = 'Colors';
 
 / Layout
-= extend('templates/default');
+= extend('/slm/templates/default');
 
 / Variables
-= partial('variables/classes.slm');
+= partial('/slm/variables/classes.slm');
 
 / Mixins
-= partial('mixins/head.slm');
-= partial('mixins/nav.slm');
-= partial('mixins/pattern.slm');
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -22,5 +22,6 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
 
-  = mixin('pattern', 'utilities/colors/color-combinations', false);
-  = mixin('pattern', 'utilities/colors/color-utilities', false);
+  = mixin('pattern', 'utilities/colors/color-combinations', 0, 'Color Combinations');
+  = mixin('pattern', 'utilities/colors/color-utilities', 0, 'Color Utilities');
+  = mixin('pattern', 'utilities/colors/color-figma', 0, 'Figma Color Styles');

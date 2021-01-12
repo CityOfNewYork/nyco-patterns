@@ -1,15 +1,15 @@
 - pattern = 'Buttons';
 
 / Layout
-= extend('templates/default');
+= extend('/slm/templates/default');
 
 / Variables
-= partial('variables/classes.slm');
+= partial('/slm/variables/classes.slm');
 
 / Mixins
-= partial('mixins/head.slm');
-= partial('mixins/nav.slm');
-= partial('mixins/pattern.slm');
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -21,8 +21,8 @@
 = content('content');
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
-  = mixin('pattern', 'elements/buttons/buttons');
+  = mixin('pattern', 'elements/buttons/buttons', 1, 'Default Buttons');
   = mixin('pattern', 'elements/buttons/buttons-primary');
   = mixin('pattern', 'elements/buttons/buttons-secondary');
   = mixin('pattern', 'elements/buttons/buttons-large');
-  = mixin('pattern', 'elements/buttons/buttons-app');
+  = mixin('pattern', 'elements/buttons/buttons-app', 1, 'Application Button');

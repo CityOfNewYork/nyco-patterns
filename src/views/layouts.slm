@@ -1,15 +1,15 @@
 - pattern = 'Layouts';
 
 / Layout
-= extend('templates/default');
+= extend('/slm/templates/default');
 
 / Variables
-= partial('variables/classes.slm');
+= partial('/slm/variables/classes.slm');
 
 / Mixins
-= partial('mixins/head.slm');
-= partial('mixins/nav.slm');
-= partial('mixins/pattern.slm');
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -21,9 +21,8 @@
 = content('content');
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
-  = mixin('pattern', 'elements/layouts/layout-wrap');
+
+  = mixin('pattern', 'elements/layouts/layout-wrap', 1, 'Wrap');
   = mixin('pattern', 'elements/layouts/layout-content');
   = mixin('pattern', 'elements/layouts/layout-sidebar');
-  = mixin('pattern', 'elements/layouts/layout-two-columns-gutter');
-  = mixin('pattern', 'elements/layouts/layout-three-columns-gutter');
-  = mixin('pattern', 'elements/layouts/layout-four-columns-gutter');
+  = mixin('pattern', 'elements/layouts/layout-column', 1, 'Columns');
