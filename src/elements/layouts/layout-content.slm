@@ -1,2 +1,2 @@
-div class='layout-content w-full p-4 bg-secondary-grey-30t ${classDemoShadow}'
+div class='layout-content w-full p-4 bg-grey-30t ${classDemoShadow}'
   div class='mx-auto p-6 bg-base-white text-center' Content

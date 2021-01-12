@@ -2,15 +2,15 @@
 / Navigation
 /*
 
-aside class='o-navigation bg-primary-navy'
+aside class='o-navigation bg-navy'
   div class='tablet:flex hidden w-full'
     div class='o-navigation__wrap color-mid-background'
       div class='o-navigation__nav'
         - classNav = '';
-        - classNavLinkHeader = 'o-navigation__link-header text-primary-blue-70t border-primary-blue-30t';
+        - classNavLinkHeader = 'o-navigation__link-header text-blue-70t border-blue-30t';
         - classNavLink = 'o-navigation__link';
-
-        = partial('../../views/mixins/nav.slm');
+        - navTabindex = false;
+        = partial('/slm/mixins/nav.slm');
         = mixin('nav');
 
   div class='tablet:hidden w-full'
@@ -21,7 +21,8 @@ aside class='o-navigation bg-primary-navy'
       div class='animated'
         div class='o-navigation__nav'
           - classNav = '';
-          - classNavLinkHeader = 'o-navigation__link-header text-primary-blue-70t border-primary-blue-30t';
+          - classNavLinkHeader = 'o-navigation__link-header text-blue-70t border-blue-30t';
           - classNavLink = 'o-navigation__link';
-          = partial('../../views/mixins/nav.slm');
+          - navTabindex = '-1';
+          = partial('/slm/mixins/nav.slm');
           = mixin('nav');

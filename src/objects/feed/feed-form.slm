@@ -1,4 +1,4 @@
-form class='border border-solid border-primary-blue-30t bg-secondary-white-70t p-4 mb-4' method='get'
+form class='border border-solid border-blue-30t bg-white-70t p-4 mb-4' method='get'
   div class='mb-2'
     label class='font-bold' for='js-embed' Embeddable Snippet
 

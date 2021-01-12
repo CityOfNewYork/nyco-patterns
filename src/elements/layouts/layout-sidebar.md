@@ -1,3 +1,1 @@
-## Layout with Sidebar
-
 The first child of the `.layout-sidebar` element will have a fixed width of `16rem` for sidebar content. The second child's width will stretch to the end of the viewport's width.

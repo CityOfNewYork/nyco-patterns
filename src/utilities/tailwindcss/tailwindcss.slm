@@ -2,7 +2,7 @@ h2 NYCO × Tailwindcss configuration
 
 / h3#config-theme Theme
 
-/ div class='p-2 bg-secondary-white'
+/ div class='p-2 bg-white'
   / b Plugin (link to docs)
 
 / div class='mb-4'
@@ -15,17 +15,17 @@ h2 NYCO × Tailwindcss configuration
   /   - description = (this.tailwind.descriptions.hasOwnProperty(plugin)) ? this.tailwind.descriptions[plugin] : false;
   /   - prefix = (this.tailwind.prefixes.hasOwnProperty(plugin)) ? this.tailwind.prefixes[plugin] : false;
 
-    / div id='config-${link}' class='p-2 layout-two-columns items-center border-b border-secondary-white-70t'
+    / div id='config-${link}' class='p-2 layout-two-columns items-center border-b border-white-70t'
     /   a href='${this.urls.tailwindDocs}${link}' class='capitalize' target='_blank' = `${name}`;
 
     /   div class='text-right'
     /     - if (config)
     /       button class='btn' type='button' aria-controls='config-${link}-details' aria-expanded='false' data-js='toggle' show details
     /     - else
-    /       div class='text-secondary-grey' Default
+    /       div class='text-grey' Default
 
     / - if (config)
-    /   div class='bg-secondary-white-70t hidden hidden:overflow animated' id='config-${link}-details' aria-hidden='true'
+    /   div class='bg-white-70t hidden hidden:overflow animated' id='config-${link}-details' aria-hidden='true'
     /     div class='p-2' = description
 
     /     div class='p-2 layout-two-columns border-b border-base-white'
@@ -35,7 +35,7 @@ h2 NYCO × Tailwindcss configuration
     /         b Property Value
 
     /     - for (i in config)
-    /       div class='p-2 layout-two-columns font-code text-primary-red border-b border-base-white'
+    /       div class='p-2 layout-two-columns font-code text-red border-b border-base-white'
     /         div
     /           - if (prefix)
     /             = `.${prefix}-${i}`;
@@ -49,7 +49,7 @@ h2 NYCO × Tailwindcss configuration
 
 / h3#config-variants-and-core-plugins Core Plugins and Variants
 
-div class='p-2 layout-three-columns items-center bg-secondary-white'
+div class='p-2 grid grid-cols-3 items-center bg-white'
   div
     b Plugin (link to docs)
   div
@@ -68,9 +68,9 @@ div class='mb-4'
     - description = (this.tailwind.descriptions.hasOwnProperty(plugin)) ? this.tailwind.descriptions[plugin] : false;
     - prefix = (this.tailwind.prefixes.hasOwnProperty(plugin)) ? this.tailwind.prefixes[plugin] : false;
 
-    / - bg = (num % 2 === 0) ? 'bg-secondary-white-70t' : '';
+    / - bg = (num % 2 === 0) ? 'bg-white-70t' : '';
 
-    div class='p-2 layout-three-columns items-center border-b border-secondary-white-70t ${(i % 2 != 0) ? 'bg-secondary-white-70t' : ''}'
+    div class='p-2 grid grid-cols-3 items-center border-b border-white-70t ${(i % 2 != 0) ? 'bg-white-70t' : ''}'
       a href='${this.urls.tailwindDocs}${link}' class='capitalize' target='_blank' = `${name}`;
 
       div class='font-code'
@@ -88,20 +88,20 @@ div class='mb-4'
               use xlink:href='#icon-ui-chevron-down'
 
         - else
-          span class='text-secondary-grey' Default Theme
+          span class='text-grey' Default Theme
 
     - if (config)
-      div class='bg-secondary-white-70t hidden hidden:overflow animated' id='config-${link}-details' aria-hidden='true'
+      div class='bg-white-70t hidden hidden:overflow animated' id='config-${link}-details' aria-hidden='true'
         div class='p-2' = description
 
-        div class='p-2 layout-two-columns border-b border-base-white'
+        div class='p-2 grid grid-cols-2 border-b border-base-white'
           div
             b Utility
           div class='pl-1'
             b Token
 
         - for (i in config)
-          div class='p-2 layout-two-columns font-code text-primary-red border-b border-base-white'
+          div class='p-2 grid grid-cols-2 font-code text-red border-b border-base-white'
             div
               - if (prefix)
                 = `.${prefix}${(i === 'DEFAULT') ? '' : `-${i}`}`;

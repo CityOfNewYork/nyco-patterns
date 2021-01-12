@@ -1,9 +1,9 @@
-div class='desktop:layout-three-columns-gutter'
+div class='desktop:grid desktop:grid-cols-3 gap-2'
   - for (key in this.tokens.colorCombinations)
     - value = this.tokens.colorCombinations[key];
 
-    div class='mb-2'
-      article class='color-${key} w-full py-4 p-2 border border-secondary-grey-50t border-b-0'
+    div
+      article class='color-${key} w-full py-4 p-2 border border-grey-50t border-b-0'
         - if (value['headings'])
           h1 class='m-0' Headings
 
@@ -31,7 +31,7 @@ div class='desktop:layout-three-columns-gutter'
               option Select an option
 
 
-      div class='code-block rounded-t-none border-secondary-grey-50t border-t-0'
+      div class='code-block rounded-t-none border-grey-50t border-t-0'
         pre class='small'
           | .color-${key}
 

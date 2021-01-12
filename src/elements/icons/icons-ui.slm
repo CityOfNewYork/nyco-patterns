@@ -1,4 +1,4 @@
-div class='layout-two-columns-gutter desktop:layout-four-columns-gutter'
+div class='grid grid-cols-2 desktop:grid-cols-4 gap-3'
   - for key in this.tokens.icons
     - if key.includes('icon-ui-')
 
@@ -8,12 +8,9 @@ div class='layout-two-columns-gutter desktop:layout-four-columns-gutter'
           - href = href.replace(this.tokens.iconVariants[i], '')
 
       div class=''
-        div class='color-light-background border border-secondary-grey-50t border-b-0 rounded-t text-center p-2'
+        div class='color-light-background border border-grey-50t border-b-0 rounded-t text-center p-2'
           svg class='${key} icon-3 text-color-blue-dark block m-auto'
             use xlink:href='#${key.split("--")[0]}'
 
-        div class='code-block border-secondary-grey-50t rounded-t-none border-t-0'
+        div class='code-block border-grey-50t rounded-t-none border-t-0'
           pre class='small' #${key}
-
-  / div &nbsp;
-  / div &nbsp;

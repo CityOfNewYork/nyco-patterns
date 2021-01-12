@@ -1,34 +1,43 @@
-div class='layout-two-columns-gutter desktop:layout-four-columns-gutter'
+div class='grid grid-cols-2 desktop:grid-cols-4 gap-2'
   - for (key in this.tokens.colors)
-    - if (!key.includes('primary') && !key.includes('secondary'))
-      - value = this.tokens.colors[key]
+    - value = this.tokens.colors[key]
+    - name = key.split('-').join(' ');
 
-      div class='inline-block w-full mb-2'
-        div class='bg-${key} py-6 border border-secondary-grey-50t border-b-0 rounded-t'
+    - if (typeof base !== 'undefined' && base != name.split(' ')[0])
+      h3 class='capitalize col-span-full mb-0'
+        = name.split(' ')[0]
 
-        div class='code-block border-secondary-grey-50t rounded-t-none border-t-0'
-          div class='p-1 layout-two-columns font-code text-primary-red small'
-            div
-              | Hex
-            div class='text-right uppercase'
-              = `${value}`
-          div class='p-1 layout-two-columns font-code text-primary-red small'
-            div
-              | Border
-            div class='text-right'
-              = `.border-${key}`;
-          div class='p-1 layout-two-columns font-code text-primary-red small'
-            div
-              | Text
-            div class='text-right'
-              = `.text-${key}`;
-          div class='p-1 layout-two-columns font-code text-primary-red small'
-            div
-              | Background
-            div class='text-right'
-              = `.bg-${key}`;
+    - base = name.split(' ')[0];
 
+    article class=''
+      button class='bg-${key} py-6 border border-b-0 border-grey-30t rounded-t w-full'
+        span class='sr-only' Copy hex value to clipboard
 
+      div class=''
+        div class='p-1 pb-0 capitalize border-l border-r border-grey-30t'
+          = name
+
+        div class='border rounded-t-none border-t-0 border-grey-30t'
+          dl class='small p-1 grid grid-cols-3 gap-1'
+            dt class='pb-1' Hex
+            dd class='font-code text-red col-span-2 uppercase'
+              input value='bg-${key}' class='sr-only'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' class='block font-code text-red' = value
+
+            dt class='pb-1' Background
+            dd class=' col-span-2'
+              input value='bg-${key}' class='sr-only'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' class='block font-code text-red' = `.bg-${key}`
+
+            dt class='pb-1' Text
+            dd class='col-span-2'
+              input value='text-${key}' class='sr-only'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' class='block font-code text-red' = `.text-${key}`
+
+            dt class='' Border
+            dd class='col-span-2'
+              input value='border-${key}' class='sr-only'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' class='block font-code text-red' = `.border-${key}`
 
   div &nbsp;
   div &nbsp;
