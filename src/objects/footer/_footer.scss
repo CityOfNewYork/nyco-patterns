@@ -6,48 +6,35 @@
 @import 'config/tokens';
 
 $screens: map-get($tokens, 'screens');
-$colors: map-get($tokens, 'colors');
 $grid: map-get($tokens, 'grid');
-$iconSizes: map-get($tokens, 'iconSizes');
 
 // Declarations
 .o-footer {
   padding: ($grid * 6) ($grid * 3);
+  border-top: $grid solid !important;
 }
 
-.o-footer__nav-header {
-  display: block;
+.o-footer__divider {
   border-bottom: 1px solid !important;
-  padding: ($grid * 2) $grid;
-
-  @media (min-width: #{map-get($screens, 'tablet')}px) {
-    padding-left: ($grid * 2);
-    padding-right: ($grid * 2);
-  }
 }
 
-.o-footer__nav-link {
-  display: block;
-  padding: ($grid * 2) $grid;
-
-  @media (min-width: #{map-get($screens, 'tablet')}px) {
-    padding-left: ($grid * 2);
-    padding-right: ($grid * 2);
+.o-footer__inline-nav {
+  > a,
+  > button {
+    margin-left: $grid;
+    margin-right: $grid;
   }
-}
 
-.o-footer__info {
-  margin-top: ($grid * 6);
-  margin-bottom: 0;
+  > *:first-child {
+    margin-left: 0 !important;
+  }
 
-  @media (min-width: #{map-get($screens, 'tablet')}px) {
-    margin: 0px;
+  > *:last-child {
+    margin-right: 0 !important;
   }
 }
 
 .o-footer__logo {
-  color: map-get($colors, 'base-white');
-  width: nth(map-get($iconSizes, 'xlarge'), 1) !important;
-  height: 52px !important;
-  margin-bottom: ($grid * 3);
+  width: 257px;
+  height: 45px;
 }
