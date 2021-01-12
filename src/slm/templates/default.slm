@@ -5,21 +5,23 @@ html lang='en' class='text-size-0'
 body class='bg-base-black' style='visibility: hidden;' onload='load()'
   a class='o-sr-skip px-4 py-2 color-mid-background hidden' href='#main-content' Skip to main content
 
-  = partial('../../objects/header/header.slm');
+  = partial('/objects/header/header.slm');
 
   main#main-content class='tablet:layout-sidebar tablet:flex items-stretch m-0 p-0 tablet:min-h-screen'
-    = partial('../../objects/navigation/navigation.slm');
+    = partial('/objects/navigation/navigation.slm');
 
     article class='color-light-background py-2'
       = content('content');
 
-  = partial('../../objects/footer/footer.slm');
+  = partial('/objects/footer/footer.slm');
 
   script crossorigin='anonymous' src='https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch'
-  script src='scripts/nyco-patterns.js'
+  script src='scripts/nyco.js'
 
   javascript:
-    var nyco = new NycoPatterns();
+    var nyco = new NYCO();
+
+    nyco.copy();
     nyco.icons();
     nyco.toggle();
 

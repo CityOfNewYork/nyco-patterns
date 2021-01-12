@@ -18,20 +18,22 @@ body style='visibility: hidden;' onload='load()'
   /     div class='layout-wrap tablet:layout-two-columns-gutter justify-center mx-auto'
   /       div
   /         {% include '../partials/nav.twig' with { 'classes': {
-  /           'header': 'block p-3 text-h4 font-normal border-b text-primary-navy border-primary-navy',
-  /           'link': 'block p-3 text-h4 no-underline hover:bg-secondary-pink-50t'
+  /           'header': 'block p-3 text-h4 font-normal border-b text-navy border-navy',
+  /           'link': 'block p-3 text-h4 no-underline hover:bg-pink-50t'
   /         } } only %}
 
   main class='o-content'
     = content('content');
 
-  = partial('../../objects/footer/footer.slm');
+  = partial('/objects/footer/footer.slm');
 
   script crossorigin='anonymous' src='https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch,Promise'
-  script src='scripts/nyco-patterns.js'
+  script src='scripts/nyco.js'
 
   javascript:
-    var nyco = new NycoPatterns();
+    var nyco = new NYCO();
+
+    nyco.copy();
     nyco.icons();
     nyco.toggle();
 

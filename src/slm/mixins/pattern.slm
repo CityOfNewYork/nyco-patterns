@@ -1,0 +1,36 @@
+= mixin('pattern', 'path', 'code = 1', 'title = 0');
+  - this.slug = this.path.split('/')[2];
+
+  / Construct the title from the slug, flipping the postfix and prefix: '${postfix} ${prefix}'
+  - if (this.title === '0')
+    - this.title = this.slug.split('-');
+    - this.title.push(this.title.shift());
+    - this.title = this.title.join(' ');
+
+  section id='${this.slug}' class='mt-6'
+    div class='layout-content px-4'
+      div class='o-content mx-auto flex items-center mb-3'
+        a href='#heading-${this.slug}' class='flex no-underline'
+          svg class='icon-ui-anchor' aria-hidden='true'
+            use xlink:href='#icon-ui-anchor'
+
+          | &nbsp;
+
+          span class='sr-only underline' Anchor
+
+        | &nbsp;
+
+        h2 class='capitalize m-0' id='heading-${this.slug}' = this.title;
+
+    div class='bg-white-50t mb-6 p-4 desktop:p-6'
+      div class='layout-wrap mx-auto flex justify-center'
+        = partial(`../${this.path}.slm`);
+
+    div class='layout-content px-4 pb-4'
+      div class='o-content mx-auto'
+        - if this.code
+          div class='code-block'
+            pre
+              = this.include(this.path);
+
+        == this.include(`${this.path}.md`);

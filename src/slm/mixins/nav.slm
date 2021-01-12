@@ -1,0 +1,35 @@
+= mixin('nav');
+  nav class='${classNav}'
+    a tabindex=navTabindex class='${classNavLink}' href='index' Home
+    a tabindex=navTabindex class='${classNavLink}' href='${this.urls.patterns}' target='_blank' About the Patterns ↗
+    a tabindex=navTabindex class='${classNavLink}' href='${this.urls.installation}' target='_blank' Installation ↗
+
+  nav class='${classNav}'
+    span class='${classNavLinkHeader}' Elements
+    a tabindex=navTabindex class='${classNavLink}' href='buttons' Buttons
+    a tabindex=navTabindex class='${classNavLink}' href='checkboxes' Checkboxes
+    a tabindex=navTabindex class='${classNavLink}' href='code' Code
+    a tabindex=navTabindex class='${classNavLink}' href='icons' Icons
+    a tabindex=navTabindex class='${classNavLink}' href='inputs' Inputs
+    a tabindex=navTabindex class='${classNavLink}' href='layouts' Layouts
+    a tabindex=navTabindex class='${classNavLink}' href='links' Links
+    a tabindex=navTabindex class='${classNavLink}' href='radios' Radios
+    a tabindex=navTabindex class='${classNavLink}' href='select' Select
+    a tabindex=navTabindex class='${classNavLink}' href='tables' Tables
+
+    span class='${classNavLinkHeader}' Objects
+    a tabindex=navTabindex class='${classNavLink}' href='charts' Charts
+    a tabindex=navTabindex class='${classNavLink}' href='content' Content
+    a tabindex=navTabindex class='${classNavLink}' href='feed' Feed
+    a tabindex=navTabindex class='${classNavLink}' href='footer' Footer
+    a tabindex=navTabindex class='${classNavLink}' href='header' Header
+    / a tabindex=navTabindex class='${classNavLink}' href='map' Map
+    a tabindex=navTabindex class='${classNavLink}' href='mailchimp' Mailchimp
+    a tabindex=navTabindex class='${classNavLink}' href='navigation' Navigation
+    / a tabindex=navTabindex class='${classNavLink}' href='official' Official
+
+    span class='${classNavLinkHeader}' Utilities
+    a tabindex=navTabindex class='${classNavLink}' href='animate' Animate
+    a tabindex=navTabindex class='${classNavLink}' href='colors' Colors
+    a tabindex=navTabindex class='${classNavLink}' href='tailwindcss' Tailwindcss
+    a tabindex=navTabindex class='${classNavLink}' href='type' Type
