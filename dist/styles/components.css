@@ -1,3 +1,34 @@
 /**
  * Components
  */
+
+/**
+ * Card
+ */
+
+.c-card {
+  position: relative;
+}
+
+.c-card:hover {
+  background-color: #F3F3F3;
+}
+
+.c-card:hover .badge {
+  background-color: #FFFFFF;
+}
+
+.c-card__cta {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.badge {
+  background-color: #fbd9ff;
+  padding: 10px;
+  border-radius: 20px;
+}

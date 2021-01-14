@@ -24,17 +24,17 @@
   display: flex;
   margin: 0;
   padding: 12px;
-  border-width: 1px;
   border-style: solid;
-  border-radius: 1px;
+  border-width: 1px;
+  border-radius: 2px;
   transition: all 0.2s;
   cursor: pointer;
 }
 
 .radio__label::before {
   content: "";
-  border-width: 1px;
   border-style: solid;
+  border-width: 2px;
   border-radius: 100%;
   display: inline-block;
   width: 24px;

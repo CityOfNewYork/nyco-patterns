@@ -1,0 +1,39 @@
+/**
+ * Card
+ */
+
+// Dependencies
+@import 'config/tokens';
+@import 'config/tokens';
+@import 'config/colors';
+@import 'config/fonts';
+// @import 'config/card';
+
+.c-card {
+  position: relative;
+
+  &:hover {
+    background-color: $white;
+  }
+
+  &:hover .badge {
+    background-color: $base-white;
+  }
+}
+
+
+.c-card__cta {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.badge {
+  background-color: $pink-50t;
+  padding: 10px;
+  border-radius: 20px;
+
+}

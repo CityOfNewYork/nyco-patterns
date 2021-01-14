@@ -92,6 +92,8 @@
               <a class="o-navigation__link" href="radios">Radios</a>
               <a class="o-navigation__link" href="select">Select</a>
               <a class="o-navigation__link" href="tables">Tables</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+              <a class="o-navigation__link" href="card">Card</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
               <a class="o-navigation__link" href="charts">Charts</a>
               <a class="o-navigation__link" href="content">Content</a>
@@ -133,6 +135,8 @@
                 <a class="o-navigation__link" href="radios" tabindex="-1">Radios</a>
                 <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
                 <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+                <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
                 <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
                 <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
@@ -694,6 +698,10 @@
                 <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
                   <div>.fill-base-white</div>
                   <div class="pl-1">#FFFFFF</div>
+                </div>
+                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
+                  <div>.fill-transparent</div>
+                  <div class="pl-1">rgba(255, 255, 255, 0)</div>
                 </div>
               </div>
               <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
@@ -1539,6 +1547,10 @@
                   <div>.stroke-base-white</div>
                   <div class="pl-1">#FFFFFF</div>
                 </div>
+                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
+                  <div>.stroke-transparent</div>
+                  <div class="pl-1">rgba(255, 255, 255, 0)</div>
+                </div>
               </div>
               <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
                 <a class="capitalize" href="https://tailwindcss.com/docs/stroke-width" target="_blank">stroke width</a>
@@ -1556,7 +1568,7 @@
               </div>
               <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
                 <a class="capitalize" href="https://tailwindcss.com/docs/text-align" target="_blank">text align</a>
-                <div class="font-code">[]</div>
+                <div class="font-code">[responsive]</div>
                 <div class="text-right">
                   <span class="text-grey">Default Theme</span>
                 </div>
@@ -1918,24 +1930,36 @@
       </section>
     </article>
   </main>
-  <footer class="o-footer color-dark-background tablet:layout-four-columns-gutter">
-    <nav>
-      <a class="o-footer__nav-link" href="index">Home</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns">GitHub Repository</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a>
-      <a class="o-footer__nav-link" href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO Opportunity on GitHub</a>
-    </nav>
-    <div></div>
-    <div class="o-footer__info">
-      <a href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
-        <svg aria-hidden="true" class="icon-logo-secondary o-footer__logo text-base-white" style="height: 52px !important">
-          <use xlink:href="#icon-logo-secondary"></use>
-        </svg>
-      </a>
-      <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;<a href='https://twitter.com/nycopportunity' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;<a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;<a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;<a href='' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
-      <small>© City of New York, 2021 All Rights Reserved.
-        <br>NYC is a trademark and service mark of the City of New York.
-      </small>
+  <footer class="o-footer color-dark-background border-navy-70t">
+    <div class="layout-wrap mx-auto">
+      <div class="o-footer__divider border-navy-70t desktop:flex desktop:layout-sidebar mb-4">
+        <div class="pb-4">
+          <a class="block" href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
+            <svg aria-hidden="true" class="o-footer__logo">
+              <use xlink:href="#icon-logo-secondary"></use>
+            </svg>
+            <span class="sr-only">The Mayor's Office for Economic Opportunity</span>
+          </a>
+        </div>
+        <div class="pb-4 desktop:pl-4 desktop:flex justify-end items-center">
+          <nav class="o-footer__inline-nav">
+            <a href="index">Home</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns">GitHub Repository</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a>
+            <a href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO Opportunity on GitHub</a>
+          </nav>
+        </div>
+      </div>
+      <div class="desktop:grid desktop:grid-cols-2">
+        <div>
+          <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;<a href='https://twitter.com/nycopportunity' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;<a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;<a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;<a href='' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
+        </div>
+        <div class="desktop:text-right">
+          <small>© City of New York, 2021 All Rights Reserved.
+            <br>NYC is a trademark and service mark of the City of New York.
+          </small>
+        </div>
+      </div>
     </div>
   </footer>
   <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch"></script>

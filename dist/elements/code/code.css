@@ -2,16 +2,19 @@
  * Code
  */
 
-code, pre {
-  color: #1642DF;
+code, pre, .hljs {
+  color: var(--nyco-code-secondary);
   display: inline-block;
   font-family: 1em;
   font-family: monospace;
   font-size: 1em;
   font-weight: normal;
   line-height: 1.6;
-  background-color: #F6F6F6;
-  border: 1px solid #999ca4;
+  background-color: var(--nyco-code-background);
+  border-color: var(--nyco-code-border);
+  border-width: 2px;
+  border-radius: 2px;
+  border-style: solid;
   padding: 0 0.3em;
 }
 
@@ -26,7 +29,7 @@ p code, li code {
 }
 
 pre {
-  color: #fc5d52;
+  color: var(--nyco-code-primary);
   display: block;
   max-width: 100%;
   overflow: hidden;
@@ -46,34 +49,40 @@ pre code {
 }
 
 .code {
-  color: #1642DF;
+  color: var(--nyco-code-secondary);
   display: inline-block;
   font-family: 1em;
   font-family: monospace;
   font-size: 1em;
   font-weight: normal;
   line-height: 1.6;
-  background-color: #F6F6F6;
-  border: 1px solid #999ca4;
+  background-color: var(--nyco-code-background);
+  border-color: var(--nyco-code-border);
+  border-width: 2px;
+  border-radius: 2px;
+  border-style: solid;
   padding: 0 0.3em;
 }
 
-.code__comment {
-  color: #cdd8ef;
+.code__comment, .hljs-comment {
+  color: #999ca4;
 }
 
 .code-block {
-  color: #1642DF;
+  color: var(--nyco-code-secondary);
   display: inline-block;
   font-family: 1em;
   font-family: monospace;
   font-size: 1em;
   font-weight: normal;
   line-height: 1.6;
-  background-color: #F6F6F6;
-  border: 1px solid #999ca4;
+  background-color: var(--nyco-code-background);
+  border-color: var(--nyco-code-border);
+  border-width: 2px;
+  border-radius: 2px;
+  border-style: solid;
   padding: 0 0.3em;
-  color: #fc5d52;
+  color: var(--nyco-code-primary);
   display: block;
   max-width: 100%;
   overflow: hidden;
@@ -93,4 +102,8 @@ pre code {
 
 .code-block code {
   padding: 0;
+}
+
+.text-code, .hljs-selector-class, .hljs-selector-id {
+  color: var(--nyco-code-primary);
 }

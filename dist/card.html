@@ -6,7 +6,7 @@
   <meta content="IE=edge" http-equiv="X-UA-Compatible" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
-  <title>Content | NYCO Patterns</title>
+  <title>Card | NYCO Patterns</title>
   <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
@@ -157,85 +157,74 @@
       </div>
     </aside>
     <article class="color-light-background py-2">
-      <div class="px-4 desktop:px-6">
-        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Content</h1>
-      </div>
-      <section class="mt-6" id="content">
+      <h1 class="px-4 desktop:px-6">Card</h1>
+      <section class="mt-6" id="card">
         <div class="layout-content px-4">
           <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-content">
+            <a class="flex no-underline" href="#heading-card">
               <svg aria-hidden="true" class="icon-ui-anchor">
                 <use xlink:href="#icon-ui-anchor"></use>
               </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-content">content</h2>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-card">card</h2>
           </div>
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <article class="o-content color-light-background p-4 max-w-900">
-              <h1>Worker Connect: A Critical Tool for the City’s Frontline Workers</h1>
-              <p>
-                <img src="images/worker-connect.jpg" />
-              </p>
-              <p>Each day caseworkers across New York City assist thousands of residents in need of City services and public benefits. To do so, workers must often collect information and documentation from prospective and existing clients to determine their eligibility for these assistance programs. Sometimes this information may be missing, inaccessible, or stored across separate agency client information systems that do not communicate with one another. For some of the City’s most vulnerable, missing data and documentation can be a critical barrier to getting the help they need.</p>
-              <p>
-                <code>Sample Inline Code</code>
-              </p>
-              <table>
-                <thead>
-                  <tr>
-                    <td>Table Styling</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Cell</td>
-                  </tr>
-                  <tr>
-                    <td>Cell</td>
-                  </tr>
-                </tbody>
-              </table>
-              <pre>&lt;div&gt;
-  Sample Code Block
-&lt;/div&gt;
-</pre>
+            <article class="c-card border-2 p-4 w-full hover:shadow-up">
+              <header class="c-card__header flex justify-between mb-3">
+                <h2 class="c-card__title h4">Agreement Name</h2>
+                <p class="c-card__subtitle pt-4">
+                  <mark class="badge">Agreement</mark>
+                </p>
+              </header>
+              <div class="c-card__body mb-5">
+                <p class="c-card__status flex items-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <footer class="c-card__footer">
+                <p class="mb-1">
+                  <span class="mr-2 text-grey-50t">Data Owner</span>
+                  <span>Department Name</span>
+                </p>
+                <p class="mb-1">
+                  <span class="mr-2 text-grey-50t">Active Date</span>
+                  <span>June 25, 2020 - Today</span>
+                </p>
+              </footer>
+              <a class="c-card__cta" href="#"></a>
             </article>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;article class=&quot;o-content color-light-background p-4 max-w-900&quot;&gt;
-  &lt;h1&gt;Worker Connect: A Critical Tool for the City’s Frontline Workers&lt;/h1&gt;
-  &lt;p&gt;
-    &lt;img src=&quot;images/worker-connect.jpg&quot; /&gt;
-  &lt;/p&gt;
-  &lt;p&gt;Each day caseworkers across New York City assist thousands of residents in need of City services and public benefits. To do so, workers must often collect information and documentation from prospective and existing clients to determine their eligibility for these assistance programs. Sometimes this information may be missing, inaccessible, or stored across separate agency client information systems that do not communicate with one another. For some of the City’s most vulnerable, missing data and documentation can be a critical barrier to getting the help they need.&lt;/p&gt;
-  &lt;p&gt;
-    &lt;code&gt;Sample Inline Code&lt;/code&gt;
-  &lt;/p&gt;
-  &lt;table&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;td&gt;Table Styling&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td&gt;Cell&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;Cell&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-  &lt;pre&gt;&amp;lt;div&amp;gt;
-  Sample Code Block
-&amp;lt;/div&amp;gt;
-&lt;/pre&gt;
+              <pre>&lt;article class=&quot;c-card border-2 p-4 w-full hover:shadow-up&quot;&gt;
+  &lt;header class=&quot;c-card__header flex justify-between mb-3&quot;&gt;
+    &lt;h2 class=&quot;c-card__title h4&quot;&gt;Agreement Name&lt;/h2&gt;
+    &lt;p class=&quot;c-card__subtitle pt-4&quot;&gt;
+      &lt;mark class=&quot;badge&quot;&gt;Agreement&lt;/mark&gt;
+    &lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;c-card__body mb-5&quot;&gt;
+    &lt;p class=&quot;c-card__status flex items-center&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;footer class=&quot;c-card__footer&quot;&gt;
+    &lt;p class=&quot;mb-1&quot;&gt;
+      &lt;span class=&quot;mr-2 text-grey-50t&quot;&gt;Data Owner&lt;/span&gt;
+      &lt;span&gt;Department Name&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p class=&quot;mb-1&quot;&gt;
+      &lt;span class=&quot;mr-2 text-grey-50t&quot;&gt;Active Date&lt;/span&gt;
+      &lt;span&gt;June 25, 2020 - Today&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+  &lt;a class=&quot;c-card__cta&quot; href=&quot;#&quot;&gt;&lt;/a&gt;
 &lt;/article&gt;</pre>
             </div>
+            <p>
+              <strong>Source:</strong>
+              <code>src/components/card/card</code>
+            </p>
+            <p>Specs about the Card components.</p>
           </div>
         </div>
       </section>

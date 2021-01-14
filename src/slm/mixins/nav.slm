@@ -19,6 +19,9 @@
     a tabindex=navTabindex class='${classNavLink}' href='select' Select
     a tabindex=navTabindex class='${classNavLink}' href='tables' Tables
 
+    span class='${classNavLinkHeader}' Components
+    a tabindex=navTabindex class='${classNavLink}' href='card' Card
+
     span class='${classNavLinkHeader}' Objects
     a tabindex=navTabindex class='${classNavLink}' href='charts' Charts
     a tabindex=navTabindex class='${classNavLink}' href='content' Content
