@@ -1,0 +1,8 @@
+// Shared pattern mixins, functions, and variables
+
+// Dependencies
+// @import 'config/variables';
+
+// Declarations
+// Using map-get to retrieve a variable from the global $variables object.
+// $var: map-get(map-get($variables, ''), '');
