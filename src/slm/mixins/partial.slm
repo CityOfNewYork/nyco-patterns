@@ -1,0 +1,7 @@
+= mixin('partial', 'path');
+  - this.slug = this.path.split('/')[2];
+
+  section id='${this.slug}' class='mt-6'
+    div class='layout-content px-4 pb-4'
+      div class='o-content mx-auto'
+        == this.include(`${this.path}.slm`);
