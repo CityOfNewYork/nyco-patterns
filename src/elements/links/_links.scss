@@ -5,10 +5,13 @@
 // Dependencies
 @import 'config/tokens';
 
+$borderRadius: map-get(map-get($tokens, 'borderRadius'), 'DEFAULT');
+
 // Declarations
 a:not(.btn), .link {
   color: var(--nyco-hyperlinks);
   font-weight: bold;
+  border-radius: $borderRadius;
 
   &:visited {
     color: var(--nyco-visited);

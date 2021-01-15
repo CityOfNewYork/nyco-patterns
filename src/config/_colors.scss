@@ -181,6 +181,12 @@ $base-white: map-get($colors, 'base-white');
     box-shadow: 0 0 0 2px var(--nyco-focus);
   }
 
+  .btn:focus, button:focus, a:focus {
+    outline: none;
+    box-shadow: 0 0 0 1.25px var(--nyco-background-color),
+                0 0 0 4px var(--nyco-focus);
+  }
+
   /**
    * Error State
    */
