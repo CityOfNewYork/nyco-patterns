@@ -46,31 +46,51 @@ $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'tablet')}px;
   border-bottom-style: solid;
   border-color: inherit;
   box-sizing: border-box;
+
   &:last-of-type {
     border-bottom: none;
   }
 }
 
 .c-feed-item__date {
-  margin-bottom: map-get($tokens, 'grid')
+  margin-bottom: map-get($tokens, 'grid');
 }
 
 .c-feed-item__thumbnail {
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
   margin-top: map-get($tokens, 'grid') * 3;
-
-  // order: -1;
-  margin-top: 0;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
   border: 1px solid;
 }
 
 .c-feed-item__excerpt {
   font-size: inherit;
   margin-top: map-get($tokens, 'grid');
+}
+
+.o-feed-3column {
+  .c-feed-item,
+  .o-feed__items::after {
+    @media screen and (min-width: $oFeed_breakpoint) {
+      flex: 0 0 calc(33.33% - 12px);
+      max-width: calc(33.33% - 12px);
+    }
+  }
+}
+
+.o-feed-2column {
+  .c-feed-item,
+  .o-feed__items::after {
+    @media screen and (min-width: $oFeed_breakpoint) {
+      flex: 0 0 calc(50% - 12px);
+      max-width: calc(50% - 12px);
+    }
+  }
+
+  .o-feed__items::after {
+    display: none;
+  }
 }
 
 // Column Layouts
@@ -80,7 +100,7 @@ $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'tablet')}px;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    &:after {
+    &::after {
       content: '';
       flex: auto;
     }
@@ -94,38 +114,6 @@ $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'tablet')}px;
 
   .c-feed-item__thumbnail {
     order: -1;
-    // margin-top: 0;
-    // background-size: cover;
-    // background-position: center center;
-    // border: 1px solid;
-  }
-}
-
-.o-feed-3column {
-  .c-feed-item,
-  .o-feed__items:after {
-    @media screen and (min-width: $oFeed_breakpoint) {
-      flex: 0 0 31%;
-      max-width: 31%;
-      flex: 0 0 calc(33.33% - 12px);
-      max-width: calc(33.33% - 12px);
-    }
-  }
-}
-
-.o-feed-2column {
-  .c-feed-item,
-  .o-feed__items:after {
-    @media screen and (min-width: $oFeed_breakpoint) {
-      flex: 0 0 49%;
-      max-width: 49%;
-      flex: 0 0 calc(50% - 12px);
-      max-width: calc(50% - 12px);
-    }
-  }
-
-  .o-feed__items:after {
-    display: none;
   }
 }
 
@@ -134,9 +122,9 @@ $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'tablet')}px;
  */
 
 .fs-inherit {
-  font-size: inherit !important
+  font-size: inherit !important;
 }
 
 .ws-unset {
-  white-space: unset !important
+  white-space: unset !important;
 }
