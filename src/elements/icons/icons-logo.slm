@@ -1,4 +1,4 @@
-div class='grid grid-cols-2 desktop:grid-cols-4 gap-3'
+div class='grid grid-cols-2 desktop:grid-cols-3 gap-3'
   - for key in this.tokens.icons
     - if key.includes('icon-logo-')
 
@@ -9,8 +9,12 @@ div class='grid grid-cols-2 desktop:grid-cols-4 gap-3'
 
       div class=''
         div class='color-light-background border border-grey-50t border-b-0 rounded-t text-center p-2' style='min-height:150px'
-          svg class='${key} icon-large text-color-blue-dark'
-            use xlink:href='#${key.split("--")[0]}'
+          == this.include('/elements/icons/svg.slm');
 
         div class='code-block border-grey-50t rounded-t-none border-t-0'
-          pre class='small' #${key}
+          pre class='small'
+            = this.include('/elements/icons/svg.slm');
+
+        / input value='${this.include('/elements/icons/svg.slm')}' class='sr-only' data-copy-target='copy-${key}-icon'
+        / button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='btn w-full border-t-0' data-copy='copy-${key}-icon' data-js='copy'
+        /   | Copy-to-clipboard

@@ -47,7 +47,7 @@
 
           button class='btn btn-large px-0 justify-center items-center w-full mb-1' data-js='copy' data-copy='installation'
             svg class='icon-ui-copy icon-3' aria-hidden='true'
-              use xlink:href='#icon-ui-copy'
+              use xlink:href='#feather-copy'
             | &nbsp;
             | Copy-to-clipboard
 

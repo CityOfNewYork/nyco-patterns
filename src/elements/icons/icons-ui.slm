@@ -1,16 +1,2 @@
-div class='grid grid-cols-2 desktop:grid-cols-4 gap-3'
-  - for key in this.tokens.icons
-    - if key.includes('icon-ui-')
-
-      - href = key
-      - for i in this.tokens.iconVariants
-        - if href.indexOf(this.tokens.iconVariants[i]) > 0
-          - href = href.replace(this.tokens.iconVariants[i], '')
-
-      div class=''
-        div class='color-light-background border border-grey-50t border-b-0 rounded-t text-center p-2'
-          svg class='${key} icon-3 text-color-blue-dark block m-auto'
-            use xlink:href='#${key.split("--")[0]}'
-
-        div class='code-block border-grey-50t rounded-t-none border-t-0'
-          pre class='small' #${key}
+svg class='icon-ui text-blue'
+  use xlink:href='#feather-feather'

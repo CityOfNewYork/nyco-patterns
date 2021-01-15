@@ -35,6 +35,7 @@ body style='visibility: hidden;' onload='load()'
 
     nyco.copy();
     nyco.icons();
+    nyco.icons('svg/feather.svg');
     nyco.toggle();
 
   = content('script');

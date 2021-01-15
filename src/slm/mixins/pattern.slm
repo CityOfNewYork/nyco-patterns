@@ -12,7 +12,7 @@
       div class='o-content mx-auto flex items-center mb-3'
         a href='#heading-${this.slug}' class='flex no-underline'
           svg class='icon-ui-anchor' aria-hidden='true'
-            use xlink:href='#icon-ui-anchor'
+            use xlink:href='#feather-anchor'
 
           | &nbsp;
 

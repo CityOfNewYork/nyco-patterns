@@ -13,7 +13,7 @@ div class='w-full grid mobile:grid-cols-2 desktop:grid-cols-3 gap-2'
       button class='bg-${key} py-6 border border-b-0 border-grey-30t rounded-t w-full' title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' data-copy='copy-${key}-value' data-js='copy'
         span class='inline-block bg-white p-1 rounded'
           svg class='icon-ui-copy block text-blue' aria-hidden='true'
-            use xlink:href='#icon-ui-copy'
+            use xlink:href='#feather-copy'
 
       div class=''
         div class='p-1 pb-0 capitalize border-l border-r border-grey-30t'

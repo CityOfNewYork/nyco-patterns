@@ -9,6 +9,8 @@
 @import 'scss/functions/str-replace';
 
 $screens: map-get($tokens, 'screens');
+$icons: map-get($tokens, 'icons');
+$icons-ui-size: map-get($icons, 'icon-ui');
 
 // Declarations
 @mixin iconSizes($variant: '') {
@@ -33,6 +35,9 @@ $screens: map-get($tokens, 'screens');
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
+
+  width: nth($icons-ui-size, 1);
+  height: nth($icons-ui-size, 2);
 
   circle {
     fill: currentColor;

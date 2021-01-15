@@ -1,6 +1,7 @@
 {
   "name": "@nycopportunity/patterns",
   "nice": "NYCO Patterns",
+  "org": "NYC Opportunity",
   "version": "2.5.1",
   "description": "Common agency patterns for The Mayor's Office for Economic Opportunity",
   "author": "NYC Opportunity<products@nycopportunity.nyc.gov>",
@@ -21,7 +22,8 @@
     "scripts": "/dist/scripts/nyco.js",
     "svg": "/dist/svg/svgs.svg",
     "tailwindcss": "/dist/utilities/tailwindcss/tailwindcss.css",
-    "tailwindsass": "/dist/utilities/tailwindcss/_tailwindcss.scss"
+    "tailwindsass": "/dist/utilities/tailwindcss/_tailwindcss.scss",
+    "feather": "/dist/svg/feather.svg"
   },
   "instantiations": {
     "scripts": "NYCO"
@@ -39,6 +41,7 @@
   "devDependencies": {
     "@nycopportunity/pttrn": "^1.0.2",
     "@nycopportunity/pttrn-docs": "^1.0.2",
+    "@nycopportunity/pttrn-plugin-feather": "^1.0.0",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@rollup/plugin-replace": "^2.3.1",
@@ -54,6 +57,7 @@
     "@nycopportunity/pttrn-scripts": "^1.0.1",
     "animate.scss": "0.0.6",
     "chart.js": "^2.9.3",
+    "feather-icons": "^4.28.0",
     "geojson": "^0.5.0",
     "geojson-rewind": "^0.3.1",
     "lodash-es": "^4.17.14",

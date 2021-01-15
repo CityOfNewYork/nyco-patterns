@@ -23,6 +23,6 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern
 
-  = mixin('pattern', 'elements/icons/icons-logo', false);
-  = mixin('pattern', 'elements/icons/icons-ui', false, 'UI Icons');
+  = mixin('pattern', 'elements/icons/icons-logo', 0);
+  = mixin('pattern', 'elements/icons/icons-ui', 1, 'UI Icons (Feather)');
   = mixin('readme', 'elements/icons/icons');
