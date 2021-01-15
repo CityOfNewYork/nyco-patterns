@@ -1,5 +1,6 @@
 {
   "name": "@nycopportunity/patterns",
+  "nice": "NYCO Patterns",
   "version": "2.5.1",
   "description": "Common agency patterns for The Mayor's Office for Economic Opportunity",
   "author": "NYC Opportunity<products@nycopportunity.nyc.gov>",
@@ -11,6 +12,19 @@
   },
   "bugs": {
     "url": "https://github.com/CityOfNewYork/nyco-patterns/issues"
+  },
+  "cdn": {
+    "url": "https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns",
+    "source": "https://github.com/cityofnewyork/nyco-patterns",
+    "archive": "https://github.com/cityofnewyork/nyco-patterns/archive",
+    "styles": "/dist/scripts/nyco.css",
+    "scripts": "/dist/scripts/nyco.js",
+    "svg": "/dist/svg/svgs.svg",
+    "tailwindcss": "/dist/utilities/tailwindcss/tailwindcss.css",
+    "tailwindsass": "/dist/utilities/tailwindcss/_tailwindcss.scss"
+  },
+  "instantiations": {
+    "scripts": "NYCO"
   },
   "main": "npm run start",
   "scripts": {
@@ -24,7 +38,7 @@
   },
   "devDependencies": {
     "@nycopportunity/pttrn": "^1.0.2",
-    "@nycopportunity/pttrn-docs": "^1.0.0",
+    "@nycopportunity/pttrn-docs": "^1.0.2",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@rollup/plugin-replace": "^2.3.1",
