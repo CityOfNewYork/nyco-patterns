@@ -17,7 +17,7 @@ import ChartPie from '../objects/charts/chart-pie';
 /**
  * Methods for the main entry point
  */
-class Main {
+class Default {
   /**
    * Method for the Copy utility
    *
@@ -98,4 +98,4 @@ class Main {
   /** add APIs here as they are written */
 }
 
-export default Main;
+export default Default;

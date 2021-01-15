@@ -42,7 +42,7 @@ const rollup = {
  */
 module.exports = [
   {
-    input: './src/js/main.js',
+    input: './src/js/default.js',
     output: [{
       name: 'NYCO',
       file: './dist/scripts/nyco.js',
