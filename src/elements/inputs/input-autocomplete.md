@@ -19,7 +19,7 @@ To use the Autocomplete Input in the global NYCO Patterns script use the followi
     <script src="dist/scripts/NycoPatterns.js"></script>
 
     <script>
-      const nyco = new NycoPatterns();
+      const nyco = new NYCO();
       nyco.inputAutocomplete({
         options: [
           ['Bronx'], ['Queens']
