@@ -32,4 +32,4 @@ div class='w-full grid desktop:grid-cols-3 gap-2'
 
       div class='code-block rounded-t-none border-grey-50t border-t-0'
         input value='color-${key}' class='sr-only' data-copy-target='copy-${key}-color'
-        button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-left p-3 font-code text-red' data-copy='copy-${key}-color' data-js='copy' = `.color-${key}`
+        button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-left p-3 font-code text-code' data-copy='copy-${key}-color' data-js='copy' = `.color-${key}`
