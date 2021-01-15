@@ -1,6 +1,6 @@
 @import 'config/tokens';
 @import 'config/code';
-@import 'elements/tables/tables';
+@import 'config/tables';
 
 .o-content {
   display: block;
@@ -19,7 +19,7 @@
   }
 
   table {
-    @include tables;
+    @include tables-base;
   }
 
   img {
