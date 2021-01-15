@@ -10,7 +10,7 @@ $grid: map-get($tokens, 'grid');
 
 // Declarations
 .o-footer {
-  padding: ($grid * 6) ($grid * 3);
+  padding: ($grid * 14) ($grid * 3);
   border-top: $grid solid !important;
 }
 
