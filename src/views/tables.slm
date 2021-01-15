@@ -23,5 +23,5 @@
     h1 class='${classPageH1}' = pattern;
 
   = mixin('pattern', 'elements/tables/tables');
-  = mixin('pattern', 'elements/tables/tables-singular');
-  = mixin('pattern', 'elements/tables/tables-singular-caption');
+  = mixin('pattern', 'elements/tables/tables-bordered');
+  = mixin('pattern', 'elements/tables/tables-caption-bottom');

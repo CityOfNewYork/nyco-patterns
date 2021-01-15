@@ -1,4 +1,4 @@
-table class='table'
+table class='table table-bordered'
   caption Household size and incomes
 
   thead

@@ -1,28 +1,33 @@
 @import 'config/tokens';
 @import 'config/fonts';
+@import 'config/colors';
 @import 'config/code';
 
-$colors: $colors;
 $grid: map-get($tokens, 'grid');
 
-@mixin tables {
-  max-width: 100%;
-  min-width: 100%;
+@mixin tables-cell {
+  padding: ($grid * 2) ($grid * 3);
+}
+
+@mixin tables-base {
+  width: 100%;
+
+  border-collapse: collapse;
 
   thead {
-    color: map-get($colors, 'base-white');
-    @include font-smooth();
-    border-bottom: 1px solid map-get($colors, blue);
-
     tr {
-      background-color: map-get($colors, blue);
+      background-color: map-get($colors, 'white-50t');
     }
   }
 
   tbody {
     tr {
       &:nth-child(odd) {
-        background-color: map-get($colors, white);
+        background-color: map-get($colors, 'base-white');
+      }
+
+      &:nth-child(even) {
+        background-color: map-get($colors, 'white-50t');
       }
     }
   }
@@ -32,67 +37,22 @@ $grid: map-get($tokens, 'grid');
   }
 
   th, td, caption {
-    padding: $grid ($grid * 2);
+    @include tables-cell;
+  }
+
+  caption {
+    font-size: map-get($font-sizes, 'small');
+    font-style: italic;
+    background-color: map-get($colors, white);
+    padding: ($grid * 1) ($grid * 3);
   }
 
   // code style override
   code, pre {
-    // font-size: map-get(map-get($tokens, 'fontSize'), 'h5');
-    // font-weight: map-get(map-get($tokens, 'fontWeight'), 'bold');
-    // color: map-get($colors, blue);
-    @include code-inline;
+    @include code-inline
   }
 
   pre {
-    @include code-block;
+    @include code-block
   }
-}
-
-@mixin tables--singular {
-  width: 100%;
-  border-spacing: inherit;
-
-  tbody {
-    tr {
-      &:nth-child(odd) {
-        background-color: map-get($colors, 'base-white');
-      }
-    }
-  }
-}
-
-@mixin tables--singular-caption {
-  caption-side: bottom;
-
-  caption {
-    background-color: map-get($colors, white);
-    color: map-get($colors, navy);
-    font-size: .8em;
-  }
-}
-
-@mixin table-selectors($variant: '') {
-  .#{$variant}table, [class*='#{$variant}table--'] {
-    table {
-      @include tables;
-    }
-  }
-
-  .#{$variant}table--singular,
-  .#{$variant}table--singular-caption {
-    table {
-      @include tables--singular;
-    }
-  }
-
-  .#{$variant}table--singular-caption {
-    table {
-      @include tables--singular-caption;
-    }
-  }
-}
-
-.table table,
-table {
-  @include tables
 }

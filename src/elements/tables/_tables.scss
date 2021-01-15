@@ -1,6 +1,28 @@
+@import 'config/colors';
 @import 'config/tables';
 @import 'config/screens';
 
 @include screens {
-  @include table-selectors($variant);
+  .#{$variant}table, [class*='#{$variant}table-'] {
+    @include tables-base;
+  }
+
+  .#{$variant}table-bordered {
+    thead tr:nth-child(n),
+    tbody tr:nth-child(n) {
+      background-color: transparent
+    }
+
+    tr {
+      border-bottom: 1px solid map-get($colors, 'grey-20t');
+    }
+  }
+
+  .#{$variant}caption-side-bottom {
+    caption-side: bottom;
+  }
+
+  .#{$variant}cell-padding {
+    @include tables-cell;
+  }
 }
