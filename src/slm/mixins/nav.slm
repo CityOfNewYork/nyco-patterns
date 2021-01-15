@@ -1,14 +1,16 @@
 = mixin('nav');
   nav class='${classNav}'
     a tabindex=navTabindex class='${classNavLink}' href='index' Home
-    a tabindex=navTabindex class='${classNavLink}' href='${this.urls.patterns}' target='_blank' About the Patterns ↗
-    a tabindex=navTabindex class='${classNavLink}' href='${this.urls.installation}' target='_blank' Installation ↗
+    a tabindex=navTabindex class='${classNavLink}' href='installation' Installation
+    a tabindex=navTabindex class='${classNavLink}' href='about' About the Patterns
+    a tabindex=navTabindex class='${classNavLink}' href='prototyping' Prototyping
 
   nav class='${classNav}'
     span class='${classNavLinkHeader}' Elements
     a tabindex=navTabindex class='${classNavLink}' href='buttons' Buttons
     a tabindex=navTabindex class='${classNavLink}' href='checkboxes' Checkboxes
     a tabindex=navTabindex class='${classNavLink}' href='code' Code
+    a tabindex=navTabindex class='${classNavLink}' href='description-lists' Description Lists
     a tabindex=navTabindex class='${classNavLink}' href='icons' Icons
     a tabindex=navTabindex class='${classNavLink}' href='inputs' Inputs
     a tabindex=navTabindex class='${classNavLink}' href='layouts' Layouts

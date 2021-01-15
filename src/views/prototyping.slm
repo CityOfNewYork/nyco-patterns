@@ -1,4 +1,4 @@
-- pattern = 'Installation';
+- pattern = 'Prototyping';
 
 / Layout
 = extend('/slm/templates/default');
@@ -22,4 +22,4 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
 
-  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/installation');
+  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/prototyping');

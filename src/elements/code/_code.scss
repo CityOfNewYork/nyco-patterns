@@ -10,7 +10,7 @@
 $colors: map-get($tokens, 'colors');
 
 // Declarations
-code, pre {
+code, pre, .hljs {
   @include code();
 }
 
@@ -39,8 +39,8 @@ pre {
   @include code();
 }
 
-.code__comment {
-  color: map-get($colors, 'navy-30t');
+.code__comment, .hljs-comment {
+  color: map-get($colors, 'grey-50t');
 }
 
 .code-block {
@@ -63,6 +63,6 @@ pre {
   }
 }
 
-.hljs-selector-class, .hljs-selector-id {
-  color: map-get($colors, red) !important;
+.text-code, .hljs-selector-class, .hljs-selector-id {
+  color: var(--nyco-code-primary);
 }

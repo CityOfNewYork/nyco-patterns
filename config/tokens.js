@@ -3,11 +3,161 @@
  */
 
 const package = require('../package.json');
-const colors = require('./colors');
 
 /**
  * Config
  */
+
+const code = {
+  'code-primary': 'navy-70t',
+  'code-secondary': 'navy',
+  'code-background': 'blue-10t',
+  'code-border': 'navy-70t'
+};
+
+const colors = {
+  'primary': [
+    'navy',
+    'blue'
+  ],
+  'secondary': [
+    'red',
+    'grey',
+    'white'
+  ],
+  'tertiary': [
+    'marigold',
+    'pink',
+    'green'
+  ],
+  'colors': {
+    'navy': '#031553',
+    'navy-70t': '#4157aa',
+    'navy-50t': '#8195dc',
+    'navy-30t': '#cdd8ef',
+    'blue': '#1642DF',
+    'blue-70t': '#568adf',
+    'blue-50t': '#96beff',
+    'blue-30t': '#d2e8ff',
+    'blue-20t': '#E7F2FE',
+    'blue-10t': '#F0F7FE',
+    'red': '#fc5d52',
+    'red-70t': '#ff8787',
+    'red-50t': '#ffafaf',
+    'red-30t': '#ffdbdb',
+    'grey': '#57595C',
+    'grey-70t': '#7c7f83',
+    'grey-50t': '#999ca4',
+    'grey-30t': '#c1c6cb',
+    'grey-20t': '#e6e8ec',
+    'white': '#F3F3F3',
+    'white-70t': '#F6F6F6',
+    'white-50t': '#F9F9FA',
+    'white-30t': '#FBFCFC',
+    'marigold': '#faa302',
+    'marigold-70t': '#fbb95a',
+    'marigold-50t': '#fbd8a1',
+    'marigold-30t': '#ffeecd',
+    'pink': '#f9a5da',
+    'pink-70t': '#ffc0f6',
+    'pink-50t': '#fbd9ff',
+    'pink-30t': '#fff0fe',
+    'green': '#04A487',
+    'green-70t': '#11D4B1',
+    'green-50t': '#AEF4E7',
+    'green-30t': '#E6FEFA',
+    'base-black': '#000000',
+    'base-white': '#FFFFFF',
+    'transparent': 'rgba(255, 255, 255, 0)'
+  },
+  'colorCombinations': {
+    'light-background': {
+      'color': 'base-black',
+      'headings': 'base-black',
+      'hyperlinks': 'blue',
+      'visited': 'blue',
+      'hover': 'navy',
+      'background-color': 'base-white',
+      'border': 'grey',
+      'input-background': 'base-white',
+      'placeholder': 'grey-50t',
+      'focus': 'blue',
+      'checkbox-check': '"icon-ui-check-white.svg"',
+      'select-arrow': '"icon-ui-chevron-down-navy.svg"',
+      'error': 'red',
+      'box-shadow': 'navy',
+      'button-text': 'base-white',
+      'primary': 'blue',
+      'secondary': 'red',
+      ...code
+    },
+    'mid-background': {
+      'color': 'base-black',
+      'headings': 'base-black',
+      'hyperlinks': 'blue',
+      'visited': 'blue',
+      'hover': 'navy',
+      'background-color': 'white',
+      'border': 'grey',
+      'input-background': 'base-white',
+      'placeholder': 'grey-50t',
+      'focus': 'blue',
+      'checkbox-check': '"icon-ui-check-white.svg"',
+      'radio-check': '"icon-ui-check-white.svg"',
+      'select-arrow': '"icon-ui-chevron-down-navy.svg"',
+      'error': 'red',
+      'box-shadow': 'navy',
+      'button-text': 'base-white',
+      'primary': 'blue',
+      'secondary': 'red',
+      ...code
+    },
+    'dark-background': {
+      'color': 'base-white',
+      'font-smooth': true,
+      'headings': 'base-white',
+      'hyperlinks': 'base-white',
+      'visited': 'base-white',
+      'hover': 'base-white',
+      'background-color': 'navy',
+      'border': 'navy-50t',
+      'input-background': 'navy',
+      'placeholder': 'base-white',
+      'focus': 'blue-50t',
+      'checkbox-check': '"icon-ui-check-navy.svg"',
+      'select-arrow': '"icon-ui-chevron-down-white.svg"',
+      'error': 'red',
+      'box-shadow': 'base-white',
+      'button-text': 'base-white',
+      'primary': 'blue',
+      'secondary': 'red',
+      ...code
+    }
+  },
+};
+
+/**
+ * Map Color Utils
+ */
+
+colors.mapColorCombinations = [
+  [
+    colors.colors['navy'],
+    colors.colors['navy-70t']
+  ],
+  [
+    colors.colors['base-black'],
+    colors.colors['marigold']
+  ],
+  [
+    colors.colors['navy'],
+    colors.colors['grey']
+  ],
+  [
+    colors.colors['blue'],
+    colors.colors['marigold']
+  ],
+];
 
 module.exports = {
   output: `"${process.env.PWD}/src/config/_tokens.scss"`,
@@ -19,22 +169,23 @@ module.exports = {
     'animate-timing-function': 'cubic-bezier(0.23, 1, 0.32, 1)'
   },
   borderRadius: {
-    'none': '0',
-    'DEFAULT': '1px'
+    '0': '0',
+    '1': '2px',
+    'DEFAULT': '2px',
+    '2': '2px'
   },
   borderWidth: {
     '0': '0',
-    'DEFAULT': '1px',
+    '1': '1px',
+    'DEFAULT': '2px',
     '2': '2px',
     '4': '4px',
     '8': '8px'
   },
   boxShadow: {
     'none': 'none',
-    'up-transparent': '8px 8px 0px 0px rgba(47, 51, 79, 0)',
-    'up': '8px 8px 0px 0px',
-    'up-2-transparent': '16px 16px 0px 0px rgba(47, 51, 79, 0)',
-    'up-2': '16px 16px 0px 0px'
+    'up': '8px 8px 0px 0px var(--nyco-box-shadow-color)',
+    'up-2': '16px 16px 0px 0px var(--nyco-box-shadow-color)'
   },
   colors: colors.colors,
   colorCombinations: colors.colorCombinations,
@@ -424,8 +575,12 @@ module.exports = {
   inputs: {
     'checkbox-size': '24px',
     'radio-size': '24px',
-    'border-radius': '1px',
-    'button-radius': '1px'
+    'border-radius': '2px',
+    'border-width': '2px',
+    'label-border-width': '1px',
+
+    'button-border-width': '2px',
+    'button-border-radius': '2px'
   },
   lineHeight: {
     'jumbo': '1.2',
@@ -440,18 +595,6 @@ module.exports = {
     'small': 'normal',
     'blockquote': 'normal'
   },
-  // margin: {
-  //   '-2': '-16px',
-  //   '-1': '-8px',
-  //   '0': '0',
-  //   '1': '8px',
-  //   '2': '16px',
-  //   '3': '24px',
-  //   '4': '32px',
-  //   '5': '40px',
-  //   '6': '48px',
-  //   'auto': 'auto'
-  // },
   maxWidth: {
     '1/4': '25%',
     '1/3': '33.33%',
@@ -460,15 +603,6 @@ module.exports = {
     '600': '600px',
     '900': '896px'
   },
-  // padding: {
-  //   '0': '0',
-  //   '1': '8px',
-  //   '2': '16px',
-  //   '3': '24px',
-  //   '4': '32px',
-  //   '5': '40px',
-  //   '6': '48px'
-  // },
   screens: {
     'desktop': 960,
     'tablet': 768,

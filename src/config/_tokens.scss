@@ -8,22 +8,23 @@ $tokens:(
     animate-timing-function: cubic-bezier(0.23, 1, 0.32, 1)
   ),
   borderRadius: (
-    none: 0,
-    DEFAULT: 1px
+    0: 0,
+    1: 2px,
+    2: 2px,
+    DEFAULT: 2px
   ),
   borderWidth: (
     0: 0,
+    1: 1px,
     2: 2px,
     4: 4px,
     8: 8px,
-    DEFAULT: 1px
+    DEFAULT: 2px
   ),
   boxShadow: (
     none: none,
-    up-transparent: 8px 8px 0px 0px rgba(47, 51, 79, 0),
-    up: 8px 8px 0px 0px,
-    up-2-transparent: 16px 16px 0px 0px rgba(47, 51, 79, 0),
-    up-2: 16px 16px 0px 0px
+    up: 8px 8px 0px 0px var(--nyco-box-shadow-color),
+    up-2: 16px 16px 0px 0px var(--nyco-box-shadow-color)
   ),
   colors: (
     navy: #031553,
@@ -76,10 +77,18 @@ $tokens:(
       border: grey,
       input-background: base-white,
       placeholder: grey-50t,
-      focus: navy,
+      focus: blue,
       checkbox-check: "icon-ui-check-white.svg",
       select-arrow: "icon-ui-chevron-down-navy.svg",
-      error: red
+      error: red,
+      box-shadow: navy,
+      button-text: base-white,
+      primary: blue,
+      secondary: red,
+      code-primary: navy-70t,
+      code-secondary: navy,
+      code-background: blue-10t,
+      code-border: navy-70t
     ),
     mid-background: (
       color: base-black,
@@ -91,11 +100,19 @@ $tokens:(
       border: grey,
       input-background: base-white,
       placeholder: grey-50t,
-      focus: navy,
+      focus: blue,
       checkbox-check: "icon-ui-check-white.svg",
       radio-check: "icon-ui-check-white.svg",
       select-arrow: "icon-ui-chevron-down-navy.svg",
-      error: red
+      error: red,
+      box-shadow: navy,
+      button-text: base-white,
+      primary: blue,
+      secondary: red,
+      code-primary: navy-70t,
+      code-secondary: navy,
+      code-background: blue-10t,
+      code-border: navy-70t
     ),
     dark-background: (
       color: base-white,
@@ -105,25 +122,21 @@ $tokens:(
       visited: base-white,
       hover: base-white,
       background-color: navy,
-      border: base-white,
+      border: navy-50t,
       input-background: navy,
       placeholder: base-white,
-      focus: base-white,
+      focus: blue-50t,
       checkbox-check: "icon-ui-check-navy.svg",
       select-arrow: "icon-ui-chevron-down-white.svg",
-      error: red
-    ),
-    primary-button: (
-      font-weight: bold,
-      color: base-white,
-      font-smooth: true,
-      background-color: blue
-    ),
-    secondary-button: (
-      font-weight: bold,
-      color: base-white,
-      font-smooth: true,
-      background-color: red
+      error: red,
+      box-shadow: base-white,
+      button-text: base-white,
+      primary: blue,
+      secondary: red,
+      code-primary: navy-70t,
+      code-secondary: navy,
+      code-background: blue-10t,
+      code-border: navy-70t
     )
   ),
   cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v2.5.1/dist",
@@ -491,8 +504,11 @@ $tokens:(
   inputs: (
     checkbox-size: 24px,
     radio-size: 24px,
-    border-radius: 1px,
-    button-radius: 1px
+    border-radius: 2px,
+    border-width: 2px,
+    label-border-width: 1px,
+    button-border-width: 2px,
+    button-border-radius: 2px
   ),
   lineHeight: (
     jumbo: 1.2,

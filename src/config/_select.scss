@@ -14,6 +14,7 @@ $padding: map-get($tokens, 'padding');
   background-position: $direction-end .5rem center;
   background-repeat: no-repeat;
   background-size: 24px 24px;
+
   border-radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
   padding: .75 * (map-get($tokens, 'grid') * 2);
   padding-#{$direction-end}: 2.3rem;

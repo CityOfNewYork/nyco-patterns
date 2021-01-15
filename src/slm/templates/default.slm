@@ -10,7 +10,7 @@ body class='bg-base-black' style='visibility: hidden;' onload='load()'
   main#main-content class='tablet:layout-sidebar tablet:flex items-stretch m-0 p-0 tablet:min-h-screen'
     = partial('/objects/navigation/navigation.slm');
 
-    article class='color-light-background py-2'
+    article class='color-light-background py-6'
       = content('content');
 
   = partial('/objects/footer/footer.slm');

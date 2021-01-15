@@ -5,15 +5,18 @@
 @import 'config/fonts';
 
 $padding: map-get($tokens, 'padding');
+$labelBorderWidth: map-get(map-get($tokens, 'inputs'), 'label-border-width');
+$borderRadius: map-get(map-get($tokens, 'inputs'), 'border-radius');
 
 // Declarations
 @mixin inputs() {
   appearance: none;
   color: inherit;
   font-size: inherit;
-  border-width: 1px;
+  font-family: inherit;
+  border-width: $labelBorderWidth;
   border-style: solid;
-  border-radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
+  border-radius: $borderRadius;
   display: block;
   max-width: 100%;
   min-width: 200px;

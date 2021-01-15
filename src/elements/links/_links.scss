@@ -6,14 +6,15 @@
 @import 'config/tokens';
 
 // Declarations
-a, .link {
+a:not(.btn), .link {
+  color: var(--nyco-hyperlinks);
   font-weight: bold;
-  // position: relative;
 
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 4px;
-  // }
+  &:visited {
+    color: var(--nyco-visited);
+  }
+
+  &:hover, &:active, &:focus, &.active {
+    color: var(--nyco-hover);
+  }
 }

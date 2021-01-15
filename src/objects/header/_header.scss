@@ -71,8 +71,8 @@ $iconSizes: map-get($tokens, 'iconSizes');
   width: nth(map-get($iconSizes, 'large'), 1) !important;
   height: 80px !important;
 
-  margin-top: ($grid * 4);
-  margin-bottom: ($grid * 4);
+  margin-top: ($grid * 4) !important;
+  margin-bottom: ($grid * 4) !important;
 
   @media (min-width: #{map-get($screens, 'tablet')}px) {
     display: inline;

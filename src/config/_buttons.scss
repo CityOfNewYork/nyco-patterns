@@ -40,42 +40,47 @@ $colorCombinations: map-get($tokens, 'colorCombinations');
   }
 }
 
-@mixin button-hover($name: 'primary-button') {
-  $combination: map-get($colorCombinations, $name);
-  $color: map-get($combination, 'color');
-  $background: map-get($combination, 'background-color');
+@mixin button-base() {
+  color: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: initial;
 
-  $text: map-get($colors, $color);
-  $bg-color: map-get($colors, $background);
+  display: inline-flex;
+  appearance: none;
+  cursor: pointer;
+  background: transparent;
+  padding: ($grid * 1.5) ($grid * 2);
 
-  $level0: saturate(darken($bg-color, 5%), 5%);
-  $level1: darken($bg-color, 25%);
+  border-style: solid;
+  border-color: currentColor;
+  border-width: $borderWidth;
+  border-radius: $borderRadius;
+
+  transition: background .1s ease-in,
+              color .1s ease-in,
+              box-shadow .1s ease-in;
 
   &:hover,
   &:active {
-    color: $text;
-    background: $level0;
-    box-shadow: map-get(map-get($tokens, 'boxShadow'), 'up') $level1, 0 0 0 3px rgba(255, 255, 255, 0);
+    box-shadow: map-get(map-get($tokens, 'boxShadow'), 'up'),
+                0 0 0 3px rgba(255, 255, 255, 0);
   }
 }
 
-@mixin button-app-hover($name: 'primary-button') {
-  $combination: map-get($colorCombinations, $name);
-  $color: map-get($combination, 'color');
-  $background: map-get($combination, 'background-color');
-
-  $text: map-get($colors, $color);
-  $bg-color: map-get($colors, $background);
-
-  $level0: $bg-color;
-  $level1: darken($bg-color, 5%);
-
-  background: linear-gradient(0deg, $level1 0%, $level0 100%);
+@mixin button-color($name: 'default') {
+  color: var(--nyco-button-text);
+  background-color: var(--nyco-#{$name});
+  border-color: transparent;
 
   &:hover,
   &:active {
-    color: $text;
-    background: linear-gradient(0deg, $level1 0%, $level0 100%);
-    box-shadow: none;
+    color: var(--nyco-button-text);
+    background: var(--nyco-#{$name});
   }
 }
