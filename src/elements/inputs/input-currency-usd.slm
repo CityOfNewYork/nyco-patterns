@@ -2,5 +2,5 @@
 / Input Currency
 /
 
-div class='input-currency-usd'
+div class='input input-currency-usd'
   input type='number'
