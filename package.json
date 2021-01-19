@@ -30,17 +30,18 @@
   },
   "main": "npm run start",
   "scripts": {
-    "start": "cross-env NODE_ENV=development cross-env PORT=7000 concurrently \"pttrn default -w -np\" \"pttrn serve -w\" -p \"none\"",
+    "start": "npm run development && cross-env NODE_ENV=development cross-env PORT=7000 concurrently \"pttrn default -w -np\" \"pttrn serve -w\" -p \"none\"",
     "production": "cross-env NODE_ENV=production cross-env PORT=7000 concurrently \"pttrn default -w -np\" \"pttrn serve -w\" -p \"none\"",
-    "default": "cross-env NODE_ENV=production pttrn default",
+    "development": "cross-env NODE_ENV=development pttrn -np -nl",
+    "default": "cross-env NODE_ENV=production pttrn",
     "version": "npm run default && git add .",
     "prepublishOnly": "git push && git push --tags",
     "publish": "npm run gh-pages",
     "gh-pages": "cross-env NODE_ENV=production pttrn publish"
   },
   "devDependencies": {
-    "@nycopportunity/pttrn": "^1.0.2",
-    "@nycopportunity/pttrn-docs": "^1.0.2",
+    "@nycopportunity/pttrn": "^1.0.3",
+    "@nycopportunity/pttrn-docs": "^1.0.3",
     "@nycopportunity/pttrn-plugin-feather": "^1.0.0",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
