@@ -2636,6 +2636,25 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   background-color: #999ca4;
 }
 
+.input-search {
+  position: relative;
+}
+
+.input-search input {
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+}
+
+.input-search__submit {
+  right: 24px;
+  line-height: 24px;
+  margin: -13px 0 0 !important;
+  padding: 0 !important;
+  position: absolute;
+  top: 50%;
+}
+
 /**
  * Checkboxes
  */

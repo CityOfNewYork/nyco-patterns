@@ -24,6 +24,7 @@
   = mixin('pattern', 'elements/inputs/input');
   = mixin('pattern', 'elements/inputs/input-error');
   = mixin('pattern', 'elements/inputs/input-number');
+  = mixin('pattern', 'elements/inputs/input-search', 'Search Input');
   = mixin('pattern', 'elements/inputs/input-currency-usd', 1, 'Currency Input');
   = mixin('pattern', 'elements/inputs/input-currency-usd-error', 1, 'Currency Error Input');
   = mixin('pattern', 'elements/inputs/input-autocomplete');
