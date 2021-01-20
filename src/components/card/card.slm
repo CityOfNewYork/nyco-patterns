@@ -1,13 +1,15 @@
 / Card
 
 / container
-article class='c-card border-2 p-4 w-full hover:shadow-up'
-  header class='c-card__header flex justify-between mb-3'
-    h2 class='c-card__title h4'
+article class='c-card p-4 hover:shadow-up'
+  header class='c-card__header flex justify-between items-center mb-3'
+    h2 class='c-card__title h4 m-0'
       == "Agreement Name"
-    p class='c-card__subtitle pt-4'
-      mark class="badge"
+    p class='c-card__subtitle'
+      mark class="badge flex items-center"
         == "Agreement"
+        svg class='icon-2 text-green ml-2' aria-hidden='true'
+          use xlink:href='#icon-ui-pen-tool'
   div class='c-card__body mb-5'
     p class='c-card__status flex items-center'
       == "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

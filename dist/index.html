@@ -5,12 +5,12 @@
   <meta charset="utf-8" />
   <meta content="IE=edge" http-equiv="X-UA-Compatible" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
+  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
+  <link href="styles/nyco.css" rel="stylesheet" />
   <title>NYCO Patterns</title>
   <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
-  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
     var VERSION = '2.5.1';
@@ -53,19 +53,17 @@
             <svg aria-hidden="true" class="icon-logo-primary" style="width: 287px; height: 133px;">
               <use xlink:href="#icon-logo-primary"></use>
             </svg>
-            <h1 class="jumbo m-0 pl-2 ml-2 font-nycgov" style="font-weight: 600; line-height: 1em; border-left: 8px solid;">
+            <h1 class="jumbo m-0 pl-3 ml-3 font-nycgov" style="font-weight: 600; line-height: 1em; border-left: 4px solid;">
               <div style="line-height: 0.8em;">Common</div>
               <div>Agency</div>
-              <div class="text-red">Patterns</div>
+              <div class="text-blue">Patterns</div>
             </h1>
           </div>
-          <div>
-            <p>
-              <b>For creating websites and digital products for The Mayor's Office for Economic Opportunity</b>. The <b>NYCO Patterns</b> provide simple and flexible CSS and JavaScript based components and utilities for building UI's quickly and easily. Ideally suited for internal or external marketing websites, custom digital applications, stand-alone reports, documentation, and dashboards.
-            </p>
-          </div>
-          <p class="text-center">
-            <a class="btn btn-large color-secondary-button" href="#browse-the-patterns">Browse the Patterns</a>
+          <p>
+            <b>For creating websites and digital products for The Mayor's Office for Economic Opportunity</b>. The <b>NYCO Patterns</b> provide simple and flexible CSS and JavaScript based components and utilities for building UI's quickly and easily. Ideally suited for internal or external marketing websites, custom digital applications, stand-alone reports, documentation, and dashboards.
+          </p>
+          <p class="text-center py-2">
+            <a class="btn btn-large btn-primary" href="#browse-the-patterns">Browse the Patterns</a>
           </p>
           <p class="text-center">
             <a href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.5.1" target="_blank">v2.5.1</a>
@@ -77,9 +75,20 @@
       <div class="layout-wrap layout-content mx-auto py-6">
         <div class="mx-auto">
           <h2 class="text-center mt-0">Installation</h2>
-          <p>The NYCO Patterns are built on the <a href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a> and can be installed using documentation in the Framework's repository.</p>
+          <p>Installing via NPM will store NYCO Patterns source and distribution files in your project's <b>node_modules</b> directory under <b>@nycopportunity/patterns</b>.</p>
+          <div class="tablet:grid tablet:grid-cols-3 gap-1 mb-2">
+            <div class="code-block col-span-2 m-0 mb-1">
+              <input class="font-code text-code p-3 bg-transparent border-none w-full" data-copy-target="installation" value="npm install @nycopportunity/patterns" />
+            </div>
+            <button class="btn btn-large px-0 justify-center items-center w-full mb-1" data-copy="installation" data-js="copy">
+              <svg aria-hidden="true" class="icon-ui-copy icon-3">
+                <use xlink:href="#icon-ui-copy"></use>
+              </svg>&nbsp;Copy-to-clipboard
+            </button>
+          </div>
+          <p>Source; ES (JavaScript), Sass (stylesheet), and SVG source will be in the <b>src/</b> directory. Distribution; compiled JavaScript, CSS, and SVGs will be in the <b>dist/</b> directory. Further integration details can be found in the installation guide.</p>
           <p class="text-center">
-            <a class="btn btn-large color-primary-button" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md">Read the Documentation</a>
+            <a class="btn btn-large color-primary-button" href="installation">Read the installation guide</a>
           </p>
         </div>
       </div>
@@ -90,37 +99,39 @@
           <h2 class="text-center mt-0">Browse the Patterns</h2>
           <div class="text-h4 color-light-background p-6 shadow-up-2 border-2 border-navy mb-2">
             <nav>
-              <a class="o-navigation__link" href="index" tabindex="-1">Home</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" tabindex="-1" target="_blank">About the Patterns ↗</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" tabindex="-1" target="_blank">Installation ↗</a>
+              <a class="o-navigation__link" href="index">Home</a>
+              <a class="o-navigation__link" href="installation">Installation</a>
+              <a class="o-navigation__link" href="about">About the Patterns</a>
+              <a class="o-navigation__link" href="prototyping">Prototyping</a>
             </nav>
             <nav>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
-              <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
-              <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
-              <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
-              <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
-              <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
-              <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
-              <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
-              <a class="o-navigation__link" href="radios" tabindex="-1">Radios</a>
-              <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
-              <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
+              <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+              <a class="o-navigation__link" href="code">Code</a>
+              <a class="o-navigation__link" href="description-lists">Description Lists</a>
+              <a class="o-navigation__link" href="icons">Icons</a>
+              <a class="o-navigation__link" href="inputs">Inputs</a>
+              <a class="o-navigation__link" href="layouts">Layouts</a>
+              <a class="o-navigation__link" href="links">Links</a>
+              <a class="o-navigation__link" href="radios">Radios</a>
+              <a class="o-navigation__link" href="select">Select</a>
+              <a class="o-navigation__link" href="tables">Tables</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
-              <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
+              <a class="o-navigation__link" href="card">Card</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
-              <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
-              <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
-              <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
-              <a class="o-navigation__link" href="header" tabindex="-1">Header</a>
-              <a class="o-navigation__link" href="mailchimp" tabindex="-1">Mailchimp</a>
-              <a class="o-navigation__link" href="navigation" tabindex="-1">Navigation</a>
+              <a class="o-navigation__link" href="charts">Charts</a>
+              <a class="o-navigation__link" href="content">Content</a>
+              <a class="o-navigation__link" href="feed">Feed</a>
+              <a class="o-navigation__link" href="footer">Footer</a>
+              <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
+              <a class="o-navigation__link" href="navigation">Navigation</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
-              <a class="o-navigation__link" href="animate" tabindex="-1">Animate</a>
-              <a class="o-navigation__link" href="colors" tabindex="-1">Colors</a>
-              <a class="o-navigation__link" href="tailwindcss" tabindex="-1">Tailwindcss</a>
-              <a class="o-navigation__link" href="type" tabindex="-1">Type</a>
+              <a class="o-navigation__link" href="animate">Animate</a>
+              <a class="o-navigation__link" href="colors">Colors</a>
+              <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+              <a class="o-navigation__link" href="type">Type</a>
             </nav>
           </div>
         </div>

@@ -5,12 +5,12 @@
   <meta charset="utf-8" />
   <meta content="IE=edge" http-equiv="X-UA-Compatible" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
+  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
+  <link href="styles/nyco.css" rel="stylesheet" />
   <title>Tables | NYCO Patterns</title>
   <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
-  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
     var VERSION = '2.5.1';
@@ -44,7 +44,7 @@
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
   <header class="o-header tablet:layout-sidebar w-full">
-    <div class="o-header__banner-main color-primary-button">
+    <div class="o-header__banner-main bg-blue">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
         <span class="hidden"></span>
@@ -77,14 +77,16 @@
           <div class="o-navigation__nav">
             <nav>
               <a class="o-navigation__link" href="index">Home</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" target="_blank">About the Patterns ↗</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" target="_blank">Installation ↗</a>
+              <a class="o-navigation__link" href="installation">Installation</a>
+              <a class="o-navigation__link" href="about">About the Patterns</a>
+              <a class="o-navigation__link" href="prototyping">Prototyping</a>
             </nav>
             <nav>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
               <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
               <a class="o-navigation__link" href="code">Code</a>
+              <a class="o-navigation__link" href="description-lists">Description Lists</a>
               <a class="o-navigation__link" href="icons">Icons</a>
               <a class="o-navigation__link" href="inputs">Inputs</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
@@ -120,14 +122,16 @@
             <div class="o-navigation__nav">
               <nav>
                 <a class="o-navigation__link" href="index" tabindex="-1">Home</a>
-                <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" tabindex="-1" target="_blank">About the Patterns ↗</a>
-                <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" tabindex="-1" target="_blank">Installation ↗</a>
+                <a class="o-navigation__link" href="installation" tabindex="-1">Installation</a>
+                <a class="o-navigation__link" href="about" tabindex="-1">About the Patterns</a>
+                <a class="o-navigation__link" href="prototyping" tabindex="-1">Prototyping</a>
               </nav>
               <nav>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
                 <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
                 <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
                 <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
+                <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
                 <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
                 <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
                 <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
@@ -156,7 +160,7 @@
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2">
+    <article class="color-light-background py-6">
       <div class="px-4 desktop:px-6">
         <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Tables</h1>
       </div>
@@ -172,207 +176,311 @@
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="table">
-              <table>
-                <thead>
-                  <tr>
-                    <td>
-                      <strong>Family Size</strong>
-                    </td>
-                    <td>
-                      <strong>Yearly Income</strong>
-                    </td>
-                    <td>
-                      <strong>Weekly Income</strong>
-                    </td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td class="text-right">$27,816</td>
-                    <td class="text-right">$535</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td class="text-right">$36,372</td>
-                    <td class="text-right">$699</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td class="text-right">$44,928</td>
-                    <td class="text-right">$864</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td class="text-right">$53,484</td>
-                    <td class="text-right">$1,029</td>
-                  </tr>
-                  <tr>
-                    <td>...</td>
-                    <td class="text-right">...</td>
-                    <td class="text-right">...</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <table class="table">
+              <caption>Household size and incomes</caption>
+              <thead>
+                <tr>
+                  <td>
+                    <strong>Family Size</strong>
+                  </td>
+                  <td>
+                    <strong>Yearly Income</strong>
+                  </td>
+                  <td>
+                    <strong>Weekly Income</strong>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td class="text-right">$27,816</td>
+                  <td class="text-right">$535</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="text-right">$36,372</td>
+                  <td class="text-right">$699</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="text-right">$44,928</td>
+                  <td class="text-right">$864</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="text-right">$53,484</td>
+                  <td class="text-right">$1,029</td>
+                </tr>
+                <tr>
+                  <td>...</td>
+                  <td class="text-right">...</td>
+                  <td class="text-right">...</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;div class=&quot;table&quot;&gt;
-  &lt;table&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;td&gt;
-          &lt;strong&gt;Family Size&lt;/strong&gt;
-        &lt;/td&gt;
-        &lt;td&gt;
-          &lt;strong&gt;Yearly Income&lt;/strong&gt;
-        &lt;/td&gt;
-        &lt;td&gt;
-          &lt;strong&gt;Weekly Income&lt;/strong&gt;
-        &lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td&gt;1&lt;/td&gt;
-        &lt;td class=&quot;text-right&quot;&gt;$27,816&lt;/td&gt;
-        &lt;td class=&quot;text-right&quot;&gt;$535&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;2&lt;/td&gt;
-        &lt;td class=&quot;text-right&quot;&gt;$36,372&lt;/td&gt;
-        &lt;td class=&quot;text-right&quot;&gt;$699&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;3&lt;/td&gt;
-        &lt;td class=&quot;text-right&quot;&gt;$44,928&lt;/td&gt;
-        &lt;td class=&quot;text-right&quot;&gt;$864&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;4&lt;/td&gt;
-        &lt;td class=&quot;text-right&quot;&gt;$53,484&lt;/td&gt;
-        &lt;td class=&quot;text-right&quot;&gt;$1,029&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;...&lt;/td&gt;
-        &lt;td class=&quot;text-right&quot;&gt;...&lt;/td&gt;
-        &lt;td class=&quot;text-right&quot;&gt;...&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</pre>
+              <pre>&lt;table class=&quot;table&quot;&gt;
+  &lt;caption&gt;Household size and incomes&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Family Size&lt;/strong&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Yearly Income&lt;/strong&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Weekly Income&lt;/strong&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$27,816&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$535&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$36,372&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$699&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$44,928&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$864&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$53,484&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$1,029&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;...&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
             </div>
           </div>
         </div>
       </section>
-      <section class="mt-6" id="tables-singular">
+      <section class="mt-6" id="tables-bordered">
         <div class="layout-content px-4">
           <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-tables-singular">
+            <a class="flex no-underline" href="#heading-tables-bordered">
               <svg aria-hidden="true" class="icon-ui-anchor">
                 <use xlink:href="#icon-ui-anchor"></use>
               </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-tables-singular">singular tables</h2>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-tables-bordered">bordered tables</h2>
           </div>
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="table--singular min-w-0 w-1/3 text-center">
-              <table>
-                <thead>
-                  <tr>
-                    <td>
-                      <strong>Average Family Size</strong>
-                    </td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>3</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <table class="table table-bordered">
+              <caption>Household size and incomes</caption>
+              <thead>
+                <tr>
+                  <td>
+                    <strong>Family Size</strong>
+                  </td>
+                  <td>
+                    <strong>Yearly Income</strong>
+                  </td>
+                  <td>
+                    <strong>Weekly Income</strong>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td class="text-right">$27,816</td>
+                  <td class="text-right">$535</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="text-right">$36,372</td>
+                  <td class="text-right">$699</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="text-right">$44,928</td>
+                  <td class="text-right">$864</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="text-right">$53,484</td>
+                  <td class="text-right">$1,029</td>
+                </tr>
+                <tr>
+                  <td>...</td>
+                  <td class="text-right">...</td>
+                  <td class="text-right">...</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;div class=&quot;table--singular min-w-0 w-1/3 text-center&quot;&gt;
-  &lt;table&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;td&gt;
-          &lt;strong&gt;Average Family Size&lt;/strong&gt;
-        &lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td&gt;3&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</pre>
+              <pre>&lt;table class=&quot;table table-bordered&quot;&gt;
+  &lt;caption&gt;Household size and incomes&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Family Size&lt;/strong&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Yearly Income&lt;/strong&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Weekly Income&lt;/strong&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$27,816&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$535&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$36,372&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$699&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$44,928&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$864&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$53,484&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$1,029&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;...&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
             </div>
           </div>
         </div>
       </section>
-      <section class="mt-6" id="tables-singular-caption">
+      <section class="mt-6" id="tables-caption-bottom">
         <div class="layout-content px-4">
           <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-tables-singular-caption">
+            <a class="flex no-underline" href="#heading-tables-caption-bottom">
               <svg aria-hidden="true" class="icon-ui-anchor">
                 <use xlink:href="#icon-ui-anchor"></use>
               </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-tables-singular-caption">singular caption tables</h2>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-tables-caption-bottom">caption bottom tables</h2>
           </div>
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="table--singular-caption min-w-0 w-1/3">
-              <table class="text-center">
-                <thead>
-                  <tr>
-                    <td>
-                      <strong>Average Family Size</strong>
-                    </td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>3</td>
-                  </tr>
-                </tbody>
-                <caption>400 households reporting</caption>
-              </table>
-            </div>
+            <table class="table caption-side-bottom">
+              <caption>Household size and incomes</caption>
+              <thead>
+                <tr>
+                  <td>
+                    <strong>Family Size</strong>
+                  </td>
+                  <td>
+                    <strong>Yearly Income</strong>
+                  </td>
+                  <td>
+                    <strong>Weekly Income</strong>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td class="text-right">$27,816</td>
+                  <td class="text-right">$535</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="text-right">$36,372</td>
+                  <td class="text-right">$699</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="text-right">$44,928</td>
+                  <td class="text-right">$864</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="text-right">$53,484</td>
+                  <td class="text-right">$1,029</td>
+                </tr>
+                <tr>
+                  <td>...</td>
+                  <td class="text-right">...</td>
+                  <td class="text-right">...</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;div class=&quot;table--singular-caption min-w-0 w-1/3&quot;&gt;
-  &lt;table class=&quot;text-center&quot;&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;td&gt;
-          &lt;strong&gt;Average Family Size&lt;/strong&gt;
-        &lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td&gt;3&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-    &lt;caption&gt;400 households reporting&lt;/caption&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</pre>
+              <pre>&lt;table class=&quot;table caption-side-bottom&quot;&gt;
+  &lt;caption&gt;Household size and incomes&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Family Size&lt;/strong&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Yearly Income&lt;/strong&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Weekly Income&lt;/strong&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$27,816&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$535&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$36,372&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$699&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$44,928&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$864&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$53,484&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;$1,029&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;...&lt;/td&gt;
+      &lt;td class=&quot;text-right&quot;&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
             </div>
           </div>
         </div>

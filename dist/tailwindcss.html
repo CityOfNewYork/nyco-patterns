@@ -5,12 +5,12 @@
   <meta charset="utf-8" />
   <meta content="IE=edge" http-equiv="X-UA-Compatible" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
+  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
+  <link href="styles/nyco.css" rel="stylesheet" />
   <title>Tailwindcss | NYCO Patterns</title>
   <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
-  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
     var VERSION = '2.5.1';
@@ -44,7 +44,7 @@
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
   <header class="o-header tablet:layout-sidebar w-full">
-    <div class="o-header__banner-main color-primary-button">
+    <div class="o-header__banner-main bg-blue">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
         <span class="hidden"></span>
@@ -77,14 +77,16 @@
           <div class="o-navigation__nav">
             <nav>
               <a class="o-navigation__link" href="index">Home</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" target="_blank">About the Patterns ↗</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" target="_blank">Installation ↗</a>
+              <a class="o-navigation__link" href="installation">Installation</a>
+              <a class="o-navigation__link" href="about">About the Patterns</a>
+              <a class="o-navigation__link" href="prototyping">Prototyping</a>
             </nav>
             <nav>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
               <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
               <a class="o-navigation__link" href="code">Code</a>
+              <a class="o-navigation__link" href="description-lists">Description Lists</a>
               <a class="o-navigation__link" href="icons">Icons</a>
               <a class="o-navigation__link" href="inputs">Inputs</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
@@ -120,14 +122,16 @@
             <div class="o-navigation__nav">
               <nav>
                 <a class="o-navigation__link" href="index" tabindex="-1">Home</a>
-                <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" tabindex="-1" target="_blank">About the Patterns ↗</a>
-                <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" tabindex="-1" target="_blank">Installation ↗</a>
+                <a class="o-navigation__link" href="installation" tabindex="-1">Installation</a>
+                <a class="o-navigation__link" href="about" tabindex="-1">About the Patterns</a>
+                <a class="o-navigation__link" href="prototyping" tabindex="-1">Prototyping</a>
               </nav>
               <nav>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
                 <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
                 <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
                 <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
+                <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
                 <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
                 <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
                 <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
@@ -156,77 +160,1066 @@
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2">
+    <article class="color-light-background py-6">
       <div class="px-4 desktop:px-6">
         <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Tailwindcss</h1>
       </div>
-      <section class="mt-6" id="tailwindcss">
+      <section class="mt-6" id="node_modules">
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto"></div>
+        </div>
+      </section>
+      <section class="mt-6" id="node_modules">
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <h2 id="heading-about-utilities">About Utilities</h2>
-            <p>Utilities allow the flexibility to change specific properties of every Pattern in certain views. For example, if a Pattern is set to <code>display: block</code> in one view but in another it needs to be set to <code>display: inline</code>, one solution would be to create another type of the Pattern. However, a UI developer may need to repeat this process for other Patterns. Writing alternate versions of Patterns is less efficient for UI development.</p>
-            <p>A utility class, such as <code>.inline { display: inline }</code>, allows the developer to reuse this attribute without creating a different pattern type or writing more CSS. This use case can be extended to every possible CSS attribute, such as color, position, font-families, margin, padding, etc. In addition, they can be bundled within media queries so certain utilities can work for specific screen sizes.</p>
-            <p>A simple example for using a utility to add padding to an element would be to use the utility <code>.p-1</code>. This will add <code>8px</code> of padding on all sides of an element.</p>
-            <p>
-              <strong>CSS</strong>
-            </p>
-            <pre><code class="language-css">.p-1 { padding: 8px }
-.border { border: 1px }</code></pre>
-            <p>
-              <strong>HTML</strong>
-            </p>
-            <pre><code class="language-html">&lt;div class=&quot;border p-1&quot;&gt;
-  An element styled with utilities
-&lt;/div&gt;</code></pre>
-            <p>
-              <strong>Renders</strong>
-            </p>
-            <div class="border p-1"> An element styled with utilities </div>
-            <h3 id="heading-utilities-and-design-tokens">Utilities and Design Tokens</h3>
-            <p>Utilities can also be used to create new components that are not readily available in a pattern library. This enables scale of the design system but maintains the relationship with the design through it’s tokens. While some utilities are very CSS centric for front-end development purposes (display, accessibility, position, etc.) others are programmatic implementations of the design tokens that make the system unique (colors, typography, grid, etc.).</p>
-            <p>
-              <strong>CSS</strong>
-            </p>
-            <pre><code class="language-css">.p-2 { padding: 16px }
-.bg-blue { background-color: #284CCA }
-.text-navy { background-color: #24325B }
-.shadow-up { box-shadow: 8px 8px 0px 0px }
-.text-base-white { color: #FFF }</code></pre>
-            <p>
-              <strong>HTML</strong>
-            </p>
-            <pre><code class="language-html">&lt;div class=&quot;bg-blue text-navy shadow-up rounded p-2&quot;&gt;
-  &lt;div class=&quot;text-base-white&quot;&gt;An element styled with utilities.&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            <p>
-              <strong>Renders</strong>
-            </p>
-            <div class="bg-blue text-navy shadow-up rounded p-2">
-              <div class="text-base-white">An element styled with utilities.</div>
-            </div>
-            <h2 id="heading-tailwindcss">Tailwindcss</h2>
-            <p>NYCO Patterns integrates <a href="https://tailwindcss.com/">Tailwindcss</a>, a CSS utility-first framework that is customized with NYCO Pattern design tokens. There are three parts to the Tailwindcss configuration.</p>
+            <p>The NYCO Patterns integrates <a href="https://tailwindcss.com">tailwindcss</a>, a CSS utility-first framework processed by <a href="https://postcss.org">PostCSS</a>. A simple example for using a utility to add padding to an element would be to use the utility <code>.p-1</code>. This will add <code>8px</code> of padding on all sides of an element.</p>
+            <pre><code>.p-1 {
+  padding: 8px
+}
+
+&lt;div class=&quot;p-1&quot;&gt;&lt;/div&gt;</code></pre>
+            <h3 id="heading-configuration">Configuration</h3>
+            <p>There are three parts to the <strong>tailwindcss</strong> configuration.</p>
             <ul>
               <li>
-                <p>
-                  <strong>Core Plugins</strong>: This array is a white list of utility plugins that defines what sets of utilities will be compiled in the final stylesheet distribution. <a href="https://tailwindcss.com/docs/configuration#core-plugins">Source documentation</a>. Example; the core plugin for padding is <code>padding</code>. Adding or removing it to the array will determine wether those utilities are compiled to the global stylesheet.
-                </p>
+                <a href="#config-theme">Theme</a>: This object contains customizations for particular utilities such as font families, colors, margin, padding, etc. <a href="https://tailwindcss.com/docs/theme">Source documentation</a>.
               </li>
               <li>
-                <p>
-                  <strong>Variants</strong>: This object contains variants that represent different states that the utilities appear in such as media queries, <code>:hover</code>, and <code>:focus</code> states. <a href="https://tailwindcss.com/docs/configuring-variants">Source documentation</a>. Example; to have padding only appear for desktop screens within NYCO Patterns the variant <code>desktop:</code> is added to the <code>.p-1</code> utility: <code>&lt;div class=&quot;desktop:p-1&quot;&gt;&lt;/div&gt;</code>.
-                </p>
+                <a href="#config-variants-and-core-plugins">Variants</a>: This object contains variants that represent different states that the utilities appear in such as media queries, <code>:hover</code>, and <code>:focus</code> states. <a href="https://tailwindcss.com/docs/configuring-variants">Source documentation</a>.
               </li>
               <li>
-                <p>
-                  <strong>Theme</strong>: This object contains NYCO design tokens for particular utilities such as font families, colors, margin, padding, etc. <a href="https://tailwindcss.com/docs/theme">Source documentation</a>. Example; the padding plugin is customized to use <code>8px</code> as the basis for all padding increments. <code>.p-2</code> would add <code>8px × 2 = 16px</code> padding on all sides of an element: <code>&lt;div class=&quot;p-2&quot;&gt;&lt;/div&gt;</code>. Colors are also part of the theme configuration but are described in more detail in the <a href="/colors">NYCO Patterns Color Utility documentation</a>.
-                </p>
+                <a href="#config-variants-and-core-plugins">Core Plugins</a>: This array is a white list of utility plugins that defines what sets of utilities will be compiled in the final stylesheet distribution. <a href="https://tailwindcss.com/docs/configuration#core-plugins">Source documentation</a>.
               </li>
             </ul>
-            <p>Below is a table describing the current <a href="https://github.com/CityOfNewYork/nyco-patterns/blob/master/config/tailwind.js">configuration source</a> that includes which core plugins are enabled, what variants they use, and if they are themed with NYCO Pattern design tokens.</p>
+            <h4 id="heading-theme">Theme</h4>
+            <p>Example; the padding plugin is customized to use <code>8px</code> as the basis for all padding increments. <code>.p-2</code> would add <code>8px × 2 = 16px</code> padding on all sides of an element.</p>
+            <pre><code>&lt;div class=&quot;p-2&quot;&gt;&lt;/div&gt;</code></pre>
+            <p>Colors are part of the theme configuration but are described in more detail in the <a href="/colors">Color Utility documentation</a>.</p>
+            <h4 id="heading-variants">Variants</h4>
+            <p>Example; to have padding only appear for desktop screens within NYCO Patterns the prefix <code>screen-desktop:</code> is added to the <code>.p-1</code> utility.</p>
+            <pre><code>&lt;div class=&quot;screen-desktop:p-1&quot;&gt;&lt;/div&gt;</code></pre>
+            <p>The plugin table below describes the available variants for each utility. An empty array <code>[]</code> means only the default state is available. The <a href="#config-screens">screens theme configuration</a> describes the avaliable break points for the <a href="#config-variants-and-core-plugins">responsive variants</a>.</p>
+            <h4 id="heading-core-plugins">Core Plugins</h4>
+            <p>Example; the core plugin for padding is <code>padding</code>. Adding or removing it to the array will determine wether those utilities are compiled to the global stylesheet.</p>
+            <p></p>
+            <h3 id="heading-installation">Installation</h3>
             <p>
-            <h2>NYCO × Tailwindcss configuration</h2>
-            <div class="p-2 grid grid-cols-3 items-center bg-white">
+              <strong>tailwindcss</strong> is not imported the same way as other patterns. All utilities are compiled to a Sass file which can be imported in a Sass project…
+            </p>
+            <pre><code>@use &#39;node_modules/@nycopportunity/patterns/dist/utilities/tailwindcss/_tailwindcss.scss&#39;;</code></pre>
+            <p>Or a a CSS file in the <strong>/dist</strong> folder which can be included through a CDN.</p>
+            <pre><code>&lt;link href=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.5.1/dist/utilities/tailwindcss/tailwindcss.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+      <section class="mt-6" id="node_modules">
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto">
+            <h2>NYCO Patterns × tailwindcss configuration</h2>
+            <h3 id="config-theme">Theme</h3>
+            <div class="p-2 bg-secondary-white">
+              <b>Plugin (link to docs)</b>
+            </div>
+            <div class="mb-4">
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-border-width">
+                <a class="capitalize" href="https://tailwindcss.com/docs/border-width" target="_blank">border width</a>
+                <div class="text-right">
+                  <button aria-controls="config-border-width-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-border-width-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-0</div>
+                  <div class="pl-1">0</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-1</div>
+                  <div class="pl-1">1px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-2</div>
+                  <div class="pl-1">2px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-4</div>
+                  <div class="pl-1">4px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-8</div>
+                  <div class="pl-1">8px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-DEFAULT</div>
+                  <div class="pl-1">2px</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-border-radius">
+                <a class="capitalize" href="https://tailwindcss.com/docs/border-radius" target="_blank">border radius</a>
+                <div class="text-right">
+                  <button aria-controls="config-border-radius-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-border-radius-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-0</div>
+                  <div class="pl-1">0</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-1</div>
+                  <div class="pl-1">2px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-2</div>
+                  <div class="pl-1">2px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-DEFAULT</div>
+                  <div class="pl-1">2px</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-box-shadow">
+                <a class="capitalize" href="https://tailwindcss.com/docs/box-shadow" target="_blank">box shadow</a>
+                <div class="text-right">
+                  <button aria-controls="config-box-shadow-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-box-shadow-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-none</div>
+                  <div class="pl-1">none</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-up</div>
+                  <div class="pl-1">8px 8px 0px 0px var(--nyco-box-shadow-color)</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-up-2</div>
+                  <div class="pl-1">16px 16px 0px 0px var(--nyco-box-shadow-color)</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-colors">
+                <a class="capitalize" href="https://tailwindcss.com/docs/colors" target="_blank">colors</a>
+                <div class="text-right">
+                  <button aria-controls="config-colors-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-colors-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy</div>
+                  <div class="pl-1">#031553</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy-70t</div>
+                  <div class="pl-1">#4157aa</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy-50t</div>
+                  <div class="pl-1">#8195dc</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy-30t</div>
+                  <div class="pl-1">#cdd8ef</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue</div>
+                  <div class="pl-1">#1642DF</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-70t</div>
+                  <div class="pl-1">#568adf</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-50t</div>
+                  <div class="pl-1">#96beff</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-30t</div>
+                  <div class="pl-1">#d2e8ff</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-20t</div>
+                  <div class="pl-1">#E7F2FE</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-10t</div>
+                  <div class="pl-1">#F0F7FE</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red</div>
+                  <div class="pl-1">#fc5d52</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red-70t</div>
+                  <div class="pl-1">#ff8787</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red-50t</div>
+                  <div class="pl-1">#ffafaf</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red-30t</div>
+                  <div class="pl-1">#ffdbdb</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey</div>
+                  <div class="pl-1">#57595C</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-70t</div>
+                  <div class="pl-1">#7c7f83</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-50t</div>
+                  <div class="pl-1">#999ca4</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-30t</div>
+                  <div class="pl-1">#c1c6cb</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-20t</div>
+                  <div class="pl-1">#e6e8ec</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white</div>
+                  <div class="pl-1">#F3F3F3</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white-70t</div>
+                  <div class="pl-1">#F6F6F6</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white-50t</div>
+                  <div class="pl-1">#F9F9FA</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white-30t</div>
+                  <div class="pl-1">#FBFCFC</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold</div>
+                  <div class="pl-1">#faa302</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold-70t</div>
+                  <div class="pl-1">#fbb95a</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold-50t</div>
+                  <div class="pl-1">#fbd8a1</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold-30t</div>
+                  <div class="pl-1">#ffeecd</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink</div>
+                  <div class="pl-1">#f9a5da</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink-70t</div>
+                  <div class="pl-1">#ffc0f6</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink-50t</div>
+                  <div class="pl-1">#fbd9ff</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink-30t</div>
+                  <div class="pl-1">#fff0fe</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green</div>
+                  <div class="pl-1">#04A487</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green-70t</div>
+                  <div class="pl-1">#11D4B1</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green-50t</div>
+                  <div class="pl-1">#AEF4E7</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green-30t</div>
+                  <div class="pl-1">#E6FEFA</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-base-black</div>
+                  <div class="pl-1">#000000</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-base-white</div>
+                  <div class="pl-1">#FFFFFF</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-transparent</div>
+                  <div class="pl-1">rgba(255, 255, 255, 0)</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-DEFAULT</div>
+                  <div class="pl-1"></div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-fill">
+                <a class="capitalize" href="https://tailwindcss.com/docs/fill" target="_blank">fill</a>
+                <div class="text-right">
+                  <button aria-controls="config-fill-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-fill-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy</div>
+                  <div class="pl-1">#031553</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy-70t</div>
+                  <div class="pl-1">#4157aa</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy-50t</div>
+                  <div class="pl-1">#8195dc</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy-30t</div>
+                  <div class="pl-1">#cdd8ef</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue</div>
+                  <div class="pl-1">#1642DF</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-70t</div>
+                  <div class="pl-1">#568adf</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-50t</div>
+                  <div class="pl-1">#96beff</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-30t</div>
+                  <div class="pl-1">#d2e8ff</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-20t</div>
+                  <div class="pl-1">#E7F2FE</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-10t</div>
+                  <div class="pl-1">#F0F7FE</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red</div>
+                  <div class="pl-1">#fc5d52</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red-70t</div>
+                  <div class="pl-1">#ff8787</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red-50t</div>
+                  <div class="pl-1">#ffafaf</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red-30t</div>
+                  <div class="pl-1">#ffdbdb</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey</div>
+                  <div class="pl-1">#57595C</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-70t</div>
+                  <div class="pl-1">#7c7f83</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-50t</div>
+                  <div class="pl-1">#999ca4</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-30t</div>
+                  <div class="pl-1">#c1c6cb</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-20t</div>
+                  <div class="pl-1">#e6e8ec</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white</div>
+                  <div class="pl-1">#F3F3F3</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white-70t</div>
+                  <div class="pl-1">#F6F6F6</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white-50t</div>
+                  <div class="pl-1">#F9F9FA</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white-30t</div>
+                  <div class="pl-1">#FBFCFC</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold</div>
+                  <div class="pl-1">#faa302</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold-70t</div>
+                  <div class="pl-1">#fbb95a</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold-50t</div>
+                  <div class="pl-1">#fbd8a1</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold-30t</div>
+                  <div class="pl-1">#ffeecd</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink</div>
+                  <div class="pl-1">#f9a5da</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink-70t</div>
+                  <div class="pl-1">#ffc0f6</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink-50t</div>
+                  <div class="pl-1">#fbd9ff</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink-30t</div>
+                  <div class="pl-1">#fff0fe</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green</div>
+                  <div class="pl-1">#04A487</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green-70t</div>
+                  <div class="pl-1">#11D4B1</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green-50t</div>
+                  <div class="pl-1">#AEF4E7</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green-30t</div>
+                  <div class="pl-1">#E6FEFA</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-base-black</div>
+                  <div class="pl-1">#000000</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-base-white</div>
+                  <div class="pl-1">#FFFFFF</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-transparent</div>
+                  <div class="pl-1">rgba(255, 255, 255, 0)</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-stroke">
+                <a class="capitalize" href="https://tailwindcss.com/docs/stroke" target="_blank">stroke</a>
+                <div class="text-right">
+                  <button aria-controls="config-stroke-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-stroke-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy</div>
+                  <div class="pl-1">#031553</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy-70t</div>
+                  <div class="pl-1">#4157aa</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy-50t</div>
+                  <div class="pl-1">#8195dc</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-navy-30t</div>
+                  <div class="pl-1">#cdd8ef</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue</div>
+                  <div class="pl-1">#1642DF</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-70t</div>
+                  <div class="pl-1">#568adf</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-50t</div>
+                  <div class="pl-1">#96beff</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-30t</div>
+                  <div class="pl-1">#d2e8ff</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-20t</div>
+                  <div class="pl-1">#E7F2FE</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blue-10t</div>
+                  <div class="pl-1">#F0F7FE</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red</div>
+                  <div class="pl-1">#fc5d52</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red-70t</div>
+                  <div class="pl-1">#ff8787</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red-50t</div>
+                  <div class="pl-1">#ffafaf</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-red-30t</div>
+                  <div class="pl-1">#ffdbdb</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey</div>
+                  <div class="pl-1">#57595C</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-70t</div>
+                  <div class="pl-1">#7c7f83</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-50t</div>
+                  <div class="pl-1">#999ca4</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-30t</div>
+                  <div class="pl-1">#c1c6cb</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-grey-20t</div>
+                  <div class="pl-1">#e6e8ec</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white</div>
+                  <div class="pl-1">#F3F3F3</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white-70t</div>
+                  <div class="pl-1">#F6F6F6</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white-50t</div>
+                  <div class="pl-1">#F9F9FA</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-white-30t</div>
+                  <div class="pl-1">#FBFCFC</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold</div>
+                  <div class="pl-1">#faa302</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold-70t</div>
+                  <div class="pl-1">#fbb95a</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold-50t</div>
+                  <div class="pl-1">#fbd8a1</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-marigold-30t</div>
+                  <div class="pl-1">#ffeecd</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink</div>
+                  <div class="pl-1">#f9a5da</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink-70t</div>
+                  <div class="pl-1">#ffc0f6</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink-50t</div>
+                  <div class="pl-1">#fbd9ff</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-pink-30t</div>
+                  <div class="pl-1">#fff0fe</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green</div>
+                  <div class="pl-1">#04A487</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green-70t</div>
+                  <div class="pl-1">#11D4B1</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green-50t</div>
+                  <div class="pl-1">#AEF4E7</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-green-30t</div>
+                  <div class="pl-1">#E6FEFA</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-base-black</div>
+                  <div class="pl-1">#000000</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-base-white</div>
+                  <div class="pl-1">#FFFFFF</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-transparent</div>
+                  <div class="pl-1">rgba(255, 255, 255, 0)</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-font-family">
+                <a class="capitalize" href="https://tailwindcss.com/docs/font-family" target="_blank">font family</a>
+                <div class="text-right">
+                  <button aria-controls="config-font-family-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-font-family-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-system</div>
+                  <div class="pl-1">-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, sans-serif</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-code</div>
+                  <div class="pl-1">monospace</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-default</div>
+                  <div class="pl-1">&quot;IBM Plex Sans&quot;, sans-serif</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-default-sans</div>
+                  <div class="pl-1">&quot;IBM Plex Sans&quot;, sans-serif</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-default-serif</div>
+                  <div class="pl-1">&quot;IBM Plex Serif&quot;, sans-serif</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h1</div>
+                  <div class="pl-1">&quot;Helvetica Neue Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h2</div>
+                  <div class="pl-1">&quot;Helvetica Neue Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h3</div>
+                  <div class="pl-1">&quot;Helvetica Neue Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blockquote</div>
+                  <div class="pl-1">&quot;Helvetica Neue Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-jumbo</div>
+                  <div class="pl-1">&quot;Helvetica Neue Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-font-size">
+                <a class="capitalize" href="https://tailwindcss.com/docs/font-size" target="_blank">font size</a>
+                <div class="text-right">
+                  <button aria-controls="config-font-size-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-font-size-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-jumbo</div>
+                  <div class="pl-1">3em</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h1</div>
+                  <div class="pl-1">2.488em</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h2</div>
+                  <div class="pl-1">2.074em</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h3</div>
+                  <div class="pl-1">1.728em</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h4</div>
+                  <div class="pl-1">1.44em</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h5</div>
+                  <div class="pl-1">1.2em</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h6</div>
+                  <div class="pl-1">1em</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-html</div>
+                  <div class="pl-1">16px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-code</div>
+                  <div class="pl-1">1em</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-small</div>
+                  <div class="pl-1">0.833em</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blockquote</div>
+                  <div class="pl-1">2.074em</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-line-height">
+                <a class="capitalize" href="https://tailwindcss.com/docs/line-height" target="_blank">line height</a>
+                <div class="text-right">
+                  <button aria-controls="config-line-height-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-line-height-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-jumbo</div>
+                  <div class="pl-1">1.2</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h1</div>
+                  <div class="pl-1">1.2</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h2</div>
+                  <div class="pl-1">1.2</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h3</div>
+                  <div class="pl-1">1.2</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h4</div>
+                  <div class="pl-1">1.2</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h5</div>
+                  <div class="pl-1">1.2</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-h6</div>
+                  <div class="pl-1">1.2</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-html</div>
+                  <div class="pl-1">1.5</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-code</div>
+                  <div class="pl-1">1.6</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-small</div>
+                  <div class="pl-1">normal</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-blockquote</div>
+                  <div class="pl-1">normal</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-max-width">
+                <a class="capitalize" href="https://tailwindcss.com/docs/max-width" target="_blank">max width</a>
+                <div class="text-right">
+                  <button aria-controls="config-max-width-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-max-width-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-600</div>
+                  <div class="pl-1">600px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-900</div>
+                  <div class="pl-1">896px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-1/4</div>
+                  <div class="pl-1">25%</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-1/3</div>
+                  <div class="pl-1">33.33%</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-1/2</div>
+                  <div class="pl-1">50%</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-full</div>
+                  <div class="pl-1">100%</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-screens">
+                <a class="capitalize" href="https://tailwindcss.com/docs/screens" target="_blank">screens</a>
+                <div class="text-right">
+                  <button aria-controls="config-screens-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-screens-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-desktop</div>
+                  <div class="pl-1">960px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-tablet</div>
+                  <div class="pl-1">768px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-mobile</div>
+                  <div class="pl-1">480px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-small</div>
+                  <div class="pl-1">960px</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-spacing">
+                <a class="capitalize" href="https://tailwindcss.com/docs/spacing" target="_blank">spacing</a>
+                <div class="text-right">
+                  <button aria-controls="config-spacing-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-spacing-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-0</div>
+                  <div class="pl-1">0</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-1</div>
+                  <div class="pl-1">8px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-2</div>
+                  <div class="pl-1">16px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-3</div>
+                  <div class="pl-1">24px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-4</div>
+                  <div class="pl-1">32px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-5</div>
+                  <div class="pl-1">40px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-6</div>
+                  <div class="pl-1">48px</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-width">
+                <a class="capitalize" href="https://tailwindcss.com/docs/width" target="_blank">width</a>
+                <div class="text-right">
+                  <button aria-controls="config-width-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-width-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-600</div>
+                  <div class="pl-1">600px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-900</div>
+                  <div class="pl-1">896px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-1/4</div>
+                  <div class="pl-1">25%</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-1/3</div>
+                  <div class="pl-1">33.33%</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-1/2</div>
+                  <div class="pl-1">50%</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-full</div>
+                  <div class="pl-1">100%</div>
+                </div>
+              </div>
+              <div class="p-2 layout-two-columns items-center border-b border-secondary-white-70t" id="config-margin">
+                <a class="capitalize" href="https://tailwindcss.com/docs/margin" target="_blank">margin</a>
+                <div class="text-right">
+                  <button aria-controls="config-margin-details" aria-expanded="false" class="btn" data-js="toggle" type="button">show details</button>
+                </div>
+              </div>
+              <div aria-hidden="true" class="bg-secondary-white-70t hidden hidden:overflow animated" id="config-margin-details">
+                <div class="p-2 layout-two-columns border-b border-base-white">
+                  <div>
+                    <b>Class</b>
+                  </div>
+                  <div class="pl-1">
+                    <b>Property Value</b>
+                  </div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-0</div>
+                  <div class="pl-1">0</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-1</div>
+                  <div class="pl-1">8px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-2</div>
+                  <div class="pl-1">16px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-3</div>
+                  <div class="pl-1">24px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-4</div>
+                  <div class="pl-1">32px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-5</div>
+                  <div class="pl-1">40px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-6</div>
+                  <div class="pl-1">48px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}--2</div>
+                  <div class="pl-1">-16px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}--1</div>
+                  <div class="pl-1">-8px</div>
+                </div>
+                <div class="p-2 layout-two-columns font-code text-primary-red small border-b border-base-white">
+                  <div>.{{ prefix }}-auto</div>
+                  <div class="pl-1">auto</div>
+                </div>
+              </div>
+            </div>
+            <h3 id="config-variants-and-core-plugins">Variants and Core Plugins</h3>
+            <div class="p-2 layout-three-columns items-center bg-secondary-white">
               <div>
                 <b>Plugin (link to docs)</b>
               </div>
@@ -238,1546 +1231,802 @@
               </div>
             </div>
             <div class="mb-4">
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/accessibility" target="_blank">accessibility</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/align-content" target="_blank">align content</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/align-items" target="_blank">align items</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/align-self" target="_blank">align self</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/animation" target="_blank">animation</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/appearance" target="_blank">appearance</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/background-attachment" target="_blank">background attachment</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/background-clip" target="_blank">background clip</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/background-color" target="_blank">background color</a>
                 <div class="font-code">[hover, focus]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/background-image" target="_blank">background image</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/background-opacity" target="_blank">background opacity</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/background-position" target="_blank">background position</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/background-repeat" target="_blank">background repeat</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/background-size" target="_blank">background size</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/border-collapse" target="_blank">border collapse</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/border-color" target="_blank">border color</a>
                 <div class="font-code">[hover, focus]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/border-opacity" target="_blank">border opacity</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/border-radius" target="_blank">border radius</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <button aria-controls="config-border-radius-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-border-radius">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-border-radius-details">
-                <div class="p-2">The border-radius utilities like rounded.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.rounded-none</div>
-                  <div class="pl-1">0</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.rounded</div>
-                  <div class="pl-1">1px</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/border-style" target="_blank">border style</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/border-width" target="_blank">border width</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <button aria-controls="config-border-width-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-border-width">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-border-width-details">
-                <div class="p-2">The border-width utilities like border-l-2.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.border-0</div>
-                  <div class="pl-1">0</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.border-2</div>
-                  <div class="pl-1">2px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.border-4</div>
-                  <div class="pl-1">4px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.border-8</div>
-                  <div class="pl-1">8px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.border</div>
-                  <div class="pl-1">1px</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/box-shadow" target="_blank">box shadow</a>
                 <div class="font-code">[responsive, hover,focus]</div>
                 <div class="text-right">
-                  <button aria-controls="config-box-shadow-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-box-shadow">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-box-shadow-details">
-                <div class="p-2">The box-shadow utilities like shadow-up.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.shadow-none</div>
-                  <div class="pl-1">none</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.shadow-up-transparent</div>
-                  <div class="pl-1">8px 8px 0px 0px rgba(47, 51, 79, 0)</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.shadow-up</div>
-                  <div class="pl-1">8px 8px 0px 0px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.shadow-up-2-transparent</div>
-                  <div class="pl-1">16px 16px 0px 0px rgba(47, 51, 79, 0)</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.shadow-up-2</div>
-                  <div class="pl-1">16px 16px 0px 0px</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/box-sizing" target="_blank">box sizing</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/clear" target="_blank">clear</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/cursor" target="_blank">cursor</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/display" target="_blank">display</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/divide-color" target="_blank">divide color</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/divide-opacity" target="_blank">divide opacity</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/divide-style" target="_blank">divide style</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/divide-width" target="_blank">divide width</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/fill" target="_blank">fill</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <button aria-controls="config-fill-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-fill">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-fill-details">
-                <div class="p-2">The fill utilities like fill-current.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-navy</div>
-                  <div class="pl-1">#031553</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-navy-70t</div>
-                  <div class="pl-1">#4157aa</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-navy-50t</div>
-                  <div class="pl-1">#8195dc</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-navy-30t</div>
-                  <div class="pl-1">#cdd8ef</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-blue</div>
-                  <div class="pl-1">#1642DF</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-blue-70t</div>
-                  <div class="pl-1">#568adf</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-blue-50t</div>
-                  <div class="pl-1">#96beff</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-blue-30t</div>
-                  <div class="pl-1">#d2e8ff</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-blue-20t</div>
-                  <div class="pl-1">#E7F2FE</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-blue-10t</div>
-                  <div class="pl-1">#F0F7FE</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-red</div>
-                  <div class="pl-1">#fc5d52</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-red-70t</div>
-                  <div class="pl-1">#ff8787</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-red-50t</div>
-                  <div class="pl-1">#ffafaf</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-red-30t</div>
-                  <div class="pl-1">#ffdbdb</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-grey</div>
-                  <div class="pl-1">#57595C</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-grey-70t</div>
-                  <div class="pl-1">#7c7f83</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-grey-50t</div>
-                  <div class="pl-1">#999ca4</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-grey-30t</div>
-                  <div class="pl-1">#c1c6cb</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-grey-20t</div>
-                  <div class="pl-1">#e6e8ec</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-white</div>
-                  <div class="pl-1">#F3F3F3</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-white-70t</div>
-                  <div class="pl-1">#F6F6F6</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-white-50t</div>
-                  <div class="pl-1">#F9F9FA</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-white-30t</div>
-                  <div class="pl-1">#FBFCFC</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-marigold</div>
-                  <div class="pl-1">#faa302</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-marigold-70t</div>
-                  <div class="pl-1">#fbb95a</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-marigold-50t</div>
-                  <div class="pl-1">#fbd8a1</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-marigold-30t</div>
-                  <div class="pl-1">#ffeecd</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-pink</div>
-                  <div class="pl-1">#f9a5da</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-pink-70t</div>
-                  <div class="pl-1">#ffc0f6</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-pink-50t</div>
-                  <div class="pl-1">#fbd9ff</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-pink-30t</div>
-                  <div class="pl-1">#fff0fe</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-green</div>
-                  <div class="pl-1">#04A487</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-green-70t</div>
-                  <div class="pl-1">#11D4B1</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-green-50t</div>
-                  <div class="pl-1">#AEF4E7</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-green-30t</div>
-                  <div class="pl-1">#E6FEFA</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-base-black</div>
-                  <div class="pl-1">#000000</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-base-white</div>
-                  <div class="pl-1">#FFFFFF</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.fill-transparent</div>
-                  <div class="pl-1">rgba(255, 255, 255, 0)</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/flex" target="_blank">flex</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/flex-direction" target="_blank">flex direction</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/flex-grow" target="_blank">flex grow</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/flex-shrink" target="_blank">flex shrink</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/flex-wrap" target="_blank">flex wrap</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/float" target="_blank">float</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/font-family" target="_blank">font family</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <button aria-controls="config-font-family-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-font-family">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-font-family-details">
-                <div class="p-2">The font-family utilities like font-default.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.font-system</div>
-                  <div class="pl-1">-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, sans-serif</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.font-code</div>
-                  <div class="pl-1">monospace</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.font-default</div>
-                  <div class="pl-1">&quot;IBM Plex Sans&quot;, sans-serif</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.font-default-sans</div>
-                  <div class="pl-1">&quot;IBM Plex Sans&quot;, sans-serif</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.font-default-serif</div>
-                  <div class="pl-1">&quot;IBM Plex Serif&quot;, sans-serif</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.font-h1</div>
-                  <div class="pl-1">&quot;Helvetica Neue Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.font-h2</div>
-                  <div class="pl-1">&quot;Helvetica Neue Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.font-h3</div>
-                  <div class="pl-1">&quot;Helvetica Neue Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.font-blockquote</div>
-                  <div class="pl-1">&quot;Helvetica Neue Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.font-jumbo</div>
-                  <div class="pl-1">&quot;Helvetica Neue Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/font-size" target="_blank">font size</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <button aria-controls="config-font-size-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-font-size">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-font-size-details">
-                <div class="p-2">The font-size utilities like text-h1.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-jumbo</div>
-                  <div class="pl-1">3em</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-h1</div>
-                  <div class="pl-1">2.488em</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-h2</div>
-                  <div class="pl-1">2.074em</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-h3</div>
-                  <div class="pl-1">1.728em</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-h4</div>
-                  <div class="pl-1">1.44em</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-h5</div>
-                  <div class="pl-1">1.2em</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-h6</div>
-                  <div class="pl-1">1em</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-html</div>
-                  <div class="pl-1">16px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-code</div>
-                  <div class="pl-1">1em</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-small</div>
-                  <div class="pl-1">0.833em</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.text-blockquote</div>
-                  <div class="pl-1">2.074em</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/font-smoothing" target="_blank">font smoothing</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/font-style" target="_blank">font style</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
-                <a class="capitalize" href="https://tailwindcss.com/docs/font-variant-numeric" target="_blank">font variant numeric</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/font-variant numeric" target="_blank">font variant numeric</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/font-weight" target="_blank">font weight</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/gap" target="_blank">gap</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
-                <a class="capitalize" href="https://tailwindcss.com/docs/gradient-color-stops" target="_blank">gradient color stops</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/gradient-color stops" target="_blank">gradient color stops</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
-                <a class="capitalize" href="https://tailwindcss.com/docs/grid-auto-columns" target="_blank">grid auto columns</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/grid-auto columns" target="_blank">grid auto columns</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
-                <a class="capitalize" href="https://tailwindcss.com/docs/grid-auto-flow" target="_blank">grid auto flow</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/grid-auto flow" target="_blank">grid auto flow</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
-                <a class="capitalize" href="https://tailwindcss.com/docs/grid-auto-rows" target="_blank">grid auto rows</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/grid-auto rows" target="_blank">grid auto rows</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/grid-column" target="_blank">grid column</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
-                <a class="capitalize" href="https://tailwindcss.com/docs/grid-column-end" target="_blank">grid column end</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/grid-column end" target="_blank">grid column end</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
-                <a class="capitalize" href="https://tailwindcss.com/docs/grid-column-start" target="_blank">grid column start</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/grid-column start" target="_blank">grid column start</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/grid-row" target="_blank">grid row</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
-                <a class="capitalize" href="https://tailwindcss.com/docs/grid-row-end" target="_blank">grid row end</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/grid-row end" target="_blank">grid row end</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
-                <a class="capitalize" href="https://tailwindcss.com/docs/grid-row-start" target="_blank">grid row start</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/grid-row start" target="_blank">grid row start</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
-                <a class="capitalize" href="https://tailwindcss.com/docs/grid-template-columns" target="_blank">grid template columns</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/grid-template columns" target="_blank">grid template columns</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
-                <a class="capitalize" href="https://tailwindcss.com/docs/grid-template-rows" target="_blank">grid template rows</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/grid-template rows" target="_blank">grid template rows</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/height" target="_blank">height</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/inset" target="_blank">inset</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/justify-content" target="_blank">justify content</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/justify-items" target="_blank">justify items</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/justify-self" target="_blank">justify self</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/letter-spacing" target="_blank">letter spacing</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/line-height" target="_blank">line height</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <button aria-controls="config-line-height-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-line-height">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-line-height-details">
-                <div class="p-2">The line-height utilities like leading-h1.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-jumbo</div>
-                  <div class="pl-1">1.2</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-h1</div>
-                  <div class="pl-1">1.2</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-h2</div>
-                  <div class="pl-1">1.2</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-h3</div>
-                  <div class="pl-1">1.2</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-h4</div>
-                  <div class="pl-1">1.2</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-h5</div>
-                  <div class="pl-1">1.2</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-h6</div>
-                  <div class="pl-1">1.2</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-html</div>
-                  <div class="pl-1">1.5</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-code</div>
-                  <div class="pl-1">1.6</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-small</div>
-                  <div class="pl-1">normal</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.leading-blockquote</div>
-                  <div class="pl-1">normal</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
-                <a class="capitalize" href="https://tailwindcss.com/docs/list-style-position" target="_blank">list style position</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/list-style position" target="_blank">list style position</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
-                <a class="capitalize" href="https://tailwindcss.com/docs/list-style-type" target="_blank">list style type</a>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/list-style type" target="_blank">list style type</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/margin" target="_blank">margin</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <button aria-controls="config-margin-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-margin">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-margin-details">
-                <div class="p-2">The margin utilities like ml-6.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.m-0</div>
-                  <div class="pl-1">0</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.m-1</div>
-                  <div class="pl-1">8px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.m-2</div>
-                  <div class="pl-1">16px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.m-3</div>
-                  <div class="pl-1">24px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.m-4</div>
-                  <div class="pl-1">32px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.m-5</div>
-                  <div class="pl-1">40px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.m-6</div>
-                  <div class="pl-1">48px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.m--2</div>
-                  <div class="pl-1">-16px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.m--1</div>
-                  <div class="pl-1">-8px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.m-auto</div>
-                  <div class="pl-1">auto</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/max-height" target="_blank">max height</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/max-width" target="_blank">max width</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <button aria-controls="config-max-width-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-max-width">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-max-width-details">
-                <div class="p-2">The max-width utilities like max-w-900.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.max-w-600</div>
-                  <div class="pl-1">600px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.max-w-900</div>
-                  <div class="pl-1">896px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.max-w-1/4</div>
-                  <div class="pl-1">25%</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.max-w-1/3</div>
-                  <div class="pl-1">33.33%</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.max-w-1/2</div>
-                  <div class="pl-1">50%</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.max-w-full</div>
-                  <div class="pl-1">100%</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/min-height" target="_blank">min height</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/min-width" target="_blank">min width</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/object-fit" target="_blank">object fit</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/object-position" target="_blank">object position</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/opacity" target="_blank">opacity</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/order" target="_blank">order</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/outline" target="_blank">outline</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/overflow" target="_blank">overflow</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/overscroll-behavior" target="_blank">overscroll behavior</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/padding" target="_blank">padding</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/place-content" target="_blank">place content</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/placeholder-color" target="_blank">placeholder color</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/placeholder-opacity" target="_blank">placeholder opacity</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/place-items" target="_blank">place items</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/place-self" target="_blank">place self</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/pointer-events" target="_blank">pointer events</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/position" target="_blank">position</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/resize" target="_blank">resize</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
-                <a class="capitalize" href="https://tailwindcss.com/docs/rotate" target="_blank">rotate</a>
-                <div class="font-code">[]</div>
-                <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
-                <a class="capitalize" href="https://tailwindcss.com/docs/scale" target="_blank">scale</a>
-                <div class="font-code">[]</div>
-                <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
-                <a class="capitalize" href="https://tailwindcss.com/docs/skew" target="_blank">skew</a>
-                <div class="font-code">[]</div>
-                <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/space" target="_blank">space</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/stroke" target="_blank">stroke</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <button aria-controls="config-stroke-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-stroke">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-stroke-details">
-                <div class="p-2">The stroke utilities like stroke-current.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-navy</div>
-                  <div class="pl-1">#031553</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-navy-70t</div>
-                  <div class="pl-1">#4157aa</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-navy-50t</div>
-                  <div class="pl-1">#8195dc</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-navy-30t</div>
-                  <div class="pl-1">#cdd8ef</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-blue</div>
-                  <div class="pl-1">#1642DF</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-blue-70t</div>
-                  <div class="pl-1">#568adf</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-blue-50t</div>
-                  <div class="pl-1">#96beff</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-blue-30t</div>
-                  <div class="pl-1">#d2e8ff</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-blue-20t</div>
-                  <div class="pl-1">#E7F2FE</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-blue-10t</div>
-                  <div class="pl-1">#F0F7FE</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-red</div>
-                  <div class="pl-1">#fc5d52</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-red-70t</div>
-                  <div class="pl-1">#ff8787</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-red-50t</div>
-                  <div class="pl-1">#ffafaf</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-red-30t</div>
-                  <div class="pl-1">#ffdbdb</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-grey</div>
-                  <div class="pl-1">#57595C</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-grey-70t</div>
-                  <div class="pl-1">#7c7f83</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-grey-50t</div>
-                  <div class="pl-1">#999ca4</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-grey-30t</div>
-                  <div class="pl-1">#c1c6cb</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-grey-20t</div>
-                  <div class="pl-1">#e6e8ec</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-white</div>
-                  <div class="pl-1">#F3F3F3</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-white-70t</div>
-                  <div class="pl-1">#F6F6F6</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-white-50t</div>
-                  <div class="pl-1">#F9F9FA</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-white-30t</div>
-                  <div class="pl-1">#FBFCFC</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-marigold</div>
-                  <div class="pl-1">#faa302</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-marigold-70t</div>
-                  <div class="pl-1">#fbb95a</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-marigold-50t</div>
-                  <div class="pl-1">#fbd8a1</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-marigold-30t</div>
-                  <div class="pl-1">#ffeecd</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-pink</div>
-                  <div class="pl-1">#f9a5da</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-pink-70t</div>
-                  <div class="pl-1">#ffc0f6</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-pink-50t</div>
-                  <div class="pl-1">#fbd9ff</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-pink-30t</div>
-                  <div class="pl-1">#fff0fe</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-green</div>
-                  <div class="pl-1">#04A487</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-green-70t</div>
-                  <div class="pl-1">#11D4B1</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-green-50t</div>
-                  <div class="pl-1">#AEF4E7</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-green-30t</div>
-                  <div class="pl-1">#E6FEFA</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-base-black</div>
-                  <div class="pl-1">#000000</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-base-white</div>
-                  <div class="pl-1">#FFFFFF</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.stroke-transparent</div>
-                  <div class="pl-1">rgba(255, 255, 255, 0)</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/stroke-width" target="_blank">stroke width</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/table-layout" target="_blank">table layout</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/text-align" target="_blank">text align</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/text-color" target="_blank">text color</a>
                 <div class="font-code">[hover, focus]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/text-decoration" target="_blank">text decoration</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/text-opacity" target="_blank">text opacity</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/text-overflow" target="_blank">text overflow</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/text-transform" target="_blank">text transform</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/transform" target="_blank">transform</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/transform-origin" target="_blank">transform origin</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
-                <a class="capitalize" href="https://tailwindcss.com/docs/transition-delay" target="_blank">transition delay</a>
-                <div class="font-code">[]</div>
-                <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
-                <a class="capitalize" href="https://tailwindcss.com/docs/transition-duration" target="_blank">transition duration</a>
-                <div class="font-code">[]</div>
-                <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
-                <a class="capitalize" href="https://tailwindcss.com/docs/transition-property" target="_blank">transition property</a>
-                <div class="font-code">[]</div>
-                <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
-                <a class="capitalize" href="https://tailwindcss.com/docs/transition-timing-function" target="_blank">transition timing function</a>
-                <div class="font-code">[]</div>
-                <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/translate" target="_blank">translate</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/rotate" target="_blank">rotate</a>
+                <div class="font-code">[]</div>
+                <div class="text-right">
+                  <span class="text-secondary-grey">Default</span>
+                </div>
+              </div>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/scale" target="_blank">scale</a>
+                <div class="font-code">[]</div>
+                <div class="text-right">
+                  <span class="text-secondary-grey">Default</span>
+                </div>
+              </div>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/skew" target="_blank">skew</a>
+                <div class="font-code">[]</div>
+                <div class="text-right">
+                  <span class="text-secondary-grey">Default</span>
+                </div>
+              </div>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/transition-delay" target="_blank">transition delay</a>
+                <div class="font-code">[]</div>
+                <div class="text-right">
+                  <span class="text-secondary-grey">Default</span>
+                </div>
+              </div>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/transition-duration" target="_blank">transition duration</a>
+                <div class="font-code">[]</div>
+                <div class="text-right">
+                  <span class="text-secondary-grey">Default</span>
+                </div>
+              </div>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/transition-property" target="_blank">transition property</a>
+                <div class="font-code">[]</div>
+                <div class="text-right">
+                  <span class="text-secondary-grey">Default</span>
+                </div>
+              </div>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
+                <a class="capitalize" href="https://tailwindcss.com/docs/transition-timing function" target="_blank">transition timing function</a>
+                <div class="font-code">[]</div>
+                <div class="text-right">
+                  <span class="text-secondary-grey">Default</span>
+                </div>
+              </div>
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/user-select" target="_blank">user select</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/vertical-align" target="_blank">vertical align</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/visibility" target="_blank">visibility</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/whitespace" target="_blank">whitespace</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/width" target="_blank">width</a>
                 <div class="font-code">[responsive]</div>
                 <div class="text-right">
-                  <button aria-controls="config-width-details" aria-expanded="false" class="btn p-1" data-js="toggle" type="button">NYCO Theme&nbsp;<svg aria-hidden="true" class="icon-ui icon-2">
-                      <use xlink:href="#icon-ui-chevron-down"></use>
-                    </svg>
-                  </button>
+                  <a href="#config-width">Themed</a>
                 </div>
               </div>
-              <div aria-hidden="true" class="bg-white-70t hidden hidden:overflow animated" id="config-width-details">
-                <div class="p-2">The width utilities like w-900.</div>
-                <div class="p-2 grid grid-cols-2 border-b border-base-white">
-                  <div>
-                    <b>Utility</b>
-                  </div>
-                  <div class="pl-1">
-                    <b>Token</b>
-                  </div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.w-600</div>
-                  <div class="pl-1">600px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.w-900</div>
-                  <div class="pl-1">896px</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.w-1/4</div>
-                  <div class="pl-1">25%</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.w-1/3</div>
-                  <div class="pl-1">33.33%</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.w-1/2</div>
-                  <div class="pl-1">50%</div>
-                </div>
-                <div class="p-2 grid grid-cols-2 font-code text-red border-b border-base-white">
-                  <div>.w-full</div>
-                  <div class="pl-1">100%</div>
-                </div>
-              </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t ">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/word-break" target="_blank">word break</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
-              <div class="p-2 grid grid-cols-3 items-center border-b border-white-70t bg-white-70t">
+              <div class="p-2 layout-three-columns items-center border-b border-secondary-white-70t">
                 <a class="capitalize" href="https://tailwindcss.com/docs/z-index" target="_blank">z index</a>
                 <div class="font-code">[]</div>
                 <div class="text-right">
-                  <span class="text-grey">Default Theme</span>
+                  <span class="text-secondary-grey">Default</span>
                 </div>
               </div>
             </div>
-            </p>
           </div>
         </div>
       </section>
-      <section class="mt-6" id="tailwindcss-installation">
+      <section class="mt-6" id="node_modules">
         <div class="layout-content px-4 pb-4">
-          <div class="o-content mx-auto">
-            <h2 id="heading-installation">Installation</h2>
-            <p>Tailwindcss is not imported the same way as other patterns. All utilities are compiled to a Sass file…</p>
-            <pre><code>/dist/utilities/tailwindcss/_tailwindcss.scss</code></pre>
-            <p>(which can be imported in a Sass project)…</p>
-            <pre><code class="language-scss">@import &#39;node_modules/@nycopportunity/nyco-patterns/dist/utilities/tailwindcss/_tailwindcss.scss&#39;;</code></pre>
-            <p>… and a CSS file in the <strong>/dist</strong> folder:</p>
-            <pre><code>/dist/utilities/tailwindcss/tailwindcss.css</code></pre>
-            <p>The CSS file can be included through a CDN. Replace <code>{{ version }}</code> with the latest release in the top right corner of this page.</p>
-            <pre><code class="language-html">&lt;link href=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v{{ version }}/dist/utilities/tailwindcss/tailwindcss.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</code></pre>
-            <h3 id="heading-as-a-dependency">As a dependency</h3>
-            <p>It is also possible to install Tailwindcss as a dependency in your project and import the NYCO Patterns tailwind.js configuration into your project. See the <a href="https://tailwindcss.com/docs/installation">Tailwindcss integration guides for various projects</a>. Below is the full path to the configuration file.</p>
-            <pre><code class="language-javascript">node_modules/@nycopportunity/nyco-patterns/config/tailwind.js</code></pre>
-            <h3 id="heading-production-distributions-and-purgecss">Production distributions and PurgeCSS</h3>
-            <p>It is highly recommended to use <a href="https://purgecss.com/">PurgeCSS</a> to analyze the classnames used in your static markup files to remove unused CSS classes in your stylesheet. The output of Tailwindcss produces a very large stylesheet with many utilities that won’t be used in your project. See the <a href="https://tailwindcss.com/docs/optimizing-for-production">Tailwindcss optimizing for production guide</a>.</p>
-          </div>
+          <div class="o-content mx-auto"></div>
         </div>
       </section>
-      <section class="mt-6" id="tailwindcss-ui">
+      <section class="mt-6" id="node_modules">
         <div class="layout-content px-4 pb-4">
-          <div class="o-content mx-auto">
-            <h2 id="heading-tailwind-ui">Tailwind UI</h2>
-            <p>
-              <em>Tailwind UI</em> is a secondary product from the creators of Tailwindcss. It includes some examples of <a href="https://tailwindui.com/components">complete components</a> built using the <strong>default</strong> Tailwindcss utility library. For the most part these examples could be built using the NYCO Patterns Tailwindcss implementation. There will be some differences in colors, drop shadows, type, dimensions, etc.
-            </p>
-            <p>Below are a examples of Tailwind UI components built using the NYCO Patterns.</p>
-          </div>
+          <div class="o-content mx-auto"></div>
         </div>
       </section>
       <section class="mt-6" id="tailwindcss-description-lists">

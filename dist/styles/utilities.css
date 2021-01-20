@@ -173,6 +173,7 @@ p, ul, ol {
   --nyco-code-secondary: #031553;
   --nyco-code-background: #F0F7FE;
   --nyco-code-border: #4157aa;
+  --nyco-card-background-color: #F0F7FE;
   /**
    * Base Colors
    */
@@ -320,6 +321,7 @@ p, ul, ol {
   --nyco-code-secondary: #031553;
   --nyco-code-background: #F0F7FE;
   --nyco-code-border: #4157aa;
+  --nyco-card-background-color: #F0F7FE;
   /**
    * Base Colors
    */
@@ -467,6 +469,7 @@ p, ul, ol {
   --nyco-code-secondary: #031553;
   --nyco-code-background: #F0F7FE;
   --nyco-code-border: #4157aa;
+  --nyco-card-background-color: #F0F7FE;
   /**
    * Base Colors
    */

@@ -8,10 +8,11 @@
 
 .c-card {
   position: relative;
+  border: 4px solid;
 }
 
 .c-card:hover {
-  background-color: #F3F3F3;
+  background-color: var(--nyco-card-background-color);
 }
 
 .c-card:hover .badge {
@@ -28,7 +29,7 @@
 }
 
 .badge {
-  background-color: #fbd9ff;
+  background-color: var(--nyco-card-background-color);
   padding: 10px;
   border-radius: 20px;
 }

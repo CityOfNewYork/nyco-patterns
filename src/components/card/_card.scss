@@ -11,9 +11,9 @@
 
 .c-card {
   position: relative;
-
+  border: 4px solid;
   &:hover {
-    background-color: $white;
+    background-color: var(--nyco-card-background-color);
   }
 
   &:hover .badge {
@@ -32,7 +32,7 @@
 }
 
 .badge {
-  background-color: $pink-50t;
+  background-color: var(--nyco-card-background-color);
   padding: 10px;
   border-radius: 20px;
 

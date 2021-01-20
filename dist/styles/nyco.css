@@ -2917,6 +2917,7 @@ p, ul, ol {
   --nyco-code-secondary: #031553;
   --nyco-code-background: #F0F7FE;
   --nyco-code-border: #4157aa;
+  --nyco-card-background-color: #F0F7FE;
   /**
    * Base Colors
    */
@@ -3064,6 +3065,7 @@ p, ul, ol {
   --nyco-code-secondary: #031553;
   --nyco-code-background: #F0F7FE;
   --nyco-code-border: #4157aa;
+  --nyco-card-background-color: #F0F7FE;
   /**
    * Base Colors
    */
@@ -3211,6 +3213,7 @@ p, ul, ol {
   --nyco-code-secondary: #031553;
   --nyco-code-background: #F0F7FE;
   --nyco-code-border: #4157aa;
+  --nyco-card-background-color: #F0F7FE;
   /**
    * Base Colors
    */
@@ -11512,10 +11515,11 @@ a, input, textarea, select, path, rect, .btn, .button {
 
 .c-card {
   position: relative;
+  border: 4px solid;
 }
 
 .c-card:hover {
-  background-color: #F3F3F3;
+  background-color: var(--nyco-card-background-color);
 }
 
 .c-card:hover .badge {
@@ -11532,7 +11536,7 @@ a, input, textarea, select, path, rect, .btn, .button {
 }
 
 .badge {
-  background-color: #fbd9ff;
+  background-color: var(--nyco-card-background-color);
   padding: 10px;
   border-radius: 20px;
 }

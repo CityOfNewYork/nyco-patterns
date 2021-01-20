@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
   <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
   <link href="styles/nyco.css" rel="stylesheet" />
-  <title>Charts | NYCO Patterns</title>
+  <title>Description Lists | NYCO Patterns</title>
   <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
@@ -162,94 +162,95 @@
     </aside>
     <article class="color-light-background py-6">
       <div class="px-4 desktop:px-6">
-        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Charts</h1>
+        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Description Lists</h1>
       </div>
-      <section class="mt-6" id="chart-bar">
+      <section class="mt-6" id="description-lists">
         <div class="layout-content px-4">
           <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-chart-bar">
+            <a class="flex no-underline" href="#heading-description-lists">
               <svg aria-hidden="true" class="icon-ui-anchor">
                 <use xlink:href="#icon-ui-anchor"></use>
               </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-chart-bar">bar chart</h2>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-description-lists">lists description</h2>
           </div>
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="bg-base-white px-2" data-js="chart-bar">
-              <nyco-chart-bar :chart-data="data" :options="options"></nyco-chart-bar>
-            </div>
+            <dl class="description-list">
+              <dt>Status</dt>
+              <dd>Active</dd>
+              <dt>Owner</dt>
+              <dd>The Mayor's Office of Information Privacy</dd>
+              <dt>Partner Agencies</dt>
+              <dd>Department of Homeless Services, Human Resources Administration, Administration for Child Services</dd>
+              <dt>Data Coverage</dt>
+              <dd>1/9/2010 - Current</dd>
+              <dt>Agreement History</dt>
+              <dd>1/9/2010 - Current</dd>
+            </dl>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-bar&quot;&gt;
-  &lt;nyco-chart-bar :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-bar&gt;
-&lt;/div&gt;</pre>
-            </div>
-            <p>All chart source can be found here: <code>src/objects/charts/</code>.</p>
-            <p>For a full list of customization options check the <a href="https://www.chartjs.org/docs/latest/charts/">Chart.js</a> documentation.</p>
-          </div>
-        </div>
-      </section>
-      <section class="mt-6" id="chart-horizontal-bar">
-        <div class="layout-content px-4">
-          <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-chart-horizontal-bar">
-              <svg aria-hidden="true" class="icon-ui-anchor">
-                <use xlink:href="#icon-ui-anchor"></use>
-              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-chart-horizontal-bar">horizontal bar chart</h2>
-          </div>
-        </div>
-        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
-          <div class="layout-wrap mx-auto flex justify-center">
-            <div class="bg-base-white px-2" data-js="chart-horizontal-bar">
-              <nyco-chart-horizontal-bar :chart-data="data" :options="options"></nyco-chart-horizontal-bar>
-            </div>
-          </div>
-        </div>
-        <div class="layout-content px-4 pb-4">
-          <div class="o-content mx-auto">
-            <div class="code-block">
-              <pre>&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-horizontal-bar&quot;&gt;
-  &lt;nyco-chart-horizontal-bar :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-horizontal-bar&gt;
-&lt;/div&gt;</pre>
+              <pre>&lt;dl class=&quot;description-list&quot;&gt;
+  &lt;dt&gt;Status&lt;/dt&gt;
+  &lt;dd&gt;Active&lt;/dd&gt;
+  &lt;dt&gt;Owner&lt;/dt&gt;
+  &lt;dd&gt;The Mayor's Office of Information Privacy&lt;/dd&gt;
+  &lt;dt&gt;Partner Agencies&lt;/dt&gt;
+  &lt;dd&gt;Department of Homeless Services, Human Resources Administration, Administration for Child Services&lt;/dd&gt;
+  &lt;dt&gt;Data Coverage&lt;/dt&gt;
+  &lt;dd&gt;1/9/2010 - Current&lt;/dd&gt;
+  &lt;dt&gt;Agreement History&lt;/dt&gt;
+  &lt;dd&gt;1/9/2010 - Current&lt;/dd&gt;
+&lt;/dl&gt;</pre>
             </div>
           </div>
         </div>
       </section>
-      <section class="mt-6" id="chart-line">
+      <section class="mt-6" id="description-lists-bordered">
         <div class="layout-content px-4">
           <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-chart-line">
+            <a class="flex no-underline" href="#heading-description-lists-bordered">
               <svg aria-hidden="true" class="icon-ui-anchor">
                 <use xlink:href="#icon-ui-anchor"></use>
               </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-chart-line">line chart</h2>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-description-lists-bordered">lists bordered description</h2>
           </div>
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="bg-base-white" data-js="chart-line">
-              <nyco-chart-line :chart-data="data" :options="options"></nyco-chart-line>
-            </div>
+            <dl class="description-list description-list-bordered">
+              <dt>Status</dt>
+              <dd>Active</dd>
+              <dt>Owner</dt>
+              <dd>The Mayor's Office of Information Privacy</dd>
+              <dt>Partner Agencies</dt>
+              <dd>Department of Homeless Services, Human Resources Administration, Administration for Child Services</dd>
+              <dt>Data Coverage</dt>
+              <dd>1/9/2010 - Current</dd>
+              <dt>Agreement History</dt>
+              <dd>1/9/2010 - Current</dd>
+            </dl>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;div class=&quot;bg-base-white&quot; data-js=&quot;chart-line&quot;&gt;
-  &lt;nyco-chart-line :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-line&gt;
-&lt;/div&gt;</pre>
+              <pre>&lt;dl class=&quot;description-list description-list-bordered&quot;&gt;
+  &lt;dt&gt;Status&lt;/dt&gt;
+  &lt;dd&gt;Active&lt;/dd&gt;
+  &lt;dt&gt;Owner&lt;/dt&gt;
+  &lt;dd&gt;The Mayor's Office of Information Privacy&lt;/dd&gt;
+  &lt;dt&gt;Partner Agencies&lt;/dt&gt;
+  &lt;dd&gt;Department of Homeless Services, Human Resources Administration, Administration for Child Services&lt;/dd&gt;
+  &lt;dt&gt;Data Coverage&lt;/dt&gt;
+  &lt;dd&gt;1/9/2010 - Current&lt;/dd&gt;
+  &lt;dt&gt;Agreement History&lt;/dt&gt;
+  &lt;dd&gt;1/9/2010 - Current&lt;/dd&gt;
+&lt;/dl&gt;</pre>
             </div>
-            <p>To achieve a smooth line, set the following properties in the dataset object:</p>
-            <pre><code>pointBackgroundColor: &#39;transparent&#39;,
-pointBackgroundColor: &#39;transparent&#39;,
-pointBorderColor: &#39;transparent&#39;,
-lineTension: 0,</code></pre>
-            <p>Additional configuration options are viewable on <a href="https://www.chartjs.org/docs/latest/charts/line.html">Chart.js</a>.</p>
           </div>
         </div>
       </section>
@@ -294,12 +295,6 @@ lineTension: 0,</code></pre>
     nyco.copy();
     nyco.icons();
     nyco.toggle();
-  </script>
-  <script type="text/javascript">
-    nyco.chart('bar');
-    nyco.chart('horizontalBar');
-    nyco.chart('line');
-    // nyco.chart('pie');
   </script>
   <script src="/reload/reload.js"></script>
 </body>
