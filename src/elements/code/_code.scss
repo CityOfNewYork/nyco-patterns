@@ -16,8 +16,6 @@ code, pre, .hljs {
 
 p code, li code {
   @include code-inline();
-
-  padding: 0 0.3em 0.1em;
 }
 
 pre {
@@ -57,6 +55,8 @@ pre {
     margin: 0;
     padding: 16px;
     border: none;
+
+    max-height: 80vh;
   }
 
   code {

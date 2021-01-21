@@ -16,6 +16,9 @@
 
   pre {
     @include code-block;
+
+    overflow: auto;
+    max-height: 80vh;
   }
 
   table {

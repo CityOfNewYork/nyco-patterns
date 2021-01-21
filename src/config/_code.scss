@@ -3,6 +3,7 @@
 @import 'config/tokens';
 
 $colors: map-get($tokens, 'colors');
+$grid: map-get($tokens, 'grid');
 $borderWidth: map-get(map-get($tokens, 'borderWidth'), 'DEFAULT');
 $borderRadius: map-get(map-get($tokens, 'borderRadius'), 'DEFAULT');
 
@@ -20,7 +21,7 @@ $borderRadius: map-get(map-get($tokens, 'borderRadius'), 'DEFAULT');
   border-radius: $borderRadius;
   border-style: solid;
 
-  padding: 0 0.3em;
+  padding: .1em .3em;
 }
 
 @mixin code-block() {
@@ -28,10 +29,9 @@ $borderRadius: map-get(map-get($tokens, 'borderRadius'), 'DEFAULT');
 
   display: block;
   max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
+  overflow: auto;
 
-  padding: 16px 16px;
+  padding: $grid * 3;
 }
 
 @mixin code-inline() {
@@ -40,6 +40,7 @@ $borderRadius: map-get(map-get($tokens, 'borderRadius'), 'DEFAULT');
   letter-spacing: 0.01em;
 
   border-radius: 3px;
+  border-width: 1px;
   margin: 0;
   display: inline;
 }
