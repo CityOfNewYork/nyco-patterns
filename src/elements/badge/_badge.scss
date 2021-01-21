@@ -1,0 +1,17 @@
+/**
+ * Badge
+ */
+
+// Dependencies
+@import 'config/tokens';
+// @import 'config/badge';
+
+$grid: map-get($tokens, 'grid');
+
+// Declarations
+.badge {
+  display: inline-block;
+  padding: $grid ($grid * 2);
+  border-radius: 20px;
+  background-color: var(--nyco-card-background-color);
+}
