@@ -1,10 +1,8 @@
-/
- / input search
-/
+/ input search
 
-div class="input-search"
-  input id="search-field" name="s" placeholder="Search" type="text" value=""
-  button class="input-search__submit" type="submit"
-    svg class="icon icon-ui-search"
-      use xlink:href="#icon-ui-search"
+form class='input-search'
+  input id='search-field' placeholder='Search' type='text' name='s'
 
+  button class='input__btn' type='submit'
+    svg class='icon icon-ui'
+      use xlink:href='#feather-search'
