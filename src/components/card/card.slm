@@ -6,11 +6,8 @@ article class='c-card hover:shadow-up'
       | Agreement Name
 
     mark class='badge flex items-center'
-      svg class='icon-ui text-green' aria-hidden='true'
+      svg class='icon-ui text-green mie-1' aria-hidden='true'
         use xlink:href='#feather-pen-tool'
-
-      | &nbsp;
-      | &nbsp;
 
       | Agreement
 
