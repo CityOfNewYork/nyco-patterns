@@ -5,7 +5,6 @@
     a tabindex=navTabindex class='${classNavLink}' href='about' About the Patterns
     a tabindex=navTabindex class='${classNavLink}' href='prototyping' Prototyping
 
-  nav class='${classNav}'
     span class='${classNavLinkHeader}' Elements
     a tabindex=navTabindex class='${classNavLink}' href='buttons' Buttons
     a tabindex=navTabindex class='${classNavLink}' href='checkboxes' Checkboxes
