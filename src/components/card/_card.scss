@@ -1,0 +1,64 @@
+/**
+ * Card
+ */
+
+// Dependencies
+@import 'config/tokens';
+@import 'config/colors';
+@import 'config/type';
+
+$grid: map-get($tokens, 'grid');
+
+.c-card {
+  position: relative;
+  border: 4px solid;
+  padding: $grid * 4;
+
+  &:hover {
+    background-color: var(--nyco-card-background-color);
+  }
+
+  &:hover .badge {
+    background-color: var(--nyco-background-color);
+  }
+}
+
+.c-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $grid * 3;
+}
+
+.c-card__title {
+  @include type('h4');
+  margin-bottom: 0;
+}
+
+.c-card__body {
+  margin-bottom: $grid * 5
+}
+
+.c-card__description-list {
+  @include type('small');
+  display: grid;
+  grid-template-columns: ($grid * 10) 1fr;
+
+  dt, dd {
+    margin-bottom: $grid
+  }
+
+  dt {
+    color: var(--nyco-placeholder);
+    margin-inline-end: $grid
+  }
+}
+
+.c-card__cta {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}

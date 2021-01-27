@@ -73,6 +73,7 @@ const colors = {
   'colorCombinations': {
     'light-background': {
       'color': 'base-black',
+      'color-alt': 'grey',
       'headings': 'base-black',
       'hyperlinks': 'blue',
       'visited': 'blue',
@@ -93,6 +94,7 @@ const colors = {
     },
     'mid-background': {
       'color': 'base-black',
+      'color-alt': 'grey',
       'headings': 'base-black',
       'hyperlinks': 'blue',
       'visited': 'blue',
@@ -114,6 +116,7 @@ const colors = {
     },
     'dark-background': {
       'color': 'base-white',
+      'color-alt': 'navy-50t',
       'font-smooth': true,
       'headings': 'base-white',
       'hyperlinks': 'base-white',

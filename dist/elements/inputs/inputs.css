@@ -6,9 +6,10 @@ input, textarea {
   appearance: none;
   color: inherit;
   font-size: inherit;
+  font-family: inherit;
   border-width: 1px;
   border-style: solid;
-  border-radius: 1px;
+  border-radius: 2px;
   display: block;
   max-width: 100%;
   min-width: 200px;
@@ -79,16 +80,17 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   text-align: left;
   margin-top: 1px;
   z-index: 1;
-  box-shadow: 8px 8px 0px 0px;
+  box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color);
 }
 
 .input-autocomplete__dropdown > ul > li {
   appearance: none;
   color: inherit;
   font-size: inherit;
+  font-family: inherit;
   border-width: 1px;
   border-style: solid;
-  border-radius: 1px;
+  border-radius: 2px;
   display: block;
   max-width: 100%;
   min-width: 200px;

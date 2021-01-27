@@ -1,0 +1,21 @@
+section class='c-record-hero'
+  div class='c-record-hero__body'
+    header class='c-record-hero__header'
+      h2
+        svg class='icon-ui mie-1' aria-hidden='true'
+          use xlink:href='#feather-user'
+
+        | Record Name
+
+    div class='c-record-hero__details'
+      dl class='c-record-hero__description-list grid grid-cols-3'
+        dt Detail 1
+        dd class='col-span-2 mb-0' Detail Value 1
+
+        dt Address
+        dd class='col-span-2 mb-0' 1111 Street, Fl, New York, NY
+
+        dt Last Updated
+        dd class='col-span-2 mb-0' August 25, 2020
+
+    p This is a description of the record you are viewing.

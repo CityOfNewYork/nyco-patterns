@@ -1,157 +1,104 @@
-.table table,
-table {
-  max-width: 100%;
-  min-width: 100%;
-}
-
-.table table thead,
-table thead {
-  color: #FFFFFF;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border-bottom: 1px solid #1642DF;
-}
-
-.table table thead tr,
-table thead tr {
-  background-color: #1642DF;
-}
-
-.table table tbody tr:nth-child(odd),
-table tbody tr:nth-child(odd) {
-  background-color: #F3F3F3;
-}
-
-.table table th,
-table th {
-  vertical-align: top;
-}
-
-.table table th, .table table td, .table table caption,
-table th,
-table td,
-table caption {
-  padding: 8px 16px;
-}
-
-.table table code, .table table pre,
-table code,
-table pre {
-  font-size: 85%;
-  font-family: inherit;
-  letter-spacing: 0.01em;
-  border-radius: 3px;
-  margin: 0;
-  display: inline;
-}
-
-.table table pre,
-table pre {
-  color: #fc5d52;
-  display: block;
-  max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-  padding: 16px 16px;
-}
-
-.table table, [class*=table--] table {
-  max-width: 100%;
-  min-width: 100%;
-}
-
-.table table thead, [class*=table--] table thead {
-  color: #FFFFFF;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border-bottom: 1px solid #1642DF;
-}
-
-.table table thead tr, [class*=table--] table thead tr {
-  background-color: #1642DF;
-}
-
-.table table tbody tr:nth-child(odd), [class*=table--] table tbody tr:nth-child(odd) {
-  background-color: #F3F3F3;
-}
-
-.table table th, [class*=table--] table th {
-  vertical-align: top;
-}
-
-.table table th, .table table td, .table table caption, [class*=table--] table th, [class*=table--] table td, [class*=table--] table caption {
-  padding: 8px 16px;
-}
-
-.table table code, .table table pre, [class*=table--] table code, [class*=table--] table pre {
-  font-size: 85%;
-  font-family: inherit;
-  letter-spacing: 0.01em;
-  border-radius: 3px;
-  margin: 0;
-  display: inline;
-}
-
-.table table pre, [class*=table--] table pre {
-  color: #fc5d52;
-  display: block;
-  max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-  padding: 16px 16px;
-}
-
-.table--singular table,
-.table--singular-caption table {
+.table, [class*=table-] {
   width: 100%;
-  border-spacing: inherit;
+  border-collapse: collapse;
 }
 
-.table--singular table tbody tr:nth-child(odd),
-.table--singular-caption table tbody tr:nth-child(odd) {
+.table thead tr, [class*=table-] thead tr {
+  background-color: #F9F9FA;
+}
+
+.table tbody tr:nth-child(odd), [class*=table-] tbody tr:nth-child(odd) {
   background-color: #FFFFFF;
 }
 
-.table--singular-caption table {
+.table tbody tr:nth-child(even), [class*=table-] tbody tr:nth-child(even) {
+  background-color: #F9F9FA;
+}
+
+.table th, [class*=table-] th {
+  vertical-align: top;
+}
+
+.table th, .table td, .table caption, [class*=table-] th, [class*=table-] td, [class*=table-] caption {
+  padding: 16px 24px;
+}
+
+.table caption, [class*=table-] caption {
+  font-size: 0.833em;
+  font-style: italic;
+  background-color: #F3F3F3;
+  padding: 8px 24px;
+}
+
+.table code, .table pre, [class*=table-] code, [class*=table-] pre {
+  font-size: 85%;
+  font-family: inherit;
+  letter-spacing: 0.01em;
+  border-radius: 3px;
+  margin: 0;
+  display: inline;
+}
+
+.table pre, [class*=table-] pre {
+  color: var(--nyco-code-primary);
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  padding: 16px 16px;
+}
+
+.table-bordered thead tr:nth-child(n),
+.table-bordered tbody tr:nth-child(n) {
+  background-color: transparent;
+}
+
+.table-bordered tr {
+  border-bottom: 1px solid #e6e8ec;
+}
+
+.caption-side-bottom {
   caption-side: bottom;
 }
 
-.table--singular-caption table caption {
-  background-color: #F3F3F3;
-  color: #031553;
-  font-size: 0.8em;
+.cell-padding {
+  padding: 16px 24px;
 }
 
 @media (min-width: 400px) {
-  .small\:table table, [class*="small:table--"] table {
-    max-width: 100%;
-    min-width: 100%;
+  .small\:table, [class*="small:table-"] {
+    width: 100%;
+    border-collapse: collapse;
   }
 
-  .small\:table table thead, [class*="small:table--"] table thead {
-    color: #FFFFFF;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #1642DF;
+  .small\:table thead tr, [class*="small:table-"] thead tr {
+    background-color: #F9F9FA;
   }
 
-  .small\:table table thead tr, [class*="small:table--"] table thead tr {
-    background-color: #1642DF;
+  .small\:table tbody tr:nth-child(odd), [class*="small:table-"] tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
   }
 
-  .small\:table table tbody tr:nth-child(odd), [class*="small:table--"] table tbody tr:nth-child(odd) {
-    background-color: #F3F3F3;
+  .small\:table tbody tr:nth-child(even), [class*="small:table-"] tbody tr:nth-child(even) {
+    background-color: #F9F9FA;
   }
 
-  .small\:table table th, [class*="small:table--"] table th {
+  .small\:table th, [class*="small:table-"] th {
     vertical-align: top;
   }
 
-  .small\:table table th, .small\:table table td, .small\:table table caption, [class*="small:table--"] table th, [class*="small:table--"] table td, [class*="small:table--"] table caption {
-    padding: 8px 16px;
+  .small\:table th, .small\:table td, .small\:table caption, [class*="small:table-"] th, [class*="small:table-"] td, [class*="small:table-"] caption {
+    padding: 16px 24px;
   }
 
-  .small\:table table code, .small\:table table pre, [class*="small:table--"] table code, [class*="small:table--"] table pre {
+  .small\:table caption, [class*="small:table-"] caption {
+    font-size: 0.833em;
+    font-style: italic;
+    background-color: #F3F3F3;
+    padding: 8px 24px;
+  }
+
+  .small\:table code, .small\:table pre, [class*="small:table-"] code, [class*="small:table-"] pre {
     font-size: 85%;
     font-family: inherit;
     letter-spacing: 0.01em;
@@ -160,8 +107,8 @@ table pre {
     display: inline;
   }
 
-  .small\:table table pre, [class*="small:table--"] table pre {
-    color: #fc5d52;
+  .small\:table pre, [class*="small:table-"] pre {
+    color: var(--nyco-code-primary);
     display: block;
     max-width: 100%;
     overflow: hidden;
@@ -169,58 +116,58 @@ table pre {
     padding: 16px 16px;
   }
 
-  .small\:table--singular table,
-.small\:table--singular-caption table {
-    width: 100%;
-    border-spacing: inherit;
+  .small\:table-bordered thead tr:nth-child(n),
+.small\:table-bordered tbody tr:nth-child(n) {
+    background-color: transparent;
   }
 
-  .small\:table--singular table tbody tr:nth-child(odd),
-.small\:table--singular-caption table tbody tr:nth-child(odd) {
-    background-color: #FFFFFF;
+  .small\:table-bordered tr {
+    border-bottom: 1px solid #e6e8ec;
   }
 
-  .small\:table--singular-caption table {
+  .small\:caption-side-bottom {
     caption-side: bottom;
   }
 
-  .small\:table--singular-caption table caption {
-    background-color: #F3F3F3;
-    color: #031553;
-    font-size: 0.8em;
+  .small\:cell-padding {
+    padding: 16px 24px;
   }
 }
 
 @media (min-width: 480px) {
-  .mobile\:table table, [class*="mobile:table--"] table {
-    max-width: 100%;
-    min-width: 100%;
+  .mobile\:table, [class*="mobile:table-"] {
+    width: 100%;
+    border-collapse: collapse;
   }
 
-  .mobile\:table table thead, [class*="mobile:table--"] table thead {
-    color: #FFFFFF;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #1642DF;
+  .mobile\:table thead tr, [class*="mobile:table-"] thead tr {
+    background-color: #F9F9FA;
   }
 
-  .mobile\:table table thead tr, [class*="mobile:table--"] table thead tr {
-    background-color: #1642DF;
+  .mobile\:table tbody tr:nth-child(odd), [class*="mobile:table-"] tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
   }
 
-  .mobile\:table table tbody tr:nth-child(odd), [class*="mobile:table--"] table tbody tr:nth-child(odd) {
-    background-color: #F3F3F3;
+  .mobile\:table tbody tr:nth-child(even), [class*="mobile:table-"] tbody tr:nth-child(even) {
+    background-color: #F9F9FA;
   }
 
-  .mobile\:table table th, [class*="mobile:table--"] table th {
+  .mobile\:table th, [class*="mobile:table-"] th {
     vertical-align: top;
   }
 
-  .mobile\:table table th, .mobile\:table table td, .mobile\:table table caption, [class*="mobile:table--"] table th, [class*="mobile:table--"] table td, [class*="mobile:table--"] table caption {
-    padding: 8px 16px;
+  .mobile\:table th, .mobile\:table td, .mobile\:table caption, [class*="mobile:table-"] th, [class*="mobile:table-"] td, [class*="mobile:table-"] caption {
+    padding: 16px 24px;
   }
 
-  .mobile\:table table code, .mobile\:table table pre, [class*="mobile:table--"] table code, [class*="mobile:table--"] table pre {
+  .mobile\:table caption, [class*="mobile:table-"] caption {
+    font-size: 0.833em;
+    font-style: italic;
+    background-color: #F3F3F3;
+    padding: 8px 24px;
+  }
+
+  .mobile\:table code, .mobile\:table pre, [class*="mobile:table-"] code, [class*="mobile:table-"] pre {
     font-size: 85%;
     font-family: inherit;
     letter-spacing: 0.01em;
@@ -229,8 +176,8 @@ table pre {
     display: inline;
   }
 
-  .mobile\:table table pre, [class*="mobile:table--"] table pre {
-    color: #fc5d52;
+  .mobile\:table pre, [class*="mobile:table-"] pre {
+    color: var(--nyco-code-primary);
     display: block;
     max-width: 100%;
     overflow: hidden;
@@ -238,58 +185,58 @@ table pre {
     padding: 16px 16px;
   }
 
-  .mobile\:table--singular table,
-.mobile\:table--singular-caption table {
-    width: 100%;
-    border-spacing: inherit;
+  .mobile\:table-bordered thead tr:nth-child(n),
+.mobile\:table-bordered tbody tr:nth-child(n) {
+    background-color: transparent;
   }
 
-  .mobile\:table--singular table tbody tr:nth-child(odd),
-.mobile\:table--singular-caption table tbody tr:nth-child(odd) {
-    background-color: #FFFFFF;
+  .mobile\:table-bordered tr {
+    border-bottom: 1px solid #e6e8ec;
   }
 
-  .mobile\:table--singular-caption table {
+  .mobile\:caption-side-bottom {
     caption-side: bottom;
   }
 
-  .mobile\:table--singular-caption table caption {
-    background-color: #F3F3F3;
-    color: #031553;
-    font-size: 0.8em;
+  .mobile\:cell-padding {
+    padding: 16px 24px;
   }
 }
 
 @media (min-width: 768px) {
-  .tablet\:table table, [class*="tablet:table--"] table {
-    max-width: 100%;
-    min-width: 100%;
+  .tablet\:table, [class*="tablet:table-"] {
+    width: 100%;
+    border-collapse: collapse;
   }
 
-  .tablet\:table table thead, [class*="tablet:table--"] table thead {
-    color: #FFFFFF;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #1642DF;
+  .tablet\:table thead tr, [class*="tablet:table-"] thead tr {
+    background-color: #F9F9FA;
   }
 
-  .tablet\:table table thead tr, [class*="tablet:table--"] table thead tr {
-    background-color: #1642DF;
+  .tablet\:table tbody tr:nth-child(odd), [class*="tablet:table-"] tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
   }
 
-  .tablet\:table table tbody tr:nth-child(odd), [class*="tablet:table--"] table tbody tr:nth-child(odd) {
-    background-color: #F3F3F3;
+  .tablet\:table tbody tr:nth-child(even), [class*="tablet:table-"] tbody tr:nth-child(even) {
+    background-color: #F9F9FA;
   }
 
-  .tablet\:table table th, [class*="tablet:table--"] table th {
+  .tablet\:table th, [class*="tablet:table-"] th {
     vertical-align: top;
   }
 
-  .tablet\:table table th, .tablet\:table table td, .tablet\:table table caption, [class*="tablet:table--"] table th, [class*="tablet:table--"] table td, [class*="tablet:table--"] table caption {
-    padding: 8px 16px;
+  .tablet\:table th, .tablet\:table td, .tablet\:table caption, [class*="tablet:table-"] th, [class*="tablet:table-"] td, [class*="tablet:table-"] caption {
+    padding: 16px 24px;
   }
 
-  .tablet\:table table code, .tablet\:table table pre, [class*="tablet:table--"] table code, [class*="tablet:table--"] table pre {
+  .tablet\:table caption, [class*="tablet:table-"] caption {
+    font-size: 0.833em;
+    font-style: italic;
+    background-color: #F3F3F3;
+    padding: 8px 24px;
+  }
+
+  .tablet\:table code, .tablet\:table pre, [class*="tablet:table-"] code, [class*="tablet:table-"] pre {
     font-size: 85%;
     font-family: inherit;
     letter-spacing: 0.01em;
@@ -298,8 +245,8 @@ table pre {
     display: inline;
   }
 
-  .tablet\:table table pre, [class*="tablet:table--"] table pre {
-    color: #fc5d52;
+  .tablet\:table pre, [class*="tablet:table-"] pre {
+    color: var(--nyco-code-primary);
     display: block;
     max-width: 100%;
     overflow: hidden;
@@ -307,58 +254,58 @@ table pre {
     padding: 16px 16px;
   }
 
-  .tablet\:table--singular table,
-.tablet\:table--singular-caption table {
-    width: 100%;
-    border-spacing: inherit;
+  .tablet\:table-bordered thead tr:nth-child(n),
+.tablet\:table-bordered tbody tr:nth-child(n) {
+    background-color: transparent;
   }
 
-  .tablet\:table--singular table tbody tr:nth-child(odd),
-.tablet\:table--singular-caption table tbody tr:nth-child(odd) {
-    background-color: #FFFFFF;
+  .tablet\:table-bordered tr {
+    border-bottom: 1px solid #e6e8ec;
   }
 
-  .tablet\:table--singular-caption table {
+  .tablet\:caption-side-bottom {
     caption-side: bottom;
   }
 
-  .tablet\:table--singular-caption table caption {
-    background-color: #F3F3F3;
-    color: #031553;
-    font-size: 0.8em;
+  .tablet\:cell-padding {
+    padding: 16px 24px;
   }
 }
 
 @media (min-width: 960px) {
-  .desktop\:table table, [class*="desktop:table--"] table {
-    max-width: 100%;
-    min-width: 100%;
+  .desktop\:table, [class*="desktop:table-"] {
+    width: 100%;
+    border-collapse: collapse;
   }
 
-  .desktop\:table table thead, [class*="desktop:table--"] table thead {
-    color: #FFFFFF;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    border-bottom: 1px solid #1642DF;
+  .desktop\:table thead tr, [class*="desktop:table-"] thead tr {
+    background-color: #F9F9FA;
   }
 
-  .desktop\:table table thead tr, [class*="desktop:table--"] table thead tr {
-    background-color: #1642DF;
+  .desktop\:table tbody tr:nth-child(odd), [class*="desktop:table-"] tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
   }
 
-  .desktop\:table table tbody tr:nth-child(odd), [class*="desktop:table--"] table tbody tr:nth-child(odd) {
-    background-color: #F3F3F3;
+  .desktop\:table tbody tr:nth-child(even), [class*="desktop:table-"] tbody tr:nth-child(even) {
+    background-color: #F9F9FA;
   }
 
-  .desktop\:table table th, [class*="desktop:table--"] table th {
+  .desktop\:table th, [class*="desktop:table-"] th {
     vertical-align: top;
   }
 
-  .desktop\:table table th, .desktop\:table table td, .desktop\:table table caption, [class*="desktop:table--"] table th, [class*="desktop:table--"] table td, [class*="desktop:table--"] table caption {
-    padding: 8px 16px;
+  .desktop\:table th, .desktop\:table td, .desktop\:table caption, [class*="desktop:table-"] th, [class*="desktop:table-"] td, [class*="desktop:table-"] caption {
+    padding: 16px 24px;
   }
 
-  .desktop\:table table code, .desktop\:table table pre, [class*="desktop:table--"] table code, [class*="desktop:table--"] table pre {
+  .desktop\:table caption, [class*="desktop:table-"] caption {
+    font-size: 0.833em;
+    font-style: italic;
+    background-color: #F3F3F3;
+    padding: 8px 24px;
+  }
+
+  .desktop\:table code, .desktop\:table pre, [class*="desktop:table-"] code, [class*="desktop:table-"] pre {
     font-size: 85%;
     font-family: inherit;
     letter-spacing: 0.01em;
@@ -367,8 +314,8 @@ table pre {
     display: inline;
   }
 
-  .desktop\:table table pre, [class*="desktop:table--"] table pre {
-    color: #fc5d52;
+  .desktop\:table pre, [class*="desktop:table-"] pre {
+    color: var(--nyco-code-primary);
     display: block;
     max-width: 100%;
     overflow: hidden;
@@ -376,24 +323,20 @@ table pre {
     padding: 16px 16px;
   }
 
-  .desktop\:table--singular table,
-.desktop\:table--singular-caption table {
-    width: 100%;
-    border-spacing: inherit;
+  .desktop\:table-bordered thead tr:nth-child(n),
+.desktop\:table-bordered tbody tr:nth-child(n) {
+    background-color: transparent;
   }
 
-  .desktop\:table--singular table tbody tr:nth-child(odd),
-.desktop\:table--singular-caption table tbody tr:nth-child(odd) {
-    background-color: #FFFFFF;
+  .desktop\:table-bordered tr {
+    border-bottom: 1px solid #e6e8ec;
   }
 
-  .desktop\:table--singular-caption table {
+  .desktop\:caption-side-bottom {
     caption-side: bottom;
   }
 
-  .desktop\:table--singular-caption table caption {
-    background-color: #F3F3F3;
-    color: #031553;
-    font-size: 0.8em;
+  .desktop\:cell-padding {
+    padding: 16px 24px;
   }
 }

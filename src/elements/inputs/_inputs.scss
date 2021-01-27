@@ -6,21 +6,26 @@
 @import 'config/tokens';
 @import 'config/animate';
 @import 'config/inputs';
+@import 'config/grid';
 
 // Declarations
 input, textarea {
   @include inputs;
 }
 
+/**
+ * Currency Input
+ */
+
 .input-currency-usd {
   position: relative;
 
   input {
-    padding-left: map-get($tokens, 'grid') * 3
+    padding-left: $grid * 3
   }
 
   &::after {
-    @include input-currency-icon;
+    @include inputs-currency-icon;
     content: '$';
     text-align: left;
     position: absolute;
@@ -31,6 +36,10 @@ input, textarea {
     pointer-events: none;
   }
 }
+
+/**
+ * Number Input
+ */
 
 input[type='number'] {
   appearance: textfield;
@@ -55,7 +64,7 @@ input[type='number'] {
 }
 
 .input-autocomplete__dropdown > ul {
-  background: map-get(map-get($tokens, 'colors'), 'base-white');;
+  background: map-get(map-get($tokens, 'colors'), 'base-white');
   color: map-get(map-get($tokens, 'colors'), 'base-black');
 
   position: absolute;
@@ -78,10 +87,49 @@ input[type='number'] {
 .input-autocomplete__dropdown > ul > li {
   @include inputs;
   @include transition;
+
   cursor: pointer;
   border: transparent;
 }
 
 .input-autocomplete__dropdown > ul > .input-autocomplete__highlight {
   background-color: map-get(map-get($tokens, 'colors'), 'grey-50t');
+}
+
+/**
+ * Search Input
+ */
+
+.input-search {
+  position: relative;
+
+  input {
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+  }
+}
+
+/**
+ * Input Button
+ */
+
+.input__btn {
+  @include inputs-btn();
+
+  position: absolute;
+
+  right: $inputs-padding;
+  top: 50%;
+  margin-top: -($inputs-btn-dimension / 2);
+}
+
+.input__btn-large {
+  @include inputs-btn-large();
+
+  position: absolute;
+
+  right: $inputs-padding;
+  top: 50%;
+  margin-top: -($inputs-btn-dimension-large / 2);
 }

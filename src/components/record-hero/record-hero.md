@@ -1,0 +1,1 @@
+The Record Hero Component can be used as a heading index card that describes a data record or data set in an application.

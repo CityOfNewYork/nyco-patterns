@@ -17,6 +17,8 @@ $blue: map-get($colors, blue);
 $blue-70t: map-get($colors, 'blue-70t');
 $blue-50t: map-get($colors, 'blue-50t');
 $blue-30t: map-get($colors, 'blue-30t');
+$blue-20t: map-get($colors, 'blue-20t');
+$blue-10t: map-get($colors, 'blue-10t');
 
 $red: map-get($colors, 'red');
 $red-70t: map-get($colors, 'red-70t');
@@ -51,6 +53,7 @@ $base-white: map-get($colors, 'base-white');
 @mixin combination($selector, $combination, $b, $smoothing: false) {
   // Get the namespace for the color (not the value)
   $color: map-get($combination, 'color');
+  $color-alt: map-get($combination, 'color-alt');
   $headings: map-get($combination, 'headings');
   $background: map-get($combination, 'background-color');
 
@@ -78,6 +81,7 @@ $base-white: map-get($colors, 'base-white');
   $code-border: map-get($combination, 'code-border');
 
   --nyco-color: #{map-get($colors, $color)};
+  --nyco-color-alt: #{map-get($colors, $color-alt)};
   --nyco-font-smooth: #{$smoothing};
   --nyco-font-weight: #{map-get($combination, 'font-weight')};
   --nyco-headings: #{map-get($colors, $headings)};
@@ -101,6 +105,11 @@ $base-white: map-get($colors, 'base-white');
   --nyco-code-secondary: #{map-get($colors, $code-secondary)};
   --nyco-code-background: #{map-get($colors, $code-background)};
   --nyco-code-border: #{map-get($colors, $code-border)};
+
+  --nyco-card-background-color: #{map-get($colors, 'blue-10t')};
+  --nyco-record_hero-background-color: #{map-get($colors, 'blue-20t')};
+
+
 
   /**
    * Base Colors

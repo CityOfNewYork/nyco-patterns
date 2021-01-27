@@ -3,6 +3,7 @@
  */
 
 const tokens = require('./tokens.js');
+const logical = require('tailwindcss-logical');
 
 /**
  * Config
@@ -41,6 +42,9 @@ module.exports = {
       'auto': 'auto'
     }
   },
+  plugins: [
+    logical
+  ],
   variants: {
     // preflight: [],
     // container: [],
@@ -108,6 +112,7 @@ module.exports = {
     lineHeight: [],
     listStylePosition: [],
     listStyleType: [],
+    logical: ['responsive'],
     margin: ['responsive'],
     maxHeight: [],
     maxWidth: ['responsive'],

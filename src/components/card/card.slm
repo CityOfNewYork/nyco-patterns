@@ -1,0 +1,25 @@
+/ Card
+
+article class='c-card hover:shadow-up'
+  header class='c-card__header'
+    h2 class='c-card__title'
+      | Agreement Name
+
+    mark class='badge flex items-center'
+      svg class='icon-ui text-green mie-1' aria-hidden='true'
+        use xlink:href='#feather-pen-tool'
+
+      | Agreement
+
+  div class='c-card__body'
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  footer class='c-card__footer'
+    dl class='c-card__description-list'
+      dt Data Owner
+      dd Department Name
+
+      dt Active Date
+      dd June 25, 2020 - Today
+
+  a class='c-card__cta' href='#'
