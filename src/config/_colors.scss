@@ -53,6 +53,7 @@ $base-white: map-get($colors, 'base-white');
 @mixin combination($selector, $combination, $b, $smoothing: false) {
   // Get the namespace for the color (not the value)
   $color: map-get($combination, 'color');
+  $color-alt: map-get($combination, 'color-alt');
   $headings: map-get($combination, 'headings');
   $background: map-get($combination, 'background-color');
 
@@ -80,6 +81,7 @@ $base-white: map-get($colors, 'base-white');
   $code-border: map-get($combination, 'code-border');
 
   --nyco-color: #{map-get($colors, $color)};
+  --nyco-color-alt: #{map-get($colors, $color-alt)};
   --nyco-font-smooth: #{$smoothing};
   --nyco-font-weight: #{map-get($combination, 'font-weight')};
   --nyco-headings: #{map-get($colors, $headings)};
