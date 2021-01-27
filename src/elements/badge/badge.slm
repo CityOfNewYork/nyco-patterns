@@ -1,6 +1,6 @@
 / Badge
 
-mark class='badge flex items-center'
+mark class='badge'
   svg class='icon-ui mie-1 text-green' aria-hidden='true'
     use xlink:href='#feather-pen-tool'
 
