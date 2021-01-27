@@ -9,45 +9,43 @@
 
 // Declarations
 .c-record-hero {
-  display: grid;
-  grid-template-columns: 6fr 2fr;
+  background-color: var(--nyco-card-background-color);
 }
 
-.c-record-hero__main {
-  padding: ($grid * 6) ($grid * 5);
-  background-color: var(--nyco-card-background-color);
+.c-record-hero__body {
+  padding: $grid * 4;
 }
 
 .c-record-hero__header {
   margin-bottom: $grid * 3;
 }
 
-.c-record-hero__badge {
-  @extend .badge;
-  background-color: #fff;
-  margin-inline-end: $grid * 5;
-}
-
-.c-record-hero__body {
-  margin-bottom: $grid * 5
-}
-
-.c-record-hero__contact {
-  background-color: var(--nyco-record_hero-background-color);
-  padding: ($grid * 6) ($grid * 5);
-}
-
 .c-record-hero__description-list {
-  display: grid;
-  grid-template-columns: ($grid * 15) 1fr;
-
   dt, dd {
-    margin-bottom: $grid;
+    display: block;
   }
 
   dt {
-    color: var(--nyco-placeholder);
-    margin-inline-end: $grid;
+    color: var(--nyco-color-alt);
+    margin-inline-end: $grid * 2;
+  }
+
+  dd {
+    margin-bottom: $grid * 3;
   }
 }
 
+.c-record-hero__details {
+  display: flex;
+  align-items: center;
+  margin-bottom: $grid * 3;
+
+  > * {
+    margin-inline-end: $grid * 4;
+    margin-bottom: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
