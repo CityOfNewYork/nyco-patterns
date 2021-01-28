@@ -24,19 +24,19 @@ div class='w-full grid mobile:grid-cols-2 desktop:grid-cols-3 gap-2'
             dt class='border-4 border-transparent' Value
             dd class='col-span-2'
               input value='${value}' class='sr-only' data-copy-target='copy-${key}-value'
-              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-left border-4 border-transparent font-code text-code' data-copy='copy-${key}-value' data-js='copy' = value
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-start border-4 border-transparent font-code text-code' data-copy='copy-${key}-value' data-js='copy' = value
 
             dt class='border-4 border-transparent' Background
             dd class=' col-span-2'
               input value='bg-${key}' class='sr-only' data-copy-target='copy-${key}-bg'
-              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-left border-4 border-transparent font-code text-code' data-copy='copy-${key}-bg' data-js='copy' = `.bg-${key}`
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-start border-4 border-transparent font-code text-code' data-copy='copy-${key}-bg' data-js='copy' = `.bg-${key}`
 
             dt class='border-4 border-transparent' Text
             dd class='col-span-2'
               input value='text-${key}' class='sr-only' data-copy-target='copy-${key}-text'
-              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-left border-4 border-transparent font-code text-code' data-copy='copy-${key}-text' data-js='copy' = `.text-${key}`
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-start border-4 border-transparent font-code text-code' data-copy='copy-${key}-text' data-js='copy' = `.text-${key}`
 
             dt class='border-4 border-transparent' Border
             dd class='col-span-2'
               input value='border-${key}' class='sr-only' data-copy-target='copy-${key}-border'
-              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-left border-4 border-transparent font-code text-code' data-copy='copy-${key}-border' data-js='copy' = `.border-${key}`
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-start border-4 border-transparent font-code text-code' data-copy='copy-${key}-border' data-js='copy' = `.border-${key}`

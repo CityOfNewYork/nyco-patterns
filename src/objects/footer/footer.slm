@@ -29,7 +29,7 @@ footer class='o-footer color-dark-background border-navy-70t'
           | <a href='${this.urls.medium}' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
           | <a href='${this.urls.github_team}' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
 
-      div class='desktop:text-right'
+      div class='desktop:text-end'
         small
           - let date = new Date();
           - let year = date.getFullYear();
