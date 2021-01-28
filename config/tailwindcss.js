@@ -13,6 +13,7 @@ module.exports = {
   version: 'v2',
   documentation: 'https://tailwindcss.com',
   important: true,
+  purge: false,
   theme: {
     borderWidth: tokens.borderWidth,
     borderRadius: tokens.borderRadius,
