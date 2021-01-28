@@ -35,6 +35,7 @@
   font-family: inherit;
   letter-spacing: 0.01em;
   border-radius: 3px;
+  border-width: 1px;
   margin: 0;
   display: inline;
 }
@@ -43,9 +44,8 @@
   color: var(--nyco-code-primary);
   display: block;
   max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-  padding: 16px 16px;
+  overflow: auto;
+  padding: 24px;
 }
 
 .table-bordered thead tr:nth-child(n),
@@ -103,6 +103,7 @@
     font-family: inherit;
     letter-spacing: 0.01em;
     border-radius: 3px;
+    border-width: 1px;
     margin: 0;
     display: inline;
   }
@@ -111,9 +112,8 @@
     color: var(--nyco-code-primary);
     display: block;
     max-width: 100%;
-    overflow: hidden;
-    overflow-x: auto;
-    padding: 16px 16px;
+    overflow: auto;
+    padding: 24px;
   }
 
   .small\:table-bordered thead tr:nth-child(n),
@@ -172,6 +172,7 @@
     font-family: inherit;
     letter-spacing: 0.01em;
     border-radius: 3px;
+    border-width: 1px;
     margin: 0;
     display: inline;
   }
@@ -180,9 +181,8 @@
     color: var(--nyco-code-primary);
     display: block;
     max-width: 100%;
-    overflow: hidden;
-    overflow-x: auto;
-    padding: 16px 16px;
+    overflow: auto;
+    padding: 24px;
   }
 
   .mobile\:table-bordered thead tr:nth-child(n),
@@ -241,6 +241,7 @@
     font-family: inherit;
     letter-spacing: 0.01em;
     border-radius: 3px;
+    border-width: 1px;
     margin: 0;
     display: inline;
   }
@@ -249,9 +250,8 @@
     color: var(--nyco-code-primary);
     display: block;
     max-width: 100%;
-    overflow: hidden;
-    overflow-x: auto;
-    padding: 16px 16px;
+    overflow: auto;
+    padding: 24px;
   }
 
   .tablet\:table-bordered thead tr:nth-child(n),
@@ -310,6 +310,7 @@
     font-family: inherit;
     letter-spacing: 0.01em;
     border-radius: 3px;
+    border-width: 1px;
     margin: 0;
     display: inline;
   }
@@ -318,9 +319,8 @@
     color: var(--nyco-code-primary);
     display: block;
     max-width: 100%;
-    overflow: hidden;
-    overflow-x: auto;
-    padding: 16px 16px;
+    overflow: auto;
+    padding: 24px;
   }
 
   .desktop\:table-bordered thead tr:nth-child(n),

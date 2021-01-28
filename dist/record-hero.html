@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
   <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
   <link href="styles/nyco.css" rel="stylesheet" />
-  <title>Official | NYCO Patterns</title>
+  <title>Record Hero | NYCO Patterns</title>
   <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
@@ -161,39 +161,168 @@
       </div>
     </aside>
     <article class="color-light-background py-6">
-      <div class="px-4 desktop:px-6">
-        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Official</h1>
-      </div>
-      <section class="mt-6" id="official">
+      <h1 class="px-4 desktop:px-6">Record Hero</h1>
+      <section class="mt-6" id="record-hero">
         <div class="layout-content px-4">
           <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-official">
+            <a class="flex no-underline" href="#heading-record-hero">
               <svg aria-hidden="true" class="icon-ui-anchor">
                 <use xlink:href="#feather-anchor"></use>
               </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-official">official</h2>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-record-hero">Record Hero</h2>
           </div>
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <section class="o-official color-mid-background">
-              <svg class="o-official__icon icon icon-logo-nyc">
-                <use xlink:href="#icon-logo-nyc"></use>
-              </svg>
-              <small class="o-official__line px-1">Official website of the City of New York</small>
+            <section class="c-record-hero">
+              <div class="c-record-hero__body">
+                <header class="c-record-hero__header">
+                  <h2>
+                    <svg aria-hidden="true" class="icon-ui mie-1">
+                      <use xlink:href="#feather-user"></use>
+                    </svg>Record Name
+                  </h2>
+                </header>
+                <div class="c-record-hero__details">
+                  <dl class="c-record-hero__description-list grid grid-cols-3">
+                    <dt>Detail 1</dt>
+                    <dd class="col-span-2 mb-0">Detail Value 1</dd>
+                    <dt>Address</dt>
+                    <dd class="col-span-2 mb-0">1111 Street, Fl, New York, NY</dd>
+                    <dt>Last Updated</dt>
+                    <dd class="col-span-2 mb-0">August 25, 2020</dd>
+                  </dl>
+                </div>
+                <p>This is a description of the record you are viewing.</p>
+              </div>
             </section>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;section class=&quot;o-official color-mid-background&quot;&gt;
-  &lt;svg class=&quot;o-official__icon icon icon-logo-nyc&quot;&gt;
-    &lt;use xlink:href=&quot;#icon-logo-nyc&quot;&gt;&lt;/use&gt;
-  &lt;/svg&gt;
-  &lt;small class=&quot;o-official__line px-1&quot;&gt;Official website of the City of New York&lt;/small&gt;
+              <pre>&lt;section class=&quot;c-record-hero&quot;&gt;
+  &lt;div class=&quot;c-record-hero__body&quot;&gt;
+    &lt;header class=&quot;c-record-hero__header&quot;&gt;
+      &lt;h2&gt;
+        &lt;svg aria-hidden=&quot;true&quot; class=&quot;icon-ui mie-1&quot;&gt;
+          &lt;use xlink:href=&quot;#feather-user&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;Record Name
+      &lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;c-record-hero__details&quot;&gt;
+      &lt;dl class=&quot;c-record-hero__description-list grid grid-cols-3&quot;&gt;
+        &lt;dt&gt;Detail 1&lt;/dt&gt;
+        &lt;dd class=&quot;col-span-2 mb-0&quot;&gt;Detail Value 1&lt;/dd&gt;
+        &lt;dt&gt;Address&lt;/dt&gt;
+        &lt;dd class=&quot;col-span-2 mb-0&quot;&gt;1111 Street, Fl, New York, NY&lt;/dd&gt;
+        &lt;dt&gt;Last Updated&lt;/dt&gt;
+        &lt;dd class=&quot;col-span-2 mb-0&quot;&gt;August 25, 2020&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/div&gt;
+    &lt;p&gt;This is a description of the record you are viewing.&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/section&gt;</pre>
             </div>
+            <p>The Record Hero Component can be used as a heading index card that describes a data record or data set in an application.</p>
+          </div>
+        </div>
+      </section>
+      <section class="mt-6" id="record-hero-alt">
+        <div class="layout-content px-4">
+          <div class="o-content mx-auto flex items-center mb-3">
+            <a class="flex no-underline" href="#heading-record-hero-alt">
+              <svg aria-hidden="true" class="icon-ui-anchor">
+                <use xlink:href="#feather-anchor"></use>
+              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-record-hero-alt">Record Hero Alt</h2>
+          </div>
+        </div>
+        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <section class="c-record-hero desktop:grid grid-cols-8">
+              <div class="c-record-hero__body col-span-5">
+                <header class="c-record-hero__header">
+                  <h2>Record Name</h2>
+                </header>
+                <div class="c-record-hero__details">
+                  <mark class="badge bg-base-white">
+                    <svg aria-hidden="true" class="icon-ui mie-1 text-red">
+                      <use xlink:href="#feather-file-text"></use>
+                    </svg>Record Badge
+                  </mark>
+                  <dl class="c-record-hero__description-list">
+                    <dt class="small">Record Created</dt>
+                    <dd>June 25, 2020</dd>
+                  </dl>
+                  <dl class="c-record-hero__description-list">
+                    <dt class="small">Last Updated</dt>
+                    <dd>August 25, 2020</dd>
+                  </dl>
+                </div>
+                <p>The Department of Homeless Services' (DHS) Client Assistance and Re-housing System (CARES) is used internally by the DHS Family Services division to track information about families that have applied for emergency shelter.</p>
+              </div>
+              <div class="c-record-hero__body col-span-3 bg-blue-20t">
+                <dl class="c-record-hero__description-list flex flex-col mb-3">
+                  <dt class="small">Date Started</dt>
+                  <dd>June 25, 2020</dd>
+                  <dt class="small">Steward</dt>
+                  <dl>
+                    <p class="mb-0">Name of data manager, Dept.</p>
+                    <a class="inline-flex" href="#">
+                      <svg aria-hidden="true" class="icon-ui mie-1">
+                        <use xlink:href="#feather-mail"></use>
+                      </svg>email@contact.nyc.gov
+                    </a>
+                  </dl>
+                </dl>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto">
+            <div class="code-block">
+              <pre>&lt;section class=&quot;c-record-hero desktop:grid grid-cols-8&quot;&gt;
+  &lt;div class=&quot;c-record-hero__body col-span-5&quot;&gt;
+    &lt;header class=&quot;c-record-hero__header&quot;&gt;
+      &lt;h2&gt;Record Name&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;c-record-hero__details&quot;&gt;
+      &lt;mark class=&quot;badge bg-base-white&quot;&gt;
+        &lt;svg aria-hidden=&quot;true&quot; class=&quot;icon-ui mie-1 text-red&quot;&gt;
+          &lt;use xlink:href=&quot;#feather-file-text&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;Record Badge
+      &lt;/mark&gt;
+      &lt;dl class=&quot;c-record-hero__description-list&quot;&gt;
+        &lt;dt class=&quot;small&quot;&gt;Record Created&lt;/dt&gt;
+        &lt;dd&gt;June 25, 2020&lt;/dd&gt;
+      &lt;/dl&gt;
+      &lt;dl class=&quot;c-record-hero__description-list&quot;&gt;
+        &lt;dt class=&quot;small&quot;&gt;Last Updated&lt;/dt&gt;
+        &lt;dd&gt;August 25, 2020&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/div&gt;
+    &lt;p&gt;The Department of Homeless Services' (DHS) Client Assistance and Re-housing System (CARES) is used internally by the DHS Family Services division to track information about families that have applied for emergency shelter.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-record-hero__body col-span-3 bg-blue-20t&quot;&gt;
+    &lt;dl class=&quot;c-record-hero__description-list flex flex-col mb-3&quot;&gt;
+      &lt;dt class=&quot;small&quot;&gt;Date Started&lt;/dt&gt;
+      &lt;dd&gt;June 25, 2020&lt;/dd&gt;
+      &lt;dt class=&quot;small&quot;&gt;Steward&lt;/dt&gt;
+      &lt;dl&gt;
+        &lt;p class=&quot;mb-0&quot;&gt;Name of data manager, Dept.&lt;/p&gt;
+        &lt;a class=&quot;inline-flex&quot; href=&quot;#&quot;&gt;
+          &lt;svg aria-hidden=&quot;true&quot; class=&quot;icon-ui mie-1&quot;&gt;
+            &lt;use xlink:href=&quot;#feather-mail&quot;&gt;&lt;/use&gt;
+          &lt;/svg&gt;email@contact.nyc.gov
+        &lt;/a&gt;
+      &lt;/dl&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+            </div>
+            <p>The Component can be styled for different contexts <a href="/tailwindcss">Tailwindcss utilities</a>.</p>
           </div>
         </div>
       </section>

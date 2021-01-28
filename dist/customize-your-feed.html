@@ -13,7 +13,7 @@
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
-    var VERSION = '2.5.1';
+    var VERSION = '2.6.0-1';
   </script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -55,17 +55,17 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.5.1</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.0-1</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.5.1">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0-1">
           <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
-            <use xlink:href="#icon-ui-github"></use>
-          </svg>2.5.1
+            <use xlink:href="#feather-github"></use>
+          </svg>2.6.0-1
         </a>
       </div>
     </div>
@@ -80,10 +80,9 @@
               <a class="o-navigation__link" href="installation">Installation</a>
               <a class="o-navigation__link" href="about">About the Patterns</a>
               <a class="o-navigation__link" href="prototyping">Prototyping</a>
-            </nav>
-            <nav>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="badge">Badge</a>
               <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
               <a class="o-navigation__link" href="code">Code</a>
               <a class="o-navigation__link" href="description-lists">Description Lists</a>
@@ -96,6 +95,7 @@
               <a class="o-navigation__link" href="tables">Tables</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
               <a class="o-navigation__link" href="card">Card</a>
+              <a class="o-navigation__link" href="record-hero">Record Hero</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
               <a class="o-navigation__link" href="charts">Charts</a>
               <a class="o-navigation__link" href="content">Content</a>
@@ -125,10 +125,9 @@
                 <a class="o-navigation__link" href="installation" tabindex="-1">Installation</a>
                 <a class="o-navigation__link" href="about" tabindex="-1">About the Patterns</a>
                 <a class="o-navigation__link" href="prototyping" tabindex="-1">Prototyping</a>
-              </nav>
-              <nav>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
                 <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
+                <a class="o-navigation__link" href="badge" tabindex="-1">Badge</a>
                 <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
                 <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
                 <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
@@ -141,6 +140,7 @@
                 <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
                 <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
+                <a class="o-navigation__link" href="record-hero" tabindex="-1">Record Hero</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
                 <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
                 <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
@@ -251,7 +251,7 @@
         <div>
           <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;<a href='https://twitter.com/nycopportunity' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;<a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;<a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;<a href='' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
         </div>
-        <div class="desktop:text-right">
+        <div class="desktop:text-end">
           <small>© City of New York, 2021 All Rights Reserved.
             <br>NYC is a trademark and service mark of the City of New York.
           </small>
@@ -265,6 +265,7 @@
     var nyco = new NYCO();
     nyco.copy();
     nyco.icons();
+    nyco.icons('svg/feather.svg');
     nyco.toggle();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
@@ -273,5 +274,4 @@
   <script type="text/javascript">
     new FeedEmbed();
   </script>
-  <script src="/reload/reload.js"></script>
 </body>

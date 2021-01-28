@@ -9,6 +9,7 @@
 .c-card {
   position: relative;
   border: 4px solid;
+  padding: 32px;
 }
 
 .c-card:hover {
@@ -16,7 +17,42 @@
 }
 
 .c-card:hover .badge {
-  background-color: #FFFFFF;
+  background-color: var(--nyco-background-color);
+}
+
+.c-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.c-card__title {
+  font-size: 1.44em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.c-card__body {
+  margin-bottom: 40px;
+}
+
+.c-card__description-list {
+  font-size: 0.833em;
+  font-weight: normal;
+  line-height: normal;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+}
+
+.c-card__description-list dt, .c-card__description-list dd {
+  margin-bottom: 8px;
+}
+
+.c-card__description-list dt {
+  color: var(--nyco-placeholder);
+  margin-inline-end: 8px;
 }
 
 .c-card__cta {
@@ -28,8 +64,46 @@
   opacity: 0;
 }
 
-.badge {
+/**
+ * Record-hero
+ */
+
+.c-record-hero {
   background-color: var(--nyco-card-background-color);
-  padding: 10px;
-  border-radius: 20px;
+}
+
+.c-record-hero__body {
+  padding: 32px;
+}
+
+.c-record-hero__header {
+  margin-bottom: 24px;
+}
+
+.c-record-hero__description-list dt, .c-record-hero__description-list dd {
+  display: block;
+}
+
+.c-record-hero__description-list dt {
+  color: var(--nyco-color-alt);
+  margin-inline-end: 16px;
+}
+
+.c-record-hero__description-list dd {
+  margin-bottom: 24px;
+}
+
+.c-record-hero__details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.c-record-hero__details > * {
+  margin-inline-end: 32px;
+  margin-bottom: 0;
+}
+
+.c-record-hero__details *:last-child {
+  margin-bottom: 0;
 }

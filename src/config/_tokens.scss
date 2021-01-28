@@ -1,5 +1,5 @@
 $tokens:(
-  output: "/Users/yonas/Documents/NYCOpportunity/nyco-patterns/src/config/_tokens.scss",
+  output: "/Users/dehirth/envs/cityofnewyork/nyco-patterns/src/config/_tokens.scss",
   prefix: "$tokens:",
   animate: (
     ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06),
@@ -69,6 +69,7 @@ $tokens:(
   colorCombinations: (
     light-background: (
       color: base-black,
+      color-alt: grey,
       headings: base-black,
       hyperlinks: blue,
       visited: blue,
@@ -92,6 +93,7 @@ $tokens:(
     ),
     mid-background: (
       color: base-black,
+      color-alt: grey,
       headings: base-black,
       hyperlinks: blue,
       visited: blue,
@@ -116,6 +118,7 @@ $tokens:(
     ),
     dark-background: (
       color: base-white,
+      color-alt: navy-50t,
       font-smooth: true,
       headings: base-white,
       hyperlinks: base-white,
@@ -139,7 +142,7 @@ $tokens:(
       code-border: navy-70t
     )
   ),
-  cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v2.5.1/dist",
+  cdn: "https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v2.6.0-1/dist",
   fontFamily: (
     system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
     code: (monospace),
