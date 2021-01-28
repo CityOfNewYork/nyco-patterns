@@ -1,0 +1,51 @@
+/**
+ * Record-hero
+ */
+
+// Dependencies
+@import 'config/tokens';
+@import 'config/colors';
+@import 'config/type';
+
+// Declarations
+.c-record-hero {
+  background-color: var(--nyco-card-background-color);
+}
+
+.c-record-hero__body {
+  padding: $grid * 4;
+}
+
+.c-record-hero__header {
+  margin-bottom: $grid * 3;
+}
+
+.c-record-hero__description-list {
+  dt, dd {
+    display: block;
+  }
+
+  dt {
+    color: var(--nyco-color-alt);
+    margin-inline-end: $grid * 2;
+  }
+
+  dd {
+    margin-bottom: $grid * 3;
+  }
+}
+
+.c-record-hero__details {
+  display: flex;
+  align-items: center;
+  margin-bottom: $grid * 3;
+
+  > * {
+    margin-inline-end: $grid * 4;
+    margin-bottom: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}

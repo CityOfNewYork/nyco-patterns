@@ -5,12 +5,12 @@
   <meta charset="utf-8" />
   <meta content="IE=edge" http-equiv="X-UA-Compatible" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
+  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
+  <link href="styles/nyco.css" rel="stylesheet" />
   <title>Mailchimp | NYCO Patterns</title>
   <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
-  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
     var VERSION = '2.5.1';
@@ -44,7 +44,7 @@
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
   <header class="o-header tablet:layout-sidebar w-full">
-    <div class="o-header__banner-main color-primary-button">
+    <div class="o-header__banner-main bg-blue">
       <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
         <span class="hidden"></span>
@@ -77,14 +77,16 @@
           <div class="o-navigation__nav">
             <nav>
               <a class="o-navigation__link" href="index">Home</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" target="_blank">About the Patterns ↗</a>
-              <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" target="_blank">Installation ↗</a>
+              <a class="o-navigation__link" href="installation">Installation</a>
+              <a class="o-navigation__link" href="about">About the Patterns</a>
+              <a class="o-navigation__link" href="prototyping">Prototyping</a>
             </nav>
             <nav>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
               <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
               <a class="o-navigation__link" href="code">Code</a>
+              <a class="o-navigation__link" href="description-lists">Description Lists</a>
               <a class="o-navigation__link" href="icons">Icons</a>
               <a class="o-navigation__link" href="inputs">Inputs</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
@@ -92,6 +94,8 @@
               <a class="o-navigation__link" href="radios">Radios</a>
               <a class="o-navigation__link" href="select">Select</a>
               <a class="o-navigation__link" href="tables">Tables</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+              <a class="o-navigation__link" href="card">Card</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
               <a class="o-navigation__link" href="charts">Charts</a>
               <a class="o-navigation__link" href="content">Content</a>
@@ -118,14 +122,16 @@
             <div class="o-navigation__nav">
               <nav>
                 <a class="o-navigation__link" href="index" tabindex="-1">Home</a>
-                <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md" tabindex="-1" target="_blank">About the Patterns ↗</a>
-                <a class="o-navigation__link" href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md" tabindex="-1" target="_blank">Installation ↗</a>
+                <a class="o-navigation__link" href="installation" tabindex="-1">Installation</a>
+                <a class="o-navigation__link" href="about" tabindex="-1">About the Patterns</a>
+                <a class="o-navigation__link" href="prototyping" tabindex="-1">Prototyping</a>
               </nav>
               <nav>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
                 <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
                 <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
                 <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
+                <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
                 <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
                 <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
                 <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
@@ -133,6 +139,8 @@
                 <a class="o-navigation__link" href="radios" tabindex="-1">Radios</a>
                 <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
                 <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+                <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
                 <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
                 <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
@@ -152,7 +160,7 @@
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2">
+    <article class="color-light-background py-6">
       <div class="px-4 desktop:px-6">
         <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Mailchimp</h1>
       </div>
@@ -461,24 +469,36 @@
       </section>
     </article>
   </main>
-  <footer class="o-footer color-dark-background tablet:layout-four-columns-gutter">
-    <nav>
-      <a class="o-footer__nav-link" href="index">Home</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns">GitHub Repository</a>
-      <a class="o-footer__nav-link" href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a>
-      <a class="o-footer__nav-link" href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO Opportunity on GitHub</a>
-    </nav>
-    <div></div>
-    <div class="o-footer__info">
-      <a href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
-        <svg aria-hidden="true" class="icon-logo-secondary o-footer__logo text-base-white" style="height: 52px !important">
-          <use xlink:href="#icon-logo-secondary"></use>
-        </svg>
-      </a>
-      <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;<a href='https://twitter.com/nycopportunity' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;<a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;<a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;<a href='' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
-      <small>© City of New York, 2021 All Rights Reserved.
-        <br>NYC is a trademark and service mark of the City of New York.
-      </small>
+  <footer class="o-footer color-dark-background border-navy-70t">
+    <div class="layout-wrap mx-auto">
+      <div class="o-footer__divider border-navy-70t desktop:flex desktop:layout-sidebar mb-4">
+        <div class="pb-4">
+          <a class="block" href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
+            <svg aria-hidden="true" class="o-footer__logo">
+              <use xlink:href="#icon-logo-secondary"></use>
+            </svg>
+            <span class="sr-only">The Mayor's Office for Economic Opportunity</span>
+          </a>
+        </div>
+        <div class="pb-4 desktop:pl-4 desktop:flex justify-end items-center">
+          <nav class="o-footer__inline-nav">
+            <a href="index">Home</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns">GitHub Repository</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a>
+            <a href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO Opportunity on GitHub</a>
+          </nav>
+        </div>
+      </div>
+      <div class="desktop:grid desktop:grid-cols-2">
+        <div>
+          <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;<a href='https://twitter.com/nycopportunity' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;<a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;<a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;<a href='' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
+        </div>
+        <div class="desktop:text-right">
+          <small>© City of New York, 2021 All Rights Reserved.
+            <br>NYC is a trademark and service mark of the City of New York.
+          </small>
+        </div>
+      </div>
     </div>
   </footer>
   <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch"></script>

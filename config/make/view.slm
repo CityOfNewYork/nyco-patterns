@@ -11,7 +11,6 @@
 = partial('/slm/mixins/head.slm');
 = partial('/slm/mixins/nav.slm');
 = partial('/slm/mixins/readme.slm');
-= partial('/slm/mixins/partial.slm');
 = partial('/slm/mixins/pattern.slm');
 
 / Content blocks
@@ -23,7 +22,7 @@
   = mixin('header');
 
 = content('content');
-  h1 class='${classDemoHeaders}'
+  h1 class='${classPageHeader}'
     = pattern;
 
   / Section types

@@ -1,0 +1,1 @@
+The Component can be styled for different contexts [Tailwindcss utilities](/tailwindcss).

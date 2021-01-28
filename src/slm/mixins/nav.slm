@@ -7,6 +7,7 @@
 
     span class='${classNavLinkHeader}' Elements
     a tabindex=navTabindex class='${classNavLink}' href='buttons' Buttons
+    a tabindex=navTabindex class='${classNavLink}' href='badge' Badge
     a tabindex=navTabindex class='${classNavLink}' href='checkboxes' Checkboxes
     a tabindex=navTabindex class='${classNavLink}' href='code' Code
     a tabindex=navTabindex class='${classNavLink}' href='description-lists' Description Lists
@@ -17,6 +18,10 @@
     a tabindex=navTabindex class='${classNavLink}' href='radios' Radios
     a tabindex=navTabindex class='${classNavLink}' href='select' Select
     a tabindex=navTabindex class='${classNavLink}' href='tables' Tables
+
+    span class='${classNavLinkHeader}' Components
+    a tabindex=navTabindex class='${classNavLink}' href='card' Card
+    a tabindex=navTabindex class='${classNavLink}' href='record-hero' Record Hero
 
     span class='${classNavLinkHeader}' Objects
     a tabindex=navTabindex class='${classNavLink}' href='charts' Charts
