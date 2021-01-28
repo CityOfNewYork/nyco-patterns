@@ -1,0 +1,39 @@
+section class='c-record-hero desktop:grid grid-cols-8'
+  div class='c-record-hero__body col-span-5'
+    header class='c-record-hero__header'
+      h2
+        | Record Name
+
+    div class='c-record-hero__details'
+      mark class='badge bg-base-white'
+        svg class='icon-ui mie-1 text-red' aria-hidden='true'
+          use xlink:href='#feather-file-text'
+
+        | Record Badge
+
+      dl class='c-record-hero__description-list'
+        dt class='small' Record Created
+        dd June 25, 2020
+
+      dl class='c-record-hero__description-list'
+        dt class='small' Last Updated
+        dd August 25, 2020
+
+    p
+      | The Department of Homeless Services' (DHS) Client Assistance and Re-housing System (CARES) is used internally by the DHS Family Services division to track information about families that have applied for emergency shelter.
+
+  div class='c-record-hero__body col-span-3 bg-blue-20t'
+    dl class='c-record-hero__description-list flex flex-col mb-3'
+      dt class='small' Date Started
+      dd June 25, 2020
+
+      dt class='small' Steward
+      dl
+        p class='mb-0'
+          | Name of data manager, Dept.
+
+        a href='#' class='inline-flex'
+          svg class='icon-ui mie-1' aria-hidden='true'
+            use xlink:href='#feather-mail'
+
+          | email@contact.nyc.gov

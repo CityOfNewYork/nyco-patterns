@@ -1,0 +1,8 @@
+/**
+/ Shared classes throughout the site
+/**
+
+- classPageHeader = 'px-4 desktop:px-6';
+- classPageH1 = 'jumbo m-0 p-0 mt-2 max-w-600 mx-auto';
+- classNavLinkHeader = 'inline-block tablet:block pb-1';
+- classDemoShadow = 'shadow-up-2 border-2 border-navy mb-2';

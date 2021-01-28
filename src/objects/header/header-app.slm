@@ -3,7 +3,7 @@
 /
 
 header class='o-header-app layout-sidebar flex'
-  div class='color-primary-button'
+  div class='bg-blue text-base-white'
     svg class='o-header-app__icon icon icon-logo-nyco-secondary'
       use xlink:href='#icon-logo-nyco-secondary'
 

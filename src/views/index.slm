@@ -1,13 +1,13 @@
 / Layout
-= extend('templates/full');
+= extend('/slm/templates/full');
 
 / Variables
-= partial('variables/classes.slm');
+= partial('/slm/variables/classes.slm');
 
 / Mixins
-= partial('mixins/head.slm');
-= partial('mixins/nav.slm');
-= partial('mixins/readme.slm');
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/readme.slm');
 
 / Content blocks
 = content('head');
@@ -21,16 +21,15 @@
           svg aria-hidden='true' class='icon-logo-primary' style='width: 287px; height: 133px;'
             use xlink:href='#icon-logo-primary'
 
-          h1 class='jumbo m-0 pl-2 ml-2 font-nycgov' style='font-weight: 600; line-height: 1em; border-left: 8px solid;'
+          h1 class='jumbo m-0 pl-3 ml-3 font-nycgov' style='font-weight: 600; line-height: 1em; border-left: 4px solid;'
             div style='line-height: 0.8em;' Common
             div Agency
-            div class='text-primary-red' Patterns
+            div class='text-blue' Patterns
 
-        div
-          p <b>For creating websites and digital products for The Mayor's Office for Economic Opportunity</b>. The <b>NYCO Patterns</b> provide simple and flexible CSS and JavaScript based components and utilities for building UI's quickly and easily. Ideally suited for internal or external marketing websites, custom digital applications, stand-alone reports, documentation, and dashboards.
+        p <b>For creating websites and digital products for The Mayor's Office for Economic Opportunity</b>. The <b>NYCO Patterns</b> provide simple and flexible CSS and JavaScript based components and utilities for building UI's quickly and easily. Ideally suited for internal or external marketing websites, custom digital applications, stand-alone reports, documentation, and dashboards.
 
-        p class='text-center'
-          a class='btn btn-large color-secondary-button' href='#browse-the-patterns' Browse the Patterns
+        p class='text-center py-2'
+          a class='btn btn-large btn-primary' href='#browse-the-patterns' Browse the Patterns
 
         p class='text-center'
           a href='${this.urls.release}' target='_blank' = 'v' + this.versions.package;
@@ -40,11 +39,22 @@
       div class='mx-auto'
         h2 class='text-center mt-0' Installation
 
-        p
-          | The NYCO Patterns are built on the <a href="${this.urls.nycoPatternsFramework}">NYCO Patterns Framework</a> and can be installed using documentation in the Framework's repository.
+        p Installing via NPM will store ${this.package.nice} source and distribution files in your project's <b>node_modules</b> directory under <b>${this.package.name}</b>.
+
+        div class='tablet:grid tablet:grid-cols-3 gap-1 mb-2'
+          div class='code-block col-span-2 m-0 mb-1'
+            input value='npm install ${this.package.name}' class='font-code text-code p-3 bg-transparent border-none w-full' data-copy-target='installation'
+
+          button class='btn btn-large px-0 justify-center items-center w-full mb-1' data-js='copy' data-copy='installation'
+            svg class='icon-ui-copy icon-3' aria-hidden='true'
+              use xlink:href='#feather-copy'
+            | &nbsp;
+            | Copy-to-clipboard
+
+        p Source; ES (JavaScript), Sass (stylesheet), and SVG source will be in the <b>src/</b> directory. Distribution; compiled JavaScript, CSS, and SVGs will be in the <b>dist/</b> directory. Further integration details can be found in the installation guide.
 
         p class='text-center'
-          a class='btn btn-large color-primary-button' href='${this.urls.installation}' Read the Documentation
+          a class='btn btn-large color-primary-button' href='installation' Read the installation guide
 
   section id='browse-the-patterns' class='color-mid-background p-6'
     div class='layout-wrap layout-content mx-auto py-6'
@@ -52,9 +62,9 @@
         h2 class='text-center mt-0' Browse the Patterns
         div class='text-h4 color-light-background p-6 ${classDemoShadow}'
           - classNav = '';
-          - classNavLinkHeader = 'o-navigation__link-header text-primary-blue-70t border-primary-blue-30t';
+          - classNavLinkHeader = 'o-navigation__link-header text-blue-70t border-blue-30t';
           - classNavLink = 'o-navigation__link';
-
+          - navTabindex = false
           = mixin('nav');
 
   / section class='color-mid-background p-6'

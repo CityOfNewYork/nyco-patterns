@@ -1,0 +1,2 @@
+svg class='${key} icon-large text-blue'
+  use xlink:href='#${key.split("--")[0]}'

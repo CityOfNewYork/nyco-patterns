@@ -5,17 +5,27 @@
   <meta charset="utf-8" />
   <meta content="IE=edge" http-equiv="X-UA-Compatible" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
+  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
+  <link href="styles/nyco.css" rel="stylesheet" />
   <title>Colors | NYCO Patterns</title>
-  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32"
-    type="image/png" />
+  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
-  <link
-    href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap"
-    rel="stylesheet" />
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
     var VERSION = '2.5.1';
-  </script><noscript>
+  </script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(event) {
+      hljs.configure({
+        languages: ['html', 'javascript', 'css', 'sass']
+      });
+      document.querySelectorAll('pre').forEach(function(block) {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <noscript>
     <style>
       body {
         visibility: visible !important;
@@ -31,1100 +41,1634 @@
 
 </html>
 
-<body class="bg-base-black" onload="load()" style="visibility: hidden;"><a
-    class="o-sr-skip px-4 py-2 color-mid-background hidden"
-    href="#main-content">Skip to main content</a>
+<body class="bg-base-black" onload="load()" style="visibility: hidden;">
+  <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
   <header class="o-header tablet:layout-sidebar w-full">
-    <div class="o-header__banner-main color-primary-button"><button
-        aria-controls="js-navigation" aria-pressed="false"
-        class="o-header__main-toggle" data-js="toggle">Menu</button>
-      <h1 class="o-header__main-title"><span class="hidden"></span><svg
-          aria-hidden="true"
-          class="o-header__logo-main icon-logo-nyco-secondary">
+    <div class="o-header__banner-main bg-blue">
+      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
+      <h1 class="o-header__main-title">
+        <span class="hidden"></span>
+        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco-secondary">
           <use xlink:href="#icon-logo-nyco-secondary"></use>
-        </svg><svg aria-hidden="true"
-          class="o-header__logo-secondary icon-logo-nyco">
+        </svg>
+        <svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco">
           <use xlink:href="#icon-logo-nyco"></use>
-        </svg></h1>
+        </svg>
+      </h1>
       <div aria-hidden="true" class="o-header__main-version">v2.5.1</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
-      <div><a class="btn flex items-center"
-          href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.5.1"><svg
-            aria-hidden="true" class="icon-ui icon-3 mr-1">
+      <div>
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.5.1">
+          <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#icon-ui-github"></use>
-          </svg>2.5.1</a></div>
+          </svg>2.5.1
+        </a>
+      </div>
     </div>
   </header>
-  <main
-    class="tablet:layout-sidebar tablet:flex items-stretch m-0 p-0 tablet:min-h-screen"
-    id="main-content">
-    <aside class="o-navigation bg-primary-navy">
+  <main class="tablet:layout-sidebar tablet:flex items-stretch m-0 p-0 tablet:min-h-screen" id="main-content">
+    <aside class="o-navigation bg-navy">
       <div class="tablet:flex hidden w-full">
         <div class="o-navigation__wrap color-mid-background">
           <div class="o-navigation__nav">
-            <nav><a class="o-navigation__link" href="index">Home</a><a
-                class="o-navigation__link"
-                href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md"
-                target="_blank">About the Patterns ↗</a><a
-                class="o-navigation__link"
-                href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md"
-                target="_blank">Installation ↗</a></nav>
-            <nav><span
-                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span><a
-                class="o-navigation__link" href="buttons">Buttons</a><a
-                class="o-navigation__link" href="checkboxes">Checkboxes</a><a
-                class="o-navigation__link" href="code">Code</a><a
-                class="o-navigation__link" href="icons">Icons</a><a
-                class="o-navigation__link" href="inputs">Inputs</a><a
-                class="o-navigation__link" href="layouts">Layouts</a><a
-                class="o-navigation__link" href="links">Links</a><a
-                class="o-navigation__link" href="select">Select</a><a
-                class="o-navigation__link" href="radios">Radios</a><a
-                class="o-navigation__link" href="tables">Tables</a><span
-                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span><a
-                class="o-navigation__link" href="charts">Charts</a><a
-                class="o-navigation__link" href="content">Content</a><a
-                class="o-navigation__link" href="footer">Footer</a><a
-                class="o-navigation__link" href="feed">Feed</a><a
-                class="o-navigation__link" href="header">Header</a><a
-                class="o-navigation__link" href="mailchimp">Mailchimp</a><a
-                class="o-navigation__link" href="navigation">Navigation</a><span
-                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span><a
-                class="o-navigation__link" href="animate">Animate</a><a
-                class="o-navigation__link" href="colors">Colors</a><a
-                class="o-navigation__link" href="tailwindcss">Tailwindcss</a><a
-                class="o-navigation__link" href="type">Type</a></nav>
+            <nav>
+              <a class="o-navigation__link" href="index">Home</a>
+              <a class="o-navigation__link" href="installation">Installation</a>
+              <a class="o-navigation__link" href="about">About the Patterns</a>
+              <a class="o-navigation__link" href="prototyping">Prototyping</a>
+            </nav>
+            <nav>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
+              <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+              <a class="o-navigation__link" href="code">Code</a>
+              <a class="o-navigation__link" href="description-lists">Description Lists</a>
+              <a class="o-navigation__link" href="icons">Icons</a>
+              <a class="o-navigation__link" href="inputs">Inputs</a>
+              <a class="o-navigation__link" href="layouts">Layouts</a>
+              <a class="o-navigation__link" href="links">Links</a>
+              <a class="o-navigation__link" href="radios">Radios</a>
+              <a class="o-navigation__link" href="select">Select</a>
+              <a class="o-navigation__link" href="tables">Tables</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+              <a class="o-navigation__link" href="card">Card</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="charts">Charts</a>
+              <a class="o-navigation__link" href="content">Content</a>
+              <a class="o-navigation__link" href="feed">Feed</a>
+              <a class="o-navigation__link" href="footer">Footer</a>
+              <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
+              <a class="o-navigation__link" href="navigation">Navigation</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="animate">Animate</a>
+              <a class="o-navigation__link" href="colors">Colors</a>
+              <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+              <a class="o-navigation__link" href="type">Type</a>
+            </nav>
           </div>
         </div>
       </div>
       <div class="tablet:hidden w-full">
-        <div
-          class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated"
-          id="js-navigation">
+        <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated" id="js-navigation">
           <div class="o-navigation__banner color-dark-background">
             <h1 class="o-navigation__banner-title">Patterns</h1>
           </div>
           <div class="animated">
             <div class="o-navigation__nav">
-              <nav><a class="o-navigation__link" href="index">Home</a><a
-                  class="o-navigation__link"
-                  href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md"
-                  target="_blank">About the Patterns ↗</a><a
-                  class="o-navigation__link"
-                  href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md"
-                  target="_blank">Installation ↗</a></nav>
-              <nav><span
-                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span><a
-                  class="o-navigation__link" href="buttons">Buttons</a><a
-                  class="o-navigation__link" href="checkboxes">Checkboxes</a><a
-                  class="o-navigation__link" href="code">Code</a><a
-                  class="o-navigation__link" href="icons">Icons</a><a
-                  class="o-navigation__link" href="inputs">Inputs</a><a
-                  class="o-navigation__link" href="layouts">Layouts</a><a
-                  class="o-navigation__link" href="links">Links</a><a
-                  class="o-navigation__link" href="select">Select</a><a
-                  class="o-navigation__link" href="radios">Radios</a><a
-                  class="o-navigation__link" href="tables">Tables</a><span
-                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span><a
-                  class="o-navigation__link" href="charts">Charts</a><a
-                  class="o-navigation__link" href="content">Content</a><a
-                  class="o-navigation__link" href="footer">Footer</a><a
-                  class="o-navigation__link" href="feed">Feed</a><a
-                  class="o-navigation__link" href="header">Header</a><a
-                  class="o-navigation__link" href="mailchimp">Mailchimp</a><a
-                  class="o-navigation__link"
-                  href="navigation">Navigation</a><span
-                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span><a
-                  class="o-navigation__link" href="animate">Animate</a><a
-                  class="o-navigation__link" href="colors">Colors</a><a
-                  class="o-navigation__link"
-                  href="tailwindcss">Tailwindcss</a><a
-                  class="o-navigation__link" href="type">Type</a></nav>
+              <nav>
+                <a class="o-navigation__link" href="index" tabindex="-1">Home</a>
+                <a class="o-navigation__link" href="installation" tabindex="-1">Installation</a>
+                <a class="o-navigation__link" href="about" tabindex="-1">About the Patterns</a>
+                <a class="o-navigation__link" href="prototyping" tabindex="-1">Prototyping</a>
+              </nav>
+              <nav>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
+                <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
+                <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
+                <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
+                <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
+                <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
+                <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
+                <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
+                <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
+                <a class="o-navigation__link" href="radios" tabindex="-1">Radios</a>
+                <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
+                <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+                <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
+                <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
+                <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
+                <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
+                <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
+                <a class="o-navigation__link" href="header" tabindex="-1">Header</a>
+                <a class="o-navigation__link" href="mailchimp" tabindex="-1">Mailchimp</a>
+                <a class="o-navigation__link" href="navigation" tabindex="-1">Navigation</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
+                <a class="o-navigation__link" href="animate" tabindex="-1">Animate</a>
+                <a class="o-navigation__link" href="colors" tabindex="-1">Colors</a>
+                <a class="o-navigation__link" href="tailwindcss" tabindex="-1">Tailwindcss</a>
+                <a class="o-navigation__link" href="type" tabindex="-1">Type</a>
+              </nav>
             </div>
           </div>
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2">
+    <article class="color-light-background py-6">
       <div class="px-4 desktop:px-6">
         <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Colors</h1>
       </div>
       <section class="mt-6" id="color-combinations">
-        <div class="bg-secondary-white-50t mb-6 p-4 desktop:p-6">
+        <div class="layout-content px-4">
+          <div class="o-content mx-auto flex items-center mb-3">
+            <a class="flex no-underline" href="#heading-color-combinations">
+              <svg aria-hidden="true" class="icon-ui-anchor">
+                <use xlink:href="#icon-ui-anchor"></use>
+              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-color-combinations">Color Combinations</h2>
+          </div>
+        </div>
+        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="desktop:layout-three-columns-gutter">
-              <div class="mb-2">
-                <article
-                  class="color-light-background w-full py-4 p-2 border border-secondary-grey-50t border-b-0">
+            <div class="w-full grid desktop:grid-cols-3 gap-2">
+              <div class="w-full">
+                <article class="color-light-background py-4 p-2 border border-grey-50t border-b-0">
                   <h1 class="m-0">Headings</h1>
-                  <div class="capitalize">light background Text</div><a
-                    href="#">Hyperlinks</a>
-                  <div class="mt-1 mb-2"><label class="font-bold">Inputs</label>
-                    <div class="input capitalize"><input
-                        placeholder="Placeholder" /></div>
+                  <div class="capitalize">light background Text</div>
+                  <a href="#">Hyperlinks</a>
+                  <div class="mt-1 mb-2">
+                    <label class="font-bold">Inputs</label>
+                    <div class="input capitalize">
+                      <input placeholder="Placeholder" />
+                    </div>
                   </div>
-                  <div class="mt-1 mb-2"><label class="checkbox capitalize"
-                      for="light-background-checkbox"><input
-                        id="light-background-checkbox" type="checkbox" /><span
-                        class="checkbox__label">Checkboxes</span></label></div>
-                  <div class="mt-1 mb-2"><label
-                      class="font-bold">Selects</label><select class="select">
+                  <div class="mt-1 mb-2">
+                    <label class="checkbox capitalize" for="light-background-checkbox">
+                      <input id="light-background-checkbox" type="checkbox" />
+                      <span class="checkbox__label">Checkboxes</span>
+                    </label>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <label class="font-bold">Selects</label>
+                    <select class="select">
                       <option>Select an option</option>
-                    </select></div>
+                    </select>
+                  </div>
                 </article>
-                <div
-                  class="code-block rounded-t-none border-secondary-grey-50t border-t-0">
-                  <pre class="small">.color-light-background</pre>
+                <div class="code-block rounded-t-none border-grey-50t border-t-0">
+                  <input class="sr-only" data-copy-target="copy-light-background-color" value="color-light-background" />
+                  <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left p-3 font-code text-code" data-copy="copy-light-background-color" data-js="copy" title="Copy to clipboard">.color-light-background</button>
                 </div>
               </div>
-              <div class="mb-2">
-                <article
-                  class="color-mid-background w-full py-4 p-2 border border-secondary-grey-50t border-b-0">
+              <div class="w-full">
+                <article class="color-mid-background py-4 p-2 border border-grey-50t border-b-0">
                   <h1 class="m-0">Headings</h1>
-                  <div class="capitalize">mid background Text</div><a
-                    href="#">Hyperlinks</a>
-                  <div class="mt-1 mb-2"><label class="font-bold">Inputs</label>
-                    <div class="input capitalize"><input
-                        placeholder="Placeholder" /></div>
+                  <div class="capitalize">mid background Text</div>
+                  <a href="#">Hyperlinks</a>
+                  <div class="mt-1 mb-2">
+                    <label class="font-bold">Inputs</label>
+                    <div class="input capitalize">
+                      <input placeholder="Placeholder" />
+                    </div>
                   </div>
-                  <div class="mt-1 mb-2"><label class="checkbox capitalize"
-                      for="mid-background-checkbox"><input
-                        id="mid-background-checkbox" type="checkbox" /><span
-                        class="checkbox__label">Checkboxes</span></label></div>
-                  <div class="mt-1 mb-2"><label
-                      class="font-bold">Selects</label><select class="select">
+                  <div class="mt-1 mb-2">
+                    <label class="checkbox capitalize" for="mid-background-checkbox">
+                      <input id="mid-background-checkbox" type="checkbox" />
+                      <span class="checkbox__label">Checkboxes</span>
+                    </label>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <label class="font-bold">Selects</label>
+                    <select class="select">
                       <option>Select an option</option>
-                    </select></div>
+                    </select>
+                  </div>
                 </article>
-                <div
-                  class="code-block rounded-t-none border-secondary-grey-50t border-t-0">
-                  <pre class="small">.color-mid-background</pre>
+                <div class="code-block rounded-t-none border-grey-50t border-t-0">
+                  <input class="sr-only" data-copy-target="copy-mid-background-color" value="color-mid-background" />
+                  <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left p-3 font-code text-code" data-copy="copy-mid-background-color" data-js="copy" title="Copy to clipboard">.color-mid-background</button>
                 </div>
               </div>
-              <div class="mb-2">
-                <article
-                  class="color-dark-background w-full py-4 p-2 border border-secondary-grey-50t border-b-0">
+              <div class="w-full">
+                <article class="color-dark-background py-4 p-2 border border-grey-50t border-b-0">
                   <h1 class="m-0">Headings</h1>
-                  <div class="capitalize">dark background Text</div><a
-                    href="#">Hyperlinks</a>
-                  <div class="mt-1 mb-2"><label class="font-bold">Inputs</label>
-                    <div class="input capitalize"><input
-                        placeholder="Placeholder" /></div>
+                  <div class="capitalize">dark background Text</div>
+                  <a href="#">Hyperlinks</a>
+                  <div class="mt-1 mb-2">
+                    <label class="font-bold">Inputs</label>
+                    <div class="input capitalize">
+                      <input placeholder="Placeholder" />
+                    </div>
                   </div>
-                  <div class="mt-1 mb-2"><label class="checkbox capitalize"
-                      for="dark-background-checkbox"><input
-                        id="dark-background-checkbox" type="checkbox" /><span
-                        class="checkbox__label">Checkboxes</span></label></div>
-                  <div class="mt-1 mb-2"><label
-                      class="font-bold">Selects</label><select class="select">
+                  <div class="mt-1 mb-2">
+                    <label class="checkbox capitalize" for="dark-background-checkbox">
+                      <input id="dark-background-checkbox" type="checkbox" />
+                      <span class="checkbox__label">Checkboxes</span>
+                    </label>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <label class="font-bold">Selects</label>
+                    <select class="select">
                       <option>Select an option</option>
-                    </select></div>
+                    </select>
+                  </div>
                 </article>
-                <div
-                  class="code-block rounded-t-none border-secondary-grey-50t border-t-0">
-                  <pre class="small">.color-dark-background</pre>
+                <div class="code-block rounded-t-none border-grey-50t border-t-0">
+                  <input class="sr-only" data-copy-target="copy-dark-background-color" value="color-dark-background" />
+                  <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left p-3 font-code text-code" data-copy="copy-dark-background-color" data-js="copy" title="Copy to clipboard">.color-dark-background</button>
                 </div>
               </div>
-              <div class="mb-2">
-                <article
-                  class="color-primary-button w-full py-4 p-2 border border-secondary-grey-50t border-b-0">
-                  <div class="capitalize">primary button Text</div>
-                </article>
-                <div
-                  class="code-block rounded-t-none border-secondary-grey-50t border-t-0">
-                  <pre class="small">.color-primary-button</pre>
-                </div>
-              </div>
-              <div class="mb-2">
-                <article
-                  class="color-secondary-button w-full py-4 p-2 border border-secondary-grey-50t border-b-0">
-                  <div class="capitalize">secondary button Text</div>
-                </article>
-                <div
-                  class="code-block rounded-t-none border-secondary-grey-50t border-t-0">
-                  <pre class="small">.color-secondary-button</pre>
-                </div>
-              </div>
-              <div>&nbsp;</div>
             </div>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <h2 id="heading-color-combinations">Color Combinations</h2>
-            <p>These utililies manage the color properties of various elements
-              including text, background, hyperlinks, inputs, and checkboxes.
-              The combinations are tested for adequate contrast following the
-              distinguishability guideline of the Web Content Accessibility
-              Guidelines (WCAG) 2.0. Hyperlinks are underlined to accommodate
-              color blindness to avoid solely relying on color to distinguish
-              them. WCAG AA compliance depends on the base text size. The
-              examples may not be fully compliant because their font-size is set
-              to a smaller size.</p>
+            <p>These utilities manage the color properties of various elements including text, background, hyperlinks, inputs, and checkboxes. The combinations are tested for adequate contrast following the distinguishably guideline of the Web Content Accessibility Guidelines (WCAG) 2.0. Hyperlinks are underlined to accommodate color blindness to avoid solely relying on color to distinguish them. WCAG AA compliance depends on the base text size. The examples may not be fully compliant because their font-size is set to a smaller size.</p>
           </div>
         </div>
       </section>
       <section class="mt-6" id="color-utilities">
-        <div class="bg-secondary-white-50t mb-6 p-4 desktop:p-6">
+        <div class="layout-content px-4">
+          <div class="o-content mx-auto flex items-center mb-3">
+            <a class="flex no-underline" href="#heading-color-utilities">
+              <svg aria-hidden="true" class="icon-ui-anchor">
+                <use xlink:href="#icon-ui-anchor"></use>
+              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-color-utilities">Color Utilities</h2>
+          </div>
+        </div>
+        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div
-              class="layout-two-columns-gutter desktop:layout-four-columns-gutter">
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-navy py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#24325b</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-navy</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-navy</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-navy</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-navy-70t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#4157aa</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-navy-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-navy-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-navy-70t</div>
+            <div class="w-full grid mobile:grid-cols-2 desktop:grid-cols-3 gap-2">
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-navy py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-navy-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">navy</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-value" value="#031553" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-value" data-js="copy" title="Copy to clipboard">#031553</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-bg" value="bg-navy" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-bg" data-js="copy" title="Copy to clipboard">.bg-navy</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-text" value="text-navy" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-text" data-js="copy" title="Copy to clipboard">.text-navy</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-border" value="border-navy" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-border" data-js="copy" title="Copy to clipboard">.border-navy</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-navy-50t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#8195dc</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-navy-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-navy-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-navy-50t</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-navy-30t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#cdd8ef</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-navy-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-navy-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-navy-30t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-navy-70t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-navy-70t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">navy 70t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-70t-value" value="#4157aa" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-70t-value" data-js="copy" title="Copy to clipboard">#4157aa</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-70t-bg" value="bg-navy-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-70t-bg" data-js="copy" title="Copy to clipboard">.bg-navy-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-70t-text" value="text-navy-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-70t-text" data-js="copy" title="Copy to clipboard">.text-navy-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-70t-border" value="border-navy-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-70t-border" data-js="copy" title="Copy to clipboard">.border-navy-70t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-blue py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#284cca</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-blue</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-blue</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-blue</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-blue-70t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#568adf</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-blue-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-blue-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-blue-70t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-navy-50t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-navy-50t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">navy 50t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-50t-value" value="#8195dc" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-50t-value" data-js="copy" title="Copy to clipboard">#8195dc</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-50t-bg" value="bg-navy-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-50t-bg" data-js="copy" title="Copy to clipboard">.bg-navy-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-50t-text" value="text-navy-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-50t-text" data-js="copy" title="Copy to clipboard">.text-navy-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-50t-border" value="border-navy-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-50t-border" data-js="copy" title="Copy to clipboard">.border-navy-50t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-blue-50t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#96beff</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-blue-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-blue-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-blue-50t</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-blue-30t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#d2e8ff</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-blue-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-blue-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-blue-30t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-navy-30t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-navy-30t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">navy 30t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-30t-value" value="#cdd8ef" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-30t-value" data-js="copy" title="Copy to clipboard">#cdd8ef</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-30t-bg" value="bg-navy-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-30t-bg" data-js="copy" title="Copy to clipboard">.bg-navy-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-30t-text" value="text-navy-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-30t-text" data-js="copy" title="Copy to clipboard">.text-navy-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-navy-30t-border" value="border-navy-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-navy-30t-border" data-js="copy" title="Copy to clipboard">.border-navy-30t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-red py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#fc5d52</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-red</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-red</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-red</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-red-70t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#ff8787</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-red-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-red-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-red-70t</div>
+              </article>
+              <h3 class="capitalize col-span-full mb-0">blue</h3>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-blue py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-blue-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">blue</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-value" value="#1642DF" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-value" data-js="copy" title="Copy to clipboard">#1642DF</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-bg" value="bg-blue" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-bg" data-js="copy" title="Copy to clipboard">.bg-blue</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-text" value="text-blue" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-text" data-js="copy" title="Copy to clipboard">.text-blue</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-border" value="border-blue" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-border" data-js="copy" title="Copy to clipboard">.border-blue</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-red-50t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#ffafaf</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-red-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-red-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-red-50t</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-red-30t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#ffdbdb</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-red-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-red-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-red-30t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-blue-70t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-blue-70t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">blue 70t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-70t-value" value="#568adf" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-70t-value" data-js="copy" title="Copy to clipboard">#568adf</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-70t-bg" value="bg-blue-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-70t-bg" data-js="copy" title="Copy to clipboard">.bg-blue-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-70t-text" value="text-blue-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-70t-text" data-js="copy" title="Copy to clipboard">.text-blue-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-70t-border" value="border-blue-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-70t-border" data-js="copy" title="Copy to clipboard">.border-blue-70t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-grey py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#7c7f83</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-grey</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-grey</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-grey</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-grey-70t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#999ca4</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-grey-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-grey-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-grey-70t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-blue-50t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-blue-50t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">blue 50t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-50t-value" value="#96beff" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-50t-value" data-js="copy" title="Copy to clipboard">#96beff</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-50t-bg" value="bg-blue-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-50t-bg" data-js="copy" title="Copy to clipboard">.bg-blue-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-50t-text" value="text-blue-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-50t-text" data-js="copy" title="Copy to clipboard">.text-blue-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-50t-border" value="border-blue-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-50t-border" data-js="copy" title="Copy to clipboard">.border-blue-50t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-grey-50t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#c1c6cb</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-grey-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-grey-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-grey-50t</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-grey-30t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#e6e8ec</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-grey-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-grey-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-grey-30t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-blue-30t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-blue-30t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">blue 30t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-30t-value" value="#d2e8ff" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-30t-value" data-js="copy" title="Copy to clipboard">#d2e8ff</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-30t-bg" value="bg-blue-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-30t-bg" data-js="copy" title="Copy to clipboard">.bg-blue-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-30t-text" value="text-blue-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-30t-text" data-js="copy" title="Copy to clipboard">.text-blue-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-30t-border" value="border-blue-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-30t-border" data-js="copy" title="Copy to clipboard">.border-blue-30t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-white py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#F3F3F3</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-white</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-white</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-white</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-white-70t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#F6F6F6</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-white-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-white-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-white-70t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-blue-20t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-blue-20t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">blue 20t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-20t-value" value="#E7F2FE" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-20t-value" data-js="copy" title="Copy to clipboard">#E7F2FE</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-20t-bg" value="bg-blue-20t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-20t-bg" data-js="copy" title="Copy to clipboard">.bg-blue-20t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-20t-text" value="text-blue-20t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-20t-text" data-js="copy" title="Copy to clipboard">.text-blue-20t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-20t-border" value="border-blue-20t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-20t-border" data-js="copy" title="Copy to clipboard">.border-blue-20t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-white-50t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#F9F9FA</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-white-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-white-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-white-50t</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-white-30t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#FBFCFC</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-white-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-white-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-white-30t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-blue-10t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-blue-10t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">blue 10t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-10t-value" value="#F0F7FE" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-10t-value" data-js="copy" title="Copy to clipboard">#F0F7FE</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-10t-bg" value="bg-blue-10t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-10t-bg" data-js="copy" title="Copy to clipboard">.bg-blue-10t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-10t-text" value="text-blue-10t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-10t-text" data-js="copy" title="Copy to clipboard">.text-blue-10t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-blue-10t-border" value="border-blue-10t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-blue-10t-border" data-js="copy" title="Copy to clipboard">.border-blue-10t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-orange py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#faa302</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-orange</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-orange</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-orange</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-orange-70t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#fbb95a</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-orange-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-orange-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-orange-70t</div>
+              </article>
+              <h3 class="capitalize col-span-full mb-0">red</h3>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-red py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-red-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">red</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-value" value="#fc5d52" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-value" data-js="copy" title="Copy to clipboard">#fc5d52</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-bg" value="bg-red" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-bg" data-js="copy" title="Copy to clipboard">.bg-red</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-text" value="text-red" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-text" data-js="copy" title="Copy to clipboard">.text-red</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-border" value="border-red" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-border" data-js="copy" title="Copy to clipboard">.border-red</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-orange-50t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#fbd8a1</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-orange-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-orange-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-orange-50t</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-orange-30t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#ffeecd</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-orange-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-orange-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-orange-30t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-red-70t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-red-70t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">red 70t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-70t-value" value="#ff8787" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-70t-value" data-js="copy" title="Copy to clipboard">#ff8787</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-70t-bg" value="bg-red-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-70t-bg" data-js="copy" title="Copy to clipboard">.bg-red-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-70t-text" value="text-red-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-70t-text" data-js="copy" title="Copy to clipboard">.text-red-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-70t-border" value="border-red-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-70t-border" data-js="copy" title="Copy to clipboard">.border-red-70t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-pink py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#f9a5da</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-pink</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-pink</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-pink</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-pink-70t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#ffc0f6</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-pink-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-pink-70t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-pink-70t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-red-50t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-red-50t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">red 50t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-50t-value" value="#ffafaf" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-50t-value" data-js="copy" title="Copy to clipboard">#ffafaf</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-50t-bg" value="bg-red-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-50t-bg" data-js="copy" title="Copy to clipboard">.bg-red-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-50t-text" value="text-red-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-50t-text" data-js="copy" title="Copy to clipboard">.text-red-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-50t-border" value="border-red-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-50t-border" data-js="copy" title="Copy to clipboard">.border-red-50t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-pink-50t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#fbd9ff</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-pink-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-pink-50t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-pink-50t</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-pink-30t py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#fff0fe</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-pink-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-pink-30t</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-pink-30t</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-red-30t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-red-30t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">red 30t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-30t-value" value="#ffdbdb" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-30t-value" data-js="copy" title="Copy to clipboard">#ffdbdb</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-30t-bg" value="bg-red-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-30t-bg" data-js="copy" title="Copy to clipboard">.bg-red-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-30t-text" value="text-red-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-30t-text" data-js="copy" title="Copy to clipboard">.text-red-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-red-30t-border" value="border-red-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-red-30t-border" data-js="copy" title="Copy to clipboard">.border-red-30t</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-base-black py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#000000</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-base-black</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-base-black</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-base-black</div>
-                  </div>
-                </div>
-              </div>
-              <div class="inline-block w-full mb-2">
-                <div
-                  class="bg-base-white py-6 border border-secondary-grey-50t border-b-0 rounded-t">
-                </div>
-                <div
-                  class="code-block border-secondary-grey-50t rounded-t-none border-t-0">
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Hex</div>
-                    <div class="text-right uppercase">#FFFFFF</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Border</div>
-                    <div class="text-right">.border-base-white</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Text</div>
-                    <div class="text-right">.text-base-white</div>
-                  </div>
-                  <div
-                    class="p-1 layout-two-columns font-code text-primary-red small">
-                    <div>Background</div>
-                    <div class="text-right">.bg-base-white</div>
+              </article>
+              <h3 class="capitalize col-span-full mb-0">grey</h3>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-grey py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-grey-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">grey</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-value" value="#57595C" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-value" data-js="copy" title="Copy to clipboard">#57595C</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-bg" value="bg-grey" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-bg" data-js="copy" title="Copy to clipboard">.bg-grey</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-text" value="text-grey" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-text" data-js="copy" title="Copy to clipboard">.text-grey</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-border" value="border-grey" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-border" data-js="copy" title="Copy to clipboard">.border-grey</button>
+                      </dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-grey-70t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-grey-70t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">grey 70t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-70t-value" value="#7c7f83" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-70t-value" data-js="copy" title="Copy to clipboard">#7c7f83</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-70t-bg" value="bg-grey-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-70t-bg" data-js="copy" title="Copy to clipboard">.bg-grey-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-70t-text" value="text-grey-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-70t-text" data-js="copy" title="Copy to clipboard">.text-grey-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-70t-border" value="border-grey-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-70t-border" data-js="copy" title="Copy to clipboard">.border-grey-70t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-grey-50t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-grey-50t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">grey 50t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-50t-value" value="#999ca4" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-50t-value" data-js="copy" title="Copy to clipboard">#999ca4</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-50t-bg" value="bg-grey-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-50t-bg" data-js="copy" title="Copy to clipboard">.bg-grey-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-50t-text" value="text-grey-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-50t-text" data-js="copy" title="Copy to clipboard">.text-grey-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-50t-border" value="border-grey-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-50t-border" data-js="copy" title="Copy to clipboard">.border-grey-50t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-grey-30t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-grey-30t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">grey 30t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-30t-value" value="#c1c6cb" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-30t-value" data-js="copy" title="Copy to clipboard">#c1c6cb</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-30t-bg" value="bg-grey-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-30t-bg" data-js="copy" title="Copy to clipboard">.bg-grey-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-30t-text" value="text-grey-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-30t-text" data-js="copy" title="Copy to clipboard">.text-grey-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-30t-border" value="border-grey-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-30t-border" data-js="copy" title="Copy to clipboard">.border-grey-30t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-grey-20t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-grey-20t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">grey 20t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-20t-value" value="#e6e8ec" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-20t-value" data-js="copy" title="Copy to clipboard">#e6e8ec</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-20t-bg" value="bg-grey-20t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-20t-bg" data-js="copy" title="Copy to clipboard">.bg-grey-20t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-20t-text" value="text-grey-20t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-20t-text" data-js="copy" title="Copy to clipboard">.text-grey-20t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-grey-20t-border" value="border-grey-20t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-grey-20t-border" data-js="copy" title="Copy to clipboard">.border-grey-20t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <h3 class="capitalize col-span-full mb-0">white</h3>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-white py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-white-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">white</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-value" value="#F3F3F3" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-value" data-js="copy" title="Copy to clipboard">#F3F3F3</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-bg" value="bg-white" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-bg" data-js="copy" title="Copy to clipboard">.bg-white</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-text" value="text-white" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-text" data-js="copy" title="Copy to clipboard">.text-white</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-border" value="border-white" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-border" data-js="copy" title="Copy to clipboard">.border-white</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-white-70t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-white-70t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">white 70t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-70t-value" value="#F6F6F6" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-70t-value" data-js="copy" title="Copy to clipboard">#F6F6F6</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-70t-bg" value="bg-white-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-70t-bg" data-js="copy" title="Copy to clipboard">.bg-white-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-70t-text" value="text-white-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-70t-text" data-js="copy" title="Copy to clipboard">.text-white-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-70t-border" value="border-white-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-70t-border" data-js="copy" title="Copy to clipboard">.border-white-70t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-white-50t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-white-50t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">white 50t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-50t-value" value="#F9F9FA" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-50t-value" data-js="copy" title="Copy to clipboard">#F9F9FA</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-50t-bg" value="bg-white-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-50t-bg" data-js="copy" title="Copy to clipboard">.bg-white-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-50t-text" value="text-white-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-50t-text" data-js="copy" title="Copy to clipboard">.text-white-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-50t-border" value="border-white-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-50t-border" data-js="copy" title="Copy to clipboard">.border-white-50t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-white-30t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-white-30t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">white 30t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-30t-value" value="#FBFCFC" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-30t-value" data-js="copy" title="Copy to clipboard">#FBFCFC</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-30t-bg" value="bg-white-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-30t-bg" data-js="copy" title="Copy to clipboard">.bg-white-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-30t-text" value="text-white-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-30t-text" data-js="copy" title="Copy to clipboard">.text-white-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-white-30t-border" value="border-white-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-white-30t-border" data-js="copy" title="Copy to clipboard">.border-white-30t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <h3 class="capitalize col-span-full mb-0">marigold</h3>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-marigold py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-marigold-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">marigold</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-value" value="#faa302" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-value" data-js="copy" title="Copy to clipboard">#faa302</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-bg" value="bg-marigold" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-bg" data-js="copy" title="Copy to clipboard">.bg-marigold</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-text" value="text-marigold" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-text" data-js="copy" title="Copy to clipboard">.text-marigold</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-border" value="border-marigold" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-border" data-js="copy" title="Copy to clipboard">.border-marigold</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-marigold-70t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-marigold-70t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">marigold 70t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-70t-value" value="#fbb95a" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-70t-value" data-js="copy" title="Copy to clipboard">#fbb95a</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-70t-bg" value="bg-marigold-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-70t-bg" data-js="copy" title="Copy to clipboard">.bg-marigold-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-70t-text" value="text-marigold-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-70t-text" data-js="copy" title="Copy to clipboard">.text-marigold-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-70t-border" value="border-marigold-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-70t-border" data-js="copy" title="Copy to clipboard">.border-marigold-70t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-marigold-50t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-marigold-50t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">marigold 50t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-50t-value" value="#fbd8a1" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-50t-value" data-js="copy" title="Copy to clipboard">#fbd8a1</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-50t-bg" value="bg-marigold-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-50t-bg" data-js="copy" title="Copy to clipboard">.bg-marigold-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-50t-text" value="text-marigold-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-50t-text" data-js="copy" title="Copy to clipboard">.text-marigold-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-50t-border" value="border-marigold-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-50t-border" data-js="copy" title="Copy to clipboard">.border-marigold-50t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-marigold-30t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-marigold-30t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">marigold 30t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-30t-value" value="#ffeecd" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-30t-value" data-js="copy" title="Copy to clipboard">#ffeecd</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-30t-bg" value="bg-marigold-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-30t-bg" data-js="copy" title="Copy to clipboard">.bg-marigold-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-30t-text" value="text-marigold-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-30t-text" data-js="copy" title="Copy to clipboard">.text-marigold-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-marigold-30t-border" value="border-marigold-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-marigold-30t-border" data-js="copy" title="Copy to clipboard">.border-marigold-30t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <h3 class="capitalize col-span-full mb-0">pink</h3>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-pink py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-pink-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">pink</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-value" value="#f9a5da" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-value" data-js="copy" title="Copy to clipboard">#f9a5da</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-bg" value="bg-pink" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-bg" data-js="copy" title="Copy to clipboard">.bg-pink</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-text" value="text-pink" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-text" data-js="copy" title="Copy to clipboard">.text-pink</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-border" value="border-pink" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-border" data-js="copy" title="Copy to clipboard">.border-pink</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-pink-70t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-pink-70t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">pink 70t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-70t-value" value="#ffc0f6" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-70t-value" data-js="copy" title="Copy to clipboard">#ffc0f6</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-70t-bg" value="bg-pink-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-70t-bg" data-js="copy" title="Copy to clipboard">.bg-pink-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-70t-text" value="text-pink-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-70t-text" data-js="copy" title="Copy to clipboard">.text-pink-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-70t-border" value="border-pink-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-70t-border" data-js="copy" title="Copy to clipboard">.border-pink-70t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-pink-50t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-pink-50t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">pink 50t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-50t-value" value="#fbd9ff" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-50t-value" data-js="copy" title="Copy to clipboard">#fbd9ff</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-50t-bg" value="bg-pink-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-50t-bg" data-js="copy" title="Copy to clipboard">.bg-pink-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-50t-text" value="text-pink-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-50t-text" data-js="copy" title="Copy to clipboard">.text-pink-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-50t-border" value="border-pink-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-50t-border" data-js="copy" title="Copy to clipboard">.border-pink-50t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-pink-30t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-pink-30t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">pink 30t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-30t-value" value="#fff0fe" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-30t-value" data-js="copy" title="Copy to clipboard">#fff0fe</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-30t-bg" value="bg-pink-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-30t-bg" data-js="copy" title="Copy to clipboard">.bg-pink-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-30t-text" value="text-pink-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-30t-text" data-js="copy" title="Copy to clipboard">.text-pink-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-pink-30t-border" value="border-pink-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-pink-30t-border" data-js="copy" title="Copy to clipboard">.border-pink-30t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <h3 class="capitalize col-span-full mb-0">green</h3>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-green py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-green-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">green</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-value" value="#04A487" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-value" data-js="copy" title="Copy to clipboard">#04A487</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-bg" value="bg-green" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-bg" data-js="copy" title="Copy to clipboard">.bg-green</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-text" value="text-green" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-text" data-js="copy" title="Copy to clipboard">.text-green</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-border" value="border-green" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-border" data-js="copy" title="Copy to clipboard">.border-green</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-green-70t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-green-70t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">green 70t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-70t-value" value="#11D4B1" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-70t-value" data-js="copy" title="Copy to clipboard">#11D4B1</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-70t-bg" value="bg-green-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-70t-bg" data-js="copy" title="Copy to clipboard">.bg-green-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-70t-text" value="text-green-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-70t-text" data-js="copy" title="Copy to clipboard">.text-green-70t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-70t-border" value="border-green-70t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-70t-border" data-js="copy" title="Copy to clipboard">.border-green-70t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-green-50t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-green-50t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">green 50t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-50t-value" value="#AEF4E7" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-50t-value" data-js="copy" title="Copy to clipboard">#AEF4E7</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-50t-bg" value="bg-green-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-50t-bg" data-js="copy" title="Copy to clipboard">.bg-green-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-50t-text" value="text-green-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-50t-text" data-js="copy" title="Copy to clipboard">.text-green-50t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-50t-border" value="border-green-50t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-50t-border" data-js="copy" title="Copy to clipboard">.border-green-50t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-green-30t py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-green-30t-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">green 30t</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-30t-value" value="#E6FEFA" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-30t-value" data-js="copy" title="Copy to clipboard">#E6FEFA</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-30t-bg" value="bg-green-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-30t-bg" data-js="copy" title="Copy to clipboard">.bg-green-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-30t-text" value="text-green-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-30t-text" data-js="copy" title="Copy to clipboard">.text-green-30t</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-green-30t-border" value="border-green-30t" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-green-30t-border" data-js="copy" title="Copy to clipboard">.border-green-30t</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <h3 class="capitalize col-span-full mb-0">base</h3>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-base-black py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-base-black-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">base black</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-base-black-value" value="#000000" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-base-black-value" data-js="copy" title="Copy to clipboard">#000000</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-base-black-bg" value="bg-base-black" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-base-black-bg" data-js="copy" title="Copy to clipboard">.bg-base-black</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-base-black-text" value="text-base-black" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-base-black-text" data-js="copy" title="Copy to clipboard">.text-base-black</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-base-black-border" value="border-base-black" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-base-black-border" data-js="copy" title="Copy to clipboard">.border-base-black</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-base-white py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-base-white-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">base white</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-base-white-value" value="#FFFFFF" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-base-white-value" data-js="copy" title="Copy to clipboard">#FFFFFF</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-base-white-bg" value="bg-base-white" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-base-white-bg" data-js="copy" title="Copy to clipboard">.bg-base-white</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-base-white-text" value="text-base-white" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-base-white-text" data-js="copy" title="Copy to clipboard">.text-base-white</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-base-white-border" value="border-base-white" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-base-white-border" data-js="copy" title="Copy to clipboard">.border-base-white</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
+              <h3 class="capitalize col-span-full mb-0">transparent</h3>
+              <article>
+                <button aria-label="Copy to clipboard" aria-pressed="false" class="bg-transparent py-6 border border-b-0 border-grey-30t rounded-t w-full" data-copy="copy-transparent-value" data-js="copy" title="Copy to clipboard">
+                  <span class="inline-block bg-white p-1 rounded">
+                    <svg aria-hidden="true" class="icon-ui-copy block text-blue">
+                      <use xlink:href="#icon-ui-copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div>
+                  <div class="p-1 pb-0 capitalize border-l border-r border-grey-30t">transparent</div>
+                  <div class="border rounded-t-none border-t-0 border-grey-30t">
+                    <dl class="small p-1 grid grid-cols-3 gap-1">
+                      <dt class="border-4 border-transparent">Value</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-transparent-value" value="rgba(255, 255, 255, 0)" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-transparent-value" data-js="copy" title="Copy to clipboard">rgba(255, 255, 255, 0)</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Background</dt>
+                      <dd class=" col-span-2">
+                        <input class="sr-only" data-copy-target="copy-transparent-bg" value="bg-transparent" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-transparent-bg" data-js="copy" title="Copy to clipboard">.bg-transparent</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Text</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-transparent-text" value="text-transparent" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-transparent-text" data-js="copy" title="Copy to clipboard">.text-transparent</button>
+                      </dd>
+                      <dt class="border-4 border-transparent">Border</dt>
+                      <dd class="col-span-2">
+                        <input class="sr-only" data-copy-target="copy-transparent-border" value="border-transparent" />
+                        <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-left border-4 border-transparent font-code text-code" data-copy="copy-transparent-border" data-js="copy" title="Copy to clipboard">.border-transparent</button>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <h2 id="heading-color-utilities">Color Utilities</h2>
-            <p>Color Utilities are enabled through <a
-                href="/tailwindcss">Tailwindcss</a>. The background, text, and
-              border color can be set for the static, hover, and responsive
-              states of any element using the proper prefix below.</p>
+            <p>Color Utilities are enabled through <a href="/tailwindcss">Tailwindcss</a>. The background, text, and border color can be set for the static, hover, and responsive states of any element using the proper prefix below.</p>
             <pre><code>/* Background Color */
 .bg-{{ color }}
 
@@ -1139,54 +1683,72 @@
 
 /* Responsive State (for the background property) */
 .{{ variant }}:bg-{{ color }}</code></pre>
-            <p>More details about the configuration can be found in the <a
-                href="/tailwindcss">Tailwindcss Utilities</a> documentation.</p>
+            <p>More details about the configuration can be found in the <a href="/tailwindcss">Tailwindcss Utilities</a> documentation.</p>
+          </div>
+        </div>
+      </section>
+      <section class="mt-6" id="color-figma">
+        <div class="layout-content px-4">
+          <div class="o-content mx-auto flex items-center mb-3">
+            <a class="flex no-underline" href="#heading-color-figma">
+              <svg aria-hidden="true" class="icon-ui-anchor">
+                <use xlink:href="#icon-ui-anchor"></use>
+              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-color-figma">Figma Color Styles</h2>
+          </div>
+        </div>
+        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <iframe allowfullscreen="true" height="450" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKTrW6Vu8TGe5xesZ81ZOHD%2FNYCO-Color-Scales%3Fnode-id%3D0%253A1" style="border: none" width="800"></iframe>
+          </div>
+        </div>
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto">
+            <p>The Figma file above contains color styles for use in UI designs and prototypes.</p>
           </div>
         </div>
       </section>
     </article>
   </main>
-  <footer
-    class="o-footer color-dark-background tablet:layout-four-columns-gutter">
-    <nav><a class="o-footer__nav-link" href="index">Home</a><a
-        class="o-footer__nav-link"
-        href="https://github.com/CityOfNewYork/nyco-patterns">GitHub
-        Repository</a><a class="o-footer__nav-link"
-        href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO
-        Patterns Framework</a><a class="o-footer__nav-link"
-        href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO
-        Opportunity on GitHub</a></nav>
-    <div></div>
-    <div class="o-footer__info"><a href="http://nyc.gov/opportunity"
-        title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;"><svg
-          aria-hidden="true"
-          class="icon-logo-secondary o-footer__logo text-base-white"
-          style="height: 52px !important">
-          <use xlink:href="#icon-logo-secondary"></use>
-        </svg></a>
-      <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York
-          City Mayor's Office for Economic Opportunity</a>. We are committed to
-        sharing open source software that we use in our products. Feel free to
-        ask questions and share feedback. Follow @nycopportunity on&nbsp;<a
-          href='https://twitter.com/nycopportunity' target='_blank'
-          rel='nofollow noopener'>Twitter</a>,&nbsp;<a
-          href='https://www.facebook.com/NYCOpportunity/' target='_blank'
-          rel='nofollow noopener'>Facebook</a>,&nbsp;<a
-          href='https://medium.com/@nycopportunity' target='_blank'
-          rel='nofollow noopener'>Medium</a>, and&nbsp;<a href=''
-          target='_blank' rel='nofollow noopener'
-          title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
-      </p><small>© City of New York, 2020 All Rights Reserved.<br>NYC is a
-        trademark and service mark of the City of New York.</small>
+  <footer class="o-footer color-dark-background border-navy-70t">
+    <div class="layout-wrap mx-auto">
+      <div class="o-footer__divider border-navy-70t desktop:flex desktop:layout-sidebar mb-4">
+        <div class="pb-4">
+          <a class="block" href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
+            <svg aria-hidden="true" class="o-footer__logo">
+              <use xlink:href="#icon-logo-secondary"></use>
+            </svg>
+            <span class="sr-only">The Mayor's Office for Economic Opportunity</span>
+          </a>
+        </div>
+        <div class="pb-4 desktop:pl-4 desktop:flex justify-end items-center">
+          <nav class="o-footer__inline-nav">
+            <a href="index">Home</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns">GitHub Repository</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a>
+            <a href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO Opportunity on GitHub</a>
+          </nav>
+        </div>
+      </div>
+      <div class="desktop:grid desktop:grid-cols-2">
+        <div>
+          <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;<a href='https://twitter.com/nycopportunity' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;<a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;<a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;<a href='' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
+        </div>
+        <div class="desktop:text-right">
+          <small>© City of New York, 2021 All Rights Reserved.
+            <br>NYC is a trademark and service mark of the City of New York.
+          </small>
+        </div>
+      </div>
     </div>
   </footer>
-  <script crossorigin="anonymous"
-    src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch">
-  </script>
-  <script src="scripts/nyco-patterns.js"></script>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch"></script>
+  <script src="scripts/nyco.js"></script>
   <script type="text/javascript">
-    var nyco = new NycoPatterns();
+    var nyco = new NYCO();
+    nyco.copy();
     nyco.icons();
     nyco.toggle();
   </script>
+  <script src="/reload/reload.js"></script>
 </body>

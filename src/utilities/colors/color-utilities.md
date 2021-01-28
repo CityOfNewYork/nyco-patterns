@@ -1,5 +1,3 @@
-## Color Utilities
-
 Color Utilities are enabled through [Tailwindcss](/tailwindcss). The background, text, and border color can be set for the static, hover, and responsive states of any element using the proper prefix below.
 
     /* Background Color */

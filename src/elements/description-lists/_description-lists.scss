@@ -1,0 +1,47 @@
+/**
+ * Description-list
+ */
+
+// Dependencies
+@import 'config/tokens';
+@import 'config/colors';
+@import 'config/tables';
+@import 'config/screens';
+
+$grid: map-get($tokens, 'grid');
+
+// Declarations
+@include screens {
+  .#{$variant}description-list, [class*='#{$variant}description-list-'] {
+    display: grid;
+    grid-template-columns: clamp(8rem, 33.33%, 16rem) 1fr;
+
+    dt {
+      font-style: italic;
+    }
+
+    dt, dd {
+      @include tables-cell;
+
+      &:nth-child(4n+1),
+      &:nth-child(4n+2) {
+        background-color: map-get($colors, 'base-white');
+      }
+
+      &:nth-child(4n+3),
+      &:nth-child(4n+4) {
+        background-color: map-get($colors, 'white-50t');
+      }
+    }
+  }
+
+  .#{$variant}description-list-bordered {
+    dt, dd {
+      &:nth-child(n) {
+        background-color: transparent
+      }
+
+      border-bottom: 1px solid map-get($colors, 'grey-20t');
+    }
+  }
+}

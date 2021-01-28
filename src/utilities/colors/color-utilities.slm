@@ -1,36 +1,42 @@
-div class='layout-two-columns-gutter desktop:layout-four-columns-gutter'
+div class='w-full grid mobile:grid-cols-2 desktop:grid-cols-3 gap-2'
   - for (key in this.tokens.colors)
-    - if (!key.includes('primary') && !key.includes('secondary'))
-      - value = this.tokens.colors[key]
+    - value = this.tokens.colors[key]
+    - name = key.split('-').join(' ');
 
-      div class='inline-block w-full mb-2'
-        div class='bg-${key} py-6 border border-secondary-grey-50t border-b-0 rounded-t'
+    - if (typeof base !== 'undefined' && base != name.split(' ')[0])
+      h3 class='capitalize col-span-full mb-0'
+        = name.split(' ')[0]
 
-        div class='code-block border-secondary-grey-50t rounded-t-none border-t-0'
-          div class='p-1 layout-two-columns font-code text-primary-red small'
-            div
-              | Hex
-            div class='text-right uppercase'
-              = `${value}`
-          div class='p-1 layout-two-columns font-code text-primary-red small'
-            div
-              | Border
-            div class='text-right'
-              = `.border-${key}`;
-          div class='p-1 layout-two-columns font-code text-primary-red small'
-            div
-              | Text
-            div class='text-right'
-              = `.text-${key}`;
-          div class='p-1 layout-two-columns font-code text-primary-red small'
-            div
-              | Background
-            div class='text-right'
-              = `.bg-${key}`;
+    - base = name.split(' ')[0];
 
+    article class=''
+      button class='bg-${key} py-6 border border-b-0 border-grey-30t rounded-t w-full' title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' data-copy='copy-${key}-value' data-js='copy'
+        span class='inline-block bg-white p-1 rounded'
+          svg class='icon-ui-copy block text-blue' aria-hidden='true'
+            use xlink:href='#feather-copy'
 
+      div class=''
+        div class='p-1 pb-0 capitalize border-l border-r border-grey-30t'
+          = name
 
-  div &nbsp;
-  div &nbsp;
+        div class='border rounded-t-none border-t-0 border-grey-30t'
+          dl class='small p-1 grid grid-cols-3 gap-1'
+            dt class='border-4 border-transparent' Value
+            dd class='col-span-2'
+              input value='${value}' class='sr-only' data-copy-target='copy-${key}-value'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-start border-4 border-transparent font-code text-code' data-copy='copy-${key}-value' data-js='copy' = value
 
+            dt class='border-4 border-transparent' Background
+            dd class=' col-span-2'
+              input value='bg-${key}' class='sr-only' data-copy-target='copy-${key}-bg'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-start border-4 border-transparent font-code text-code' data-copy='copy-${key}-bg' data-js='copy' = `.bg-${key}`
 
+            dt class='border-4 border-transparent' Text
+            dd class='col-span-2'
+              input value='text-${key}' class='sr-only' data-copy-target='copy-${key}-text'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-start border-4 border-transparent font-code text-code' data-copy='copy-${key}-text' data-js='copy' = `.text-${key}`
+
+            dt class='border-4 border-transparent' Border
+            dd class='col-span-2'
+              input value='border-${key}' class='sr-only' data-copy-target='copy-${key}-border'
+              button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-start border-4 border-transparent font-code text-code' data-copy='copy-${key}-border' data-js='copy' = `.border-${key}`

@@ -1,0 +1,45 @@
+= mixin('head', 'title = NYCO Patterns');
+  head
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+
+    / Stylesheets
+    link href='https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;display=swap' rel='stylesheet'
+    link href='//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css' rel='stylesheet'
+    link rel='stylesheet' href='styles/nyco.css'
+
+    - if (this.title == 'NYCO Patterns') {
+      - title = this.title;
+    - } else {
+      - title = this.title + ' | NYCO Patterns';
+    - };
+
+    title = title;
+
+    link rel='icon' type='image/png' sizes='32x32' href='/images/favicon/favicon-32x32.png'
+    link rel='shortcut icon' href='/images/favicon/favicon.ico'
+
+    script src='//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js'
+
+    javascript:
+      var VERSION = '${this.versions.package}';
+
+    javascript:
+      document.addEventListener('DOMContentLoaded', function(event) {
+        hljs.configure({
+          languages: ['html', 'javascript', 'css', 'sass']
+        });
+
+        document.querySelectorAll('pre')
+          .forEach(function(block) {
+            hljs.highlightBlock(block);
+          });
+      });
+
+    noscript
+      style
+        = 'body { visibility: visible !important; }';
+
+    javascript:
+      function load() { document.body.style.visibility = 'visible' };

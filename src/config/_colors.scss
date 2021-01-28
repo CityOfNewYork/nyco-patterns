@@ -1,46 +1,50 @@
 @import 'config/tokens';
 @import 'config/fonts';
 @import 'config/cdn';
+@import 'config/buttons';
 
 $colors: map-get($tokens, 'colors');
 $statuses: map-get($tokens, 'colorStatuses');
 $combinations: map-get($tokens, 'colorCombinations');
 
 // Variables
-$primary-navy: map-get($colors, 'primary-navy');
-$primary-navy-70t: map-get($colors, 'primary-navy-70t');
-$primary-navy-50t: map-get($colors, 'primary-navy-50t');
-$primary-navy-30t: map-get($colors, 'primary-navy-30t');
+$navy: map-get($colors, navy);
+$navy-70t: map-get($colors, 'navy-70t');
+$navy-50t: map-get($colors, 'navy-50t');
+$navy-30t: map-get($colors, 'navy-30t');
 
-$primary-blue: map-get($colors, 'primary-blue');
-$primary-blue-70t: map-get($colors, 'primary-blue-70t');
-$primary-blue-50t: map-get($colors, 'primary-blue-50t');
-$primary-blue-30t: map-get($colors, 'primary-blue-30t');
+$blue: map-get($colors, blue);
+$blue-70t: map-get($colors, 'blue-70t');
+$blue-50t: map-get($colors, 'blue-50t');
+$blue-30t: map-get($colors, 'blue-30t');
+$blue-20t: map-get($colors, 'blue-20t');
+$blue-10t: map-get($colors, 'blue-10t');
 
-$primary-red: map-get($colors, 'primary-red');
-$primary-red-70t: map-get($colors, 'primary-red-70t');
-$primary-red-50t: map-get($colors, 'primary-red-50t');
-$primary-red-30t: map-get($colors, 'primary-red-30t');
+$red: map-get($colors, 'red');
+$red-70t: map-get($colors, 'red-70t');
+$red-50t: map-get($colors, 'red-50t');
+$red-30t: map-get($colors, 'red-30t');
 
-$secondary-grey: map-get($colors, 'secondary-grey');
-$secondary-grey-70t: map-get($colors, 'secondary-grey-70t');
-$secondary-grey-50t: map-get($colors, 'secondary-grey-50t');
-$secondary-grey-30t: map-get($colors, 'secondary-grey-30t');
+$grey: map-get($colors, grey);
+$grey-70t: map-get($colors, 'grey-70t');
+$grey-50t: map-get($colors, 'grey-50t');
+$grey-30t: map-get($colors, 'grey-30t');
+$grey-20t: map-get($colors, 'grey-20t');
 
-$secondary-white: map-get($colors, 'secondary-white');
-$secondary-white-70t: map-get($colors, 'secondary-white-70t');
-$secondary-white-50t: map-get($colors, 'secondary-white-50t');
-$secondary-white-30t: map-get($colors, 'secondary-white-30t');
+$white: map-get($colors, white);
+$white-70t: map-get($colors, 'white-70t');
+$white-50t: map-get($colors, 'white-50t');
+$white-30t: map-get($colors, 'white-30t');
 
-$secondary-orange: map-get($colors, 'secondary-orange');
-$secondary-orange-70t: map-get($colors, 'secondary-orange-70t');
-$secondary-orange-50t: map-get($colors, 'secondary-orange-50t');
-$secondary-orange-30t: map-get($colors, 'secondary-orange-30t');
+$marigold: map-get($colors, marigold);
+$marigold-70t: map-get($colors, 'marigold-70t');
+$marigold-50t: map-get($colors, 'marigold-50t');
+$marigold-30t: map-get($colors, 'marigold-30t');
 
-$secondary-pink: map-get($colors, 'secondary-pink');
-$secondary-pink-70t: map-get($colors, 'secondary-pink-70t');
-$secondary-pink-50t: map-get($colors, 'secondary-pink-50t');
-$secondary-pink-30t: map-get($colors, 'secondary-pink-30t');
+$pink: map-get($colors, pink);
+$pink-70t: map-get($colors, 'pink-70t');
+$pink-50t: map-get($colors, 'pink-50t');
+$pink-30t: map-get($colors, 'pink-30t');
 
 $base-black: map-get($colors, 'base-black');
 $base-white: map-get($colors, 'base-white');
@@ -49,6 +53,7 @@ $base-white: map-get($colors, 'base-white');
 @mixin combination($selector, $combination, $b, $smoothing: false) {
   // Get the namespace for the color (not the value)
   $color: map-get($combination, 'color');
+  $color-alt: map-get($combination, 'color-alt');
   $headings: map-get($combination, 'headings');
   $background: map-get($combination, 'background-color');
 
@@ -60,36 +65,65 @@ $base-white: map-get($colors, 'base-white');
   $input-placeholder: map-get($combination, 'placeholder');
   $input-background: map-get($combination, 'input-background');
   $focus: map-get($combination, 'focus');
+
   $checkbox-check: map-get($combination, 'checkbox-check');
   $select-arrow: map-get($combination, 'select-arrow');
-
+  $box-shadow: map-get($combination, 'box-shadow');
   $error: map-get($combination, 'error');
 
-  color: map-get($colors, $color);
-  background-color: map-get($colors, $background);
+  $button-text: map-get($combination, 'button-text');
+  $primary: map-get($combination, 'primary');
+  $secondary: map-get($combination, 'secondary');
+
+  $code-primary: map-get($combination, 'code-primary');
+  $code-secondary: map-get($combination, 'code-secondary');
+  $code-background: map-get($combination, 'code-background');
+  $code-border: map-get($combination, 'code-border');
+
+  --nyco-color: #{map-get($colors, $color)};
+  --nyco-color-alt: #{map-get($colors, $color-alt)};
+  --nyco-font-smooth: #{$smoothing};
+  --nyco-font-weight: #{map-get($combination, 'font-weight')};
+  --nyco-headings: #{map-get($colors, $headings)};
+  --nyco-hyperlinks: #{map-get($colors, $hyperlinks)};
+  --nyco-visited: #{map-get($colors, $visited)};
+  --nyco-hover: #{map-get($colors, $hover)};
+  --nyco-background-color: #{map-get($colors, $background)};
+  --nyco-border: #{map-get($colors, $input-border)};
+  --nyco-input-background: #{map-get($colors, $input-background)};
+  --nyco-placeholder: #{map-get($colors, $input-placeholder)};
+  --nyco-focus: #{map-get($colors, $focus)};
+  --nyco-checkbox-check: #{url('#{$cdn}#{$path-to-svg}#{$checkbox-check}')};
+  --nyco-select-arrow: #{url('#{$cdn}#{$path-to-svg}#{$select-arrow}')};
+  --nyco-error: #{map-get($colors, $error)};
+  --nyco-box-shadow-color: #{map-get($colors, $box-shadow)};
+  --nyco-button-text: #{map-get($colors, $button-text)};
+  --nyco-primary: #{map-get($colors, $primary)};
+  --nyco-secondary: #{map-get($colors, $secondary)};
+
+  --nyco-code-primary: #{map-get($colors, $code-primary)};
+  --nyco-code-secondary: #{map-get($colors, $code-secondary)};
+  --nyco-code-background: #{map-get($colors, $code-background)};
+  --nyco-code-border: #{map-get($colors, $code-border)};
+
+  --nyco-card-background-color: #{map-get($colors, 'blue-10t')};
+  --nyco-record_hero-background-color: #{map-get($colors, 'blue-20t')};
+
+
+
+  /**
+   * Base Colors
+   */
+
+  color: var(--nyco-color);
+  background-color: var(--nyco-background-color);
 
   @if map-get($combination, 'font-weight') {
-    font-weight: map-get($combination, 'font-weight');
+    font-weight: var(--nyco-font-weight);
   }
 
   @if $smoothing {
     @include font-smooth;
-  }
-
-  /**
-   * Hyperlinks
-   */
-
-  a:not(.btn) {
-    color: map-get($colors, $hyperlinks);
-
-    &:visited {
-      color: map-get($colors, $visited);
-    }
-
-    &:hover, &:active, &:focus, &.active {
-      color: map-get($colors, $hover);
-    }
   }
 
   /**
@@ -101,25 +135,25 @@ $base-white: map-get($colors, 'base-white');
   select:not(.error),
   .checkbox__label,
   .radio__label {
-    border-color: map-get($colors, $input-border);
-    background-color: map-get($colors, $input-background);
+    border-color: var(--nyco-border);
+    background-color: var(--nyco-input-background);
 
     &::placeholder {
-      color: map-get($combination, 'placeholder');
+      color: var(--nyco-placeholder);
     }
   }
 
-  .select {
-    background-image: url('#{$cdn}#{$path-to-svg}#{$select-arrow}');
-  }
-
   .checkbox__label::before {
-    background-color: map-get($colors, $input-background);
+    background-color: var(--nyco-input-background);
   }
 
   .radio__label:before,
   .checkbox__label::before {
-    border-color: map-get($colors, $focus);
+    border-color: var(--nyco-input-border);
+  }
+
+  .select {
+    background-image: var(--nyco-select-arrow);
   }
 
   /**
@@ -127,38 +161,39 @@ $base-white: map-get($colors, 'base-white');
    */
 
   input:checked + .checkbox__label::before {
-    background-color: map-get($colors, $focus);
-    background-image: url('#{$cdn}#{$path-to-svg}#{$checkbox-check}');
+    background-image: var(--nyco-checkbox-check);
   }
 
-  input:checked + .checkbox__label::before {
-    box-shadow: inset 0 0 0 1.25px map-get($colors, $background), 0 0 0 2px map-get($colors, $focus);
-  }
-
+  input:checked + .checkbox__label::before,
   input:checked + .radio__label::before {
-    background-color: map-get($colors, $focus);
-    box-shadow: inset 0 0 0 1.25px map-get($colors, $background), 0 0 0 2px map-get($colors, $focus);
+    background-color: var(--nyco-focus);
+    box-shadow: inset 0 0 0 1.25px var(--nyco-background-color),
+                      0 0 0 2px var(--nyco-focus);
   }
 
   /**
    * Focus State
    */
 
-  .btn,
   .input > input:focus,
   .select:focus {
     outline: none;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0),
-                0 0 0 3px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0),
+                0 0 0 4px rgba(255, 255, 255, 0);
   }
 
-  .btn:focus,
   .input > input:focus,
   .select:focus,
   input:focus + .checkbox__label,
   input:focus + .radio__label {
-    box-shadow: 0 0 0 1px map-get($colors, $background),
-                0 0 0 3px map-get($colors, $focus);
+    border-color: var(--nyco-focus);
+    box-shadow: 0 0 0 2px var(--nyco-focus);
+  }
+
+  .btn:focus, button:focus, a:focus {
+    outline: none;
+    box-shadow: 0 0 0 1.25px var(--nyco-background-color),
+                0 0 0 4px var(--nyco-focus);
   }
 
   /**
@@ -171,19 +206,29 @@ $base-white: map-get($colors, 'base-white');
   .error > .radio__label,
   .error > .checkbox__label::before,
   .error > .radio__label::before {
-    border-color: map-get($colors, $error);
-    color: map-get($colors, $error);
+    border-color: var(--nyco-error);
+    color: var(--nyco-error);
   }
 
   .error::after {
-    color: map-get($colors, $error);
+    color: var(--nyco-error);
   }
 
   /**
-   * Headings
+   * Buttons
    */
 
-  h1, h4, h5, h6, .h1, .h4, .h5, .h6 {
-    color: map-get($colors, $headings);
+  .btn {
+
+  }
+
+  .btn-primary,
+  .color-primary-button {
+    @include button-color('primary');
+  }
+
+  .btn-secondary,
+  .color-secondary-button {
+    @include button-color('secondary');
   }
 }

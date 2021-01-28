@@ -9,8 +9,10 @@
 @import 'config/direction';
 
 $grid: map-get($tokens, 'grid');
-$size: map-get(map-get($tokens, 'inputs'), 'checkbox-size');
-$radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
+$labelBorderWidth: map-get(map-get($tokens, 'inputs'), 'label-border-width');
+$checkboxSize: map-get(map-get($tokens, 'inputs'), 'checkbox-size');
+$borderWidth: map-get(map-get($tokens, 'inputs'), 'border-width');
+$borderRadius: map-get(map-get($tokens, 'inputs'), 'border-radius');
 
 // Declarations
 @mixin checkboxes {
@@ -38,9 +40,9 @@ $radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
   margin: 0;
   padding: .75 * (map-get($tokens, 'grid') * 2);
 
-  border-width: 1px;
   border-style: solid;
-  border-radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
+  border-width: $labelBorderWidth;
+  border-radius: $borderRadius;
 
   transition: all .2s;
 
@@ -49,14 +51,14 @@ $radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
 
 @mixin checkboxes-btn {
   transition: all .2s;
-  border-width: 1px;
   border-style: solid;
-  border-radius: $radius;
+  border-width: $borderWidth;
+  border-radius: $borderRadius;
   content: '';
   display: inline-block;
-  width: $size;
-  height: $size;
-  min-width: $size;
+  width: $checkboxSize;
+  height: $checkboxSize;
+  min-width: $checkboxSize;
   margin-#{$direction-end}: $grid;
 
   background-repeat: no-repeat;

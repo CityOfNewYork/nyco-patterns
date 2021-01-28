@@ -1,12 +1,12 @@
 / Layout
-= extend('templates/default');
+= extend('/slm/templates/default');
 
 / Variables
-= partial('variables/classes.slm');
+= partial('/slm/variables/classes.slm');
 
 / Mixins
-= partial('mixins/head.slm');
-= partial('mixins/nav.slm');
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
 
 / Component
 = partial('../objects/feed/feed.slm');
@@ -22,7 +22,7 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' Embeddable Snippet
   section id='feed-form' class='pb-4'
-    div class='bg-secondary-white-50t my-6 p-4 desktop:p-6'
+    div class='bg-white-50t my-6 p-4 desktop:p-6'
       div class='layout-wrap mx-auto flex justify-center'
         = partial('../objects/feed/feed-embed.slm');
 

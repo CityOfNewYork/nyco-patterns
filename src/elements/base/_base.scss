@@ -53,6 +53,6 @@ fieldset, legend, dl, dt, dd {
   margin: 0;
 }
 
-svg {
+svg, a > *, button > * {
   pointer-events: none;
 }

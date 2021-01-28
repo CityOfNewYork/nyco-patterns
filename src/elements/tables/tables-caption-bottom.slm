@@ -1,0 +1,33 @@
+table class='table caption-side-bottom'
+  caption Household size and incomes
+
+  thead
+    tr
+      td
+        strong Family Size
+      td class='text-end'
+        strong Yearly Income
+      td class='text-end'
+        strong Weekly Income
+
+  tbody
+    tr
+      td 1
+      td class='text-end' $27,816
+      td class='text-end' $535
+    tr
+      td 2
+      td class='text-end' $36,372
+      td class='text-end' $699
+    tr
+      td 3
+      td class='text-end' $44,928
+      td class='text-end' $864
+    tr
+      td 4
+      td class='text-end' $53,484
+      td class='text-end' $1,029
+    tr
+      td ...
+      td class='text-end' ...
+      td class='text-end' ...

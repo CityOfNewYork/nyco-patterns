@@ -1,0 +1,8 @@
+/ input search
+
+form class='input-search h5'
+  input id='search-field' placeholder='Search' type='text' name='s' class='border-4'
+
+  button class='input__btn-large' type='submit'
+    svg class='icon icon-ui'
+      use xlink:href='#feather-search'

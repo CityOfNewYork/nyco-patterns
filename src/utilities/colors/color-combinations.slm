@@ -1,9 +1,9 @@
-div class='desktop:layout-three-columns-gutter'
+div class='w-full grid desktop:grid-cols-3 gap-2'
   - for (key in this.tokens.colorCombinations)
     - value = this.tokens.colorCombinations[key];
 
-    div class='mb-2'
-      article class='color-${key} w-full py-4 p-2 border border-secondary-grey-50t border-b-0'
+    div class='w-full'
+      article class='color-${key} py-4 p-2 border border-grey-50t border-b-0'
         - if (value['headings'])
           h1 class='m-0' Headings
 
@@ -30,9 +30,6 @@ div class='desktop:layout-three-columns-gutter'
             select class='select'
               option Select an option
 
-
-      div class='code-block rounded-t-none border-secondary-grey-50t border-t-0'
-        pre class='small'
-          | .color-${key}
-
-  div &nbsp;
+      div class='code-block rounded-t-none border-grey-50t border-t-0'
+        input value='color-${key}' class='sr-only' data-copy-target='copy-${key}-color'
+        button title='Copy to clipboard' aria-label='Copy to clipboard' aria-pressed='false' class='w-full text-start p-3 font-code text-code' data-copy='copy-${key}-color' data-js='copy' = `.color-${key}`

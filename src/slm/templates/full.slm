@@ -1,0 +1,45 @@
+doctype html
+html lang='en' class='text-size-0'
+
+  = content('head');
+
+body style='visibility: hidden;' onload='load()'
+  header class='overflow-hidden color-dark-background py-2'
+    div class='layout-wrap mx-auto px-6 flex justify-between items-center'
+      / h1 class='m-0 flex'
+      /   span class='hidden' = this.package.author;
+      /   svg aria-hidden='true' class='icon-logo-nyco' style='width: 96px; height: 52px;'
+      /     use xlink:href='#icon-logo-nyco'
+
+      / button data-js='toggle' aria-pressed='false' aria-expanded='false' aria-controls='navigation' class='cursor-pointer underline font-bold' Menu
+
+  / aside id='navigation' class='color-mid-background hidden hidden:overflowFadeInUp animated'
+  /   div class='p-4 animated'
+  /     div class='layout-wrap tablet:layout-two-columns-gutter justify-center mx-auto'
+  /       div
+  /         {% include '../partials/nav.twig' with { 'classes': {
+  /           'header': 'block p-3 text-h4 font-normal border-b text-navy border-navy',
+  /           'link': 'block p-3 text-h4 no-underline hover:bg-pink-50t'
+  /         } } only %}
+
+  main class='o-content'
+    = content('content');
+
+  = partial('/objects/footer/footer.slm');
+
+  script crossorigin='anonymous' src='https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch,Promise'
+  script src='scripts/nyco.js'
+
+  javascript:
+    var nyco = new NYCO();
+
+    nyco.copy();
+    nyco.icons();
+    nyco.icons('svg/feather.svg');
+    nyco.toggle();
+
+  = content('script');
+
+  / The reload script. This should not be compile during production builds
+  - if this.process.env.NODE_ENV !== 'production'
+    script src='/reload/reload.js'

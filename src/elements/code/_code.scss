@@ -10,14 +10,12 @@
 $colors: map-get($tokens, 'colors');
 
 // Declarations
-code, pre {
+code, pre, .hljs {
   @include code();
 }
 
 p code, li code {
   @include code-inline();
-
-  padding: 0 0.3em 0.1em;
 }
 
 pre {
@@ -39,8 +37,8 @@ pre {
   @include code();
 }
 
-.code__comment {
-  color: map-get($colors, 'primary-navy-30t');
+.code__comment, .hljs-comment {
+  color: map-get($colors, 'grey-50t');
 }
 
 .code-block {
@@ -52,13 +50,20 @@ pre {
   pre {
     color: inherit;
     font-size: inherit;
+    display: block;
     background-color: transparent;
     margin: 0;
     padding: 16px;
     border: none;
+
+    max-height: 80vh;
   }
 
   code {
     padding: 0;
   }
+}
+
+.text-code, .hljs-selector-class, .hljs-selector-id {
+  color: var(--nyco-code-primary);
 }

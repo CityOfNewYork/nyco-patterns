@@ -1,15 +1,15 @@
 - pattern = 'Installation';
 
 / Layout
-= extend('templates/default');
+= extend('/slm/templates/default');
 
 / Variables
-= partial('variables/classes.slm');
+= partial('/slm/variables/classes.slm');
 
 / Mixins
-= partial('mixins/head.slm');
-= partial('mixins/nav.slm');
-= partial('mixins/readme.slm');
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/readme.slm');
 
 / Content blocks
 = content('head');
@@ -22,4 +22,4 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
 
-  = mixin('readme', '../node_modules/@nycopportunity/patterns-framework/docs/installation');
+  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/installation');

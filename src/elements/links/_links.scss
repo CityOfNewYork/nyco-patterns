@@ -5,15 +5,19 @@
 // Dependencies
 @import 'config/tokens';
 
-// Declarations
-a, .link {
-  font-weight: bold;
-  // position: relative;
+$borderRadius: map-get(map-get($tokens, 'borderRadius'), 'DEFAULT');
 
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 4px;
-  // }
+// Declarations
+a:not(.btn), .link {
+  color: var(--nyco-hyperlinks);
+  font-weight: bold;
+  border-radius: $borderRadius;
+
+  &:visited {
+    color: var(--nyco-visited);
+  }
+
+  &:hover, &:active, &:focus, &.active {
+    color: var(--nyco-hover);
+  }
 }

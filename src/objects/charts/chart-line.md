@@ -1,5 +1,3 @@
-## Line Chart
-
 To achieve a smooth line, set the following properties in the dataset object:
 
     pointBackgroundColor: 'transparent',

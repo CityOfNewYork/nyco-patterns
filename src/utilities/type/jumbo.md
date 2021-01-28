@@ -1,3 +1,1 @@
-## Jumbo
-
 The `.jumbo` class is the largest heading size reserved for emphasized headings. Use the class for visual styling.

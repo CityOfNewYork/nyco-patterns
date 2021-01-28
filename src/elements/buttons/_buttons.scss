@@ -7,70 +7,31 @@
 @import 'config/buttons';
 @import 'config/screens';
 
-$buttons: map-get($tokens, 'buttons');
 $grid: map-get($tokens, 'grid');
-$radius: map-get(map-get($tokens, 'inputs'), 'button-radius');
+$borderWidth: map-get(map-get($tokens, 'inputs'), 'button-border-width');
+$borderRadius: map-get(map-get($tokens, 'inputs'), 'button-border-radius');
 
 button {
   @include button-reset();
 }
 
-// Declarations
-@mixin buttons($variant: '') {
-  .#{$variant}btn, .#{$variant}buttons {
-    color: inherit;
-    font-weight: bold;
-    font-size: inherit;
-    font-family: inherit;
-    line-height: 1;
-    text-align: center;
-    text-decoration: none;
-    text-transform: initial;
-
-    display: inline-flex;
-    appearance: none;
-    cursor: pointer;
-    background: transparent;
-    padding: ($grid * 1.5) ($grid * 2);
-
-    border: ($grid / 4) solid;
-    border-color: currentColor;
-    border-radius: $radius;
-
-    transition: background .1s ease-in,
-                color .1s ease-in,
-                box-shadow .1s ease-in;
-
-    .icon {
-      vertical-align: middle;
-    }
-
-    &.color-primary-button {
-      @include button-hover('primary-button');
-      border-color: transparent;
-    }
-
-    &.color-secondary-button {
-      @include button-hover('secondary-button');
-      border-color: transparent;
-    }
+@include screens {
+  .#{$variant}btn,
+  .#{$variant}buttons {
+    @include button-base();
   }
 
   /**
    * Application Button
    */
 
-  .#{$variant}btn-app, .#{$variant}button-app {
-    border-radius: $radius * 2;
+  .#{$variant}btn-app,
+  .#{$variant}button-app {
+    border-radius: $borderRadius;
 
-    &.color-primary-button {
-      @include button-app-hover('primary-button');
-      border-color: transparent;
-    }
-
-    &.color-secondary-button {
-      @include button-app-hover('secondary-button');
-      border-color: transparent;
+    &:hover,
+    &:active {
+      box-shadow: none !important;
     }
   }
 
@@ -78,11 +39,8 @@ button {
    * Large Button
    */
 
-  .#{$variant}btn-large, .#{$variant}button-large {
+  .#{$variant}btn-large,
+  .#{$variant}button-large {
     padding: (($grid * 3) - ($grid / 2)) ($grid * 4);
   }
-}
-
-@include screens {
-  @include buttons($variant);
 }

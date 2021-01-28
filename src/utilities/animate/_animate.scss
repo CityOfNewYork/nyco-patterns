@@ -17,7 +17,7 @@ body {
   @include animate();
 }
 
-a, input, textarea, select, path, rect, .btn, .button {
+a, input, textarea, select, path, rect, .btn, .button, [class*='hover:'], .c-card, .badge {
   transition-property: opacity, background, color, border, box-shadow, outline, transform, stroke, stroke-dashoffset, fill;
   transition-duration: 0.25s;
   backface-visibility: hidden;

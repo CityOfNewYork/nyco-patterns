@@ -2,5 +2,5 @@
 / Input Error
 /
 
-div class='error'
+div class='input error'
   input type='text'

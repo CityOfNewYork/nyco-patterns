@@ -3,32 +3,35 @@
 @import 'config/tokens';
 
 $colors: map-get($tokens, 'colors');
-$radius: map-get(map-get($tokens, 'borderRadius'), 'default');
+$grid: map-get($tokens, 'grid');
+$borderWidth: map-get(map-get($tokens, 'borderWidth'), 'DEFAULT');
+$borderRadius: map-get(map-get($tokens, 'borderRadius'), 'DEFAULT');
 
 // Declarations
 @mixin code() {
-  color: map-get($colors, 'primary-blue');
+  color: var(--nyco-code-secondary);
   display: inline-block;
 
   @include typeface('code');
   @include type('code');
 
-  background-color: map-get($colors, 'secondary-white-70t');
-  border: 1px solid map-get($colors, 'secondary-grey-50t');
-  border-radius: $radius;
+  background-color: var(--nyco-code-background);
+  border-color: var(--nyco-code-border);
+  border-width: $borderWidth;
+  border-radius: $borderRadius;
+  border-style: solid;
 
-  padding: 0 0.3em;
+  padding: .1em .3em;
 }
 
 @mixin code-block() {
-  color: map-get($colors, 'primary-red');
+  color: var(--nyco-code-primary);
 
   display: block;
   max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
+  overflow: auto;
 
-  padding: 16px 16px;
+  padding: $grid * 3;
 }
 
 @mixin code-inline() {
@@ -37,6 +40,7 @@ $radius: map-get(map-get($tokens, 'borderRadius'), 'default');
   letter-spacing: 0.01em;
 
   border-radius: 3px;
+  border-width: 1px;
   margin: 0;
   display: inline;
 }

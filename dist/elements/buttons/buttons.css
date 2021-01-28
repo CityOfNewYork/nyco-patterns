@@ -8,6 +8,7 @@ button {
   padding: 0;
   width: auto;
   overflow: visible;
+  cursor: pointer;
   background: transparent;
   color: inherit;
   font: inherit;
@@ -22,13 +23,15 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-.btn, .buttons {
+.btn,
+.buttons {
   color: inherit;
   font-weight: bold;
   font-size: inherit;
   font-family: inherit;
   line-height: 1;
   text-align: center;
+  justify-content: center;
   text-decoration: none;
   text-transform: initial;
   display: inline-flex;
@@ -36,82 +39,53 @@ button::-moz-focus-inner {
   cursor: pointer;
   background: transparent;
   padding: 12px 16px;
-  border: 2px solid;
+  border-style: solid;
   border-color: currentColor;
-  border-radius: 1px;
+  border-width: 2px;
+  border-radius: 2px;
   transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
 }
 
-.btn .icon, .buttons .icon {
-  vertical-align: middle;
-}
-
-.btn.color-primary-button, .buttons.color-primary-button {
-  border-color: transparent;
-}
-
-.btn.color-primary-button:hover, .btn.color-primary-button:active, .buttons.color-primary-button:hover, .buttons.color-primary-button:active {
-  color: #FFFFFF;
-  background: #1e41ba;
-  box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
-}
-
-.btn.color-secondary-button, .buttons.color-secondary-button {
-  border-color: transparent;
-}
-
-.btn.color-secondary-button:hover, .btn.color-secondary-button:active, .buttons.color-secondary-button:hover, .buttons.color-secondary-button:active {
-  color: #FFFFFF;
-  background: #ff4336;
-  box-shadow: 8px 8px 0px 0px #cb1004, 0 0 0 3px rgba(255, 255, 255, 0);
+.btn:hover, .btn:active,
+.buttons:hover,
+.buttons:active {
+  box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color), 0 0 0 3px rgba(255, 255, 255, 0);
 }
 
 /**
  * Application Button
  */
 
-.btn-app, .button-app {
+.btn-app,
+.button-app {
   border-radius: 2px;
 }
 
-.btn-app.color-primary-button, .button-app.color-primary-button {
-  background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
-  border-color: transparent;
-}
-
-.btn-app.color-primary-button:hover, .btn-app.color-primary-button:active, .button-app.color-primary-button:hover, .button-app.color-primary-button:active {
-  color: #FFFFFF;
-  background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
-  box-shadow: none;
-}
-
-.btn-app.color-secondary-button, .button-app.color-secondary-button {
-  background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
-  border-color: transparent;
-}
-
-.btn-app.color-secondary-button:hover, .btn-app.color-secondary-button:active, .button-app.color-secondary-button:hover, .button-app.color-secondary-button:active {
-  color: #FFFFFF;
-  background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
-  box-shadow: none;
+.btn-app:hover, .btn-app:active,
+.button-app:hover,
+.button-app:active {
+  box-shadow: none !important;
 }
 
 /**
  * Large Button
  */
 
-.btn-large, .button-large {
+.btn-large,
+.button-large {
   padding: 20px 32px;
 }
 
 @media (min-width: 400px) {
-  .small\:btn, .small\:buttons {
+  .small\:btn,
+.small\:buttons {
     color: inherit;
     font-weight: bold;
     font-size: inherit;
     font-family: inherit;
     line-height: 1;
     text-align: center;
+    justify-content: center;
     text-decoration: none;
     text-transform: initial;
     display: inline-flex;
@@ -119,83 +93,54 @@ button::-moz-focus-inner {
     cursor: pointer;
     background: transparent;
     padding: 12px 16px;
-    border: 2px solid;
+    border-style: solid;
     border-color: currentColor;
-    border-radius: 1px;
+    border-width: 2px;
+    border-radius: 2px;
     transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
   }
 
-  .small\:btn .icon, .small\:buttons .icon {
-    vertical-align: middle;
-  }
-
-  .small\:btn.color-primary-button, .small\:buttons.color-primary-button {
-    border-color: transparent;
-  }
-
-  .small\:btn.color-primary-button:hover, .small\:btn.color-primary-button:active, .small\:buttons.color-primary-button:hover, .small\:buttons.color-primary-button:active {
-    color: #FFFFFF;
-    background: #1e41ba;
-    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
-  }
-
-  .small\:btn.color-secondary-button, .small\:buttons.color-secondary-button {
-    border-color: transparent;
-  }
-
-  .small\:btn.color-secondary-button:hover, .small\:btn.color-secondary-button:active, .small\:buttons.color-secondary-button:hover, .small\:buttons.color-secondary-button:active {
-    color: #FFFFFF;
-    background: #ff4336;
-    box-shadow: 8px 8px 0px 0px #cb1004, 0 0 0 3px rgba(255, 255, 255, 0);
+  .small\:btn:hover, .small\:btn:active,
+.small\:buttons:hover,
+.small\:buttons:active {
+    box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color), 0 0 0 3px rgba(255, 255, 255, 0);
   }
 
   /**
    * Application Button
    */
 
-  .small\:btn-app, .small\:button-app {
+  .small\:btn-app,
+.small\:button-app {
     border-radius: 2px;
   }
 
-  .small\:btn-app.color-primary-button, .small\:button-app.color-primary-button {
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
-    border-color: transparent;
-  }
-
-  .small\:btn-app.color-primary-button:hover, .small\:btn-app.color-primary-button:active, .small\:button-app.color-primary-button:hover, .small\:button-app.color-primary-button:active {
-    color: #FFFFFF;
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
-    box-shadow: none;
-  }
-
-  .small\:btn-app.color-secondary-button, .small\:button-app.color-secondary-button {
-    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
-    border-color: transparent;
-  }
-
-  .small\:btn-app.color-secondary-button:hover, .small\:btn-app.color-secondary-button:active, .small\:button-app.color-secondary-button:hover, .small\:button-app.color-secondary-button:active {
-    color: #FFFFFF;
-    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
-    box-shadow: none;
+  .small\:btn-app:hover, .small\:btn-app:active,
+.small\:button-app:hover,
+.small\:button-app:active {
+    box-shadow: none !important;
   }
 
   /**
    * Large Button
    */
 
-  .small\:btn-large, .small\:button-large {
+  .small\:btn-large,
+.small\:button-large {
     padding: 20px 32px;
   }
 }
 
 @media (min-width: 480px) {
-  .mobile\:btn, .mobile\:buttons {
+  .mobile\:btn,
+.mobile\:buttons {
     color: inherit;
     font-weight: bold;
     font-size: inherit;
     font-family: inherit;
     line-height: 1;
     text-align: center;
+    justify-content: center;
     text-decoration: none;
     text-transform: initial;
     display: inline-flex;
@@ -203,83 +148,54 @@ button::-moz-focus-inner {
     cursor: pointer;
     background: transparent;
     padding: 12px 16px;
-    border: 2px solid;
+    border-style: solid;
     border-color: currentColor;
-    border-radius: 1px;
+    border-width: 2px;
+    border-radius: 2px;
     transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
   }
 
-  .mobile\:btn .icon, .mobile\:buttons .icon {
-    vertical-align: middle;
-  }
-
-  .mobile\:btn.color-primary-button, .mobile\:buttons.color-primary-button {
-    border-color: transparent;
-  }
-
-  .mobile\:btn.color-primary-button:hover, .mobile\:btn.color-primary-button:active, .mobile\:buttons.color-primary-button:hover, .mobile\:buttons.color-primary-button:active {
-    color: #FFFFFF;
-    background: #1e41ba;
-    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
-  }
-
-  .mobile\:btn.color-secondary-button, .mobile\:buttons.color-secondary-button {
-    border-color: transparent;
-  }
-
-  .mobile\:btn.color-secondary-button:hover, .mobile\:btn.color-secondary-button:active, .mobile\:buttons.color-secondary-button:hover, .mobile\:buttons.color-secondary-button:active {
-    color: #FFFFFF;
-    background: #ff4336;
-    box-shadow: 8px 8px 0px 0px #cb1004, 0 0 0 3px rgba(255, 255, 255, 0);
+  .mobile\:btn:hover, .mobile\:btn:active,
+.mobile\:buttons:hover,
+.mobile\:buttons:active {
+    box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color), 0 0 0 3px rgba(255, 255, 255, 0);
   }
 
   /**
    * Application Button
    */
 
-  .mobile\:btn-app, .mobile\:button-app {
+  .mobile\:btn-app,
+.mobile\:button-app {
     border-radius: 2px;
   }
 
-  .mobile\:btn-app.color-primary-button, .mobile\:button-app.color-primary-button {
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
-    border-color: transparent;
-  }
-
-  .mobile\:btn-app.color-primary-button:hover, .mobile\:btn-app.color-primary-button:active, .mobile\:button-app.color-primary-button:hover, .mobile\:button-app.color-primary-button:active {
-    color: #FFFFFF;
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
-    box-shadow: none;
-  }
-
-  .mobile\:btn-app.color-secondary-button, .mobile\:button-app.color-secondary-button {
-    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
-    border-color: transparent;
-  }
-
-  .mobile\:btn-app.color-secondary-button:hover, .mobile\:btn-app.color-secondary-button:active, .mobile\:button-app.color-secondary-button:hover, .mobile\:button-app.color-secondary-button:active {
-    color: #FFFFFF;
-    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
-    box-shadow: none;
+  .mobile\:btn-app:hover, .mobile\:btn-app:active,
+.mobile\:button-app:hover,
+.mobile\:button-app:active {
+    box-shadow: none !important;
   }
 
   /**
    * Large Button
    */
 
-  .mobile\:btn-large, .mobile\:button-large {
+  .mobile\:btn-large,
+.mobile\:button-large {
     padding: 20px 32px;
   }
 }
 
 @media (min-width: 768px) {
-  .tablet\:btn, .tablet\:buttons {
+  .tablet\:btn,
+.tablet\:buttons {
     color: inherit;
     font-weight: bold;
     font-size: inherit;
     font-family: inherit;
     line-height: 1;
     text-align: center;
+    justify-content: center;
     text-decoration: none;
     text-transform: initial;
     display: inline-flex;
@@ -287,83 +203,54 @@ button::-moz-focus-inner {
     cursor: pointer;
     background: transparent;
     padding: 12px 16px;
-    border: 2px solid;
+    border-style: solid;
     border-color: currentColor;
-    border-radius: 1px;
+    border-width: 2px;
+    border-radius: 2px;
     transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
   }
 
-  .tablet\:btn .icon, .tablet\:buttons .icon {
-    vertical-align: middle;
-  }
-
-  .tablet\:btn.color-primary-button, .tablet\:buttons.color-primary-button {
-    border-color: transparent;
-  }
-
-  .tablet\:btn.color-primary-button:hover, .tablet\:btn.color-primary-button:active, .tablet\:buttons.color-primary-button:hover, .tablet\:buttons.color-primary-button:active {
-    color: #FFFFFF;
-    background: #1e41ba;
-    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
-  }
-
-  .tablet\:btn.color-secondary-button, .tablet\:buttons.color-secondary-button {
-    border-color: transparent;
-  }
-
-  .tablet\:btn.color-secondary-button:hover, .tablet\:btn.color-secondary-button:active, .tablet\:buttons.color-secondary-button:hover, .tablet\:buttons.color-secondary-button:active {
-    color: #FFFFFF;
-    background: #ff4336;
-    box-shadow: 8px 8px 0px 0px #cb1004, 0 0 0 3px rgba(255, 255, 255, 0);
+  .tablet\:btn:hover, .tablet\:btn:active,
+.tablet\:buttons:hover,
+.tablet\:buttons:active {
+    box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color), 0 0 0 3px rgba(255, 255, 255, 0);
   }
 
   /**
    * Application Button
    */
 
-  .tablet\:btn-app, .tablet\:button-app {
+  .tablet\:btn-app,
+.tablet\:button-app {
     border-radius: 2px;
   }
 
-  .tablet\:btn-app.color-primary-button, .tablet\:button-app.color-primary-button {
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
-    border-color: transparent;
-  }
-
-  .tablet\:btn-app.color-primary-button:hover, .tablet\:btn-app.color-primary-button:active, .tablet\:button-app.color-primary-button:hover, .tablet\:button-app.color-primary-button:active {
-    color: #FFFFFF;
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
-    box-shadow: none;
-  }
-
-  .tablet\:btn-app.color-secondary-button, .tablet\:button-app.color-secondary-button {
-    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
-    border-color: transparent;
-  }
-
-  .tablet\:btn-app.color-secondary-button:hover, .tablet\:btn-app.color-secondary-button:active, .tablet\:button-app.color-secondary-button:hover, .tablet\:button-app.color-secondary-button:active {
-    color: #FFFFFF;
-    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
-    box-shadow: none;
+  .tablet\:btn-app:hover, .tablet\:btn-app:active,
+.tablet\:button-app:hover,
+.tablet\:button-app:active {
+    box-shadow: none !important;
   }
 
   /**
    * Large Button
    */
 
-  .tablet\:btn-large, .tablet\:button-large {
+  .tablet\:btn-large,
+.tablet\:button-large {
     padding: 20px 32px;
   }
 }
 
 @media (min-width: 960px) {
-  .desktop\:btn, .desktop\:buttons {
+  .desktop\:btn,
+.desktop\:buttons {
     color: inherit;
     font-weight: bold;
     font-size: inherit;
     font-family: inherit;
     line-height: 1;
     text-align: center;
+    justify-content: center;
     text-decoration: none;
     text-transform: initial;
     display: inline-flex;
@@ -371,71 +258,40 @@ button::-moz-focus-inner {
     cursor: pointer;
     background: transparent;
     padding: 12px 16px;
-    border: 2px solid;
+    border-style: solid;
     border-color: currentColor;
-    border-radius: 1px;
+    border-width: 2px;
+    border-radius: 2px;
     transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
   }
 
-  .desktop\:btn .icon, .desktop\:buttons .icon {
-    vertical-align: middle;
-  }
-
-  .desktop\:btn.color-primary-button, .desktop\:buttons.color-primary-button {
-    border-color: transparent;
-  }
-
-  .desktop\:btn.color-primary-button:hover, .desktop\:btn.color-primary-button:active, .desktop\:buttons.color-primary-button:hover, .desktop\:buttons.color-primary-button:active {
-    color: #FFFFFF;
-    background: #1e41ba;
-    box-shadow: 8px 8px 0px 0px #132460, 0 0 0 3px rgba(255, 255, 255, 0);
-  }
-
-  .desktop\:btn.color-secondary-button, .desktop\:buttons.color-secondary-button {
-    border-color: transparent;
-  }
-
-  .desktop\:btn.color-secondary-button:hover, .desktop\:btn.color-secondary-button:active, .desktop\:buttons.color-secondary-button:hover, .desktop\:buttons.color-secondary-button:active {
-    color: #FFFFFF;
-    background: #ff4336;
-    box-shadow: 8px 8px 0px 0px #cb1004, 0 0 0 3px rgba(255, 255, 255, 0);
+  .desktop\:btn:hover, .desktop\:btn:active,
+.desktop\:buttons:hover,
+.desktop\:buttons:active {
+    box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color), 0 0 0 3px rgba(255, 255, 255, 0);
   }
 
   /**
    * Application Button
    */
 
-  .desktop\:btn-app, .desktop\:button-app {
+  .desktop\:btn-app,
+.desktop\:button-app {
     border-radius: 2px;
   }
 
-  .desktop\:btn-app.color-primary-button, .desktop\:button-app.color-primary-button {
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
-    border-color: transparent;
-  }
-
-  .desktop\:btn-app.color-primary-button:hover, .desktop\:btn-app.color-primary-button:active, .desktop\:button-app.color-primary-button:hover, .desktop\:button-app.color-primary-button:active {
-    color: #FFFFFF;
-    background: linear-gradient(0deg, #2444b5 0%, #284cca 100%);
-    box-shadow: none;
-  }
-
-  .desktop\:btn-app.color-secondary-button, .desktop\:button-app.color-secondary-button {
-    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
-    border-color: transparent;
-  }
-
-  .desktop\:btn-app.color-secondary-button:hover, .desktop\:btn-app.color-secondary-button:active, .desktop\:button-app.color-secondary-button:hover, .desktop\:button-app.color-secondary-button:active {
-    color: #FFFFFF;
-    background: linear-gradient(0deg, #fc4639 0%, #fc5d52 100%);
-    box-shadow: none;
+  .desktop\:btn-app:hover, .desktop\:btn-app:active,
+.desktop\:button-app:hover,
+.desktop\:button-app:active {
+    box-shadow: none !important;
   }
 
   /**
    * Large Button
    */
 
-  .desktop\:btn-large, .desktop\:button-large {
+  .desktop\:btn-large,
+.desktop\:button-large {
     padding: 20px 32px;
   }
 }

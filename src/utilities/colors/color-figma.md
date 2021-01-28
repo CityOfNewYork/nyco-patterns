@@ -1,0 +1,1 @@
+The Figma file above contains color styles for use in UI designs and prototypes.

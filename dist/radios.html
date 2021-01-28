@@ -5,17 +5,27 @@
   <meta charset="utf-8" />
   <meta content="IE=edge" http-equiv="X-UA-Compatible" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="styles/nyco-patterns-default.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
+  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
+  <link href="styles/nyco.css" rel="stylesheet" />
   <title>Radios | NYCO Patterns</title>
-  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32"
-    type="image/png" />
+  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
-  <link
-    href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap"
-    rel="stylesheet" />
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
     var VERSION = '2.5.1';
-  </script><noscript>
+  </script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(event) {
+      hljs.configure({
+        languages: ['html', 'javascript', 'css', 'sass']
+      });
+      document.querySelectorAll('pre').forEach(function(block) {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <noscript>
     <style>
       body {
         visibility: visible !important;
@@ -31,223 +41,253 @@
 
 </html>
 
-<body class="bg-base-black" onload="load()" style="visibility: hidden;"><a
-    class="o-sr-skip px-4 py-2 color-mid-background hidden"
-    href="#main-content">Skip to main content</a>
+<body class="bg-base-black" onload="load()" style="visibility: hidden;">
+  <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
   <header class="o-header tablet:layout-sidebar w-full">
-    <div class="o-header__banner-main color-primary-button"><button
-        aria-controls="js-navigation" aria-pressed="false"
-        class="o-header__main-toggle" data-js="toggle">Menu</button>
-      <h1 class="o-header__main-title"><span class="hidden"></span><svg
-          aria-hidden="true"
-          class="o-header__logo-main icon-logo-nyco-secondary">
+    <div class="o-header__banner-main bg-blue">
+      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
+      <h1 class="o-header__main-title">
+        <span class="hidden"></span>
+        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco-secondary">
           <use xlink:href="#icon-logo-nyco-secondary"></use>
-        </svg><svg aria-hidden="true"
-          class="o-header__logo-secondary icon-logo-nyco">
+        </svg>
+        <svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco">
           <use xlink:href="#icon-logo-nyco"></use>
-        </svg></h1>
+        </svg>
+      </h1>
       <div aria-hidden="true" class="o-header__main-version">v2.5.1</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
-      <div><a class="btn flex items-center"
-          href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.5.1"><svg
-            aria-hidden="true" class="icon-ui icon-3 mr-1">
+      <div>
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.5.1">
+          <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#icon-ui-github"></use>
-          </svg>2.5.1</a></div>
+          </svg>2.5.1
+        </a>
+      </div>
     </div>
   </header>
-  <main
-    class="tablet:layout-sidebar tablet:flex items-stretch m-0 p-0 tablet:min-h-screen"
-    id="main-content">
-    <aside class="o-navigation bg-primary-navy">
+  <main class="tablet:layout-sidebar tablet:flex items-stretch m-0 p-0 tablet:min-h-screen" id="main-content">
+    <aside class="o-navigation bg-navy">
       <div class="tablet:flex hidden w-full">
         <div class="o-navigation__wrap color-mid-background">
           <div class="o-navigation__nav">
-            <nav><a class="o-navigation__link" href="index">Home</a><a
-                class="o-navigation__link"
-                href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md"
-                target="_blank">About the Patterns ↗</a><a
-                class="o-navigation__link"
-                href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md"
-                target="_blank">Installation ↗</a></nav>
-            <nav><span
-                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span><a
-                class="o-navigation__link" href="buttons">Buttons</a><a
-                class="o-navigation__link" href="checkboxes">Checkboxes</a><a
-                class="o-navigation__link" href="code">Code</a><a
-                class="o-navigation__link" href="icons">Icons</a><a
-                class="o-navigation__link" href="inputs">Inputs</a><a
-                class="o-navigation__link" href="layouts">Layouts</a><a
-                class="o-navigation__link" href="links">Links</a><a
-                class="o-navigation__link" href="select">Select</a><a
-                class="o-navigation__link" href="radios">Radios</a><a
-                class="o-navigation__link" href="tables">Tables</a><span
-                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span><a
-                class="o-navigation__link" href="charts">Charts</a><a
-                class="o-navigation__link" href="content">Content</a><a
-                class="o-navigation__link" href="footer">Footer</a><a
-                class="o-navigation__link" href="feed">Feed</a><a
-                class="o-navigation__link" href="header">Header</a><a
-                class="o-navigation__link" href="mailchimp">Mailchimp</a><a
-                class="o-navigation__link" href="navigation">Navigation</a><span
-                class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span><a
-                class="o-navigation__link" href="animate">Animate</a><a
-                class="o-navigation__link" href="colors">Colors</a><a
-                class="o-navigation__link" href="tailwindcss">Tailwindcss</a><a
-                class="o-navigation__link" href="type">Type</a></nav>
+            <nav>
+              <a class="o-navigation__link" href="index">Home</a>
+              <a class="o-navigation__link" href="installation">Installation</a>
+              <a class="o-navigation__link" href="about">About the Patterns</a>
+              <a class="o-navigation__link" href="prototyping">Prototyping</a>
+            </nav>
+            <nav>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
+              <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+              <a class="o-navigation__link" href="code">Code</a>
+              <a class="o-navigation__link" href="description-lists">Description Lists</a>
+              <a class="o-navigation__link" href="icons">Icons</a>
+              <a class="o-navigation__link" href="inputs">Inputs</a>
+              <a class="o-navigation__link" href="layouts">Layouts</a>
+              <a class="o-navigation__link" href="links">Links</a>
+              <a class="o-navigation__link" href="radios">Radios</a>
+              <a class="o-navigation__link" href="select">Select</a>
+              <a class="o-navigation__link" href="tables">Tables</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+              <a class="o-navigation__link" href="card">Card</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="charts">Charts</a>
+              <a class="o-navigation__link" href="content">Content</a>
+              <a class="o-navigation__link" href="feed">Feed</a>
+              <a class="o-navigation__link" href="footer">Footer</a>
+              <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
+              <a class="o-navigation__link" href="navigation">Navigation</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="animate">Animate</a>
+              <a class="o-navigation__link" href="colors">Colors</a>
+              <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+              <a class="o-navigation__link" href="type">Type</a>
+            </nav>
           </div>
         </div>
       </div>
       <div class="tablet:hidden w-full">
-        <div
-          class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated"
-          id="js-navigation">
+        <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated" id="js-navigation">
           <div class="o-navigation__banner color-dark-background">
             <h1 class="o-navigation__banner-title">Patterns</h1>
           </div>
           <div class="animated">
             <div class="o-navigation__nav">
-              <nav><a class="o-navigation__link" href="index">Home</a><a
-                  class="o-navigation__link"
-                  href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/patterns.md"
-                  target="_blank">About the Patterns ↗</a><a
-                  class="o-navigation__link"
-                  href="https://github.com/CityOfNewYork/nyco-patterns-framework/blob/master/docs/installation.md"
-                  target="_blank">Installation ↗</a></nav>
-              <nav><span
-                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Elements</span><a
-                  class="o-navigation__link" href="buttons">Buttons</a><a
-                  class="o-navigation__link" href="checkboxes">Checkboxes</a><a
-                  class="o-navigation__link" href="code">Code</a><a
-                  class="o-navigation__link" href="icons">Icons</a><a
-                  class="o-navigation__link" href="inputs">Inputs</a><a
-                  class="o-navigation__link" href="layouts">Layouts</a><a
-                  class="o-navigation__link" href="links">Links</a><a
-                  class="o-navigation__link" href="select">Select</a><a
-                  class="o-navigation__link" href="radios">Radios</a><a
-                  class="o-navigation__link" href="tables">Tables</a><span
-                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Objects</span><a
-                  class="o-navigation__link" href="charts">Charts</a><a
-                  class="o-navigation__link" href="content">Content</a><a
-                  class="o-navigation__link" href="footer">Footer</a><a
-                  class="o-navigation__link" href="feed">Feed</a><a
-                  class="o-navigation__link" href="header">Header</a><a
-                  class="o-navigation__link" href="mailchimp">Mailchimp</a><a
-                  class="o-navigation__link"
-                  href="navigation">Navigation</a><span
-                  class="o-navigation__link-header text-primary-blue-70t border-primary-blue-30t">Utilities</span><a
-                  class="o-navigation__link" href="animate">Animate</a><a
-                  class="o-navigation__link" href="colors">Colors</a><a
-                  class="o-navigation__link"
-                  href="tailwindcss">Tailwindcss</a><a
-                  class="o-navigation__link" href="type">Type</a></nav>
+              <nav>
+                <a class="o-navigation__link" href="index" tabindex="-1">Home</a>
+                <a class="o-navigation__link" href="installation" tabindex="-1">Installation</a>
+                <a class="o-navigation__link" href="about" tabindex="-1">About the Patterns</a>
+                <a class="o-navigation__link" href="prototyping" tabindex="-1">Prototyping</a>
+              </nav>
+              <nav>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
+                <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
+                <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
+                <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
+                <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
+                <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
+                <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
+                <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
+                <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
+                <a class="o-navigation__link" href="radios" tabindex="-1">Radios</a>
+                <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
+                <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+                <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
+                <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
+                <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
+                <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
+                <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
+                <a class="o-navigation__link" href="header" tabindex="-1">Header</a>
+                <a class="o-navigation__link" href="mailchimp" tabindex="-1">Mailchimp</a>
+                <a class="o-navigation__link" href="navigation" tabindex="-1">Navigation</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
+                <a class="o-navigation__link" href="animate" tabindex="-1">Animate</a>
+                <a class="o-navigation__link" href="colors" tabindex="-1">Colors</a>
+                <a class="o-navigation__link" href="tailwindcss" tabindex="-1">Tailwindcss</a>
+                <a class="o-navigation__link" href="type" tabindex="-1">Type</a>
+              </nav>
             </div>
           </div>
         </div>
       </div>
     </aside>
-    <article class="color-light-background py-2">
+    <article class="color-light-background py-6">
       <div class="px-4 desktop:px-6">
         <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Radios</h1>
       </div>
       <section class="mt-6" id="radios">
-        <div class="bg-secondary-white-50t mb-6 p-4 desktop:p-6">
+        <div class="layout-content px-4">
+          <div class="o-content mx-auto flex items-center mb-3">
+            <a class="flex no-underline" href="#heading-radios">
+              <svg aria-hidden="true" class="icon-ui-anchor">
+                <use xlink:href="#icon-ui-anchor"></use>
+              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-radios">Default Radios</h2>
+          </div>
+        </div>
+        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
             <fieldset>
-              <legend class="mb-1">Options</legend><label class="radio"
-                for="option-1"><input id="option-1" name="options" type="radio"
-                  value="option-1" /><span class="radio__label">Option
-                  1</span></label><label class="radio" for="option-2"><input
-                  id="option-2" name="options" type="radio"
-                  value="option-2" /><span class="radio__label">Option
-                  2</span></label>
+              <legend class="mb-1">Options</legend>
+              <label class="radio" for="option-1">
+                <input id="option-1" name="options" type="radio" value="option-1" />
+                <span class="radio__label">Option 1</span>
+              </label>&nbsp;<label class="radio" for="option-2">
+                <input id="option-2" name="options" type="radio" value="option-2" />
+                <span class="radio__label">Option 2</span>
+              </label>
             </fieldset>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;fieldset&gt;&lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;&lt;label class=&quot;radio&quot; for=&quot;option-1&quot;&gt;&lt;input id=&quot;option-1&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-1&quot; /&gt;&lt;span class=&quot;radio__label&quot;&gt;Option 1&lt;/span&gt;&lt;/label&gt;&lt;label class=&quot;radio&quot; for=&quot;option-2&quot;&gt;&lt;input id=&quot;option-2&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-2&quot; /&gt;&lt;span class=&quot;radio__label&quot;&gt;Option 2&lt;/span&gt;&lt;/label&gt;&lt;/fieldset&gt;</pre>
+              <pre>&lt;fieldset&gt;
+  &lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;
+  &lt;label class=&quot;radio&quot; for=&quot;option-1&quot;&gt;
+    &lt;input id=&quot;option-1&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-1&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 1&lt;/span&gt;
+  &lt;/label&gt;&amp;nbsp;&lt;label class=&quot;radio&quot; for=&quot;option-2&quot;&gt;
+    &lt;input id=&quot;option-2&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-2&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 2&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;</pre>
             </div>
-            <p>A styled radio element. Styling of the element is determined by
-              the <a href="/colors">Color Combination utility</a> it is nested
-              under. Note the <code>&lt;fieldset&gt;</code> and
-              <code>&lt;legend&gt;</code> used for making the form more
-              understandable for all users. Read more about form grouping in <a
-                href="https://www.w3.org/WAI/tutorials/forms/grouping/">W3’s Web
-                Accessibility Tutorials</a>.</p>
+            <p>A styled radio element. Styling of the element is determined by the <a href="/colors">Color Combination utility</a> it is nested under. Note the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> used for making the form more understandable for all users. Read more about form grouping in <a href="https://www.w3.org/WAI/tutorials/forms/grouping/">W3’s Web Accessibility Tutorials</a>.</p>
           </div>
         </div>
       </section>
       <section class="mt-6" id="radios-error">
-        <div class="bg-secondary-white-50t mb-6 p-4 desktop:p-6">
+        <div class="layout-content px-4">
+          <div class="o-content mx-auto flex items-center mb-3">
+            <a class="flex no-underline" href="#heading-radios-error">
+              <svg aria-hidden="true" class="icon-ui-anchor">
+                <use xlink:href="#icon-ui-anchor"></use>
+              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-radios-error">error radios</h2>
+          </div>
+        </div>
+        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
             <fieldset>
-              <legend class="mb-1">Options</legend><label class="radio error"
-                for="option-3"><input id="option-3" name="options" type="radio"
-                  value="option-3" /><span class="radio__label">Option
-                  3</span></label><label class="radio error"
-                for="option-4"><input id="option-4" name="options" type="radio"
-                  value="option-4" /><span class="radio__label">Option
-                  4</span></label>
+              <legend class="mb-1">Options</legend>
+              <label class="radio error" for="option-3">
+                <input id="option-3" name="options" type="radio" value="option-3" />
+                <span class="radio__label">Option 3</span>
+              </label>&nbsp;<label class="radio error" for="option-4">
+                <input id="option-4" name="options" type="radio" value="option-4" />
+                <span class="radio__label">Option 4</span>
+              </label>
             </fieldset>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;fieldset&gt;&lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;&lt;label class=&quot;radio error&quot; for=&quot;option-3&quot;&gt;&lt;input id=&quot;option-3&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-3&quot; /&gt;&lt;span class=&quot;radio__label&quot;&gt;Option 3&lt;/span&gt;&lt;/label&gt;&lt;label class=&quot;radio error&quot; for=&quot;option-4&quot;&gt;&lt;input id=&quot;option-4&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-4&quot; /&gt;&lt;span class=&quot;radio__label&quot;&gt;Option 4&lt;/span&gt;&lt;/label&gt;&lt;/fieldset&gt;</pre>
+              <pre>&lt;fieldset&gt;
+  &lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;
+  &lt;label class=&quot;radio error&quot; for=&quot;option-3&quot;&gt;
+    &lt;input id=&quot;option-3&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-3&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 3&lt;/span&gt;
+  &lt;/label&gt;&amp;nbsp;&lt;label class=&quot;radio error&quot; for=&quot;option-4&quot;&gt;
+    &lt;input id=&quot;option-4&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-4&quot; /&gt;
+    &lt;span class=&quot;radio__label&quot;&gt;Option 4&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;</pre>
             </div>
-            <h2 id="heading-error">Error</h2>
           </div>
         </div>
       </section>
     </article>
   </main>
-  <footer
-    class="o-footer color-dark-background tablet:layout-four-columns-gutter">
-    <nav><a class="o-footer__nav-link" href="index">Home</a><a
-        class="o-footer__nav-link"
-        href="https://github.com/CityOfNewYork/nyco-patterns">GitHub
-        Repository</a><a class="o-footer__nav-link"
-        href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO
-        Patterns Framework</a><a class="o-footer__nav-link"
-        href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO
-        Opportunity on GitHub</a></nav>
-    <div></div>
-    <div class="o-footer__info"><a href="http://nyc.gov/opportunity"
-        title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;"><svg
-          aria-hidden="true"
-          class="icon-logo-secondary o-footer__logo text-base-white"
-          style="height: 52px !important">
-          <use xlink:href="#icon-logo-secondary"></use>
-        </svg></a>
-      <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York
-          City Mayor's Office for Economic Opportunity</a>. We are committed to
-        sharing open source software that we use in our products. Feel free to
-        ask questions and share feedback. Follow @nycopportunity on&nbsp;<a
-          href='https://twitter.com/nycopportunity' target='_blank'
-          rel='nofollow noopener'>Twitter</a>,&nbsp;<a
-          href='https://www.facebook.com/NYCOpportunity/' target='_blank'
-          rel='nofollow noopener'>Facebook</a>,&nbsp;<a
-          href='https://medium.com/@nycopportunity' target='_blank'
-          rel='nofollow noopener'>Medium</a>, and&nbsp;<a href=''
-          target='_blank' rel='nofollow noopener'
-          title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
-      </p><small>© City of New York, 2020 All Rights Reserved.<br>NYC is a
-        trademark and service mark of the City of New York.</small>
+  <footer class="o-footer color-dark-background border-navy-70t">
+    <div class="layout-wrap mx-auto">
+      <div class="o-footer__divider border-navy-70t desktop:flex desktop:layout-sidebar mb-4">
+        <div class="pb-4">
+          <a class="block" href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
+            <svg aria-hidden="true" class="o-footer__logo">
+              <use xlink:href="#icon-logo-secondary"></use>
+            </svg>
+            <span class="sr-only">The Mayor's Office for Economic Opportunity</span>
+          </a>
+        </div>
+        <div class="pb-4 desktop:pl-4 desktop:flex justify-end items-center">
+          <nav class="o-footer__inline-nav">
+            <a href="index">Home</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns">GitHub Repository</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a>
+            <a href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO Opportunity on GitHub</a>
+          </nav>
+        </div>
+      </div>
+      <div class="desktop:grid desktop:grid-cols-2">
+        <div>
+          <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;<a href='https://twitter.com/nycopportunity' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;<a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;<a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;<a href='' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
+        </div>
+        <div class="desktop:text-right">
+          <small>© City of New York, 2021 All Rights Reserved.
+            <br>NYC is a trademark and service mark of the City of New York.
+          </small>
+        </div>
+      </div>
     </div>
   </footer>
-  <script crossorigin="anonymous"
-    src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch">
-  </script>
-  <script src="scripts/nyco-patterns.js"></script>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch"></script>
+  <script src="scripts/nyco.js"></script>
   <script type="text/javascript">
-    var nyco = new NycoPatterns();
+    var nyco = new NYCO();
+    nyco.copy();
     nyco.icons();
     nyco.toggle();
   </script>
+  <script src="/reload/reload.js"></script>
 </body>

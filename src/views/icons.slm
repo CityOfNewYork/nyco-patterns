@@ -1,16 +1,16 @@
 - pattern = 'Icons';
 
 / Layout
-= extend('templates/default');
+= extend('/slm/templates/default');
 
 / Variables
-= partial('variables/classes.slm');
+= partial('/slm/variables/classes.slm');
 
 / Mixins
-= partial('mixins/head.slm');
-= partial('mixins/nav.slm');
-= partial('mixins/pattern.slm');
-= partial('mixins/readme.slm');
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/pattern.slm');
+= partial('/slm/mixins/readme.slm');
 
 / Content blocks
 = content('head');
@@ -23,6 +23,6 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern
 
-  = mixin('pattern', 'elements/icons/icons-logo', false);
-  = mixin('pattern', 'elements/icons/icons-ui', false);
+  = mixin('pattern', 'elements/icons/icons-logo', 0);
+  = mixin('pattern', 'elements/icons/icons-ui', 1, 'UI Icons (Feather)');
   = mixin('readme', 'elements/icons/icons');

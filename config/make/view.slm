@@ -1,0 +1,46 @@
+- pattern = '{{ Pattern }}';
+
+/ Layout
+= extend('/slm/templates/default');
+
+/ Variables
+= partial('/slm/variables/classes.slm');
+
+/ Mixins
+/ Mixins are included here and can be used in content blocks below
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/readme.slm');
+= partial('/slm/mixins/pattern.slm');
+
+/ Content blocks
+/ Blocks nested in these sections will appear in specific areas in the extended Layout
+= content('head');
+  = mixin('head', pattern);
+
+= content('header');
+  = mixin('header');
+
+= content('content');
+  h1 class='${classPageHeader}'
+    = pattern;
+
+  / Section types
+
+  / Readme renders a single markdown file in a section wrapper.
+  / Use for text only documentation.
+  / .
+  / = mixin('readme', '{{ type }}/{{ pattern }}/{{ pattern }}');
+
+  / Partial renders sinlge slm file in a section wrapper.
+  / Use for custom slm documentation.
+  / .
+  / = mixin('partial', '{{ type }}/{{ pattern }}/{{ pattern }}');
+
+  / Pattern renders a pattern slm template in a demonstration
+  / block, followed by the same slm template rendered as an
+  / html code block (pre tag), and then a markdown file. Both
+  / filenames should be the same (with different extensions).
+  / This is the primary section template for pattern demos.
+  / .
+  / = mixin('pattern', '{{ type }}/{{ pattern }}/{{ pattern }}');

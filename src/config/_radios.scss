@@ -9,8 +9,9 @@
 @import 'config/direction';
 
 $grid: map-get($tokens, 'grid');
-$size: map-get(map-get($tokens, 'inputs'), 'radio-size');
-$radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
+$labelBorderWidth: map-get(map-get($tokens, 'inputs'), 'label-border-width');
+$radioSize: map-get(map-get($tokens, 'inputs'), 'radio-size');
+$borderWidth: map-get(map-get($tokens, 'inputs'), 'border-width');
 
 // Declarations
 @mixin radios {
@@ -38,8 +39,8 @@ $radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
   margin: 0;
   padding: .75 * (map-get($tokens, 'grid') * 2);
 
-  border-width: 1px;
   border-style: solid;
+  border-width: $labelBorderWidth;
   border-radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
 
   transition: all .2s;
@@ -50,13 +51,13 @@ $radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
 @mixin radios-btn {
   content: '';
 
-  border-width: 1px;
   border-style: solid;
+  border-width: $borderWidth;
   border-radius: 100%;
   display: inline-block;
-  width: $size;
-  height: $size;
-  min-width: $size;
+  width: $radioSize;
+  height: $radioSize;
+  min-width: $radioSize;
   margin-#{$direction-end}: $grid;
 
   background-repeat: no-repeat;

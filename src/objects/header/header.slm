@@ -3,7 +3,7 @@
 /
 
 header class='o-header tablet:layout-sidebar w-full'
-  div class='o-header__banner-main color-primary-button'
+  div class='o-header__banner-main bg-blue'
     button class='o-header__main-toggle' data-js='toggle' aria-pressed='false' aria-controls='js-navigation' Menu
 
     h1 class='o-header__main-title'
@@ -25,7 +25,7 @@ header class='o-header tablet:layout-sidebar w-full'
     div
       a href='${this.urls.release}' class='btn flex items-center'
         svg aria-hidden='true' class='icon-ui icon-3 mr-1'
-          use xlink:href='#icon-ui-github'
+          use xlink:href='#feather-github'
 
         = this.versions.package;
 

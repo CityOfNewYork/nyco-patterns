@@ -51,7 +51,7 @@ div class='bg-base-white shadow-up rounded overflow-hidden'
             li class='px-2 py-2 flex items-center justify-between text-small border-b border-white'
               div class='w-0 flex-1 flex items-center'
                 svg class='icon-ui icon-3 text-gray' aria-hidden='true'
-                  use xlink:href='#icon-ui-paperclip'
+                  use xlink:href='#feather-paperclip'
 
                 span class='text-grey ml-2 flex-1 w-0 truncate'
                   | resume_back_end_developer.pdf
@@ -63,7 +63,7 @@ div class='bg-base-white shadow-up rounded overflow-hidden'
             li class='px-2 py-2 flex items-center justify-between text-small'
               div class='w-0 flex-1 flex items-center'
                 svg class='icon-ui icon-3 text-gray' aria-hidden='true'
-                  use xlink:href='#icon-ui-paperclip'
+                  use xlink:href='#feather-paperclip'
 
                 span class='text-grey ml-2 flex-1 w-0 truncate'
                   | coverletter_back_end_developer.pdf

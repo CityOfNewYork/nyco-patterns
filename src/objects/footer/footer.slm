@@ -2,33 +2,37 @@
 / Footer
 /
 
-footer class='o-footer color-dark-background tablet:layout-four-columns-gutter'
+footer class='o-footer color-dark-background border-navy-70t'
+  div class='layout-wrap mx-auto'
+    div class='o-footer__divider border-navy-70t desktop:flex desktop:layout-sidebar mb-4'
+      div class='pb-4'
+        a href='http://nyc.gov/opportunity' title='${this.package.author}' class='block'
+          svg class='o-footer__logo' aria-hidden='true'
+            use xlink:href='#icon-logo-secondary'
 
-  nav
-    a class='o-footer__nav-link' href='index' Home
-    a class='o-footer__nav-link' href='${this.urls.source}' GitHub Repository
-    a class='o-footer__nav-link' href='${this.urls.nycoPatternsFramework}' NYCO Patterns Framework
-    a class='o-footer__nav-link' href='${this.urls.nycOpportunityOnGithub}' NYCO Opportunity on GitHub
-    / a class='o-footer__nav-link' href='${this.urls.nycOpportunity}' title='${this.package.author}' NYC Opportunity
-    / a class='o-footer__nav-link' href='${this.urls.tailwind}' Tailwind CSS
-    / a class='o-footer__nav-link' href='${this.urls.blueprint}' NYC Digital Blueprint
+          span class='sr-only'
+            | The Mayor's Office for Economic Opportunity
 
-  div
+      div class='pb-4 desktop:pl-4 desktop:flex justify-end items-center'
+        nav class='o-footer__inline-nav'
+          a href='index' Home
+          a href='${this.urls.source}' GitHub Repository
+          a href='${this.urls.nycoPatternsFramework}' NYCO Patterns Framework
+          a href='${this.urls.nycOpportunityOnGithub}' NYCO Opportunity on GitHub
 
-  div class='o-footer__info'
-    a href='http://nyc.gov/opportunity' title='${this.package.author}'
-      svg class='icon-logo-secondary o-footer__logo text-base-white' aria-hidden='true' style='height: 52px !important'
-        use xlink:href='#icon-logo-secondary'
+    div class='desktop:grid desktop:grid-cols-2'
+      div
+        p
+          | NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
+          | <a href='${this.urls.twitter}' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
+          | <a href='${this.urls.facebook}' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
+          | <a href='${this.urls.medium}' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
+          | <a href='${this.urls.github_team}' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
 
-    p
-      | NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;
-      | <a href='${this.urls.twitter}' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;
-      | <a href='${this.urls.facebook}' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;
-      | <a href='${this.urls.medium}' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;
-      | <a href='${this.urls.github_team}' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.
+      div class='desktop:text-end'
+        small
+          - let date = new Date();
+          - let year = date.getFullYear();
 
-    small
-      - let date = new Date();
-      - let year = date.getFullYear();
-      | © City of New York, ${year} All Rights Reserved.<br>
-      | NYC is a trademark and service mark of the City of New York.
+          | © City of New York, ${year} All Rights Reserved.<br>
+          | NYC is a trademark and service mark of the City of New York.

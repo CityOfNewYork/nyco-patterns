@@ -20,9 +20,9 @@ const sass = {
 
 module.exports = [
   {
-    file: './src/scss/patterns-default.scss',
+    file: './src/scss/default.scss',
     outDir: './dist/styles/',
-    outFile: 'nyco-patterns-default.css',
+    outFile: 'nyco.css',
     sourceMapEmbed: sass.sourceMapEmbed,
     precision: sass.precision,
     includePaths: sass.includePaths,

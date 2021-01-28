@@ -1,16 +1,17 @@
 - pattern = 'Tailwindcss';
 
 / Layout
-= extend('templates/default');
+= extend('/slm/templates/default');
 
 / Variables
-= partial('variables/classes.slm');
+= partial('/slm/variables/classes.slm');
 
 / Mixins
-= partial('mixins/head.slm');
-= partial('mixins/nav.slm');
-= partial('mixins/readme.slm');
-= partial('mixins/pattern.slm');
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/readme.slm');
+= partial('/slm/mixins/partial.slm');
+= partial('/slm/mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -23,7 +24,11 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
 
-  = mixin('readme', 'utilities/tailwindcss/tailwindcss');
-  = mixin('readme', 'utilities/tailwindcss/tailwindcss-installation');
-  = mixin('readme', 'utilities/tailwindcss/tailwindcss-ui');
+  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss-about');
+  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss');
+  = mixin('partial', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss');
+  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss/tailwindcss-logical');
+  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss-installation');
+  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss/tailwindcss-ui');
+
   = mixin('pattern', 'utilities/tailwindcss/tailwindcss-description-lists');

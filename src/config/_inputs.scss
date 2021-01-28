@@ -3,28 +3,36 @@
 @import 'config/tokens';
 @import 'config/screens';
 @import 'config/fonts';
+@import 'config/grid';
 
-$padding: map-get($tokens, 'padding');
+$inputs-padding: $grid * 2;
+$inputs-label-border-width: map-get(map-get($tokens, 'inputs'), 'label-border-width');
+$inputs-border-radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
+
+$inputs-btn-dimension: $grid * 3;
+$inputs-btn-dimension-large: $grid * 5;
+
 
 // Declarations
 @mixin inputs() {
   appearance: none;
   color: inherit;
   font-size: inherit;
-  border-width: 1px;
+  font-family: inherit;
   border-style: solid;
-  border-radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
   display: block;
   max-width: 100%;
   min-width: 200px;
   width: 100%;
-  padding: .75 * (map-get($tokens, 'grid') * 2);
   cursor: pointer;
   margin: 0;
 
+  padding: $inputs-padding;
+  border-width: $inputs-label-border-width;
+  border-radius: $inputs-border-radius;
+
   &::placeholder {
     color: inherit;
-    opacity: 0.6;
   }
 
   @media screen and (min-width: $tablet) {
@@ -32,7 +40,27 @@ $padding: map-get($tokens, 'padding');
   }
 }
 
-@mixin input-currency-icon() {
+@mixin inputs-currency-icon() {
   font-size: inherit;
   font-weight: $font-weight-bold;
+}
+
+@mixin inputs-btn() {
+  width: $inputs-btn-dimension;
+  height: $inputs-btn-dimension;
+
+  .icon-ui {
+    width: $inputs-btn-dimension;
+    height: $inputs-btn-dimension;
+  }
+}
+
+@mixin inputs-btn-large() {
+  width: $inputs-btn-dimension-large;
+  height: $inputs-btn-dimension-large;
+
+  .icon-ui {
+    width: $inputs-btn-dimension-large;
+    height: $inputs-btn-dimension-large;
+  }
 }
