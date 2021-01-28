@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="text-size-0" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
+  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
+  <link href="styles/nyco.css" rel="stylesheet" />
+  <title>Record Hero | NYCO Patterns</title>
+  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+  <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+  <script type="text/javascript">
+    var VERSION = '2.6.0-1';
+  </script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(event) {
+      hljs.configure({
+        languages: ['html', 'javascript', 'css', 'sass']
+      });
+      document.querySelectorAll('pre').forEach(function(block) {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <noscript>
+    <style>
+      body {
+        visibility: visible !important;
+      }
+    </style>
+  </noscript>
+  <script type="text/javascript">
+    function load() {
+      document.body.style.visibility = 'visible'
+    };
+  </script>
+</head>
+
+</html>
+
+<body class="bg-base-black" onload="load()" style="visibility: hidden;">
+  <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
+  <header class="o-header tablet:layout-sidebar w-full">
+    <div class="o-header__banner-main bg-blue">
+      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
+      <h1 class="o-header__main-title">
+        <span class="hidden"></span>
+        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco-secondary">
+          <use xlink:href="#icon-logo-nyco-secondary"></use>
+        </svg>
+        <svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco">
+          <use xlink:href="#icon-logo-nyco"></use>
+        </svg>
+      </h1>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.0-1</div>
+    </div>
+    <div class="o-header__banner-secondary color-dark-background">
+      <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
+    </div>
+    <div class="o-header__secondary-version color-dark-background">
+      <div>
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0-1">
+          <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
+            <use xlink:href="#feather-github"></use>
+          </svg>2.6.0-1
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="tablet:layout-sidebar tablet:flex items-stretch m-0 p-0 tablet:min-h-screen" id="main-content">
+    <aside class="o-navigation bg-navy">
+      <div class="tablet:flex hidden w-full">
+        <div class="o-navigation__wrap color-mid-background">
+          <div class="o-navigation__nav">
+            <nav>
+              <a class="o-navigation__link" href="index">Home</a>
+              <a class="o-navigation__link" href="installation">Installation</a>
+              <a class="o-navigation__link" href="about">About the Patterns</a>
+              <a class="o-navigation__link" href="prototyping">Prototyping</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
+              <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="badge">Badge</a>
+              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
+              <a class="o-navigation__link" href="code">Code</a>
+              <a class="o-navigation__link" href="description-lists">Description Lists</a>
+              <a class="o-navigation__link" href="icons">Icons</a>
+              <a class="o-navigation__link" href="inputs">Inputs</a>
+              <a class="o-navigation__link" href="layouts">Layouts</a>
+              <a class="o-navigation__link" href="links">Links</a>
+              <a class="o-navigation__link" href="radios">Radios</a>
+              <a class="o-navigation__link" href="select">Select</a>
+              <a class="o-navigation__link" href="tables">Tables</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+              <a class="o-navigation__link" href="card">Card</a>
+              <a class="o-navigation__link" href="record-hero">Record Hero</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="charts">Charts</a>
+              <a class="o-navigation__link" href="content">Content</a>
+              <a class="o-navigation__link" href="feed">Feed</a>
+              <a class="o-navigation__link" href="footer">Footer</a>
+              <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
+              <a class="o-navigation__link" href="navigation">Navigation</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="animate">Animate</a>
+              <a class="o-navigation__link" href="colors">Colors</a>
+              <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+              <a class="o-navigation__link" href="type">Type</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="tablet:hidden w-full">
+        <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated" id="js-navigation">
+          <div class="o-navigation__banner color-dark-background">
+            <h1 class="o-navigation__banner-title">Patterns</h1>
+          </div>
+          <div class="animated">
+            <div class="o-navigation__nav">
+              <nav>
+                <a class="o-navigation__link" href="index" tabindex="-1">Home</a>
+                <a class="o-navigation__link" href="installation" tabindex="-1">Installation</a>
+                <a class="o-navigation__link" href="about" tabindex="-1">About the Patterns</a>
+                <a class="o-navigation__link" href="prototyping" tabindex="-1">Prototyping</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
+                <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
+                <a class="o-navigation__link" href="badge" tabindex="-1">Badge</a>
+                <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
+                <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
+                <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
+                <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
+                <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
+                <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
+                <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
+                <a class="o-navigation__link" href="radios" tabindex="-1">Radios</a>
+                <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
+                <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+                <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
+                <a class="o-navigation__link" href="record-hero" tabindex="-1">Record Hero</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
+                <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
+                <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
+                <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
+                <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
+                <a class="o-navigation__link" href="header" tabindex="-1">Header</a>
+                <a class="o-navigation__link" href="mailchimp" tabindex="-1">Mailchimp</a>
+                <a class="o-navigation__link" href="navigation" tabindex="-1">Navigation</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
+                <a class="o-navigation__link" href="animate" tabindex="-1">Animate</a>
+                <a class="o-navigation__link" href="colors" tabindex="-1">Colors</a>
+                <a class="o-navigation__link" href="tailwindcss" tabindex="-1">Tailwindcss</a>
+                <a class="o-navigation__link" href="type" tabindex="-1">Type</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <article class="color-light-background py-6">
+      <h1 class="px-4 desktop:px-6">Record Hero</h1>
+      <section class="mt-6" id="record-hero">
+        <div class="layout-content px-4">
+          <div class="o-content mx-auto flex items-center mb-3">
+            <a class="flex no-underline" href="#heading-record-hero">
+              <svg aria-hidden="true" class="icon-ui-anchor">
+                <use xlink:href="#feather-anchor"></use>
+              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-record-hero">Record Hero</h2>
+          </div>
+        </div>
+        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <section class="c-record-hero">
+              <div class="c-record-hero__body">
+                <header class="c-record-hero__header">
+                  <h2>
+                    <svg aria-hidden="true" class="icon-ui mie-1">
+                      <use xlink:href="#feather-user"></use>
+                    </svg>Record Name
+                  </h2>
+                </header>
+                <div class="c-record-hero__details">
+                  <dl class="c-record-hero__description-list grid grid-cols-3">
+                    <dt>Detail 1</dt>
+                    <dd class="col-span-2 mb-0">Detail Value 1</dd>
+                    <dt>Address</dt>
+                    <dd class="col-span-2 mb-0">1111 Street, Fl, New York, NY</dd>
+                    <dt>Last Updated</dt>
+                    <dd class="col-span-2 mb-0">August 25, 2020</dd>
+                  </dl>
+                </div>
+                <p>This is a description of the record you are viewing.</p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto">
+            <div class="code-block">
+              <pre>&lt;section class=&quot;c-record-hero&quot;&gt;
+  &lt;div class=&quot;c-record-hero__body&quot;&gt;
+    &lt;header class=&quot;c-record-hero__header&quot;&gt;
+      &lt;h2&gt;
+        &lt;svg aria-hidden=&quot;true&quot; class=&quot;icon-ui mie-1&quot;&gt;
+          &lt;use xlink:href=&quot;#feather-user&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;Record Name
+      &lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;c-record-hero__details&quot;&gt;
+      &lt;dl class=&quot;c-record-hero__description-list grid grid-cols-3&quot;&gt;
+        &lt;dt&gt;Detail 1&lt;/dt&gt;
+        &lt;dd class=&quot;col-span-2 mb-0&quot;&gt;Detail Value 1&lt;/dd&gt;
+        &lt;dt&gt;Address&lt;/dt&gt;
+        &lt;dd class=&quot;col-span-2 mb-0&quot;&gt;1111 Street, Fl, New York, NY&lt;/dd&gt;
+        &lt;dt&gt;Last Updated&lt;/dt&gt;
+        &lt;dd class=&quot;col-span-2 mb-0&quot;&gt;August 25, 2020&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/div&gt;
+    &lt;p&gt;This is a description of the record you are viewing.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+            </div>
+            <p>The Record Hero Component can be used as a heading index card that describes a data record or data set in an application.</p>
+          </div>
+        </div>
+      </section>
+      <section class="mt-6" id="record-hero-alt">
+        <div class="layout-content px-4">
+          <div class="o-content mx-auto flex items-center mb-3">
+            <a class="flex no-underline" href="#heading-record-hero-alt">
+              <svg aria-hidden="true" class="icon-ui-anchor">
+                <use xlink:href="#feather-anchor"></use>
+              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-record-hero-alt">Record Hero Alt</h2>
+          </div>
+        </div>
+        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
+          <div class="layout-wrap mx-auto flex justify-center">
+            <section class="c-record-hero desktop:grid grid-cols-8">
+              <div class="c-record-hero__body col-span-5">
+                <header class="c-record-hero__header">
+                  <h2>Record Name</h2>
+                </header>
+                <div class="c-record-hero__details">
+                  <mark class="badge bg-base-white">
+                    <svg aria-hidden="true" class="icon-ui mie-1 text-red">
+                      <use xlink:href="#feather-file-text"></use>
+                    </svg>Record Badge
+                  </mark>
+                  <dl class="c-record-hero__description-list">
+                    <dt class="small">Record Created</dt>
+                    <dd>June 25, 2020</dd>
+                  </dl>
+                  <dl class="c-record-hero__description-list">
+                    <dt class="small">Last Updated</dt>
+                    <dd>August 25, 2020</dd>
+                  </dl>
+                </div>
+                <p>The Department of Homeless Services' (DHS) Client Assistance and Re-housing System (CARES) is used internally by the DHS Family Services division to track information about families that have applied for emergency shelter.</p>
+              </div>
+              <div class="c-record-hero__body col-span-3 bg-blue-20t">
+                <dl class="c-record-hero__description-list flex flex-col mb-3">
+                  <dt class="small">Date Started</dt>
+                  <dd>June 25, 2020</dd>
+                  <dt class="small">Steward</dt>
+                  <dl>
+                    <p class="mb-0">Name of data manager, Dept.</p>
+                    <a class="inline-flex" href="#">
+                      <svg aria-hidden="true" class="icon-ui mie-1">
+                        <use xlink:href="#feather-mail"></use>
+                      </svg>email@contact.nyc.gov
+                    </a>
+                  </dl>
+                </dl>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="layout-content px-4 pb-4">
+          <div class="o-content mx-auto">
+            <div class="code-block">
+              <pre>&lt;section class=&quot;c-record-hero desktop:grid grid-cols-8&quot;&gt;
+  &lt;div class=&quot;c-record-hero__body col-span-5&quot;&gt;
+    &lt;header class=&quot;c-record-hero__header&quot;&gt;
+      &lt;h2&gt;Record Name&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;c-record-hero__details&quot;&gt;
+      &lt;mark class=&quot;badge bg-base-white&quot;&gt;
+        &lt;svg aria-hidden=&quot;true&quot; class=&quot;icon-ui mie-1 text-red&quot;&gt;
+          &lt;use xlink:href=&quot;#feather-file-text&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;Record Badge
+      &lt;/mark&gt;
+      &lt;dl class=&quot;c-record-hero__description-list&quot;&gt;
+        &lt;dt class=&quot;small&quot;&gt;Record Created&lt;/dt&gt;
+        &lt;dd&gt;June 25, 2020&lt;/dd&gt;
+      &lt;/dl&gt;
+      &lt;dl class=&quot;c-record-hero__description-list&quot;&gt;
+        &lt;dt class=&quot;small&quot;&gt;Last Updated&lt;/dt&gt;
+        &lt;dd&gt;August 25, 2020&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/div&gt;
+    &lt;p&gt;The Department of Homeless Services' (DHS) Client Assistance and Re-housing System (CARES) is used internally by the DHS Family Services division to track information about families that have applied for emergency shelter.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-record-hero__body col-span-3 bg-blue-20t&quot;&gt;
+    &lt;dl class=&quot;c-record-hero__description-list flex flex-col mb-3&quot;&gt;
+      &lt;dt class=&quot;small&quot;&gt;Date Started&lt;/dt&gt;
+      &lt;dd&gt;June 25, 2020&lt;/dd&gt;
+      &lt;dt class=&quot;small&quot;&gt;Steward&lt;/dt&gt;
+      &lt;dl&gt;
+        &lt;p class=&quot;mb-0&quot;&gt;Name of data manager, Dept.&lt;/p&gt;
+        &lt;a class=&quot;inline-flex&quot; href=&quot;#&quot;&gt;
+          &lt;svg aria-hidden=&quot;true&quot; class=&quot;icon-ui mie-1&quot;&gt;
+            &lt;use xlink:href=&quot;#feather-mail&quot;&gt;&lt;/use&gt;
+          &lt;/svg&gt;email@contact.nyc.gov
+        &lt;/a&gt;
+      &lt;/dl&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+            </div>
+            <p>The Component can be styled for different contexts <a href="/tailwindcss">Tailwindcss utilities</a>.</p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="o-footer color-dark-background border-navy-70t">
+    <div class="layout-wrap mx-auto">
+      <div class="o-footer__divider border-navy-70t desktop:flex desktop:layout-sidebar mb-4">
+        <div class="pb-4">
+          <a class="block" href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
+            <svg aria-hidden="true" class="o-footer__logo">
+              <use xlink:href="#icon-logo-secondary"></use>
+            </svg>
+            <span class="sr-only">The Mayor's Office for Economic Opportunity</span>
+          </a>
+        </div>
+        <div class="pb-4 desktop:pl-4 desktop:flex justify-end items-center">
+          <nav class="o-footer__inline-nav">
+            <a href="index">Home</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns">GitHub Repository</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a>
+            <a href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO Opportunity on GitHub</a>
+          </nav>
+        </div>
+      </div>
+      <div class="desktop:grid desktop:grid-cols-2">
+        <div>
+          <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;<a href='https://twitter.com/nycopportunity' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;<a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;<a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;<a href='' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
+        </div>
+        <div class="desktop:text-end">
+          <small>© City of New York, 2021 All Rights Reserved.
+            <br>NYC is a trademark and service mark of the City of New York.
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch"></script>
+  <script src="scripts/nyco.js"></script>
+  <script type="text/javascript">
+    var nyco = new NYCO();
+    nyco.copy();
+    nyco.icons();
+    nyco.icons('svg/feather.svg');
+    nyco.toggle();
+  </script>
+</body>

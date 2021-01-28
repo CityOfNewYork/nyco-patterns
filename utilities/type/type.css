@@ -60,6 +60,11 @@ h6 a, .h6 a {
   text-decoration: inherit;
 }
 
+h1, h4, h5, h6,
+.h1, .h4, .h5, .h6 {
+  color: var(--nyco-headings);
+}
+
 small, .small {
   font-size: 0.833em;
   font-weight: normal;

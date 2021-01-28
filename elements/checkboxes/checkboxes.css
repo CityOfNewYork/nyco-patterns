@@ -24,18 +24,18 @@
   display: flex;
   margin: 0;
   padding: 12px;
-  border-width: 1px;
   border-style: solid;
-  border-radius: 1px;
+  border-width: 1px;
+  border-radius: 2px;
   transition: all 0.2s;
   cursor: pointer;
 }
 
 .checkbox__label::before {
   transition: all 0.2s;
-  border-width: 1px;
   border-style: solid;
-  border-radius: 1px;
+  border-width: 2px;
+  border-radius: 2px;
   content: "";
   display: inline-block;
   width: 24px;

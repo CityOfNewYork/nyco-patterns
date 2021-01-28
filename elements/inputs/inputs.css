@@ -6,22 +6,26 @@ input, textarea {
   appearance: none;
   color: inherit;
   font-size: inherit;
-  border-width: 1px;
+  font-family: inherit;
   border-style: solid;
-  border-radius: 1px;
   display: block;
   max-width: 100%;
   min-width: 200px;
   width: 100%;
-  padding: 12px;
   cursor: pointer;
   margin: 0;
+  padding: 16px;
+  border-width: 1px;
+  border-radius: 2px;
 }
 
 input::placeholder, textarea::placeholder {
   color: inherit;
-  opacity: 0.6;
 }
+
+/**
+ * Currency Input
+ */
 
 .input-currency-usd {
   position: relative;
@@ -43,6 +47,10 @@ input::placeholder, textarea::placeholder {
   z-index: 2;
   pointer-events: none;
 }
+
+/**
+ * Number Input
+ */
 
 input[type=number] {
   appearance: textfield;
@@ -79,23 +87,24 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   text-align: left;
   margin-top: 1px;
   z-index: 1;
-  box-shadow: 8px 8px 0px 0px;
+  box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color);
 }
 
 .input-autocomplete__dropdown > ul > li {
   appearance: none;
   color: inherit;
   font-size: inherit;
-  border-width: 1px;
+  font-family: inherit;
   border-style: solid;
-  border-radius: 1px;
   display: block;
   max-width: 100%;
   min-width: 200px;
   width: 100%;
-  padding: 12px;
   cursor: pointer;
   margin: 0;
+  padding: 16px;
+  border-width: 1px;
+  border-radius: 2px;
   transition-property: opacity, background, color, border, box-shadow, outline, transform, stroke, stroke-dashoffset, fill;
   transition-duration: 0.25s;
   backface-visibility: hidden;
@@ -105,11 +114,56 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
 
 .input-autocomplete__dropdown > ul > li::placeholder {
   color: inherit;
-  opacity: 0.6;
 }
 
 .input-autocomplete__dropdown > ul > .input-autocomplete__highlight {
-  background-color: #c1c6cb;
+  background-color: #999ca4;
+}
+
+/**
+ * Search Input
+ */
+
+.input-search {
+  position: relative;
+}
+
+.input-search input {
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Input Button
+ */
+
+.input__btn {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.input__btn .icon-ui {
+  width: 24px;
+  height: 24px;
+}
+
+.input__btn-large {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.input__btn-large .icon-ui {
+  width: 40px;
+  height: 40px;
 }
 
 @media screen and (min-width: 768px) {

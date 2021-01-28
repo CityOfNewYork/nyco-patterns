@@ -2,6 +2,16 @@
  * Links
  */
 
-a, .link {
+a:not(.btn), .link {
+  color: var(--nyco-hyperlinks);
   font-weight: bold;
+  border-radius: 2px;
+}
+
+a:not(.btn):visited, .link:visited {
+  color: var(--nyco-visited);
+}
+
+a:not(.btn):hover, a:not(.btn):active, a:not(.btn):focus, a:not(.btn).active, .link:hover, .link:active, .link:focus, .link.active {
+  color: var(--nyco-hover);
 }

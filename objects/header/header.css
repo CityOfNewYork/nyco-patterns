@@ -35,8 +35,8 @@
   visibility: hidden;
   width: 136px !important;
   height: 80px !important;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 32px !important;
+  margin-bottom: 32px !important;
 }
 
 .o-header__banner-secondary {

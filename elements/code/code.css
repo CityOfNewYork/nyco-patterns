@@ -2,17 +2,20 @@
  * Code
  */
 
-code, pre {
-  color: #284cca;
+code, pre, .hljs {
+  color: var(--nyco-code-secondary);
   display: inline-block;
   font-family: 1em;
   font-family: monospace;
   font-size: 1em;
   font-weight: normal;
   line-height: 1.6;
-  background-color: #F6F6F6;
-  border: 1px solid #c1c6cb;
-  padding: 0 0.3em;
+  background-color: var(--nyco-code-background);
+  border-color: var(--nyco-code-border);
+  border-width: 2px;
+  border-radius: 2px;
+  border-style: solid;
+  padding: 0.1em 0.3em;
 }
 
 p code, li code {
@@ -20,18 +23,17 @@ p code, li code {
   font-family: inherit;
   letter-spacing: 0.01em;
   border-radius: 3px;
+  border-width: 1px;
   margin: 0;
   display: inline;
-  padding: 0 0.3em 0.1em;
 }
 
 pre {
-  color: #fc5d52;
+  color: var(--nyco-code-primary);
   display: block;
   max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-  padding: 16px 16px;
+  overflow: auto;
+  padding: 24px;
 }
 
 pre code {
@@ -46,51 +48,62 @@ pre code {
 }
 
 .code {
-  color: #284cca;
+  color: var(--nyco-code-secondary);
   display: inline-block;
   font-family: 1em;
   font-family: monospace;
   font-size: 1em;
   font-weight: normal;
   line-height: 1.6;
-  background-color: #F6F6F6;
-  border: 1px solid #c1c6cb;
-  padding: 0 0.3em;
+  background-color: var(--nyco-code-background);
+  border-color: var(--nyco-code-border);
+  border-width: 2px;
+  border-radius: 2px;
+  border-style: solid;
+  padding: 0.1em 0.3em;
 }
 
-.code__comment {
-  color: #cdd8ef;
+.code__comment, .hljs-comment {
+  color: #999ca4;
 }
 
 .code-block {
-  color: #284cca;
+  color: var(--nyco-code-secondary);
   display: inline-block;
   font-family: 1em;
   font-family: monospace;
   font-size: 1em;
   font-weight: normal;
   line-height: 1.6;
-  background-color: #F6F6F6;
-  border: 1px solid #c1c6cb;
-  padding: 0 0.3em;
-  color: #fc5d52;
+  background-color: var(--nyco-code-background);
+  border-color: var(--nyco-code-border);
+  border-width: 2px;
+  border-radius: 2px;
+  border-style: solid;
+  padding: 0.1em 0.3em;
+  color: var(--nyco-code-primary);
   display: block;
   max-width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-  padding: 16px 16px;
+  overflow: auto;
+  padding: 24px;
   padding: 0;
 }
 
 .code-block pre {
   color: inherit;
   font-size: inherit;
+  display: block;
   background-color: transparent;
   margin: 0;
   padding: 16px;
   border: none;
+  max-height: 80vh;
 }
 
 .code-block code {
   padding: 0;
+}
+
+.text-code, .hljs-selector-class, .hljs-selector-id {
+  color: var(--nyco-code-primary);
 }
