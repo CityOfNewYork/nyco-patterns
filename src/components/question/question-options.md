@@ -1,0 +1,1 @@
+Questions with multiple [options](options), specifically checkbox and radio button groups, will require the `<fieldset>` element as the root element and the `<legend>` element as the question label to properly structure the question for screen readers.

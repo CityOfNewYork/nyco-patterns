@@ -1,0 +1,42 @@
+// Dependencies
+@use 'config/grid';
+@use 'config/tokens';
+@use 'config/screen-readers';
+
+$options: map-get(tokens.$tokens, 'options');
+
+@function get($token) {
+  @return map-get($options, $token);
+}
+
+// Declarations
+@mixin base() {
+  line-height: get('inner-size');
+  text-decoration: none;
+
+  display: inline-flex;
+  padding: (grid.$grid * 2) - get('border-width');
+  border: get('border-width') get('border-style');
+
+  @if get('border-transparent') {
+    border-color: transparent;
+  }
+
+  border-radius: get('radius');
+
+  cursor: pointer;
+}
+
+@mixin graphic() {
+  color: inherit;
+  fill: transparent;
+  stroke: transparent;
+
+  stroke-width: get('stroke-width');
+  stroke-linecap: get('stroke-line');
+  stroke-linejoin: get('stroke-line');
+
+  width: get('inner-size');
+  height: get('inner-size');
+  margin-inline-end: grid.$grid;
+}

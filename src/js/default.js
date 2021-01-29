@@ -1,17 +1,12 @@
 'use strict';
 
 import Copy from '@nycopportunity/pttrn-scripts/src/copy/copy';
+import Forms from '@nycopportunity/pttrn-scripts/src/forms/forms';
 import Icons from '@nycopportunity/pttrn-scripts/src/icons/icons';
 import Toggle from '@nycopportunity/pttrn-scripts/src/toggle/toggle';
-
-import Select from '../elements/select/select';
-import InputAutocomplete from '../elements/inputs/input-autocomplete';
+import Autocomplete from '@nycopportunity/pttrn-scripts/src/autocomplete/autocomplete';
 
 import Feed from '../objects/feed/feed';
-import ChartBar from '../objects/charts/chart-bar';
-import ChartHorizontalBar from '../objects/charts/chart-horizontal-bar';
-import ChartLine from '../objects/charts/chart-line';
-import ChartPie from '../objects/charts/chart-pie';
 /** import modules here as they are written */
 
 /**
@@ -45,57 +40,48 @@ class Default {
    *
    * @return  {Object}            Feed instance
    */
-  feed(settings) {
+  feed(settings = {}) {
     return new Feed(settings);
   }
 
   /**
    * Method for the Toggle Utility
    *
+   * @param   {Object}  settings  Setting for the toggle
+   *
    * @return  {Object}  Toggle instance
    */
-  toggle(settings) {
-    return new Toggle();
-  }
-
-  /**
-   * Method for the Select Elements
-   *
-   * @return  {Object}  Select instance
-   */
-  select() {
-    return new Select();
-  }
-
-  /**
-   * Method for the Chart Objects
-   *
-   * @return  {Object}  Chart instance
-   */
-  chart(type) {
-    if (type === 'bar')
-      return new ChartBar();
-
-    if (type === 'horizontalBar')
-      return new ChartHorizontalBar();
-
-    if (type === 'line')
-      return new ChartLine();
-
-    if (type === 'pie')
-      return new ChartPie();
+  toggle(settings = {}) {
+    return new Toggle(settings);
   }
 
   /**
    * Method for the Input Autocomplete Element
    *
+   * @param   {Object}  settings  Setting for the autocomplete
+   *
    * @return  {Object}  Input Autocomplete instance
    */
-  inputAutocomplete(settings = {}) {
-    return new InputAutocomplete(settings);
+  autocomplete(settings = {}) {
+    return new Autocomplete(settings);
   }
 
-  /** add APIs here as they are written */
+  /**
+   * Method for Form validation
+   *
+   * @param  {string}    selector
+   *
+   * @param  {function}  submit
+   */
+  valid(selector, submit) {
+    this.form = new Forms(document.querySelector(selector));
+
+    this.form.submit = submit;
+
+    this.form.selectors.ERROR_MESSAGE_PARENT = '[data-js*="question-container"]';
+
+    this.form.watch();
+  }
 }
 
 export default Default;

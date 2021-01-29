@@ -1,0 +1,22 @@
+/ Options
+
+fieldset
+  label class='option' for='option-a'
+    input id='option-a' name="option['radio']" type='radio' value='option-a'
+
+    span class='option__base'
+      svg aria-hidden='true' class='option__graphic'
+        use xlink:href='#option-nyco-radio'
+
+      span class='option__label' Option A
+
+  | &nbsp;
+
+  label class='option' for='option-b'
+    input id='option-b' name="option['radio']" type='radio' value='option-b'
+
+    span class='option__base'
+      svg aria-hidden='true' class='option__graphic'
+        use xlink:href='#option-nyco-radio'
+
+      span class='option__label' Option B

@@ -46,7 +46,19 @@ module.exports = [
     output: [{
       name: 'NYCO',
       file: './dist/scripts/nyco.js',
-      sourcemap: rollup.sourcemap,
+      sourcemap: (process.env.NODE_ENV === 'production') ? false : rollup.sourcemap,
+      format: rollup.format,
+      strict: rollup.strict
+    }],
+    plugins: rollup.plugins,
+    devModule: true
+  },
+  {
+    input: './src/js/charts.js',
+    output: [{
+      name: 'Charts',
+      file: './dist/scripts/charts.js',
+      sourcemap: (process.env.NODE_ENV === 'production') ? false : rollup.sourcemap,
       format: rollup.format,
       strict: rollup.strict
     }],
@@ -58,7 +70,7 @@ module.exports = [
     output: [{
       name: 'Feed',
       file: './dist/objects/feed/feed.js',
-      sourcemap: rollup.sourcemap,
+      sourcemap: (process.env.NODE_ENV === 'production') ? false : rollup.sourcemap,
       format: rollup.format,
       strict: rollup.strict
     }],
@@ -70,7 +82,7 @@ module.exports = [
     output: [{
       name: 'FeedDocs',
       file: './dist/objects/feed/feed-docs.js',
-      sourcemap: rollup.sourcemap,
+      sourcemap: (process.env.NODE_ENV === 'production') ? false : rollup.sourcemap,
       format: rollup.format,
       strict: rollup.strict
     }],
@@ -82,7 +94,7 @@ module.exports = [
     output: [{
       name: 'FeedEmbed',
       file: './dist/objects/feed/feed-embed.js',
-      sourcemap: rollup.sourcemap,
+      sourcemap: (process.env.NODE_ENV === 'production') ? false : rollup.sourcemap,
       format: rollup.format,
       strict: rollup.strict
     }],

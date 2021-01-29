@@ -1,0 +1,3 @@
+The Question Component is a structured input element that provides a user friendly way of requesting information from a user to fill out a form. The `<label>` element sentence should be structured in the form of a question. Additional information to clarify what is required to answer the question can be added in a `<p>` tag below the question text.
+
+The input element can be any [input type](inputs) or [select element](select). [Questions with options](#heading-question-options), specifically checkbox and radio groups, will require the `<fieldset>` element as the root element and the `<legend>` element as the question label to properly structure the question for screen readers. [See the demonstration below](#heading-question-options).

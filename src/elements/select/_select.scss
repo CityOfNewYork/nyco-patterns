@@ -3,10 +3,25 @@
  */
 
 // Dependencies
-@import 'config/colors';
-@import 'config/select';
+@use 'config/select';
 
 // Declarations
 .select {
-  @include selects();
+  display: inline-block;
+  position: relative;
+
+  select {
+    border-color: var(--nyco-border);
+    background-color: var(--nyco-input-background);
+
+    &::placeholder {
+      color: var(--nyco-placeholder);
+    }
+
+    @include select.base();
+  }
+}
+
+.select__graphic {
+  @include select.graphic();
 }

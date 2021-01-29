@@ -1,0 +1,13 @@
+/**
+ * Question
+ */
+
+// Dependencies
+@import 'config/grid';
+
+// Declarations
+.c-question {
+  p, .error-message {
+    margin-bottom: $grid;
+  }
+}

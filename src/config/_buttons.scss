@@ -55,7 +55,7 @@ $colorCombinations: map-get($tokens, 'colorCombinations');
   appearance: none;
   cursor: pointer;
   background: transparent;
-  padding: ($grid * 1.5) ($grid * 2);
+  padding: (($grid * 2) - $borderWidth) (($grid * 2.5) - $borderWidth);
 
   border-style: solid;
   border-color: currentColor;

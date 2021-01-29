@@ -1,53 +1,83 @@
 ## Icon Usage
 
-### The SVG Sprite
+### Inline SVG Sprites
 
-To use the inline SVGS, include the main icon sprite <code>{{ this.package.cdn.svg }}</code> in your page markup. {{ this.package.nice }} uses an AJAX method to cache the sprite file while not including it in the page cache to decrease the size of each page. To import the icon through the global {{ this.package.nice }} script use the following code:
+To use SVG icons, you can inline each sprite in your page markup by adding it to a template partial or copy/pasting the SVG sprite file contents into the base template of your application or site.
+
+* <a href="{{ this.package.cdn.release }}{{ this.package.version }}{{ this.package.cdn.svg }}">Icon sprite</a>. Includes logos, custom icons, checkbox, radio, and select box graphics. Path **{{ this.package.cdn.svg }}**
+* <a href="{{ this.package.cdn.release }}{{ this.package.version }}{{ this.package.cdn.feather }}">Feather icon sprite</a>. Path **{{ this.package.cdn.feather }}**
+
+However, it is recommended to asynchronously retrieve the file and inline it to reduce the overall page size. {{ this.package.nice }} uses `fetch()` to retrieve the sprite and add it to the DOM on page load. This will cache the sprite file without including it in the page to decrease the size of each page.
+
+To import the icon through the <a href="{{ this.package.cdn.release }}{{ this.package.version }}{{ this.package.cdn.scripts }}">global {{ this.package.nice }} script</a> use the following code:
 
 ```javascript
-var nyco = new NYCO();
+var nyco = new {{ this.package.instantiations.scripts }}();
 
 nyco.icons();
+nyco.icons('svg/feather.svg');
 ```
 
-The script expects the icon sprite path to be located at the path **svg/icons.svg** (relative to the displayed page). To overwrite this, pass a path to the method:
+The script expects the default icon sprite path to be located at the path **svg/icons.svg** (relative to the displayed page). To overwrite this, pass a path string as an argument to the method:
 
 ```javascript
 nyco.icons('path/to/icons.svg');
 ```
 
-The ES6 and IFFE modules all require instantiation in your main script:
+#### ES Module
+
+This method is a wrapper around the [Patterns Scripts icon utility](https://github.com/CityOfNewYork/patterns-scripts/tree/main/src/icons) which is included as a dependency of this project. The utility can be imported as an ES module and instantiated separately.
 
 ```javascript
-import Icons from '{{ this.package.name }}/src/elements/icons/icons';
+import Icons from '@nycopportunity/pttrn-scripts/src/icons/icons';
 
-new Icons();
+new Icons(); // Inline the icon sprite
+new Icons('svg/feather.svg'); // Inline the Feather icon sprite
 
-// or
+// or specify custom local path
 
-new Icons('{{ this.package.cdn.svg }}');
+new Icons('path/to/icons.svg');
+new Icons('path/to/feather.svg');
 
-// or
+// or CDN
 
 new Icons('{{ this.package.cdn.url }}@v{{ this.package.version }}{{ this.package.cdn.svg }}');
+new Icons('{{ this.package.cdn.url }}@v{{ this.package.version }}{{ this.package.cdn.feather }}');
 ```
 
 ### Markup
 
-There are a few options for using icons after the sprite has been loaded on the page:
+Once the sprite is inlined on the desired page to display an icon on, individual icons can be referenced with the SVG `<use>` tag. To change the color of inline SVG icon shapes that have their fill set as `currentColor`, use [Tailwindcss text color utilities](colors).
 
-#### Inline SVG’s
+In this logo example, the `role` attribute is set to image and the `<title>` tag is set inside the SVG. This enables compatibility with screen readers to read the title as they would alternative text in images.
 
-The first option allows you to inline an SVG with the `use` tag. This is the preferred method for {{ this.package.nice }}. Note that you can change the color of inline SVG icon shapes that have their fill set as currentColor by using a text color utility. Also, note the role="img" attribute, title tag, and title tag id for accessibility support.
+<div class="py-2 text-center"><svg class="icon-logo-nyco icon-large text-navy" role="img">
+  <title id="icon-logo-nyco-title">The NYC Opportunity Logo</title><use xlink:href="#icon-logo-nyco"></use>
+</svg></div>
 
 ```html
-<svg class="icon-logo-nyco icon-xlarge text-color-blue-dark" role="img">
-  <title id="icon-logo-nyco-title">The NYC Opportunity Logo</title>
+<svg class="icon-logo-nyco icon-large text-navy" role="img">
+  <title id="icon-logo-nyco-title">
+    The NYC Opportunity Logo
+  </title>
+
   <use xlink:href="#icon-logo-nyco"></use>
 </svg>
 ```
 
-### Icon sizes
+It may not always be necessary to have screen readers read icons if they are purely decorative or are associated with a text label. They can be hidden with the `aria-hidden` attribute. In the following example an icon is included in a link that has a text label
+
+<div class="py-6 text-center"><a href="#" class="inline-flex items-center"><svg class="icon-ui mie-1" aria-hidden="true"><use xlink:href="#feather-feather"></use></svg> Feather Label</a></div>
+
+```html
+<a href="#" class="inline-flex items-center">
+  <svg class="icon-ui mie-1" aria-hidden="true">
+    <use xlink:href="#feather-feather"></use>
+  </svg> Feather Label
+</a>
+```
+
+### Icon size utilities
 
 To manage the size of the icons, use the icon size utilities. The dimensions are based on the **{{ this.tokens.grid }}** grid and include the following sizes;
 
@@ -67,8 +97,6 @@ Class         | Dimensions
 `icon-12`     | {{ this.tokens.iconSizes.12 }}
 `icon-large`  | {{ this.tokens.iconSizes.large }}
 `icon-xlarge` | {{ this.tokens.iconSizes.xlarge }}
-
-**Accessibility Note**: If the SVG graphic doesn't serve a function, it may not be useful to screen readers. Therefore, it may be hidden using the `aria-hidden="true"` attribute.
 
 ## Maintaining the size of the icon sprite
 

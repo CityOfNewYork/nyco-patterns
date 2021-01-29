@@ -1,1 +1,1 @@
-A styled select element. Styling of the element is determined by the [Color Combination utility](/colors) it is nested under.
+A styled select element. Styling of the element is determined by the [Color Combination utility](/colors) it is nested under. The graphics for the select element are included in the [icon sprite](icons#heading-icon-usage) that needs to be inlined in the DOM to appear.

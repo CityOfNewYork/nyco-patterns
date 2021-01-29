@@ -47,6 +47,10 @@ a {
   word-wrap: break-word;
 }
 
+label {
+  display: inline-block;
+}
+
 fieldset, legend, dl, dt, dd {
   border-width: 0;
   padding: 0;

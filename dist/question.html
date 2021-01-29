@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html class="text-size-0" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
+  <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
+  <link href="styles/nyco.css" rel="stylesheet" />
+  <title>Question | NYCO Patterns</title>
+  <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+  <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+  <script type="text/javascript">
+    var VERSION = '2.6.0-1';
+  </script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(event) {
+      hljs.configure({
+        languages: ['html', 'javascript', 'css', 'sass']
+      });
+      document.querySelectorAll('pre').forEach(function(block) {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <noscript>
+    <style>
+      body {
+        visibility: visible !important;
+      }
+    </style>
+  </noscript>
+  <script type="text/javascript">
+    function load() {
+      document.body.style.visibility = 'visible'
+    };
+  </script>
+</head>
+
+</html>
+
+<body class="bg-base-black" onload="load()" style="visibility: hidden;">
+  <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
+  <header class="o-header tablet:layout-sidebar w-full">
+    <div class="o-header__banner-main bg-blue">
+      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
+      <h1 class="o-header__main-title">
+        <span class="hidden"></span>
+        <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco-secondary">
+          <use xlink:href="#icon-logo-nyco-secondary"></use>
+        </svg>
+        <svg aria-hidden="true" class="o-header__logo-secondary icon-logo-nyco">
+          <use xlink:href="#icon-logo-nyco"></use>
+        </svg>
+      </h1>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.0-1</div>
+    </div>
+    <div class="o-header__banner-secondary color-dark-background">
+      <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
+    </div>
+    <div class="o-header__secondary-version color-dark-background">
+      <div>
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0-1">
+          <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
+            <use xlink:href="#feather-github"></use>
+          </svg>2.6.0-1
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="tablet:layout-sidebar tablet:flex items-stretch m-0 p-0 tablet:min-h-screen" id="main-content">
+    <aside class="o-navigation bg-navy">
+      <div class="tablet:flex hidden w-full">
+        <div class="o-navigation__wrap color-mid-background">
+          <div class="o-navigation__nav">
+            <nav>
+              <a class="o-navigation__link" href="index">Home</a>
+              <a class="o-navigation__link" href="installation">Installation</a>
+              <a class="o-navigation__link" href="about">About the Patterns</a>
+              <a class="o-navigation__link" href="prototyping">Prototyping</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
+              <a class="o-navigation__link" href="buttons">Buttons</a>
+              <a class="o-navigation__link" href="badge">Badge</a>
+              <a class="o-navigation__link" href="code">Code</a>
+              <a class="o-navigation__link" href="description-lists">Description Lists</a>
+              <a class="o-navigation__link" href="icons">Icons</a>
+              <a class="o-navigation__link" href="inputs">Inputs</a>
+              <a class="o-navigation__link" href="layouts">Layouts</a>
+              <a class="o-navigation__link" href="links">Links</a>
+              <a class="o-navigation__link" href="options">Options</a>
+              <a class="o-navigation__link" href="select">Select</a>
+              <a class="o-navigation__link" href="tables">Tables</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+              <a class="o-navigation__link" href="card">Card</a>
+              <a class="o-navigation__link" href="question">Question</a>
+              <a class="o-navigation__link" href="record-hero">Record Hero</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
+              <a class="o-navigation__link" href="content">Content</a>
+              <a class="o-navigation__link" href="feed">Feed</a>
+              <a class="o-navigation__link" href="footer">Footer</a>
+              <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
+              <a class="o-navigation__link" href="navigation">Navigation</a>
+              <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
+              <a class="o-navigation__link" href="animate">Animate</a>
+              <a class="o-navigation__link" href="colors">Colors</a>
+              <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+              <a class="o-navigation__link" href="type">Type</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="tablet:hidden w-full">
+        <div class="o-navigation__wrap color-mid-background hidden hidden:overflowFadeInUp animated" id="js-navigation">
+          <div class="o-navigation__banner color-dark-background">
+            <h1 class="o-navigation__banner-title">Patterns</h1>
+          </div>
+          <div class="animated">
+            <div class="o-navigation__nav">
+              <nav>
+                <a class="o-navigation__link" href="index" tabindex="-1">Home</a>
+                <a class="o-navigation__link" href="installation" tabindex="-1">Installation</a>
+                <a class="o-navigation__link" href="about" tabindex="-1">About the Patterns</a>
+                <a class="o-navigation__link" href="prototyping" tabindex="-1">Prototyping</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
+                <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
+                <a class="o-navigation__link" href="badge" tabindex="-1">Badge</a>
+                <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
+                <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
+                <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
+                <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
+                <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
+                <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
+                <a class="o-navigation__link" href="options" tabindex="-1">Options</a>
+                <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
+                <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
+                <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
+                <a class="o-navigation__link" href="question" tabindex="-1">Question</a>
+                <a class="o-navigation__link" href="record-hero" tabindex="-1">Record Hero</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
+                <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
+                <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
+                <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
+                <a class="o-navigation__link" href="header" tabindex="-1">Header</a>
+                <a class="o-navigation__link" href="mailchimp" tabindex="-1">Mailchimp</a>
+                <a class="o-navigation__link" href="navigation" tabindex="-1">Navigation</a>
+                <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
+                <a class="o-navigation__link" href="animate" tabindex="-1">Animate</a>
+                <a class="o-navigation__link" href="colors" tabindex="-1">Colors</a>
+                <a class="o-navigation__link" href="tailwindcss" tabindex="-1">Tailwindcss</a>
+                <a class="o-navigation__link" href="type" tabindex="-1">Type</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <article class="color-light-background py-6">
+      <div class="px-4 desktop:px-6">
+        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Question</h1>
+      </div>
+      <form id="question-demo">
+        <section class="mt-6" id="question">
+          <div class="layout-content px-4">
+            <div class="o-content mx-auto flex items-center mb-3">
+              <a class="flex no-underline" href="#heading-question">
+                <svg aria-hidden="true" class="icon-ui-anchor">
+                  <use xlink:href="#feather-anchor"></use>
+                </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+              </a>&nbsp;<h2 class="capitalize m-0" id="heading-question">question</h2>
+            </div>
+          </div>
+          <div class="bg-white-50t mb-6 p-4 desktop:p-6">
+            <div class="layout-wrap mx-auto flex justify-center">
+              <div class="c-question">
+                <label class="label" for="question-text">Can you please answer this question?</label>
+                <p>Descriptive text can go here to help clarify the question.</p>
+                <div class="c-question__container" data-js="question-container">
+                  <div class="input">
+                    <input id="question-text" name="question-text" type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout-content px-4 pb-4">
+            <div class="o-content mx-auto">
+              <div class="code-block">
+                <pre>&lt;div class=&quot;c-question&quot;&gt;
+  &lt;label class=&quot;label&quot; for=&quot;question-text&quot;&gt;Can you please answer this question?&lt;/label&gt;
+  &lt;p&gt;Descriptive text can go here to help clarify the question.&lt;/p&gt;
+  &lt;div class=&quot;c-question__container&quot; data-js=&quot;question-container&quot;&gt;
+    &lt;div class=&quot;input&quot;&gt;
+      &lt;input id=&quot;question-text&quot; name=&quot;question-text&quot; type=&quot;text&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+              </div>
+              <p>The Question Component is a structured input element that provides a user friendly way of requesting information from a user to fill out a form. The <code>&lt;label&gt;</code> element sentence should be structured in the form of a question. Additional information to clarify what is required to answer the question can be added in a <code>&lt;p&gt;</code> tag below the question text.</p>
+              <p>The input element can be any <a href="inputs">input type</a> or <a href="select">select element</a>. <a href="#heading-question-options">Questions with options</a>, specifically checkbox and radio groups, will require the <code>&lt;fieldset&gt;</code> element as the root element and the <code>&lt;legend&gt;</code> element as the question label to properly structure the question for screen readers. <a href="#heading-question-options">See the demonstration below</a>.</p>
+            </div>
+          </div>
+        </section>
+        <section class="mt-6" id="question-options">
+          <div class="layout-content px-4">
+            <div class="o-content mx-auto flex items-center mb-3">
+              <a class="flex no-underline" href="#heading-question-options">
+                <svg aria-hidden="true" class="icon-ui-anchor">
+                  <use xlink:href="#feather-anchor"></use>
+                </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+              </a>&nbsp;<h2 class="capitalize m-0" id="heading-question-options">options question</h2>
+            </div>
+          </div>
+          <div class="bg-white-50t mb-6 p-4 desktop:p-6">
+            <div class="layout-wrap mx-auto flex justify-center">
+              <fieldset class="c-question">
+                <legend class="label">Which of the following options apply to you?</legend>
+                <p>Feel free to choose as many as you like.</p>
+                <div class="c-question__container" data-js="question-container">
+                  <label class="option" for="option-1">
+                    <input id="option-1" name="option['option-1']" type="checkbox" value="option-1" />
+                    <span class="option__base">
+                      <svg aria-hidden="true" class="option__graphic">
+                        <use xlink:href="#option-nyco-checkbox"></use>
+                      </svg>
+                      <span class="option__label">Option 1</span>
+                    </span>
+                  </label>
+                  <label class="option" for="option-2">
+                    <input id="option-2" name="option['option-2']" type="checkbox" value="option-2" />
+                    <span class="option__base">
+                      <svg aria-hidden="true" class="option__graphic">
+                        <use xlink:href="#option-nyco-checkbox"></use>
+                      </svg>
+                      <span class="option__label">Option 2</span>
+                    </span>
+                  </label>
+                  <label class="option" for="option-3">
+                    <input id="option-3" name="option['option-3']" type="checkbox" value="option-3" />
+                    <span class="option__base">
+                      <svg aria-hidden="true" class="option__graphic">
+                        <use xlink:href="#option-nyco-checkbox"></use>
+                      </svg>
+                      <span class="option__label">Option 3</span>
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="layout-content px-4 pb-4">
+            <div class="o-content mx-auto">
+              <div class="code-block">
+                <pre>&lt;fieldset class=&quot;c-question&quot;&gt;
+  &lt;legend class=&quot;label&quot;&gt;Which of the following options apply to you?&lt;/legend&gt;
+  &lt;p&gt;Feel free to choose as many as you like.&lt;/p&gt;
+  &lt;div class=&quot;c-question__container&quot; data-js=&quot;question-container&quot;&gt;
+    &lt;label class=&quot;option&quot; for=&quot;option-1&quot;&gt;
+      &lt;input id=&quot;option-1&quot; name=&quot;option['option-1']&quot; type=&quot;checkbox&quot; value=&quot;option-1&quot; /&gt;
+      &lt;span class=&quot;option__base&quot;&gt;
+        &lt;svg aria-hidden=&quot;true&quot; class=&quot;option__graphic&quot;&gt;
+          &lt;use xlink:href=&quot;#option-nyco-checkbox&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;option__label&quot;&gt;Option 1&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;option&quot; for=&quot;option-2&quot;&gt;
+      &lt;input id=&quot;option-2&quot; name=&quot;option['option-2']&quot; type=&quot;checkbox&quot; value=&quot;option-2&quot; /&gt;
+      &lt;span class=&quot;option__base&quot;&gt;
+        &lt;svg aria-hidden=&quot;true&quot; class=&quot;option__graphic&quot;&gt;
+          &lt;use xlink:href=&quot;#option-nyco-checkbox&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;option__label&quot;&gt;Option 2&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;option&quot; for=&quot;option-3&quot;&gt;
+      &lt;input id=&quot;option-3&quot; name=&quot;option['option-3']&quot; type=&quot;checkbox&quot; value=&quot;option-3&quot; /&gt;
+      &lt;span class=&quot;option__base&quot;&gt;
+        &lt;svg aria-hidden=&quot;true&quot; class=&quot;option__graphic&quot;&gt;
+          &lt;use xlink:href=&quot;#option-nyco-checkbox&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;option__label&quot;&gt;Option 3&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</pre>
+              </div>
+              <p>Questions with multiple <a href="options">options</a>, specifically checkbox and radio button groups, will require the <code>&lt;fieldset&gt;</code> element as the root element and the <code>&lt;legend&gt;</code> element as the question label to properly structure the question for screen readers.</p>
+            </div>
+          </div>
+        </section>
+        <section class="mt-6" id="question-required">
+          <div class="layout-content px-4">
+            <div class="o-content mx-auto flex items-center mb-3">
+              <a class="flex no-underline" href="#heading-question-required">
+                <svg aria-hidden="true" class="icon-ui-anchor">
+                  <use xlink:href="#feather-anchor"></use>
+                </svg>&nbsp;<span class="sr-only underline">Anchor</span>
+              </a>&nbsp;<h2 class="capitalize m-0" id="heading-question-required">required question</h2>
+            </div>
+          </div>
+          <div class="bg-white-50t mb-6 p-4 desktop:p-6">
+            <div class="layout-wrap mx-auto flex justify-center">
+              <div class="c-question">
+                <label class="label" for="question-text-required">What is the answer this question?<span aria-hidden="true" class="c-question__required">&nbsp;*</span>
+                </label>
+                <p>Please enter any text into the field below.</p>
+                <div class="c-question__container" data-js="question-container">
+                  <div class="input">
+                    <input id="question-text-required" name="question-text-required" required="true" type="text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout-content px-4 pb-4">
+            <div class="o-content mx-auto">
+              <div class="code-block">
+                <pre>&lt;div class=&quot;c-question&quot;&gt;
+  &lt;label class=&quot;label&quot; for=&quot;question-text-required&quot;&gt;What is the answer this question?&lt;span aria-hidden=&quot;true&quot; class=&quot;c-question__required&quot;&gt;&amp;nbsp;*&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;p&gt;Please enter any text into the field below.&lt;/p&gt;
+  &lt;div class=&quot;c-question__container&quot; data-js=&quot;question-container&quot;&gt;
+    &lt;div class=&quot;input&quot;&gt;
+      &lt;input id=&quot;question-text-required&quot; name=&quot;question-text-required&quot; required=&quot;true&quot; type=&quot;text&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+              </div>
+              <p>Required questions will use built-in form validation to trigger native validation on the blur event of the text input. Native attributes such as <code>required</code> and <code>pattern</code> can be used to set explicit types of validation. These are described in more detail in the <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation">MDN Form Validation documentation</a>.</p>
+              <p>In order to use the error messaging included in the pattern library <a href="#heading-validation">JavaScript validation</a> needs to be invoked. This will add an error message to the DOM above the <code>&lt;input&gt;</code> element. Inputs that are invalid will be described by the error message as well as be announced to screen readers using the <code>aria-live=&#39;polite&#39;</code> attribute.</p>
+            </div>
+          </div>
+        </section>
+        <section class="mt-6" id="question-validation">
+          <div class="layout-content px-4 pb-4">
+            <div class="o-content mx-auto">
+              <h2 id="heading-validation">Validation</h2>
+              <p>To utilize form validation through the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.0-1/dist/scripts/nyco.js">global NYCO Patterns script</a> use the following code.</p>
+              <pre><code class="language-html">&lt;form id=&quot;question-demo&quot;&gt;
+  &lt;!-- Form Questions --&gt;
+&lt;/form&gt;</code></pre>
+              <p>Assuming you have a form on the page with an ID of <code>question-demo</code>, pass the <code>&lt;form&gt;</code> ID to the <code>nyco.valid()</code> method:</p>
+              <pre><code class="language-javascript">var nyco = new NYCO();
+
+nyco.valid(&#39;#question-demo&#39;, function(event) {
+  event.preventDefault();
+
+  return false;
+});</code></pre>
+              <p>The method accepts two arguments; the first being the ID of the form and the second is the event handler for an invalid response.</p>
+              <h4 id="heading-es-module">ES Module</h4>
+              <p>This method is a wrapper around the <a href="https://github.com/CityOfNewYork/patterns-scripts/tree/main/src/forms">Patterns Scripts form utility</a> which is included as a dependency of this project. The utility can be imported as an ES module and instantiated separately.</p>
+              <pre><code class="language-javascript">import Forms from &#39;@nycopportunity/pttrn-scripts/src/forms/forms&#39;;
+
+let Form = new Forms(document.querySelector(&#39;#question-demo&#39;));
+
+Form.submit = function(event) {
+  event.preventDefault();
+
+  return false;
+};
+
+Form.selectors.ERROR_MESSAGE_PARENT = &#39;[data-js*=&quot;question-container&quot;]&#39;;
+
+Form.watch();</code></pre>
+            </div>
+          </div>
+        </section>
+      </form>
+    </article>
+  </main>
+  <footer class="o-footer color-dark-background border-navy-70t">
+    <div class="layout-wrap mx-auto">
+      <div class="o-footer__divider border-navy-70t desktop:flex desktop:layout-sidebar mb-4">
+        <div class="pb-4">
+          <a class="block" href="http://nyc.gov/opportunity" title="NYC Opportunity&lt;products@nycopportunity.nyc.gov&gt;">
+            <svg aria-hidden="true" class="o-footer__logo">
+              <use xlink:href="#icon-logo-secondary"></use>
+            </svg>
+            <span class="sr-only">The Mayor's Office for Economic Opportunity</span>
+          </a>
+        </div>
+        <div class="pb-4 desktop:pl-4 desktop:flex justify-end items-center">
+          <nav class="o-footer__inline-nav">
+            <a href="index">Home</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns">GitHub Repository</a>
+            <a href="https://github.com/CityOfNewYork/nyco-patterns-framework">NYCO Patterns Framework</a>
+            <a href="https://github.com/topics/nycopportunity?q=org%3Acityofnewyork+topic%3Anycopportunity&amp;unscoped_q=org%3Acityofnewyork+topic%3Anycopportunity">NYCO Opportunity on GitHub</a>
+          </nav>
+        </div>
+      </div>
+      <div class="desktop:grid desktop:grid-cols-2">
+        <div>
+          <p>NYC Opportunity is the <a href='http://nyc.gov/opportunity'>New York City Mayor's Office for Economic Opportunity</a>. We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;<a href='https://twitter.com/nycopportunity' target='_blank' rel='nofollow noopener'>Twitter</a>,&nbsp;<a href='https://www.facebook.com/NYCOpportunity/' target='_blank' rel='nofollow noopener'>Facebook</a>,&nbsp;<a href='https://medium.com/@nycopportunity' target='_blank' rel='nofollow noopener'>Medium</a>, and&nbsp;<a href='' target='_blank' rel='nofollow noopener' title='Viewable by github.com/orgs/CityOfNewYork/ members.'>Github</a>.</p>
+        </div>
+        <div class="desktop:text-end">
+          <small>© City of New York, 2021 All Rights Reserved.
+            <br>NYC is a trademark and service mark of the City of New York.
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Array.prototype.forEach,Element.prototype.matches,Element.prototype.remove,fetch"></script>
+  <script src="scripts/nyco.js"></script>
+  <script type="text/javascript">
+    var nyco = new NYCO();
+    nyco.copy();
+    nyco.icons();
+    nyco.icons('svg/feather.svg');
+    nyco.toggle();
+  </script>
+  <script type="text/javascript">
+    nyco.valid('#question-demo', function(event) {
+      event.preventDefault();
+      return false;
+    });
+  </script>
+</body>

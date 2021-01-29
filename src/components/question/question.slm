@@ -1,0 +1,10 @@
+/ Question
+
+div class='c-question'
+  label class='label' for='question-text' Can you please answer this question?
+
+  p Descriptive text can go here to help clarify the question.
+
+  div class='c-question__container' data-js='question-container'
+    div class='input'
+      input#question-text name='question-text' type='text'

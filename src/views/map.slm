@@ -21,14 +21,16 @@
 = content('content');
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
-  p
+
   p All map source files can be found within <code>src/objects/map/</code>.
+
   = mixin('pattern', 'objects/map/map-multi');
   = mixin('pattern', 'objects/map/map-single');
   = mixin('section-text', 'objects/map/readme');
 
 = content('script');
   script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'
+
   javascript:
     nyco.map('multi');
     nyco.map('single');

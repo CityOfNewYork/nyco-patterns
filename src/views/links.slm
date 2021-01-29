@@ -21,4 +21,6 @@
 = content('content');
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
+
   = mixin('pattern', 'elements/links/links');
+  = mixin('pattern', 'elements/links/links-icon', 1, 'Links with Icons');

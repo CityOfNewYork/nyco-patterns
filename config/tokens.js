@@ -114,6 +114,28 @@ const colors = {
       'secondary': 'red',
       ...code
     },
+    'primary-background': {
+      'color': 'base-white',
+      'color-alt': 'navy-50t',
+      'font-smooth': true,
+      'headings': 'base-white',
+      'hyperlinks': 'base-white',
+      'visited': 'base-white',
+      'hover': 'base-white',
+      'background-color': 'blue',
+      'border': 'blue-10t',
+      'input-background': 'blue',
+      'placeholder': 'base-white',
+      'focus': 'blue-10t',
+      'checkbox-check': '"icon-ui-check-blue.svg"',
+      'select-arrow': '"icon-ui-chevron-down-white.svg"',
+      'error': 'red',
+      'box-shadow': 'base-white',
+      'button-text': 'base-white',
+      'primary': 'navy',
+      'secondary': 'red',
+      ...code
+    },
     'dark-background': {
       'color': 'base-white',
       'color-alt': 'navy-50t',
@@ -123,10 +145,10 @@ const colors = {
       'visited': 'base-white',
       'hover': 'base-white',
       'background-color': 'navy',
-      'border': 'navy-50t',
+      'border': 'blue-70t',
       'input-background': 'navy',
       'placeholder': 'base-white',
-      'focus': 'blue-50t',
+      'focus': 'blue-70t',
       'checkbox-check': '"icon-ui-check-navy.svg"',
       'select-arrow': '"icon-ui-chevron-down-white.svg"',
       'error': 'red',
@@ -289,14 +311,29 @@ module.exports = {
     'xlarge': '256px 256px'
   },
   inputs: {
-    'checkbox-size': '24px',
-    'radio-size': '24px',
     'border-radius': '2px',
     'border-width': '2px',
     'label-border-width': '1px',
 
     'button-border-width': '2px',
     'button-border-radius': '2px'
+  },
+  'options': {
+    'inner-size': '24px',
+    'radius': '2px',
+    'border-style': 'solid',
+    'border-width': '1px',
+    'border-transparent': false,
+    'stroke-width': '2px',
+    'stroke-line': 'round'
+  },
+  'selects': {
+    'inner-size': '24px',
+    'radius': '2px',
+    'border-style': 'solid',
+    'border-width': '1px',
+    'stroke-width': '2px',
+    'stroke-line': 'round'
   },
   lineHeight: {
     'jumbo': '1.2',

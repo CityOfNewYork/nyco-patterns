@@ -3,10 +3,11 @@
  */
 
 // Components are elements that require isolated styling. Examples include buttons,
-// textfields, select boxes, grouped navigation, dropdowns, etc. They may include
+// text-fields, select boxes, grouped navigation, drop-downs, etc. They may include
 // utilities within them. Not all components are required for each application.
 // Component namespaces are prefixed with 'c-'.
 @import 'components/card/_card.scss';
 @import 'components/record-hero/_record-hero.scss';
+@import 'components/question/_question.scss';
 
 // components - end

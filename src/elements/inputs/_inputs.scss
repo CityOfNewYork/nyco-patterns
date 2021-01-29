@@ -11,6 +11,13 @@
 // Declarations
 input, textarea {
   @include inputs;
+
+  border-color: var(--nyco-border);
+  background-color: var(--nyco-input-background);
+
+  &::placeholder {
+    color: var(--nyco-placeholder);
+  }
 }
 
 /**

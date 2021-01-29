@@ -1,0 +1,3 @@
+Required questions will use built-in form validation to trigger native validation on the blur event of the text input. Native attributes such as `required` and `pattern` can be used to set explicit types of validation. These are described in more detail in the [MDN Form Validation documentation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation).
+
+In order to use the error messaging included in the pattern library [JavaScript validation](#heading-validation) needs to be invoked. This will add an error message to the DOM above the `<input>` element. Inputs that are invalid will be described by the error message as well as be announced to screen readers using the `aria-live='polite'` attribute.

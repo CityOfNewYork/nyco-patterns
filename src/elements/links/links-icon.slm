@@ -1,0 +1,6 @@
+
+a href='#' class='inline-flex items-center'
+  | External Link
+
+  svg class='icon-ui mis-1' aria-hidden='true'
+    use xlink:href='#feather-external-link'

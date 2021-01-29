@@ -4,19 +4,19 @@
 
 // Elements include universal styles, atomic patterns, and css systems. Examples
 // include classes that assign color, modify the display of elements, or set up
-// scaffolding like typography or grid systems. Uitilities will have their own
+// scaffolding like typography or grid systems. Utilities will have their own
 // namespace prefixes based on their attributes.
 @import 'elements/base/_base.scss';
 @import 'elements/badge/_badge.scss';
 @import 'elements/code/_code.scss';
 @import 'elements/description-lists/_description-lists.scss';
-@import 'elements/links/_links.scss';
+@import 'elements/labels/_labels.scss';
 @import 'elements/layouts/_layouts.scss';
+@import 'elements/links/_links.scss';
 @import 'elements/icons/_icons.scss';
 @import 'elements/tables/_tables.scss';
 @import 'elements/buttons/_buttons.scss';
 @import 'elements/select/_select.scss';
 @import 'elements/inputs/_inputs.scss';
-@import 'elements/checkboxes/_checkboxes.scss';
-@import 'elements/radios/_radios.scss';
+@import 'elements/options/_options.scss';
 // elements - end

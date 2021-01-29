@@ -1,26 +1,49 @@
 // Dependencies
-@import 'config/colors';
-@import 'config/direction';
-@import 'config/tokens';
-@import 'config/forms';
-
-$padding: map-get($tokens, 'padding');
+@use 'config/tokens';
+@use 'config/grid';
+@use 'config/direction';
+@use 'config/forms';
 
 // Declarations
-@mixin selects() {
-  @include forms-default;
+$selects: map-get(tokens.$tokens, 'selects');
+
+@function get($token) {
+  @return map-get($selects, $token);
+}
+
+@mixin base() {
+  @include forms.forms-default();
 
   color: inherit;
-  background-position: $direction-end .5rem center;
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-
-  border-radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
-  padding: .75 * (map-get($tokens, 'grid') * 2);
-  padding-#{$direction-end}: 2.3rem;
-  white-space: normal;
+  font-weight: bold;
+  line-height: get('inner-size');
+  text-overflow: ellipsis;
+  padding: (grid.$grid * 2) - get('border-width');
+  padding-inline-end: (grid.$grid * 5) - get('border-width');
+  border-width: get('border-width');
+  border-style: get('border-style');
+  border-radius: get('radius');
 
   &::-ms-expand {
     display: none;
   }
+}
+
+@mixin graphic() {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: get('stroke-width');
+  stroke-linecap: get('stroke-line');
+  stroke-linejoin: get('stroke-line');
+
+  position: absolute;
+  inset-inline-end: grid.$grid;
+
+  top: 50%;
+  margin-top: -(get('inner-size'));
+
+  width: get('inner-size');
+  height: get('inner-size') * 2;
+
+  pointer-events: none;
 }

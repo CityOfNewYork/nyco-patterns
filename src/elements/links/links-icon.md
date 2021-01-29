@@ -1,0 +1,1 @@
+Links with icons may need some extra help centering icons with flex box utilities `inline-flex items-center`. [Tailwindcss logical utilities](tailwindcss#heading-tailwindcss-logical) can be used to add spacing on either side of the icon; margin start: `mis-1`, margin end: `mie-1`.

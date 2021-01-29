@@ -1,0 +1,22 @@
+/ Options
+
+fieldset
+  label class='option' for='option-1'
+    input id='option-1' name="option['1']" type='checkbox' value='option-1'
+
+    span class='option__base'
+      svg aria-hidden='true' class='option__graphic'
+        use xlink:href='#option-nyco-checkbox'
+
+      span class='option__label' Option 1
+
+  | &nbsp;
+
+  label class='option' for='option-2'
+    input id='option-2' name="option['2']" type='checkbox' value='option-2'
+
+    span class='option__base'
+      svg aria-hidden='true' class='option__graphic'
+        use xlink:href='#option-nyco-checkbox'
+
+      span class='option__label' Option 2

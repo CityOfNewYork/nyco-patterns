@@ -1,19 +1,19 @@
-@import 'config/tokens';
-@import 'config/colors';
-@import 'config/direction';
 @import 'config/screens';
 
 @mixin forms-default() {
   appearance: none;
-  border: 1px solid inherit;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 0;
+
   display: block;
+  margin: 0;
   max-width: 100%;
   min-width: 200px;
   width: 100%;
+
   cursor: pointer;
   font: inherit;
-  margin: 0;
 
   @media screen and (min-width: $tablet) {
     width: auto;

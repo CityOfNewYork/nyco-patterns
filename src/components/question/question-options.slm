@@ -1,0 +1,32 @@
+fieldset class='c-question'
+  legend class='label' Which of the following options apply to you?
+
+  p Feel free to choose as many as you like.
+
+  div class='c-question__container' data-js='question-container'
+    label class='option' for='option-1'
+      input id='option-1' name="option['option-1']" type='checkbox' value='option-1'
+
+      span class='option__base'
+        svg aria-hidden='true' class='option__graphic'
+          use xlink:href='#option-nyco-checkbox'
+
+        span class='option__label' Option 1
+
+    label class='option' for='option-2'
+      input id='option-2' name="option['option-2']" type='checkbox' value='option-2'
+
+      span class='option__base'
+        svg aria-hidden='true' class='option__graphic'
+          use xlink:href='#option-nyco-checkbox'
+
+        span class='option__label' Option 2
+
+    label class='option' for='option-3'
+      input id='option-3' name="option['option-3']" type='checkbox' value='option-3'
+
+      span class='option__base'
+        svg aria-hidden='true' class='option__graphic'
+          use xlink:href='#option-nyco-checkbox'
+
+        span class='option__label' Option 3

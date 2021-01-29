@@ -66,8 +66,6 @@ $base-white: map-get($colors, 'base-white');
   $input-background: map-get($combination, 'input-background');
   $focus: map-get($combination, 'focus');
 
-  $checkbox-check: map-get($combination, 'checkbox-check');
-  $select-arrow: map-get($combination, 'select-arrow');
   $box-shadow: map-get($combination, 'box-shadow');
   $error: map-get($combination, 'error');
 
@@ -93,8 +91,6 @@ $base-white: map-get($colors, 'base-white');
   --nyco-input-background: #{map-get($colors, $input-background)};
   --nyco-placeholder: #{map-get($colors, $input-placeholder)};
   --nyco-focus: #{map-get($colors, $focus)};
-  --nyco-checkbox-check: #{url('#{$cdn}#{$path-to-svg}#{$checkbox-check}')};
-  --nyco-select-arrow: #{url('#{$cdn}#{$path-to-svg}#{$select-arrow}')};
   --nyco-error: #{map-get($colors, $error)};
   --nyco-box-shadow-color: #{map-get($colors, $box-shadow)};
   --nyco-button-text: #{map-get($colors, $button-text)};
@@ -108,8 +104,6 @@ $base-white: map-get($colors, 'base-white');
 
   --nyco-card-background-color: #{map-get($colors, 'blue-10t')};
   --nyco-record_hero-background-color: #{map-get($colors, 'blue-20t')};
-
-
 
   /**
    * Base Colors
@@ -127,65 +121,18 @@ $base-white: map-get($colors, 'base-white');
   }
 
   /**
-   * Inputs, Selects, Checkboxes
-   */
-
-  input:not(.error),
-  textarea:not(.error),
-  select:not(.error),
-  .checkbox__label,
-  .radio__label {
-    border-color: var(--nyco-border);
-    background-color: var(--nyco-input-background);
-
-    &::placeholder {
-      color: var(--nyco-placeholder);
-    }
-  }
-
-  .checkbox__label::before {
-    background-color: var(--nyco-input-background);
-  }
-
-  .radio__label:before,
-  .checkbox__label::before {
-    border-color: var(--nyco-input-border);
-  }
-
-  .select {
-    background-image: var(--nyco-select-arrow);
-  }
-
-  /**
-   * Selected States for Checkboxes and Radios
-   */
-
-  input:checked + .checkbox__label::before {
-    background-image: var(--nyco-checkbox-check);
-  }
-
-  input:checked + .checkbox__label::before,
-  input:checked + .radio__label::before {
-    background-color: var(--nyco-focus);
-    box-shadow: inset 0 0 0 1.25px var(--nyco-background-color),
-                      0 0 0 2px var(--nyco-focus);
-  }
-
-  /**
    * Focus State
    */
 
   .input > input:focus,
-  .select:focus {
+  .select > select:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0),
                 0 0 0 4px rgba(255, 255, 255, 0);
   }
 
   .input > input:focus,
-  .select:focus,
-  input:focus + .checkbox__label,
-  input:focus + .radio__label {
+  .select > select:focus {
     border-color: var(--nyco-focus);
     box-shadow: 0 0 0 2px var(--nyco-focus);
   }
@@ -200,13 +147,15 @@ $base-white: map-get($colors, 'base-white');
    * Error State
    */
 
-  .error > input,
-  .error > select,
-  .error > .checkbox__label,
-  .error > .radio__label,
-  .error > .checkbox__label::before,
-  .error > .radio__label::before {
+  .c-question__container.error input,
+  .c-question__container.error select,
+  .c-question__container.error .option__base,
+  .c-question__container.error .error-message {
     border-color: var(--nyco-error);
+    color: var(--nyco-error);
+  }
+
+  .c-question__required {
     color: var(--nyco-error);
   }
 
@@ -217,10 +166,6 @@ $base-white: map-get($colors, 'base-white');
   /**
    * Buttons
    */
-
-  .btn {
-
-  }
 
   .btn-primary,
   .color-primary-button {

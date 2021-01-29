@@ -1,0 +1,14 @@
+/ Question
+
+div class='c-question'
+  label class='label' for='question-text-required'
+    | What is the answer this question?
+
+    span class='c-question__required' aria-hidden='true'
+      | &nbsp;*
+
+  p Please enter any text into the field below.
+
+  div class='c-question__container' data-js='question-container'
+    div class='input'
+      input#question-text-required name='question-text-required' type='text' required='true'

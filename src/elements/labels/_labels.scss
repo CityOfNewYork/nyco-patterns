@@ -1,0 +1,13 @@
+/**
+ * Labels
+ */
+
+// Dependencies
+@import 'config/grid';
+
+// Declarations
+.label {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: $grid
+}

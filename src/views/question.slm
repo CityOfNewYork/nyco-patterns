@@ -1,0 +1,39 @@
+- pattern = 'Question';
+
+/ Layout
+= extend('/slm/templates/default');
+
+/ Variables
+= partial('/slm/variables/classes.slm');
+
+/ Mixins
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/readme.slm');
+= partial('/slm/mixins/partial.slm');
+= partial('/slm/mixins/pattern.slm');
+
+/ Content blocks
+= content('head');
+  = mixin('head', pattern);
+
+= content('header');
+  = mixin('header');
+
+= content('content');
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern;
+
+  form id='question-demo'
+    = mixin('pattern', 'components/question/question');
+    = mixin('pattern', 'components/question/question-options');
+    = mixin('pattern', 'components/question/question-required');
+    = mixin('readme', 'components/question/question-validation');
+
+= content('script');
+  javascript:
+    nyco.valid('#question-demo', function(event) {
+      event.preventDefault();
+
+      return false;
+    });

@@ -1,0 +1,58 @@
+/**
+ * Options
+ */
+
+// Dependencies
+@use 'config/grid';
+@use 'config/options';
+@use 'config/screen-readers';
+
+// Declarations
+.option {
+  display: inline-block;
+  margin-bottom: grid.$grid;
+
+  &:last-of-type {
+    margin-bottom: 0
+  }
+
+  > input {
+    @include screen-readers.only()
+  }
+}
+
+.option__base {
+  color: inherit;
+  border-color: var(--nyco-border);
+  background-color: var(--nyco-input-background);
+
+  font-size: inherit;
+  font-weight: bold;
+
+  @include options.base();
+}
+
+.option__graphic {
+  @include options.graphic()
+}
+
+input:hover + .option__base {
+  color: inherit;
+  border-color: var(--nyco-focus);
+}
+
+input:focus + .option__base {
+  color: inherit;
+  border-color: var(--nyco-focus);
+  box-shadow: 0 0 0 2px var(--nyco-focus);
+}
+
+input:checked + .option__base {
+  color: inherit;
+
+  > .option__graphic {
+    color: var(--nyco-focus);
+    fill: var(--nyco-focus);
+    stroke: var(--nyco-input-background);
+  }
+}

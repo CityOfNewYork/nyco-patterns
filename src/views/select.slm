@@ -23,8 +23,3 @@
     h1 class='${classPageH1}' = pattern;
 
   = mixin('pattern', 'elements/select/select', 1, 'Default Select');
-  = mixin('pattern', 'elements/select/select-error');
-
-= content('script');
-  javascript:
-    nyco.select();

@@ -1,0 +1,1 @@
+The graphics for the search button are included in the [feather sprite](icons#heading-icon-usage) that needs to be inlined in the DOM to appear.
