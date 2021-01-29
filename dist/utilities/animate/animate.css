@@ -114,7 +114,7 @@ body {
   animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-card, .badge {
+a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-card, .badge, .option__base {
   transition-property: opacity, background, color, border, box-shadow, outline, transform, stroke, stroke-dashoffset, fill;
   transition-duration: 0.25s;
   backface-visibility: hidden;

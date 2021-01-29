@@ -107,3 +107,11 @@
 .c-record-hero__details *:last-child {
   margin-bottom: 0;
 }
+
+/**
+ * Question
+ */
+
+.c-question p, .c-question .error-message {
+  margin-bottom: 8px;
+}

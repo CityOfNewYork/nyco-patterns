@@ -13,7 +13,7 @@
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
-    var VERSION = '2.6.0-1';
+    var VERSION = '2.6.0';
   </script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -55,17 +55,17 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.6.0-1</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.0</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0-1">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0">
           <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#feather-github"></use>
-          </svg>2.6.0-1
+          </svg>2.6.0
         </a>
       </div>
     </div>
@@ -83,21 +83,20 @@
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
               <a class="o-navigation__link" href="badge">Badge</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
               <a class="o-navigation__link" href="code">Code</a>
               <a class="o-navigation__link" href="description-lists">Description Lists</a>
               <a class="o-navigation__link" href="icons">Icons</a>
               <a class="o-navigation__link" href="inputs">Inputs</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
               <a class="o-navigation__link" href="links">Links</a>
-              <a class="o-navigation__link" href="radios">Radios</a>
+              <a class="o-navigation__link" href="options">Options</a>
               <a class="o-navigation__link" href="select">Select</a>
               <a class="o-navigation__link" href="tables">Tables</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
               <a class="o-navigation__link" href="card">Card</a>
+              <a class="o-navigation__link" href="question">Question</a>
               <a class="o-navigation__link" href="record-hero">Record Hero</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
               <a class="o-navigation__link" href="content">Content</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="footer">Footer</a>
@@ -128,21 +127,20 @@
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
                 <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
                 <a class="o-navigation__link" href="badge" tabindex="-1">Badge</a>
-                <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
                 <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
                 <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
                 <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
                 <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
                 <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
                 <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
-                <a class="o-navigation__link" href="radios" tabindex="-1">Radios</a>
+                <a class="o-navigation__link" href="options" tabindex="-1">Options</a>
                 <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
                 <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
                 <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
+                <a class="o-navigation__link" href="question" tabindex="-1">Question</a>
                 <a class="o-navigation__link" href="record-hero" tabindex="-1">Record Hero</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
-                <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
                 <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
                 <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
                 <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
@@ -296,10 +294,12 @@ lineTension: 0,</code></pre>
     nyco.icons('svg/feather.svg');
     nyco.toggle();
   </script>
+  <script src="scripts/charts.js"></script>
   <script type="text/javascript">
-    nyco.chart('bar');
-    nyco.chart('horizontalBar');
-    nyco.chart('line');
+    const charts = new Charts();
+    charts.init('bar');
+    charts.init('horizontalBar');
+    charts.init('line');
     // nyco.chart('pie');
   </script>
 </body>
