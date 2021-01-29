@@ -45,6 +45,10 @@ a {
   word-wrap: break-word;
 }
 
+label {
+  display: inline-block;
+}
+
 fieldset, legend, dl, dt, dd {
   border-width: 0;
   padding: 0;
@@ -211,21 +215,13 @@ pre code {
 }
 
 /**
- * Links
+ * Labels
  */
 
-a:not(.btn), .link {
-  color: var(--nyco-hyperlinks);
+.label {
   font-weight: bold;
-  border-radius: 2px;
-}
-
-a:not(.btn):visited, .link:visited {
-  color: var(--nyco-visited);
-}
-
-a:not(.btn):hover, a:not(.btn):active, a:not(.btn):focus, a:not(.btn).active, .link:hover, .link:active, .link:focus, .link.active {
-  color: var(--nyco-hover);
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 /**
@@ -247,6 +243,24 @@ a:not(.btn):hover, a:not(.btn):active, a:not(.btn):focus, a:not(.btn).active, .l
 .layout-content > *:first-child {
   max-width: 600px;
   width: 100%;
+}
+
+/**
+ * Links
+ */
+
+a:not(.btn), .link {
+  color: var(--nyco-hyperlinks);
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+a:not(.btn):visited, .link:visited {
+  color: var(--nyco-visited);
+}
+
+a:not(.btn):hover, a:not(.btn):active, a:not(.btn):focus, a:not(.btn).active, .link:hover, .link:active, .link:focus, .link.active {
+  color: var(--nyco-hover);
 }
 
 /**
@@ -482,7 +496,7 @@ button::-moz-focus-inner {
   appearance: none;
   cursor: pointer;
   background: transparent;
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-style: solid;
   border-color: currentColor;
   border-width: 2px;
@@ -525,28 +539,56 @@ button::-moz-focus-inner {
  */
 
 .select {
+  display: inline-block;
+  position: relative;
+}
+
+.select select {
+  border-color: var(--nyco-border);
+  background-color: var(--nyco-input-background);
   appearance: none;
-  border: 1px solid inherit;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 0;
   display: block;
+  margin: 0;
   max-width: 100%;
   min-width: 200px;
   width: 100%;
   cursor: pointer;
   font: inherit;
-  margin: 0;
   color: inherit;
-  background-position: right 0.5rem center;
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
+  font-weight: bold;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  padding: 15px;
+  padding-inline-end: 39px;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 2px;
-  padding: 12px;
-  padding-right: 2.3rem;
-  white-space: normal;
 }
 
-.select::-ms-expand {
+.select select::placeholder {
+  color: var(--nyco-placeholder);
+}
+
+.select select::-ms-expand {
   display: none;
+}
+
+.select__graphic {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  position: absolute;
+  inset-inline-end: 8px;
+  top: 50%;
+  margin-top: -24px;
+  width: 24px;
+  height: 48px;
+  pointer-events: none;
 }
 
 /**
@@ -568,10 +610,16 @@ input, textarea {
   padding: 16px;
   border-width: 1px;
   border-radius: 2px;
+  border-color: var(--nyco-border);
+  background-color: var(--nyco-input-background);
 }
 
 input::placeholder, textarea::placeholder {
   color: inherit;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--nyco-placeholder);
 }
 
 /**
@@ -718,109 +766,75 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
 }
 
 /**
- * Checkboxes
+ * Options
  */
 
-.checkbox {
-  font-size: inherit;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 8px;
-  cursor: pointer;
-  user-select: none;
-  touch-action: manipulation;
-}
-
-.checkbox > input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-
-.checkbox__label {
-  color: inherit;
-  font-size: inherit;
-  display: flex;
-  margin: 0;
-  padding: 12px;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 2px;
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
-.checkbox__label::before {
-  transition: all 0.2s;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 2px;
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  margin-right: 8px;
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  background-position: center;
-}
-
-input:checked + .checkbox__label::before {
-  border: 0;
-}
-
-/**
- * Checkboxes
- */
-
-.radio {
-  font-size: inherit;
-  font-weight: bold;
+.option {
   display: inline-block;
   margin-bottom: 8px;
-  cursor: pointer;
-  user-select: none;
-  touch-action: manipulation;
 }
 
-.radio > input {
+.option:last-of-type {
+  margin-bottom: 0;
+}
+
+.option > input {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
-  opacity: 0;
-  z-index: -1;
+  width: 1px;
 }
 
-.radio__label {
+.option__base {
   color: inherit;
+  border-color: var(--nyco-border);
+  background-color: var(--nyco-input-background);
   font-size: inherit;
-  display: flex;
-  margin: 0;
-  padding: 12px;
-  border-style: solid;
-  border-width: 1px;
+  font-weight: bold;
+  line-height: 24px;
+  text-decoration: none;
+  display: inline-flex;
+  padding: 15px;
+  border: 1px solid;
   border-radius: 2px;
-  transition: all 0.2s;
   cursor: pointer;
 }
 
-.radio__label::before {
-  content: "";
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 100%;
-  display: inline-block;
+.option__graphic {
+  color: inherit;
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   width: 24px;
   height: 24px;
-  min-width: 24px;
-  margin-right: 8px;
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  background-position: center;
-  transition: all 0.2s;
+  margin-inline-end: 8px;
 }
 
-input:checked + .radio__label::before {
-  border: 0;
+input:hover + .option__base {
+  color: inherit;
+  border-color: var(--nyco-focus);
+}
+
+input:focus + .option__base {
+  color: inherit;
+  border-color: var(--nyco-focus);
+  box-shadow: 0 0 0 2px var(--nyco-focus);
+}
+
+input:checked + .option__base {
+  color: inherit;
+}
+
+input:checked + .option__base > .option__graphic {
+  color: var(--nyco-focus);
+  fill: var(--nyco-focus);
+  stroke: var(--nyco-input-background);
 }
 
 @media (min-width: 400px) {
@@ -1018,7 +1032,7 @@ input:checked + .radio__label::before {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 12px 16px;
+    padding: 14px 18px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1252,7 +1266,7 @@ input:checked + .radio__label::before {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 12px 16px;
+    padding: 14px 18px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1486,7 +1500,7 @@ input:checked + .radio__label::before {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 12px 16px;
+    padding: 14px 18px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1526,7 +1540,7 @@ input:checked + .radio__label::before {
 }
 
 @media screen and (min-width: 768px) {
-  .select {
+  .select select {
     width: auto;
   }
   input, textarea {
@@ -1732,7 +1746,7 @@ input:checked + .radio__label::before {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 12px 16px;
+    padding: 14px 18px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;

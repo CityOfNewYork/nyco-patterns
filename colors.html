@@ -13,7 +13,7 @@
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
-    var VERSION = '2.6.0-1';
+    var VERSION = '2.6.0';
   </script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -55,17 +55,17 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.6.0-1</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.0</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0-1">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0">
           <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#feather-github"></use>
-          </svg>2.6.0-1
+          </svg>2.6.0
         </a>
       </div>
     </div>
@@ -83,21 +83,20 @@
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
               <a class="o-navigation__link" href="badge">Badge</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
               <a class="o-navigation__link" href="code">Code</a>
               <a class="o-navigation__link" href="description-lists">Description Lists</a>
               <a class="o-navigation__link" href="icons">Icons</a>
               <a class="o-navigation__link" href="inputs">Inputs</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
               <a class="o-navigation__link" href="links">Links</a>
-              <a class="o-navigation__link" href="radios">Radios</a>
+              <a class="o-navigation__link" href="options">Options</a>
               <a class="o-navigation__link" href="select">Select</a>
               <a class="o-navigation__link" href="tables">Tables</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
               <a class="o-navigation__link" href="card">Card</a>
+              <a class="o-navigation__link" href="question">Question</a>
               <a class="o-navigation__link" href="record-hero">Record Hero</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
               <a class="o-navigation__link" href="content">Content</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="footer">Footer</a>
@@ -128,21 +127,20 @@
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
                 <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
                 <a class="o-navigation__link" href="badge" tabindex="-1">Badge</a>
-                <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
                 <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
                 <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
                 <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
                 <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
                 <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
                 <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
-                <a class="o-navigation__link" href="radios" tabindex="-1">Radios</a>
+                <a class="o-navigation__link" href="options" tabindex="-1">Options</a>
                 <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
                 <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
                 <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
+                <a class="o-navigation__link" href="question" tabindex="-1">Question</a>
                 <a class="o-navigation__link" href="record-hero" tabindex="-1">Record Hero</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
-                <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
                 <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
                 <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
                 <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
@@ -176,29 +174,61 @@
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="w-full grid desktop:grid-cols-3 gap-2">
+            <div class="w-full grid desktop:grid-cols-2 gap-2">
               <div class="w-full">
                 <article class="color-light-background py-4 p-2 border border-grey-50t border-b-0">
                   <h1 class="m-0">Headings</h1>
                   <div class="capitalize">light background Text</div>
                   <a href="#">Hyperlinks</a>
                   <div class="mt-1 mb-2">
-                    <label class="font-bold">Inputs</label>
+                    <label class="label">Inputs</label>
                     <div class="input capitalize">
                       <input placeholder="Placeholder" />
                     </div>
                   </div>
                   <div class="mt-1 mb-2">
-                    <label class="checkbox capitalize" for="light-background-checkbox">
-                      <input id="light-background-checkbox" type="checkbox" />
-                      <span class="checkbox__label">Checkboxes</span>
+                    <label class="option" for="option-checkbox-light-background">
+                      <input id="option-checkbox-light-background" name="option['light-background']" type="checkbox" value="option-checkbox-light-background" />
+                      <span class="option__base">
+                        <svg aria-hidden="true" class="option__graphic">
+                          <use xlink:href="#option-nyco-checkbox"></use>
+                        </svg>
+                        <span class="option__label">Checkboxes</span>
+                      </span>
                     </label>
                   </div>
                   <div class="mt-1 mb-2">
-                    <label class="font-bold">Selects</label>
-                    <select class="select">
-                      <option>Select an option</option>
-                    </select>
+                    <label class="option" for="option-radio-light-background">
+                      <input id="option-radio-light-background" name="option['radio']" type="radio" value="option-radio-light-background" />
+                      <span class="option__base">
+                        <svg aria-hidden="true" class="option__graphic">
+                          <use xlink:href="#option-nyco-radio"></use>
+                        </svg>
+                        <span class="option__label">Radio Buttons</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <div class="select">
+                      <select>
+                        <option>Select an option</option>
+                      </select>
+                      <svg aria-hidden="true" class="select__graphic">
+                        <use xlink:href="#select-nyco-chevrons"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <label class="font-bold">Buttons</label>
+                    <div class="mt-1 mb-2">
+                      <button class="btn">Default Buttons</button>
+                    </div>
+                    <div class="mt-1 mb-2">
+                      <button class="btn btn-primary">Primary Buttons</button>
+                    </div>
+                    <div class="mt-1 mb-2">
+                      <button class="btn btn-secondary">Secondary Buttons</button>
+                    </div>
                   </div>
                 </article>
                 <div class="code-block rounded-t-none border-grey-50t border-t-0">
@@ -212,22 +242,54 @@
                   <div class="capitalize">mid background Text</div>
                   <a href="#">Hyperlinks</a>
                   <div class="mt-1 mb-2">
-                    <label class="font-bold">Inputs</label>
+                    <label class="label">Inputs</label>
                     <div class="input capitalize">
                       <input placeholder="Placeholder" />
                     </div>
                   </div>
                   <div class="mt-1 mb-2">
-                    <label class="checkbox capitalize" for="mid-background-checkbox">
-                      <input id="mid-background-checkbox" type="checkbox" />
-                      <span class="checkbox__label">Checkboxes</span>
+                    <label class="option" for="option-checkbox-mid-background">
+                      <input id="option-checkbox-mid-background" name="option['mid-background']" type="checkbox" value="option-checkbox-mid-background" />
+                      <span class="option__base">
+                        <svg aria-hidden="true" class="option__graphic">
+                          <use xlink:href="#option-nyco-checkbox"></use>
+                        </svg>
+                        <span class="option__label">Checkboxes</span>
+                      </span>
                     </label>
                   </div>
                   <div class="mt-1 mb-2">
-                    <label class="font-bold">Selects</label>
-                    <select class="select">
-                      <option>Select an option</option>
-                    </select>
+                    <label class="option" for="option-radio-mid-background">
+                      <input id="option-radio-mid-background" name="option['radio']" type="radio" value="option-radio-mid-background" />
+                      <span class="option__base">
+                        <svg aria-hidden="true" class="option__graphic">
+                          <use xlink:href="#option-nyco-radio"></use>
+                        </svg>
+                        <span class="option__label">Radio Buttons</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <div class="select">
+                      <select>
+                        <option>Select an option</option>
+                      </select>
+                      <svg aria-hidden="true" class="select__graphic">
+                        <use xlink:href="#select-nyco-chevrons"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <label class="font-bold">Buttons</label>
+                    <div class="mt-1 mb-2">
+                      <button class="btn">Default Buttons</button>
+                    </div>
+                    <div class="mt-1 mb-2">
+                      <button class="btn btn-primary">Primary Buttons</button>
+                    </div>
+                    <div class="mt-1 mb-2">
+                      <button class="btn btn-secondary">Secondary Buttons</button>
+                    </div>
                   </div>
                 </article>
                 <div class="code-block rounded-t-none border-grey-50t border-t-0">
@@ -236,27 +298,120 @@
                 </div>
               </div>
               <div class="w-full">
-                <article class="color-dark-background py-4 p-2 border border-grey-50t border-b-0">
+                <article class="color-primary-background py-4 p-2 border border-grey-50t border-b-0">
                   <h1 class="m-0">Headings</h1>
-                  <div class="capitalize">dark background Text</div>
+                  <div class="capitalize">primary background Text</div>
                   <a href="#">Hyperlinks</a>
                   <div class="mt-1 mb-2">
-                    <label class="font-bold">Inputs</label>
+                    <label class="label">Inputs</label>
                     <div class="input capitalize">
                       <input placeholder="Placeholder" />
                     </div>
                   </div>
                   <div class="mt-1 mb-2">
-                    <label class="checkbox capitalize" for="dark-background-checkbox">
-                      <input id="dark-background-checkbox" type="checkbox" />
-                      <span class="checkbox__label">Checkboxes</span>
+                    <label class="option" for="option-checkbox-primary-background">
+                      <input id="option-checkbox-primary-background" name="option['primary-background']" type="checkbox" value="option-checkbox-primary-background" />
+                      <span class="option__base">
+                        <svg aria-hidden="true" class="option__graphic">
+                          <use xlink:href="#option-nyco-checkbox"></use>
+                        </svg>
+                        <span class="option__label">Checkboxes</span>
+                      </span>
                     </label>
                   </div>
                   <div class="mt-1 mb-2">
-                    <label class="font-bold">Selects</label>
-                    <select class="select">
-                      <option>Select an option</option>
-                    </select>
+                    <label class="option" for="option-radio-primary-background">
+                      <input id="option-radio-primary-background" name="option['radio']" type="radio" value="option-radio-primary-background" />
+                      <span class="option__base">
+                        <svg aria-hidden="true" class="option__graphic">
+                          <use xlink:href="#option-nyco-radio"></use>
+                        </svg>
+                        <span class="option__label">Radio Buttons</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <div class="select">
+                      <select>
+                        <option>Select an option</option>
+                      </select>
+                      <svg aria-hidden="true" class="select__graphic">
+                        <use xlink:href="#select-nyco-chevrons"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <label class="font-bold">Buttons</label>
+                    <div class="mt-1 mb-2">
+                      <button class="btn">Default Buttons</button>
+                    </div>
+                    <div class="mt-1 mb-2">
+                      <button class="btn btn-primary">Primary Buttons</button>
+                    </div>
+                    <div class="mt-1 mb-2">
+                      <button class="btn btn-secondary">Secondary Buttons</button>
+                    </div>
+                  </div>
+                </article>
+                <div class="code-block rounded-t-none border-grey-50t border-t-0">
+                  <input class="sr-only" data-copy-target="copy-primary-background-color" value="color-primary-background" />
+                  <button aria-label="Copy to clipboard" aria-pressed="false" class="w-full text-start p-3 font-code text-code" data-copy="copy-primary-background-color" data-js="copy" title="Copy to clipboard">.color-primary-background</button>
+                </div>
+              </div>
+              <div class="w-full">
+                <article class="color-dark-background py-4 p-2 border border-grey-50t border-b-0">
+                  <h1 class="m-0">Headings</h1>
+                  <div class="capitalize">dark background Text</div>
+                  <a href="#">Hyperlinks</a>
+                  <div class="mt-1 mb-2">
+                    <label class="label">Inputs</label>
+                    <div class="input capitalize">
+                      <input placeholder="Placeholder" />
+                    </div>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <label class="option" for="option-checkbox-dark-background">
+                      <input id="option-checkbox-dark-background" name="option['dark-background']" type="checkbox" value="option-checkbox-dark-background" />
+                      <span class="option__base">
+                        <svg aria-hidden="true" class="option__graphic">
+                          <use xlink:href="#option-nyco-checkbox"></use>
+                        </svg>
+                        <span class="option__label">Checkboxes</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <label class="option" for="option-radio-dark-background">
+                      <input id="option-radio-dark-background" name="option['radio']" type="radio" value="option-radio-dark-background" />
+                      <span class="option__base">
+                        <svg aria-hidden="true" class="option__graphic">
+                          <use xlink:href="#option-nyco-radio"></use>
+                        </svg>
+                        <span class="option__label">Radio Buttons</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <div class="select">
+                      <select>
+                        <option>Select an option</option>
+                      </select>
+                      <svg aria-hidden="true" class="select__graphic">
+                        <use xlink:href="#select-nyco-chevrons"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="mt-1 mb-2">
+                    <label class="font-bold">Buttons</label>
+                    <div class="mt-1 mb-2">
+                      <button class="btn">Default Buttons</button>
+                    </div>
+                    <div class="mt-1 mb-2">
+                      <button class="btn btn-primary">Primary Buttons</button>
+                    </div>
+                    <div class="mt-1 mb-2">
+                      <button class="btn btn-secondary">Secondary Buttons</button>
+                    </div>
                   </div>
                 </article>
                 <div class="code-block rounded-t-none border-grey-50t border-t-0">
@@ -269,7 +424,7 @@
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <p>These utilities manage the color properties of various elements including text, background, hyperlinks, inputs, and checkboxes. The combinations are tested for adequate contrast following the distinguishably guideline of the Web Content Accessibility Guidelines (WCAG) 2.0. Hyperlinks are underlined to accommodate color blindness to avoid solely relying on color to distinguish them. WCAG AA compliance depends on the base text size. The examples may not be fully compliant because their font-size is set to a smaller size.</p>
+            <p>These utilities manage the color properties of various elements including text, background, hyperlinks, inputs, and checkboxes. The combinations are tested for adequate contrast following the distinguishably guideline of the Web Content Accessibility Guidelines (WCAG) AA standard. Hyperlinks are underlined to accommodate color blindness to avoid solely relying on color to distinguish them. WCAG AA compliance depends on the base text size. The examples may not be fully compliant because their font-size is set to a smaller size.</p>
           </div>
         </div>
       </section>

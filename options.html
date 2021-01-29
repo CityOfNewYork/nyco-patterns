@@ -8,12 +8,12 @@
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
   <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
   <link href="styles/nyco.css" rel="stylesheet" />
-  <title>Radios | NYCO Patterns</title>
+  <title>Options | NYCO Patterns</title>
   <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
-    var VERSION = '2.6.0-1';
+    var VERSION = '2.6.0';
   </script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -55,17 +55,17 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.6.0-1</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.0</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0-1">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0">
           <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#feather-github"></use>
-          </svg>2.6.0-1
+          </svg>2.6.0
         </a>
       </div>
     </div>
@@ -83,21 +83,20 @@
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
               <a class="o-navigation__link" href="badge">Badge</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
               <a class="o-navigation__link" href="code">Code</a>
               <a class="o-navigation__link" href="description-lists">Description Lists</a>
               <a class="o-navigation__link" href="icons">Icons</a>
               <a class="o-navigation__link" href="inputs">Inputs</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
               <a class="o-navigation__link" href="links">Links</a>
-              <a class="o-navigation__link" href="radios">Radios</a>
+              <a class="o-navigation__link" href="options">Options</a>
               <a class="o-navigation__link" href="select">Select</a>
               <a class="o-navigation__link" href="tables">Tables</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
               <a class="o-navigation__link" href="card">Card</a>
+              <a class="o-navigation__link" href="question">Question</a>
               <a class="o-navigation__link" href="record-hero">Record Hero</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
               <a class="o-navigation__link" href="content">Content</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="footer">Footer</a>
@@ -128,21 +127,20 @@
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
                 <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
                 <a class="o-navigation__link" href="badge" tabindex="-1">Badge</a>
-                <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
                 <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
                 <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
                 <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
                 <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
                 <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
                 <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
-                <a class="o-navigation__link" href="radios" tabindex="-1">Radios</a>
+                <a class="o-navigation__link" href="options" tabindex="-1">Options</a>
                 <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
                 <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
                 <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
+                <a class="o-navigation__link" href="question" tabindex="-1">Question</a>
                 <a class="o-navigation__link" href="record-hero" tabindex="-1">Record Hero</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
-                <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
                 <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
                 <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
                 <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
@@ -162,28 +160,37 @@
     </aside>
     <article class="color-light-background py-6">
       <div class="px-4 desktop:px-6">
-        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Radios</h1>
+        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Options</h1>
       </div>
-      <section class="mt-6" id="radios">
+      <section class="mt-6" id="options-checkbox">
         <div class="layout-content px-4">
           <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-radios">
+            <a class="flex no-underline" href="#heading-options-checkbox">
               <svg aria-hidden="true" class="icon-ui-anchor">
                 <use xlink:href="#feather-anchor"></use>
               </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-radios">Default Radios</h2>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-options-checkbox">Checkbox Options</h2>
           </div>
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
             <fieldset>
-              <legend class="mb-1">Options</legend>
-              <label class="radio" for="option-1">
-                <input id="option-1" name="options" type="radio" value="option-1" />
-                <span class="radio__label">Option 1</span>
-              </label>&nbsp;<label class="radio" for="option-2">
-                <input id="option-2" name="options" type="radio" value="option-2" />
-                <span class="radio__label">Option 2</span>
+              <label class="option" for="option-1">
+                <input id="option-1" name="option['1']" type="checkbox" value="option-1" />
+                <span class="option__base">
+                  <svg aria-hidden="true" class="option__graphic">
+                    <use xlink:href="#option-nyco-checkbox"></use>
+                  </svg>
+                  <span class="option__label">Option 1</span>
+                </span>
+              </label>&nbsp;<label class="option" for="option-2">
+                <input id="option-2" name="option['2']" type="checkbox" value="option-2" />
+                <span class="option__base">
+                  <svg aria-hidden="true" class="option__graphic">
+                    <use xlink:href="#option-nyco-checkbox"></use>
+                  </svg>
+                  <span class="option__label">Option 2</span>
+                </span>
               </label>
             </fieldset>
           </div>
@@ -192,40 +199,58 @@
           <div class="o-content mx-auto">
             <div class="code-block">
               <pre>&lt;fieldset&gt;
-  &lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;
-  &lt;label class=&quot;radio&quot; for=&quot;option-1&quot;&gt;
-    &lt;input id=&quot;option-1&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-1&quot; /&gt;
-    &lt;span class=&quot;radio__label&quot;&gt;Option 1&lt;/span&gt;
-  &lt;/label&gt;&amp;nbsp;&lt;label class=&quot;radio&quot; for=&quot;option-2&quot;&gt;
-    &lt;input id=&quot;option-2&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-2&quot; /&gt;
-    &lt;span class=&quot;radio__label&quot;&gt;Option 2&lt;/span&gt;
+  &lt;label class=&quot;option&quot; for=&quot;option-1&quot;&gt;
+    &lt;input id=&quot;option-1&quot; name=&quot;option['1']&quot; type=&quot;checkbox&quot; value=&quot;option-1&quot; /&gt;
+    &lt;span class=&quot;option__base&quot;&gt;
+      &lt;svg aria-hidden=&quot;true&quot; class=&quot;option__graphic&quot;&gt;
+        &lt;use xlink:href=&quot;#option-nyco-checkbox&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+      &lt;span class=&quot;option__label&quot;&gt;Option 1&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/label&gt;&amp;nbsp;&lt;label class=&quot;option&quot; for=&quot;option-2&quot;&gt;
+    &lt;input id=&quot;option-2&quot; name=&quot;option['2']&quot; type=&quot;checkbox&quot; value=&quot;option-2&quot; /&gt;
+    &lt;span class=&quot;option__base&quot;&gt;
+      &lt;svg aria-hidden=&quot;true&quot; class=&quot;option__graphic&quot;&gt;
+        &lt;use xlink:href=&quot;#option-nyco-checkbox&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+      &lt;span class=&quot;option__label&quot;&gt;Option 2&lt;/span&gt;
+    &lt;/span&gt;
   &lt;/label&gt;
 &lt;/fieldset&gt;</pre>
             </div>
-            <p>A styled radio element. Styling of the element is determined by the <a href="/colors">Color Combination utility</a> it is nested under. Note the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> used for making the form more understandable for all users. Read more about form grouping in <a href="https://www.w3.org/WAI/tutorials/forms/grouping/">W3’s Web Accessibility Tutorials</a>.</p>
+            <p>A styled checkbox option group. Radio options are additive, allowing multiple selections in a group of options. Color styling is determined by the <a href="/colors">Color Combination utility</a> it is nested under. Note the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> used for making the checkbox group understandable for all users. Read more about form grouping in <a href="https://www.w3.org/WAI/tutorials/forms/grouping/">W3’s Web Accessibility Tutorials</a>. The graphics for the checkbox input are included in the <a href="icons#heading-icon-usage">icon sprite</a> that needs to be inlined in the DOM to appear.</p>
           </div>
         </div>
       </section>
-      <section class="mt-6" id="radios-error">
+      <section class="mt-6" id="options-radio">
         <div class="layout-content px-4">
           <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-radios-error">
+            <a class="flex no-underline" href="#heading-options-radio">
               <svg aria-hidden="true" class="icon-ui-anchor">
                 <use xlink:href="#feather-anchor"></use>
               </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-radios-error">error radios</h2>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-options-radio">Radio Options</h2>
           </div>
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
             <fieldset>
-              <legend class="mb-1">Options</legend>
-              <label class="radio error" for="option-3">
-                <input id="option-3" name="options" type="radio" value="option-3" />
-                <span class="radio__label">Option 3</span>
-              </label>&nbsp;<label class="radio error" for="option-4">
-                <input id="option-4" name="options" type="radio" value="option-4" />
-                <span class="radio__label">Option 4</span>
+              <label class="option" for="option-a">
+                <input id="option-a" name="option['radio']" type="radio" value="option-a" />
+                <span class="option__base">
+                  <svg aria-hidden="true" class="option__graphic">
+                    <use xlink:href="#option-nyco-radio"></use>
+                  </svg>
+                  <span class="option__label">Option A</span>
+                </span>
+              </label>&nbsp;<label class="option" for="option-b">
+                <input id="option-b" name="option['radio']" type="radio" value="option-b" />
+                <span class="option__base">
+                  <svg aria-hidden="true" class="option__graphic">
+                    <use xlink:href="#option-nyco-radio"></use>
+                  </svg>
+                  <span class="option__label">Option B</span>
+                </span>
               </label>
             </fieldset>
           </div>
@@ -234,16 +259,26 @@
           <div class="o-content mx-auto">
             <div class="code-block">
               <pre>&lt;fieldset&gt;
-  &lt;legend class=&quot;mb-1&quot;&gt;Options&lt;/legend&gt;
-  &lt;label class=&quot;radio error&quot; for=&quot;option-3&quot;&gt;
-    &lt;input id=&quot;option-3&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-3&quot; /&gt;
-    &lt;span class=&quot;radio__label&quot;&gt;Option 3&lt;/span&gt;
-  &lt;/label&gt;&amp;nbsp;&lt;label class=&quot;radio error&quot; for=&quot;option-4&quot;&gt;
-    &lt;input id=&quot;option-4&quot; name=&quot;options&quot; type=&quot;radio&quot; value=&quot;option-4&quot; /&gt;
-    &lt;span class=&quot;radio__label&quot;&gt;Option 4&lt;/span&gt;
+  &lt;label class=&quot;option&quot; for=&quot;option-a&quot;&gt;
+    &lt;input id=&quot;option-a&quot; name=&quot;option['radio']&quot; type=&quot;radio&quot; value=&quot;option-a&quot; /&gt;
+    &lt;span class=&quot;option__base&quot;&gt;
+      &lt;svg aria-hidden=&quot;true&quot; class=&quot;option__graphic&quot;&gt;
+        &lt;use xlink:href=&quot;#option-nyco-radio&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+      &lt;span class=&quot;option__label&quot;&gt;Option A&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/label&gt;&amp;nbsp;&lt;label class=&quot;option&quot; for=&quot;option-b&quot;&gt;
+    &lt;input id=&quot;option-b&quot; name=&quot;option['radio']&quot; type=&quot;radio&quot; value=&quot;option-b&quot; /&gt;
+    &lt;span class=&quot;option__base&quot;&gt;
+      &lt;svg aria-hidden=&quot;true&quot; class=&quot;option__graphic&quot;&gt;
+        &lt;use xlink:href=&quot;#option-nyco-radio&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+      &lt;span class=&quot;option__label&quot;&gt;Option B&lt;/span&gt;
+    &lt;/span&gt;
   &lt;/label&gt;
 &lt;/fieldset&gt;</pre>
             </div>
+            <p>A styled radio option group. Radio options are binary, only allowing one selection in a group of options. Color styling is determined by the <a href="/colors">Color Combination utility</a> it is nested under. Note the <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> used for making the radio group more understandable for all users. Read more about form grouping in <a href="https://www.w3.org/WAI/tutorials/forms/grouping/">W3’s Web Accessibility Tutorials</a>. The graphics for the radio input are included in the <a href="icons#heading-icon-usage">icon sprite</a> that needs to be inlined in the DOM to appear.</p>
           </div>
         </div>
       </section>

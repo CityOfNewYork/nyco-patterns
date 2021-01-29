@@ -12,8 +12,6 @@
   --nyco-input-background: #FFFFFF;
   --nyco-placeholder: #999ca4;
   --nyco-focus: #1642DF;
-  --nyco-checkbox-check: url("../svg/icon-ui-check-white.svg");
-  --nyco-select-arrow: url("../svg/icon-ui-chevron-down-navy.svg");
   --nyco-error: #fc5d52;
   --nyco-box-shadow-color: #031553;
   --nyco-button-text: #FFFFFF;
@@ -31,12 +29,6 @@
   color: var(--nyco-color);
   background-color: var(--nyco-background-color);
   /**
-   * Inputs, Selects, Checkboxes
-   */
-  /**
-   * Selected States for Checkboxes and Radios
-   */
-  /**
    * Focus State
    */
   /**
@@ -47,56 +39,14 @@
    */
 }
 
-.color-light-background input:not(.error),
-.color-light-background textarea:not(.error),
-.color-light-background select:not(.error),
-.color-light-background .checkbox__label,
-.color-light-background .radio__label {
-  border-color: var(--nyco-border);
-  background-color: var(--nyco-input-background);
-}
-
-.color-light-background input:not(.error)::placeholder,
-.color-light-background textarea:not(.error)::placeholder,
-.color-light-background select:not(.error)::placeholder,
-.color-light-background .checkbox__label::placeholder,
-.color-light-background .radio__label::placeholder {
-  color: var(--nyco-placeholder);
-}
-
-.color-light-background .checkbox__label::before {
-  background-color: var(--nyco-input-background);
-}
-
-.color-light-background .radio__label:before,
-.color-light-background .checkbox__label::before {
-  border-color: var(--nyco-input-border);
-}
-
-.color-light-background .select {
-  background-image: var(--nyco-select-arrow);
-}
-
-.color-light-background input:checked + .checkbox__label::before {
-  background-image: var(--nyco-checkbox-check);
-}
-
-.color-light-background input:checked + .checkbox__label::before,
-.color-light-background input:checked + .radio__label::before {
-  background-color: var(--nyco-focus);
-  box-shadow: inset 0 0 0 1.25px var(--nyco-background-color), 0 0 0 2px var(--nyco-focus);
-}
-
 .color-light-background .input > input:focus,
-.color-light-background .select:focus {
+.color-light-background .select > select:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0), 0 0 0 4px rgba(255, 255, 255, 0);
 }
 
 .color-light-background .input > input:focus,
-.color-light-background .select:focus,
-.color-light-background input:focus + .checkbox__label,
-.color-light-background input:focus + .radio__label {
+.color-light-background .select > select:focus {
   border-color: var(--nyco-focus);
   box-shadow: 0 0 0 2px var(--nyco-focus);
 }
@@ -106,13 +56,15 @@
   box-shadow: 0 0 0 1.25px var(--nyco-background-color), 0 0 0 4px var(--nyco-focus);
 }
 
-.color-light-background .error > input,
-.color-light-background .error > select,
-.color-light-background .error > .checkbox__label,
-.color-light-background .error > .radio__label,
-.color-light-background .error > .checkbox__label::before,
-.color-light-background .error > .radio__label::before {
+.color-light-background .c-question__container.error input,
+.color-light-background .c-question__container.error select,
+.color-light-background .c-question__container.error .option__base,
+.color-light-background .c-question__container.error .error-message {
   border-color: var(--nyco-error);
+  color: var(--nyco-error);
+}
+
+.color-light-background .c-question__required {
   color: var(--nyco-error);
 }
 
@@ -162,8 +114,6 @@
   --nyco-input-background: #FFFFFF;
   --nyco-placeholder: #999ca4;
   --nyco-focus: #1642DF;
-  --nyco-checkbox-check: url("../svg/icon-ui-check-white.svg");
-  --nyco-select-arrow: url("../svg/icon-ui-chevron-down-navy.svg");
   --nyco-error: #fc5d52;
   --nyco-box-shadow-color: #031553;
   --nyco-button-text: #FFFFFF;
@@ -181,12 +131,6 @@
   color: var(--nyco-color);
   background-color: var(--nyco-background-color);
   /**
-   * Inputs, Selects, Checkboxes
-   */
-  /**
-   * Selected States for Checkboxes and Radios
-   */
-  /**
    * Focus State
    */
   /**
@@ -197,56 +141,14 @@
    */
 }
 
-.color-mid-background input:not(.error),
-.color-mid-background textarea:not(.error),
-.color-mid-background select:not(.error),
-.color-mid-background .checkbox__label,
-.color-mid-background .radio__label {
-  border-color: var(--nyco-border);
-  background-color: var(--nyco-input-background);
-}
-
-.color-mid-background input:not(.error)::placeholder,
-.color-mid-background textarea:not(.error)::placeholder,
-.color-mid-background select:not(.error)::placeholder,
-.color-mid-background .checkbox__label::placeholder,
-.color-mid-background .radio__label::placeholder {
-  color: var(--nyco-placeholder);
-}
-
-.color-mid-background .checkbox__label::before {
-  background-color: var(--nyco-input-background);
-}
-
-.color-mid-background .radio__label:before,
-.color-mid-background .checkbox__label::before {
-  border-color: var(--nyco-input-border);
-}
-
-.color-mid-background .select {
-  background-image: var(--nyco-select-arrow);
-}
-
-.color-mid-background input:checked + .checkbox__label::before {
-  background-image: var(--nyco-checkbox-check);
-}
-
-.color-mid-background input:checked + .checkbox__label::before,
-.color-mid-background input:checked + .radio__label::before {
-  background-color: var(--nyco-focus);
-  box-shadow: inset 0 0 0 1.25px var(--nyco-background-color), 0 0 0 2px var(--nyco-focus);
-}
-
 .color-mid-background .input > input:focus,
-.color-mid-background .select:focus {
+.color-mid-background .select > select:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0), 0 0 0 4px rgba(255, 255, 255, 0);
 }
 
 .color-mid-background .input > input:focus,
-.color-mid-background .select:focus,
-.color-mid-background input:focus + .checkbox__label,
-.color-mid-background input:focus + .radio__label {
+.color-mid-background .select > select:focus {
   border-color: var(--nyco-focus);
   box-shadow: 0 0 0 2px var(--nyco-focus);
 }
@@ -256,13 +158,15 @@
   box-shadow: 0 0 0 1.25px var(--nyco-background-color), 0 0 0 4px var(--nyco-focus);
 }
 
-.color-mid-background .error > input,
-.color-mid-background .error > select,
-.color-mid-background .error > .checkbox__label,
-.color-mid-background .error > .radio__label,
-.color-mid-background .error > .checkbox__label::before,
-.color-mid-background .error > .radio__label::before {
+.color-mid-background .c-question__container.error input,
+.color-mid-background .c-question__container.error select,
+.color-mid-background .c-question__container.error .option__base,
+.color-mid-background .c-question__container.error .error-message {
   border-color: var(--nyco-error);
+  color: var(--nyco-error);
+}
+
+.color-mid-background .c-question__required {
   color: var(--nyco-error);
 }
 
@@ -298,6 +202,110 @@
   background: var(--nyco-secondary);
 }
 
+.color-primary-background {
+  --nyco-color: #FFFFFF;
+  --nyco-color-alt: #8195dc;
+  --nyco-font-smooth: true;
+  --nyco-font-weight: ;
+  --nyco-headings: #FFFFFF;
+  --nyco-hyperlinks: #FFFFFF;
+  --nyco-visited: #FFFFFF;
+  --nyco-hover: #FFFFFF;
+  --nyco-background-color: #1642DF;
+  --nyco-border: #F0F7FE;
+  --nyco-input-background: #1642DF;
+  --nyco-placeholder: #FFFFFF;
+  --nyco-focus: #F0F7FE;
+  --nyco-error: #fc5d52;
+  --nyco-box-shadow-color: #FFFFFF;
+  --nyco-button-text: #FFFFFF;
+  --nyco-primary: #031553;
+  --nyco-secondary: #fc5d52;
+  --nyco-code-primary: #4157aa;
+  --nyco-code-secondary: #031553;
+  --nyco-code-background: #F0F7FE;
+  --nyco-code-border: #4157aa;
+  --nyco-card-background-color: #F0F7FE;
+  --nyco-record_hero-background-color: #E7F2FE;
+  /**
+   * Base Colors
+   */
+  color: var(--nyco-color);
+  background-color: var(--nyco-background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /**
+   * Focus State
+   */
+  /**
+   * Error State
+   */
+  /**
+   * Buttons
+   */
+}
+
+.color-primary-background .input > input:focus,
+.color-primary-background .select > select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0), 0 0 0 4px rgba(255, 255, 255, 0);
+}
+
+.color-primary-background .input > input:focus,
+.color-primary-background .select > select:focus {
+  border-color: var(--nyco-focus);
+  box-shadow: 0 0 0 2px var(--nyco-focus);
+}
+
+.color-primary-background .btn:focus, .color-primary-background button:focus, .color-primary-background a:focus {
+  outline: none;
+  box-shadow: 0 0 0 1.25px var(--nyco-background-color), 0 0 0 4px var(--nyco-focus);
+}
+
+.color-primary-background .c-question__container.error input,
+.color-primary-background .c-question__container.error select,
+.color-primary-background .c-question__container.error .option__base,
+.color-primary-background .c-question__container.error .error-message {
+  border-color: var(--nyco-error);
+  color: var(--nyco-error);
+}
+
+.color-primary-background .c-question__required {
+  color: var(--nyco-error);
+}
+
+.color-primary-background .error::after {
+  color: var(--nyco-error);
+}
+
+.color-primary-background .btn-primary,
+.color-primary-background .color-primary-button {
+  color: var(--nyco-button-text);
+  background-color: var(--nyco-primary);
+  border-color: transparent;
+}
+
+.color-primary-background .btn-primary:hover, .color-primary-background .btn-primary:active,
+.color-primary-background .color-primary-button:hover,
+.color-primary-background .color-primary-button:active {
+  color: var(--nyco-button-text);
+  background: var(--nyco-primary);
+}
+
+.color-primary-background .btn-secondary,
+.color-primary-background .color-secondary-button {
+  color: var(--nyco-button-text);
+  background-color: var(--nyco-secondary);
+  border-color: transparent;
+}
+
+.color-primary-background .btn-secondary:hover, .color-primary-background .btn-secondary:active,
+.color-primary-background .color-secondary-button:hover,
+.color-primary-background .color-secondary-button:active {
+  color: var(--nyco-button-text);
+  background: var(--nyco-secondary);
+}
+
 .color-dark-background {
   --nyco-color: #FFFFFF;
   --nyco-color-alt: #8195dc;
@@ -308,12 +316,10 @@
   --nyco-visited: #FFFFFF;
   --nyco-hover: #FFFFFF;
   --nyco-background-color: #031553;
-  --nyco-border: #8195dc;
+  --nyco-border: #568adf;
   --nyco-input-background: #031553;
   --nyco-placeholder: #FFFFFF;
-  --nyco-focus: #96beff;
-  --nyco-checkbox-check: url("../svg/icon-ui-check-navy.svg");
-  --nyco-select-arrow: url("../svg/icon-ui-chevron-down-white.svg");
+  --nyco-focus: #568adf;
   --nyco-error: #fc5d52;
   --nyco-box-shadow-color: #FFFFFF;
   --nyco-button-text: #FFFFFF;
@@ -333,12 +339,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /**
-   * Inputs, Selects, Checkboxes
-   */
-  /**
-   * Selected States for Checkboxes and Radios
-   */
-  /**
    * Focus State
    */
   /**
@@ -349,56 +349,14 @@
    */
 }
 
-.color-dark-background input:not(.error),
-.color-dark-background textarea:not(.error),
-.color-dark-background select:not(.error),
-.color-dark-background .checkbox__label,
-.color-dark-background .radio__label {
-  border-color: var(--nyco-border);
-  background-color: var(--nyco-input-background);
-}
-
-.color-dark-background input:not(.error)::placeholder,
-.color-dark-background textarea:not(.error)::placeholder,
-.color-dark-background select:not(.error)::placeholder,
-.color-dark-background .checkbox__label::placeholder,
-.color-dark-background .radio__label::placeholder {
-  color: var(--nyco-placeholder);
-}
-
-.color-dark-background .checkbox__label::before {
-  background-color: var(--nyco-input-background);
-}
-
-.color-dark-background .radio__label:before,
-.color-dark-background .checkbox__label::before {
-  border-color: var(--nyco-input-border);
-}
-
-.color-dark-background .select {
-  background-image: var(--nyco-select-arrow);
-}
-
-.color-dark-background input:checked + .checkbox__label::before {
-  background-image: var(--nyco-checkbox-check);
-}
-
-.color-dark-background input:checked + .checkbox__label::before,
-.color-dark-background input:checked + .radio__label::before {
-  background-color: var(--nyco-focus);
-  box-shadow: inset 0 0 0 1.25px var(--nyco-background-color), 0 0 0 2px var(--nyco-focus);
-}
-
 .color-dark-background .input > input:focus,
-.color-dark-background .select:focus {
+.color-dark-background .select > select:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0), 0 0 0 4px rgba(255, 255, 255, 0);
 }
 
 .color-dark-background .input > input:focus,
-.color-dark-background .select:focus,
-.color-dark-background input:focus + .checkbox__label,
-.color-dark-background input:focus + .radio__label {
+.color-dark-background .select > select:focus {
   border-color: var(--nyco-focus);
   box-shadow: 0 0 0 2px var(--nyco-focus);
 }
@@ -408,13 +366,15 @@
   box-shadow: 0 0 0 1.25px var(--nyco-background-color), 0 0 0 4px var(--nyco-focus);
 }
 
-.color-dark-background .error > input,
-.color-dark-background .error > select,
-.color-dark-background .error > .checkbox__label,
-.color-dark-background .error > .radio__label,
-.color-dark-background .error > .checkbox__label::before,
-.color-dark-background .error > .radio__label::before {
+.color-dark-background .c-question__container.error input,
+.color-dark-background .c-question__container.error select,
+.color-dark-background .c-question__container.error .option__base,
+.color-dark-background .c-question__container.error .error-message {
   border-color: var(--nyco-error);
+  color: var(--nyco-error);
+}
+
+.color-dark-background .c-question__required {
   color: var(--nyco-error);
 }
 

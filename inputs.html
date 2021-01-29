@@ -13,7 +13,7 @@
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
-    var VERSION = '2.6.0-1';
+    var VERSION = '2.6.0';
   </script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -55,17 +55,17 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.6.0-1</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.0</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0-1">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0">
           <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#feather-github"></use>
-          </svg>2.6.0-1
+          </svg>2.6.0
         </a>
       </div>
     </div>
@@ -83,21 +83,20 @@
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
               <a class="o-navigation__link" href="buttons">Buttons</a>
               <a class="o-navigation__link" href="badge">Badge</a>
-              <a class="o-navigation__link" href="checkboxes">Checkboxes</a>
               <a class="o-navigation__link" href="code">Code</a>
               <a class="o-navigation__link" href="description-lists">Description Lists</a>
               <a class="o-navigation__link" href="icons">Icons</a>
               <a class="o-navigation__link" href="inputs">Inputs</a>
               <a class="o-navigation__link" href="layouts">Layouts</a>
               <a class="o-navigation__link" href="links">Links</a>
-              <a class="o-navigation__link" href="radios">Radios</a>
+              <a class="o-navigation__link" href="options">Options</a>
               <a class="o-navigation__link" href="select">Select</a>
               <a class="o-navigation__link" href="tables">Tables</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
               <a class="o-navigation__link" href="card">Card</a>
+              <a class="o-navigation__link" href="question">Question</a>
               <a class="o-navigation__link" href="record-hero">Record Hero</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
-              <a class="o-navigation__link" href="charts">Charts</a>
               <a class="o-navigation__link" href="content">Content</a>
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="footer">Footer</a>
@@ -128,21 +127,20 @@
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Elements</span>
                 <a class="o-navigation__link" href="buttons" tabindex="-1">Buttons</a>
                 <a class="o-navigation__link" href="badge" tabindex="-1">Badge</a>
-                <a class="o-navigation__link" href="checkboxes" tabindex="-1">Checkboxes</a>
                 <a class="o-navigation__link" href="code" tabindex="-1">Code</a>
                 <a class="o-navigation__link" href="description-lists" tabindex="-1">Description Lists</a>
                 <a class="o-navigation__link" href="icons" tabindex="-1">Icons</a>
                 <a class="o-navigation__link" href="inputs" tabindex="-1">Inputs</a>
                 <a class="o-navigation__link" href="layouts" tabindex="-1">Layouts</a>
                 <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
-                <a class="o-navigation__link" href="radios" tabindex="-1">Radios</a>
+                <a class="o-navigation__link" href="options" tabindex="-1">Options</a>
                 <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
                 <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
                 <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
+                <a class="o-navigation__link" href="question" tabindex="-1">Question</a>
                 <a class="o-navigation__link" href="record-hero" tabindex="-1">Record Hero</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Objects</span>
-                <a class="o-navigation__link" href="charts" tabindex="-1">Charts</a>
                 <a class="o-navigation__link" href="content" tabindex="-1">Content</a>
                 <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
                 <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
@@ -171,40 +169,12 @@
               <svg aria-hidden="true" class="icon-ui-anchor">
                 <use xlink:href="#feather-anchor"></use>
               </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-input">input</h2>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-input">Text Input</h2>
           </div>
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
             <div class="input">
-              <input name="name" type="text" />
-            </div>
-          </div>
-        </div>
-        <div class="layout-content px-4 pb-4">
-          <div class="o-content mx-auto">
-            <div class="code-block">
-              <pre>&lt;div class=&quot;input&quot;&gt;
-  &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt;
-&lt;/div&gt;</pre>
-            </div>
-            <p>A styled input element. Styling of the element is determined by the <a href="/colors">Color Combination utility</a> it is nested under.</p>
-          </div>
-        </div>
-      </section>
-      <section class="mt-6" id="input-error">
-        <div class="layout-content px-4">
-          <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-input-error">
-              <svg aria-hidden="true" class="icon-ui-anchor">
-                <use xlink:href="#feather-anchor"></use>
-              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-input-error">error input</h2>
-          </div>
-        </div>
-        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
-          <div class="layout-wrap mx-auto flex justify-center">
-            <div class="input error">
               <input type="text" />
             </div>
           </div>
@@ -212,37 +182,11 @@
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;div class=&quot;input error&quot;&gt;
+              <pre>&lt;div class=&quot;input&quot;&gt;
   &lt;input type=&quot;text&quot; /&gt;
 &lt;/div&gt;</pre>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="mt-6" id="input-number">
-        <div class="layout-content px-4">
-          <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-input-number">
-              <svg aria-hidden="true" class="icon-ui-anchor">
-                <use xlink:href="#feather-anchor"></use>
-              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-input-number">number input</h2>
-          </div>
-        </div>
-        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
-          <div class="layout-wrap mx-auto flex justify-center">
-            <div class="input">
-              <input type="number" />
-            </div>
-          </div>
-        </div>
-        <div class="layout-content px-4 pb-4">
-          <div class="o-content mx-auto">
-            <div class="code-block">
-              <pre>&lt;div class=&quot;input&quot;&gt;
-  &lt;input type=&quot;number&quot; /&gt;
-&lt;/div&gt;</pre>
-            </div>
+            <p>A styled input element. Styling of the element is determined by the <a href="/colors">Color Combination utility</a> it is nested under.</p>
           </div>
         </div>
       </section>
@@ -280,6 +224,7 @@
   &lt;/button&gt;
 &lt;/form&gt;</pre>
             </div>
+            <p>The graphics for the search button are included in the <a href="icons#heading-icon-usage">feather sprite</a> that needs to be inlined in the DOM to appear.</p>
           </div>
         </div>
       </section>
@@ -317,6 +262,7 @@
   &lt;/button&gt;
 &lt;/form&gt;</pre>
             </div>
+            <p>The graphics for the search button are included in the <a href="icons#heading-icon-usage">feather sprite</a> that needs to be inlined in the DOM to appear.</p>
           </div>
         </div>
       </section>
@@ -341,33 +287,6 @@
           <div class="o-content mx-auto">
             <div class="code-block">
               <pre>&lt;div class=&quot;input input-currency-usd&quot;&gt;
-  &lt;input type=&quot;number&quot; /&gt;
-&lt;/div&gt;</pre>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="mt-6" id="input-currency-usd-error">
-        <div class="layout-content px-4">
-          <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-input-currency-usd-error">
-              <svg aria-hidden="true" class="icon-ui-anchor">
-                <use xlink:href="#feather-anchor"></use>
-              </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-input-currency-usd-error">Currency Error Input</h2>
-          </div>
-        </div>
-        <div class="bg-white-50t mb-6 p-4 desktop:p-6">
-          <div class="layout-wrap mx-auto flex justify-center">
-            <div class="input input-currency-usd error">
-              <input type="number" />
-            </div>
-          </div>
-        </div>
-        <div class="layout-content px-4 pb-4">
-          <div class="o-content mx-auto">
-            <div class="code-block">
-              <pre>&lt;div class=&quot;input input-currency-usd error&quot;&gt;
   &lt;input type=&quot;number&quot; /&gt;
 &lt;/div&gt;</pre>
             </div>
@@ -400,42 +319,38 @@
   &lt;div aria-live=&quot;polite&quot; class=&quot;sr-only&quot; id=&quot;input-autocomplete__instructions-0&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
             </div>
-            <p>The Autocomplete Input Element uses JavaScript to provide an accessibile and selectable list of suggested terms as a user types into the field.</p>
-            <p>The suggested terms are passed to the <code>InputAutocomplete</code> class on instantiation and can be updated on the fly with new terms. Terms are displayed in order by relevance and synonym mapping (see usage details below), Additionally the function is miss-spelling tolerant.</p>
+            <p>The Autocomplete Input Element uses JavaScript to provide an accessible and selectable list of suggested terms as a user types into the field.</p>
+            <p>The suggested terms are passed to the <code>autocomplete</code> class on instantiation and can be updated on the fly with new terms. Terms are displayed in order by relevance and synonym mapping (see usage details below), Additionally the function is miss-spelling tolerant.</p>
             <h4 id="heading-markup">Markup</h4>
-            <pre><code>&lt;div class=&quot;input-autocomplete&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;input-autocomplete&quot;&gt;
   &lt;input aria-autocomplete=&quot;both&quot; aria-describedby=&quot;input-autocomplete__instructions-0&quot; aria-expanded=&quot;false&quot; aria-owns=&quot;input-autocomplete__options&quot; autocomplete=&quot;off&quot; data-js=&quot;input-autocomplete__input&quot; type=&quot;text&quot; /&gt;
   &lt;div aria-live=&quot;polite&quot; class=&quot;sr-only&quot; id=&quot;input-autocomplete__instructions-0&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
             <p>Note: You can add the <code>data-persist-dropdown=&#39;true&#39;</code> attribute to the <code>input</code> element for testing. The attribute will make the dropdown persist after the input is no longer in focus.</p>
             <h4 id="heading-global-script">Global Script</h4>
-            <p>To use the Autocomplete Input in the global NYCO Patterns script use the following code:</p>
-            <pre><code>&lt;!-- Global Script --&gt;
-&lt;script src=&quot;dist/scripts/NycoPatterns.js&quot;&gt;&lt;/script&gt;
+            <p>To use the Autocomplete Input in the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.0/dist/scripts/nyco.js">global NYCO Patterns script</a> use the following code:</p>
+            <pre><code class="language-javascript">const nyco = new NYCO();
 
-&lt;script&gt;
-  const nyco = new NYCO();
-  nyco.inputAutocomplete({
-    options: [
-      [&#39;Bronx&#39;], [&#39;Queens&#39;]
-    ]
-  });
-&lt;/script&gt;</code></pre>
+nyco.autocomplete({
+  options: [
+    [&#39;Bronx&#39;], [&#39;Queens&#39;]
+  ]
+});</code></pre>
             <p>This function will instantiate the autocomplete with the provided options and attach the event listener to an input element with the default selector <code>[data-js=&#39;input-autocomplete__input&#39;]</code> (see markup details in the example above ).</p>
             <p>Below is an advanced configuration that passes a callback to the “selected” method of the autocomplete class. This callback is executed after a user has selected an option and the input value has been set. It will pass the selected value (<code>String</code>) as the first argument and the autocomplete class (<code>Object</code>) as the second.</p>
-            <pre><code>var autocomplete = nyco.inputAutocomplete({
+            <pre><code class="language-javascript">var autocomplete = nyco.autocomplete({
   selected: function(value, autocomplete) {
     console.dir(&#39;Selected &#39; + value + &#39;!&#39;);
   }
 });</code></pre>
             <h5 id="heading-updating-options">Updating Options</h5>
             <p>Below is an example of using the options setter to update the options after the class has been instantiated.</p>
-            <pre><code>autocomplete.options([
+            <pre><code class="language-javascript">autocomplete.options([
   [&#39;Bronx&#39;], [&#39;Queens&#39;], [&#39;Brooklyn&#39;], [&#39;Staten Island&#39;], [&#39;Manhattan&#39;]
 ]);</code></pre>
             <h5 id="heading-providing-synonyms">Providing Synonyms</h5>
             <p>Each option can be provided with a list of synonyms that will score the option higher as the user types. Try it out in the example above by typing “Hunts Point” in the input. The option “Bronx” will be listed before all other options. This method can be used to provide common terms for specific search terms that exist in your site.</p>
-            <pre><code>autocomplete.options([
+            <pre><code class="language-javascript">autocomplete.options([
   [&#39;Bronx&#39;, &#39;Hunts Point&#39;, &#39;Arthur Avenue&#39;, &#39;Riverside&#39;, &#39;Mott Haven&#39;],
   [&#39;Queens&#39;, &#39;Corona&#39;, &#39;East Elmhurst&#39;, &#39;Forest Hills&#39;, &#39;Fresh Pond&#39;],
   [&#39;Brooklyn&#39;, &#39;Flatbush&#39;, &#39;Bay Ridge&#39;, &#39;DUMBO&#39;, &#39;Williamsburg&#39;],
@@ -443,68 +358,68 @@
   [&#39;Manhattan&#39;, &#39;Lower&#39;, &#39;Midtown&#39;, &#39;Chinatown&#39;, &#39;SoHo&#39;]
 ]);</code></pre>
             <h5 id="heading-providing-strings">Providing Strings</h5>
-            <p>The list of strings below are used for screen reader accessiblity by default. They can be overridden using the <code>.strings</code> method and passing an object of new strings. For the options strings, a dynamic variable string (denoted by <code>{{ }}</code> below) is provided and rendered in the output of the string. This method can be used to provide a localized set of strings.</p>
-            <pre><code>autocomplete.strings({
+            <p>The list of strings below are used for screen reader accessibility by default. They can be overridden using the <code>.strings</code> method and passing an object of new strings. For the options strings, a dynamic variable string (denoted by <code>{{ }}</code> below) is provided and rendered in the output of the string. This method can be used to provide a localized set of strings.</p>
+            <pre><code class="language-javascript">autocomplete.strings({
   &#39;DIRECTIONS_TYPE&#39;: &#39;Start typing to generate a list of potential input options&#39;,
   &#39;DIRECTIONS_REVIEW&#39;: &#39;Keyboard users can use the up and down arrows to review options and press enter to select an option&#39;,
   &#39;OPTION_AVAILABLE&#39;: &#39;{{ NUMBER }} options available&#39;,
   &#39;OPTION_SELECTED&#39;: &#39;{{ VALUE }} selected&#39;
 });</code></pre>
             <h4 id="heading-configuration">Configuration</h4>
-            <p>The <code>InputAutocomplete</code> class accepts an object <code>{}</code> with two properties: <code>selector</code> and <code>options</code>.</p>
+            <p>The <code>autocomplete</code> class accepts an object <code>{}</code> with two properties: <code>selector</code> and <code>options</code>.</p>
             <table>
               <thead>
                 <tr>
-                  <th>Option</th>
-                  <th align="center">Type</th>
-                  <th align="center">Importance</th>
-                  <th>Description</th>
+                  <th align="left">Option</th>
+                  <th align="left">Type</th>
+                  <th align="left">Importance</th>
+                  <th align="left">Description</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>
+                  <td align="left">
                     <code>options</code>
                   </td>
-                  <td align="center">
+                  <td align="left">
                     <em>array</em>
                   </td>
-                  <td align="center">required</td>
-                  <td>The suggested terms to be displayed in the dropdown. Each item is an array with the first item being the visible value. The following values within each array are treated as synonyms that score the priority of term higher if the user types it.</td>
+                  <td align="left">required</td>
+                  <td align="left">The suggested terms to be displayed in the dropdown. Each item is an array with the first item being the visible value. The following values within each array are treated as synonyms that score the priority of term higher if the user types it.</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td align="left">
                     <code>selected</code>
                   </td>
-                  <td align="center">
+                  <td align="left">
                     <em>function</em>
                   </td>
-                  <td align="center">optional</td>
-                  <td>A callback method that will be executed when a user has selected an option.</td>
+                  <td align="left">optional</td>
+                  <td align="left">A callback method that will be executed when a user has selected an option.</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td align="left">
                     <code>selector</code>
                   </td>
-                  <td align="center">
+                  <td align="left">
                     <em>string</em>
                   </td>
-                  <td align="center">optional</td>
-                  <td>The selector for the input element. If no selector is provided the default value will be set to <code>[data-js=&quot;input-autocomplete__input&quot;]</code>.</td>
+                  <td align="left">optional</td>
+                  <td align="left">The selector for the input element. If no selector is provided the default value will be set to <code>[data-js=&quot;input-autocomplete__input&quot;]</code>.</td>
                 </tr>
               </tbody>
             </table>
-            <h4 id="heading-cherry-picked-module-import">Cherry-picked Module Import</h4>
-            <p>The ES6 module requires importing and object instantiation in your main script. The methods and configurations described above will work with the dedicated module.</p>
-            <pre><code>// ES6
-import InputAutocomplete from &#39;src/elements/inputs/input-autocomplete&#39;;
+            <h4 id="heading-es-module">ES Module</h4>
+            <p>The <code>nyco.autocomplete()</code> method is a wrapper around the <a href="https://github.com/CityOfNewYork/patterns-scripts/tree/main/src/autocomplete">Patterns Script autocomplete utility</a> which is included as a dependency of this project. The utility can be imported as an ES module and instantiated separately.</p>
+            <pre><code class="language-javascript">import autocomplete from &#39;@nycopportunity/pttrn-scripts/src/autocomplete/autocomplete&#39;;
 
-new InputAutocomplete({
+new autocomplete({
   options: [
     [&#39;Bronx&#39;], [&#39;Queens&#39;]
   ]
 });</code></pre>
-            <p>[//]: &lt;&gt; (#### Accessibility: Accessibility is suppported through ARIA attributes that will prompt the user on how to use the dropdown list. Screen readers will also announce the list of options in the dropdown as the user navigates them with the keyboard. To maintain the elements accessibility, the <code>accessibility</code> utility should be used and the appropriate ARIA attributes applied to the element (see markup section.)</p>
+            <h4 id="heading-accessibility">Accessibility</h4>
+            <p>Accessibility is supported through ARIA attributes that will prompt the user on how to use the dropdown list. Screen readers will also announce the list of options in the dropdown as the user navigates them with the keyboard. To maintain the elements accessibility, the <code>accessibility</code> utility should be used and the appropriate ARIA attributes applied to the element (see markup section).</p>
           </div>
         </div>
       </section>
@@ -552,7 +467,7 @@ new InputAutocomplete({
     nyco.toggle();
   </script>
   <script type="text/javascript">
-    const autocomplete = nyco.inputAutocomplete({
+    const autocomplete = nyco.autocomplete({
       // Providing a callback for the selected event.
       selected: function(value) {
         console.dir('Selected ' + value + '!');
