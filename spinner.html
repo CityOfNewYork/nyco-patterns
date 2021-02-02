@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;amp;display=swap" rel="stylesheet" />
   <link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css" rel="stylesheet" />
   <link href="styles/nyco.css" rel="stylesheet" />
-  <title>Feed | NYCO Patterns</title>
+  <title>Spinner | NYCO Patterns</title>
   <link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
@@ -166,60 +166,33 @@
     </aside>
     <article class="color-light-background py-6">
       <div class="px-4 desktop:px-6">
-        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Feed</h1>
+        <h1 class="jumbo m-0 p-0 mt-2 max-w-600 mx-auto">Spinner</h1>
       </div>
-      <section class="mt-6" id="feed">
+      <section class="mt-6" id="spinner">
         <div class="layout-content px-4">
           <div class="o-content mx-auto flex items-center mb-3">
-            <a class="flex no-underline" href="#heading-feed">
+            <a class="flex no-underline" href="#heading-spinner">
               <svg aria-hidden="true" class="icon-ui-anchor">
                 <use xlink:href="#feather-anchor"></use>
               </svg>&nbsp;<span class="sr-only underline">Anchor</span>
-            </a>&nbsp;<h2 class="capitalize m-0" id="heading-feed">feed</h2>
+            </a>&nbsp;<h2 class="capitalize m-0" id="heading-spinner">spinner</h2>
           </div>
         </div>
         <div class="bg-white-50t mb-6 p-4 desktop:p-6">
           <div class="layout-wrap mx-auto flex justify-center">
-            <div class="p-3 color-light-background overflow-scroll shadow-up-2 border-2 border-navy mb-2" style="max-height: 500px; width: 300px;">
-              <div data-js="feed"></div>
-            </div>
+            <svg class="spinner icon-4 text-marigold" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <circle class="spinner__path" cx="12" cy="12" fill="none" r="10"></circle>
+            </svg>
           </div>
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <p>The <strong>Feed Object</strong> embeds a Medium feed onto any web page. Multiple urls can be combined to display as many posts from different user profiles, publications, or tagged pages in publications. Refer to the <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a> on available feeds.</p>
-            <h2 id="heading-usage">Usage</h2>
-            <h3 id="heading-embed">
-              <a href="customize-your-feed">Embed</a>
-            </h3>
-            <p>
-              <a href="customize-your-feed">Copy and paste the embeddable snippet</a> that automatically integrates the latest version of the <strong>Feed Object</strong>.
-            </p>
-            <h3 id="heading-manual-integration">Manual Integration</h3>
-            <p>To use the feed source files, include the following scripts in your page. Replace <code>{{ version }}</code> with the semantic version in the top right of this page.</p>
-            <pre><code>&lt;!-- The feed component uses Promises so this polyfill is needed for IE support --&gt;
-&lt;script src=&quot;https://cdn.polyfill.io/v2/polyfill.js?features=Promise&amp;gated=gated&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/Feed.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
-            <p>Optionally, but recommended, include the base styling for the feed. Replace <code>{{ version }}</code> with the semantic version in the top right of this page.</p>
-            <pre><code>&lt;link src=&quot;https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v{{ version }}/dist/objects/feed/feed.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</code></pre>
-            <p>Then, add a container with the feed’s id and the execution script with configuration parameters.</p>
-            <pre><code>&lt;div id=&quot;js-feed&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-  new Feed({
-    selector: &quot;#js-feed&quot;, // The DOM element selctor for the feed. Defaults to #js-feed&#39;
-    feed: &quot;https://medium.com/feed/@nycopportunity/&quot;, // Required. The feed you want to display. May be an array of multiple feeds&#39;
-  });
-&lt;/script&gt;</code></pre>
-            <p>
-              <code>new Feed({});</code> creates a feed, accepting a configuration object as a parameter. <a href="customize-your-feed">The full configuration can be viewed here</a>. The object should contain the configuration you would like for the feed. Note: the <code>selector</code> and <code>feed</code> parameters are required to display a feed. Below is a list of the rest of the default configuration options. See the <a href="https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds">Medium RSS Feed Documentation</a> for more details on their feeds.
-            </p>
-            <h3 id="heading-layouts">Layouts</h3>
-            <p>In the bundled styles for this component there are three layouts for the Feed items: 1 column (default), 2 column, and 3 column. In order to utilize the 2 or 3 column layouts, configure the <code>classes.wrapper</code> parameter to <code>o-feed--3-column</code> for 3 columns and <code>o-feed--2-column</code> for 2 columns.</p>
-            <h3 id="heading-templates">Templates</h3>
-            <p>The feed comes shipped with ready-to-use LoDash template components for Medium feeds. Each component can be overwritten with the <code>template.component</code> configuration parameter. You can copy the templates below to get started creating your own template and refer to the <a href="https://lodash.com/docs/4.17.5#template">LoDash documentation for templates</a>.</p>
-            <p>Templates are passed the <code>config</code> object and whatever the response of the feed is. In Medium’s case, they pass the <code>feed</code> parameter and posts within the <code>items</code> parameter in the response from their RSS feed. To see the data that gets passed to the template to use in your template, set the <code>log</code> configuration parameter to <code>true</code>. Open up the console to see the data for this particular feed demonstration.</p>
-            <h3 id="heading-rss-to-json">RSS to JSON</h3>
-            <p>By default the <strong>Feed Object</strong> uses an API from <a href="https://rss2json.com">https://rss2json.com</a> to convert desired RSS feed into a consumable JSON object. See the <a href="https://rss2json.com">RSS 2 JSON Online Converter</a> documentation for details. It will also work with a self-hosted installation of <a href="https://github.com/CityOfNewYork/nyco-rss-2-json">NYCO’s RSS into JSON proxy</a>.</p>
+            <div class="code-block">
+              <pre tabindex="0">&lt;svg class=&quot;spinner icon-4 text-marigold&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+  &lt;circle class=&quot;spinner__path&quot; cx=&quot;12&quot; cy=&quot;12&quot; fill=&quot;none&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;
+&lt;/svg&gt;</pre>
+            </div>
+            <p>The Spinner Element is a generic animation used to indicate a process or loading period. The source comes from the <a href="https://github.com/CityOfNewYork/patterns-scripts/tree/main/src/spinner">Patterns Scripts spinner utility</a>. The SVG element can be copied from the demo above and pasted into the DOM or it can be added programmatically via JavaScript. The stylesheet needs to be imported to support the animation. The size of the spinner defaults to 24px by 24px but can be changed using <a href="icons#heading-icon-size-utilities">icon size utilities</a>. The color of the spinner can also be changed using <a href="colors#heading-color-utilities">text color utilities</a>.</p>
           </div>
         </div>
       </section>
@@ -265,11 +238,5 @@
     nyco.icons();
     nyco.icons('svg/feather.svg');
     nyco.toggle();
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
-  <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Object.assign&amp;flags=gated"></script>
-  <script src="objects/feed/feed-embed.js"></script>
-  <script type="text/javascript">
-    new FeedEmbed();
   </script>
 </body>
