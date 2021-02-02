@@ -30,7 +30,7 @@
       div class='o-content mx-auto'
         - if this.code
           div class='code-block'
-            pre
+            pre tabindex='0'
               = this.include(this.path);
 
         == this.include(`${this.path}.md`);
