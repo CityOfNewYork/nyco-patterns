@@ -83,8 +83,6 @@ const colors = {
       'input-background': 'base-white',
       'placeholder': 'grey-50t',
       'focus': 'blue',
-      'checkbox-check': '"icon-ui-check-white.svg"',
-      'select-arrow': '"icon-ui-chevron-down-navy.svg"',
       'error': 'red',
       'box-shadow': 'navy',
       'button-text': 'base-white',
@@ -104,9 +102,6 @@ const colors = {
       'input-background': 'base-white',
       'placeholder': 'grey-50t',
       'focus': 'blue',
-      'checkbox-check': '"icon-ui-check-white.svg"',
-      'radio-check': '"icon-ui-check-white.svg"',
-      'select-arrow': '"icon-ui-chevron-down-navy.svg"',
       'error': 'red',
       'box-shadow': 'navy',
       'button-text': 'base-white',
@@ -127,8 +122,6 @@ const colors = {
       'input-background': 'blue',
       'placeholder': 'base-white',
       'focus': 'blue-10t',
-      'checkbox-check': '"icon-ui-check-blue.svg"',
-      'select-arrow': '"icon-ui-chevron-down-white.svg"',
       'error': 'red',
       'box-shadow': 'base-white',
       'button-text': 'base-white',
@@ -149,8 +142,6 @@ const colors = {
       'input-background': 'navy',
       'placeholder': 'base-white',
       'focus': 'blue-70t',
-      'checkbox-check': '"icon-ui-check-navy.svg"',
-      'select-arrow': '"icon-ui-chevron-down-white.svg"',
       'error': 'red',
       'box-shadow': 'base-white',
       'button-text': 'base-white',
@@ -349,6 +340,7 @@ module.exports = {
     'blockquote': 'normal'
   },
   maxWidth: {
+    'auto': 'auto',
     '1/4': '25%',
     '1/3': '33.33%',
     '1/2': '50%',
@@ -363,6 +355,7 @@ module.exports = {
     'small': 400
   },
   width: {
+    'auto': 'auto',
     '1/4': '25%',
     '1/3': '33.33%',
     '1/2': '50%',
