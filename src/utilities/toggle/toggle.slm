@@ -1,0 +1,8 @@
+/ Toggle
+
+div class='text-center'
+  button class='btn mb-3' aria-controls='toggle-target' aria-expanded='false' data-js='toggle' type='button'
+    | Toggle
+
+  div class='p-3 bg-base-white' aria-hidden='true' class='hidden' id='toggle-target'
+    p Targeted toggle element. <a href='#' tabindex='-1'>A focusable child element</a>.
