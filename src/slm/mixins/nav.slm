@@ -16,6 +16,7 @@
     a tabindex=navTabindex class='${classNavLink}' href='links' Links
     a tabindex=navTabindex class='${classNavLink}' href='options' Options
     a tabindex=navTabindex class='${classNavLink}' href='select' Select
+    a tabindex=navTabindex class='${classNavLink}' href='spinner' Spinner
     a tabindex=navTabindex class='${classNavLink}' href='tables' Tables
 
     span class='${classNavLinkHeader}' Components
@@ -30,6 +31,7 @@
     a tabindex=navTabindex class='${classNavLink}' href='footer' Footer
     a tabindex=navTabindex class='${classNavLink}' href='header' Header
     / a tabindex=navTabindex class='${classNavLink}' href='map' Map
+    a tabindex=navTabindex class='${classNavLink}' href='modal' Modal
     a tabindex=navTabindex class='${classNavLink}' href='mailchimp' Mailchimp
     a tabindex=navTabindex class='${classNavLink}' href='navigation' Navigation
     / a tabindex=navTabindex class='${classNavLink}' href='official' Official
@@ -38,4 +40,5 @@
     a tabindex=navTabindex class='${classNavLink}' href='animate' Animate
     a tabindex=navTabindex class='${classNavLink}' href='colors' Colors
     a tabindex=navTabindex class='${classNavLink}' href='tailwindcss' Tailwindcss
+    a tabindex=navTabindex class='${classNavLink}' href='toggle' Toggle
     a tabindex=navTabindex class='${classNavLink}' href='type' Type
