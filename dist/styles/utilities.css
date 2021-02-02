@@ -5983,6 +5983,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
   max-width: 896px !important;
 }
 
+.max-w-auto {
+  max-width: auto !important;
+}
+
 .max-w-1\/4 {
   max-width: 25% !important;
 }
@@ -8670,6 +8674,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
   width: 896px !important;
 }
 
+.w-auto {
+  width: auto !important;
+}
+
 .w-1\/4 {
   width: 25% !important;
 }
@@ -8939,6 +8947,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
   inline-size: 896px !important;
 }
 
+.is-auto {
+  inline-size: auto !important;
+}
+
 .is-1\/4 {
   inline-size: 25% !important;
 }
@@ -8977,6 +8989,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
 
 .max-is-900 {
   max-inline-size: 896px !important;
+}
+
+.max-is-auto {
+  max-inline-size: auto !important;
 }
 
 .max-is-1\/4 {
@@ -11800,6 +11816,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     max-width: 896px !important;
   }
 
+  .mobile\:max-w-auto {
+    max-width: auto !important;
+  }
+
   .mobile\:max-w-1\/4 {
     max-width: 25% !important;
   }
@@ -12170,6 +12190,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     width: 896px !important;
   }
 
+  .mobile\:w-auto {
+    width: auto !important;
+  }
+
   .mobile\:w-1\/4 {
     width: 25% !important;
   }
@@ -12398,6 +12422,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     inline-size: 896px !important;
   }
 
+  .mobile\:is-auto {
+    inline-size: auto !important;
+  }
+
   .mobile\:is-1\/4 {
     inline-size: 25% !important;
   }
@@ -12436,6 +12464,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
 
   .mobile\:max-is-900 {
     max-inline-size: 896px !important;
+  }
+
+  .mobile\:max-is-auto {
+    max-inline-size: auto !important;
   }
 
   .mobile\:max-is-1\/4 {
@@ -15260,6 +15292,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     max-width: 896px !important;
   }
 
+  .tablet\:max-w-auto {
+    max-width: auto !important;
+  }
+
   .tablet\:max-w-1\/4 {
     max-width: 25% !important;
   }
@@ -15630,6 +15666,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     width: 896px !important;
   }
 
+  .tablet\:w-auto {
+    width: auto !important;
+  }
+
   .tablet\:w-1\/4 {
     width: 25% !important;
   }
@@ -15858,6 +15898,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     inline-size: 896px !important;
   }
 
+  .tablet\:is-auto {
+    inline-size: auto !important;
+  }
+
   .tablet\:is-1\/4 {
     inline-size: 25% !important;
   }
@@ -15896,6 +15940,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
 
   .tablet\:max-is-900 {
     max-inline-size: 896px !important;
+  }
+
+  .tablet\:max-is-auto {
+    max-inline-size: auto !important;
   }
 
   .tablet\:max-is-1\/4 {
@@ -18720,6 +18768,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     max-width: 896px !important;
   }
 
+  .desktop\:max-w-auto {
+    max-width: auto !important;
+  }
+
   .desktop\:max-w-1\/4 {
     max-width: 25% !important;
   }
@@ -19090,6 +19142,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     width: 896px !important;
   }
 
+  .desktop\:w-auto {
+    width: auto !important;
+  }
+
   .desktop\:w-1\/4 {
     width: 25% !important;
   }
@@ -19318,6 +19374,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     inline-size: 896px !important;
   }
 
+  .desktop\:is-auto {
+    inline-size: auto !important;
+  }
+
   .desktop\:is-1\/4 {
     inline-size: 25% !important;
   }
@@ -19356,6 +19416,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
 
   .desktop\:max-is-900 {
     max-inline-size: 896px !important;
+  }
+
+  .desktop\:max-is-auto {
+    max-inline-size: auto !important;
   }
 
   .desktop\:max-is-1\/4 {
@@ -22177,6 +22241,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     max-width: 896px !important;
   }
 
+  .small\:max-w-auto {
+    max-width: auto !important;
+  }
+
   .small\:max-w-1\/4 {
     max-width: 25% !important;
   }
@@ -22547,6 +22615,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     width: 896px !important;
   }
 
+  .small\:w-auto {
+    width: auto !important;
+  }
+
   .small\:w-1\/4 {
     width: 25% !important;
   }
@@ -22775,6 +22847,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     inline-size: 896px !important;
   }
 
+  .small\:is-auto {
+    inline-size: auto !important;
+  }
+
   .small\:is-1\/4 {
     inline-size: 25% !important;
   }
@@ -22813,6 +22889,10 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
 
   .small\:max-is-900 {
     max-inline-size: 896px !important;
+  }
+
+  .small\:max-is-auto {
+    max-inline-size: auto !important;
   }
 
   .small\:max-is-1\/4 {

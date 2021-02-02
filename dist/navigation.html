@@ -13,7 +13,7 @@
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
-    var VERSION = '2.6.0';
+    var VERSION = '2.6.1';
   </script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -44,8 +44,8 @@
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
   <header class="o-header tablet:layout-sidebar w-full">
-    <div class="o-header__banner-main bg-blue">
-      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
+    <div class="o-header__banner-main color-primary-background">
+      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle font-bold" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
         <span class="hidden"></span>
         <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco-secondary">
@@ -55,17 +55,17 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.6.0</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.1</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.1">
           <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#feather-github"></use>
-          </svg>2.6.0
+          </svg>2.6.1
         </a>
       </div>
     </div>
@@ -91,6 +91,7 @@
               <a class="o-navigation__link" href="links">Links</a>
               <a class="o-navigation__link" href="options">Options</a>
               <a class="o-navigation__link" href="select">Select</a>
+              <a class="o-navigation__link" href="spinner">Spinner</a>
               <a class="o-navigation__link" href="tables">Tables</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
               <a class="o-navigation__link" href="card">Card</a>
@@ -101,12 +102,14 @@
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="modal">Modal</a>
               <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
               <a class="o-navigation__link" href="navigation">Navigation</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
               <a class="o-navigation__link" href="animate">Animate</a>
               <a class="o-navigation__link" href="colors">Colors</a>
               <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+              <a class="o-navigation__link" href="toggle">Toggle</a>
               <a class="o-navigation__link" href="type">Type</a>
             </nav>
           </div>
@@ -135,6 +138,7 @@
                 <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
                 <a class="o-navigation__link" href="options" tabindex="-1">Options</a>
                 <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
+                <a class="o-navigation__link" href="spinner" tabindex="-1">Spinner</a>
                 <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
                 <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
@@ -145,12 +149,14 @@
                 <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
                 <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
                 <a class="o-navigation__link" href="header" tabindex="-1">Header</a>
+                <a class="o-navigation__link" href="modal" tabindex="-1">Modal</a>
                 <a class="o-navigation__link" href="mailchimp" tabindex="-1">Mailchimp</a>
                 <a class="o-navigation__link" href="navigation" tabindex="-1">Navigation</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
                 <a class="o-navigation__link" href="animate" tabindex="-1">Animate</a>
                 <a class="o-navigation__link" href="colors" tabindex="-1">Colors</a>
                 <a class="o-navigation__link" href="tailwindcss" tabindex="-1">Tailwindcss</a>
+                <a class="o-navigation__link" href="toggle" tabindex="-1">Toggle</a>
                 <a class="o-navigation__link" href="type" tabindex="-1">Type</a>
               </nav>
             </div>
@@ -194,6 +200,7 @@
                       <a class="o-navigation__link" href="links">Links</a>
                       <a class="o-navigation__link" href="options">Options</a>
                       <a class="o-navigation__link" href="select">Select</a>
+                      <a class="o-navigation__link" href="spinner">Spinner</a>
                       <a class="o-navigation__link" href="tables">Tables</a>
                       <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
                       <a class="o-navigation__link" href="card">Card</a>
@@ -204,12 +211,14 @@
                       <a class="o-navigation__link" href="feed">Feed</a>
                       <a class="o-navigation__link" href="footer">Footer</a>
                       <a class="o-navigation__link" href="header">Header</a>
+                      <a class="o-navigation__link" href="modal">Modal</a>
                       <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
                       <a class="o-navigation__link" href="navigation">Navigation</a>
                       <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
                       <a class="o-navigation__link" href="animate">Animate</a>
                       <a class="o-navigation__link" href="colors">Colors</a>
                       <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+                      <a class="o-navigation__link" href="toggle">Toggle</a>
                       <a class="o-navigation__link" href="type">Type</a>
                     </nav>
                   </div>
@@ -238,6 +247,7 @@
                         <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
                         <a class="o-navigation__link" href="options" tabindex="-1">Options</a>
                         <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
+                        <a class="o-navigation__link" href="spinner" tabindex="-1">Spinner</a>
                         <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
                         <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
                         <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
@@ -248,12 +258,14 @@
                         <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
                         <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
                         <a class="o-navigation__link" href="header" tabindex="-1">Header</a>
+                        <a class="o-navigation__link" href="modal" tabindex="-1">Modal</a>
                         <a class="o-navigation__link" href="mailchimp" tabindex="-1">Mailchimp</a>
                         <a class="o-navigation__link" href="navigation" tabindex="-1">Navigation</a>
                         <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
                         <a class="o-navigation__link" href="animate" tabindex="-1">Animate</a>
                         <a class="o-navigation__link" href="colors" tabindex="-1">Colors</a>
                         <a class="o-navigation__link" href="tailwindcss" tabindex="-1">Tailwindcss</a>
+                        <a class="o-navigation__link" href="toggle" tabindex="-1">Toggle</a>
                         <a class="o-navigation__link" href="type" tabindex="-1">Type</a>
                       </nav>
                     </div>
@@ -266,7 +278,7 @@
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;aside class=&quot;o-navigation bg-navy&quot;&gt;
+              <pre tabindex="0">&lt;aside class=&quot;o-navigation bg-navy&quot;&gt;
   &lt;div class=&quot;tablet:flex hidden w-full&quot;&gt;
     &lt;div class=&quot;o-navigation__wrap color-mid-background&quot;&gt;
       &lt;div class=&quot;o-navigation__nav&quot;&gt;
@@ -286,6 +298,7 @@
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;links&quot;&gt;Links&lt;/a&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;options&quot;&gt;Options&lt;/a&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;select&quot;&gt;Select&lt;/a&gt;
+          &lt;a class=&quot;o-navigation__link&quot; href=&quot;spinner&quot;&gt;Spinner&lt;/a&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;tables&quot;&gt;Tables&lt;/a&gt;
           &lt;span class=&quot;o-navigation__link-header text-blue-70t border-blue-30t&quot;&gt;Components&lt;/span&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;card&quot;&gt;Card&lt;/a&gt;
@@ -296,12 +309,14 @@
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;feed&quot;&gt;Feed&lt;/a&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;footer&quot;&gt;Footer&lt;/a&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;header&quot;&gt;Header&lt;/a&gt;
+          &lt;a class=&quot;o-navigation__link&quot; href=&quot;modal&quot;&gt;Modal&lt;/a&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;mailchimp&quot;&gt;Mailchimp&lt;/a&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;navigation&quot;&gt;Navigation&lt;/a&gt;
           &lt;span class=&quot;o-navigation__link-header text-blue-70t border-blue-30t&quot;&gt;Utilities&lt;/span&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;animate&quot;&gt;Animate&lt;/a&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;colors&quot;&gt;Colors&lt;/a&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;tailwindcss&quot;&gt;Tailwindcss&lt;/a&gt;
+          &lt;a class=&quot;o-navigation__link&quot; href=&quot;toggle&quot;&gt;Toggle&lt;/a&gt;
           &lt;a class=&quot;o-navigation__link&quot; href=&quot;type&quot;&gt;Type&lt;/a&gt;
         &lt;/nav&gt;
       &lt;/div&gt;
@@ -330,6 +345,7 @@
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;links&quot; tabindex=&quot;-1&quot;&gt;Links&lt;/a&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;options&quot; tabindex=&quot;-1&quot;&gt;Options&lt;/a&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;select&quot; tabindex=&quot;-1&quot;&gt;Select&lt;/a&gt;
+            &lt;a class=&quot;o-navigation__link&quot; href=&quot;spinner&quot; tabindex=&quot;-1&quot;&gt;Spinner&lt;/a&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;tables&quot; tabindex=&quot;-1&quot;&gt;Tables&lt;/a&gt;
             &lt;span class=&quot;o-navigation__link-header text-blue-70t border-blue-30t&quot;&gt;Components&lt;/span&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;card&quot; tabindex=&quot;-1&quot;&gt;Card&lt;/a&gt;
@@ -340,12 +356,14 @@
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;feed&quot; tabindex=&quot;-1&quot;&gt;Feed&lt;/a&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;footer&quot; tabindex=&quot;-1&quot;&gt;Footer&lt;/a&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;header&quot; tabindex=&quot;-1&quot;&gt;Header&lt;/a&gt;
+            &lt;a class=&quot;o-navigation__link&quot; href=&quot;modal&quot; tabindex=&quot;-1&quot;&gt;Modal&lt;/a&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;mailchimp&quot; tabindex=&quot;-1&quot;&gt;Mailchimp&lt;/a&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;navigation&quot; tabindex=&quot;-1&quot;&gt;Navigation&lt;/a&gt;
             &lt;span class=&quot;o-navigation__link-header text-blue-70t border-blue-30t&quot;&gt;Utilities&lt;/span&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;animate&quot; tabindex=&quot;-1&quot;&gt;Animate&lt;/a&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;colors&quot; tabindex=&quot;-1&quot;&gt;Colors&lt;/a&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;tailwindcss&quot; tabindex=&quot;-1&quot;&gt;Tailwindcss&lt;/a&gt;
+            &lt;a class=&quot;o-navigation__link&quot; href=&quot;toggle&quot; tabindex=&quot;-1&quot;&gt;Toggle&lt;/a&gt;
             &lt;a class=&quot;o-navigation__link&quot; href=&quot;type&quot; tabindex=&quot;-1&quot;&gt;Type&lt;/a&gt;
           &lt;/nav&gt;
         &lt;/div&gt;

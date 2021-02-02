@@ -13,7 +13,7 @@
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
-    var VERSION = '2.6.0';
+    var VERSION = '2.6.1';
   </script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -44,8 +44,8 @@
 <body class="bg-base-black" onload="load()" style="visibility: hidden;">
   <a class="o-sr-skip px-4 py-2 color-mid-background hidden" href="#main-content">Skip to main content</a>
   <header class="o-header tablet:layout-sidebar w-full">
-    <div class="o-header__banner-main bg-blue">
-      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle" data-js="toggle">Menu</button>
+    <div class="o-header__banner-main color-primary-background">
+      <button aria-controls="js-navigation" aria-pressed="false" class="o-header__main-toggle font-bold" data-js="toggle">Menu</button>
       <h1 class="o-header__main-title">
         <span class="hidden"></span>
         <svg aria-hidden="true" class="o-header__logo-main icon-logo-nyco-secondary">
@@ -55,17 +55,17 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.6.0</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.1</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.0">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.1">
           <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#feather-github"></use>
-          </svg>2.6.0
+          </svg>2.6.1
         </a>
       </div>
     </div>
@@ -91,6 +91,7 @@
               <a class="o-navigation__link" href="links">Links</a>
               <a class="o-navigation__link" href="options">Options</a>
               <a class="o-navigation__link" href="select">Select</a>
+              <a class="o-navigation__link" href="spinner">Spinner</a>
               <a class="o-navigation__link" href="tables">Tables</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
               <a class="o-navigation__link" href="card">Card</a>
@@ -101,12 +102,14 @@
               <a class="o-navigation__link" href="feed">Feed</a>
               <a class="o-navigation__link" href="footer">Footer</a>
               <a class="o-navigation__link" href="header">Header</a>
+              <a class="o-navigation__link" href="modal">Modal</a>
               <a class="o-navigation__link" href="mailchimp">Mailchimp</a>
               <a class="o-navigation__link" href="navigation">Navigation</a>
               <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
               <a class="o-navigation__link" href="animate">Animate</a>
               <a class="o-navigation__link" href="colors">Colors</a>
               <a class="o-navigation__link" href="tailwindcss">Tailwindcss</a>
+              <a class="o-navigation__link" href="toggle">Toggle</a>
               <a class="o-navigation__link" href="type">Type</a>
             </nav>
           </div>
@@ -135,6 +138,7 @@
                 <a class="o-navigation__link" href="links" tabindex="-1">Links</a>
                 <a class="o-navigation__link" href="options" tabindex="-1">Options</a>
                 <a class="o-navigation__link" href="select" tabindex="-1">Select</a>
+                <a class="o-navigation__link" href="spinner" tabindex="-1">Spinner</a>
                 <a class="o-navigation__link" href="tables" tabindex="-1">Tables</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Components</span>
                 <a class="o-navigation__link" href="card" tabindex="-1">Card</a>
@@ -145,12 +149,14 @@
                 <a class="o-navigation__link" href="feed" tabindex="-1">Feed</a>
                 <a class="o-navigation__link" href="footer" tabindex="-1">Footer</a>
                 <a class="o-navigation__link" href="header" tabindex="-1">Header</a>
+                <a class="o-navigation__link" href="modal" tabindex="-1">Modal</a>
                 <a class="o-navigation__link" href="mailchimp" tabindex="-1">Mailchimp</a>
                 <a class="o-navigation__link" href="navigation" tabindex="-1">Navigation</a>
                 <span class="o-navigation__link-header text-blue-70t border-blue-30t">Utilities</span>
                 <a class="o-navigation__link" href="animate" tabindex="-1">Animate</a>
                 <a class="o-navigation__link" href="colors" tabindex="-1">Colors</a>
                 <a class="o-navigation__link" href="tailwindcss" tabindex="-1">Tailwindcss</a>
+                <a class="o-navigation__link" href="toggle" tabindex="-1">Toggle</a>
                 <a class="o-navigation__link" href="type" tabindex="-1">Type</a>
               </nav>
             </div>
@@ -182,7 +188,7 @@
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-bar&quot;&gt;
+              <pre tabindex="0">&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-bar&quot;&gt;
   &lt;nyco-chart-bar :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-bar&gt;
 &lt;/div&gt;</pre>
             </div>
@@ -211,7 +217,7 @@
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-horizontal-bar&quot;&gt;
+              <pre tabindex="0">&lt;div class=&quot;bg-base-white px-2&quot; data-js=&quot;chart-horizontal-bar&quot;&gt;
   &lt;nyco-chart-horizontal-bar :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-horizontal-bar&gt;
 &lt;/div&gt;</pre>
             </div>
@@ -238,7 +244,7 @@
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
             <div class="code-block">
-              <pre>&lt;div class=&quot;bg-base-white&quot; data-js=&quot;chart-line&quot;&gt;
+              <pre tabindex="0">&lt;div class=&quot;bg-base-white&quot; data-js=&quot;chart-line&quot;&gt;
   &lt;nyco-chart-line :chart-data=&quot;data&quot; :options=&quot;options&quot;&gt;&lt;/nyco-chart-line&gt;
 &lt;/div&gt;</pre>
             </div>
