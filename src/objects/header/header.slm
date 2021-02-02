@@ -3,8 +3,8 @@
 /
 
 header class='o-header tablet:layout-sidebar w-full'
-  div class='o-header__banner-main bg-blue'
-    button class='o-header__main-toggle' data-js='toggle' aria-pressed='false' aria-controls='js-navigation' Menu
+  div class='o-header__banner-main color-primary-background'
+    button class='o-header__main-toggle font-bold' data-js='toggle' aria-pressed='false' aria-controls='js-navigation' Menu
 
     h1 class='o-header__main-title'
       span class='hidden' = this.author;
