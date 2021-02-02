@@ -56,7 +56,7 @@
     "vue-template-compiler": "^2.6.9"
   },
   "dependencies": {
-    "@ibm/plex": "^4.0.2",
+    "@ibm/plex": "^5.1.3",
     "@nycopportunity/pttrn-scripts": "^1.0.4",
     "animate.scss": "0.0.6",
     "chart.js": "^2.9.3",
