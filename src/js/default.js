@@ -1,6 +1,7 @@
 'use strict';
 
 import Copy from '@nycopportunity/pttrn-scripts/src/copy/copy';
+import Dialog from '@nycopportunity/pttrn-scripts/src/dialog/dialog';
 import Forms from '@nycopportunity/pttrn-scripts/src/forms/forms';
 import Icons from '@nycopportunity/pttrn-scripts/src/icons/icons';
 import Toggle from '@nycopportunity/pttrn-scripts/src/toggle/toggle';
@@ -81,6 +82,15 @@ class Default {
     this.form.selectors.ERROR_MESSAGE_PARENT = '[data-js*="question-container"]';
 
     this.form.watch();
+  }
+
+  /**
+   * [dialog description]
+   *
+   * @return  {[type]}  [return description]
+   */
+  dialog() {
+    return new Dialog();
   }
 }
 

@@ -29,6 +29,6 @@
   = mixin('partial', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss');
   = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss-logical');
   = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss-installation');
-  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss/tailwindcss-ui');
+  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/tailwindcss/tailwindcss-ui');
 
   = mixin('pattern', 'utilities/tailwindcss/tailwindcss-description-lists');

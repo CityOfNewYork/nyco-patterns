@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "@ibm/plex": "^4.0.2",
-    "@nycopportunity/pttrn-scripts": "^1.0.2",
+    "@nycopportunity/pttrn-scripts": "^1.0.4",
     "animate.scss": "0.0.6",
     "chart.js": "^2.9.3",
     "feather-icons": "^4.28.0",

@@ -1,0 +1,49 @@
+/ Modal
+
+button class='btn' data-js='dialog' data-dialog-lock='true' data-dialog='open' aria-controls='aria-c-modal' aria-expanded='false'
+  | Show Modal
+
+div#aria-c-modal class='fixed z-10 inset-0 overflow-y-auto hidden' aria-hidden='true' role='dialog' aria-modal='true' aria-labelledby='aria-lb-modal-header' aria-describedby='aria-db-modal-body' style='background-color: rgba(0,0,0,0.25)'
+  div class='layout-content flex items-center min-h-screen px-2 small:px-4'
+
+    div class='bg-base-white mx-auto border-4 p-3 small:p-4 animated fadeInUp'
+      div class='flex justify-end'
+        button class='flex items-center' data-js='dialog' aria-controls='aria-c-modal' data-dialog='close' aria-expanded='false'
+          svg class='icon-ui' tabindex='-1'
+            use xlink:href='#feather-x'
+
+          | Dismiss
+
+      div class='flex mb-2'
+        div class='flex-shrink-0 pie-2' aria-hidden='true'
+          svg class='icon-ui icon-4 text-red' tabindex='-1'
+            use xlink:href='#feather-alert-circle'
+
+        div class='col-span-10 small:col-span-11'
+          h3#aria-lb-modal-header Confirm Purge
+
+          p#aria-db-modal-body Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.
+
+          ul class='p-0 list-none'
+            li class='flex items-center mb-1'
+              svg class='icon-ui mie-1' tabindex='-1'
+                use xlink:href='#feather-file'
+
+              b Loaded files
+
+            li class='flex items-center mb-1'
+              svg class='icon-ui mie-1' tabindex='-1'
+                use xlink:href='#feather-file'
+
+              b Match ready files
+
+            li class='flex items-center mb-1'
+              svg class='icon-ui mie-1' tabindex='-1'
+                use xlink:href='#feather-file'
+
+              b Reports
+
+      div class='small:flex justify-end'
+        button class='btn w-full small:w-auto mb-2 small:mb-0 mie-2' data-js='dialog' aria-controls='aria-c-modal' aria-expanded='false' tabindex='-1' Cancel
+
+        button class='btn w-full small:w-auto btn-secondary' tabindex='-1' Yes, purge all

@@ -1,0 +1,27 @@
+- pattern = 'Toggle';
+
+/ Layout
+= extend('/slm/templates/default');
+
+/ Variables
+= partial('/slm/variables/classes.slm');
+
+/ Mixins
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/pattern.slm');
+= partial('/slm/mixins/readme.slm');
+
+/ Content blocks
+= content('head');
+  = mixin('head', pattern);
+
+= content('header');
+  = mixin('header');
+
+= content('content');
+  div class='${classPageHeader}'
+    h1 class='${classPageH1}' = pattern
+
+  = mixin('pattern', 'utilities/toggle/toggle');
+  = mixin('readme', 'utilities/toggle/readme');
