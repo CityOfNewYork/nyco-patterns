@@ -17,6 +17,7 @@ $colorCombinations: map-get($tokens, 'colorCombinations');
   overflow: visible;
   cursor: pointer;
 
+  // Default display settings enables the centering of icons
   display: inline-flex;
   align-items: center;
 
@@ -25,6 +26,8 @@ $colorCombinations: map-get($tokens, 'colorCombinations');
   // Inherit font & color from ancestor
   color: inherit;
   font: inherit;
+  font-weight: bold;
+  text-decoration: underline;
 
   // Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+.
   line-height: normal;
