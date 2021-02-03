@@ -1,0 +1,1 @@
+{{ this.package.nice }} by default comes with two sans-serif font-family, IBM Plex Sans and Helvetica Neue Pro. `<p>` is set to IBM Plex Sans while `<h1>`, `<h2>`, `<h3>`, `<jumbo>` and `<blockquote>` are all set to display Helvetica Neue Pro. No additional configuration is needed to use the default fonts.
