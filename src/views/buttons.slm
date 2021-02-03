@@ -21,7 +21,9 @@
 = content('content');
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
+
   = mixin('pattern', 'elements/buttons/buttons', 1, 'Default Buttons');
+  = mixin('pattern', 'elements/buttons/buttons-text');
   = mixin('pattern', 'elements/buttons/buttons-primary');
   = mixin('pattern', 'elements/buttons/buttons-secondary');
   = mixin('pattern', 'elements/buttons/buttons-large');

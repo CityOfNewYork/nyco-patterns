@@ -1,0 +1,1 @@
+[Tailwindcss logical utilities](tailwindcss#heading-tailwindcss-logical) can be used to add spacing on either side of the icon; margin start: `mis-1`, margin end: `mie-1`.

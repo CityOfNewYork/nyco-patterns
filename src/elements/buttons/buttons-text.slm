@@ -1,0 +1,5 @@
+button
+  svg aria-hidden='true' class='icon-ui mie-1'
+    use xlink:href='#feather-trash'
+
+  | Text Button

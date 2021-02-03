@@ -17,6 +17,9 @@ $colorCombinations: map-get($tokens, 'colorCombinations');
   overflow: visible;
   cursor: pointer;
 
+  display: inline-flex;
+  align-items: center;
+
   background: transparent;
 
   // Inherit font & color from ancestor
@@ -51,7 +54,6 @@ $colorCombinations: map-get($tokens, 'colorCombinations');
   text-decoration: none;
   text-transform: initial;
 
-  display: inline-flex;
   appearance: none;
   cursor: pointer;
   background: transparent;
