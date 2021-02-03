@@ -2,7 +2,7 @@
   "name": "@nycopportunity/patterns",
   "nice": "NYCO Patterns",
   "org": "NYC Opportunity",
-  "version": "2.6.2",
+  "version": "2.6.3",
   "description": "Common agency patterns for The Mayor's Office for Economic Opportunity",
   "author": "NYC Opportunity<products@nycopportunity.nyc.gov>",
   "license": "GPL-3.0+",
