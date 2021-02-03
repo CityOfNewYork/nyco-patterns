@@ -70,6 +70,7 @@ $base-white: map-get($colors, 'base-white');
   $error: map-get($combination, 'error');
 
   $button-text: map-get($combination, 'button-text');
+  $button-disabled: map-get($combination, 'button-disabled');
   $primary: map-get($combination, 'primary');
   $secondary: map-get($combination, 'secondary');
 
@@ -94,6 +95,7 @@ $base-white: map-get($colors, 'base-white');
   --nyco-error: #{map-get($colors, $error)};
   --nyco-box-shadow-color: #{map-get($colors, $box-shadow)};
   --nyco-button-text: #{map-get($colors, $button-text)};
+  --nyco-button-disabled: #{map-get($colors, $button-disabled)};
   --nyco-primary: #{map-get($colors, $primary)};
   --nyco-secondary: #{map-get($colors, $secondary)};
 

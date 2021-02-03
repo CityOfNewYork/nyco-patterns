@@ -88,6 +88,7 @@ const colors = {
       'button-text': 'base-white',
       'primary': 'blue',
       'secondary': 'red',
+      'button-disabled': 'grey-70t',
       ...code
     },
     'mid-background': {
@@ -107,6 +108,7 @@ const colors = {
       'button-text': 'base-white',
       'primary': 'blue',
       'secondary': 'red',
+      'button-disabled': 'grey-70t',
       ...code
     },
     'primary-background': {
@@ -127,6 +129,7 @@ const colors = {
       'button-text': 'base-white',
       'primary': 'navy',
       'secondary': 'red',
+      'button-disabled': 'grey-70t',
       ...code
     },
     'dark-background': {
@@ -147,6 +150,7 @@ const colors = {
       'button-text': 'base-white',
       'primary': 'blue',
       'secondary': 'red',
+      'button-disabled': 'grey-70t',
       ...code
     }
   },

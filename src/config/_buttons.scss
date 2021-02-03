@@ -71,10 +71,14 @@ $colorCombinations: map-get($tokens, 'colorCombinations');
               color .1s ease-in,
               box-shadow .1s ease-in;
 
-  &:hover,
-  &:active {
+  &:hover:not([disabled]),
+  &:active:not([disabled]) {
     box-shadow: map-get(map-get($tokens, 'boxShadow'), 'up'),
                 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
   }
 }
 
@@ -83,9 +87,15 @@ $colorCombinations: map-get($tokens, 'colorCombinations');
   background-color: var(--nyco-#{$name});
   border-color: transparent;
 
-  &:hover,
-  &:active {
+  &:hover:not([disabled]),
+  &:active:not([disabled]) {
     color: var(--nyco-button-text);
     background: var(--nyco-#{$name});
+  }
+
+  &:disabled {
+    opacity: 1;
+    color: var(--nyco-button-text);
+    background: var(--nyco-button-disabled);
   }
 }
