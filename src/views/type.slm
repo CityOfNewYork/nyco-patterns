@@ -30,3 +30,5 @@
   = mixin('pattern', 'utilities/type/small');
   = mixin('pattern', 'utilities/type/blockquote');
   = mixin('pattern', 'utilities/type/jumbo');
+  = mixin('pattern', 'utilities/type/fonts');
+  = mixin('pattern', 'utilities/type/custom-fonts');
