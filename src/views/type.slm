@@ -10,6 +10,7 @@
 = partial('/slm/mixins/head.slm');
 = partial('/slm/mixins/nav.slm');
 = partial('/slm/mixins/pattern.slm');
+= partial('/slm/mixins/readme.slm');
 
 / Content blocks
 = content('head');
@@ -30,5 +31,5 @@
   = mixin('pattern', 'utilities/type/small');
   = mixin('pattern', 'utilities/type/blockquote');
   = mixin('pattern', 'utilities/type/jumbo');
-  = mixin('pattern', 'utilities/type/fonts');
-  = mixin('pattern', 'utilities/type/custom-fonts');
+  = mixin('pattern', 'utilities/type/font-family', 1, 'Font Family');
+  = mixin('readme', 'utilities/type/font-family-custom');
