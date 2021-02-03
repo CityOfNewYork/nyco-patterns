@@ -467,6 +467,8 @@ button {
   width: auto;
   overflow: visible;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
   background: transparent;
   color: inherit;
   font: inherit;
@@ -492,7 +494,6 @@ button::-moz-focus-inner {
   justify-content: center;
   text-decoration: none;
   text-transform: initial;
-  display: inline-flex;
   appearance: none;
   cursor: pointer;
   background: transparent;
@@ -1028,7 +1029,6 @@ input:checked + .option__base > .option__graphic {
     justify-content: center;
     text-decoration: none;
     text-transform: initial;
-    display: inline-flex;
     appearance: none;
     cursor: pointer;
     background: transparent;
@@ -1262,7 +1262,6 @@ input:checked + .option__base > .option__graphic {
     justify-content: center;
     text-decoration: none;
     text-transform: initial;
-    display: inline-flex;
     appearance: none;
     cursor: pointer;
     background: transparent;
@@ -1496,7 +1495,6 @@ input:checked + .option__base > .option__graphic {
     justify-content: center;
     text-decoration: none;
     text-transform: initial;
-    display: inline-flex;
     appearance: none;
     cursor: pointer;
     background: transparent;
@@ -1742,7 +1740,6 @@ input:checked + .option__base > .option__graphic {
     justify-content: center;
     text-decoration: none;
     text-transform: initial;
-    display: inline-flex;
     appearance: none;
     cursor: pointer;
     background: transparent;
