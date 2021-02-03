@@ -507,10 +507,15 @@ button::-moz-focus-inner {
   transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
 }
 
-.btn:hover, .btn:active,
-.buttons:hover,
-.buttons:active {
+.btn:hover:not([disabled]), .btn:active:not([disabled]),
+.buttons:hover:not([disabled]),
+.buttons:active:not([disabled]) {
   box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color), 0 0 0 3px rgba(255, 255, 255, 0);
+}
+
+.btn:disabled,
+.buttons:disabled {
+  opacity: 0.6;
 }
 
 /**
@@ -1042,10 +1047,15 @@ input:checked + .option__base > .option__graphic {
     transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
   }
 
-  .small\:btn:hover, .small\:btn:active,
-.small\:buttons:hover,
-.small\:buttons:active {
+  .small\:btn:hover:not([disabled]), .small\:btn:active:not([disabled]),
+.small\:buttons:hover:not([disabled]),
+.small\:buttons:active:not([disabled]) {
     box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color), 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  .small\:btn:disabled,
+.small\:buttons:disabled {
+    opacity: 0.6;
   }
 
   /**
@@ -1275,10 +1285,15 @@ input:checked + .option__base > .option__graphic {
     transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
   }
 
-  .mobile\:btn:hover, .mobile\:btn:active,
-.mobile\:buttons:hover,
-.mobile\:buttons:active {
+  .mobile\:btn:hover:not([disabled]), .mobile\:btn:active:not([disabled]),
+.mobile\:buttons:hover:not([disabled]),
+.mobile\:buttons:active:not([disabled]) {
     box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color), 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  .mobile\:btn:disabled,
+.mobile\:buttons:disabled {
+    opacity: 0.6;
   }
 
   /**
@@ -1508,10 +1523,15 @@ input:checked + .option__base > .option__graphic {
     transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
   }
 
-  .tablet\:btn:hover, .tablet\:btn:active,
-.tablet\:buttons:hover,
-.tablet\:buttons:active {
+  .tablet\:btn:hover:not([disabled]), .tablet\:btn:active:not([disabled]),
+.tablet\:buttons:hover:not([disabled]),
+.tablet\:buttons:active:not([disabled]) {
     box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color), 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  .tablet\:btn:disabled,
+.tablet\:buttons:disabled {
+    opacity: 0.6;
   }
 
   /**
@@ -1753,10 +1773,15 @@ input:checked + .option__base > .option__graphic {
     transition: background 0.1s ease-in, color 0.1s ease-in, box-shadow 0.1s ease-in;
   }
 
-  .desktop\:btn:hover, .desktop\:btn:active,
-.desktop\:buttons:hover,
-.desktop\:buttons:active {
+  .desktop\:btn:hover:not([disabled]), .desktop\:btn:active:not([disabled]),
+.desktop\:buttons:hover:not([disabled]),
+.desktop\:buttons:active:not([disabled]) {
     box-shadow: 8px 8px 0px 0px var(--nyco-box-shadow-color), 0 0 0 3px rgba(255, 255, 255, 0);
+  }
+
+  .desktop\:btn:disabled,
+.desktop\:buttons:disabled {
+    opacity: 0.6;
   }
 
   /**
