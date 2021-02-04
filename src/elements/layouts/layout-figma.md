@@ -1,0 +1,1 @@
+The Figma file above contains shapes that map to available layouts, columns, and spacing dimensions for use in UI designs and prototypes.
