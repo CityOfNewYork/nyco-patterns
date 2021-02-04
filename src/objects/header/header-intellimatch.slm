@@ -1,0 +1,11 @@
+header class='o-header-app layout-sidebar flex'
+  div class='color-dark-background text-base-white flex flex-col p-5'
+    h3 class='m-0'
+      | IntelliMatch
+      div class='flex items-center'
+        small class='extra-small mb-0 mie-1'
+          = "by"
+        svg class='o-header-nyco-secondary__icon icon'
+          use xlink:href='#icon-logo-nyco-secondary'
+  div class='color-primary-background'
+

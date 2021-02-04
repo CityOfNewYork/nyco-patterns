@@ -24,3 +24,4 @@
 
   = mixin('pattern', 'objects/header/header');
   = mixin('pattern', 'objects/header/header-app', 1, 'Application Header');
+  = mixin('pattern', 'objects/header/header-intellimatch', 2, 'IntelliMatch Header');
