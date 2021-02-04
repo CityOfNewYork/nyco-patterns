@@ -26,3 +26,5 @@
   = mixin('pattern', 'elements/layouts/layout-content');
   = mixin('pattern', 'elements/layouts/layout-sidebar');
   = mixin('pattern', 'elements/layouts/layout-column', 1, 'Columns');
+
+  = mixin('pattern', 'elements/layouts/layout-figma', 0, 'Figma Layouts, Columns, and Spacing');

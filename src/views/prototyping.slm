@@ -10,6 +10,7 @@
 = partial('/slm/mixins/head.slm');
 = partial('/slm/mixins/nav.slm');
 = partial('/slm/mixins/readme.slm');
+= partial('/slm/mixins/pattern.slm');
 
 / Content blocks
 = content('head');
@@ -23,3 +24,6 @@
     h1 class='${classPageH1}' = pattern;
 
   = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/prototyping');
+
+  = mixin('pattern', 'utilities/colors/color-figma', 0, 'Figma Color Styles');
+  = mixin('pattern', 'elements/layouts/layout-figma', 0, 'Figma Layouts, Columns, and Spacing');
