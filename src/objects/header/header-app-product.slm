@@ -1,0 +1,30 @@
+header class='o-header-app tablet:layout-sidebar tablet:flex'
+  div class='color-dark-background text-base-white flex flex-col items-start py-2 tablet:p-5'
+    h1 class='h3 m-0'
+      | NewProduct
+
+    p class='small flex items-end'
+      | by
+
+      span class='sr-only' NYC Opportunity
+
+      svg class='o-header-nyco-secondary__icon mis-1'
+        use xlink:href='#icon-logo-nyco-secondary'
+
+  div class='color-primary-background justify-between py-2'
+    h2 class='mb-0'
+      | My Project
+
+    div
+      button class='btn mx-1' title='Action'
+        svg class='icon-ui tablet:mie-1'
+          use xlink:href='#feather-trash-2'
+
+        span class='hidden tablet:inline' Action
+
+      button class='btn btn-secondary mx-1' title='New Action'
+        svg class='icon-ui tablet:mie-1'
+          use xlink:href='#feather-plus-square'
+
+        span class='hidden tablet:inline' New Action
+
