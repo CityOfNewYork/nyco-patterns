@@ -87,6 +87,11 @@
   bottom: -1px;
 }
 
+.o-header-nyco-secondary__icon {
+  width: 94px !important;
+  height: 13px !important;
+}
+
 @media (min-width: 768px) {
   .o-header {
     display: flex;
