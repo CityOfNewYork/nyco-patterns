@@ -29,7 +29,7 @@
         p <b>For creating websites and digital products for The Mayor's Office for Economic Opportunity</b>. The <b>NYCO Patterns</b> provide simple and flexible CSS and JavaScript based components and utilities for building UI's quickly and easily. Ideally suited for internal or external marketing websites, custom digital applications, stand-alone reports, documentation, and dashboards.
 
         p class='text-center py-2'
-          a class='btn btn-large btn-primary' href='#browse-the-patterns' Browse the Patterns
+          a class='btn btn-large btn-primary inline-block' href='#browse-the-patterns' Browse the Patterns
 
         p class='text-center'
           a href='${this.urls.release}' target='_blank' = 'v' + this.versions.package;
@@ -45,7 +45,7 @@
           div class='code-block col-span-2 m-0 mb-1'
             input value='npm install ${this.package.name}' class='font-code text-code p-3 bg-transparent border-none w-full' data-copy-target='installation'
 
-          button class='btn btn-large px-0 justify-center items-center w-full mb-1' data-js='copy' data-copy='installation'
+          button class='btn btn-large px-0 w-full mb-1' data-js='copy' data-copy='installation'
             svg class='icon-ui-copy icon-3' aria-hidden='true'
               use xlink:href='#feather-copy'
             | &nbsp;
@@ -54,7 +54,7 @@
         p Source; ES (JavaScript), Sass (stylesheet), and SVG source will be in the <b>src/</b> directory. Distribution; compiled JavaScript, CSS, and SVGs will be in the <b>dist/</b> directory. Further integration details can be found in the installation guide.
 
         p class='text-center'
-          a class='btn btn-large color-primary-button' href='installation' Read the installation guide
+          a class='btn btn-large btn-primary inline-block' href='installation' Read the installation guide
 
   section id='browse-the-patterns' class='color-mid-background p-6'
     div class='layout-wrap layout-content mx-auto py-6'
