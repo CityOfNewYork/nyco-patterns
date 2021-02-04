@@ -147,3 +147,14 @@ $iconSizes: map-get($tokens, 'iconSizes');
   position: relative;
   bottom: -1px;
 }
+
+.o-header-nyco-secondary__icon {
+  width: 94px !important;
+  height: 11px !important;
+  position: relative;
+  bottom: -1px;
+}
+
+.extra-small {
+  font-size: 14px;
+}
