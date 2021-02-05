@@ -4,9 +4,13 @@
 
 // Dependencies
 @import 'config/tokens';
+@import 'config/grid';
 
-$colors: map-get($tokens, 'colors');
-$colorCombinations: map-get($tokens, 'colorCombinations');
+$buttons: map-get($tokens, 'buttons');
+$buttons-border-width: map-get($buttons, 'border-width');
+$buttons-border-radius: map-get($buttons, 'border-radius');
+$buttons-inner-size: map-get($buttons, 'inner-size');
+$buttons-padding: (($grid * 2) - $buttons-border-width) ($grid * 2);
 
 // Declarations
 @mixin button-reset() {
@@ -51,7 +55,7 @@ $colorCombinations: map-get($tokens, 'colorCombinations');
   font-weight: bold;
   font-size: inherit;
   font-family: inherit;
-  line-height: 1;
+  line-height: $buttons-inner-size;
   text-align: center;
   justify-content: center;
   text-decoration: none;
@@ -60,12 +64,12 @@ $colorCombinations: map-get($tokens, 'colorCombinations');
   appearance: none;
   cursor: pointer;
   background: transparent;
-  padding: (($grid * 2) - $borderWidth) (($grid * 2.5) - $borderWidth);
+  padding: $buttons-padding;
 
   border-style: solid;
   border-color: currentColor;
-  border-width: $borderWidth;
-  border-radius: $borderRadius;
+  border-width: $buttons-border-width;
+  border-radius: $buttons-border-radius;
 
   transition: background .1s ease-in,
               color .1s ease-in,

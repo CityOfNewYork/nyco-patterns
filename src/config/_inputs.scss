@@ -5,13 +5,14 @@
 @import 'config/fonts';
 @import 'config/grid';
 
-$inputs-padding: $grid * 2;
-$inputs-label-border-width: map-get(map-get($tokens, 'inputs'), 'label-border-width');
-$inputs-border-radius: map-get(map-get($tokens, 'inputs'), 'border-radius');
+$inputs: map-get($tokens, 'inputs');
+$inputs-border-width: map-get($inputs, 'border-width');
+$inputs-border-radius: map-get($inputs, 'border-radius');
+$inputs-inner-size: map-get($inputs, 'inner-size');
+$inputs-padding: ($grid * 2) - $inputs-border-width;
 
 $inputs-btn-dimension: $grid * 3;
 $inputs-btn-dimension-large: $grid * 5;
-
 
 // Declarations
 @mixin inputs() {
@@ -19,6 +20,7 @@ $inputs-btn-dimension-large: $grid * 5;
   color: inherit;
   font-size: inherit;
   font-family: inherit;
+  line-height: $inputs-inner-size;
   border-style: solid;
   display: block;
   max-width: 100%;
@@ -28,7 +30,7 @@ $inputs-btn-dimension-large: $grid * 5;
   margin: 0;
 
   padding: $inputs-padding;
-  border-width: $inputs-label-border-width;
+  border-width: $inputs-border-width;
   border-radius: $inputs-border-radius;
 
   &::placeholder {

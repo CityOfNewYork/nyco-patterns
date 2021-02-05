@@ -4,64 +4,58 @@ div class='w-full grid desktop:grid-cols-2 gap-2'
 
     div class='w-full'
       article class='color-${key} py-4 p-2 border border-grey-50t border-b-0'
-        - if (value['headings'])
-          h1 class='m-0' Headings
+        h1 class='m-0' Headings
 
         div class='capitalize' ${key.replace(/-/g," ")} Text
-        - if (value['hyperlinks'])
-          a href='#' Hyperlinks
 
-        - if (value['input-background'])
+        a href='#' Hyperlinks
+
+        div class='mt-1 mb-2'
+          label class='label' Inputs
+
+          div class='input capitalize'
+            input placeholder='Placeholder'
+
+        div class='mt-1 mb-2'
+          label class='option' for='option-checkbox-${key}'
+            input id='option-checkbox-${key}' name="option['${key}']" type='checkbox' value='option-checkbox-${key}'
+
+            span class='option__base'
+              svg aria-hidden='true' class='option__graphic'
+                use xlink:href='#option-nyco-checkbox'
+
+              span class='option__label' Checkboxes
+
+        div class='mt-1 mb-2'
+          label class='option' for='option-radio-${key}'
+            input id='option-radio-${key}' name="option['radio']" type='radio' value='option-radio-${key}'
+
+            span class='option__base'
+              svg aria-hidden='true' class='option__graphic'
+                use xlink:href='#option-nyco-radio'
+
+              span class='option__label' Radio Buttons
+
+        div class='mt-1 mb-2'
+          / label class='label' Selects
+          / select class='select'
+            / option Select an option
+
+          div class='select'
+            select
+              option Select an option
+
+            svg aria-hidden='true' class='select__graphic'
+              use xlink:href='#select-nyco-chevrons'
+
+        div class='mt-1 mb-2'
+          label class='font-bold' Buttons
           div class='mt-1 mb-2'
-            label class='label' Inputs
-
-            div class='input capitalize'
-              input placeholder='Placeholder'
-
-        - if (value['checkbox-check'])
+            button class='btn' Default Buttons
           div class='mt-1 mb-2'
-            label class='option' for='option-checkbox-${key}'
-              input id='option-checkbox-${key}' name="option['${key}']" type='checkbox' value='option-checkbox-${key}'
-
-              span class='option__base'
-                svg aria-hidden='true' class='option__graphic'
-                  use xlink:href='#option-nyco-checkbox'
-
-                span class='option__label' Checkboxes
-
-        - if (value['input-background'])
+            button class='btn btn-primary' Primary Buttons
           div class='mt-1 mb-2'
-            label class='option' for='option-radio-${key}'
-              input id='option-radio-${key}' name="option['radio']" type='radio' value='option-radio-${key}'
-
-              span class='option__base'
-                svg aria-hidden='true' class='option__graphic'
-                  use xlink:href='#option-nyco-radio'
-
-                span class='option__label' Radio Buttons
-
-        - if (value['select-arrow'])
-          div class='mt-1 mb-2'
-            / label class='label' Selects
-            / select class='select'
-              / option Select an option
-
-            div class='select'
-              select
-                option Select an option
-
-              svg aria-hidden='true' class='select__graphic'
-                use xlink:href='#select-nyco-chevrons'
-
-        - if (value['button-text'])
-          div class='mt-1 mb-2'
-            label class='font-bold' Buttons
-            div class='mt-1 mb-2'
-              button class='btn' Default Buttons
-            div class='mt-1 mb-2'
-              button class='btn btn-primary' Primary Buttons
-            div class='mt-1 mb-2'
-              button class='btn btn-secondary' Secondary Buttons
+            button class='btn btn-secondary' Secondary Buttons
 
       div class='code-block rounded-t-none border-grey-50t border-t-0'
         input value='color-${key}' class='sr-only' data-copy-target='copy-${key}-color'

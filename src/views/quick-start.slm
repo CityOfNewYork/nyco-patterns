@@ -1,4 +1,4 @@
-- pattern = 'Installation';
+- pattern = 'Quick Start';
 
 / Layout
 = extend('/slm/templates/default');
@@ -22,7 +22,4 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
 
-  = mixin('readme', '/../node_modules/@nycopportunity/pttrn-docs/installation');
-  = mixin('readme', 'content/installing-fonts');
-  = mixin('readme', 'content/installing-icons');
-  = mixin('readme', 'content/installing-cdn-example');
+  = mixin('readme', 'content/quick-start');

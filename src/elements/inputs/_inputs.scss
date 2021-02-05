@@ -28,7 +28,8 @@ input, textarea {
   position: relative;
 
   input {
-    padding-left: $grid * 3
+    padding-left: $grid * 3;
+    text-align: end;
   }
 
   &::after {

@@ -1,6 +1,7 @@
 = mixin('nav');
   nav class='${classNav}'
     a tabindex=navTabindex class='${classNavLink}' href='index' Home
+    a tabindex=navTabindex class='${classNavLink}' href='quick-start' Quick Start
     a tabindex=navTabindex class='${classNavLink}' href='installation' Installation
     a tabindex=navTabindex class='${classNavLink}' href='about' About the Patterns
     a tabindex=navTabindex class='${classNavLink}' href='prototyping' Prototyping

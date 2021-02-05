@@ -22,7 +22,7 @@ $selects: map-get(tokens.$tokens, 'selects');
   padding-inline-end: (grid.$grid * 5) - get('border-width');
   border-width: get('border-width');
   border-style: get('border-style');
-  border-radius: get('radius');
+  border-radius: get('border-radius');
 
   &::-ms-expand {
     display: none;

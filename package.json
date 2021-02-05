@@ -19,16 +19,20 @@
     "source": "https://github.com/cityofnewyork/nyco-patterns",
     "archive": "https://github.com/cityofnewyork/nyco-patterns/archive",
     "release": "https://github.com/cityofnewyork/nyco-patterns/tree/v",
-    "styles": "/dist/scripts/nyco.css",
+    "styles": "/dist/styles/nyco.css",
     "scripts": "/dist/scripts/nyco.js",
     "svg": "/dist/svg/icons.svg",
     "feather": "/dist/svg/feather.svg",
     "fonts": "/dist/fonts",
     "tailwindcss": "/dist/utilities/tailwindcss/tailwindcss.css",
-    "tailwindsass": "/dist/utilities/tailwindcss/_tailwindcss.scss"
+    "tailwindsass": "/dist/utilities/tailwindcss/_tailwindcss.scss",
+    "favicon": "/dist/images/favicon/favicon.ico"
   },
   "instantiations": {
     "scripts": "NYCO"
+  },
+  "svgs": {
+    "primary": "icon-logo-primary"
   },
   "main": "npm run start",
   "scripts": {
@@ -43,7 +47,7 @@
   },
   "devDependencies": {
     "@nycopportunity/pttrn": "^1.0.3",
-    "@nycopportunity/pttrn-docs": "^1.0.5",
+    "@nycopportunity/pttrn-docs": "^1.0.6",
     "@nycopportunity/pttrn-plugin-feather": "^1.0.0",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",

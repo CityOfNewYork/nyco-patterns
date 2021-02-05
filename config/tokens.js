@@ -209,7 +209,8 @@ module.exports = {
   },
   colors: colors.colors,
   colorCombinations: colors.colorCombinations,
-  cdn: '"https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v' + package.version + '/dist"',
+  cdn: '"https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v' + package.version + '/dist"',
+  googlefonts: '"https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"',
   fontFamily: {
     'system': [
       '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto',
@@ -279,7 +280,9 @@ module.exports = {
     '3': '24px',
     '4': '32px',
     '5': '40px',
-    '6': '48px'
+    '6': '48px',
+    '7': '56px',
+    '8': '64px'
   },
   icons: {
     'icon-logo-nyc': '350px 117px',
@@ -305,17 +308,19 @@ module.exports = {
     'large': '136px 136px',
     'xlarge': '256px 256px'
   },
-  inputs: {
+  'inputs': {
+    'inner-size': '24px',
     'border-radius': '2px',
+    'border-width': '1px'
+  },
+  'buttons': {
+    'inner-size': '24px',
     'border-width': '2px',
-    'label-border-width': '1px',
-
-    'button-border-width': '2px',
-    'button-border-radius': '2px'
+    'border-radius': '2px'
   },
   'options': {
     'inner-size': '24px',
-    'radius': '2px',
+    'border-radius': '2px',
     'border-style': 'solid',
     'border-width': '1px',
     'border-transparent': false,
@@ -324,7 +329,7 @@ module.exports = {
   },
   'selects': {
     'inner-size': '24px',
-    'radius': '2px',
+    'border-radius': '2px',
     'border-style': 'solid',
     'border-width': '1px',
     'stroke-width': '2px',

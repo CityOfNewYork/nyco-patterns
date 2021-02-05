@@ -39,7 +39,7 @@
       div class='mx-auto'
         h2 class='text-center mt-0' Installation
 
-        p Installing via NPM will store ${this.package.nice} source and distribution files in your project's <b>node_modules</b> directory under <b>${this.package.name}</b>.
+        p Installing via <a href="https://www.npmjs.com/">NPM</a> will store ${this.package.nice} source and distribution files in your project's <b>node_modules</b> directory under <b>${this.package.name}</b>.
 
         div class='tablet:grid tablet:grid-cols-3 gap-1 mb-2'
           div class='code-block col-span-2 m-0 mb-1'
@@ -55,6 +55,9 @@
 
         p class='text-center'
           a class='btn btn-large btn-primary inline-block' href='installation' Read the installation guide
+
+        p class='text-center'
+          | Alternatively, view the <a href="quick-start">quick start documentation</a> to use the CDN method of installation.
 
   section id='browse-the-patterns' class='color-mid-background p-6'
     div class='layout-wrap layout-content mx-auto py-6'

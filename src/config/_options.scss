@@ -22,7 +22,7 @@ $options: map-get(tokens.$tokens, 'options');
     border-color: transparent;
   }
 
-  border-radius: get('radius');
+  border-radius: get('border-radius');
 
   cursor: pointer;
 }
