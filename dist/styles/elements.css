@@ -491,7 +491,7 @@ button::-moz-focus-inner {
   font-weight: bold;
   font-size: inherit;
   font-family: inherit;
-  line-height: 1;
+  line-height: 24px;
   text-align: center;
   justify-content: center;
   text-decoration: none;
@@ -499,7 +499,7 @@ button::-moz-focus-inner {
   appearance: none;
   cursor: pointer;
   background: transparent;
-  padding: 14px 18px;
+  padding: 14px 16px;
   border-style: solid;
   border-color: currentColor;
   border-width: 2px;
@@ -521,11 +521,6 @@ button::-moz-focus-inner {
 /**
  * Application Button
  */
-
-.btn-app,
-.button-app {
-  border-radius: 2px;
-}
 
 .btn-app:hover, .btn-app:active,
 .button-app:hover,
@@ -608,6 +603,7 @@ input, textarea {
   color: inherit;
   font-size: inherit;
   font-family: inherit;
+  line-height: 24px;
   border-style: solid;
   display: block;
   max-width: 100%;
@@ -615,7 +611,7 @@ input, textarea {
   width: 100%;
   cursor: pointer;
   margin: 0;
-  padding: 16px;
+  padding: 15px;
   border-width: 1px;
   border-radius: 2px;
   border-color: var(--nyco-border);
@@ -640,6 +636,7 @@ input::placeholder, textarea::placeholder {
 
 .input-currency-usd input {
   padding-left: 24px;
+  text-align: end;
 }
 
 .input-currency-usd::after {
@@ -702,6 +699,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   color: inherit;
   font-size: inherit;
   font-family: inherit;
+  line-height: 24px;
   border-style: solid;
   display: block;
   max-width: 100%;
@@ -709,7 +707,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   width: 100%;
   cursor: pointer;
   margin: 0;
-  padding: 16px;
+  padding: 15px;
   border-width: 1px;
   border-radius: 2px;
   transition-property: opacity, background, color, border, box-shadow, outline, transform, stroke, stroke-dashoffset, fill;
@@ -749,7 +747,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   width: 24px;
   height: 24px;
   position: absolute;
-  right: 16px;
+  right: 15px;
   top: 50%;
   margin-top: -12px;
 }
@@ -763,7 +761,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   width: 40px;
   height: 40px;
   position: absolute;
-  right: 16px;
+  right: 15px;
   top: 50%;
   margin-top: -20px;
 }
@@ -1031,7 +1029,7 @@ input:checked + .option__base > .option__graphic {
     font-weight: bold;
     font-size: inherit;
     font-family: inherit;
-    line-height: 1;
+    line-height: 24px;
     text-align: center;
     justify-content: center;
     text-decoration: none;
@@ -1039,7 +1037,7 @@ input:checked + .option__base > .option__graphic {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 14px 18px;
+    padding: 14px 16px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1061,11 +1059,6 @@ input:checked + .option__base > .option__graphic {
   /**
    * Application Button
    */
-
-  .small\:btn-app,
-.small\:button-app {
-    border-radius: 2px;
-  }
 
   .small\:btn-app:hover, .small\:btn-app:active,
 .small\:button-app:hover,
@@ -1269,7 +1262,7 @@ input:checked + .option__base > .option__graphic {
     font-weight: bold;
     font-size: inherit;
     font-family: inherit;
-    line-height: 1;
+    line-height: 24px;
     text-align: center;
     justify-content: center;
     text-decoration: none;
@@ -1277,7 +1270,7 @@ input:checked + .option__base > .option__graphic {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 14px 18px;
+    padding: 14px 16px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1299,11 +1292,6 @@ input:checked + .option__base > .option__graphic {
   /**
    * Application Button
    */
-
-  .mobile\:btn-app,
-.mobile\:button-app {
-    border-radius: 2px;
-  }
 
   .mobile\:btn-app:hover, .mobile\:btn-app:active,
 .mobile\:button-app:hover,
@@ -1507,7 +1495,7 @@ input:checked + .option__base > .option__graphic {
     font-weight: bold;
     font-size: inherit;
     font-family: inherit;
-    line-height: 1;
+    line-height: 24px;
     text-align: center;
     justify-content: center;
     text-decoration: none;
@@ -1515,7 +1503,7 @@ input:checked + .option__base > .option__graphic {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 14px 18px;
+    padding: 14px 16px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1537,11 +1525,6 @@ input:checked + .option__base > .option__graphic {
   /**
    * Application Button
    */
-
-  .tablet\:btn-app,
-.tablet\:button-app {
-    border-radius: 2px;
-  }
 
   .tablet\:btn-app:hover, .tablet\:btn-app:active,
 .tablet\:button-app:hover,
@@ -1757,7 +1740,7 @@ input:checked + .option__base > .option__graphic {
     font-weight: bold;
     font-size: inherit;
     font-family: inherit;
-    line-height: 1;
+    line-height: 24px;
     text-align: center;
     justify-content: center;
     text-decoration: none;
@@ -1765,7 +1748,7 @@ input:checked + .option__base > .option__graphic {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 14px 18px;
+    padding: 14px 16px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1787,11 +1770,6 @@ input:checked + .option__base > .option__graphic {
   /**
    * Application Button
    */
-
-  .desktop\:btn-app,
-.desktop\:button-app {
-    border-radius: 2px;
-  }
 
   .desktop\:btn-app:hover, .desktop\:btn-app:active,
 .desktop\:button-app:hover,
