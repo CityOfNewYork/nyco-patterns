@@ -10,6 +10,7 @@
 = partial('/slm/mixins/head.slm');
 = partial('/slm/mixins/nav.slm');
 = partial('/slm/mixins/readme.slm');
+= partial('/slm/mixins/partial.slm');
 
 / Content blocks
 = content('head');
@@ -22,4 +23,4 @@
   div class='${classPageHeader}'
     h1 class='${classPageH1}' = pattern;
 
-  = mixin('readme', 'content/quick-start');
+  = mixin('partial', 'content/quick-start');

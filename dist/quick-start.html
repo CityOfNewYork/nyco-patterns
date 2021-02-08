@@ -171,79 +171,70 @@
       <section class="mt-6" id="">
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <h2 id="heading-static-page-using-cdn-installation">Static page using CDN installation</h2>
-            <p>The following is a static page sample that integrates NYCO Patterns using the CDN method. This is the quickest way to get started prototyping but it is preferred to use the <a href="installation">NPM method of installation</a> for most long-term projects.</p>
-            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+            <p>The following is a static page sample that integrates NYCO Patterns using the <em>CDN method</em>. This is the quickest way to get started developing or prototyping. However, the <em>NPM method</em> of installation is preferable for most long-term projects. View the <a href="installation">installation documentation</a> for more details.</p>
+            <h2>Markup</h2>
+            <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Hello NYCO Patterns&lt;/title&gt;
 
-    &lt;link rel=&#39;shortcut icon&#39; href=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.7/dist/images/favicon/favicon.ico&quot;&gt;
+&lt;head&gt;
+  &lt;title&gt;Hello NYCO Patterns&lt;/title&gt;
+  &lt;link href=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.7/dist/images/favicon/favicon.ico&quot; rel=&quot;shortcut icon&quot; /&gt;
+  &lt;link href=&quot;https://fonts.gstatic.com&quot; rel=&quot;preconnect&quot; /&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+  &lt;link href=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.7/dist/styles/nyco.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;/head&gt;
 
-    &lt;link href=&quot;https://fonts.gstatic.com&quot; rel=&quot;preconnect&quot;&gt;
-    &lt;link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel=&quot;stylesheet&quot;&gt;
-    &lt;link href=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.7/dist/styles/nyco.css&quot; rel=&quot;stylesheet&quot;&gt;
-  &lt;/head&gt;
-
-  &lt;body class=&quot;color-light-background&quot;&gt;
-    &lt;header class=&quot;layout-content px-3&quot;&gt;
-      &lt;div class=&quot;mx-auto&quot;&gt;
-        &lt;svg class=&quot;icon-logo-primary&quot;&gt;
-          &lt;use xlink:href=&quot;#icon-logo-primary&quot;&gt;&lt;/use&gt;
-        &lt;/svg&gt;
-
-        &lt;h1&gt;Hello NYCO Patterns!&lt;/h1&gt;
-      &lt;/div&gt;
-    &lt;/header&gt;
-
-    &lt;main class=&quot;layout-content p-3&quot;&gt;
-      &lt;div class=&quot;mx-auto&quot;&gt;
-        &lt;p&gt;This demo uses the CDN method of installation including the CSS, Google Fonts, JavaScript, and SVGs. Sample pattern HTML can be copied and pasted into this page and they should work without any extra steps!&lt;/p&gt;
-
-        &lt;p&gt;
-          &lt;a class=&quot;btn btn-primary inline-block&quot; href=&quot;https://nycopatterns.cityofnewyork.us&quot;&gt;View Patterns&lt;/a&gt;
-        &lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/main&gt;
-
-    &lt;footer&gt;
+&lt;body class=&quot;color-light-background&quot;&gt;
+  &lt;header class=&quot;layout-content px-3&quot;&gt;
+    &lt;div class=&quot;mx-auto&quot;&gt;
+      &lt;svg class=&quot;icon-logo-primary&quot;&gt;
+        &lt;use xlink:href=&quot;#icon-logo-primary&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+      &lt;h1&gt;Hello NYCO Patterns!&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;main class=&quot;layout-content p-3&quot;&gt;
+    &lt;div class=&quot;mx-auto&quot;&gt;
+      &lt;p&gt;This demo uses the CDN method of installation including the CSS, Google Fonts, JavaScript, and SVGs. Sample pattern HTML can be copied and pasted into this page and they should work without any extra steps!&lt;/p&gt;
       &lt;p&gt;
-        &lt;small&gt;© City of New York, 2021 All Rights Reserved.&lt;/small&gt;&lt;br&gt;
-        &lt;small&gt;NYC is a trademark and service mark of the City of New York.&lt;/small&gt;
+        &lt;a class='btn btn-primary inline-block' href='https://nycopatterns.cityofnewyork.us'&gt;View Patterns&lt;/a&gt;
       &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+  &lt;footer class=&quot;layout-content px-3&quot;&gt;
+    &lt;div class=&quot;mx-auto&quot;&gt;
+      &lt;p&gt;
+        &lt;small&gt;© City of New York, 2021 All Rights Reserved.&lt;/small&gt;
+        &lt;br&gt;
+        &lt;small&gt;NYC is a trademark and service mark of the City of New York.&lt;/small&gt;
+      &lt;p&gt;
+        &lt;small class=&quot;flex items-center&quot;&gt;
+          &lt;svg class=&quot;icon-ui mie-1&quot;&gt;
+            &lt;use xlink:href=&quot;#feather-type&quot;&gt;&lt;/use&gt;
+          &lt;/svg&gt;Font-families used include system Helvetica and&amp;nbsp;&lt;a href='https://www.ibm.com/plex/'&gt;IBM Plex&lt;/a&gt;.
+        &lt;/small&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;small class=&quot;flex items-center&quot;&gt;
+          &lt;svg class=&quot;icon-ui mie-1&quot;&gt;
+            &lt;use xlink:href=&quot;#feather-feather&quot;&gt;&lt;/use&gt;
+          &lt;/svg&gt;UI Icons are sourced from the&amp;nbsp;&lt;a href='https://feathericons.com/'&gt;Feather Icon set&lt;/a&gt;.
+        &lt;/small&gt;
+      &lt;/p&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.7/dist/scripts/nyco.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    var nyco = new NYCO();
+    nyco.icons('https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.7/dist/svg/icons.svg');
+    nyco.icons('https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.7/dist/svg/feather.svg');
+  &lt;/script&gt;
+&lt;/body&gt;
 
-        &lt;p&gt;
-          &lt;small class=&quot;flex items-center&quot;&gt;
-            &lt;svg class=&quot;icon-ui mie-1&quot;&gt;
-              &lt;use xlink:href=&quot;#feather-type&quot;&gt;&lt;/use&gt;
-            &lt;/svg&gt;
-
-            Font-families used include system Helvetica and &lt;a href=&quot;https://www.ibm.com/plex/&quot;&gt;IBM Plex&lt;/a&gt;.
-          &lt;/small&gt;
-        &lt;/p&gt;
-
-        &lt;p&gt;
-          &lt;small class=&quot;flex items-center&quot;&gt;
-            &lt;svg class=&quot;icon-ui mie-1&quot;&gt;
-              &lt;use xlink:href=&quot;#feather-feather&quot;&gt;&lt;/use&gt;
-            &lt;/svg&gt;
-
-            UI Icons are sourced from the &lt;a href=&quot;https://feathericons.com/&quot;&gt;Feather Icons set&lt;/a&gt;.
-          &lt;/small&gt;
-        &lt;/p&gt;
-    &lt;/footer&gt;
-
-    &lt;script src=&quot;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.7/dist/scripts/nyco.js&quot;&gt;&lt;/script&gt;
-
-    &lt;script&gt;
-      var nyco = new NYCO();
-
-      nyco.icons(&#39;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.7/dist/svg/icons.svg&#39;);
-      nyco.icons(&#39;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.7/dist/svg/feather.svg&#39;);
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-            <p>View the <a href="installation">installation documentation</a> for more details.</p>
+&lt;/html&gt;</pre>
+            <h2>Preview</h2>
+            <iframe class="border" height="778" src="quick-start-demo.html" width="100%"></iframe>
           </div>
         </div>
       </section>
