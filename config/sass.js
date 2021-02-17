@@ -13,8 +13,8 @@ const sass = {
   precision: 2,
   includePaths: [
     './src/',
-    './node_modules/@nycopportunity/',
-    './node_modules/animate.scss/'
+    './node_modules',
+    './node_modules/@nycopportunity'
   ]
 };
 
