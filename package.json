@@ -39,7 +39,7 @@
     "start": "npm run development && cross-env NODE_ENV=development cross-env PORT=7000 concurrently \"pttrn default -w -np\" \"pttrn serve -w\" -p \"none\"",
     "production": "cross-env NODE_ENV=production cross-env PORT=7000 concurrently \"pttrn default -w -np\" \"pttrn serve -w\" -p \"none\"",
     "development": "cross-env NODE_ENV=development pttrn -np -nl",
-    "default": "cross-env NODE_ENV=production pttrn",
+    "default": "cross-env NODE_ENV=production pttrn -np",
     "version": "npm run default && git add .",
     "prepublishOnly": "git push && git push --tags",
     "publish": "npm run gh-pages",
