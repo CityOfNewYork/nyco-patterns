@@ -11,7 +11,7 @@
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
-    var VERSION = '2.6.8';
+    var VERSION = '2.6.9';
   </script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -53,17 +53,17 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.6.8</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.9</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.8">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.9">
           <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#feather-github"></use>
-          </svg>2.6.8
+          </svg>2.6.9
         </a>
       </div>
     </div>
@@ -439,18 +439,21 @@
             </ul>
             <p>Body text such as <code>&lt;p&gt;</code> tags are set to IBM Plex Sans while <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;jumbo&gt;</code> and <code>&lt;blockquote&gt;</code> are all set to Helvetica.</p>
             <h3 id="heading-installing-fonts-self-hosting">Installing Fonts (Self-hosting)</h3>
-            <p>To install fonts in a project, copy font files in the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.8/dist/fonts">/dist/fonts</a> directory to the following path relative to the stylesheet; <code>../fonts/...</code>.</p>
+            <p>To install fonts in a project, copy font files in the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.9/dist/fonts">/dist/fonts</a> directory to the following path relative to the stylesheet; <code>../fonts/...</code>.</p>
             <pre><code>styles/nyco.css
-fonts/IBM-Plex-Sans/...</code></pre>
+fonts/IBM-Plex-Sans/...
+</code></pre>
             <p>If compiling styles from the source, the path to font family files can be changed using the <a href="installation#heading-asset-paths-and-cdn">asset paths variable</a> in your main Sass stylesheet.</p>
             <h3 id="heading-google-fonts">Google Fonts</h3>
             <p>IBM Plex is also available via <a href="https://fonts.google.com/specimen/IBM+Plex+Sans?query=ibm+ple&amp;preview.text_type=custom&amp;sidebar.open=true&amp;selection.family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700">Google Fonts</a> and can be imported with the following HTML <code>&lt;link&gt;</code> tag;</p>
             <pre><code class="language-html">&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot;&gt;
-&lt;link href=&quot;https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre>
             <p>Or the following CSS <code>@import</code> rule;</p>
             <pre><code class="language-html">&lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap&#39;);
-&lt;/style&gt;</code></pre>
+&lt;/style&gt;
+</code></pre>
             <p>Be sure to check Google Fonts for the latest import methods.</p>
           </div>
         </div>
@@ -470,7 +473,8 @@ html, body {
 h1, .h1, h2, .h2, h3, .h3,
 blockquote, .blockquote, .jumbo {
   font-family: &#39;Primary Custom Font&#39;
-}</code></pre>
+}
+</code></pre>
           </div>
         </div>
       </section>

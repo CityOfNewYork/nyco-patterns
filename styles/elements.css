@@ -499,7 +499,7 @@ button::-moz-focus-inner {
   appearance: none;
   cursor: pointer;
   background: transparent;
-  padding: 14px 16px;
+  padding: 14px 22px;
   border-style: solid;
   border-color: currentColor;
   border-width: 2px;
@@ -528,13 +528,16 @@ button::-moz-focus-inner {
   box-shadow: none !important;
 }
 
-/**
- * Large Button
- */
+.btn-small,
+.button-small {
+  font-size: 0.833em;
+  padding: 6px 12px;
+}
 
 .btn-large,
 .button-large {
-  padding: 20px 32px;
+  font-size: 1.2em;
+  padding: 18px 32px;
 }
 
 /**
@@ -1037,7 +1040,7 @@ input:checked + .option__base > .option__graphic {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 14px 16px;
+    padding: 14px 22px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1066,13 +1069,16 @@ input:checked + .option__base > .option__graphic {
     box-shadow: none !important;
   }
 
-  /**
-   * Large Button
-   */
+  .small\:btn-small,
+.small\:button-small {
+    font-size: 0.833em;
+    padding: 6px 12px;
+  }
 
   .small\:btn-large,
 .small\:button-large {
-    padding: 20px 32px;
+    font-size: 1.2em;
+    padding: 18px 32px;
   }
 }
 
@@ -1270,7 +1276,7 @@ input:checked + .option__base > .option__graphic {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 14px 16px;
+    padding: 14px 22px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1299,13 +1305,16 @@ input:checked + .option__base > .option__graphic {
     box-shadow: none !important;
   }
 
-  /**
-   * Large Button
-   */
+  .mobile\:btn-small,
+.mobile\:button-small {
+    font-size: 0.833em;
+    padding: 6px 12px;
+  }
 
   .mobile\:btn-large,
 .mobile\:button-large {
-    padding: 20px 32px;
+    font-size: 1.2em;
+    padding: 18px 32px;
   }
 }
 
@@ -1503,7 +1512,7 @@ input:checked + .option__base > .option__graphic {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 14px 16px;
+    padding: 14px 22px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1532,13 +1541,16 @@ input:checked + .option__base > .option__graphic {
     box-shadow: none !important;
   }
 
-  /**
-   * Large Button
-   */
+  .tablet\:btn-small,
+.tablet\:button-small {
+    font-size: 0.833em;
+    padding: 6px 12px;
+  }
 
   .tablet\:btn-large,
 .tablet\:button-large {
-    padding: 20px 32px;
+    font-size: 1.2em;
+    padding: 18px 32px;
   }
 }
 
@@ -1748,7 +1760,7 @@ input:checked + .option__base > .option__graphic {
     appearance: none;
     cursor: pointer;
     background: transparent;
-    padding: 14px 16px;
+    padding: 14px 22px;
     border-style: solid;
     border-color: currentColor;
     border-width: 2px;
@@ -1777,12 +1789,15 @@ input:checked + .option__base > .option__graphic {
     box-shadow: none !important;
   }
 
-  /**
-   * Large Button
-   */
+  .desktop\:btn-small,
+.desktop\:button-small {
+    font-size: 0.833em;
+    padding: 6px 12px;
+  }
 
   .desktop\:btn-large,
 .desktop\:button-large {
-    padding: 20px 32px;
+    font-size: 1.2em;
+    padding: 18px 32px;
   }
 }
