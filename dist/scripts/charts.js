@@ -531,10 +531,10 @@ var Charts = (function () {
   const isIE = UA && /msie|trident/.test(UA);
   const isIE9 = UA && UA.indexOf('msie 9.0') > 0;
   const isEdge = UA && UA.indexOf('edge/') > 0;
-  const isAndroid = (UA && UA.indexOf('android') > 0) || (weexPlatform === 'android');
+  (UA && UA.indexOf('android') > 0) || (weexPlatform === 'android');
   const isIOS = (UA && /iphone|ipad|ipod|ios/.test(UA)) || (weexPlatform === 'ios');
-  const isChrome = UA && /chrome\/\d+/.test(UA) && !isEdge;
-  const isPhantomJS = UA && /phantomjs/.test(UA);
+  UA && /chrome\/\d+/.test(UA) && !isEdge;
+  UA && /phantomjs/.test(UA);
   const isFF = UA && UA.match(/firefox\/(\d+)/);
 
   // Firefox has a "watch" function on Object.prototype...
@@ -12123,7 +12123,7 @@ var Charts = (function () {
 
   var moment = createCommonjsModule(function (module, exports) {
   (function (global, factory) {
-       module.exports = factory() ;
+      module.exports = factory() ;
   }(commonjsGlobal, (function () {
       var hookCallback;
 
@@ -16729,7 +16729,7 @@ var Charts = (function () {
    * Released under the MIT License
    */
   (function (global, factory) {
-   module.exports = factory(function() { try { return moment; } catch(e) { } }()) ;
+  module.exports = factory(function() { try { return moment; } catch(e) { } }()) ;
   }(commonjsGlobal, (function (moment) {
   moment = moment && moment.hasOwnProperty('default') ? moment['default'] : moment;
 
@@ -17762,21 +17762,21 @@ var Charts = (function () {
   	return [val / 255 * 100];
   };
   });
-  var conversions_1 = conversions.rgb;
-  var conversions_2 = conversions.hsl;
-  var conversions_3 = conversions.hsv;
-  var conversions_4 = conversions.hwb;
-  var conversions_5 = conversions.cmyk;
-  var conversions_6 = conversions.xyz;
-  var conversions_7 = conversions.lab;
-  var conversions_8 = conversions.lch;
-  var conversions_9 = conversions.hex;
-  var conversions_10 = conversions.keyword;
-  var conversions_11 = conversions.ansi16;
-  var conversions_12 = conversions.ansi256;
-  var conversions_13 = conversions.hcg;
-  var conversions_14 = conversions.apple;
-  var conversions_15 = conversions.gray;
+  conversions.rgb;
+  conversions.hsl;
+  conversions.hsv;
+  conversions.hwb;
+  conversions.cmyk;
+  conversions.xyz;
+  conversions.lab;
+  conversions.lch;
+  conversions.hex;
+  conversions.keyword;
+  conversions.ansi16;
+  conversions.ansi256;
+  conversions.hcg;
+  conversions.apple;
+  conversions.gray;
 
   /*
   	this function routes a model to all other models.

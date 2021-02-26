@@ -29,4 +29,5 @@
   = mixin('pattern', 'elements/buttons/buttons-primary-disabled');
   = mixin('pattern', 'elements/buttons/buttons-secondary');
   = mixin('pattern', 'elements/buttons/buttons-large');
+  = mixin('pattern', 'elements/buttons/buttons-small');
   = mixin('pattern', 'elements/buttons/buttons-app', 1, 'Application Button');

@@ -6,11 +6,14 @@
 @import 'config/tokens';
 @import 'config/grid';
 
+$font-size: map-get($tokens, 'fontSize');
 $buttons: map-get($tokens, 'buttons');
 $buttons-border-width: map-get($buttons, 'border-width');
 $buttons-border-radius: map-get($buttons, 'border-radius');
 $buttons-inner-size: map-get($buttons, 'inner-size');
-$buttons-padding: (($grid * 2) - $buttons-border-width) ($grid * 2);
+$buttons-padding: (($grid * 2) - $buttons-border-width) ($grid * 2.75);
+$buttons-padding-small: ($grid - $buttons-border-width) ($grid * 1.5);
+$buttons-padding-large: ((($grid * 3) - ($grid / 2))  - $buttons-border-width) ($grid * 4);
 
 // Declarations
 @mixin button-reset() {
@@ -102,4 +105,14 @@ $buttons-padding: (($grid * 2) - $buttons-border-width) ($grid * 2);
     color: var(--nyco-button-text);
     background: var(--nyco-button-disabled);
   }
+}
+
+@mixin button-small() {
+  font-size: map-get($font-size, 'small');
+  padding: $buttons-padding-small;
+}
+
+@mixin button-large() {
+  font-size: map-get($font-size, 'large');
+  padding: $buttons-padding-large;
 }

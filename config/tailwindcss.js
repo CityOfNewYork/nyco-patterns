@@ -32,7 +32,7 @@ module.exports = {
       'desktop': `${tokens.screens['desktop']}px`,
       'tablet': `${tokens.screens['tablet']}px`,
       'mobile': `${tokens.screens['mobile']}px`,
-      'small': `${tokens.screens['desktop']}px`
+      'small': `${tokens.screens['small']}px`
     },
     spacing: tokens.spacing,
     width: tokens.width,

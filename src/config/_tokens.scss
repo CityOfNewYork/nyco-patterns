@@ -17,6 +17,7 @@ $tokens:(
     0: 0,
     1: 1px,
     2: 2px,
+    3: 3px,
     4: 4px,
     8: 8px,
     DEFAULT: 2px
@@ -162,7 +163,7 @@ $tokens:(
       code-border: navy-70t
     )
   ),
-  cdn: "https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.8/dist",
+  cdn: "https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.9/dist",
   googlefonts: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap",
   fontFamily: (
     system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
@@ -201,6 +202,8 @@ $tokens:(
     h6: 1em,
     html: 16px,
     code: 1em,
+    default: 1em,
+    large: 1.2em,
     small: 0.833em,
     blockquote: 2.074em
   ),

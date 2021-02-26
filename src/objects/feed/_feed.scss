@@ -3,7 +3,7 @@
  */
 
 // Dependencies
-@import '@nycopportunity/pttrn-scripts/src/spinner/spinner';
+@import '@nycopportunity/pttrn-scripts/src/spinner/_spinner.scss';
 @import 'config/tokens';
 
 $oFeed_breakpoint: #{map-get(map-get($tokens, 'screens'), 'tablet')}px;

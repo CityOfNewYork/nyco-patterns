@@ -8,7 +8,6 @@
 @import 'config/screens';
 
 $grid: map-get($tokens, 'grid');
-$borderWidth: map-get(map-get($tokens, 'inputs'), 'button-border-width');
 $borderRadius: map-get(map-get($tokens, 'inputs'), 'button-border-radius');
 
 button {
@@ -35,12 +34,13 @@ button {
     }
   }
 
-  /**
-   * Large Button
-   */
+  .#{$variant}btn-small,
+  .#{$variant}button-small {
+    @include button-small();
+  }
 
   .#{$variant}btn-large,
   .#{$variant}button-large {
-    padding: (($grid * 3) - ($grid / 2)) ($grid * 4);
+    @include button-large();
   }
 }

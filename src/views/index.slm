@@ -46,10 +46,10 @@
             input value='npm install ${this.package.name}' class='font-code text-code p-3 bg-transparent border-none w-full' data-copy-target='installation'
 
           button class='btn btn-large px-0 w-full mb-1' data-js='copy' data-copy='installation'
-            svg class='icon-ui-copy icon-3' aria-hidden='true'
+            svg class='icon-ui-copy icon-3 mie-1' aria-hidden='true'
               use xlink:href='#feather-copy'
-            | &nbsp;
-            | Copy-to-clipboard
+
+            | Copy
 
         p Source; ES (JavaScript), Sass (stylesheet), and SVG source will be in the <b>src/</b> directory. Distribution; compiled JavaScript, CSS, and SVGs will be in the <b>dist/</b> directory. Further integration details can be found in the installation guide.
 

@@ -213,7 +213,7 @@ var Feed = (function () {
 	  return sharedStore[key] || (sharedStore[key] = value !== undefined ? value : {});
 	})('versions', []).push({
 	  version: '3.8.2',
-	  mode:  'global',
+	  mode: 'global',
 	  copyright: '© 2021 Denis Pushkarev (zloirock.ru)'
 	});
 	});
@@ -1472,7 +1472,7 @@ var Feed = (function () {
 	      : newGenericPromiseCapability(C);
 	  };
 
-	  if ( typeof nativePromiseConstructor == 'function') {
+	  if (typeof nativePromiseConstructor == 'function') {
 	    nativeThen = nativePromiseConstructor.prototype.then;
 
 	    // wrap native Promise#then for native async functions
@@ -1514,11 +1514,11 @@ var Feed = (function () {
 	  }
 	});
 
-	_export({ target: PROMISE, stat: true, forced:  FORCED }, {
+	_export({ target: PROMISE, stat: true, forced: FORCED }, {
 	  // `Promise.resolve` method
 	  // https://tc39.es/ecma262/#sec-promise.resolve
 	  resolve: function resolve(x) {
-	    return promiseResolve( this, x);
+	    return promiseResolve(this, x);
 	  }
 	});
 
@@ -1668,7 +1668,7 @@ var Feed = (function () {
 	});
 
 	// patch native Promise.prototype for native async functions
-	if ( typeof nativePromiseConstructor == 'function' && !nativePromiseConstructor.prototype['finally']) {
+	if (typeof nativePromiseConstructor == 'function' && !nativePromiseConstructor.prototype['finally']) {
 	  redefine(nativePromiseConstructor.prototype, 'finally', getBuiltIn('Promise').prototype['finally']);
 	}
 
@@ -1719,7 +1719,7 @@ var Feed = (function () {
 	if (IteratorPrototype == undefined) IteratorPrototype = {};
 
 	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	if ( !has(IteratorPrototype, ITERATOR$3)) {
+	if (!has(IteratorPrototype, ITERATOR$3)) {
 	  createNonEnumerableProperty(IteratorPrototype, ITERATOR$3, returnThis);
 	}
 
@@ -1780,7 +1780,7 @@ var Feed = (function () {
 	  if (anyNativeIterator) {
 	    CurrentIteratorPrototype = objectGetPrototypeOf(anyNativeIterator.call(new Iterable()));
 	    if (IteratorPrototype$2 !== Object.prototype && CurrentIteratorPrototype.next) {
-	      if ( objectGetPrototypeOf(CurrentIteratorPrototype) !== IteratorPrototype$2) {
+	      if (objectGetPrototypeOf(CurrentIteratorPrototype) !== IteratorPrototype$2) {
 	        if (objectSetPrototypeOf) {
 	          objectSetPrototypeOf(CurrentIteratorPrototype, IteratorPrototype$2);
 	        } else if (typeof CurrentIteratorPrototype[ITERATOR$4] != 'function') {
@@ -1799,7 +1799,7 @@ var Feed = (function () {
 	  }
 
 	  // define iterator
-	  if ( IterablePrototype[ITERATOR$4] !== defaultIterator) {
+	  if (IterablePrototype[ITERATOR$4] !== defaultIterator) {
 	    createNonEnumerableProperty(IterablePrototype, ITERATOR$4, defaultIterator);
 	  }
 	  iterators[NAME] = defaultIterator;
@@ -1978,7 +1978,7 @@ var Feed = (function () {
 	  }
 	}
 
-	var promise$1 = path.Promise;
+	path.Promise;
 
 	// `Promise.try` method
 	// https://github.com/tc39/proposal-promise-try

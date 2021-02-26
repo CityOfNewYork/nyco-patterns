@@ -2,7 +2,7 @@
   "name": "@nycopportunity/patterns",
   "nice": "NYCO Patterns",
   "org": "NYC Opportunity",
-  "version": "2.6.8",
+  "version": "2.6.9",
   "description": "Common agency patterns for The Mayor's Office for Economic Opportunity",
   "author": "NYC Opportunity<products@nycopportunity.nyc.gov>",
   "license": "GPL-3.0+",
@@ -36,7 +36,7 @@
   },
   "main": "npm run start",
   "scripts": {
-    "start": "npm run development && cross-env NODE_ENV=development cross-env PORT=7000 concurrently \"pttrn default -w -np\" \"pttrn serve -w\" -p \"none\"",
+    "start": "cross-env NODE_ENV=development pttrn -np -nl -s && cross-env NODE_ENV=development cross-env PORT=7000 concurrently \"pttrn default -w -np\" \"pttrn serve -w\" -p \"none\"",
     "production": "cross-env NODE_ENV=production cross-env PORT=7000 concurrently \"pttrn default -w -np\" \"pttrn serve -w\" -p \"none\"",
     "development": "cross-env NODE_ENV=development pttrn -np -nl",
     "default": "cross-env NODE_ENV=production pttrn -np",
@@ -46,7 +46,7 @@
     "gh-pages": "cross-env NODE_ENV=production pttrn publish"
   },
   "devDependencies": {
-    "@nycopportunity/pttrn": "^1.0.3",
+    "@nycopportunity/pttrn": "^1.0.5",
     "@nycopportunity/pttrn-docs": "^1.0.6",
     "@nycopportunity/pttrn-plugin-feather": "^1.0.0",
     "@rollup/plugin-commonjs": "^11.0.2",

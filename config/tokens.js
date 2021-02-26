@@ -199,6 +199,7 @@ module.exports = {
     '1': '1px',
     'DEFAULT': '2px',
     '2': '2px',
+    '3': '3px',
     '4': '4px',
     '8': '8px'
   },
@@ -269,6 +270,8 @@ module.exports = {
     'h6': '1em',
     'html': '16px',
     'code': '1em',
+    'default': '1em',
+    'large': '1.2em',
     'small': '0.833em',
     'blockquote': '2.074em'
   },

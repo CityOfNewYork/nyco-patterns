@@ -11,7 +11,7 @@
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
-    var VERSION = '2.6.8';
+    var VERSION = '2.6.9';
   </script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -53,17 +53,17 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.6.8</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.9</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.8">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.9">
           <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#feather-github"></use>
-          </svg>2.6.8
+          </svg>2.6.9
         </a>
       </div>
     </div>
@@ -331,29 +331,33 @@
             <pre><code class="language-html">&lt;div class=&quot;input-autocomplete&quot;&gt;
   &lt;input aria-autocomplete=&quot;both&quot; aria-describedby=&quot;input-autocomplete__instructions-0&quot; aria-expanded=&quot;false&quot; aria-owns=&quot;input-autocomplete__options&quot; autocomplete=&quot;off&quot; data-js=&quot;input-autocomplete__input&quot; type=&quot;text&quot; /&gt;
   &lt;div aria-live=&quot;polite&quot; class=&quot;sr-only&quot; id=&quot;input-autocomplete__instructions-0&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
             <p>Note: You can add the <code>data-persist-dropdown=&#39;true&#39;</code> attribute to the <code>input</code> element for testing. The attribute will make the dropdown persist after the input is no longer in focus.</p>
             <h4 id="heading-global-script">Global Script</h4>
-            <p>To use the Autocomplete Input in the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.8/dist/scripts/nyco.js">global NYCO Patterns script</a> use the following code:</p>
+            <p>To use the Autocomplete Input in the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.9/dist/scripts/nyco.js">global NYCO Patterns script</a> use the following code:</p>
             <pre><code class="language-javascript">const nyco = new NYCO();
 
 nyco.autocomplete({
   options: [
     [&#39;Bronx&#39;], [&#39;Queens&#39;]
   ]
-});</code></pre>
+});
+</code></pre>
             <p>This function will instantiate the autocomplete with the provided options and attach the event listener to an input element with the default selector <code>[data-js=&#39;input-autocomplete__input&#39;]</code> (see markup details in the example above ).</p>
             <p>Below is an advanced configuration that passes a callback to the “selected” method of the autocomplete class. This callback is executed after a user has selected an option and the input value has been set. It will pass the selected value (<code>String</code>) as the first argument and the autocomplete class (<code>Object</code>) as the second.</p>
             <pre><code class="language-javascript">var autocomplete = nyco.autocomplete({
   selected: function(value, autocomplete) {
     console.dir(&#39;Selected &#39; + value + &#39;!&#39;);
   }
-});</code></pre>
+});
+</code></pre>
             <h5 id="heading-updating-options">Updating Options</h5>
             <p>Below is an example of using the options setter to update the options after the class has been instantiated.</p>
             <pre><code class="language-javascript">autocomplete.options([
   [&#39;Bronx&#39;], [&#39;Queens&#39;], [&#39;Brooklyn&#39;], [&#39;Staten Island&#39;], [&#39;Manhattan&#39;]
-]);</code></pre>
+]);
+</code></pre>
             <h5 id="heading-providing-synonyms">Providing Synonyms</h5>
             <p>Each option can be provided with a list of synonyms that will score the option higher as the user types. Try it out in the example above by typing “Hunts Point” in the input. The option “Bronx” will be listed before all other options. This method can be used to provide common terms for specific search terms that exist in your site.</p>
             <pre><code class="language-javascript">autocomplete.options([
@@ -362,7 +366,8 @@ nyco.autocomplete({
   [&#39;Brooklyn&#39;, &#39;Flatbush&#39;, &#39;Bay Ridge&#39;, &#39;DUMBO&#39;, &#39;Williamsburg&#39;],
   [&#39;Staten Island&#39;, &#39;South Beach&#39;, &#39;Fort Wadsworth&#39;, &#39;Todt Hill&#39;, &#39;Great Kills&#39;],
   [&#39;Manhattan&#39;, &#39;Lower&#39;, &#39;Midtown&#39;, &#39;Chinatown&#39;, &#39;SoHo&#39;]
-]);</code></pre>
+]);
+</code></pre>
             <h5 id="heading-providing-strings">Providing Strings</h5>
             <p>The list of strings below are used for screen reader accessibility by default. They can be overridden using the <code>.strings</code> method and passing an object of new strings. For the options strings, a dynamic variable string (denoted by <code>{{ }}</code> below) is provided and rendered in the output of the string. This method can be used to provide a localized set of strings.</p>
             <pre><code class="language-javascript">autocomplete.strings({
@@ -370,7 +375,8 @@ nyco.autocomplete({
   &#39;DIRECTIONS_REVIEW&#39;: &#39;Keyboard users can use the up and down arrows to review options and press enter to select an option&#39;,
   &#39;OPTION_AVAILABLE&#39;: &#39;{{ NUMBER }} options available&#39;,
   &#39;OPTION_SELECTED&#39;: &#39;{{ VALUE }} selected&#39;
-});</code></pre>
+});
+</code></pre>
             <h4 id="heading-configuration">Configuration</h4>
             <p>The <code>autocomplete</code> class accepts an object <code>{}</code> with two properties: <code>selector</code> and <code>options</code>.</p>
             <table>
@@ -423,7 +429,8 @@ new autocomplete({
   options: [
     [&#39;Bronx&#39;], [&#39;Queens&#39;]
   ]
-});</code></pre>
+});
+</code></pre>
             <h4 id="heading-accessibility">Accessibility</h4>
             <p>Accessibility is supported through ARIA attributes that will prompt the user on how to use the dropdown list. Screen readers will also announce the list of options in the dropdown as the user navigates them with the keyboard. To maintain the elements accessibility, the <code>accessibility</code> utility should be used and the appropriate ARIA attributes applied to the element (see markup section).</p>
           </div>
