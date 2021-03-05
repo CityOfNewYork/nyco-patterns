@@ -553,6 +553,7 @@ button::-moz-focus-inner {
   border-color: var(--nyco-border);
   background-color: var(--nyco-input-background);
   appearance: none;
+  -webkit-appearance: none;
   border-width: 1px;
   border-style: solid;
   border-radius: 0;
@@ -589,6 +590,7 @@ button::-moz-focus-inner {
   stroke-linecap: round;
   stroke-linejoin: round;
   position: absolute;
+  right: 8px;
   inset-inline-end: 8px;
   top: 50%;
   margin-top: -24px;
@@ -1556,7 +1558,7 @@ input:checked + .option__base > .option__graphic {
 
 @media screen and (min-width: 768px) {
   .select select {
-    width: auto;
+    min-width: auto;
   }
   input, textarea {
     width: auto;

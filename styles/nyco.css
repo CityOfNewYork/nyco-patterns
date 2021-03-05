@@ -1110,6 +1110,7 @@ button::-moz-focus-inner {
   border-color: var(--nyco-border);
   background-color: var(--nyco-input-background);
   appearance: none;
+  -webkit-appearance: none;
   border-width: 1px;
   border-style: solid;
   border-radius: 0;
@@ -1146,6 +1147,7 @@ button::-moz-focus-inner {
   stroke-linecap: round;
   stroke-linejoin: round;
   position: absolute;
+  right: 8px;
   inset-inline-end: 8px;
   top: 50%;
   margin-top: -24px;
@@ -25412,7 +25414,7 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
     max-width: calc(50% - 12px);
   }
   .select select {
-    width: auto;
+    min-width: auto;
   }
   input, textarea {
     width: auto;
