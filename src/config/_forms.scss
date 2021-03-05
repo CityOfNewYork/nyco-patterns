@@ -2,6 +2,7 @@
 
 @mixin forms-default() {
   appearance: none;
+  -webkit-appearance: none;
   border-width: 1px;
   border-style: solid;
   border-radius: 0;
@@ -16,6 +17,6 @@
   font: inherit;
 
   @media screen and (min-width: $tablet) {
-    width: auto;
+    min-width: auto;
   }
 }

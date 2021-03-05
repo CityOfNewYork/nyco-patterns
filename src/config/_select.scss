@@ -37,6 +37,7 @@ $selects: map-get(tokens.$tokens, 'selects');
   stroke-linejoin: get('stroke-line');
 
   position: absolute;
+  right: grid.$grid;
   inset-inline-end: grid.$grid;
 
   top: 50%;
