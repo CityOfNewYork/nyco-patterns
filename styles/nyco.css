@@ -7,41 +7,49 @@
 @font-face {
   font-family: "IBM Plex Sans";
 
-  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.woff2") format("woff2"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.woff") format("woff"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.ttf") format("truetype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.svg#IBM Plex Sans") format("svg");
+  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.woff2") format("woff2"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.woff") format("woff"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.ttf") format("truetype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Regular.otf") format("opentype");
 
   font-weight: normal;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
   font-family: "IBM Plex Sans";
 
-  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Italic.woff2") format("woff2"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Italic.woff") format("woff"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Italic.ttf") format("truetype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Italic.svg#IBM Plex Sans") format("svg");
+  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Italic.woff2") format("woff2"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Italic.woff") format("woff"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Italic.ttf") format("truetype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Italic.otf") format("opentype");
 
   font-weight: normal;
 
   font-style: italic;
+
+  font-display: swap;
 }
 
 @font-face {
   font-family: "IBM Plex Sans";
 
-  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Bold.woff2") format("woff2"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Bold.woff") format("woff"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Bold.ttf") format("truetype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Bold.svg#IBM Plex Sans") format("svg");
+  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Bold.woff2") format("woff2"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Bold.woff") format("woff"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Bold.ttf") format("truetype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-Bold.otf") format("opentype");
 
   font-weight: bold;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
   font-family: "IBM Plex Sans";
 
-  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-BoldItalic.woff2") format("woff2"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-BoldItalic.woff") format("woff"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-BoldItalic.ttf") format("truetype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-BoldItalic.svg#IBM Plex Sans") format("svg");
+  src: url("../fonts/IBM-Plex-Sans/IBMPlexSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-BoldItalic.woff2") format("woff2"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-BoldItalic.woff") format("woff"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-BoldItalic.ttf") format("truetype"), url("../fonts/IBM-Plex-Sans/IBMPlexSans-BoldItalic.otf") format("opentype");
 
   font-weight: bold;
 
   font-style: italic;
+
+  font-display: swap;
 }
 
 /**
