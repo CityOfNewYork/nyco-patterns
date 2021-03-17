@@ -27,7 +27,7 @@ $grid: map-get($tokens, 'grid');
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: $grid * 3;
+  margin-bottom: $grid;
 }
 
 .c-card__title {
@@ -35,24 +35,25 @@ $grid: map-get($tokens, 'grid');
   margin-bottom: 0;
 }
 
-.c-card__body {
-  margin-bottom: $grid * 5
-}
-
 .c-card__description-list {
   @include type('small');
-  display: grid;
-  grid-template-columns: ($grid * 10) 1fr;
+  display: flex;
+  margin-bottom: $grid * 2;
 
-  dt, dd {
-    margin-bottom: $grid
+  :nth-child(2) {
+    margin-inline-end: $grid * 3;
   }
 
   dt {
     color: var(--nyco-placeholder);
-    margin-inline-end: $grid
+    margin-inline-end: $grid;
   }
 }
+
+.c-card__body {
+  margin-bottom: $grid * 5
+}
+
 
 .c-card__cta {
   position: absolute;
@@ -61,4 +62,9 @@ $grid: map-get($tokens, 'grid');
   top: 0;
   left: 0;
   opacity: 0;
+}
+
+.c-card-info {
+  display: flex;
+  flex-direction: column;
 }
