@@ -1,0 +1,1 @@
+This example uses the `.c-card__inline-description-list` class to display the description list on one line.

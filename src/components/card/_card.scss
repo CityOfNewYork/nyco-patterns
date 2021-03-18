@@ -8,6 +8,7 @@
 @import 'config/type';
 
 $grid: map-get($tokens, 'grid');
+$screens: map-get($tokens, 'screens');
 
 .c-card {
   position: relative;
@@ -27,7 +28,7 @@ $grid: map-get($tokens, 'grid');
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: $grid * 3;
+  margin-bottom: $grid;
 }
 
 .c-card__title {
@@ -35,22 +36,38 @@ $grid: map-get($tokens, 'grid');
   margin-bottom: 0;
 }
 
-.c-card__body {
-  margin-bottom: $grid * 5
-}
-
-.c-card__description-list {
+.c-card__block-description-list {
   @include type('small');
-  display: grid;
-  grid-template-columns: ($grid * 10) 1fr;
 
-  dt, dd {
-    margin-bottom: $grid
+  margin-bottom: $grid * 2;
+
+  :nth-child(2) {
+    margin-bottom: $grid * 2;
   }
 
   dt {
     color: var(--nyco-placeholder);
-    margin-inline-end: $grid
+    margin-inline-end: $grid;
+  }
+}
+
+.c-card__inline-description-list {
+  @include type('small');
+
+  margin-bottom: $grid * 2;
+
+  dt, dd  {
+    display: inline-block;
+  }
+
+  :nth-child(2) {
+    margin-inline-end: $grid * 3;
+    margin-bottom: 0;
+  }
+
+  dt {
+    color: var(--nyco-placeholder);
+    margin-inline-end: $grid;
   }
 }
 
@@ -61,4 +78,9 @@ $grid: map-get($tokens, 'grid');
   top: 0;
   left: 0;
   opacity: 0;
+}
+
+.c-card-info {
+  display: flex;
+  flex-direction: column;
 }

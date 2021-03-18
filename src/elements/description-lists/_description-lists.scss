@@ -17,7 +17,7 @@ $grid: map-get($tokens, 'grid');
     grid-template-columns: clamp(8rem, 33.33%, 16rem) 1fr;
 
     dt {
-      font-style: italic;
+      color: var(--nyco-color-alt);
     }
 
     dt, dd {

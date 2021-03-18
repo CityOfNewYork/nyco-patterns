@@ -11,7 +11,7 @@ article class='c-card hover:shadow-up'
 
       | Agreement
 
-  dl class='c-card__block-description-list'
+  dl class='c-card__inline-description-list'
     dt Data Owner
     dd Department Name
 
