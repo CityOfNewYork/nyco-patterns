@@ -8,6 +8,7 @@
 @import 'config/type';
 
 $grid: map-get($tokens, 'grid');
+$screens: map-get($tokens, 'screens');
 
 .c-card {
   position: relative;
@@ -37,11 +38,21 @@ $grid: map-get($tokens, 'grid');
 
 .c-card__description-list {
   @include type('small');
-  display: flex;
+
+  @media (min-width: #{map-get($screens, 'tablet')}px) {
+    dt, dd  {
+      display: inline-block;
+    }
+
+    :nth-child(2) {
+      margin-inline-end: $grid * 3;
+      margin-bottom: 0;
+    }
+  }
   margin-bottom: $grid * 2;
 
   :nth-child(2) {
-    margin-inline-end: $grid * 3;
+    margin-bottom: $grid * 2;
   }
 
   dt {
@@ -49,11 +60,6 @@ $grid: map-get($tokens, 'grid');
     margin-inline-end: $grid;
   }
 }
-
-.c-card__body {
-  margin-bottom: $grid * 5
-}
-
 
 .c-card__cta {
   position: absolute;
