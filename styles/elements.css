@@ -191,7 +191,7 @@ pre code {
 }
 
 .description-list dt, [class*=description-list-] dt {
-  font-style: italic;
+  color: var(--nyco-color-alt);
 }
 
 .description-list dt, .description-list dd, [class*=description-list-] dt, [class*=description-list-] dd {
@@ -855,7 +855,7 @@ input:checked + .option__base > .option__graphic {
   }
 
   .small\:description-list dt, [class*="small:description-list-"] dt {
-    font-style: italic;
+    color: var(--nyco-color-alt);
   }
 
   .small\:description-list dt, .small\:description-list dd, [class*="small:description-list-"] dt, [class*="small:description-list-"] dd {
@@ -1091,7 +1091,7 @@ input:checked + .option__base > .option__graphic {
   }
 
   .mobile\:description-list dt, [class*="mobile:description-list-"] dt {
-    font-style: italic;
+    color: var(--nyco-color-alt);
   }
 
   .mobile\:description-list dt, .mobile\:description-list dd, [class*="mobile:description-list-"] dt, [class*="mobile:description-list-"] dd {
@@ -1327,7 +1327,7 @@ input:checked + .option__base > .option__graphic {
   }
 
   .tablet\:description-list dt, [class*="tablet:description-list-"] dt {
-    font-style: italic;
+    color: var(--nyco-color-alt);
   }
 
   .tablet\:description-list dt, .tablet\:description-list dd, [class*="tablet:description-list-"] dt, [class*="tablet:description-list-"] dd {
@@ -1575,7 +1575,7 @@ input:checked + .option__base > .option__graphic {
   }
 
   .desktop\:description-list dt, [class*="desktop:description-list-"] dt {
-    font-style: italic;
+    color: var(--nyco-color-alt);
   }
 
   .desktop\:description-list dt, .desktop\:description-list dd, [class*="desktop:description-list-"] dt, [class*="desktop:description-list-"] dd {
