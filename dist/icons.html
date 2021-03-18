@@ -11,7 +11,7 @@
   <link href="/images/favicon/favicon.ico" rel="shortcut icon" />
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
   <script type="text/javascript">
-    var VERSION = '2.6.11';
+    var VERSION = '2.6.12';
   </script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function(event) {
@@ -53,17 +53,17 @@
           <use xlink:href="#icon-logo-nyco"></use>
         </svg>
       </h1>
-      <div aria-hidden="true" class="o-header__main-version">v2.6.11</div>
+      <div aria-hidden="true" class="o-header__main-version">v2.6.12</div>
     </div>
     <div class="o-header__banner-secondary color-dark-background">
       <h1 class="o-header__secondary-title text-jumbo">Patterns</h1>
     </div>
     <div class="o-header__secondary-version color-dark-background">
       <div>
-        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.11">
+        <a class="btn flex items-center" href="https://github.com/CityOfNewYork/nyco-patterns/tree/v2.6.12">
           <svg aria-hidden="true" class="icon-ui icon-3 mr-1">
             <use xlink:href="#feather-github"></use>
-          </svg>2.6.11
+          </svg>2.6.12
         </a>
       </div>
     </div>
@@ -246,7 +246,7 @@
         </div>
         <div class="layout-content px-4 pb-4">
           <div class="o-content mx-auto">
-            <p>These logo icons can be used to display City/Agency branding. The SVGs for these logos are contained in the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.11/dist/svg/icons.svg">/dist/svg/icons.svg</a> sprite. The NYC mark is a trademark and service mark of the City of New York. See the section <em>IV. INTELLECTUAL PROPERTY</em> in the <a href="https://www1.nyc.gov/home/terms-of-use.page">nyc.gov terms of service</a>.</p>
+            <p>These logo icons can be used to display City/Agency branding. The SVGs for these logos are contained in the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.12/dist/svg/icons.svg">/dist/svg/icons.svg</a> sprite. The NYC mark is a trademark and service mark of the City of New York. See the section <em>IV. INTELLECTUAL PROPERTY</em> in the <a href="https://www1.nyc.gov/home/terms-of-use.page">nyc.gov terms of service</a>.</p>
           </div>
         </div>
       </section>
@@ -291,7 +291,7 @@
               </li>
             </ul>
             <p>Each package may have different methods of implementation to take into consideration. For prototyping svg files can be downloaded from <a href="https://feathericons.com">feathericons.com</a> individually or from the project <a href="https://github.com/feathericons/feather#figma">Figma file</a>.</p>
-            <p>You may also use the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.11/dist/svg/feather.svg">sprite included with this repository</a>. The <code>&lt;use&gt;</code> tag’s <code>xlink:href</code> attribute corresponds to the Feather icon slug which can be referenced on the <a href="https://feathericons.com">feathericons.com</a> site. Every ID is prefixed with <code>#feather-</code>. Be sure to provide the appropriate attribution to the Feather project.</p>
+            <p>You may also use the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.12/dist/svg/feather.svg">sprite included with this repository</a>. The <code>&lt;use&gt;</code> tag’s <code>xlink:href</code> attribute corresponds to the Feather icon slug which can be referenced on the <a href="https://feathericons.com">feathericons.com</a> site. Every ID is prefixed with <code>#feather-</code>. Be sure to provide the appropriate attribution to the Feather project.</p>
           </div>
         </div>
       </section>
@@ -303,14 +303,14 @@
             <p>To use SVG icons, you can inline each sprite in your page markup by adding it to a template partial or copy/pasting the SVG sprite file contents into the base template of your application or site.</p>
             <ul>
               <li>
-                <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.11/dist/svg/icons.svg">Icon sprite</a>. Includes logos, custom icons, checkbox, radio, and select box graphics. Path <strong>/dist/svg/icons.svg</strong>
+                <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.12/dist/svg/icons.svg">Icon sprite</a>. Includes logos, custom icons, checkbox, radio, and select box graphics. Path <strong>/dist/svg/icons.svg</strong>
               </li>
               <li>
-                <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.11/dist/svg/feather.svg">Feather icon sprite</a>. Path <strong>/dist/svg/feather.svg</strong>
+                <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.12/dist/svg/feather.svg">Feather icon sprite</a>. Path <strong>/dist/svg/feather.svg</strong>
               </li>
             </ul>
             <p>However, it is recommended to asynchronously retrieve the file and inline it to reduce the overall page size. NYCO Patterns uses <code>fetch()</code> to retrieve the sprite and add it to the DOM on page load. This will cache the sprite file without including it in the page to decrease the size of each page.</p>
-            <p>To import the icon through the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.11/dist/scripts/nyco.js">global NYCO Patterns script</a> use the following code:</p>
+            <p>To import the icon through the <a href="https://github.com/cityofnewyork/nyco-patterns/tree/v2.6.12/dist/scripts/nyco.js">global NYCO Patterns script</a> use the following code:</p>
             <pre><code class="language-javascript">var nyco = new NYCO();
 
 nyco.icons();
@@ -333,8 +333,8 @@ new Icons(&#39;path/to/feather.svg&#39;);
 
 // or CDN
 
-new Icons(&#39;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.11/dist/svg/icons.svg&#39;);
-new Icons(&#39;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.11/dist/svg/feather.svg&#39;);
+new Icons(&#39;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.12/dist/svg/icons.svg&#39;);
+new Icons(&#39;https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.12/dist/svg/feather.svg&#39;);
 </code></pre>
             <h3 id="heading-markup">Markup</h3>
             <p>Once the sprite is inlined on the desired page to display an icon on, individual icons can be referenced with the SVG <code>&lt;use&gt;</code> tag. To change the color of inline SVG icon shapes that have their fill set as <code>currentColor</code>, use <a href="colors">Tailwindcss text color utilities</a>.</p>
