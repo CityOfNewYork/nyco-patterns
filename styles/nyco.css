@@ -849,11 +849,6 @@ a:not(.btn):hover, a:not(.btn):active, a:not(.btn):focus, a:not(.btn).active, .l
   height: 24px;
 }
 
-.icon-ui circle,
-[class*=icon-ui-] circle {
-  fill: currentColor;
-}
-
 .icon-logo-nyc {
   width: 350px;
   height: 117px;
