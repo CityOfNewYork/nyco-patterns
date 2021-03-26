@@ -38,10 +38,6 @@ $icons-ui-size: map-get($icons, 'icon-ui');
 
   width: nth($icons-ui-size, 1);
   height: nth($icons-ui-size, 2);
-
-  circle {
-    fill: currentColor;
-  }
 }
 
 @each $key, $var in map-get($tokens, 'icons') {
