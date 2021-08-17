@@ -61,7 +61,7 @@
   display: inline-block;
 }
 
-.c-card__inline-description-list :nth-child(2) {
+.c-card__inline-description-list dd {
   margin-inline-end: 24px;
   margin-bottom: 0;
 }
