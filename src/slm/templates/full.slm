@@ -4,8 +4,8 @@ html lang='en' class='text-size-0'
   = content('head');
 
 body style='visibility: hidden;' onload='load()'
-  header class='overflow-hidden color-dark-background py-2'
-    div class='layout-wrap mx-auto px-6 flex justify-between items-center'
+  / header class='overflow-hidden color-dark-background py-2'
+  /   div class='layout-wrap mx-auto px-6 flex justify-between items-center'
       / h1 class='m-0 flex'
       /   span class='hidden' = this.package.author;
       /   svg aria-hidden='true' class='icon-logo-nyco' style='width: 96px; height: 52px;'

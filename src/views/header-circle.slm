@@ -1,0 +1,74 @@
+/ Layout
+= extend('/slm/templates/full');
+
+/ Variables
+= partial('/slm/variables/classes.slm');
+
+/ Mixins
+= partial('/slm/mixins/head.slm');
+= partial('/slm/mixins/nav.slm');
+= partial('/slm/mixins/readme.slm');
+
+/ Content blocks
+= content('head');
+  = mixin('head');
+
+= content('content');
+  /! { Change the color of the background and section text using the color combination utilities }
+  header class='color-primary-background relative overflow-hidden'
+    /! { Change the color of the SVG using text color utilities }
+    svg aria-hidden='true' class='absolute bottom-0 text-base-white' style='left: 50%; margin-left: -2494.5px' width='4989' height='4989' viewBox='0 0 4989 4989' fill='none' xmlns='http://www.w3.org/2000/svg'
+      path fill-rule='evenodd' clip-rule='evenodd' d='M4989 0H0V4989H4989V0ZM2494.5 4982C3868.31 4982 4982 3868.31 4982 2494.5C4982 1120.69 3868.31 6.99719 2494.5 6.99719C1120.69 6.99719 6.99719 1120.69 6.99719 2494.5C6.99719 3868.31 1120.69 4982 2494.5 4982Z' fill='currentColor'
+
+    div class='layout-content px-4 py-8'
+      div class='mx-auto py-8 my-6'
+        div class='flex justify-center mb-6'
+          div class='flex flex-col items-start'
+            h1 class='m-0' IntelliMatch
+
+            p class='flex items-end'
+              | by
+              span class='sr-only' NYC Opportunity
+
+              svg class='mis-1' style='height: 20px; width: 183px;'
+                use xlink:href='#icon-logo-nyco-secondary'
+
+        div class='mb-8'
+          p class='h4 font-normal' IntelliMatch: AWS is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+        div class='text-center'
+          div class='mb-3'
+            button class='btn btn-secondary' Log In to IntelliMatch
+
+          a href='#' Request an account
+
+  /! { Match the top section SVG with the next section's background color (in this case, white) }
+  section class='color-light-background py-8'
+
+  / header class='color-dark-background relative overflow-hidden'
+  /   svg aria-hidden='true' class='absolute bottom-0 text-base-white' style='left: 50%; margin-left: -2494.5px' width='4989' height='4989' viewBox='0 0 4989 4989' fill='none' xmlns='http://www.w3.org/2000/svg'
+  /     path fill-rule='evenodd' clip-rule='evenodd' d='M4989 0H0V4989H4989V0ZM2494.5 4982C3868.31 4982 4982 3868.31 4982 2494.5C4982 1120.69 3868.31 6.99719 2494.5 6.99719C1120.69 6.99719 6.99719 1120.69 6.99719 2494.5C6.99719 3868.31 1120.69 4982 2494.5 4982Z' fill='currentColor'
+
+  /   div class='layout-content px-4 py-8'
+  /     div class='mx-auto py-8 my-6'
+  /       div class='flex justify-center mb-6'
+  /         div class='flex flex-col items-start'
+  /           h1 class='m-0' IntelliMatch
+
+  /           p class='flex items-end'
+  /             | by
+  /             span class='sr-only' NYC Opportunity
+
+  /             svg class='mis-1' style='height: 20px; width: 183px;'
+  /               use xlink:href='#icon-logo-nyco-secondary'
+
+  /       div class='mb-8'
+  /         p class='h4 font-normal' IntelliMatch: AWS is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+  /       div class='text-center'
+  /         div class='mb-3'
+  /           button class='btn btn-secondary' Log In to IntelliMatch
+
+  /         a href='#' Request an account
+
+  / section class='color-light-background py-8'
