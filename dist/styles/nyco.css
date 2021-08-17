@@ -2154,11 +2154,13 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
 }
 
 *:first-child {
-  margin-top: 0;
+  margin-block-start: 0;
+  margin-inline-start: 0;
 }
 
 *:last-child {
-  margin-bottom: 0;
+  margin-block-end: 0;
+  margin-inline-end: 0;
 }
 
 /************
@@ -12808,7 +12810,7 @@ a, input, textarea, select, path, rect, .btn, .button, [class*="hover:"], .c-car
   display: inline-block;
 }
 
-.c-card__inline-description-list :nth-child(2) {
+.c-card__inline-description-list dd {
   margin-inline-end: 24px;
   margin-bottom: 0;
 }
