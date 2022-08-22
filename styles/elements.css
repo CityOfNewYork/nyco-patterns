@@ -99,6 +99,7 @@ p code, li code {
   border-width: 1px;
   margin: 0;
   display: inline;
+  white-space: nowrap;
 }
 
 pre {
@@ -424,6 +425,7 @@ a:not(.btn):hover, a:not(.btn):active, a:not(.btn):focus, a:not(.btn).active, .l
   border-width: 1px;
   margin: 0;
   display: inline;
+  white-space: nowrap;
 }
 
 .table pre, [class*=table-] pre {
@@ -997,6 +999,7 @@ input:checked + .option__base > .option__graphic {
     border-width: 1px;
     margin: 0;
     display: inline;
+    white-space: nowrap;
   }
 
   .small\:table pre, [class*="small:table-"] pre {
@@ -1233,6 +1236,7 @@ input:checked + .option__base > .option__graphic {
     border-width: 1px;
     margin: 0;
     display: inline;
+    white-space: nowrap;
   }
 
   .mobile\:table pre, [class*="mobile:table-"] pre {
@@ -1469,6 +1473,7 @@ input:checked + .option__base > .option__graphic {
     border-width: 1px;
     margin: 0;
     display: inline;
+    white-space: nowrap;
   }
 
   .tablet\:table pre, [class*="tablet:table-"] pre {
@@ -1717,6 +1722,7 @@ input:checked + .option__base > .option__graphic {
     border-width: 1px;
     margin: 0;
     display: inline;
+    white-space: nowrap;
   }
 
   .desktop\:table pre, [class*="desktop:table-"] pre {

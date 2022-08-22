@@ -54,4 +54,4 @@ var FeedDocs = (function () {
 
   return FeedDocs;
 
-}());
+})();

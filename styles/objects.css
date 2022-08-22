@@ -417,6 +417,7 @@
   border-width: 1px;
   margin: 0;
   display: inline;
+  white-space: nowrap;
 }
 
 .o-content pre {
@@ -469,6 +470,7 @@
   border-width: 1px;
   margin: 0;
   display: inline;
+  white-space: nowrap;
 }
 
 .o-content table pre {

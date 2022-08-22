@@ -950,7 +950,7 @@ var NYCO = (function () {
       (1 - jaroSimilarity);
   }
 
-  var memoize = (fn) => {
+  var memoize$1 = (fn) => {
     const cache = {};
 
     return (...args) => {
@@ -981,7 +981,7 @@ var NYCO = (function () {
         'selected': (settings.hasOwnProperty('selected')) ?
           settings.selected : false,
         'score': (settings.hasOwnProperty('score')) ?
-          settings.score : memoize(Lib.score),
+          settings.score : memoize$1(Lib.score),
         'listItem': (settings.hasOwnProperty('listItem')) ?
           settings.listItem : Lib.listItem,
         'getSiblingIndex': (settings.hasOwnProperty('getSiblingIndex')) ?
@@ -1506,20 +1506,20 @@ var NYCO = (function () {
   });
 
   var nativePropertyIsEnumerable = {}.propertyIsEnumerable;
-  var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+  var getOwnPropertyDescriptor$2 = Object.getOwnPropertyDescriptor;
 
   // Nashorn ~ JDK8 bug
-  var NASHORN_BUG = getOwnPropertyDescriptor && !nativePropertyIsEnumerable.call({ 1: 2 }, 1);
+  var NASHORN_BUG = getOwnPropertyDescriptor$2 && !nativePropertyIsEnumerable.call({ 1: 2 }, 1);
 
   // `Object.prototype.propertyIsEnumerable` method implementation
   // https://tc39.es/ecma262/#sec-object.prototype.propertyisenumerable
-  var f = NASHORN_BUG ? function propertyIsEnumerable(V) {
-    var descriptor = getOwnPropertyDescriptor(this, V);
+  var f$5 = NASHORN_BUG ? function propertyIsEnumerable(V) {
+    var descriptor = getOwnPropertyDescriptor$2(this, V);
     return !!descriptor && descriptor.enumerable;
   } : nativePropertyIsEnumerable;
 
   var objectPropertyIsEnumerable = {
-  	f: f
+  	f: f$5
   };
 
   var createPropertyDescriptor = function (bitmap, value) {
@@ -1531,10 +1531,10 @@ var NYCO = (function () {
     };
   };
 
-  var toString = {}.toString;
+  var toString$1 = {}.toString;
 
   var classofRaw = function (it) {
-    return toString.call(it).slice(8, -1);
+    return toString$1.call(it).slice(8, -1);
   };
 
   var split = ''.split;
@@ -1563,7 +1563,7 @@ var NYCO = (function () {
     return indexedObject(requireObjectCoercible(it));
   };
 
-  var isObject = function (it) {
+  var isObject$1 = function (it) {
     return typeof it === 'object' ? it !== null : typeof it === 'function';
   };
 
@@ -1572,26 +1572,26 @@ var NYCO = (function () {
   // instead of the ES6 spec version, we didn't implement @@toPrimitive case
   // and the second argument - flag - preferred type is a string
   var toPrimitive = function (input, PREFERRED_STRING) {
-    if (!isObject(input)) return input;
+    if (!isObject$1(input)) return input;
     var fn, val;
-    if (PREFERRED_STRING && typeof (fn = input.toString) == 'function' && !isObject(val = fn.call(input))) return val;
-    if (typeof (fn = input.valueOf) == 'function' && !isObject(val = fn.call(input))) return val;
-    if (!PREFERRED_STRING && typeof (fn = input.toString) == 'function' && !isObject(val = fn.call(input))) return val;
+    if (PREFERRED_STRING && typeof (fn = input.toString) == 'function' && !isObject$1(val = fn.call(input))) return val;
+    if (typeof (fn = input.valueOf) == 'function' && !isObject$1(val = fn.call(input))) return val;
+    if (!PREFERRED_STRING && typeof (fn = input.toString) == 'function' && !isObject$1(val = fn.call(input))) return val;
     throw TypeError("Can't convert object to primitive value");
   };
 
-  var hasOwnProperty = {}.hasOwnProperty;
+  var hasOwnProperty$e = {}.hasOwnProperty;
 
-  var has = function (it, key) {
-    return hasOwnProperty.call(it, key);
+  var has$1 = function (it, key) {
+    return hasOwnProperty$e.call(it, key);
   };
 
-  var document$1 = global_1.document;
+  var document$3 = global_1.document;
   // typeof document.createElement is 'object' in old IE
-  var EXISTS = isObject(document$1) && isObject(document$1.createElement);
+  var EXISTS = isObject$1(document$3) && isObject$1(document$3.createElement);
 
   var documentCreateElement = function (it) {
-    return EXISTS ? document$1.createElement(it) : {};
+    return EXISTS ? document$3.createElement(it) : {};
   };
 
   // Thank's IE8 for his funny defineProperty
@@ -1605,21 +1605,21 @@ var NYCO = (function () {
 
   // `Object.getOwnPropertyDescriptor` method
   // https://tc39.es/ecma262/#sec-object.getownpropertydescriptor
-  var f$1 = descriptors ? nativeGetOwnPropertyDescriptor : function getOwnPropertyDescriptor(O, P) {
+  var f$4 = descriptors ? nativeGetOwnPropertyDescriptor : function getOwnPropertyDescriptor(O, P) {
     O = toIndexedObject(O);
     P = toPrimitive(P, true);
     if (ie8DomDefine) try {
       return nativeGetOwnPropertyDescriptor(O, P);
     } catch (error) { /* empty */ }
-    if (has(O, P)) return createPropertyDescriptor(!objectPropertyIsEnumerable.f.call(O, P), O[P]);
+    if (has$1(O, P)) return createPropertyDescriptor(!objectPropertyIsEnumerable.f.call(O, P), O[P]);
   };
 
   var objectGetOwnPropertyDescriptor = {
-  	f: f$1
+  	f: f$4
   };
 
   var anObject = function (it) {
-    if (!isObject(it)) {
+    if (!isObject$1(it)) {
       throw TypeError(String(it) + ' is not an object');
     } return it;
   };
@@ -1628,7 +1628,7 @@ var NYCO = (function () {
 
   // `Object.defineProperty` method
   // https://tc39.es/ecma262/#sec-object.defineproperty
-  var f$2 = descriptors ? nativeDefineProperty : function defineProperty(O, P, Attributes) {
+  var f$3 = descriptors ? nativeDefineProperty : function defineProperty(O, P, Attributes) {
     anObject(O);
     P = toPrimitive(P, true);
     anObject(Attributes);
@@ -1641,7 +1641,7 @@ var NYCO = (function () {
   };
 
   var objectDefineProperty = {
-  	f: f$2
+  	f: f$3
   };
 
   var createNonEnumerableProperty = descriptors ? function (object, key, value) {
@@ -1660,9 +1660,9 @@ var NYCO = (function () {
   };
 
   var SHARED = '__core-js_shared__';
-  var store = global_1[SHARED] || setGlobal(SHARED, {});
+  var store$1 = global_1[SHARED] || setGlobal(SHARED, {});
 
-  var sharedStore = store;
+  var sharedStore = store$1;
 
   var functionToString = Function.toString;
 
@@ -1675,9 +1675,9 @@ var NYCO = (function () {
 
   var inspectSource = sharedStore.inspectSource;
 
-  var WeakMap = global_1.WeakMap;
+  var WeakMap$3 = global_1.WeakMap;
 
-  var nativeWeakMap = typeof WeakMap === 'function' && /native code/.test(inspectSource(WeakMap));
+  var nativeWeakMap = typeof WeakMap$3 === 'function' && /native code/.test(inspectSource(WeakMap$3));
 
   var shared = createCommonjsModule(function (module) {
   (module.exports = function (key, value) {
@@ -1696,66 +1696,66 @@ var NYCO = (function () {
     return 'Symbol(' + String(key === undefined ? '' : key) + ')_' + (++id + postfix).toString(36);
   };
 
-  var keys = shared('keys');
+  var keys$1 = shared('keys');
 
   var sharedKey = function (key) {
-    return keys[key] || (keys[key] = uid(key));
+    return keys$1[key] || (keys$1[key] = uid(key));
   };
 
-  var hiddenKeys = {};
+  var hiddenKeys$1 = {};
 
-  var WeakMap$1 = global_1.WeakMap;
-  var set, get, has$1;
+  var WeakMap$2 = global_1.WeakMap;
+  var set$1, get$1, has;
 
   var enforce = function (it) {
-    return has$1(it) ? get(it) : set(it, {});
+    return has(it) ? get$1(it) : set$1(it, {});
   };
 
   var getterFor = function (TYPE) {
     return function (it) {
       var state;
-      if (!isObject(it) || (state = get(it)).type !== TYPE) {
+      if (!isObject$1(it) || (state = get$1(it)).type !== TYPE) {
         throw TypeError('Incompatible receiver, ' + TYPE + ' required');
       } return state;
     };
   };
 
   if (nativeWeakMap) {
-    var store$1 = sharedStore.state || (sharedStore.state = new WeakMap$1());
-    var wmget = store$1.get;
-    var wmhas = store$1.has;
-    var wmset = store$1.set;
-    set = function (it, metadata) {
+    var store = sharedStore.state || (sharedStore.state = new WeakMap$2());
+    var wmget = store.get;
+    var wmhas = store.has;
+    var wmset = store.set;
+    set$1 = function (it, metadata) {
       metadata.facade = it;
-      wmset.call(store$1, it, metadata);
+      wmset.call(store, it, metadata);
       return metadata;
     };
-    get = function (it) {
-      return wmget.call(store$1, it) || {};
+    get$1 = function (it) {
+      return wmget.call(store, it) || {};
     };
-    has$1 = function (it) {
-      return wmhas.call(store$1, it);
+    has = function (it) {
+      return wmhas.call(store, it);
     };
   } else {
     var STATE = sharedKey('state');
-    hiddenKeys[STATE] = true;
-    set = function (it, metadata) {
+    hiddenKeys$1[STATE] = true;
+    set$1 = function (it, metadata) {
       metadata.facade = it;
       createNonEnumerableProperty(it, STATE, metadata);
       return metadata;
     };
-    get = function (it) {
-      return has(it, STATE) ? it[STATE] : {};
+    get$1 = function (it) {
+      return has$1(it, STATE) ? it[STATE] : {};
     };
-    has$1 = function (it) {
-      return has(it, STATE);
+    has = function (it) {
+      return has$1(it, STATE);
     };
   }
 
   var internalState = {
-    set: set,
-    get: get,
-    has: has$1,
+    set: set$1,
+    get: get$1,
+    has: has,
     enforce: enforce,
     getterFor: getterFor
   };
@@ -1771,7 +1771,7 @@ var NYCO = (function () {
     var noTargetGet = options ? !!options.noTargetGet : false;
     var state;
     if (typeof value == 'function') {
-      if (typeof key == 'string' && !has(value, 'name')) {
+      if (typeof key == 'string' && !has$1(value, 'name')) {
         createNonEnumerableProperty(value, 'name', key);
       }
       state = enforceInternalState(value);
@@ -1798,12 +1798,12 @@ var NYCO = (function () {
 
   var path = global_1;
 
-  var aFunction = function (variable) {
+  var aFunction$1 = function (variable) {
     return typeof variable == 'function' ? variable : undefined;
   };
 
   var getBuiltIn = function (namespace, method) {
-    return arguments.length < 2 ? aFunction(path[namespace]) || aFunction(global_1[namespace])
+    return arguments.length < 2 ? aFunction$1(path[namespace]) || aFunction$1(global_1[namespace])
       : path[namespace] && path[namespace][method] || global_1[namespace] && global_1[namespace][method];
   };
 
@@ -1816,27 +1816,27 @@ var NYCO = (function () {
     return isNaN(argument = +argument) ? 0 : (argument > 0 ? floor : ceil)(argument);
   };
 
-  var min = Math.min;
+  var min$1 = Math.min;
 
   // `ToLength` abstract operation
   // https://tc39.es/ecma262/#sec-tolength
   var toLength = function (argument) {
-    return argument > 0 ? min(toInteger(argument), 0x1FFFFFFFFFFFFF) : 0; // 2 ** 53 - 1 == 9007199254740991
+    return argument > 0 ? min$1(toInteger(argument), 0x1FFFFFFFFFFFFF) : 0; // 2 ** 53 - 1 == 9007199254740991
   };
 
   var max = Math.max;
-  var min$1 = Math.min;
+  var min = Math.min;
 
   // Helper for a popular repeating case of the spec:
   // Let integer be ? ToInteger(index).
   // If integer < 0, let result be max((length + integer), 0); else let result be min(integer, length).
   var toAbsoluteIndex = function (index, length) {
     var integer = toInteger(index);
-    return integer < 0 ? max(integer + length, 0) : min$1(integer, length);
+    return integer < 0 ? max(integer + length, 0) : min(integer, length);
   };
 
   // `Array.prototype.{ indexOf, includes }` methods implementation
-  var createMethod = function (IS_INCLUDES) {
+  var createMethod$1 = function (IS_INCLUDES) {
     return function ($this, el, fromIndex) {
       var O = toIndexedObject($this);
       var length = toLength(O.length);
@@ -1855,16 +1855,16 @@ var NYCO = (function () {
     };
   };
 
-  var arrayIncludes = {
+  var arrayIncludes$1 = {
     // `Array.prototype.includes` method
     // https://tc39.es/ecma262/#sec-array.prototype.includes
-    includes: createMethod(true),
+    includes: createMethod$1(true),
     // `Array.prototype.indexOf` method
     // https://tc39.es/ecma262/#sec-array.prototype.indexof
-    indexOf: createMethod(false)
+    indexOf: createMethod$1(false)
   };
 
-  var indexOf = arrayIncludes.indexOf;
+  var indexOf = arrayIncludes$1.indexOf;
 
 
   var objectKeysInternal = function (object, names) {
@@ -1872,9 +1872,9 @@ var NYCO = (function () {
     var i = 0;
     var result = [];
     var key;
-    for (key in O) !has(hiddenKeys, key) && has(O, key) && result.push(key);
+    for (key in O) !has$1(hiddenKeys$1, key) && has$1(O, key) && result.push(key);
     // Don't enum bug & hidden keys
-    while (names.length > i) if (has(O, key = names[i++])) {
+    while (names.length > i) if (has$1(O, key = names[i++])) {
       ~indexOf(result, key) || result.push(key);
     }
     return result;
@@ -1891,22 +1891,22 @@ var NYCO = (function () {
     'valueOf'
   ];
 
-  var hiddenKeys$1 = enumBugKeys.concat('length', 'prototype');
+  var hiddenKeys = enumBugKeys.concat('length', 'prototype');
 
   // `Object.getOwnPropertyNames` method
   // https://tc39.es/ecma262/#sec-object.getownpropertynames
-  var f$3 = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
-    return objectKeysInternal(O, hiddenKeys$1);
+  var f$2 = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
+    return objectKeysInternal(O, hiddenKeys);
   };
 
   var objectGetOwnPropertyNames = {
-  	f: f$3
+  	f: f$2
   };
 
-  var f$4 = Object.getOwnPropertySymbols;
+  var f$1 = Object.getOwnPropertySymbols;
 
   var objectGetOwnPropertySymbols = {
-  	f: f$4
+  	f: f$1
   };
 
   // all object keys, includes non-enumerable and symbols
@@ -1922,7 +1922,7 @@ var NYCO = (function () {
     var getOwnPropertyDescriptor = objectGetOwnPropertyDescriptor.f;
     for (var i = 0; i < keys.length; i++) {
       var key = keys[i];
-      if (!has(target, key)) defineProperty(target, key, getOwnPropertyDescriptor(source, key));
+      if (!has$1(target, key)) defineProperty(target, key, getOwnPropertyDescriptor(source, key));
     }
   };
 
@@ -2012,21 +2012,21 @@ var NYCO = (function () {
     return Object.getPrototypeOf(new F()) !== F.prototype;
   });
 
-  var IE_PROTO = sharedKey('IE_PROTO');
+  var IE_PROTO$1 = sharedKey('IE_PROTO');
   var ObjectPrototype = Object.prototype;
 
   // `Object.getPrototypeOf` method
   // https://tc39.es/ecma262/#sec-object.getprototypeof
   var objectGetPrototypeOf = correctPrototypeGetter ? Object.getPrototypeOf : function (O) {
     O = toObject(O);
-    if (has(O, IE_PROTO)) return O[IE_PROTO];
+    if (has$1(O, IE_PROTO$1)) return O[IE_PROTO$1];
     if (typeof O.constructor == 'function' && O instanceof O.constructor) {
       return O.constructor.prototype;
     } return O instanceof Object ? ObjectPrototype : null;
   };
 
   var aPossiblePrototype = function (it) {
-    if (!isObject(it) && it !== null) {
+    if (!isObject$1(it) && it !== null) {
       throw TypeError("Can't set " + String(it) + ' as a prototype');
     } return it;
   };
@@ -2077,7 +2077,7 @@ var NYCO = (function () {
   var LT = '<';
   var PROTOTYPE = 'prototype';
   var SCRIPT = 'script';
-  var IE_PROTO$1 = sharedKey('IE_PROTO');
+  var IE_PROTO = sharedKey('IE_PROTO');
 
   var EmptyConstructor = function () { /* empty */ };
 
@@ -2128,18 +2128,18 @@ var NYCO = (function () {
     return NullProtoObject();
   };
 
-  hiddenKeys[IE_PROTO$1] = true;
+  hiddenKeys$1[IE_PROTO] = true;
 
   // `Object.create` method
   // https://tc39.es/ecma262/#sec-object.create
-  var objectCreate = Object.create || function create(O, Properties) {
+  var objectCreate$1 = Object.create || function create(O, Properties) {
     var result;
     if (O !== null) {
       EmptyConstructor[PROTOTYPE] = anObject(O);
       result = new EmptyConstructor();
       EmptyConstructor[PROTOTYPE] = null;
       // add "__proto__" for Object.getPrototypeOf polyfill
-      result[IE_PROTO$1] = O;
+      result[IE_PROTO] = O;
     } else result = NullProtoObject();
     return Properties === undefined ? result : objectDefineProperties(result, Properties);
   };
@@ -2157,27 +2157,27 @@ var NYCO = (function () {
     && typeof Symbol.iterator == 'symbol';
 
   var WellKnownSymbolsStore = shared('wks');
-  var Symbol$1 = global_1.Symbol;
-  var createWellKnownSymbol = useSymbolAsUid ? Symbol$1 : Symbol$1 && Symbol$1.withoutSetter || uid;
+  var Symbol$3 = global_1.Symbol;
+  var createWellKnownSymbol = useSymbolAsUid ? Symbol$3 : Symbol$3 && Symbol$3.withoutSetter || uid;
 
   var wellKnownSymbol = function (name) {
-    if (!has(WellKnownSymbolsStore, name)) {
-      if (nativeSymbol && has(Symbol$1, name)) WellKnownSymbolsStore[name] = Symbol$1[name];
+    if (!has$1(WellKnownSymbolsStore, name)) {
+      if (nativeSymbol && has$1(Symbol$3, name)) WellKnownSymbolsStore[name] = Symbol$3[name];
       else WellKnownSymbolsStore[name] = createWellKnownSymbol('Symbol.' + name);
     } return WellKnownSymbolsStore[name];
   };
 
   var iterators = {};
 
-  var ITERATOR = wellKnownSymbol('iterator');
-  var ArrayPrototype = Array.prototype;
+  var ITERATOR$5 = wellKnownSymbol('iterator');
+  var ArrayPrototype$1 = Array.prototype;
 
   // check on default Array iterator
   var isArrayIteratorMethod = function (it) {
-    return it !== undefined && (iterators.Array === it || ArrayPrototype[ITERATOR] === it);
+    return it !== undefined && (iterators.Array === it || ArrayPrototype$1[ITERATOR$5] === it);
   };
 
-  var aFunction$1 = function (it) {
+  var aFunction = function (it) {
     if (typeof it != 'function') {
       throw TypeError(String(it) + ' is not a function');
     } return it;
@@ -2185,7 +2185,7 @@ var NYCO = (function () {
 
   // optional / simple context binding
   var functionBindContext = function (fn, that, length) {
-    aFunction$1(fn);
+    aFunction(fn);
     if (that === undefined) return fn;
     switch (length) {
       case 0: return function () {
@@ -2206,14 +2206,14 @@ var NYCO = (function () {
     };
   };
 
-  var TO_STRING_TAG = wellKnownSymbol('toStringTag');
+  var TO_STRING_TAG$3 = wellKnownSymbol('toStringTag');
   var test = {};
 
-  test[TO_STRING_TAG] = 'z';
+  test[TO_STRING_TAG$3] = 'z';
 
   var toStringTagSupport = String(test) === '[object z]';
 
-  var TO_STRING_TAG$1 = wellKnownSymbol('toStringTag');
+  var TO_STRING_TAG$2 = wellKnownSymbol('toStringTag');
   // ES3 wrong here
   var CORRECT_ARGUMENTS = classofRaw(function () { return arguments; }()) == 'Arguments';
 
@@ -2229,17 +2229,17 @@ var NYCO = (function () {
     var O, tag, result;
     return it === undefined ? 'Undefined' : it === null ? 'Null'
       // @@toStringTag case
-      : typeof (tag = tryGet(O = Object(it), TO_STRING_TAG$1)) == 'string' ? tag
+      : typeof (tag = tryGet(O = Object(it), TO_STRING_TAG$2)) == 'string' ? tag
       // builtinTag case
       : CORRECT_ARGUMENTS ? classofRaw(O)
       // ES3 arguments fallback
       : (result = classofRaw(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : result;
   };
 
-  var ITERATOR$1 = wellKnownSymbol('iterator');
+  var ITERATOR$4 = wellKnownSymbol('iterator');
 
   var getIteratorMethod = function (it) {
-    if (it != undefined) return it[ITERATOR$1]
+    if (it != undefined) return it[ITERATOR$4]
       || it['@@iterator']
       || iterators[classof(it)];
   };
@@ -2317,7 +2317,7 @@ var NYCO = (function () {
     return that;
   };
 
-  $AggregateError.prototype = objectCreate(Error.prototype, {
+  $AggregateError.prototype = objectCreate$1(Error.prototype, {
     constructor: createPropertyDescriptor(5, $AggregateError),
     message: createPropertyDescriptor(5, ''),
     name: createPropertyDescriptor(5, 'AggregateError')
@@ -2331,14 +2331,14 @@ var NYCO = (function () {
 
   // `Object.prototype.toString` method implementation
   // https://tc39.es/ecma262/#sec-object.prototype.tostring
-  var objectToString = toStringTagSupport ? {}.toString : function toString() {
+  var objectToString$1 = toStringTagSupport ? {}.toString : function toString() {
     return '[object ' + classof(this) + ']';
   };
 
   // `Object.prototype.toString` method
   // https://tc39.es/ecma262/#sec-object.prototype.tostring
   if (!toStringTagSupport) {
-    redefine(Object.prototype, 'toString', objectToString, { unsafe: true });
+    redefine(Object.prototype, 'toString', objectToString$1, { unsafe: true });
   }
 
   var nativePromiseConstructor = global_1.Promise;
@@ -2348,26 +2348,26 @@ var NYCO = (function () {
     return target;
   };
 
-  var defineProperty = objectDefineProperty.f;
+  var defineProperty$2 = objectDefineProperty.f;
 
 
 
-  var TO_STRING_TAG$2 = wellKnownSymbol('toStringTag');
+  var TO_STRING_TAG$1 = wellKnownSymbol('toStringTag');
 
   var setToStringTag = function (it, TAG, STATIC) {
-    if (it && !has(it = STATIC ? it : it.prototype, TO_STRING_TAG$2)) {
-      defineProperty(it, TO_STRING_TAG$2, { configurable: true, value: TAG });
+    if (it && !has$1(it = STATIC ? it : it.prototype, TO_STRING_TAG$1)) {
+      defineProperty$2(it, TO_STRING_TAG$1, { configurable: true, value: TAG });
     }
   };
 
-  var SPECIES = wellKnownSymbol('species');
+  var SPECIES$2 = wellKnownSymbol('species');
 
   var setSpecies = function (CONSTRUCTOR_NAME) {
     var Constructor = getBuiltIn(CONSTRUCTOR_NAME);
     var defineProperty = objectDefineProperty.f;
 
-    if (descriptors && Constructor && !Constructor[SPECIES]) {
-      defineProperty(Constructor, SPECIES, {
+    if (descriptors && Constructor && !Constructor[SPECIES$2]) {
+      defineProperty(Constructor, SPECIES$2, {
         configurable: true,
         get: function () { return this; }
       });
@@ -2380,7 +2380,7 @@ var NYCO = (function () {
     } return it;
   };
 
-  var ITERATOR$2 = wellKnownSymbol('iterator');
+  var ITERATOR$3 = wellKnownSymbol('iterator');
   var SAFE_CLOSING = false;
 
   try {
@@ -2393,7 +2393,7 @@ var NYCO = (function () {
         SAFE_CLOSING = true;
       }
     };
-    iteratorWithReturn[ITERATOR$2] = function () {
+    iteratorWithReturn[ITERATOR$3] = function () {
       return this;
     };
     // eslint-disable-next-line no-throw-literal
@@ -2405,7 +2405,7 @@ var NYCO = (function () {
     var ITERATION_SUPPORT = false;
     try {
       var object = {};
-      object[ITERATOR$2] = function () {
+      object[ITERATOR$3] = function () {
         return {
           next: function () {
             return { done: ITERATION_SUPPORT = true };
@@ -2424,7 +2424,7 @@ var NYCO = (function () {
   var speciesConstructor = function (O, defaultConstructor) {
     var C = anObject(O).constructor;
     var S;
-    return C === undefined || (S = anObject(C)[SPECIES$1]) == undefined ? defaultConstructor : aFunction$1(S);
+    return C === undefined || (S = anObject(C)[SPECIES$1]) == undefined ? defaultConstructor : aFunction(S);
   };
 
   var engineUserAgent = getBuiltIn('navigator', 'userAgent') || '';
@@ -2434,9 +2434,9 @@ var NYCO = (function () {
   var engineIsNode = classofRaw(global_1.process) == 'process';
 
   var location = global_1.location;
-  var set$1 = global_1.setImmediate;
+  var set = global_1.setImmediate;
   var clear = global_1.clearImmediate;
-  var process = global_1.process;
+  var process$3 = global_1.process;
   var MessageChannel = global_1.MessageChannel;
   var Dispatch = global_1.Dispatch;
   var counter = 0;
@@ -2469,8 +2469,8 @@ var NYCO = (function () {
   };
 
   // Node.js 0.9+ & IE10+ has setImmediate, otherwise:
-  if (!set$1 || !clear) {
-    set$1 = function setImmediate(fn) {
+  if (!set || !clear) {
+    set = function setImmediate(fn) {
       var args = [];
       var i = 1;
       while (arguments.length > i) args.push(arguments[i++]);
@@ -2487,7 +2487,7 @@ var NYCO = (function () {
     // Node.js 0.8-
     if (engineIsNode) {
       defer = function (id) {
-        process.nextTick(runner(id));
+        process$3.nextTick(runner(id));
       };
     // Sphere (JS game engine) Dispatch API
     } else if (Dispatch && Dispatch.now) {
@@ -2528,41 +2528,41 @@ var NYCO = (function () {
     }
   }
 
-  var task = {
-    set: set$1,
+  var task$1 = {
+    set: set,
     clear: clear
   };
 
   var engineIsWebosWebkit = /web0s(?!.*chrome)/i.test(engineUserAgent);
 
-  var getOwnPropertyDescriptor$2 = objectGetOwnPropertyDescriptor.f;
-  var macrotask = task.set;
+  var getOwnPropertyDescriptor = objectGetOwnPropertyDescriptor.f;
+  var macrotask = task$1.set;
 
 
 
 
   var MutationObserver = global_1.MutationObserver || global_1.WebKitMutationObserver;
   var document$2 = global_1.document;
-  var process$1 = global_1.process;
-  var Promise$1 = global_1.Promise;
+  var process$2 = global_1.process;
+  var Promise$3 = global_1.Promise;
   // Node.js 11 shows ExperimentalWarning on getting `queueMicrotask`
-  var queueMicrotaskDescriptor = getOwnPropertyDescriptor$2(global_1, 'queueMicrotask');
+  var queueMicrotaskDescriptor = getOwnPropertyDescriptor(global_1, 'queueMicrotask');
   var queueMicrotask = queueMicrotaskDescriptor && queueMicrotaskDescriptor.value;
 
-  var flush, head, last, notify, toggle, node, promise, then;
+  var flush, head, last, notify$1, toggle, node, promise, then;
 
   // modern engines have queueMicrotask method
   if (!queueMicrotask) {
     flush = function () {
       var parent, fn;
-      if (engineIsNode && (parent = process$1.domain)) parent.exit();
+      if (engineIsNode && (parent = process$2.domain)) parent.exit();
       while (head) {
         fn = head.fn;
         head = head.next;
         try {
           fn();
         } catch (error) {
-          if (head) notify();
+          if (head) notify$1();
           else last = undefined;
           throw error;
         }
@@ -2576,21 +2576,21 @@ var NYCO = (function () {
       toggle = true;
       node = document$2.createTextNode('');
       new MutationObserver(flush).observe(node, { characterData: true });
-      notify = function () {
+      notify$1 = function () {
         node.data = toggle = !toggle;
       };
     // environments with maybe non-completely correct, but existent Promise
-    } else if (Promise$1 && Promise$1.resolve) {
+    } else if (Promise$3 && Promise$3.resolve) {
       // Promise.resolve without an argument throws an error in LG WebOS 2
-      promise = Promise$1.resolve(undefined);
+      promise = Promise$3.resolve(undefined);
       then = promise.then;
-      notify = function () {
+      notify$1 = function () {
         then.call(promise, flush);
       };
     // Node.js without promises
     } else if (engineIsNode) {
-      notify = function () {
-        process$1.nextTick(flush);
+      notify$1 = function () {
+        process$2.nextTick(flush);
       };
     // for other environments - macrotask based on:
     // - setImmediate
@@ -2599,7 +2599,7 @@ var NYCO = (function () {
     // - onreadystatechange
     // - setTimeout
     } else {
-      notify = function () {
+      notify$1 = function () {
         // strange IE + webpack dev server bug - use .call(global)
         macrotask.call(global_1, flush);
       };
@@ -2611,7 +2611,7 @@ var NYCO = (function () {
     if (last) last.next = task;
     if (!head) {
       head = task;
-      notify();
+      notify$1();
     } last = task;
   };
 
@@ -2622,23 +2622,23 @@ var NYCO = (function () {
       resolve = $$resolve;
       reject = $$reject;
     });
-    this.resolve = aFunction$1(resolve);
-    this.reject = aFunction$1(reject);
+    this.resolve = aFunction(resolve);
+    this.reject = aFunction(reject);
   };
 
   // 25.4.1.5 NewPromiseCapability(C)
-  var f$5 = function (C) {
+  var f = function (C) {
     return new PromiseCapability(C);
   };
 
-  var newPromiseCapability = {
-  	f: f$5
+  var newPromiseCapability$1 = {
+  	f: f
   };
 
   var promiseResolve = function (C, x) {
     anObject(C);
-    if (isObject(x) && x.constructor === C) return x;
-    var promiseCapability = newPromiseCapability.f(C);
+    if (isObject$1(x) && x.constructor === C) return x;
+    var promiseCapability = newPromiseCapability$1.f(C);
     var resolve = promiseCapability.resolve;
     resolve(x);
     return promiseCapability.promise;
@@ -2659,8 +2659,8 @@ var NYCO = (function () {
     }
   };
 
-  var process$2 = global_1.process;
-  var versions = process$2 && process$2.versions;
+  var process$1 = global_1.process;
+  var versions = process$1 && process$1.versions;
   var v8 = versions && versions.v8;
   var match, version;
 
@@ -2677,7 +2677,7 @@ var NYCO = (function () {
 
   var engineV8Version = version && +version;
 
-  var task$1 = task.set;
+  var task = task$1.set;
 
 
 
@@ -2689,19 +2689,19 @@ var NYCO = (function () {
 
 
 
-  var SPECIES$2 = wellKnownSymbol('species');
+  var SPECIES = wellKnownSymbol('species');
   var PROMISE = 'Promise';
-  var getInternalState = internalState.get;
-  var setInternalState = internalState.set;
+  var getInternalState$2 = internalState.get;
+  var setInternalState$2 = internalState.set;
   var getInternalPromiseState = internalState.getterFor(PROMISE);
   var PromiseConstructor = nativePromiseConstructor;
   var TypeError$1 = global_1.TypeError;
-  var document$3 = global_1.document;
-  var process$3 = global_1.process;
+  var document$1 = global_1.document;
+  var process = global_1.process;
   var $fetch = getBuiltIn('fetch');
-  var newPromiseCapability$1 = newPromiseCapability.f;
-  var newGenericPromiseCapability = newPromiseCapability$1;
-  var DISPATCH_EVENT = !!(document$3 && document$3.createEvent && global_1.dispatchEvent);
+  var newPromiseCapability = newPromiseCapability$1.f;
+  var newGenericPromiseCapability = newPromiseCapability;
+  var DISPATCH_EVENT = !!(document$1 && document$1.createEvent && global_1.dispatchEvent);
   var NATIVE_REJECTION_EVENT = typeof PromiseRejectionEvent == 'function';
   var UNHANDLED_REJECTION = 'unhandledrejection';
   var REJECTION_HANDLED = 'rejectionhandled';
@@ -2732,7 +2732,7 @@ var NYCO = (function () {
       exec(function () { /* empty */ }, function () { /* empty */ });
     };
     var constructor = promise.constructor = {};
-    constructor[SPECIES$2] = FakePromise;
+    constructor[SPECIES] = FakePromise;
     return !(promise.then(function () { /* empty */ }) instanceof FakePromise);
   });
 
@@ -2743,10 +2743,10 @@ var NYCO = (function () {
   // helpers
   var isThenable = function (it) {
     var then;
-    return isObject(it) && typeof (then = it.then) == 'function' ? then : false;
+    return isObject$1(it) && typeof (then = it.then) == 'function' ? then : false;
   };
 
-  var notify$1 = function (state, isReject) {
+  var notify = function (state, isReject) {
     if (state.notified) return;
     state.notified = true;
     var chain = state.reactions;
@@ -2797,7 +2797,7 @@ var NYCO = (function () {
   var dispatchEvent = function (name, promise, reason) {
     var event, handler;
     if (DISPATCH_EVENT) {
-      event = document$3.createEvent('Event');
+      event = document$1.createEvent('Event');
       event.promise = promise;
       event.reason = reason;
       event.initEvent(name, false, true);
@@ -2808,7 +2808,7 @@ var NYCO = (function () {
   };
 
   var onUnhandled = function (state) {
-    task$1.call(global_1, function () {
+    task.call(global_1, function () {
       var promise = state.facade;
       var value = state.value;
       var IS_UNHANDLED = isUnhandled(state);
@@ -2816,7 +2816,7 @@ var NYCO = (function () {
       if (IS_UNHANDLED) {
         result = perform(function () {
           if (engineIsNode) {
-            process$3.emit('unhandledRejection', value, promise);
+            process.emit('unhandledRejection', value, promise);
           } else dispatchEvent(UNHANDLED_REJECTION, promise, value);
         });
         // Browsers should not trigger `rejectionHandled` event if it was handled here, NodeJS - should
@@ -2831,10 +2831,10 @@ var NYCO = (function () {
   };
 
   var onHandleUnhandled = function (state) {
-    task$1.call(global_1, function () {
+    task.call(global_1, function () {
       var promise = state.facade;
       if (engineIsNode) {
-        process$3.emit('rejectionHandled', promise);
+        process.emit('rejectionHandled', promise);
       } else dispatchEvent(REJECTION_HANDLED, promise, state.value);
     });
   };
@@ -2851,7 +2851,7 @@ var NYCO = (function () {
     if (unwrap) state = unwrap;
     state.value = value;
     state.state = REJECTED;
-    notify$1(state, true);
+    notify(state, true);
   };
 
   var internalResolve = function (state, value, unwrap) {
@@ -2876,7 +2876,7 @@ var NYCO = (function () {
       } else {
         state.value = value;
         state.state = FULFILLED;
-        notify$1(state, false);
+        notify(state, false);
       }
     } catch (error) {
       internalReject({ done: false }, error, state);
@@ -2888,9 +2888,9 @@ var NYCO = (function () {
     // 25.4.3.1 Promise(executor)
     PromiseConstructor = function Promise(executor) {
       anInstance(this, PromiseConstructor, PROMISE);
-      aFunction$1(executor);
+      aFunction(executor);
       Internal.call(this);
-      var state = getInternalState(this);
+      var state = getInternalState$2(this);
       try {
         executor(bind(internalResolve, state), bind(internalReject, state));
       } catch (error) {
@@ -2899,7 +2899,7 @@ var NYCO = (function () {
     };
     // eslint-disable-next-line no-unused-vars
     Internal = function Promise(executor) {
-      setInternalState(this, {
+      setInternalState$2(this, {
         type: PROMISE,
         done: false,
         notified: false,
@@ -2915,13 +2915,13 @@ var NYCO = (function () {
       // https://tc39.es/ecma262/#sec-promise.prototype.then
       then: function then(onFulfilled, onRejected) {
         var state = getInternalPromiseState(this);
-        var reaction = newPromiseCapability$1(speciesConstructor(this, PromiseConstructor));
+        var reaction = newPromiseCapability(speciesConstructor(this, PromiseConstructor));
         reaction.ok = typeof onFulfilled == 'function' ? onFulfilled : true;
         reaction.fail = typeof onRejected == 'function' && onRejected;
-        reaction.domain = engineIsNode ? process$3.domain : undefined;
+        reaction.domain = engineIsNode ? process.domain : undefined;
         state.parent = true;
         state.reactions.push(reaction);
-        if (state.state != PENDING) notify$1(state, false);
+        if (state.state != PENDING) notify(state, false);
         return reaction.promise;
       },
       // `Promise.prototype.catch` method
@@ -2932,12 +2932,12 @@ var NYCO = (function () {
     });
     OwnPromiseCapability = function () {
       var promise = new Internal();
-      var state = getInternalState(promise);
+      var state = getInternalState$2(promise);
       this.promise = promise;
       this.resolve = bind(internalResolve, state);
       this.reject = bind(internalReject, state);
     };
-    newPromiseCapability.f = newPromiseCapability$1 = function (C) {
+    newPromiseCapability$1.f = newPromiseCapability = function (C) {
       return C === PromiseConstructor || C === PromiseWrapper
         ? new OwnPromiseCapability(C)
         : newGenericPromiseCapability(C);
@@ -2979,7 +2979,7 @@ var NYCO = (function () {
     // `Promise.reject` method
     // https://tc39.es/ecma262/#sec-promise.reject
     reject: function reject(r) {
-      var capability = newPromiseCapability$1(this);
+      var capability = newPromiseCapability(this);
       capability.reject.call(undefined, r);
       return capability.promise;
     }
@@ -2998,11 +2998,11 @@ var NYCO = (function () {
     // https://tc39.es/ecma262/#sec-promise.all
     all: function all(iterable) {
       var C = this;
-      var capability = newPromiseCapability$1(C);
+      var capability = newPromiseCapability(C);
       var resolve = capability.resolve;
       var reject = capability.reject;
       var result = perform(function () {
-        var $promiseResolve = aFunction$1(C.resolve);
+        var $promiseResolve = aFunction(C.resolve);
         var values = [];
         var counter = 0;
         var remaining = 1;
@@ -3027,10 +3027,10 @@ var NYCO = (function () {
     // https://tc39.es/ecma262/#sec-promise.race
     race: function race(iterable) {
       var C = this;
-      var capability = newPromiseCapability$1(C);
+      var capability = newPromiseCapability(C);
       var reject = capability.reject;
       var result = perform(function () {
-        var $promiseResolve = aFunction$1(C.resolve);
+        var $promiseResolve = aFunction(C.resolve);
         iterate(iterable, function (promise) {
           $promiseResolve.call(C, promise).then(capability.resolve, reject);
         });
@@ -3045,11 +3045,11 @@ var NYCO = (function () {
   _export({ target: 'Promise', stat: true }, {
     allSettled: function allSettled(iterable) {
       var C = this;
-      var capability = newPromiseCapability.f(C);
+      var capability = newPromiseCapability$1.f(C);
       var resolve = capability.resolve;
       var reject = capability.reject;
       var result = perform(function () {
-        var promiseResolve = aFunction$1(C.resolve);
+        var promiseResolve = aFunction(C.resolve);
         var values = [];
         var counter = 0;
         var remaining = 1;
@@ -3084,11 +3084,11 @@ var NYCO = (function () {
   _export({ target: 'Promise', stat: true }, {
     any: function any(iterable) {
       var C = this;
-      var capability = newPromiseCapability.f(C);
+      var capability = newPromiseCapability$1.f(C);
       var resolve = capability.resolve;
       var reject = capability.reject;
       var result = perform(function () {
-        var promiseResolve = aFunction$1(C.resolve);
+        var promiseResolve = aFunction(C.resolve);
         var errors = [];
         var counter = 0;
         var remaining = 1;
@@ -3144,7 +3144,7 @@ var NYCO = (function () {
   }
 
   // `String.prototype.{ codePointAt, at }` methods implementation
-  var createMethod$1 = function (CONVERT_TO_STRING) {
+  var createMethod = function (CONVERT_TO_STRING) {
     return function ($this, pos) {
       var S = String(requireObjectCoercible($this));
       var position = toInteger(pos);
@@ -3162,41 +3162,41 @@ var NYCO = (function () {
   var stringMultibyte = {
     // `String.prototype.codePointAt` method
     // https://tc39.es/ecma262/#sec-string.prototype.codepointat
-    codeAt: createMethod$1(false),
+    codeAt: createMethod(false),
     // `String.prototype.at` method
     // https://github.com/mathiasbynens/String.prototype.at
-    charAt: createMethod$1(true)
+    charAt: createMethod(true)
   };
 
-  var ITERATOR$3 = wellKnownSymbol('iterator');
-  var BUGGY_SAFARI_ITERATORS = false;
+  var ITERATOR$2 = wellKnownSymbol('iterator');
+  var BUGGY_SAFARI_ITERATORS$1 = false;
 
-  var returnThis = function () { return this; };
+  var returnThis$2 = function () { return this; };
 
   // `%IteratorPrototype%` object
   // https://tc39.es/ecma262/#sec-%iteratorprototype%-object
-  var IteratorPrototype, PrototypeOfArrayIteratorPrototype, arrayIterator;
+  var IteratorPrototype$2, PrototypeOfArrayIteratorPrototype, arrayIterator;
 
   if ([].keys) {
     arrayIterator = [].keys();
     // Safari 8 has buggy iterators w/o `next`
-    if (!('next' in arrayIterator)) BUGGY_SAFARI_ITERATORS = true;
+    if (!('next' in arrayIterator)) BUGGY_SAFARI_ITERATORS$1 = true;
     else {
       PrototypeOfArrayIteratorPrototype = objectGetPrototypeOf(objectGetPrototypeOf(arrayIterator));
-      if (PrototypeOfArrayIteratorPrototype !== Object.prototype) IteratorPrototype = PrototypeOfArrayIteratorPrototype;
+      if (PrototypeOfArrayIteratorPrototype !== Object.prototype) IteratorPrototype$2 = PrototypeOfArrayIteratorPrototype;
     }
   }
 
-  if (IteratorPrototype == undefined) IteratorPrototype = {};
+  if (IteratorPrototype$2 == undefined) IteratorPrototype$2 = {};
 
   // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-  if (!has(IteratorPrototype, ITERATOR$3)) {
-    createNonEnumerableProperty(IteratorPrototype, ITERATOR$3, returnThis);
+  if (!has$1(IteratorPrototype$2, ITERATOR$2)) {
+    createNonEnumerableProperty(IteratorPrototype$2, ITERATOR$2, returnThis$2);
   }
 
   var iteratorsCore = {
-    IteratorPrototype: IteratorPrototype,
-    BUGGY_SAFARI_ITERATORS: BUGGY_SAFARI_ITERATORS
+    IteratorPrototype: IteratorPrototype$2,
+    BUGGY_SAFARI_ITERATORS: BUGGY_SAFARI_ITERATORS$1
   };
 
   var IteratorPrototype$1 = iteratorsCore.IteratorPrototype;
@@ -3209,27 +3209,27 @@ var NYCO = (function () {
 
   var createIteratorConstructor = function (IteratorConstructor, NAME, next) {
     var TO_STRING_TAG = NAME + ' Iterator';
-    IteratorConstructor.prototype = objectCreate(IteratorPrototype$1, { next: createPropertyDescriptor(1, next) });
+    IteratorConstructor.prototype = objectCreate$1(IteratorPrototype$1, { next: createPropertyDescriptor(1, next) });
     setToStringTag(IteratorConstructor, TO_STRING_TAG, false);
     iterators[TO_STRING_TAG] = returnThis$1;
     return IteratorConstructor;
   };
 
-  var IteratorPrototype$2 = iteratorsCore.IteratorPrototype;
-  var BUGGY_SAFARI_ITERATORS$1 = iteratorsCore.BUGGY_SAFARI_ITERATORS;
-  var ITERATOR$4 = wellKnownSymbol('iterator');
+  var IteratorPrototype = iteratorsCore.IteratorPrototype;
+  var BUGGY_SAFARI_ITERATORS = iteratorsCore.BUGGY_SAFARI_ITERATORS;
+  var ITERATOR$1 = wellKnownSymbol('iterator');
   var KEYS = 'keys';
   var VALUES = 'values';
   var ENTRIES = 'entries';
 
-  var returnThis$2 = function () { return this; };
+  var returnThis = function () { return this; };
 
   var defineIterator = function (Iterable, NAME, IteratorConstructor, next, DEFAULT, IS_SET, FORCED) {
     createIteratorConstructor(IteratorConstructor, NAME, next);
 
     var getIterationMethod = function (KIND) {
       if (KIND === DEFAULT && defaultIterator) return defaultIterator;
-      if (!BUGGY_SAFARI_ITERATORS$1 && KIND in IterablePrototype) return IterablePrototype[KIND];
+      if (!BUGGY_SAFARI_ITERATORS && KIND in IterablePrototype) return IterablePrototype[KIND];
       switch (KIND) {
         case KEYS: return function keys() { return new IteratorConstructor(this, KIND); };
         case VALUES: return function values() { return new IteratorConstructor(this, KIND); };
@@ -3240,22 +3240,22 @@ var NYCO = (function () {
     var TO_STRING_TAG = NAME + ' Iterator';
     var INCORRECT_VALUES_NAME = false;
     var IterablePrototype = Iterable.prototype;
-    var nativeIterator = IterablePrototype[ITERATOR$4]
+    var nativeIterator = IterablePrototype[ITERATOR$1]
       || IterablePrototype['@@iterator']
       || DEFAULT && IterablePrototype[DEFAULT];
-    var defaultIterator = !BUGGY_SAFARI_ITERATORS$1 && nativeIterator || getIterationMethod(DEFAULT);
+    var defaultIterator = !BUGGY_SAFARI_ITERATORS && nativeIterator || getIterationMethod(DEFAULT);
     var anyNativeIterator = NAME == 'Array' ? IterablePrototype.entries || nativeIterator : nativeIterator;
     var CurrentIteratorPrototype, methods, KEY;
 
     // fix native
     if (anyNativeIterator) {
       CurrentIteratorPrototype = objectGetPrototypeOf(anyNativeIterator.call(new Iterable()));
-      if (IteratorPrototype$2 !== Object.prototype && CurrentIteratorPrototype.next) {
-        if (objectGetPrototypeOf(CurrentIteratorPrototype) !== IteratorPrototype$2) {
+      if (IteratorPrototype !== Object.prototype && CurrentIteratorPrototype.next) {
+        if (objectGetPrototypeOf(CurrentIteratorPrototype) !== IteratorPrototype) {
           if (objectSetPrototypeOf) {
-            objectSetPrototypeOf(CurrentIteratorPrototype, IteratorPrototype$2);
-          } else if (typeof CurrentIteratorPrototype[ITERATOR$4] != 'function') {
-            createNonEnumerableProperty(CurrentIteratorPrototype, ITERATOR$4, returnThis$2);
+            objectSetPrototypeOf(CurrentIteratorPrototype, IteratorPrototype);
+          } else if (typeof CurrentIteratorPrototype[ITERATOR$1] != 'function') {
+            createNonEnumerableProperty(CurrentIteratorPrototype, ITERATOR$1, returnThis);
           }
         }
         // Set @@toStringTag to native iterators
@@ -3270,8 +3270,8 @@ var NYCO = (function () {
     }
 
     // define iterator
-    if (IterablePrototype[ITERATOR$4] !== defaultIterator) {
-      createNonEnumerableProperty(IterablePrototype, ITERATOR$4, defaultIterator);
+    if (IterablePrototype[ITERATOR$1] !== defaultIterator) {
+      createNonEnumerableProperty(IterablePrototype, ITERATOR$1, defaultIterator);
     }
     iterators[NAME] = defaultIterator;
 
@@ -3283,10 +3283,10 @@ var NYCO = (function () {
         entries: getIterationMethod(ENTRIES)
       };
       if (FORCED) for (KEY in methods) {
-        if (BUGGY_SAFARI_ITERATORS$1 || INCORRECT_VALUES_NAME || !(KEY in IterablePrototype)) {
+        if (BUGGY_SAFARI_ITERATORS || INCORRECT_VALUES_NAME || !(KEY in IterablePrototype)) {
           redefine(IterablePrototype, KEY, methods[KEY]);
         }
-      } else _export({ target: NAME, proto: true, forced: BUGGY_SAFARI_ITERATORS$1 || INCORRECT_VALUES_NAME }, methods);
+      } else _export({ target: NAME, proto: true, forced: BUGGY_SAFARI_ITERATORS || INCORRECT_VALUES_NAME }, methods);
     }
 
     return methods;
@@ -3358,25 +3358,25 @@ var NYCO = (function () {
   };
 
   var UNSCOPABLES = wellKnownSymbol('unscopables');
-  var ArrayPrototype$1 = Array.prototype;
+  var ArrayPrototype = Array.prototype;
 
   // Array.prototype[@@unscopables]
   // https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
-  if (ArrayPrototype$1[UNSCOPABLES] == undefined) {
-    objectDefineProperty.f(ArrayPrototype$1, UNSCOPABLES, {
+  if (ArrayPrototype[UNSCOPABLES] == undefined) {
+    objectDefineProperty.f(ArrayPrototype, UNSCOPABLES, {
       configurable: true,
-      value: objectCreate(null)
+      value: objectCreate$1(null)
     });
   }
 
   // add a key to Array.prototype[@@unscopables]
   var addToUnscopables = function (key) {
-    ArrayPrototype$1[UNSCOPABLES][key] = true;
+    ArrayPrototype[UNSCOPABLES][key] = true;
   };
 
   var ARRAY_ITERATOR = 'Array Iterator';
-  var setInternalState$2 = internalState.set;
-  var getInternalState$2 = internalState.getterFor(ARRAY_ITERATOR);
+  var setInternalState = internalState.set;
+  var getInternalState = internalState.getterFor(ARRAY_ITERATOR);
 
   // `Array.prototype.entries` method
   // https://tc39.es/ecma262/#sec-array.prototype.entries
@@ -3389,7 +3389,7 @@ var NYCO = (function () {
   // `CreateArrayIterator` internal method
   // https://tc39.es/ecma262/#sec-createarrayiterator
   var es_array_iterator = defineIterator(Array, 'Array', function (iterated, kind) {
-    setInternalState$2(this, {
+    setInternalState(this, {
       type: ARRAY_ITERATOR,
       target: toIndexedObject(iterated), // target
       index: 0,                          // next index
@@ -3398,7 +3398,7 @@ var NYCO = (function () {
   // `%ArrayIteratorPrototype%.next` method
   // https://tc39.es/ecma262/#sec-%arrayiteratorprototype%.next
   }, function () {
-    var state = getInternalState$2(this);
+    var state = getInternalState(this);
     var target = state.target;
     var kind = state.kind;
     var index = state.index++;
@@ -3421,8 +3421,8 @@ var NYCO = (function () {
   addToUnscopables('values');
   addToUnscopables('entries');
 
-  var ITERATOR$5 = wellKnownSymbol('iterator');
-  var TO_STRING_TAG$3 = wellKnownSymbol('toStringTag');
+  var ITERATOR = wellKnownSymbol('iterator');
+  var TO_STRING_TAG = wellKnownSymbol('toStringTag');
   var ArrayValues = es_array_iterator.values;
 
   for (var COLLECTION_NAME in domIterables) {
@@ -3430,13 +3430,13 @@ var NYCO = (function () {
     var CollectionPrototype = Collection && Collection.prototype;
     if (CollectionPrototype) {
       // some Chrome versions have non-configurable methods on DOMTokenList
-      if (CollectionPrototype[ITERATOR$5] !== ArrayValues) try {
-        createNonEnumerableProperty(CollectionPrototype, ITERATOR$5, ArrayValues);
+      if (CollectionPrototype[ITERATOR] !== ArrayValues) try {
+        createNonEnumerableProperty(CollectionPrototype, ITERATOR, ArrayValues);
       } catch (error) {
-        CollectionPrototype[ITERATOR$5] = ArrayValues;
+        CollectionPrototype[ITERATOR] = ArrayValues;
       }
-      if (!CollectionPrototype[TO_STRING_TAG$3]) {
-        createNonEnumerableProperty(CollectionPrototype, TO_STRING_TAG$3, COLLECTION_NAME);
+      if (!CollectionPrototype[TO_STRING_TAG]) {
+        createNonEnumerableProperty(CollectionPrototype, TO_STRING_TAG, COLLECTION_NAME);
       }
       if (domIterables[COLLECTION_NAME]) for (var METHOD_NAME in es_array_iterator) {
         // some Chrome versions have non-configurable methods on DOMTokenList
@@ -3455,7 +3455,7 @@ var NYCO = (function () {
   // https://github.com/tc39/proposal-promise-try
   _export({ target: 'Promise', stat: true }, {
     'try': function (callbackfn) {
-      var promiseCapability = newPromiseCapability.f(this);
+      var promiseCapability = newPromiseCapability$1.f(this);
       var result = perform(callbackfn);
       (result.error ? promiseCapability.reject : promiseCapability.resolve)(result.value);
       return promiseCapability.promise;
@@ -3465,30 +3465,36 @@ var NYCO = (function () {
   /** Detect free variable `global` from Node.js. */
   var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
 
+  var freeGlobal$1 = freeGlobal;
+
   /** Detect free variable `self`. */
   var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
 
   /** Used as a reference to the global object. */
-  var root = freeGlobal || freeSelf || Function('return this')();
+  var root = freeGlobal$1 || freeSelf || Function('return this')();
+
+  var root$1 = root;
 
   /** Built-in value references. */
-  var Symbol$2 = root.Symbol;
+  var Symbol$1 = root$1.Symbol;
+
+  var Symbol$2 = Symbol$1;
 
   /** Used for built-in method references. */
-  var objectProto = Object.prototype;
+  var objectProto$g = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$1 = objectProto.hasOwnProperty;
+  var hasOwnProperty$d = objectProto$g.hasOwnProperty;
 
   /**
    * Used to resolve the
    * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
    * of values.
    */
-  var nativeObjectToString = objectProto.toString;
+  var nativeObjectToString$1 = objectProto$g.toString;
 
   /** Built-in value references. */
-  var symToStringTag = Symbol$2 ? Symbol$2.toStringTag : undefined;
+  var symToStringTag$1 = Symbol$2 ? Symbol$2.toStringTag : undefined;
 
   /**
    * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
@@ -3498,34 +3504,34 @@ var NYCO = (function () {
    * @returns {string} Returns the raw `toStringTag`.
    */
   function getRawTag(value) {
-    var isOwn = hasOwnProperty$1.call(value, symToStringTag),
-        tag = value[symToStringTag];
+    var isOwn = hasOwnProperty$d.call(value, symToStringTag$1),
+        tag = value[symToStringTag$1];
 
     try {
-      value[symToStringTag] = undefined;
+      value[symToStringTag$1] = undefined;
       var unmasked = true;
     } catch (e) {}
 
-    var result = nativeObjectToString.call(value);
+    var result = nativeObjectToString$1.call(value);
     if (unmasked) {
       if (isOwn) {
-        value[symToStringTag] = tag;
+        value[symToStringTag$1] = tag;
       } else {
-        delete value[symToStringTag];
+        delete value[symToStringTag$1];
       }
     }
     return result;
   }
 
   /** Used for built-in method references. */
-  var objectProto$1 = Object.prototype;
+  var objectProto$f = Object.prototype;
 
   /**
    * Used to resolve the
    * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
    * of values.
    */
-  var nativeObjectToString$1 = objectProto$1.toString;
+  var nativeObjectToString = objectProto$f.toString;
 
   /**
    * Converts `value` to a string using `Object.prototype.toString`.
@@ -3534,8 +3540,8 @@ var NYCO = (function () {
    * @param {*} value The value to convert.
    * @returns {string} Returns the converted string.
    */
-  function objectToString$1(value) {
-    return nativeObjectToString$1.call(value);
+  function objectToString(value) {
+    return nativeObjectToString.call(value);
   }
 
   /** `Object#toString` result references. */
@@ -3543,7 +3549,7 @@ var NYCO = (function () {
       undefinedTag = '[object Undefined]';
 
   /** Built-in value references. */
-  var symToStringTag$1 = Symbol$2 ? Symbol$2.toStringTag : undefined;
+  var symToStringTag = Symbol$2 ? Symbol$2.toStringTag : undefined;
 
   /**
    * The base implementation of `getTag` without fallbacks for buggy environments.
@@ -3556,9 +3562,9 @@ var NYCO = (function () {
     if (value == null) {
       return value === undefined ? undefinedTag : nullTag;
     }
-    return (symToStringTag$1 && symToStringTag$1 in Object(value))
+    return (symToStringTag && symToStringTag in Object(value))
       ? getRawTag(value)
-      : objectToString$1(value);
+      : objectToString(value);
   }
 
   /**
@@ -3586,14 +3592,14 @@ var NYCO = (function () {
    * _.isObject(null);
    * // => false
    */
-  function isObject$1(value) {
+  function isObject(value) {
     var type = typeof value;
     return value != null && (type == 'object' || type == 'function');
   }
 
   /** `Object#toString` result references. */
   var asyncTag = '[object AsyncFunction]',
-      funcTag = '[object Function]',
+      funcTag$1 = '[object Function]',
       genTag = '[object GeneratorFunction]',
       proxyTag = '[object Proxy]';
 
@@ -3615,21 +3621,23 @@ var NYCO = (function () {
    * // => false
    */
   function isFunction(value) {
-    if (!isObject$1(value)) {
+    if (!isObject(value)) {
       return false;
     }
     // The use of `Object#toString` avoids issues with the `typeof` operator
     // in Safari 9 which returns 'object' for typed arrays and other constructors.
     var tag = baseGetTag(value);
-    return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+    return tag == funcTag$1 || tag == genTag || tag == asyncTag || tag == proxyTag;
   }
 
   /** Used to detect overreaching core-js shims. */
-  var coreJsData = root['__core-js_shared__'];
+  var coreJsData = root$1['__core-js_shared__'];
+
+  var coreJsData$1 = coreJsData;
 
   /** Used to detect methods masquerading as native. */
   var maskSrcKey = (function() {
-    var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+    var uid = /[^.]+$/.exec(coreJsData$1 && coreJsData$1.keys && coreJsData$1.keys.IE_PROTO || '');
     return uid ? ('Symbol(src)_1.' + uid) : '';
   }());
 
@@ -3645,10 +3653,10 @@ var NYCO = (function () {
   }
 
   /** Used for built-in method references. */
-  var funcProto = Function.prototype;
+  var funcProto$2 = Function.prototype;
 
   /** Used to resolve the decompiled source of functions. */
-  var funcToString = funcProto.toString;
+  var funcToString$2 = funcProto$2.toString;
 
   /**
    * Converts `func` to its source code.
@@ -3660,7 +3668,7 @@ var NYCO = (function () {
   function toSource(func) {
     if (func != null) {
       try {
-        return funcToString.call(func);
+        return funcToString$2.call(func);
       } catch (e) {}
       try {
         return (func + '');
@@ -3680,17 +3688,17 @@ var NYCO = (function () {
 
   /** Used for built-in method references. */
   var funcProto$1 = Function.prototype,
-      objectProto$2 = Object.prototype;
+      objectProto$e = Object.prototype;
 
   /** Used to resolve the decompiled source of functions. */
   var funcToString$1 = funcProto$1.toString;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$2 = objectProto$2.hasOwnProperty;
+  var hasOwnProperty$c = objectProto$e.hasOwnProperty;
 
   /** Used to detect if a method is native. */
   var reIsNative = RegExp('^' +
-    funcToString$1.call(hasOwnProperty$2).replace(reRegExpChar, '\\$&')
+    funcToString$1.call(hasOwnProperty$c).replace(reRegExpChar, '\\$&')
     .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
   );
 
@@ -3703,7 +3711,7 @@ var NYCO = (function () {
    *  else `false`.
    */
   function baseIsNative(value) {
-    if (!isObject$1(value) || isMasked(value)) {
+    if (!isObject(value) || isMasked(value)) {
       return false;
     }
     var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
@@ -3735,13 +3743,15 @@ var NYCO = (function () {
     return baseIsNative(value) ? value : undefined;
   }
 
-  var defineProperty$1 = (function() {
+  var defineProperty = (function() {
     try {
       var func = getNative(Object, 'defineProperty');
       func({}, '', {});
       return func;
     } catch (e) {}
   }());
+
+  var defineProperty$1 = defineProperty;
 
   /**
    * The base implementation of `assignValue` and `assignMergeValue` without
@@ -3802,10 +3812,10 @@ var NYCO = (function () {
   }
 
   /** Used for built-in method references. */
-  var objectProto$3 = Object.prototype;
+  var objectProto$d = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$3 = objectProto$3.hasOwnProperty;
+  var hasOwnProperty$b = objectProto$d.hasOwnProperty;
 
   /**
    * Assigns `value` to `key` of `object` if the existing value is not equivalent
@@ -3819,7 +3829,7 @@ var NYCO = (function () {
    */
   function assignValue(object, key, value) {
     var objValue = object[key];
-    if (!(hasOwnProperty$3.call(object, key) && eq(objValue, value)) ||
+    if (!(hasOwnProperty$b.call(object, key) && eq(objValue, value)) ||
         (value === undefined && !(key in object))) {
       baseAssignValue(object, key, value);
     }
@@ -3976,6 +3986,8 @@ var NYCO = (function () {
     });
   };
 
+  var baseSetToString$1 = baseSetToString;
+
   /** Used to detect hot functions by number of calls within a span of milliseconds. */
   var HOT_COUNT = 800,
       HOT_SPAN = 16;
@@ -4020,7 +4032,9 @@ var NYCO = (function () {
    * @param {Function} string The `toString` result.
    * @returns {Function} Returns `func`.
    */
-  var setToString = shortOut(baseSetToString);
+  var setToString = shortOut(baseSetToString$1);
+
+  var setToString$1 = setToString;
 
   /**
    * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -4031,11 +4045,11 @@ var NYCO = (function () {
    * @returns {Function} Returns the new function.
    */
   function baseRest(func, start) {
-    return setToString(overRest(func, start, identity), func + '');
+    return setToString$1(overRest(func, start, identity), func + '');
   }
 
   /** Used as references for various `Number` constants. */
-  var MAX_SAFE_INTEGER = 9007199254740991;
+  var MAX_SAFE_INTEGER$1 = 9007199254740991;
 
   /**
    * Checks if `value` is a valid array-like length.
@@ -4065,7 +4079,7 @@ var NYCO = (function () {
    */
   function isLength(value) {
     return typeof value == 'number' &&
-      value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+      value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER$1;
   }
 
   /**
@@ -4098,7 +4112,7 @@ var NYCO = (function () {
   }
 
   /** Used as references for various `Number` constants. */
-  var MAX_SAFE_INTEGER$1 = 9007199254740991;
+  var MAX_SAFE_INTEGER = 9007199254740991;
 
   /** Used to detect unsigned integer values. */
   var reIsUint = /^(?:0|[1-9]\d*)$/;
@@ -4113,7 +4127,7 @@ var NYCO = (function () {
    */
   function isIndex(value, length) {
     var type = typeof value;
-    length = length == null ? MAX_SAFE_INTEGER$1 : length;
+    length = length == null ? MAX_SAFE_INTEGER : length;
 
     return !!length &&
       (type == 'number' ||
@@ -4132,7 +4146,7 @@ var NYCO = (function () {
    *  else `false`.
    */
   function isIterateeCall(value, index, object) {
-    if (!isObject$1(object)) {
+    if (!isObject(object)) {
       return false;
     }
     var type = typeof index;
@@ -4226,7 +4240,7 @@ var NYCO = (function () {
   }
 
   /** `Object#toString` result references. */
-  var argsTag = '[object Arguments]';
+  var argsTag$2 = '[object Arguments]';
 
   /**
    * The base implementation of `_.isArguments`.
@@ -4236,17 +4250,17 @@ var NYCO = (function () {
    * @returns {boolean} Returns `true` if `value` is an `arguments` object,
    */
   function baseIsArguments(value) {
-    return isObjectLike(value) && baseGetTag(value) == argsTag;
+    return isObjectLike(value) && baseGetTag(value) == argsTag$2;
   }
 
   /** Used for built-in method references. */
-  var objectProto$4 = Object.prototype;
+  var objectProto$c = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$4 = objectProto$4.hasOwnProperty;
+  var hasOwnProperty$a = objectProto$c.hasOwnProperty;
 
   /** Built-in value references. */
-  var propertyIsEnumerable = objectProto$4.propertyIsEnumerable;
+  var propertyIsEnumerable$1 = objectProto$c.propertyIsEnumerable;
 
   /**
    * Checks if `value` is likely an `arguments` object.
@@ -4267,9 +4281,11 @@ var NYCO = (function () {
    * // => false
    */
   var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
-    return isObjectLike(value) && hasOwnProperty$4.call(value, 'callee') &&
-      !propertyIsEnumerable.call(value, 'callee');
+    return isObjectLike(value) && hasOwnProperty$a.call(value, 'callee') &&
+      !propertyIsEnumerable$1.call(value, 'callee');
   };
+
+  var isArguments$1 = isArguments;
 
   /**
    * Checks if `value` is classified as an `Array` object.
@@ -4296,6 +4312,8 @@ var NYCO = (function () {
    */
   var isArray = Array.isArray;
 
+  var isArray$1 = isArray;
+
   /**
    * This method returns `false`.
    *
@@ -4314,19 +4332,19 @@ var NYCO = (function () {
   }
 
   /** Detect free variable `exports`. */
-  var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+  var freeExports$2 = typeof exports == 'object' && exports && !exports.nodeType && exports;
 
   /** Detect free variable `module`. */
-  var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+  var freeModule$2 = freeExports$2 && typeof module == 'object' && module && !module.nodeType && module;
 
   /** Detect the popular CommonJS extension `module.exports`. */
-  var moduleExports = freeModule && freeModule.exports === freeExports;
+  var moduleExports$2 = freeModule$2 && freeModule$2.exports === freeExports$2;
 
   /** Built-in value references. */
-  var Buffer = moduleExports ? root.Buffer : undefined;
+  var Buffer$1 = moduleExports$2 ? root$1.Buffer : undefined;
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+  var nativeIsBuffer = Buffer$1 ? Buffer$1.isBuffer : undefined;
 
   /**
    * Checks if `value` is a buffer.
@@ -4347,23 +4365,25 @@ var NYCO = (function () {
    */
   var isBuffer = nativeIsBuffer || stubFalse;
 
+  var isBuffer$1 = isBuffer;
+
   /** `Object#toString` result references. */
   var argsTag$1 = '[object Arguments]',
-      arrayTag = '[object Array]',
-      boolTag = '[object Boolean]',
-      dateTag = '[object Date]',
-      errorTag = '[object Error]',
-      funcTag$1 = '[object Function]',
-      mapTag = '[object Map]',
-      numberTag = '[object Number]',
-      objectTag = '[object Object]',
-      regexpTag = '[object RegExp]',
-      setTag = '[object Set]',
-      stringTag = '[object String]',
-      weakMapTag = '[object WeakMap]';
+      arrayTag$1 = '[object Array]',
+      boolTag$1 = '[object Boolean]',
+      dateTag$1 = '[object Date]',
+      errorTag$2 = '[object Error]',
+      funcTag = '[object Function]',
+      mapTag$2 = '[object Map]',
+      numberTag$1 = '[object Number]',
+      objectTag$3 = '[object Object]',
+      regexpTag$1 = '[object RegExp]',
+      setTag$2 = '[object Set]',
+      stringTag$1 = '[object String]',
+      weakMapTag$1 = '[object WeakMap]';
 
-  var arrayBufferTag = '[object ArrayBuffer]',
-      dataViewTag = '[object DataView]',
+  var arrayBufferTag$1 = '[object ArrayBuffer]',
+      dataViewTag$2 = '[object DataView]',
       float32Tag = '[object Float32Array]',
       float64Tag = '[object Float64Array]',
       int8Tag = '[object Int8Array]',
@@ -4381,14 +4401,14 @@ var NYCO = (function () {
   typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
   typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
   typedArrayTags[uint32Tag] = true;
-  typedArrayTags[argsTag$1] = typedArrayTags[arrayTag] =
-  typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
-  typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
-  typedArrayTags[errorTag] = typedArrayTags[funcTag$1] =
-  typedArrayTags[mapTag] = typedArrayTags[numberTag] =
-  typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
-  typedArrayTags[setTag] = typedArrayTags[stringTag] =
-  typedArrayTags[weakMapTag] = false;
+  typedArrayTags[argsTag$1] = typedArrayTags[arrayTag$1] =
+  typedArrayTags[arrayBufferTag$1] = typedArrayTags[boolTag$1] =
+  typedArrayTags[dataViewTag$2] = typedArrayTags[dateTag$1] =
+  typedArrayTags[errorTag$2] = typedArrayTags[funcTag] =
+  typedArrayTags[mapTag$2] = typedArrayTags[numberTag$1] =
+  typedArrayTags[objectTag$3] = typedArrayTags[regexpTag$1] =
+  typedArrayTags[setTag$2] = typedArrayTags[stringTag$1] =
+  typedArrayTags[weakMapTag$1] = false;
 
   /**
    * The base implementation of `_.isTypedArray` without Node.js optimizations.
@@ -4425,7 +4445,7 @@ var NYCO = (function () {
   var moduleExports$1 = freeModule$1 && freeModule$1.exports === freeExports$1;
 
   /** Detect free variable `process` from Node.js. */
-  var freeProcess = moduleExports$1 && freeGlobal.process;
+  var freeProcess = moduleExports$1 && freeGlobal$1.process;
 
   /** Used to access faster Node.js helpers. */
   var nodeUtil = (function() {
@@ -4442,8 +4462,10 @@ var NYCO = (function () {
     } catch (e) {}
   }());
 
+  var nodeUtil$1 = nodeUtil;
+
   /* Node.js helper references. */
-  var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+  var nodeIsTypedArray = nodeUtil$1 && nodeUtil$1.isTypedArray;
 
   /**
    * Checks if `value` is classified as a typed array.
@@ -4464,11 +4486,13 @@ var NYCO = (function () {
    */
   var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
 
+  var isTypedArray$1 = isTypedArray;
+
   /** Used for built-in method references. */
-  var objectProto$5 = Object.prototype;
+  var objectProto$b = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$5 = objectProto$5.hasOwnProperty;
+  var hasOwnProperty$9 = objectProto$b.hasOwnProperty;
 
   /**
    * Creates an array of the enumerable property names of the array-like `value`.
@@ -4479,16 +4503,16 @@ var NYCO = (function () {
    * @returns {Array} Returns the array of property names.
    */
   function arrayLikeKeys(value, inherited) {
-    var isArr = isArray(value),
-        isArg = !isArr && isArguments(value),
-        isBuff = !isArr && !isArg && isBuffer(value),
-        isType = !isArr && !isArg && !isBuff && isTypedArray(value),
+    var isArr = isArray$1(value),
+        isArg = !isArr && isArguments$1(value),
+        isBuff = !isArr && !isArg && isBuffer$1(value),
+        isType = !isArr && !isArg && !isBuff && isTypedArray$1(value),
         skipIndexes = isArr || isArg || isBuff || isType,
         result = skipIndexes ? baseTimes(value.length, String) : [],
         length = result.length;
 
     for (var key in value) {
-      if ((inherited || hasOwnProperty$5.call(value, key)) &&
+      if ((inherited || hasOwnProperty$9.call(value, key)) &&
           !(skipIndexes && (
              // Safari 9 has enumerable `arguments.length` in strict mode.
              key == 'length' ||
@@ -4506,7 +4530,7 @@ var NYCO = (function () {
   }
 
   /** Used for built-in method references. */
-  var objectProto$6 = Object.prototype;
+  var objectProto$a = Object.prototype;
 
   /**
    * Checks if `value` is likely a prototype object.
@@ -4517,7 +4541,7 @@ var NYCO = (function () {
    */
   function isPrototype(value) {
     var Ctor = value && value.constructor,
-        proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto$6;
+        proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto$a;
 
     return value === proto;
   }
@@ -4542,10 +4566,10 @@ var NYCO = (function () {
   }
 
   /** Used for built-in method references. */
-  var objectProto$7 = Object.prototype;
+  var objectProto$9 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$6 = objectProto$7.hasOwnProperty;
+  var hasOwnProperty$8 = objectProto$9.hasOwnProperty;
 
   /**
    * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
@@ -4555,14 +4579,14 @@ var NYCO = (function () {
    * @returns {Array} Returns the array of property names.
    */
   function baseKeysIn(object) {
-    if (!isObject$1(object)) {
+    if (!isObject(object)) {
       return nativeKeysIn(object);
     }
     var isProto = isPrototype(object),
         result = [];
 
     for (var key in object) {
-      if (!(key == 'constructor' && (isProto || !hasOwnProperty$6.call(object, key)))) {
+      if (!(key == 'constructor' && (isProto || !hasOwnProperty$8.call(object, key)))) {
         result.push(key);
       }
     }
@@ -4629,6 +4653,8 @@ var NYCO = (function () {
     copyObject(source, keysIn(source), object, customizer);
   });
 
+  var assignInWith$1 = assignInWith;
+
   /**
    * Creates a unary function that invokes `func` with its argument transformed.
    *
@@ -4646,21 +4672,23 @@ var NYCO = (function () {
   /** Built-in value references. */
   var getPrototype = overArg(Object.getPrototypeOf, Object);
 
+  var getPrototype$1 = getPrototype;
+
   /** `Object#toString` result references. */
-  var objectTag$1 = '[object Object]';
+  var objectTag$2 = '[object Object]';
 
   /** Used for built-in method references. */
-  var funcProto$2 = Function.prototype,
+  var funcProto = Function.prototype,
       objectProto$8 = Object.prototype;
 
   /** Used to resolve the decompiled source of functions. */
-  var funcToString$2 = funcProto$2.toString;
+  var funcToString = funcProto.toString;
 
   /** Used to check objects for own properties. */
   var hasOwnProperty$7 = objectProto$8.hasOwnProperty;
 
   /** Used to infer the `Object` constructor. */
-  var objectCtorString = funcToString$2.call(Object);
+  var objectCtorString = funcToString.call(Object);
 
   /**
    * Checks if `value` is a plain object, that is, an object created by the
@@ -4691,16 +4719,16 @@ var NYCO = (function () {
    * // => true
    */
   function isPlainObject(value) {
-    if (!isObjectLike(value) || baseGetTag(value) != objectTag$1) {
+    if (!isObjectLike(value) || baseGetTag(value) != objectTag$2) {
       return false;
     }
-    var proto = getPrototype(value);
+    var proto = getPrototype$1(value);
     if (proto === null) {
       return true;
     }
     var Ctor = hasOwnProperty$7.call(proto, 'constructor') && proto.constructor;
     return typeof Ctor == 'function' && Ctor instanceof Ctor &&
-      funcToString$2.call(Ctor) == objectCtorString;
+      funcToString.call(Ctor) == objectCtorString;
   }
 
   /** `Object#toString` result references. */
@@ -4764,6 +4792,8 @@ var NYCO = (function () {
     }
   });
 
+  var attempt$1 = attempt;
+
   /**
    * A specialized version of `_.map` for arrays without support for iteratee
    * shorthands.
@@ -4801,10 +4831,10 @@ var NYCO = (function () {
   }
 
   /** Used for built-in method references. */
-  var objectProto$9 = Object.prototype;
+  var objectProto$7 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$8 = objectProto$9.hasOwnProperty;
+  var hasOwnProperty$6 = objectProto$7.hasOwnProperty;
 
   /**
    * Used by `_.defaults` to customize its `_.assignIn` use to assign properties
@@ -4820,7 +4850,7 @@ var NYCO = (function () {
    */
   function customDefaultsAssignIn(objValue, srcValue, key, object) {
     if (objValue === undefined ||
-        (eq(objValue, objectProto$9[key]) && !hasOwnProperty$8.call(object, key))) {
+        (eq(objValue, objectProto$7[key]) && !hasOwnProperty$6.call(object, key))) {
       return srcValue;
     }
     return objValue;
@@ -4850,11 +4880,13 @@ var NYCO = (function () {
   /* Built-in method references for those with the same name as other `lodash` methods. */
   var nativeKeys = overArg(Object.keys, Object);
 
+  var nativeKeys$1 = nativeKeys;
+
   /** Used for built-in method references. */
-  var objectProto$a = Object.prototype;
+  var objectProto$6 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$9 = objectProto$a.hasOwnProperty;
+  var hasOwnProperty$5 = objectProto$6.hasOwnProperty;
 
   /**
    * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
@@ -4865,11 +4897,11 @@ var NYCO = (function () {
    */
   function baseKeys(object) {
     if (!isPrototype(object)) {
-      return nativeKeys(object);
+      return nativeKeys$1(object);
     }
     var result = [];
     for (var key in Object(object)) {
-      if (hasOwnProperty$9.call(object, key) && key != 'constructor') {
+      if (hasOwnProperty$5.call(object, key) && key != 'constructor') {
         result.push(key);
       }
     }
@@ -4904,12 +4936,14 @@ var NYCO = (function () {
    * _.keys('hi');
    * // => ['0', '1']
    */
-  function keys$1(object) {
+  function keys(object) {
     return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
   }
 
   /** Used to match template delimiters. */
   var reInterpolate = /<%=([\s\S]+?)%>/g;
+
+  var reInterpolate$1 = reInterpolate;
 
   /**
    * The base implementation of `_.propertyOf` without support for deep paths.
@@ -4942,8 +4976,10 @@ var NYCO = (function () {
    */
   var escapeHtmlChar = basePropertyOf(htmlEscapes);
 
+  var escapeHtmlChar$1 = escapeHtmlChar;
+
   /** `Object#toString` result references. */
-  var symbolTag = '[object Symbol]';
+  var symbolTag$1 = '[object Symbol]';
 
   /**
    * Checks if `value` is classified as a `Symbol` primitive or object.
@@ -4964,15 +5000,15 @@ var NYCO = (function () {
    */
   function isSymbol(value) {
     return typeof value == 'symbol' ||
-      (isObjectLike(value) && baseGetTag(value) == symbolTag);
+      (isObjectLike(value) && baseGetTag(value) == symbolTag$1);
   }
 
   /** Used as references for various `Number` constants. */
-  var INFINITY = 1 / 0;
+  var INFINITY$2 = 1 / 0;
 
   /** Used to convert symbols to primitives and strings. */
-  var symbolProto = Symbol$2 ? Symbol$2.prototype : undefined,
-      symbolToString = symbolProto ? symbolProto.toString : undefined;
+  var symbolProto$1 = Symbol$2 ? Symbol$2.prototype : undefined,
+      symbolToString = symbolProto$1 ? symbolProto$1.toString : undefined;
 
   /**
    * The base implementation of `_.toString` which doesn't convert nullish
@@ -4987,7 +5023,7 @@ var NYCO = (function () {
     if (typeof value == 'string') {
       return value;
     }
-    if (isArray(value)) {
+    if (isArray$1(value)) {
       // Recursively convert values (susceptible to call stack limits).
       return arrayMap(value, baseToString) + '';
     }
@@ -4995,7 +5031,7 @@ var NYCO = (function () {
       return symbolToString ? symbolToString.call(value) : '';
     }
     var result = (value + '');
-    return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+    return (result == '0' && (1 / value) == -INFINITY$2) ? '-0' : result;
   }
 
   /**
@@ -5019,7 +5055,7 @@ var NYCO = (function () {
    * _.toString([1, 2, 3]);
    * // => '1,2,3'
    */
-  function toString$1(value) {
+  function toString(value) {
     return value == null ? '' : baseToString(value);
   }
 
@@ -5056,17 +5092,21 @@ var NYCO = (function () {
    * // => 'fred, barney, &amp; pebbles'
    */
   function escape(string) {
-    string = toString$1(string);
+    string = toString(string);
     return (string && reHasUnescapedHtml.test(string))
-      ? string.replace(reUnescapedHtml, escapeHtmlChar)
+      ? string.replace(reUnescapedHtml, escapeHtmlChar$1)
       : string;
   }
 
   /** Used to match template delimiters. */
   var reEscape = /<%-([\s\S]+?)%>/g;
 
+  var reEscape$1 = reEscape;
+
   /** Used to match template delimiters. */
   var reEvaluate = /<%([\s\S]+?)%>/g;
+
+  var reEvaluate$1 = reEvaluate;
 
   /**
    * By default, the template delimiters used by lodash are like those in
@@ -5085,7 +5125,7 @@ var NYCO = (function () {
      * @memberOf _.templateSettings
      * @type {RegExp}
      */
-    'escape': reEscape,
+    'escape': reEscape$1,
 
     /**
      * Used to detect code to be evaluated.
@@ -5093,7 +5133,7 @@ var NYCO = (function () {
      * @memberOf _.templateSettings
      * @type {RegExp}
      */
-    'evaluate': reEvaluate,
+    'evaluate': reEvaluate$1,
 
     /**
      * Used to detect `data` property values to inject.
@@ -5101,7 +5141,7 @@ var NYCO = (function () {
      * @memberOf _.templateSettings
      * @type {RegExp}
      */
-    'interpolate': reInterpolate,
+    'interpolate': reInterpolate$1,
 
     /**
      * Used to reference the data object in the template text.
@@ -5129,10 +5169,27 @@ var NYCO = (function () {
     }
   };
 
+  var templateSettings$1 = templateSettings;
+
+  /** Error message constants. */
+  var INVALID_TEMPL_VAR_ERROR_TEXT = 'Invalid `variable` option passed into `_.template`';
+
   /** Used to match empty string literals in compiled template source. */
   var reEmptyStringLeading = /\b__p \+= '';/g,
       reEmptyStringMiddle = /\b(__p \+=) '' \+/g,
       reEmptyStringTrailing = /(__e\(.*?\)|\b__t\)) \+\n'';/g;
+
+  /**
+   * Used to validate the `validate` option in `_.template` variable.
+   *
+   * Forbids characters which could potentially change the meaning of the function argument definition:
+   * - "()," (modification of function parameters)
+   * - "=" (default value)
+   * - "[]{}" (destructuring of function parameters)
+   * - "/" (beginning of a comment)
+   * - whitespace
+   */
+  var reForbiddenIdentifierChars = /[()=,{}\[\]\/\s]/;
 
   /**
    * Used to match
@@ -5147,10 +5204,10 @@ var NYCO = (function () {
   var reUnescapedString = /['\n\r\u2028\u2029\\]/g;
 
   /** Used for built-in method references. */
-  var objectProto$b = Object.prototype;
+  var objectProto$5 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$a = objectProto$b.hasOwnProperty;
+  var hasOwnProperty$4 = objectProto$5.hasOwnProperty;
 
   /**
    * Creates a compiled template function that can interpolate data properties
@@ -5260,16 +5317,16 @@ var NYCO = (function () {
     // Based on John Resig's `tmpl` implementation
     // (http://ejohn.org/blog/javascript-micro-templating/)
     // and Laura Doktorova's doT.js (https://github.com/olado/doT).
-    var settings = templateSettings.imports._.templateSettings || templateSettings;
+    var settings = templateSettings$1.imports._.templateSettings || templateSettings$1;
 
     if (guard && isIterateeCall(string, options, guard)) {
       options = undefined;
     }
-    string = toString$1(string);
-    options = assignInWith({}, options, settings, customDefaultsAssignIn);
+    string = toString(string);
+    options = assignInWith$1({}, options, settings, customDefaultsAssignIn);
 
-    var imports = assignInWith({}, options.imports, settings.imports, customDefaultsAssignIn),
-        importsKeys = keys$1(imports),
+    var imports = assignInWith$1({}, options.imports, settings.imports, customDefaultsAssignIn),
+        importsKeys = keys(imports),
         importsValues = baseValues(imports, importsKeys);
 
     var isEscaping,
@@ -5282,17 +5339,17 @@ var NYCO = (function () {
     var reDelimiters = RegExp(
       (options.escape || reNoMatch).source + '|' +
       interpolate.source + '|' +
-      (interpolate === reInterpolate ? reEsTemplate : reNoMatch).source + '|' +
+      (interpolate === reInterpolate$1 ? reEsTemplate : reNoMatch).source + '|' +
       (options.evaluate || reNoMatch).source + '|$'
     , 'g');
 
     // Use a sourceURL for easier debugging.
     // The sourceURL gets injected into the source that's eval-ed, so be careful
-    // with lookup (in case of e.g. prototype pollution), and strip newlines if any.
-    // A newline wouldn't be a valid sourceURL anyway, and it'd enable code injection.
-    var sourceURL = hasOwnProperty$a.call(options, 'sourceURL')
+    // to normalize all kinds of whitespace, so e.g. newlines (and unicode versions of it) can't sneak in
+    // and escape the comment, thus injecting code that gets evaled.
+    var sourceURL = hasOwnProperty$4.call(options, 'sourceURL')
       ? ('//# sourceURL=' +
-         (options.sourceURL + '').replace(/[\r\n]/g, ' ') +
+         (options.sourceURL + '').replace(/\s/g, ' ') +
          '\n')
       : '';
 
@@ -5325,12 +5382,16 @@ var NYCO = (function () {
 
     // If `variable` is not specified wrap a with-statement around the generated
     // code to add the data object to the top of the scope chain.
-    // Like with sourceURL, we take care to not check the option's prototype,
-    // as this configuration is a code injection vector.
-    var variable = hasOwnProperty$a.call(options, 'variable') && options.variable;
+    var variable = hasOwnProperty$4.call(options, 'variable') && options.variable;
     if (!variable) {
       source = 'with (obj) {\n' + source + '\n}\n';
     }
+    // Throw an error if a forbidden character was found in `variable`, to prevent
+    // potential command injection attacks.
+    else if (reForbiddenIdentifierChars.test(variable)) {
+      throw new Error(INVALID_TEMPL_VAR_ERROR_TEXT);
+    }
+
     // Cleanup code by stripping empty strings.
     source = (isEvaluating ? source.replace(reEmptyStringLeading, '') : source)
       .replace(reEmptyStringMiddle, '$1')
@@ -5355,7 +5416,7 @@ var NYCO = (function () {
       source +
       'return __p\n}';
 
-    var result = attempt(function() {
+    var result = attempt$1(function() {
       return Function(importsKeys, sourceURL + 'return ' + source)
         .apply(undefined, importsValues);
     });
@@ -5427,6 +5488,8 @@ var NYCO = (function () {
    */
   var baseFor = createBaseFor();
 
+  var baseFor$1 = baseFor;
+
   /**
    * The base implementation of `_.forOwn` without support for iteratee shorthands.
    *
@@ -5436,7 +5499,7 @@ var NYCO = (function () {
    * @returns {Object} Returns `object`.
    */
   function baseForOwn(object, iteratee) {
-    return object && baseFor(object, iteratee, keys$1);
+    return object && baseFor$1(object, iteratee, keys);
   }
 
   /**
@@ -5477,6 +5540,8 @@ var NYCO = (function () {
    * @returns {Array|Object} Returns `collection`.
    */
   var baseEach = createBaseEach(baseForOwn);
+
+  var baseEach$1 = baseEach;
 
   /**
    * Casts `value` to `identity` if it's not a function.
@@ -5520,7 +5585,7 @@ var NYCO = (function () {
    * // => Logs 'a' then 'b' (iteration order is not guaranteed).
    */
   function forEach(collection, iteratee) {
-    var func = isArray(collection) ? arrayEach : baseEach;
+    var func = isArray$1(collection) ? arrayEach : baseEach$1;
     return func(collection, castFunction(iteratee));
   }
 
@@ -5719,10 +5784,14 @@ var NYCO = (function () {
   }
 
   /* Built-in method references that are verified to be native. */
-  var Map = getNative(root, 'Map');
+  var Map = getNative(root$1, 'Map');
+
+  var Map$1 = Map;
 
   /* Built-in method references that are verified to be native. */
   var nativeCreate = getNative(Object, 'create');
+
+  var nativeCreate$1 = nativeCreate;
 
   /**
    * Removes all key-value entries from the hash.
@@ -5732,7 +5801,7 @@ var NYCO = (function () {
    * @memberOf Hash
    */
   function hashClear() {
-    this.__data__ = nativeCreate ? nativeCreate(null) : {};
+    this.__data__ = nativeCreate$1 ? nativeCreate$1(null) : {};
     this.size = 0;
   }
 
@@ -5753,13 +5822,13 @@ var NYCO = (function () {
   }
 
   /** Used to stand-in for `undefined` hash values. */
-  var HASH_UNDEFINED = '__lodash_hash_undefined__';
+  var HASH_UNDEFINED$2 = '__lodash_hash_undefined__';
 
   /** Used for built-in method references. */
-  var objectProto$c = Object.prototype;
+  var objectProto$4 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$b = objectProto$c.hasOwnProperty;
+  var hasOwnProperty$3 = objectProto$4.hasOwnProperty;
 
   /**
    * Gets the hash value for `key`.
@@ -5772,18 +5841,18 @@ var NYCO = (function () {
    */
   function hashGet(key) {
     var data = this.__data__;
-    if (nativeCreate) {
+    if (nativeCreate$1) {
       var result = data[key];
-      return result === HASH_UNDEFINED ? undefined : result;
+      return result === HASH_UNDEFINED$2 ? undefined : result;
     }
-    return hasOwnProperty$b.call(data, key) ? data[key] : undefined;
+    return hasOwnProperty$3.call(data, key) ? data[key] : undefined;
   }
 
   /** Used for built-in method references. */
-  var objectProto$d = Object.prototype;
+  var objectProto$3 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$c = objectProto$d.hasOwnProperty;
+  var hasOwnProperty$2 = objectProto$3.hasOwnProperty;
 
   /**
    * Checks if a hash value for `key` exists.
@@ -5796,7 +5865,7 @@ var NYCO = (function () {
    */
   function hashHas(key) {
     var data = this.__data__;
-    return nativeCreate ? (data[key] !== undefined) : hasOwnProperty$c.call(data, key);
+    return nativeCreate$1 ? (data[key] !== undefined) : hasOwnProperty$2.call(data, key);
   }
 
   /** Used to stand-in for `undefined` hash values. */
@@ -5815,7 +5884,7 @@ var NYCO = (function () {
   function hashSet(key, value) {
     var data = this.__data__;
     this.size += this.has(key) ? 0 : 1;
-    data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED$1 : value;
+    data[key] = (nativeCreate$1 && value === undefined) ? HASH_UNDEFINED$1 : value;
     return this;
   }
 
@@ -5855,7 +5924,7 @@ var NYCO = (function () {
     this.size = 0;
     this.__data__ = {
       'hash': new Hash,
-      'map': new (Map || ListCache),
+      'map': new (Map$1 || ListCache),
       'string': new Hash
     };
   }
@@ -5975,7 +6044,7 @@ var NYCO = (function () {
   MapCache.prototype.set = mapCacheSet;
 
   /** Used as the size to enable large array optimizations. */
-  var LARGE_ARRAY_SIZE = 200;
+  var LARGE_ARRAY_SIZE$1 = 200;
 
   /**
    * Sets the stack `key` to `value`.
@@ -5991,7 +6060,7 @@ var NYCO = (function () {
     var data = this.__data__;
     if (data instanceof ListCache) {
       var pairs = data.__data__;
-      if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
+      if (!Map$1 || (pairs.length < LARGE_ARRAY_SIZE$1 - 1)) {
         pairs.push([key, value]);
         this.size = ++data.size;
         return this;
@@ -6039,17 +6108,17 @@ var NYCO = (function () {
   }
 
   /** Detect free variable `exports`. */
-  var freeExports$2 = typeof exports == 'object' && exports && !exports.nodeType && exports;
+  var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
 
   /** Detect free variable `module`. */
-  var freeModule$2 = freeExports$2 && typeof module == 'object' && module && !module.nodeType && module;
+  var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
 
   /** Detect the popular CommonJS extension `module.exports`. */
-  var moduleExports$2 = freeModule$2 && freeModule$2.exports === freeExports$2;
+  var moduleExports = freeModule && freeModule.exports === freeExports;
 
   /** Built-in value references. */
-  var Buffer$1 = moduleExports$2 ? root.Buffer : undefined,
-      allocUnsafe = Buffer$1 ? Buffer$1.allocUnsafe : undefined;
+  var Buffer = moduleExports ? root$1.Buffer : undefined,
+      allocUnsafe = Buffer ? Buffer.allocUnsafe : undefined;
 
   /**
    * Creates a clone of  `buffer`.
@@ -6071,7 +6140,9 @@ var NYCO = (function () {
   }
 
   /** Built-in value references. */
-  var Uint8Array = root.Uint8Array;
+  var Uint8Array = root$1.Uint8Array;
+
+  var Uint8Array$1 = Uint8Array;
 
   /**
    * Creates a clone of `arrayBuffer`.
@@ -6082,7 +6153,7 @@ var NYCO = (function () {
    */
   function cloneArrayBuffer(arrayBuffer) {
     var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
-    new Uint8Array(result).set(new Uint8Array(arrayBuffer));
+    new Uint8Array$1(result).set(new Uint8Array$1(arrayBuffer));
     return result;
   }
 
@@ -6119,7 +6190,7 @@ var NYCO = (function () {
   }
 
   /** Built-in value references. */
-  var objectCreate$1 = Object.create;
+  var objectCreate = Object.create;
 
   /**
    * The base implementation of `_.create` without support for assigning
@@ -6132,11 +6203,11 @@ var NYCO = (function () {
   var baseCreate = (function() {
     function object() {}
     return function(proto) {
-      if (!isObject$1(proto)) {
+      if (!isObject(proto)) {
         return {};
       }
-      if (objectCreate$1) {
-        return objectCreate$1(proto);
+      if (objectCreate) {
+        return objectCreate(proto);
       }
       object.prototype = proto;
       var result = new object;
@@ -6144,6 +6215,8 @@ var NYCO = (function () {
       return result;
     };
   }());
+
+  var baseCreate$1 = baseCreate;
 
   /**
    * Initializes an object clone.
@@ -6154,7 +6227,7 @@ var NYCO = (function () {
    */
   function initCloneObject(object) {
     return (typeof object.constructor == 'function' && !isPrototype(object))
-      ? baseCreate(getPrototype(object))
+      ? baseCreate$1(getPrototype$1(object))
       : {};
   }
 
@@ -6266,13 +6339,13 @@ var NYCO = (function () {
     var isCommon = newValue === undefined;
 
     if (isCommon) {
-      var isArr = isArray(srcValue),
-          isBuff = !isArr && isBuffer(srcValue),
-          isTyped = !isArr && !isBuff && isTypedArray(srcValue);
+      var isArr = isArray$1(srcValue),
+          isBuff = !isArr && isBuffer$1(srcValue),
+          isTyped = !isArr && !isBuff && isTypedArray$1(srcValue);
 
       newValue = srcValue;
       if (isArr || isBuff || isTyped) {
-        if (isArray(objValue)) {
+        if (isArray$1(objValue)) {
           newValue = objValue;
         }
         else if (isArrayLikeObject(objValue)) {
@@ -6290,12 +6363,12 @@ var NYCO = (function () {
           newValue = [];
         }
       }
-      else if (isPlainObject(srcValue) || isArguments(srcValue)) {
+      else if (isPlainObject(srcValue) || isArguments$1(srcValue)) {
         newValue = objValue;
-        if (isArguments(objValue)) {
+        if (isArguments$1(objValue)) {
           newValue = toPlainObject(objValue);
         }
-        else if (!isObject$1(objValue) || isFunction(objValue)) {
+        else if (!isObject(objValue) || isFunction(objValue)) {
           newValue = initCloneObject(srcValue);
         }
       }
@@ -6327,9 +6400,9 @@ var NYCO = (function () {
     if (object === source) {
       return;
     }
-    baseFor(source, function(srcValue, key) {
+    baseFor$1(source, function(srcValue, key) {
       stack || (stack = new Stack);
-      if (isObject$1(srcValue)) {
+      if (isObject(srcValue)) {
         baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack);
       }
       else {
@@ -6380,6 +6453,8 @@ var NYCO = (function () {
     baseMerge(object, source, srcIndex);
   });
 
+  var _merge = merge;
+
   /**
    * Creates an array of the own enumerable string keyed property values of `object`.
    *
@@ -6407,11 +6482,208 @@ var NYCO = (function () {
    * // => ['h', 'i']
    */
   function values(object) {
-    return object == null ? [] : baseValues(object, keys$1(object));
+    return object == null ? [] : baseValues(object, keys(object));
+  }
+
+  /** Used to match property names within property paths. */
+  var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+      reIsPlainProp = /^\w*$/;
+
+  /**
+   * Checks if `value` is a property name and not a property path.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @param {Object} [object] The object to query keys on.
+   * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+   */
+  function isKey(value, object) {
+    if (isArray$1(value)) {
+      return false;
+    }
+    var type = typeof value;
+    if (type == 'number' || type == 'symbol' || type == 'boolean' ||
+        value == null || isSymbol(value)) {
+      return true;
+    }
+    return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
+      (object != null && value in Object(object));
+  }
+
+  /** Error message constants. */
+  var FUNC_ERROR_TEXT = 'Expected a function';
+
+  /**
+   * Creates a function that memoizes the result of `func`. If `resolver` is
+   * provided, it determines the cache key for storing the result based on the
+   * arguments provided to the memoized function. By default, the first argument
+   * provided to the memoized function is used as the map cache key. The `func`
+   * is invoked with the `this` binding of the memoized function.
+   *
+   * **Note:** The cache is exposed as the `cache` property on the memoized
+   * function. Its creation may be customized by replacing the `_.memoize.Cache`
+   * constructor with one whose instances implement the
+   * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+   * method interface of `clear`, `delete`, `get`, `has`, and `set`.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Function
+   * @param {Function} func The function to have its output memoized.
+   * @param {Function} [resolver] The function to resolve the cache key.
+   * @returns {Function} Returns the new memoized function.
+   * @example
+   *
+   * var object = { 'a': 1, 'b': 2 };
+   * var other = { 'c': 3, 'd': 4 };
+   *
+   * var values = _.memoize(_.values);
+   * values(object);
+   * // => [1, 2]
+   *
+   * values(other);
+   * // => [3, 4]
+   *
+   * object.a = 2;
+   * values(object);
+   * // => [1, 2]
+   *
+   * // Modify the result cache.
+   * values.cache.set(object, ['a', 'b']);
+   * values(object);
+   * // => ['a', 'b']
+   *
+   * // Replace `_.memoize.Cache`.
+   * _.memoize.Cache = WeakMap;
+   */
+  function memoize(func, resolver) {
+    if (typeof func != 'function' || (resolver != null && typeof resolver != 'function')) {
+      throw new TypeError(FUNC_ERROR_TEXT);
+    }
+    var memoized = function() {
+      var args = arguments,
+          key = resolver ? resolver.apply(this, args) : args[0],
+          cache = memoized.cache;
+
+      if (cache.has(key)) {
+        return cache.get(key);
+      }
+      var result = func.apply(this, args);
+      memoized.cache = cache.set(key, result) || cache;
+      return result;
+    };
+    memoized.cache = new (memoize.Cache || MapCache);
+    return memoized;
+  }
+
+  // Expose `MapCache`.
+  memoize.Cache = MapCache;
+
+  /** Used as the maximum memoize cache size. */
+  var MAX_MEMOIZE_SIZE = 500;
+
+  /**
+   * A specialized version of `_.memoize` which clears the memoized function's
+   * cache when it exceeds `MAX_MEMOIZE_SIZE`.
+   *
+   * @private
+   * @param {Function} func The function to have its output memoized.
+   * @returns {Function} Returns the new memoized function.
+   */
+  function memoizeCapped(func) {
+    var result = memoize(func, function(key) {
+      if (cache.size === MAX_MEMOIZE_SIZE) {
+        cache.clear();
+      }
+      return key;
+    });
+
+    var cache = result.cache;
+    return result;
+  }
+
+  /** Used to match property names within property paths. */
+  var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+
+  /** Used to match backslashes in property paths. */
+  var reEscapeChar = /\\(\\)?/g;
+
+  /**
+   * Converts `string` to a property path array.
+   *
+   * @private
+   * @param {string} string The string to convert.
+   * @returns {Array} Returns the property path array.
+   */
+  var stringToPath = memoizeCapped(function(string) {
+    var result = [];
+    if (string.charCodeAt(0) === 46 /* . */) {
+      result.push('');
+    }
+    string.replace(rePropName, function(match, number, quote, subString) {
+      result.push(quote ? subString.replace(reEscapeChar, '$1') : (number || match));
+    });
+    return result;
+  });
+
+  var stringToPath$1 = stringToPath;
+
+  /**
+   * Casts `value` to a path array if it's not one.
+   *
+   * @private
+   * @param {*} value The value to inspect.
+   * @param {Object} [object] The object to query keys on.
+   * @returns {Array} Returns the cast property path array.
+   */
+  function castPath(value, object) {
+    if (isArray$1(value)) {
+      return value;
+    }
+    return isKey(value, object) ? [value] : stringToPath$1(toString(value));
+  }
+
+  /** Used as references for various `Number` constants. */
+  var INFINITY$1 = 1 / 0;
+
+  /**
+   * Converts `value` to a string key if it's not a string or symbol.
+   *
+   * @private
+   * @param {*} value The value to inspect.
+   * @returns {string|symbol} Returns the key.
+   */
+  function toKey(value) {
+    if (typeof value == 'string' || isSymbol(value)) {
+      return value;
+    }
+    var result = (value + '');
+    return (result == '0' && (1 / value) == -INFINITY$1) ? '-0' : result;
+  }
+
+  /**
+   * The base implementation of `_.get` without support for default values.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {Array|string} path The path of the property to get.
+   * @returns {*} Returns the resolved value.
+   */
+  function baseGet(object, path) {
+    path = castPath(path, object);
+
+    var index = 0,
+        length = path.length;
+
+    while (object != null && index < length) {
+      object = object[toKey(path[index++])];
+    }
+    return (index && index == length) ? object : undefined;
   }
 
   /** Used to stand-in for `undefined` hash values. */
-  var HASH_UNDEFINED$2 = '__lodash_hash_undefined__';
+  var HASH_UNDEFINED = '__lodash_hash_undefined__';
 
   /**
    * Adds `value` to the array cache.
@@ -6424,7 +6696,7 @@ var NYCO = (function () {
    * @returns {Object} Returns the cache instance.
    */
   function setCacheAdd(value) {
-    this.__data__.set(value, HASH_UNDEFINED$2);
+    this.__data__.set(value, HASH_UNDEFINED);
     return this;
   }
 
@@ -6498,8 +6770,8 @@ var NYCO = (function () {
   }
 
   /** Used to compose bitmasks for value comparisons. */
-  var COMPARE_PARTIAL_FLAG = 1,
-      COMPARE_UNORDERED_FLAG = 2;
+  var COMPARE_PARTIAL_FLAG$5 = 1,
+      COMPARE_UNORDERED_FLAG$3 = 2;
 
   /**
    * A specialized version of `baseIsEqualDeep` for arrays with support for
@@ -6515,21 +6787,22 @@ var NYCO = (function () {
    * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
    */
   function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
-    var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+    var isPartial = bitmask & COMPARE_PARTIAL_FLAG$5,
         arrLength = array.length,
         othLength = other.length;
 
     if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
       return false;
     }
-    // Assume cyclic values are equal.
-    var stacked = stack.get(array);
-    if (stacked && stack.get(other)) {
-      return stacked == other;
+    // Check that cyclic values are equal.
+    var arrStacked = stack.get(array);
+    var othStacked = stack.get(other);
+    if (arrStacked && othStacked) {
+      return arrStacked == other && othStacked == array;
     }
     var index = -1,
         result = true,
-        seen = (bitmask & COMPARE_UNORDERED_FLAG) ? new SetCache : undefined;
+        seen = (bitmask & COMPARE_UNORDERED_FLAG$3) ? new SetCache : undefined;
 
     stack.set(array, other);
     stack.set(other, array);
@@ -6610,26 +6883,26 @@ var NYCO = (function () {
   }
 
   /** Used to compose bitmasks for value comparisons. */
-  var COMPARE_PARTIAL_FLAG$1 = 1,
-      COMPARE_UNORDERED_FLAG$1 = 2;
+  var COMPARE_PARTIAL_FLAG$4 = 1,
+      COMPARE_UNORDERED_FLAG$2 = 2;
 
   /** `Object#toString` result references. */
-  var boolTag$1 = '[object Boolean]',
-      dateTag$1 = '[object Date]',
-      errorTag$2 = '[object Error]',
+  var boolTag = '[object Boolean]',
+      dateTag = '[object Date]',
+      errorTag = '[object Error]',
       mapTag$1 = '[object Map]',
-      numberTag$1 = '[object Number]',
-      regexpTag$1 = '[object RegExp]',
+      numberTag = '[object Number]',
+      regexpTag = '[object RegExp]',
       setTag$1 = '[object Set]',
-      stringTag$1 = '[object String]',
-      symbolTag$1 = '[object Symbol]';
+      stringTag = '[object String]',
+      symbolTag = '[object Symbol]';
 
-  var arrayBufferTag$1 = '[object ArrayBuffer]',
+  var arrayBufferTag = '[object ArrayBuffer]',
       dataViewTag$1 = '[object DataView]';
 
   /** Used to convert symbols to primitives and strings. */
-  var symbolProto$1 = Symbol$2 ? Symbol$2.prototype : undefined,
-      symbolValueOf = symbolProto$1 ? symbolProto$1.valueOf : undefined;
+  var symbolProto = Symbol$2 ? Symbol$2.prototype : undefined,
+      symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
 
   /**
    * A specialized version of `baseIsEqualDeep` for comparing objects of
@@ -6658,25 +6931,25 @@ var NYCO = (function () {
         object = object.buffer;
         other = other.buffer;
 
-      case arrayBufferTag$1:
+      case arrayBufferTag:
         if ((object.byteLength != other.byteLength) ||
-            !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+            !equalFunc(new Uint8Array$1(object), new Uint8Array$1(other))) {
           return false;
         }
         return true;
 
-      case boolTag$1:
-      case dateTag$1:
-      case numberTag$1:
+      case boolTag:
+      case dateTag:
+      case numberTag:
         // Coerce booleans to `1` or `0` and dates to milliseconds.
         // Invalid dates are coerced to `NaN`.
         return eq(+object, +other);
 
-      case errorTag$2:
+      case errorTag:
         return object.name == other.name && object.message == other.message;
 
-      case regexpTag$1:
-      case stringTag$1:
+      case regexpTag:
+      case stringTag:
         // Coerce regexes to strings and treat strings, primitives and objects,
         // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
         // for more details.
@@ -6686,7 +6959,7 @@ var NYCO = (function () {
         var convert = mapToArray;
 
       case setTag$1:
-        var isPartial = bitmask & COMPARE_PARTIAL_FLAG$1;
+        var isPartial = bitmask & COMPARE_PARTIAL_FLAG$4;
         convert || (convert = setToArray);
 
         if (object.size != other.size && !isPartial) {
@@ -6697,7 +6970,7 @@ var NYCO = (function () {
         if (stacked) {
           return stacked == other;
         }
-        bitmask |= COMPARE_UNORDERED_FLAG$1;
+        bitmask |= COMPARE_UNORDERED_FLAG$2;
 
         // Recursively compare objects (susceptible to call stack limits).
         stack.set(object, other);
@@ -6705,7 +6978,7 @@ var NYCO = (function () {
         stack['delete'](object);
         return result;
 
-      case symbolTag$1:
+      case symbolTag:
         if (symbolValueOf) {
           return symbolValueOf.call(object) == symbolValueOf.call(other);
         }
@@ -6745,7 +7018,7 @@ var NYCO = (function () {
    */
   function baseGetAllKeys(object, keysFunc, symbolsFunc) {
     var result = keysFunc(object);
-    return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
+    return isArray$1(object) ? result : arrayPush(result, symbolsFunc(object));
   }
 
   /**
@@ -6795,10 +7068,10 @@ var NYCO = (function () {
   }
 
   /** Used for built-in method references. */
-  var objectProto$e = Object.prototype;
+  var objectProto$2 = Object.prototype;
 
   /** Built-in value references. */
-  var propertyIsEnumerable$1 = objectProto$e.propertyIsEnumerable;
+  var propertyIsEnumerable = objectProto$2.propertyIsEnumerable;
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
   var nativeGetSymbols = Object.getOwnPropertySymbols;
@@ -6816,9 +7089,11 @@ var NYCO = (function () {
     }
     object = Object(object);
     return arrayFilter(nativeGetSymbols(object), function(symbol) {
-      return propertyIsEnumerable$1.call(object, symbol);
+      return propertyIsEnumerable.call(object, symbol);
     });
   };
+
+  var getSymbols$1 = getSymbols;
 
   /**
    * Creates an array of own enumerable property names and symbols of `object`.
@@ -6828,17 +7103,17 @@ var NYCO = (function () {
    * @returns {Array} Returns the array of property names and symbols.
    */
   function getAllKeys(object) {
-    return baseGetAllKeys(object, keys$1, getSymbols);
+    return baseGetAllKeys(object, keys, getSymbols$1);
   }
 
   /** Used to compose bitmasks for value comparisons. */
-  var COMPARE_PARTIAL_FLAG$2 = 1;
+  var COMPARE_PARTIAL_FLAG$3 = 1;
 
   /** Used for built-in method references. */
-  var objectProto$f = Object.prototype;
+  var objectProto$1 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$d = objectProto$f.hasOwnProperty;
+  var hasOwnProperty$1 = objectProto$1.hasOwnProperty;
 
   /**
    * A specialized version of `baseIsEqualDeep` for objects with support for
@@ -6854,7 +7129,7 @@ var NYCO = (function () {
    * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
    */
   function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
-    var isPartial = bitmask & COMPARE_PARTIAL_FLAG$2,
+    var isPartial = bitmask & COMPARE_PARTIAL_FLAG$3,
         objProps = getAllKeys(object),
         objLength = objProps.length,
         othProps = getAllKeys(other),
@@ -6866,14 +7141,15 @@ var NYCO = (function () {
     var index = objLength;
     while (index--) {
       var key = objProps[index];
-      if (!(isPartial ? key in other : hasOwnProperty$d.call(other, key))) {
+      if (!(isPartial ? key in other : hasOwnProperty$1.call(other, key))) {
         return false;
       }
     }
-    // Assume cyclic values are equal.
-    var stacked = stack.get(object);
-    if (stacked && stack.get(other)) {
-      return stacked == other;
+    // Check that cyclic values are equal.
+    var objStacked = stack.get(object);
+    var othStacked = stack.get(other);
+    if (objStacked && othStacked) {
+      return objStacked == other && othStacked == object;
     }
     var result = true;
     stack.set(object, other);
@@ -6918,32 +7194,40 @@ var NYCO = (function () {
   }
 
   /* Built-in method references that are verified to be native. */
-  var DataView = getNative(root, 'DataView');
+  var DataView = getNative(root$1, 'DataView');
+
+  var DataView$1 = DataView;
 
   /* Built-in method references that are verified to be native. */
-  var Promise$2 = getNative(root, 'Promise');
+  var Promise$1 = getNative(root$1, 'Promise');
+
+  var Promise$2 = Promise$1;
 
   /* Built-in method references that are verified to be native. */
-  var Set = getNative(root, 'Set');
+  var Set = getNative(root$1, 'Set');
+
+  var Set$1 = Set;
 
   /* Built-in method references that are verified to be native. */
-  var WeakMap$2 = getNative(root, 'WeakMap');
+  var WeakMap = getNative(root$1, 'WeakMap');
+
+  var WeakMap$1 = WeakMap;
 
   /** `Object#toString` result references. */
-  var mapTag$2 = '[object Map]',
-      objectTag$2 = '[object Object]',
+  var mapTag = '[object Map]',
+      objectTag$1 = '[object Object]',
       promiseTag = '[object Promise]',
-      setTag$2 = '[object Set]',
-      weakMapTag$1 = '[object WeakMap]';
+      setTag = '[object Set]',
+      weakMapTag = '[object WeakMap]';
 
-  var dataViewTag$2 = '[object DataView]';
+  var dataViewTag = '[object DataView]';
 
   /** Used to detect maps, sets, and weakmaps. */
-  var dataViewCtorString = toSource(DataView),
-      mapCtorString = toSource(Map),
+  var dataViewCtorString = toSource(DataView$1),
+      mapCtorString = toSource(Map$1),
       promiseCtorString = toSource(Promise$2),
-      setCtorString = toSource(Set),
-      weakMapCtorString = toSource(WeakMap$2);
+      setCtorString = toSource(Set$1),
+      weakMapCtorString = toSource(WeakMap$1);
 
   /**
    * Gets the `toStringTag` of `value`.
@@ -6955,23 +7239,23 @@ var NYCO = (function () {
   var getTag = baseGetTag;
 
   // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
-  if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag$2) ||
-      (Map && getTag(new Map) != mapTag$2) ||
+  if ((DataView$1 && getTag(new DataView$1(new ArrayBuffer(1))) != dataViewTag) ||
+      (Map$1 && getTag(new Map$1) != mapTag) ||
       (Promise$2 && getTag(Promise$2.resolve()) != promiseTag) ||
-      (Set && getTag(new Set) != setTag$2) ||
-      (WeakMap$2 && getTag(new WeakMap$2) != weakMapTag$1)) {
+      (Set$1 && getTag(new Set$1) != setTag) ||
+      (WeakMap$1 && getTag(new WeakMap$1) != weakMapTag)) {
     getTag = function(value) {
       var result = baseGetTag(value),
-          Ctor = result == objectTag$2 ? value.constructor : undefined,
+          Ctor = result == objectTag$1 ? value.constructor : undefined,
           ctorString = Ctor ? toSource(Ctor) : '';
 
       if (ctorString) {
         switch (ctorString) {
-          case dataViewCtorString: return dataViewTag$2;
-          case mapCtorString: return mapTag$2;
+          case dataViewCtorString: return dataViewTag;
+          case mapCtorString: return mapTag;
           case promiseCtorString: return promiseTag;
-          case setCtorString: return setTag$2;
-          case weakMapCtorString: return weakMapTag$1;
+          case setCtorString: return setTag;
+          case weakMapCtorString: return weakMapTag;
         }
       }
       return result;
@@ -6981,18 +7265,18 @@ var NYCO = (function () {
   var getTag$1 = getTag;
 
   /** Used to compose bitmasks for value comparisons. */
-  var COMPARE_PARTIAL_FLAG$3 = 1;
+  var COMPARE_PARTIAL_FLAG$2 = 1;
 
   /** `Object#toString` result references. */
-  var argsTag$2 = '[object Arguments]',
-      arrayTag$1 = '[object Array]',
-      objectTag$3 = '[object Object]';
+  var argsTag = '[object Arguments]',
+      arrayTag = '[object Array]',
+      objectTag = '[object Object]';
 
   /** Used for built-in method references. */
-  var objectProto$g = Object.prototype;
+  var objectProto = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$e = objectProto$g.hasOwnProperty;
+  var hasOwnProperty = objectProto.hasOwnProperty;
 
   /**
    * A specialized version of `baseIsEqual` for arrays and objects which performs
@@ -7009,20 +7293,20 @@ var NYCO = (function () {
    * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
    */
   function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
-    var objIsArr = isArray(object),
-        othIsArr = isArray(other),
-        objTag = objIsArr ? arrayTag$1 : getTag$1(object),
-        othTag = othIsArr ? arrayTag$1 : getTag$1(other);
+    var objIsArr = isArray$1(object),
+        othIsArr = isArray$1(other),
+        objTag = objIsArr ? arrayTag : getTag$1(object),
+        othTag = othIsArr ? arrayTag : getTag$1(other);
 
-    objTag = objTag == argsTag$2 ? objectTag$3 : objTag;
-    othTag = othTag == argsTag$2 ? objectTag$3 : othTag;
+    objTag = objTag == argsTag ? objectTag : objTag;
+    othTag = othTag == argsTag ? objectTag : othTag;
 
-    var objIsObj = objTag == objectTag$3,
-        othIsObj = othTag == objectTag$3,
+    var objIsObj = objTag == objectTag,
+        othIsObj = othTag == objectTag,
         isSameTag = objTag == othTag;
 
-    if (isSameTag && isBuffer(object)) {
-      if (!isBuffer(other)) {
+    if (isSameTag && isBuffer$1(object)) {
+      if (!isBuffer$1(other)) {
         return false;
       }
       objIsArr = true;
@@ -7030,13 +7314,13 @@ var NYCO = (function () {
     }
     if (isSameTag && !objIsObj) {
       stack || (stack = new Stack);
-      return (objIsArr || isTypedArray(object))
+      return (objIsArr || isTypedArray$1(object))
         ? equalArrays(object, other, bitmask, customizer, equalFunc, stack)
         : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);
     }
-    if (!(bitmask & COMPARE_PARTIAL_FLAG$3)) {
-      var objIsWrapped = objIsObj && hasOwnProperty$e.call(object, '__wrapped__'),
-          othIsWrapped = othIsObj && hasOwnProperty$e.call(other, '__wrapped__');
+    if (!(bitmask & COMPARE_PARTIAL_FLAG$2)) {
+      var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+          othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
 
       if (objIsWrapped || othIsWrapped) {
         var objUnwrapped = objIsWrapped ? object.value() : object,
@@ -7078,8 +7362,8 @@ var NYCO = (function () {
   }
 
   /** Used to compose bitmasks for value comparisons. */
-  var COMPARE_PARTIAL_FLAG$4 = 1,
-      COMPARE_UNORDERED_FLAG$2 = 2;
+  var COMPARE_PARTIAL_FLAG$1 = 1,
+      COMPARE_UNORDERED_FLAG$1 = 2;
 
   /**
    * The base implementation of `_.isMatch` without support for iteratee shorthands.
@@ -7125,7 +7409,7 @@ var NYCO = (function () {
           var result = customizer(objValue, srcValue, key, object, source, stack);
         }
         if (!(result === undefined
-              ? baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG$4 | COMPARE_UNORDERED_FLAG$2, customizer, stack)
+              ? baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG$1 | COMPARE_UNORDERED_FLAG$1, customizer, stack)
               : result
             )) {
           return false;
@@ -7144,7 +7428,7 @@ var NYCO = (function () {
    *  equality comparisons, else `false`.
    */
   function isStrictComparable(value) {
-    return value === value && !isObject$1(value);
+    return value === value && !isObject(value);
   }
 
   /**
@@ -7155,7 +7439,7 @@ var NYCO = (function () {
    * @returns {Array} Returns the match data of `object`.
    */
   function getMatchData(object) {
-    var result = keys$1(object),
+    var result = keys(object),
         length = result.length;
 
     while (length--) {
@@ -7203,201 +7487,6 @@ var NYCO = (function () {
     };
   }
 
-  /** Used to match property names within property paths. */
-  var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
-      reIsPlainProp = /^\w*$/;
-
-  /**
-   * Checks if `value` is a property name and not a property path.
-   *
-   * @private
-   * @param {*} value The value to check.
-   * @param {Object} [object] The object to query keys on.
-   * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
-   */
-  function isKey(value, object) {
-    if (isArray(value)) {
-      return false;
-    }
-    var type = typeof value;
-    if (type == 'number' || type == 'symbol' || type == 'boolean' ||
-        value == null || isSymbol(value)) {
-      return true;
-    }
-    return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
-      (object != null && value in Object(object));
-  }
-
-  /** Error message constants. */
-  var FUNC_ERROR_TEXT = 'Expected a function';
-
-  /**
-   * Creates a function that memoizes the result of `func`. If `resolver` is
-   * provided, it determines the cache key for storing the result based on the
-   * arguments provided to the memoized function. By default, the first argument
-   * provided to the memoized function is used as the map cache key. The `func`
-   * is invoked with the `this` binding of the memoized function.
-   *
-   * **Note:** The cache is exposed as the `cache` property on the memoized
-   * function. Its creation may be customized by replacing the `_.memoize.Cache`
-   * constructor with one whose instances implement the
-   * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
-   * method interface of `clear`, `delete`, `get`, `has`, and `set`.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Function
-   * @param {Function} func The function to have its output memoized.
-   * @param {Function} [resolver] The function to resolve the cache key.
-   * @returns {Function} Returns the new memoized function.
-   * @example
-   *
-   * var object = { 'a': 1, 'b': 2 };
-   * var other = { 'c': 3, 'd': 4 };
-   *
-   * var values = _.memoize(_.values);
-   * values(object);
-   * // => [1, 2]
-   *
-   * values(other);
-   * // => [3, 4]
-   *
-   * object.a = 2;
-   * values(object);
-   * // => [1, 2]
-   *
-   * // Modify the result cache.
-   * values.cache.set(object, ['a', 'b']);
-   * values(object);
-   * // => ['a', 'b']
-   *
-   * // Replace `_.memoize.Cache`.
-   * _.memoize.Cache = WeakMap;
-   */
-  function memoize$1(func, resolver) {
-    if (typeof func != 'function' || (resolver != null && typeof resolver != 'function')) {
-      throw new TypeError(FUNC_ERROR_TEXT);
-    }
-    var memoized = function() {
-      var args = arguments,
-          key = resolver ? resolver.apply(this, args) : args[0],
-          cache = memoized.cache;
-
-      if (cache.has(key)) {
-        return cache.get(key);
-      }
-      var result = func.apply(this, args);
-      memoized.cache = cache.set(key, result) || cache;
-      return result;
-    };
-    memoized.cache = new (memoize$1.Cache || MapCache);
-    return memoized;
-  }
-
-  // Expose `MapCache`.
-  memoize$1.Cache = MapCache;
-
-  /** Used as the maximum memoize cache size. */
-  var MAX_MEMOIZE_SIZE = 500;
-
-  /**
-   * A specialized version of `_.memoize` which clears the memoized function's
-   * cache when it exceeds `MAX_MEMOIZE_SIZE`.
-   *
-   * @private
-   * @param {Function} func The function to have its output memoized.
-   * @returns {Function} Returns the new memoized function.
-   */
-  function memoizeCapped(func) {
-    var result = memoize$1(func, function(key) {
-      if (cache.size === MAX_MEMOIZE_SIZE) {
-        cache.clear();
-      }
-      return key;
-    });
-
-    var cache = result.cache;
-    return result;
-  }
-
-  /** Used to match property names within property paths. */
-  var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
-
-  /** Used to match backslashes in property paths. */
-  var reEscapeChar = /\\(\\)?/g;
-
-  /**
-   * Converts `string` to a property path array.
-   *
-   * @private
-   * @param {string} string The string to convert.
-   * @returns {Array} Returns the property path array.
-   */
-  var stringToPath = memoizeCapped(function(string) {
-    var result = [];
-    if (string.charCodeAt(0) === 46 /* . */) {
-      result.push('');
-    }
-    string.replace(rePropName, function(match, number, quote, subString) {
-      result.push(quote ? subString.replace(reEscapeChar, '$1') : (number || match));
-    });
-    return result;
-  });
-
-  /**
-   * Casts `value` to a path array if it's not one.
-   *
-   * @private
-   * @param {*} value The value to inspect.
-   * @param {Object} [object] The object to query keys on.
-   * @returns {Array} Returns the cast property path array.
-   */
-  function castPath(value, object) {
-    if (isArray(value)) {
-      return value;
-    }
-    return isKey(value, object) ? [value] : stringToPath(toString$1(value));
-  }
-
-  /** Used as references for various `Number` constants. */
-  var INFINITY$1 = 1 / 0;
-
-  /**
-   * Converts `value` to a string key if it's not a string or symbol.
-   *
-   * @private
-   * @param {*} value The value to inspect.
-   * @returns {string|symbol} Returns the key.
-   */
-  function toKey(value) {
-    if (typeof value == 'string' || isSymbol(value)) {
-      return value;
-    }
-    var result = (value + '');
-    return (result == '0' && (1 / value) == -INFINITY$1) ? '-0' : result;
-  }
-
-  /**
-   * The base implementation of `_.get` without support for default values.
-   *
-   * @private
-   * @param {Object} object The object to query.
-   * @param {Array|string} path The path of the property to get.
-   * @returns {*} Returns the resolved value.
-   */
-  function baseGet(object, path) {
-    path = castPath(path, object);
-
-    var index = 0,
-        length = path.length;
-
-    while (object != null && index < length) {
-      object = object[toKey(path[index++])];
-    }
-    return (index && index == length) ? object : undefined;
-  }
-
   /**
    * Gets the value at `path` of `object`. If the resolved value is
    * `undefined`, the `defaultValue` is returned in its place.
@@ -7423,7 +7512,7 @@ var NYCO = (function () {
    * _.get(object, 'a.b.c', 'default');
    * // => 'default'
    */
-  function get$1(object, path, defaultValue) {
+  function get(object, path, defaultValue) {
     var result = object == null ? undefined : baseGet(object, path);
     return result === undefined ? defaultValue : result;
   }
@@ -7468,7 +7557,7 @@ var NYCO = (function () {
     }
     length = object == null ? 0 : object.length;
     return !!length && isLength(length) && isIndex(key, length) &&
-      (isArray(object) || isArguments(object));
+      (isArray$1(object) || isArguments$1(object));
   }
 
   /**
@@ -7502,8 +7591,8 @@ var NYCO = (function () {
   }
 
   /** Used to compose bitmasks for value comparisons. */
-  var COMPARE_PARTIAL_FLAG$5 = 1,
-      COMPARE_UNORDERED_FLAG$3 = 2;
+  var COMPARE_PARTIAL_FLAG = 1,
+      COMPARE_UNORDERED_FLAG = 2;
 
   /**
    * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.
@@ -7518,10 +7607,10 @@ var NYCO = (function () {
       return matchesStrictComparable(toKey(path), srcValue);
     }
     return function(object) {
-      var objValue = get$1(object, path);
+      var objValue = get(object, path);
       return (objValue === undefined && objValue === srcValue)
         ? hasIn(object, path)
-        : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG$5 | COMPARE_UNORDERED_FLAG$3);
+        : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG);
     };
   }
 
@@ -7594,7 +7683,7 @@ var NYCO = (function () {
       return identity;
     }
     if (typeof value == 'object') {
-      return isArray(value)
+      return isArray$1(value)
         ? baseMatchesProperty(value[0], value[1])
         : baseMatches(value);
     }
@@ -7613,7 +7702,7 @@ var NYCO = (function () {
     var index = -1,
         result = isArrayLike(collection) ? Array(collection.length) : [];
 
-    baseEach(collection, function(value, key, collection) {
+    baseEach$1(collection, function(value, key, collection) {
       result[++index] = iteratee(value, key, collection);
     });
     return result;
@@ -7728,8 +7817,21 @@ var NYCO = (function () {
    * @returns {Array} Returns the new sorted array.
    */
   function baseOrderBy(collection, iteratees, orders) {
+    if (iteratees.length) {
+      iteratees = arrayMap(iteratees, function(iteratee) {
+        if (isArray$1(iteratee)) {
+          return function(value) {
+            return baseGet(value, iteratee.length === 1 ? iteratee[0] : iteratee);
+          }
+        }
+        return iteratee;
+      });
+    } else {
+      iteratees = [identity];
+    }
+
     var index = -1;
-    iteratees = arrayMap(iteratees.length ? iteratees : [identity], baseUnary(baseIteratee));
+    iteratees = arrayMap(iteratees, baseUnary(baseIteratee));
 
     var result = baseMap(collection, function(value, key, collection) {
       var criteria = arrayMap(iteratees, function(iteratee) {
@@ -7776,11 +7878,11 @@ var NYCO = (function () {
     if (collection == null) {
       return [];
     }
-    if (!isArray(iteratees)) {
+    if (!isArray$1(iteratees)) {
       iteratees = iteratees == null ? [] : [iteratees];
     }
     orders = guard ? undefined : orders;
-    if (!isArray(orders)) {
+    if (!isArray$1(orders)) {
       orders = orders == null ? [] : [orders];
     }
     return baseOrderBy(collection, iteratees, orders);
@@ -7866,7 +7968,7 @@ var NYCO = (function () {
    * @param {*} target The value to search for.
    * @returns {boolean} Returns `true` if `target` is found, else `false`.
    */
-  function arrayIncludes$1(array, value) {
+  function arrayIncludes(array, value) {
     var length = array == null ? 0 : array.length;
     return !!length && baseIndexOf(array, value, 0) > -1;
   }
@@ -7909,7 +8011,7 @@ var NYCO = (function () {
   }
 
   /** Used as references for various `Number` constants. */
-  var INFINITY$2 = 1 / 0;
+  var INFINITY = 1 / 0;
 
   /**
    * Creates a set object of `values`.
@@ -7918,12 +8020,14 @@ var NYCO = (function () {
    * @param {Array} values The values to add to the set.
    * @returns {Object} Returns the new set.
    */
-  var createSet = !(Set && (1 / setToArray(new Set([,-0]))[1]) == INFINITY$2) ? noop : function(values) {
-    return new Set(values);
+  var createSet = !(Set$1 && (1 / setToArray(new Set$1([,-0]))[1]) == INFINITY) ? noop : function(values) {
+    return new Set$1(values);
   };
 
+  var createSet$1 = createSet;
+
   /** Used as the size to enable large array optimizations. */
-  var LARGE_ARRAY_SIZE$1 = 200;
+  var LARGE_ARRAY_SIZE = 200;
 
   /**
    * The base implementation of `_.uniqBy` without support for iteratee shorthands.
@@ -7936,7 +8040,7 @@ var NYCO = (function () {
    */
   function baseUniq(array, iteratee, comparator) {
     var index = -1,
-        includes = arrayIncludes$1,
+        includes = arrayIncludes,
         length = array.length,
         isCommon = true,
         result = [],
@@ -7946,8 +8050,8 @@ var NYCO = (function () {
       isCommon = false;
       includes = arrayIncludesWith;
     }
-    else if (length >= LARGE_ARRAY_SIZE$1) {
-      var set = iteratee ? null : createSet(array);
+    else if (length >= LARGE_ARRAY_SIZE) {
+      var set = iteratee ? null : createSet$1(array);
       if (set) {
         return setToArray(set);
       }
@@ -8076,7 +8180,7 @@ var NYCO = (function () {
     constructor(config) {
       this.default = Feed.default;
 
-      this._settings = merge({}, Feed.default, config);
+      this._settings = _merge({}, Feed.default, config);
 
       this.init();
     }
@@ -8430,7 +8534,7 @@ var NYCO = (function () {
       // particularly useful for feeds that are the same, but potentially
       // different feed types could use this and combine unique data
       data.forEach((feed) => {
-        merged = merge(merged, feed);
+        merged = _merge(merged, feed);
       });
 
       // Get unique posts
@@ -8580,4 +8684,4 @@ var NYCO = (function () {
 
   return Default;
 
-}());
+})();

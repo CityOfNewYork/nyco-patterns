@@ -108,3 +108,7 @@ p, ul, ol {
   margin-top: 0px;
   margin-bottom: 1.25em;
 }
+
+li {
+  margin-bottom: 1.25em;
+}
