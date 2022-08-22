@@ -46,7 +46,7 @@
     "gh-pages": "cross-env NODE_ENV=production pttrn publish"
   },
   "devDependencies": {
-    "@nycopportunity/pttrn": "^1.0.5",
+    "@nycopportunity/pttrn": "^1.4.7",
     "@nycopportunity/pttrn-docs": "^1.0.6",
     "@nycopportunity/pttrn-plugin-feather": "^1.0.0",
     "@rollup/plugin-commonjs": "^11.0.2",

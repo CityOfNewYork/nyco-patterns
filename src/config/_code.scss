@@ -43,4 +43,5 @@ $borderRadius: map-get(map-get($tokens, 'borderRadius'), 'DEFAULT');
   border-width: 1px;
   margin: 0;
   display: inline;
+  white-space: nowrap;
 }

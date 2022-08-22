@@ -515,35 +515,43 @@
   .o-header {
     display: flex;
   }
+
   .o-header__banner-main {
     justify-content: center;
     padding: 32px;
   }
+
   .o-header__main-toggle,
 .o-header__main-version {
     display: none;
     visibility: hidden;
   }
+
   .o-header__logo-main {
     display: none;
     visibility: hidden;
   }
+
   .o-header__logo-secondary {
     display: inline;
     visibility: visible;
   }
+
   .o-header__banner-secondary {
     display: flex;
     visibility: visible;
   }
+
   .o-header__secondary-version {
     display: flex;
     visibility: visible;
   }
+
   .o-navigation__banner {
     display: none;
     visibility: hidden;
   }
+
   .o-navigation__stick {
     position: sticky;
     top: 0px;
@@ -551,10 +559,12 @@
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
+
   .o-navigation__link-header {
     padding-left: 16px;
     padding-right: 16px;
   }
+
   .o-navigation__link {
     padding-left: 16px;
     padding-right: 16px;
@@ -567,6 +577,7 @@
     flex: 0 0 calc(33.33% - 12px);
     max-width: calc(33.33% - 12px);
   }
+
   .o-feed-2column .c-feed-item,
 .o-feed-2column .o-feed__items::after {
     flex: 0 0 calc(50% - 12px);
@@ -586,6 +597,7 @@
   .spinner {
     animation-duration: 1s;
   }
+
   .spinner__path {
     stroke-dasharray: 90, 150;
     stroke-dashoffset: -20;

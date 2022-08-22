@@ -3,12 +3,12 @@
  *
  * @type {Object}
  */
-module.exports = {
+module.exports = [{
   prefix: '',
-  svgo: {
-    convertPathData: false,
-  },
+  // svgo: {
+  //   convertPathData: false,
+  // },
   svgstore: {
     file: 'svg/icons.svg'
   }
-};
+}];

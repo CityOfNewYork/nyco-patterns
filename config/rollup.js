@@ -24,6 +24,7 @@ const rollup = {
       }
     }),
     replace({
+      'preventAssignment': true,
       'process.env.NODE_ENV': `'${process.env.NODE_ENV}'`,
       'SCREEN_DESKTOP': 960,
       'SCREEN_TABLET': 768,
